@@ -88,6 +88,16 @@ export const cartridgeLoad = z
     name: z.string().min(1),
     manufacturer: z.string().optional(),
     bulletMass: propertyValue('g'),
+    /**
+     * Mass of the COMPLETE loaded round, not the bullet.
+     *
+     * Added in Phase 3 because `lib/math/mass.ts` needs it: loaded mass is
+     * empty + magazine + n x cartridge (SPEC.md §8.1), and using the bullet
+     * mass there would understate a full magazine by more than the magazine
+     * itself weighs. Rarely published, so usually absent — which is an honest
+     * gap, not a licence to derive one.
+     */
+    cartridgeMass: propertyValue('g').optional(),
     /** Bullet construction as published, e.g. 'FMJ', 'JHP', 'soft point'. */
     bulletType: z.string().optional(),
     /** Ballistic coefficients. G7 is the honest one for boat-tail rifle bullets. */

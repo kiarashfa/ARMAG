@@ -1,0 +1,46 @@
+{
+  "note": "Trajectory and energy data as PUBLISHED BY THE MANUFACTURER, transcribed unchanged. SPEC.md §8.3 requires the solver be checked against published tables as well as against an independent implementation, and this is that half. Nothing here is computed by us: every number in `rows` is printed on the cited page. Facts are not copyrightable; we transcribe the figures and never republish the page.\n\nWhat each table can and cannot validate:\n  - The energy column is a closed-form function of the velocity column and the bullet mass, with no free parameters, so `ballistics/energy` is checked against it EXACTLY (to the rounding the manufacturer publishes at).\n  - The trajectory column needs a ballistic coefficient, which Hornady does not publish on these pages. Rather than borrow a BC from elsewhere and pretend it is theirs, the test FITS a G1 BC to the published velocity column and then checks the published drop — which is a real test of the integrator, because drop comes from time of flight and gravity and is not what the fit was tuned on.",
+
+  "tables": [
+    {
+      "id": "hornady-308-178gr-bthp-match",
+      "product": "Hornady 308 Win 178 gr BTHP Match, item 8105",
+      "sourceUrl": "https://www.hornady.com/ammunition/rifle/308-win-178-gr-bthp-match",
+      "accessed": "2026-08-26",
+      "bulletMassGrains": 178,
+      "testBarrelInches": 24,
+      "zeroYards": 200,
+      "zeroNote": "Not stated on the page; read from the table itself, which prints 0 inches at 200 yards.",
+      "sightHeightInches": 1.5,
+      "sightHeightNote": "Not stated on the page; inferred from the -1.5 in muzzle trajectory figure, which IS the sight height by definition.",
+      "rows": [
+        { "yards": 0, "velocityFps": 2600, "energyFtLb": 2672, "trajectoryInches": -1.5 },
+        { "yards": 100, "velocityFps": 2436, "energyFtLb": 2345, "trajectoryInches": 2.2 },
+        { "yards": 200, "velocityFps": 2278, "energyFtLb": 2050, "trajectoryInches": 0 },
+        { "yards": 300, "velocityFps": 2125, "energyFtLb": 1785, "trajectoryInches": -8.9 },
+        { "yards": 400, "velocityFps": 1979, "energyFtLb": 1548, "trajectoryInches": -25.5 },
+        { "yards": 500, "velocityFps": 1839, "energyFtLb": 1337, "trajectoryInches": -51 }
+      ]
+    },
+    {
+      "id": "hornady-308-168gr-bthp-match",
+      "product": "Hornady 308 Win 168 gr BTHP Match",
+      "sourceUrl": "https://www.hornady.com/ammunition/rifle/308-win-168-gr-bthp-match",
+      "accessed": "2026-08-26",
+      "bulletMassGrains": 168,
+      "testBarrelInches": 24,
+      "zeroYards": 200,
+      "zeroNote": "Not stated on the page; read from the table itself, which prints 0 inches at 200 yards.",
+      "sightHeightInches": 1.5,
+      "sightHeightNote": "Not stated on the page; inferred from the -1.5 in muzzle trajectory figure.",
+      "rows": [
+        { "yards": 0, "velocityFps": 2700, "energyFtLb": 2719, "trajectoryInches": -1.5 },
+        { "yards": 100, "velocityFps": 2503, "energyFtLb": 2337, "trajectoryInches": 2 },
+        { "yards": 200, "velocityFps": 2315, "energyFtLb": 1998, "trajectoryInches": 0 },
+        { "yards": 300, "velocityFps": 2134, "energyFtLb": 1699, "trajectoryInches": -8.5 },
+        { "yards": 400, "velocityFps": 1962, "energyFtLb": 1436, "trajectoryInches": -24.7 },
+        { "yards": 500, "velocityFps": 1799, "energyFtLb": 1207, "trajectoryInches": -50 }
+      ]
+    }
+  ]
+}

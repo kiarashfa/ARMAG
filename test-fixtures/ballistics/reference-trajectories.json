@@ -1,0 +1,250 @@
+{
+  "note": "Reference trajectories from an INDEPENDENT open-source implementation, used as the validation corpus for ARMAG's own solver (SPEC.md \u00a78.3). We write our own solver and do not take a dependency; this file is what lets the site claim accuracy instead of asserting it. Regenerate with scripts noted in `generator` below if a case is ever added. Distances are metres and velocities m/s \u2014 the fixture is converted to SI on the way out, because SI is what ARMAG stores (SPEC.md \u00a78.1).",
+  "generator": {
+    "library": "py-ballisticcalc",
+    "version": "2.2.0",
+    "engine": "RK4IntegrationEngine",
+    "license": "LGPL-3.0 (the library; the G1/G7 drag tables it and we both use are public-domain US Army BRL data)",
+    "url": "https://github.com/o-murphy/py-ballisticcalc",
+    "atmosphere": "ICAO standard, sea level, no wind"
+  },
+  "cases": [
+    {
+      "id": "g7-308-175gr-smk",
+      "note": "175 gr .308 boat-tail match bullet, G7 BC 0.243, 2600 fps muzzle, 100 yd zero. The archetypal long-range rifle case: G7 is the honest drag model for a boat-tail.",
+      "input": {
+        "dragModel": "G7",
+        "ballisticCoefficient": 0.243,
+        "bulletMassG": 11.33981,
+        "bulletDiameterMm": 7.8232,
+        "muzzleVelocityMs": 792.48,
+        "zeroRangeM": 91.44,
+        "sightHeightMm": 38.1,
+        "zeroAngleMrad": 1.166367
+      },
+      "rows": [
+        {
+          "rangeM": 0.0,
+          "velocityMs": 792.48,
+          "dropM": -0.0381,
+          "timeS": 0.0,
+          "machAtPoint": 2.32881
+        },
+        {
+          "rangeM": 91.44,
+          "velocityMs": 736.6436,
+          "dropM": -0.0,
+          "timeS": 0.11968,
+          "machAtPoint": 2.16473
+        },
+        {
+          "rangeM": 182.88,
+          "velocityMs": 683.1089,
+          "dropM": -0.11334,
+          "timeS": 0.248588,
+          "machAtPoint": 2.00741
+        },
+        {
+          "rangeM": 274.32,
+          "velocityMs": 631.9631,
+          "dropM": -0.40282,
+          "timeS": 0.387766,
+          "machAtPoint": 1.85711
+        },
+        {
+          "rangeM": 365.76,
+          "velocityMs": 583.0154,
+          "dropM": -0.89813,
+          "timeS": 0.538413,
+          "machAtPoint": 1.71327
+        },
+        {
+          "rangeM": 457.2,
+          "velocityMs": 535.9739,
+          "dropM": -1.63537,
+          "timeS": 0.701992,
+          "machAtPoint": 1.57503
+        },
+        {
+          "rangeM": 548.64,
+          "velocityMs": 490.6759,
+          "dropM": -2.65899,
+          "timeS": 0.880301,
+          "machAtPoint": 1.44192
+        },
+        {
+          "rangeM": 640.08,
+          "velocityMs": 447.0857,
+          "dropM": -4.02443,
+          "timeS": 1.075542,
+          "machAtPoint": 1.31382
+        },
+        {
+          "rangeM": 731.52,
+          "velocityMs": 405.3803,
+          "dropM": -5.8018,
+          "timeS": 1.290371,
+          "machAtPoint": 1.19127
+        },
+        {
+          "rangeM": 822.96,
+          "velocityMs": 365.9908,
+          "dropM": -8.08043,
+          "timeS": 1.527872,
+          "machAtPoint": 1.07551
+        },
+        {
+          "rangeM": 914.4,
+          "velocityMs": 331.6352,
+          "dropM": -10.9739,
+          "timeS": 1.791074,
+          "machAtPoint": 0.97444
+        }
+      ]
+    },
+    {
+      "id": "g1-9mm-115gr",
+      "note": "115 gr 9mm FMJ, G1 BC 0.140, 1180 fps muzzle, 25 yd zero. A transonic-and-below pistol case: it exercises the part of the drag curve where G1 and G7 differ most and where a solver that only works supersonically goes wrong.",
+      "input": {
+        "dragModel": "G1",
+        "ballisticCoefficient": 0.14,
+        "bulletMassG": 7.45187,
+        "bulletDiameterMm": 9.017,
+        "muzzleVelocityMs": 359.664,
+        "zeroRangeM": 22.86,
+        "sightHeightMm": 15.24,
+        "zeroAngleMrad": 1.56868
+      },
+      "rows": [
+        {
+          "rangeM": 0.0,
+          "velocityMs": 359.664,
+          "dropM": -0.01524,
+          "timeS": 0.0,
+          "machAtPoint": 1.05692
+        },
+        {
+          "rangeM": 22.86,
+          "velocityMs": 339.5189,
+          "dropM": 0.0,
+          "timeS": 0.065471,
+          "machAtPoint": 0.99772
+        },
+        {
+          "rangeM": 45.72,
+          "velocityMs": 323.1262,
+          "dropM": -0.0292,
+          "timeS": 0.134541,
+          "machAtPoint": 0.94955
+        },
+        {
+          "rangeM": 68.58,
+          "velocityMs": 309.6804,
+          "dropM": -0.10746,
+          "timeS": 0.206849,
+          "machAtPoint": 0.91004
+        },
+        {
+          "rangeM": 91.44,
+          "velocityMs": 298.3321,
+          "dropM": -0.23914,
+          "timeS": 0.282091,
+          "machAtPoint": 0.87669
+        },
+        {
+          "rangeM": 114.3,
+          "velocityMs": 288.4549,
+          "dropM": -0.42839,
+          "timeS": 0.360044,
+          "machAtPoint": 0.84766
+        },
+        {
+          "rangeM": 137.16,
+          "velocityMs": 279.6367,
+          "dropM": -0.67923,
+          "timeS": 0.440557,
+          "machAtPoint": 0.82175
+        },
+        {
+          "rangeM": 160.02,
+          "velocityMs": 271.6127,
+          "dropM": -0.99562,
+          "timeS": 0.523527,
+          "machAtPoint": 0.79817
+        },
+        {
+          "rangeM": 182.88,
+          "velocityMs": 264.2038,
+          "dropM": -1.38149,
+          "timeS": 0.608886,
+          "machAtPoint": 0.7764
+        }
+      ]
+    },
+    {
+      "id": "g1-3006-150gr",
+      "note": "150 gr .30-06 flat-base, G1 BC 0.409, 2910 fps muzzle, 200 yd zero. A classic sporting load, and the case a G1 table is actually designed for.",
+      "input": {
+        "dragModel": "G1",
+        "ballisticCoefficient": 0.409,
+        "bulletMassG": 9.71984,
+        "bulletDiameterMm": 7.8232,
+        "muzzleVelocityMs": 886.968,
+        "zeroRangeM": 182.88,
+        "sightHeightMm": 38.1,
+        "zeroAngleMrad": 1.484857
+      },
+      "rows": [
+        {
+          "rangeM": 0.0,
+          "velocityMs": 886.968,
+          "dropM": -0.0381,
+          "timeS": 0.0,
+          "machAtPoint": 2.60648
+        },
+        {
+          "rangeM": 91.44,
+          "velocityMs": 816.6695,
+          "dropM": 0.04259,
+          "timeS": 0.107447,
+          "machAtPoint": 2.39989
+        },
+        {
+          "rangeM": 182.88,
+          "velocityMs": 749.8736,
+          "dropM": -0.0,
+          "timeS": 0.2243,
+          "machAtPoint": 2.20361
+        },
+        {
+          "rangeM": 274.32,
+          "velocityMs": 686.2741,
+          "dropM": -0.18886,
+          "timeS": 0.35177,
+          "machAtPoint": 2.01671
+        },
+        {
+          "rangeM": 365.76,
+          "velocityMs": 625.7592,
+          "dropM": -0.55241,
+          "timeS": 0.491312,
+          "machAtPoint": 1.83888
+        },
+        {
+          "rangeM": 457.2,
+          "velocityMs": 568.4997,
+          "dropM": -1.12611,
+          "timeS": 0.644638,
+          "machAtPoint": 1.67061
+        },
+        {
+          "rangeM": 548.64,
+          "velocityMs": 514.8393,
+          "dropM": -1.95449,
+          "timeS": 0.813695,
+          "machAtPoint": 1.51293
+        }
+      ]
+    }
+  ]
+}
