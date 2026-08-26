@@ -1,0 +1,21 @@
+{
+  "id": "dangling-family",
+  "name": "Dangling Family",
+  "kind": "model",
+  "makerRef": "fixturemaker",
+  "familyRef": "no-such-family",
+  "type": "pistol",
+  "action": "self-loading",
+  "introduced": 1990,
+  "designedIn": "austria",
+  "lastVerified": "2026-08-26",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "fixture-ref",
+      "type": "web",
+      "title": "Fixture reference",
+      "url": "https://example.org/fixture"
+    }
+  ]
+}

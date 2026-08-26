@@ -1,0 +1,17 @@
+{
+  "axis": "era",
+  "urlPrefix": "/era/",
+  "authored": false,
+  "note": "COMPUTED from a firearm's introduction year — never authored (SPEC.md §7). The buckets are cut where small-arms design actually changed rather than at round decades: smokeless powder in 1886 and the intermediate cartridge in 1945 are the two real discontinuities, and a decade grid would hide both. The lower bound is the self-contained metallic cartridge (~1860s), which is the scope floor in SPEC.md §15.",
+  "terms": [
+    { "id": "metallic-cartridge", "label": "Metallic cartridge", "start": 1860, "end": 1885, "description": "Self-contained cartridges and black powder. Cartridge conversions and the first practical repeaters." },
+    { "id": "smokeless", "label": "Smokeless revolution", "start": 1886, "end": 1913, "description": "Smokeless powder, small-bore bolt actions, the first self-loaders." },
+    { "id": "great-war", "label": "Great War", "start": 1914, "end": 1918 },
+    { "id": "interwar", "label": "Interwar", "start": 1919, "end": 1938 },
+    { "id": "second-world-war", "label": "Second World War", "start": 1939, "end": 1945 },
+    { "id": "early-cold-war", "label": "Early Cold War", "start": 1946, "end": 1969, "description": "The intermediate cartridge becomes standard; stamped and pressed construction." },
+    { "id": "late-cold-war", "label": "Late Cold War", "start": 1970, "end": 1991, "description": "Small-calibre high-velocity, polymer furniture, bullpups." },
+    { "id": "post-cold-war", "label": "Post-Cold War", "start": 1992, "end": 2009, "description": "Polymer frames, modular rails, optics as standard issue." },
+    { "id": "contemporary", "label": "Contemporary", "start": 2010, "end": 2100 }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "childless-family",
+  "name": "Childless Family",
+  "kind": "family",
+  "makerRef": null,
+  "familyRef": null,
+  "lastVerified": "2026-08-26",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "fixture-ref",
+      "type": "web",
+      "title": "Fixture reference",
+      "url": "https://example.org/fixture"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "axis": "feed",
+  "urlPrefix": "/feed/",
+  "authored": true,
+  "note": "How ammunition reaches the chamber. `stripper` denotes an arm loaded by charger into a fixed magazine only where no other feed applies.",
+  "terms": [
+    { "id": "detachable-box", "label": "Detachable box magazine" },
+    { "id": "fixed-box", "label": "Fixed box magazine" },
+    { "id": "tube", "label": "Tubular magazine" },
+    { "id": "drum", "label": "Drum magazine" },
+    { "id": "belt", "label": "Belt" },
+    { "id": "rotary", "label": "Rotary magazine" },
+    { "id": "cylinder", "label": "Cylinder" },
+    { "id": "en-bloc", "label": "En-bloc clip" },
+    { "id": "stripper", "label": "Stripper clip into a fixed magazine" }
+  ]
+}

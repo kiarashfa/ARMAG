@@ -1,0 +1,16 @@
+{
+  "axis": "type",
+  "urlPrefix": "/type/",
+  "authored": true,
+  "note": "SPEC.md §7. `accent` names the content-accent token pair from SPEC.md §11 — six accents cover eight types, because pistol/revolver, rifle/carbine and submachine-gun/pdw each read as one visual family. It lives here so the mapping is data, not a switch statement in a component.",
+  "terms": [
+    { "id": "pistol", "label": "Pistol", "accent": "handgun", "description": "A handgun whose chamber is integral to the barrel." },
+    { "id": "revolver", "label": "Revolver", "accent": "handgun", "description": "A handgun feeding from a rotating cylinder of chambers." },
+    { "id": "rifle", "label": "Rifle", "accent": "rifle", "description": "A shoulder-fired arm with a rifled barrel, full-length by the standards of its own pattern." },
+    { "id": "carbine", "label": "Carbine", "accent": "rifle", "description": "A shortened rifle, usually of a pattern that also exists at full length." },
+    { "id": "shotgun", "label": "Shotgun", "accent": "shotgun", "description": "A shoulder-fired arm firing a shot charge or slug, exempt from the 20 mm bore rule (SPEC.md §15)." },
+    { "id": "submachine-gun", "label": "Submachine gun", "accent": "smg", "description": "A select-fire or automatic arm firing a pistol cartridge." },
+    { "id": "machine-gun", "label": "Machine gun", "accent": "machinegun", "description": "An automatic arm firing a rifle or heavier cartridge, fed for sustained fire." },
+    { "id": "pdw", "label": "Personal defence weapon", "accent": "smg", "description": "A compact automatic arm firing a purpose-designed intermediate cartridge." }
+  ]
+}

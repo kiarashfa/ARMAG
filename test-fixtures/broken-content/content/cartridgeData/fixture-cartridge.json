@@ -1,0 +1,35 @@
+{
+  "id": "fixture-cartridge",
+  "name": "Fixture Cartridge",
+  "introduced": 1900,
+  "standard": "none",
+  "caseType": "rimless",
+  "bulletDiameter": {
+    "value": 9,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "fixture value, not a real measurement"
+  },
+  "caseLength": {
+    "value": 19,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "fixture value, not a real measurement"
+  },
+  "overallLength": {
+    "value": 29.69,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "fixture value, not a real measurement"
+  },
+  "lastVerified": "2026-08-26",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "fixture-ref",
+      "type": "web",
+      "title": "Fixture reference",
+      "url": "https://example.org/fixture"
+    }
+  ]
+}

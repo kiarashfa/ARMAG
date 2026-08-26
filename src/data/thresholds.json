@@ -1,0 +1,50 @@
+{
+  "note": "Every tunable constant the build enforces, in one file. SPEC.md Appendix B lists the completeness weights and the prose-similarity threshold as open items to tune against the pilot batch (Phase 8); they live here so tuning them is a one-line change with no code to edit.",
+
+  "publicationFloor": {
+    "note": "SPEC.md §5.9 — below this an entry gets no page of its own. It still exists as a catalogue row and in cartridge and maker listings. Enforced where pages are generated (Phase 4), NOT by the content gate: a thin entry is incomplete, not broken, and failing the build on it would push authors toward padding.",
+    "verifiedCoreSpecs": 6,
+    "images": 1,
+    "proseWords": 60,
+    "requiresResolvingMakerRef": true,
+    "requiresResolvingCartridgeRef": true
+  },
+
+  "completeness": {
+    "note": "SPEC.md §5.9 — tier is COMPUTED from this score, never asserted by an author. Only `verified` values count: an estimated figure contributes nothing, so estimating your way to a full page produces a Tier 3 entry covered in amber badges. Inventing numbers buys nothing. Weights are provisional until the pilot batch.",
+    "weights": {
+      "verifiedCoreSpec": 6,
+      "verifiedExtendedSpec": 2,
+      "image": 4,
+      "proseWordsPer100": 3,
+      "resolvedMakerRef": 4,
+      "resolvedFamilyRef": 2,
+      "resolvedCartridgeRef": 4,
+      "variant": 3,
+      "lineageEdge": 2
+    },
+    "tierFloor": {
+      "note": "Score at or above which an entry reaches each tier. Tier 3 is the floor and has no minimum.",
+      "tier1": 90,
+      "tier2": 55
+    }
+  },
+
+  "prose": {
+    "note": "SPEC.md §13 gate 4 — the near-duplicate prose gate. With many parallel authors writing about mechanically similar arms, boilerplate is a certainty rather than a risk. Shingled Jaccard similarity over windows of `shingleWords` words; at or above `maxSimilarity` the build fails naming BOTH files. Narratives yielding fewer than `minShingles` shingles are too short to compare and are skipped — thinness is the publication floor's job, not this gate's.",
+    "shingleWords": 7,
+    "maxSimilarity": 0.3,
+    "minShingles": 12
+  },
+
+  "assets": {
+    "note": "SPEC.md §10. Per-file caps alone are not enough — a thousand compliant files still overrun a 1 GB Pages site — so `check:assets` also enforces a running total and prints usage on every build. Hero and gallery are told apart by filename: `hero.webp` is the hero, every other file is gallery.",
+    "format": "webp",
+    "heroMaxBytes": 204800,
+    "heroMaxPixels": 1600,
+    "galleryMaxBytes": 122880,
+    "galleryMaxPixels": 1200,
+    "totalWarnBytes": 629145600,
+    "totalFailBytes": 786432000
+  }
+}

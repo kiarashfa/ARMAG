@@ -1,0 +1,28 @@
+{
+  "id": "dangling-citation",
+  "name": "Dangling Citation",
+  "kind": "model",
+  "makerRef": "fixturemaker",
+  "familyRef": "fixture-family",
+  "type": "pistol",
+  "action": "self-loading",
+  "introduced": 1990,
+  "designedIn": "austria",
+  "lastVerified": "2026-08-26",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "fixture-ref",
+      "type": "web",
+      "title": "Fixture reference",
+      "url": "https://example.org/fixture"
+    }
+  ],
+  "massEmpty": {
+    "value": 0.625,
+    "unit": "kg",
+    "status": "verified",
+    "source": "not-in-references",
+    "sourceUrl": "https://example.org/fixture"
+  }
+}

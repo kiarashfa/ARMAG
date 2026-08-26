@@ -1,0 +1,15 @@
+{
+  "axis": "action",
+  "urlPrefix": "/action/",
+  "authored": true,
+  "note": "How the breech is cycled. SPEC.md §7 splits this from `fireModes` deliberately: conflating how the breech cycles with what the trigger does is the single most common error in firearm databases, and it makes correct filtering impossible.",
+  "terms": [
+    { "id": "bolt", "label": "Bolt action", "description": "Cycled by hand with a turning or straight bolt handle." },
+    { "id": "lever", "label": "Lever action", "description": "Cycled by an underlever." },
+    { "id": "pump", "label": "Pump action", "aka": ["slide action"], "description": "Cycled by sliding the fore-end." },
+    { "id": "break", "label": "Break action", "description": "Hinged barrels opened for loading; no reciprocating breech." },
+    { "id": "straight-pull", "label": "Straight-pull bolt", "description": "A bolt cycled without rotating the handle." },
+    { "id": "self-loading", "label": "Self-loading", "aka": ["semi-automatic", "automatic"], "description": "The breech is cycled by energy from firing. What the trigger then does is `fireModes`, not this." },
+    { "id": "revolver", "label": "Revolver action", "description": "A hand- or trigger-rotated cylinder indexes the next chamber." }
+  ]
+}

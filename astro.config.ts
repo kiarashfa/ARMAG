@@ -5,6 +5,8 @@ import sitemap from '@astrojs/sitemap';
 import svelte from '@astrojs/svelte';
 import tailwindcss from '@tailwindcss/vite';
 
+import integrity from './src/integrations/integrity.ts';
+
 /**
  * SPEC.md §6 — while the site lives on the github.io subdomain, `site` is the
  * user domain and `base` is the repository name.
@@ -43,6 +45,9 @@ export default defineConfig({
   // GitHub Pages cannot run a server; static is the only valid output.
   output: 'static',
   integrations: [
+    // `integrity` first: SPEC.md §13 wants the build to stop on bad content
+    // before anything else has spent time on it.
+    integrity(),
     mdx(),
     svelte(),
     sitemap({

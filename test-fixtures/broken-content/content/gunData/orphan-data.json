@@ -1,0 +1,21 @@
+{
+  "id": "orphan-data",
+  "name": "Orphan Data",
+  "kind": "model",
+  "makerRef": "fixturemaker",
+  "familyRef": "fixture-family",
+  "type": "pistol",
+  "action": "self-loading",
+  "introduced": 1990,
+  "designedIn": "austria",
+  "lastVerified": "2026-08-26",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "fixture-ref",
+      "type": "web",
+      "title": "Fixture reference",
+      "url": "https://example.org/fixture"
+    }
+  ]
+}

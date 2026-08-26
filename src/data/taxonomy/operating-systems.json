@@ -1,0 +1,19 @@
+{
+  "axis": "operating-system",
+  "urlPrefix": "/operating-system/",
+  "authored": true,
+  "note": "The mechanism that unlocks and cycles the breech. Only meaningful for self-loading arms; `manual` covers everything cycled by hand.",
+  "terms": [
+    { "id": "gas-direct-impingement", "label": "Gas, direct impingement", "description": "Propellant gas acts on the bolt carrier without a separate piston." },
+    { "id": "gas-short-stroke", "label": "Gas, short-stroke piston", "description": "A piston travels less than the full bolt stroke and separates from the carrier." },
+    { "id": "gas-long-stroke", "label": "Gas, long-stroke piston", "description": "A piston fixed to the carrier travels the full stroke with it." },
+    { "id": "short-recoil", "label": "Short recoil", "description": "Barrel and breech recoil locked together briefly, then separate." },
+    { "id": "long-recoil", "label": "Long recoil", "description": "Barrel and breech recoil locked together the full stroke." },
+    { "id": "blowback-simple", "label": "Blowback, simple", "description": "Breech held only by bolt mass and spring." },
+    { "id": "blowback-delayed-roller", "label": "Blowback, roller-delayed", "description": "Rollers geared against the trunnion retard bolt opening." },
+    { "id": "blowback-delayed-gas", "label": "Blowback, gas-delayed", "description": "Tapped gas pressure retards bolt opening." },
+    { "id": "blowback-delayed-lever", "label": "Blowback, lever-delayed", "description": "A lever geared against the receiver retards bolt opening." },
+    { "id": "manual", "label": "Manually operated", "description": "The shooter supplies the energy to cycle the breech." },
+    { "id": "externally-powered", "label": "Externally powered", "description": "Cycled by an external motor or crank rather than by firing." }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "dangling-cartridge",
+  "name": "Dangling Cartridge",
+  "kind": "model",
+  "makerRef": "fixturemaker",
+  "familyRef": "fixture-family",
+  "type": "pistol",
+  "action": "self-loading",
+  "introduced": 1990,
+  "designedIn": "austria",
+  "lastVerified": "2026-08-26",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "fixture-ref",
+      "type": "web",
+      "title": "Fixture reference",
+      "url": "https://example.org/fixture"
+    }
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "no-such-cartridge",
+      "capacity": {
+        "value": 17,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "fixture value, not a real measurement"
+      },
+      "primary": true
+    }
+  ]
+}

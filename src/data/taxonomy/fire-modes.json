@@ -1,0 +1,12 @@
+{
+  "axis": "fire-mode",
+  "urlPrefix": "/fire-mode/",
+  "authored": true,
+  "note": "What the trigger does — multi-valued. A select-fire rifle carries `semi` and `automatic`, and often `burst`. Recorded as a technical fact only; SPEC.md §14 forbids any content about converting an arm between these.",
+  "terms": [
+    { "id": "single-shot", "label": "Single shot", "description": "One round, then a manual reload." },
+    { "id": "semi", "label": "Semi-automatic", "description": "One shot per trigger pull, self-reloading." },
+    { "id": "burst", "label": "Burst", "description": "A fixed count per trigger pull, usually two or three." },
+    { "id": "automatic", "label": "Fully automatic", "description": "Fires while the trigger is held and ammunition remains." }
+  ]
+}
