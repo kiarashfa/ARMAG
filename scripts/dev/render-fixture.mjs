@@ -35,6 +35,8 @@ const CONTENT = path.join(ROOT, 'src', 'content');
 const FILES = [
   'guns/fixture-model-a.mdx',
   'gunData/fixture-model-a.json',
+  'guns/fixture-model-b.mdx',
+  'gunData/fixture-model-b.json',
   'cartridges/fixture-9mm.mdx',
   'cartridgeData/fixture-9mm.json',
   'makers/fixture-arms.mdx',
@@ -47,7 +49,7 @@ if (process.argv.includes('--remove')) {
   process.exit(0);
 }
 
-const { FIXTURE_GUN, FIXTURE_CARTRIDGE, FIXTURE_MAKER } = await import(
+const { FIXTURE_GUN, FIXTURE_GUN_B, FIXTURE_CARTRIDGE, FIXTURE_MAKER } = await import(
   pathToFileURL(path.join(ROOT, 'test-fixtures', 'render', 'fixture-entry.ts')).href
 );
 
@@ -63,6 +65,16 @@ which several unrelated designs adopted within a decade. Production has run
 continuously since 1982 at two plants, and the arm was adopted under a military
 designation in 1985 that it kept for thirty-two years. The cyclic rate is not
 recorded here because no source states one for a semi-automatic-only pistol.
+`.trim();
+
+const GUN_B_BODY = `
+The Carbine B is a simple blowback self-loading carbine sharing the Model A's
+magazine pattern and cartridge, built on a folding-stock chassis. It exists in
+this fixture set to be a second entry of a different type: the comparison tool,
+the scale silhouette and the percentile bars all need more than one arm before
+they can be looked at honestly. Production ran for seventeen years across a
+single plant, and the cyclic rate below is an estimate carried from a review
+rather than a manufacturer figure.
 `.trim();
 
 const CARTRIDGE_BODY = `
@@ -86,6 +98,12 @@ await write(
   `---\nid: ${FIXTURE_GUN.id}\nname: ${FIXTURE_GUN.name}\nkind: ${FIXTURE_GUN.kind}\nmakerRef: ${FIXTURE_GUN.makerRef}\nfamilyRef: null\n---\n\n${GUN_BODY}\n`,
 );
 await write('gunData/fixture-model-a.json', `${JSON.stringify(FIXTURE_GUN, null, 2)}\n`);
+
+await write(
+  'guns/fixture-model-b.mdx',
+  `---\nid: ${FIXTURE_GUN_B.id}\nname: ${FIXTURE_GUN_B.name}\nkind: ${FIXTURE_GUN_B.kind}\nmakerRef: ${FIXTURE_GUN_B.makerRef}\nfamilyRef: null\n---\n\n${GUN_B_BODY}\n`,
+);
+await write('gunData/fixture-model-b.json', `${JSON.stringify(FIXTURE_GUN_B, null, 2)}\n`);
 
 await write(
   'cartridges/fixture-9mm.mdx',

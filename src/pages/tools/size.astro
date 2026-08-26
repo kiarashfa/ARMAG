@@ -1,0 +1,31 @@
+---
+/**
+ * `/tools/size/` — SPEC.md §6 and §9.6, the interactive scale comparison.
+ */
+import ToolPage from '../../components/templates/ToolPage.astro';
+import SizeComparison from '../../components/islands/SizeComparison.svelte';
+import { COMPARE_LIMIT } from '../../lib/storage/index.ts';
+import { fileHref, href } from '../../lib/content/href.ts';
+
+const assumptions = [
+  "The dimensions are sourced and the shape is not. Overall length, and barrel length where an entry records one, come from that entry's own figures; the profile is a generic outline for the firearm type.",
+  'An entry with no recorded overall length is not drawn at all, and is named under the diagram. Length is the axis of the comparison, and guessing it would make the one thing you are measuring the one thing we invented.',
+  "Where an entry records no height, its outline is drawn at the type's proportion and is labelled as such — that height is part of the shape, not a measurement.",
+  'A magazine appears only for an entry whose recorded feed system has one. Its presence is a fact about the arm; its size is part of the generic shape.',
+];
+---
+
+<ToolPage
+  title="Size comparison"
+  description="Up to four firearms drawn against each other at true scale, from their own sourced dimensions."
+  standfirst={`Up to ${COMPARE_LIMIT} entries drawn against each other at true scale, aligned at the rear and at the bottom, so the only thing that changes between them is the thing you are comparing.`}
+  assumptions={assumptions}
+>
+  <SizeComparison
+    client:load
+    dataPrefix={href('compare', 'data')}
+    catalogueSrc={fileHref('catalogue.json')}
+    gunPrefix={href('guns')}
+    limit={COMPARE_LIMIT}
+  />
+</ToolPage>

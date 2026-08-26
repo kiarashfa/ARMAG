@@ -1,0 +1,21 @@
+---
+/**
+ * `/tools/units/` — SPEC.md §6 and §9.5, over `lib/math/units.ts`.
+ */
+import ToolPage from '../../components/templates/ToolPage.astro';
+import UnitConverter from '../../components/islands/UnitConverter.svelte';
+---
+
+<ToolPage
+  title="Unit converter"
+  description="Millimetres to inches, grams to grains, metres per second to feet per second, joules to foot-pounds — using the same exact factors the site's own unit toggle applies."
+  standfirst="The same conversion table the site's unit toggle reads, exposed directly. Every factor below is exact by definition rather than measured or rounded."
+  assumptions={[
+    'The inch is exactly 25.4 mm and the pound exactly 0.45359237 kg, by the international yard and pound agreement of 1959. The grain is exactly one seven-thousandth of a pound.',
+    'The pound-force follows from standard gravity, defined exactly as 9.80665 m/s², so the foot-pound-force and the psi are exact too.',
+    'One milliradian is a thousandth of a radian and one minute of angle is a sixtieth of a degree. The "1 MOA is about an inch at 100 yards" shorthand appears nowhere on this site: it is off by roughly 4.7%, which is a whole minute at 1000 yards.',
+    'SI is what ARMAG stores. Imperial is always computed on demand, never stored and never indexed — which is why this page converts rather than looks anything up.',
+  ]}
+>
+  <UnitConverter client:load />
+</ToolPage>

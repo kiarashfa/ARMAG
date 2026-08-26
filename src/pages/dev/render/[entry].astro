@@ -20,10 +20,14 @@ import CartridgePage from '../../../components/templates/CartridgePage.astro';
 import MakerPage from '../../../components/templates/MakerPage.astro';
 
 import { figuresForGun } from '../../../lib/content/derived.ts';
+import { buildCells, buildCompareEntry } from '../../../lib/compare/entry.ts';
+import { CARTRIDGE_REGISTRY, GUN_REGISTRY } from '../../../lib/compare/rows.ts';
+import { subjectForGun } from '../../../lib/render/silhouette.ts';
 import { eraForYear } from '../../../schemas/taxonomy.ts';
 import {
   FIXTURE_CARTRIDGE,
   FIXTURE_GUN,
+  FIXTURE_GUN_B,
   FIXTURE_MAKER,
 } from '../../../../test-fixtures/render/fixture-entry.ts';
 
@@ -36,6 +40,14 @@ const { entry } = Astro.params;
 
 const figures = figuresForGun(FIXTURE_GUN, FIXTURE_CARTRIDGE);
 const era = FIXTURE_GUN.introduced ? eraForYear(FIXTURE_GUN.introduced) : null;
+const cells = buildCompareEntry(GUN_REGISTRY.rows, FIXTURE_GUN, {
+  cartridge: FIXTURE_CARTRIDGE,
+}).cells;
+const silhouettes = [FIXTURE_GUN, FIXTURE_GUN_B].map(subjectForGun);
+const cartridgeCells = buildCells(
+  CARTRIDGE_REGISTRY.rows,
+  FIXTURE_CARTRIDGE as unknown as Record<string, unknown>,
+);
 ---
 
 {
@@ -49,6 +61,8 @@ const era = FIXTURE_GUN.introduced ? eraForYear(FIXTURE_GUN.introduced) : null;
       derivedMetrics={figures.metrics}
       lineageOut={[]}
       lineageIn={[]}
+      cells={cells}
+      silhouettes={silhouettes}
     >
       <p slot="lede">
         A render fixture, not a real firearm. It exists to exercise every template path at once:
@@ -75,6 +89,7 @@ const era = FIXTURE_GUN.introduced ? eraForYear(FIXTURE_GUN.introduced) : null;
     <CartridgePage
       cartridge={FIXTURE_CARTRIDGE}
       chamberedIn={[{ id: FIXTURE_GUN.id, name: FIXTURE_GUN.name, makerName: FIXTURE_MAKER.name }]}
+      cells={cartridgeCells}
     >
       <p slot="lede">
         A render fixture cartridge. The load table below carries three sourced velocity points, which

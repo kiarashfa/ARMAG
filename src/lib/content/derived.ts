@@ -21,9 +21,38 @@ import { freeRecoilEnergy } from '../math/recoil.ts';
 import type { Derived, ValueLike } from '../math/provenance.ts';
 
 export interface DerivedFigure {
+  /** Stable id. The compare registry keys its derived rows off this. */
+  key: string;
   label: string;
   derived: Derived;
 }
+
+/**
+ * The catalogue of derived figures, in the order a page shows them.
+ *
+ * Declared once, here, and read by `lib/compare/rows.ts` to build the derived
+ * half of the row registry — so a figure added below appears in the compare
+ * table with no second edit, exactly as a schema field does (Instruction.md
+ * Phase 6). `figuresForGun` maps over this list rather than assembling its own,
+ * which is what makes "the registry and the page show the same figures" a
+ * structural fact rather than a convention.
+ *
+ * `strip: true` marks the five-number stat strip of SPEC.md §11.
+ */
+export const GUN_FIGURES = [
+  { key: 'muzzle-energy', label: 'Muzzle energy', unit: 'J', strip: true },
+  { key: 'muzzle-velocity', label: 'Muzzle velocity', unit: 'm/s', strip: true },
+  { key: 'loaded-mass', label: 'Loaded mass', unit: 'kg', strip: true },
+  { key: 'free-recoil', label: 'Free recoil', unit: 'J', strip: true },
+  { key: 'capacity', label: 'Capacity', unit: '', strip: true },
+  { key: 'momentum', label: 'Momentum', unit: 'kg·m/s', strip: false },
+  { key: 'sectional-density', label: 'Sectional density', unit: 'lb/in²', strip: false },
+  { key: 'power-factor', label: 'Power factor', unit: 'gr·fps/1000', strip: false },
+  { key: 'magazine-dump', label: 'Magazine dump', unit: 's', strip: false },
+  { key: 'sight-error', label: 'Sight error at 1 mm', unit: 'mrad', strip: false },
+] as const satisfies readonly { key: string; label: string; unit: string; strip: boolean }[];
+
+export type GunFigureKey = (typeof GUN_FIGURES)[number]['key'];
 
 /** A field that is simply absent reads as a placeholder, which blocks cleanly. */
 const orMissing = (value: PropertyValue | undefined | null, unit: string): ValueLike =>
@@ -38,6 +67,8 @@ export interface GunFigures {
   statStrip: DerivedFigure[];
   /** Everything else, for the derived-metrics panel above the spec table. */
   metrics: DerivedFigure[];
+  /** Every figure by key — what the compare payload and the matchmaker read. */
+  byKey: Record<string, Derived>;
   /** Present when the muzzle velocity had to be interpolated or substituted. */
   velocityCaveat?: string;
 }
@@ -90,46 +121,43 @@ export function figuresForGun(gun: GunData, cartridge?: CartridgeData | null): G
       ? { value: loaded.value, unit: 'kg', status: loaded.status, sourceNote: 'loaded mass' }
       : orMissing(gun.massEmpty, 'kg');
 
-  const statStrip: DerivedFigure[] = [
-    { label: 'Muzzle energy', derived: energy },
-    {
-      label: 'Muzzle velocity',
-      derived: {
-        value: muzzleVelocity.value,
-        status: muzzleVelocity.status,
-        unit: 'm/s',
-        formula: velocityResult?.velocity.formula ?? 'no sourced velocity for this pairing',
-        inputs: velocityResult?.velocity.inputs ?? [],
-        assumptions: velocityResult?.velocity.assumptions ?? [],
-        blockedBy: muzzleVelocity.value === null ? 'muzzle velocity' : undefined,
-      },
+  const byKey: Record<string, Derived> = {
+    'muzzle-energy': energy,
+    'muzzle-velocity': {
+      value: muzzleVelocity.value,
+      status: muzzleVelocity.status,
+      unit: 'm/s',
+      formula: velocityResult?.velocity.formula ?? 'no sourced velocity for this pairing',
+      inputs: velocityResult?.velocity.inputs ?? [],
+      assumptions: velocityResult?.velocity.assumptions ?? [],
+      blockedBy: muzzleVelocity.value === null ? 'muzzle velocity' : undefined,
     },
-    { label: 'Loaded mass', derived: loaded },
-    {
-      label: 'Free recoil',
-      derived: freeRecoilEnergy({ firearmMass, bulletMass, muzzleVelocity }),
-    },
-    { label: 'Capacity', derived: capacityFigure(capacity) },
-  ];
+    'loaded-mass': loaded,
+    'free-recoil': freeRecoilEnergy({ firearmMass, bulletMass, muzzleVelocity }),
+    capacity: capacityFigure(capacity),
+    momentum: momentum(bulletMass, muzzleVelocity),
+    'sectional-density': sectionalDensity(bulletMass, orMissing(cartridge?.bulletDiameter, 'mm')),
+    'power-factor': powerFactor(bulletMass, muzzleVelocity),
+    'magazine-dump': magazineDumpTime(capacity, orMissing(gun.cyclicRate, 'rpm')),
+    'sight-error': sightingErrorAngle(orMissing(gun.sightRadius, 'mm'), 1),
+  };
 
-  const metrics: DerivedFigure[] = [
-    { label: 'Momentum', derived: momentum(bulletMass, muzzleVelocity) },
-    {
-      label: 'Sectional density',
-      derived: sectionalDensity(bulletMass, orMissing(cartridge?.bulletDiameter, 'mm')),
-    },
-    { label: 'Power factor', derived: powerFactor(bulletMass, muzzleVelocity) },
-    {
-      label: 'Magazine dump',
-      derived: magazineDumpTime(capacity, orMissing(gun.cyclicRate, 'rpm')),
-    },
-    {
-      label: 'Sight error at 1 mm',
-      derived: sightingErrorAngle(orMissing(gun.sightRadius, 'mm'), 1),
-    },
-  ];
+  // Both lists are projections of `GUN_FIGURES`, never separate literals: that
+  // is what stops the compare registry and the page disagreeing about which
+  // figures exist, or about what order they come in.
+  const figuresFor = (strip: boolean): DerivedFigure[] =>
+    GUN_FIGURES.filter((figure) => figure.strip === strip).map((figure) => ({
+      key: figure.key,
+      label: figure.label,
+      derived: byKey[figure.key]!,
+    }));
 
-  return { statStrip, metrics, velocityCaveat: velocityResult?.caveat };
+  return {
+    statStrip: figuresFor(true),
+    metrics: figuresFor(false),
+    byKey,
+    velocityCaveat: velocityResult?.caveat,
+  };
 }
 
 /** Capacity is sourced, not derived, but the strip renders one shape. */

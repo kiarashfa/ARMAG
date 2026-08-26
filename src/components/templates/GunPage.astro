@@ -13,20 +13,26 @@
  * and computes the derived figures; the dev render harness passes fixtures
  * through the same door. One implementation, two callers, no drift.
  */
+import ActionBar from '../blocks/ActionBar.astro';
 import BaseLayout from '../ui/BaseLayout.astro';
 import Breadcrumbs from '../blocks/Breadcrumbs.astro';
 import FigureValue from '../blocks/FigureValue.astro';
 import ImageFigure from '../blocks/ImageFigure.astro';
 import Section from '../blocks/Section.astro';
+import Silhouette from '../blocks/Silhouette.astro';
 import SpecRow from '../blocks/SpecRow.astro';
+import SpecTable from '../blocks/SpecTable.astro';
 import TypeBadge from '../blocks/TypeBadge.astro';
 import UnitValue from '../blocks/UnitValue.astro';
 
-import { cartridgeHref, gunHref, makerHref, taxonomyHref } from '../../lib/content/href.ts';
+import { cartridgeHref, gunHref, href, makerHref, taxonomyHref } from '../../lib/content/href.ts';
 import { formatYears, humanise } from '../../lib/render/format.ts';
 import { labelFor } from '../../schemas/taxonomy.ts';
 import type { GunData } from '../../schemas/gun.ts';
 import type { Derived } from '../../lib/math/provenance.ts';
+import type { CompareCell } from '../../lib/compare/entry.ts';
+import type { SilhouetteSubject } from '../../lib/render/silhouette.ts';
+import { GUN_GROUP_ORDER, GUN_REGISTRY, labelFromKey } from '../../lib/compare/rows.ts';
 
 export interface GunPageDerived {
   label: string;
@@ -57,6 +63,14 @@ interface Props {
   familyMembers?: RelatedEntry[];
   lineageOut?: { label: string; entry: RelatedEntry }[];
   lineageIn?: { label: string; entry: RelatedEntry }[];
+  /**
+   * Every registry row's value, read once by `lib/compare/entry.ts`. The spec
+   * table renders from these rather than from `gun` directly, so it and the
+   * compare table cannot read the same field two different ways.
+   */
+  cells: Record<string, CompareCell>;
+  /** This entry and its family siblings, at true scale (SPEC.md §9.6). */
+  silhouettes?: SilhouetteSubject[];
 }
 
 const {
@@ -70,7 +84,19 @@ const {
   familyMembers = [],
   lineageOut = [],
   lineageIn = [],
+  cells,
+  silhouettes = [],
 } = Astro.props;
+
+/**
+ * Variant overrides are a partial of the same schema, so they take the same
+ * labels. `humanise` is for taxonomy slugs and rendered `massEmpty` as
+ * `MassEmpty`; the registry already knows it is "Mass, empty".
+ */
+const ROW_LABEL = new Map(GUN_REGISTRY.rows.map((row) => [row.key, row.label]));
+const rowLabel = (key: string): string => ROW_LABEL.get(key) ?? labelFromKey(key);
+
+const sizeToolHref = `${href('tools', 'size')}?guns=${gun.id}`;
 
 const years = formatYears(gun.productionYears);
 const gallery = gun.images.slice(1);
@@ -80,16 +106,6 @@ const hero = gun.images[0];
 const stacked = gun.variants.length > 8;
 const tabGroup = `variants-${gun.id}`;
 
-const identity = [
-  { label: 'Type', value: gun.type ? (labelFor('type', gun.type) ?? gun.type) : null, axis: 'type' as const, term: gun.type },
-  { label: 'Action', value: gun.action ? (labelFor('action', gun.action) ?? gun.action) : null, axis: 'action' as const, term: gun.action },
-  {
-    label: 'Operating system',
-    value: gun.operatingSystem ? (labelFor('operating-system', gun.operatingSystem) ?? gun.operatingSystem) : null,
-    axis: 'operating-system' as const,
-    term: gun.operatingSystem,
-  },
-];
 ---
 
 <BaseLayout
@@ -99,6 +115,8 @@ const identity = [
   }. Sourced specifications, derived ballistics, and the formula behind every figure.`}
 >
   <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <ActionBar id={gun.id} name={gun.name} />
+
     <Breadcrumbs
       crumbs={[
         ...(gun.type
@@ -257,7 +275,7 @@ const identity = [
                     <dl class="mt-3">
                       {Object.entries(variant.overrides).map(([field, value]) =>
                         value && typeof value === 'object' && 'unit' in value ? (
-                          <SpecRow label={humanise(field)} value={value as never} />
+                          <SpecRow label={rowLabel(field)} value={value as never} />
                         ) : null,
                       )}
                     </dl>
@@ -289,7 +307,7 @@ const identity = [
                         {formatYears(variant.productionYears) ?? '—'}
                       </td>
                       <td class="p-2 text-ink-secondary">
-                        {Object.keys(variant.overrides).map(humanise).join(', ') || 'no spec change'}
+                        {Object.keys(variant.overrides).map(rowLabel).join(', ') || 'no spec change'}
                       </td>
                     </tr>
                   ))}
@@ -302,77 +320,17 @@ const identity = [
     }
 
     {/* ── Specifications ───────────────────────────────────────────────── */}
-    <Section id="specifications" title="Specifications">
-      <div class="grid gap-6 lg:grid-cols-2">
-        <details open class="rounded-lg border border-line bg-surface-1 p-4">
-          <summary class="type-heading cursor-pointer text-sm uppercase tracking-wider text-ink-muted">
-            Identity
-          </summary>
-          <dl class="mt-3">
-            {identity.map((row) => (
-              <SpecRow label={row.label} text={row.value} />
-            ))}
-            <SpecRow
-              label="Fire modes"
-              text={gun.fireModes.map((m) => labelFor('fire-mode', m) ?? humanise(m)).join(', ') || null}
-            />
-            <SpecRow
-              label="Feed"
-              text={gun.feedSystem.map((f) => labelFor('feed', f) ?? humanise(f)).join(', ') || null}
-            />
-            <SpecRow
-              label="Designed in"
-              text={gun.designedIn ? (labelFor('country', gun.designedIn) ?? humanise(gun.designedIn)) : null}
-            />
-            <SpecRow
-              label="Produced in"
-              text={gun.producedIn.map((c) => labelFor('country', c) ?? humanise(c)).join(', ') || null}
-            />
-            {familyName && gun.familyRef && <SpecRow label="Family" text={familyName} />}
-          </dl>
-        </details>
-
-        <details open class="rounded-lg border border-line bg-surface-1 p-4">
-          <summary class="type-heading cursor-pointer text-sm uppercase tracking-wider text-ink-muted">
-            Dimensions and mass
-          </summary>
-          <dl class="mt-3">
-            <SpecRow label="Mass, empty" value={gun.massEmpty} />
-            <SpecRow label="Magazine, empty" value={gun.massMagazineEmpty} />
-            <SpecRow label="Length" value={gun.length} />
-            <SpecRow label="Length, folded" value={gun.lengthFolded} />
-            <SpecRow label="Width" value={gun.width} />
-            <SpecRow label="Height" value={gun.height} />
-            <SpecRow label="Barrel length" value={gun.barrelLength} />
-          </dl>
-        </details>
-
-        <details open class="rounded-lg border border-line bg-surface-1 p-4">
-          <summary class="type-heading cursor-pointer text-sm uppercase tracking-wider text-ink-muted">
-            Sights and rifling
-          </summary>
-          <dl class="mt-3">
-            <SpecRow label="Sight radius" value={gun.sightRadius} />
-            <SpecRow label="Sight height over bore" value={gun.sightHeightOverBore} />
-            <SpecRow label="Rifling twist" value={gun.riflingTwist} />
-            <SpecRow label="Twist direction" text={gun.twistDirection ?? null} />
-            <SpecRow label="Grooves" text={gun.riflingGrooves ? String(gun.riflingGrooves) : null} />
-            <SpecRow label="Sight graduation" value={gun.sightGraduation} />
-          </dl>
-        </details>
-
-        <details open class="rounded-lg border border-line bg-surface-1 p-4">
-          <summary class="type-heading cursor-pointer text-sm uppercase tracking-wider text-ink-muted">
-            Operation
-          </summary>
-          <dl class="mt-3">
-            <SpecRow label="Cyclic rate" value={gun.cyclicRate} />
-            <SpecRow label="Trigger pull" value={gun.triggerPull} />
-            <SpecRow label="Effective range" value={gun.effectiveRange} />
-            <SpecRow label="Units produced" value={gun.productionTotal} />
-          </dl>
-        </details>
-      </div>
+    <Section
+      id="specifications"
+      title="Specifications"
+      standfirst="Every row here is generated from the schema, so a figure recorded on this entry cannot be missing from the table — and the same rows, read the same way, are what the comparison shows."
+    >
+      <SpecTable
+        rows={GUN_REGISTRY.rows}
+        cells={cells}
+        groupOrder={GUN_GROUP_ORDER}
+        idPrefix={`spec-${gun.id}`}
+      />
 
       {
         gun.chamberings.length > 0 && (
@@ -399,19 +357,29 @@ const identity = [
     </Section>
 
     {/* ── Scale silhouette — the island lands in Phase 6 ───────────────── */}
-    <Section
-      id="silhouette"
-      title="Scale"
-      standfirst="A to-scale outline against family siblings. The dimensions are sourced; the shape is a representative outline for the type, and is labelled as such."
-    >
-      <p class="type-data rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted">
-        The silhouette renderer is Phase 6. The dimensions it will draw from are in the table above.
-      </p>
-    </Section>
+    {
+      silhouettes.length > 0 && (
+        <Section
+          id="silhouette"
+          title="Scale"
+          standfirst="A to-scale outline against family siblings. The dimensions are sourced; the shape is a representative outline for the type, and says so."
+        >
+          <Silhouette subjects={silhouettes} highlightId={gun.id} />
+          <p class="type-data mt-3 text-sm text-ink-secondary">
+            <a href={sizeToolHref} class="text-ui-accent">
+              Compare this against any other entry &rarr;
+            </a>
+          </p>
+        </Section>
+      )
+    }
 
     {/* ── Lineage ──────────────────────────────────────────────────────── */}
     {
-      (lineageOut.length > 0 || lineageIn.length > 0 || familyMembers.length > 0) && (
+      (lineageOut.length > 0 ||
+        lineageIn.length > 0 ||
+        familyMembers.length > 0 ||
+        (familyName && gun.familyRef)) && (
         <Section id="lineage" title="Lineage">
           <div class="grid gap-6 sm:grid-cols-2">
             {[
@@ -435,6 +403,17 @@ const identity = [
                   </ul>
                 </div>
               ) : null,
+            )}
+
+            {familyName && gun.familyRef && (
+              <div>
+                <h3 class="type-heading text-sm uppercase tracking-wider text-ink-muted">Family</h3>
+                <p class="type-data mt-2 text-sm">
+                  <a href={gunHref(gun.familyRef)} class="text-ui-accent">
+                    {familyName}
+                  </a>
+                </p>
+              </div>
             )}
 
             {familyMembers.length > 0 && (

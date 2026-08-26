@@ -14,10 +14,19 @@ import {
   LINEAGE_LABEL,
 } from '../../lib/content/entries.ts';
 import { figuresForGun } from '../../lib/content/derived.ts';
+import { buildCompareEntry } from '../../lib/compare/entry.ts';
+import { GUN_REGISTRY } from '../../lib/compare/rows.ts';
+import { subjectForGun } from '../../lib/render/silhouette.ts';
 import { eraForYear } from '../../schemas/taxonomy.ts';
 import { render } from 'astro:content';
 
 export async function getStaticPaths() {
+  // Declared inside, not above: Astro hoists `getStaticPaths` to the top of the
+  // module, so a module-level const referenced from it is in its temporal dead
+  // zone at build time. It fails only during `astro build`, never in `check`.
+  /** This entry first, then up to three family siblings — SPEC.md §9.6's four. */
+  const SILHOUETTE_LIMIT = 4;
+
   const [guns, cartridges, makers] = await Promise.all([getGuns(), getCartridges(), getMakers()]);
 
   const cartridgeById = new Map(cartridges.map((c) => [c.id, c]));
@@ -28,6 +37,12 @@ export async function getStaticPaths() {
     const primary = gun.data.chamberings.find((c) => c.primary) ?? gun.data.chamberings[0];
     const cartridge = primary ? cartridgeById.get(primary.cartridgeRef)?.data : undefined;
     const lineage = lineageOf(guns, gun.id);
+
+    const siblings = gun.data.familyRef
+      ? guns.filter(
+          (other) => other.id !== gun.id && other.data.familyRef === gun.data.familyRef,
+        )
+      : membersOfFamily(guns, gun.id);
 
     return {
       params: { slug: gun.id },
@@ -46,17 +61,37 @@ export async function getStaticPaths() {
           label: LINEAGE_LABEL[edge.edge]?.incoming ?? edge.edge,
           entry: { id: edge.source.id, name: edge.source.data.name },
         })),
+        silhouettes: [gun, ...siblings]
+          .slice(0, SILHOUETTE_LIMIT)
+          .map((entry) => subjectForGun(entry.data)),
       },
     };
   });
 }
 
-const { gun, cartridge, makerName, familyName, cartridgeNames, familyMembers, lineageOut, lineageIn } =
-  Astro.props;
+const {
+  gun,
+  cartridge,
+  makerName,
+  familyName,
+  cartridgeNames,
+  familyMembers,
+  lineageOut,
+  lineageIn,
+  silhouettes,
+} = Astro.props;
 
 const { Content } = await render(gun.narrative);
 const figures = figuresForGun(gun.data, cartridge);
 const era = gun.data.introduced ? eraForYear(gun.data.introduced) : null;
+
+/**
+ * The spec table's values, read through the same function the compare endpoint
+ * uses. No percentile populations here: SPEC.md §9.2 puts the bars in the
+ * comparison, and twenty of them down a spec table would be noise rather than
+ * information.
+ */
+const cells = buildCompareEntry(GUN_REGISTRY.rows, gun.data, { cartridge }).cells;
 ---
 
 <GunPage
@@ -70,6 +105,8 @@ const era = gun.data.introduced ? eraForYear(gun.data.introduced) : null;
   familyMembers={familyMembers}
   lineageOut={lineageOut}
   lineageIn={lineageIn}
+  cells={cells}
+  silhouettes={silhouettes}
 >
   <Content />
 </GunPage>

@@ -1,0 +1,83 @@
+---
+/**
+ * `/tools/` — the index of SPEC.md §9.5.
+ *
+ * *"All are thin UIs over `lib/math` — no tool contains logic that the pages do
+ * not also use."* That is the claim this page makes out loud, because it is the
+ * reason to trust a calculator on a site that is not primarily a calculator.
+ */
+import BaseLayout from '../../components/ui/BaseLayout.astro';
+import { href } from '../../lib/content/href.ts';
+
+const tools = [
+  {
+    name: 'Ballistics calculator',
+    path: href('tools', 'ballistics'),
+    note: 'Drop, drift, retained velocity and energy, from the same RK4 solver the entry pages use.',
+  },
+  {
+    name: 'Recoil calculator',
+    path: href('tools', 'recoil'),
+    note: 'Free recoil energy, velocity and impulse. States its own lower bound rather than hiding it.',
+  },
+  {
+    name: 'Unit converter',
+    path: href('tools', 'units'),
+    note: "The site's own conversion table, exposed. Every factor exact by definition.",
+  },
+  {
+    name: 'Size comparison',
+    path: href('tools', 'size'),
+    note: 'Four arms at true scale, from sourced dimensions and a labelled generic outline.',
+  },
+  {
+    name: 'Matchmaker',
+    path: href('tools', 'matchmaker'),
+    note: 'Rank entries against criteria you state. No budget filter, no legality filter, no recommendation.',
+  },
+  {
+    name: 'Compare',
+    path: href('compare'),
+    note: 'Up to four entries side by side, across every row the specification tables carry.',
+  },
+];
+---
+
+<BaseLayout
+  title="Tools"
+  description="Ballistics, recoil, units, scale and matching — thin interfaces over the same pure functions that compute every derived figure on ARMAG."
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-10">
+    <h1 class="type-display text-display text-ink">Tools</h1>
+    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+      Every tool here is a thin interface over the same pure functions that compute the derived
+      figures on the entry pages.
+      <strong class="text-ink">No tool contains arithmetic the pages do not also use</strong>, which
+      is what stops a calculator and an entry ever giving two answers to the same question.
+    </p>
+
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        tools.map((tool) => (
+          <li>
+            <a
+              href={tool.path}
+              class="flex h-full flex-col rounded-lg border border-line bg-surface-1 p-4 no-underline hover:border-line-strong"
+            >
+              <span class="type-heading text-base text-ui-accent">{tool.name}</span>
+              <span class="type-data mt-1 text-sm text-ink-muted">{tool.note}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="type-body mt-8 max-w-readable text-sm text-ink-secondary">
+      Numbers you type into a calculator are yours, not ours: they carry no source and no status
+      badge, and nothing you enter here is stored or sent anywhere. Figures on an entry page are a
+      different thing entirely — each is either sourced or derived from sourced numbers by a formula
+      you can open.
+      <a href={href('methodology')} class="text-ui-accent">The methodology page has all of them</a>.
+    </p>
+  </div>
+</BaseLayout>

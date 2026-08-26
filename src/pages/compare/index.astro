@@ -1,0 +1,89 @@
+---
+/**
+ * `/compare/?guns=a,b,c,d` — SPEC.md §6 and §9.2.
+ *
+ * ── The one honest limit ───────────────────────────────────────────────────
+ * Everywhere else on this site, the JavaScript-free rendering *is* the page.
+ * Here it cannot be: the selection lives in a query string, and a static host
+ * builds one file for `/compare/` regardless of what follows the `?`. So this
+ * page says so, in the page, and gives a reader without JavaScript the two
+ * things that do work — the entry pages themselves, each carrying the same
+ * rows, and the catalogue.
+ *
+ * What the crawler gets instead is the row list: the comparison's structure is
+ * real, indexable content even when its contents are not.
+ */
+import BaseLayout from '../../components/ui/BaseLayout.astro';
+import CompareTool from '../../components/islands/CompareTool.svelte';
+
+import { GUN_COMPARE_ROWS, GUN_GROUP_ORDER, groupRows } from '../../lib/compare/rows.ts';
+import { COMPARE_LIMIT } from '../../lib/storage/index.ts';
+import { fileHref, href } from '../../lib/content/href.ts';
+
+const grouped = groupRows(GUN_COMPARE_ROWS, GUN_GROUP_ORDER);
+---
+
+<BaseLayout
+  title="Compare"
+  description={`Put up to ${COMPARE_LIMIT} firearms side by side across ${GUN_COMPARE_ROWS.length} rows — sourced specifications and derived figures, each with the formula behind it.`}
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-8">
+    <h1 class="type-display text-display text-ink">Compare</h1>
+    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+      Up to {COMPARE_LIMIT} entries, side by side, across {GUN_COMPARE_ROWS.length} rows. The rows are
+      generated from the same registry the specification tables use, so nothing recorded on an entry
+      can be missing here.
+      <strong class="text-ink">No column is marked as the winner.</strong> Lighter is better for carry
+      and worse for recoil; the site does not know what you are choosing for.
+    </p>
+
+    <CompareTool
+      client:load
+      rows={GUN_COMPARE_ROWS}
+      groups={grouped.map((bucket) => bucket.group)}
+      dataPrefix={href('compare', 'data')}
+      gunPrefix={href('guns')}
+      comparePath={href('compare')}
+      catalogueSrc={fileHref('catalogue.json')}
+      limit={COMPARE_LIMIT}
+    />
+
+    <noscript>
+      <p class="type-data mt-6 rounded-lg border border-line bg-surface-1 p-4 text-sm text-ink-secondary">
+        A comparison is chosen in the address bar, and a static site builds one page for this URL
+        whatever follows the question mark — so this is the one tool here that needs JavaScript. The
+        <a href={href()} class="text-ui-accent">catalogue</a> and every entry page work without it, and
+        each entry page carries the same rows listed below.
+      </p>
+    </noscript>
+
+    <section id="rows" class="mt-(--layout-section-gap) scroll-mt-16">
+      <h2 class="type-title text-xl">
+        <a href="#rows" class="text-ink no-underline hover:text-ui-accent">What is compared</a>
+      </h2>
+      <p class="type-body mt-1 max-w-lede text-sm text-ink-secondary">
+        Every row, in the order they appear. Derived figures come first: the specification sheet is
+        table stakes, the computed layer is what this site is for.
+      </p>
+      <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          grouped.map((bucket) => (
+            <div class="rounded-lg border border-line bg-surface-1 p-4">
+              <h3 class="type-heading text-xs uppercase tracking-wider text-ink-muted">
+                {bucket.group}
+              </h3>
+              <ul class="type-data mt-2 flex flex-col gap-1 text-sm text-ink-secondary">
+                {bucket.rows.map((row) => (
+                  <li>
+                    {row.label}
+                    {row.unit ? <span class="text-ink-muted"> · {row.unit}</span> : null}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

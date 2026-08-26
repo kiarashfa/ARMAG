@@ -1,0 +1,130 @@
+---
+/**
+ * The scale overlay — SPEC.md §9.6.
+ *
+ * Outlines share one coordinate system in **millimetres**, aligned at the rear
+ * and at the bottom, so the only thing that varies between them is the thing
+ * being compared. The SVG viewBox is the real bounding box of the longest arm
+ * in the set, which is what makes "true scale" a property of the drawing rather
+ * than a caption on it.
+ *
+ * The label under it is not decoration. The dimensions are sourced and the
+ * shape is not, and the reader is told which is which, per entry — including
+ * when an entry's height had to be drawn at the type's proportion because no
+ * height was recorded.
+ */
+import { accentForType } from '../../schemas/taxonomy.ts';
+import { buildScene, type SilhouetteSubject } from '../../lib/render/silhouette.ts';
+import UnitValue from './UnitValue.astro';
+
+interface Props {
+  subjects: SilhouetteSubject[];
+  /** Drawn filled; everything else is an outline. */
+  highlightId?: string | null;
+}
+
+const { subjects, highlightId = null } = Astro.props;
+
+const scene = buildScene(subjects);
+const typeOf = new Map(subjects.map((subject) => [subject.id, subject.type]));
+
+/**
+ * Written out rather than interpolated: Tailwind resolves utilities by scanning
+ * source text, so a class assembled at runtime is never generated and the
+ * outline renders invisible — the same trap `TypeBadge` documents.
+ */
+const STROKE = {
+  handgun: 'stroke-type-handgun',
+  rifle: 'stroke-type-rifle',
+  shotgun: 'stroke-type-shotgun',
+  smg: 'stroke-type-smg',
+  machinegun: 'stroke-type-machinegun',
+  platform: 'stroke-type-platform',
+} as const;
+
+const FILL = {
+  handgun: 'fill-type-handgun-surface',
+  rifle: 'fill-type-rifle-surface',
+  shotgun: 'fill-type-shotgun-surface',
+  smg: 'fill-type-smg-surface',
+  machinegun: 'fill-type-machinegun-surface',
+  platform: 'fill-type-platform-surface',
+} as const;
+
+const strokeWidth = Math.max(scene.widthMm / 400, 1);
+const inferredHeights = scene.silhouettes.filter((s) => !s.heightSourced);
+---
+
+<figure class="rounded-lg border border-line bg-surface-1 p-4">
+  {
+    scene.silhouettes.length > 0 && (
+      <svg
+        viewBox={`0 0 ${scene.widthMm} ${scene.heightMm}`}
+        preserveAspectRatio="xMinYMax meet"
+        class="silhouette-svg"
+        role="img"
+        aria-label={`Representative outlines at true scale: ${scene.silhouettes
+          .map((s) => `${s.name}, ${Math.round(s.lengthMm)} millimetres long`)
+          .join('; ')}`}
+      >
+        {scene.silhouettes.map((silhouette) => {
+          const accent = accentForType(typeOf.get(silhouette.id) ?? null);
+          const highlighted = silhouette.id === highlightId;
+          return (
+            <g transform={`translate(0 ${scene.heightMm - silhouette.heightMm})`}>
+              <path
+                d={silhouette.path}
+                class={`${STROKE[accent]} ${highlighted ? FILL[accent] : 'fill-none'}`}
+                stroke-width={strokeWidth}
+                stroke-linejoin="round"
+                opacity={highlighted ? 1 : 0.75}
+              />
+            </g>
+          );
+        })}
+      </svg>
+    )
+  }
+
+  <figcaption class="mt-3">
+    <ul class="type-data flex flex-wrap gap-x-5 gap-y-1 text-xs">
+      {
+        scene.silhouettes.map((silhouette) => (
+          <li class="flex items-baseline gap-2">
+            <span class="text-ink">{silhouette.name}</span>
+            <UnitValue value={silhouette.lengthMm} unit="mm" class="text-xs text-ink-secondary" />
+            {!silhouette.heightSourced && (
+              <span class="text-status-estimated">height not recorded</span>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="type-data mt-3 max-w-readable text-xs text-ink-muted">
+      Representative outline — <strong class="text-ink-secondary">the dimensions are sourced, the
+      shape is not.</strong> Overall length, and barrel length where recorded, are drawn from this
+      entry's own figures; the profile is a generic one for the firearm type and says nothing about
+      this arm's actual contours.
+      {
+        inferredHeights.length > 0 && (
+          <>
+            {' '}
+            {inferredHeights.map((s) => s.name).join(', ')}{' '}
+            {inferredHeights.length === 1 ? 'records' : 'record'} no height, so
+            {inferredHeights.length === 1 ? ' its' : ' their'} outline is drawn at the type's
+            proportion — that height is part of the shape, not a measurement.
+          </>
+        )
+      }
+    </p>
+
+    {
+      scene.omitted.length > 0 && (
+        <p class="type-data mt-2 text-xs text-status-placeholder">
+          Not drawn: {scene.omitted.map((entry) => `${entry.name} (${entry.because})`).join(', ')}.
+        </p>
+      )
+    }
+  </figcaption>
+</figure>

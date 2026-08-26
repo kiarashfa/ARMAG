@@ -17,11 +17,13 @@ import Breadcrumbs from '../blocks/Breadcrumbs.astro';
 import ImageFigure from '../blocks/ImageFigure.astro';
 import Section from '../blocks/Section.astro';
 import SpecRow from '../blocks/SpecRow.astro';
+import SpecTable from '../blocks/SpecTable.astro';
 import UnitValue from '../blocks/UnitValue.astro';
 
 import { gunHref, href } from '../../lib/content/href.ts';
-import { humanise } from '../../lib/render/format.ts';
 import type { CartridgeData } from '../../schemas/cartridge.ts';
+import type { CompareCell } from '../../lib/compare/entry.ts';
+import { CARTRIDGE_GROUP_ORDER, CARTRIDGE_REGISTRY } from '../../lib/compare/rows.ts';
 
 export interface ChamberedIn {
   id: string;
@@ -31,11 +33,16 @@ export interface ChamberedIn {
 
 interface Props {
   cartridge: CartridgeData;
+  /**
+   * Every registry row's value, read by `lib/compare/entry.ts` — the same
+   * function the gun page's spec table and the compare payload come through.
+   */
+  cells: Record<string, CompareCell>;
   /** Computed from `chamberings[].cartridgeRef`, never hand-maintained. */
   chamberedIn: ChamberedIn[];
 }
 
-const { cartridge, chamberedIn } = Astro.props;
+const { cartridge, chamberedIn, cells } = Astro.props;
 const identityOnly = cartridge.loads.length === 0;
 ---
 
@@ -80,31 +87,21 @@ const identityOnly = cartridge.loads.length === 0;
       <slot name="lede" />
     </div>
 
-    <Section id="dimensions" title="Dimensions and pressure">
-      <div class="grid gap-6 lg:grid-cols-2">
-        <div class="rounded-lg border border-line bg-surface-1 p-4">
-          <dl>
-            <SpecRow label="Bullet diameter" value={cartridge.bulletDiameter} />
-            <SpecRow label="Neck diameter" value={cartridge.neckDiameter} />
-            <SpecRow label="Base diameter" value={cartridge.baseDiameter} />
-            <SpecRow label="Rim diameter" value={cartridge.rimDiameter} />
-            <SpecRow label="Case length" value={cartridge.caseLength} />
-            <SpecRow label="Overall length" value={cartridge.overallLength} />
-          </dl>
-        </div>
-        <div class="rounded-lg border border-line bg-surface-1 p-4">
-          <dl>
-            <SpecRow label="Case type" text={humanise(cartridge.caseType)} />
-            <SpecRow label="Case shape" text={cartridge.caseShape ? humanise(cartridge.caseShape) : null} />
-            <SpecRow label="Maximum pressure" value={cartridge.maxPressure} />
-            <SpecRow
-              label="Pressure standard"
-              text={cartridge.pressureStandard ? cartridge.pressureStandard.toUpperCase() : null}
-              note="SAAMI and C.I.P. measure pressure differently. Their figures are not interchangeable, which is why the body is always named."
-            />
-          </dl>
-        </div>
-      </div>
+    <Section
+      id="dimensions"
+      title="Dimensions and pressure"
+      standfirst="Generated from the schema, like every specification table on this site, so a figure recorded on this entry cannot be missing from the table."
+    >
+      <SpecTable
+        rows={CARTRIDGE_REGISTRY.rows}
+        cells={cells}
+        groupOrder={CARTRIDGE_GROUP_ORDER}
+        idPrefix={`spec-${cartridge.id}`}
+      />
+      <p class="type-data mt-3 max-w-readable text-xs text-ink-muted">
+        SAAMI and C.I.P. measure pressure differently and their figures are not interchangeable,
+        which is why the body is always named beside the figure.
+      </p>
     </Section>
 
     {/* ── Loads ────────────────────────────────────────────────────────── */}

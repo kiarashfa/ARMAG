@@ -5,6 +5,8 @@
  */
 import CartridgePage from '../../components/templates/CartridgePage.astro';
 import { getCartridges, getGuns, getMakers, gunsChamberedIn } from '../../lib/content/entries.ts';
+import { buildCells } from '../../lib/compare/entry.ts';
+import { CARTRIDGE_REGISTRY } from '../../lib/compare/rows.ts';
 import { render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -26,8 +28,13 @@ export async function getStaticPaths() {
 
 const { cartridge, chamberedIn } = Astro.props;
 const { Content } = await render(cartridge.narrative);
+
+const cells = buildCells(
+  CARTRIDGE_REGISTRY.rows,
+  cartridge.data as unknown as Record<string, unknown>,
+);
 ---
 
-<CartridgePage cartridge={cartridge.data} chamberedIn={chamberedIn}>
+<CartridgePage cartridge={cartridge.data} chamberedIn={chamberedIn} cells={cells}>
   <Content />
 </CartridgePage>

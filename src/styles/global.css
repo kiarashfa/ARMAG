@@ -495,6 +495,98 @@
     display: none;
   }
 
+  /*
+   * ── The disclosure primitive's skin ──────────────────────────────────────
+   *
+   * Instruction.md Phase 4: the popover is built once and used by both image
+   * credits and formula panels. A Svelte island cannot render an Astro
+   * component, so the compare table would otherwise have carried a second copy
+   * of the same Tailwind string. These two classes are the shared half —
+   * `Disclosure.astro` and `CompareTool.svelte` both wear them, and the
+   * mechanism underneath is the same Popover API in both.
+   */
+  .disclosure-trigger {
+    font-family: var(--font-sans);
+    line-height: 1.4;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: 1px solid var(--color-line-strong);
+    background-color: var(--color-surface-2);
+    padding: 0.125rem 0.375rem;
+    font-size: 0.75rem;
+    color: var(--color-ink-secondary);
+    transition: color 150ms var(--ease-out-strong);
+  }
+  .disclosure-trigger:hover {
+    color: var(--color-ink);
+  }
+
+  .disclosure-panel {
+    max-width: min(var(--measure-readable), 100%);
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-line-strong);
+    background-color: var(--color-surface-1);
+    padding: 1rem;
+    color: var(--color-ink);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+  }
+
+  /*
+   * ── The compare table ────────────────────────────────────────────────────
+   *
+   * SPEC.md §9.2 wants a sticky label column and scroll-snap through the entry
+   * columns on mobile. Both are CSS: the label column is `position: sticky` on
+   * the horizontal axis, and the entry columns are snap targets inside the
+   * scroller. Neither needs the island to know the viewport width.
+   */
+  .compare-scroll {
+    scroll-snap-type: x proximity;
+  }
+
+  .compare-table .compare-label {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: var(--color-surface-0);
+    min-width: 9rem;
+    max-width: 12rem;
+  }
+
+  .compare-table .compare-col {
+    scroll-snap-align: start;
+    min-width: 11rem;
+  }
+
+  /* A highlighted row keeps its own background behind the sticky label. */
+  .compare-table tr.bg-surface-1 .compare-label {
+    background-color: var(--color-surface-1);
+  }
+
+  /*
+   * ── The scale silhouette ─────────────────────────────────────────────────
+   *
+   * The viewBox is the real bounding box in millimetres, so its aspect ratio is
+   * the arm's. Left to `height: auto` a pistol — barely wider than it is tall —
+   * renders a metre high on a desktop layout. A capped height with
+   * `preserveAspectRatio` keeps the drawing to scale and simply lets it occupy
+   * less of the box, which is the correct answer for a short arm.
+   */
+  .silhouette-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 16rem;
+  }
+
+  /*
+   * The compare tray is fixed, so the page has to give back the height it
+   * covers. The attribute is set by the island only while the tray is on
+   * screen, so an empty tray costs no space at all.
+   */
+  [data-tray] body {
+    padding-bottom: calc(var(--tray-height, 4.5rem) + 0.5rem);
+  }
+
   /* "Compare all variants" swaps the tab strip for one delta table. */
   .variants .delta-table {
     display: none;

@@ -8,6 +8,7 @@
  */
 import Header from './Header.astro';
 import Footer from './Footer.astro';
+import CompareTray from '../islands/CompareTray.svelte';
 import { absoluteUrl, href } from '../../lib/content/href.ts';
 import '../../styles/global.css';
 
@@ -83,5 +84,13 @@ const fullTitle = title === 'ARMAG' ? title : `${title} · ARMAG`;
     </main>
 
     <Footer />
+
+    {/*
+      Site-wide, per SPEC.md §9.2, and `client:idle` because it must be
+      listening for a Compare press on any page — including a press that
+      happens before the reader has ever opened the tray. It renders nothing
+      until there is something in it.
+    */}
+    <CompareTray client:idle comparePath={href('compare')} gunPrefix={href('guns')} />
   </body>
 </html>

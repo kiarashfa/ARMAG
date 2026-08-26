@@ -22,6 +22,9 @@
 import thresholds from '../../data/thresholds.json' with { type: 'json' };
 import { eraForYear } from '../../schemas/taxonomy.ts';
 import type { PropertyValue } from '../../schemas/primitives.ts';
+import type { ValueStatus } from '../math/provenance.ts';
+import { figuresForGun } from './derived.ts';
+import { worstStatus } from '../math/provenance.ts';
 import {
   completeness,
   countVerified,
@@ -52,6 +55,24 @@ export interface CatalogueRow {
   barrelMm: number | null;
   capacity: number | null;
   year: number | null;
+
+  /**
+   * The three derived figures the matchmaker filters on (SPEC.md §9.3), and the
+   * worst status among their inputs.
+   *
+   * They live in the row rather than in a second artifact because the
+   * matchmaker's dealbreakers are *recoil tolerance* and *weight ceiling* —
+   * neither is a stored field, and fetching a payload per candidate to answer
+   * "which of three thousand arms clear this" would be three thousand fetches.
+   * `derivedStatus` travels with them so a result computed from an estimated
+   * input can say so rather than presenting a model as a measurement.
+   */
+  loadedMassKg: number | null;
+  freeRecoilJ: number | null;
+  derivedStatus: ValueStatus;
+
+  /** Every chambering, not just the primary — the cartridge dealbreaker needs all. */
+  cartridgeRefs: string[];
 
   // Display.
   makerId: string | null;
@@ -127,6 +148,7 @@ export function buildCatalogue(
   cartridges: JoinedCartridge[],
   makers: JoinedMaker[],
 ): CatalogueRow[] {
+  const cartridgeData = new Map(cartridges.map((entry) => [entry.id, entry.data]));
   const makerNames = new Map(makers.map((maker) => [maker.id, maker.data.name]));
   const cartridgeNames = new Map(cartridges.map((c) => [c.id, c.data.name]));
   const makerIds = new Set(makerNames.keys());
@@ -144,6 +166,15 @@ export function buildCatalogue(
         thresholds.completeness.tierFloor,
       );
       const floor = meetsPublicationFloor(input, thresholds.publicationFloor);
+
+      // Through the same seam a gun page renders from, so the matchmaker and
+      // the entry it links to can never quote two different recoil figures.
+      const figures = figuresForGun(
+        data,
+        primary ? cartridgeData.get(primary.cartridgeRef) : undefined,
+      );
+      const loaded = figures.byKey['loaded-mass']!;
+      const recoil = figures.byKey['free-recoil']!;
 
       return {
         id: gun.id,
@@ -165,6 +196,12 @@ export function buildCatalogue(
         barrelMm: numberOf(primary?.barrelLength ?? data.barrelLength),
         capacity: numberOf(primary?.capacity),
         year: data.introduced ?? null,
+
+        loadedMassKg: loaded.value,
+        freeRecoilJ: recoil.value,
+        derivedStatus: worstStatus(loaded.status, recoil.status),
+
+        cartridgeRefs: data.chamberings.map((chambering) => chambering.cartridgeRef),
 
         makerId: data.makerRef,
         makerName: data.makerRef ? (makerNames.get(data.makerRef) ?? null) : null,

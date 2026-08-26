@@ -1,0 +1,21 @@
+---
+/**
+ * `/tools/recoil/` — SPEC.md §6 and §9.5, over `lib/math/recoil.ts`.
+ */
+import ToolPage from '../../components/templates/ToolPage.astro';
+import RecoilCalculator from '../../components/islands/RecoilCalculator.svelte';
+---
+
+<ToolPage
+  title="Recoil calculator"
+  description="Free recoil energy, recoil velocity and impulse from firearm mass, bullet mass and muzzle velocity — the same functions behind the recoil figure on every ARMAG entry."
+  standfirst="Free recoil energy, velocity and impulse, from one conservation law: whatever leaves the muzzle, the arm takes going backwards."
+  assumptions={[
+    'Free recoil is the energy of the arm moving freely, before a shoulder, a grip or a mount absorbs any of it. Felt recoil is a different quantity, depends on the shooter and the stock, and this site does not model it.',
+    'Without a propellant charge the gas term is excluded, so the figure is a stated LOWER BOUND on real free recoil — consistent between entries, and smaller than any figure that includes the gas.',
+    'ARMAG records no charge weights anywhere: they are handloading data, and the editorial policy puts fabrication instructions outside the line. If you supply one here, both it and the gas velocity factor are yours, and no default is chosen for you.',
+    'A muzzle device changes recoil substantially and is not modelled. Its effect depends on the device, and no published figure generalises across them.',
+  ]}
+>
+  <RecoilCalculator client:load />
+</ToolPage>

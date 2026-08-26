@@ -267,3 +267,76 @@ export const FIXTURE_GUN: GunData = {
     },
   ],
 };
+
+/**
+ * A second entry, added in Phase 6 because a comparison needs something to
+ * compare and `src/content/` is empty until Phase 8.
+ *
+ * Deliberately a **different type** from Model A, sharing one cartridge and one
+ * maker. That is what exercises the parts of the compare tool a second pistol
+ * would not: the cross-type row set, "hide identical rows" having something to
+ * hide, two silhouettes at genuinely different scales, and a percentile
+ * population with more than one member in it.
+ */
+export const FIXTURE_GUN_B: GunData = {
+  id: 'fixture-model-b',
+  name: 'Fixture Carbine B',
+  kind: 'model',
+  makerRef: 'fixture-arms',
+  familyRef: null,
+  alsoInFamilies: [],
+
+  aliases: [{ name: 'FX-B', kind: 'export' }],
+  lineage: { derivedFrom: 'fixture-model-a' },
+
+  type: 'carbine',
+  action: 'self-loading',
+  fireModes: ['semi'],
+  operatingSystem: 'blowback-simple',
+  feedSystem: ['detachable-box'],
+  roles: ['competition', 'target'],
+
+  designedIn: 'austria',
+  producedIn: ['austria'],
+  introduced: 1994,
+  productionYears: { start: 1994, end: 2011 },
+
+  massEmpty: verified(2.9, 'kg'),
+  massMagazineEmpty: verified(0.11, 'kg'),
+  length: verified(760, 'mm'),
+  lengthFolded: verified(560, 'mm'),
+  width: verified(58, 'mm'),
+  height: verified(210, 'mm'),
+  barrelLength: verified(406, 'mm'),
+
+  sightRadius: verified(430, 'mm'),
+  riflingTwist: verified(250, 'mm'),
+  twistDirection: 'right',
+  riflingGrooves: 6,
+
+  cyclicRate: estimated(700, 'rpm', 'Stated as "about 700 rounds per minute" in the cited review; no manufacturer figure exists.'),
+  effectiveRange: verified(100, 'm'),
+
+  chamberings: [{ cartridgeRef: 'fixture-9mm', capacity: verified(30, ''), primary: true }],
+
+  variants: [],
+  fits: [{ standard: 'magazine-pattern', value: 'Fixture Model A 17-round' }],
+
+  images: [
+    image('Right profile', '#2a2f38', 'Right side profile of the Fixture Carbine B, a placeholder shape'),
+  ],
+
+  lastVerified: '2026-08-27',
+  reviewStatus: 'draft',
+  references: [
+    {
+      key: 'fixture-manual',
+      type: 'manufacturer-spec',
+      title: 'Fixture Arms Carbine B operator manual',
+      publisher: 'Fixture Arms',
+      url: SOURCE,
+      year: 2005,
+      accessed: '2026-08-27',
+    },
+  ],
+};

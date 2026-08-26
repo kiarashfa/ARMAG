@@ -34,6 +34,8 @@ const axes = [
         ))
       }
       <a href={href('cartridges')} class="text-ink-secondary hover:text-ui-accent">Cartridges</a>
+      <a href={href('compare')} class="text-ink-secondary hover:text-ui-accent">Compare</a>
+      <a href={href('tools')} class="text-ink-secondary hover:text-ui-accent">Tools</a>
       <a href={href('glossary')} class="text-ink-secondary hover:text-ui-accent">Glossary</a>
     </nav>
 
@@ -47,7 +49,7 @@ const axes = [
 
       <button
         type="button"
-        id="unit-toggle"
+        data-unit-toggle
         class="type-data rounded border border-line-strong bg-surface-1 px-2 py-1 text-xs text-ink-secondary hover:text-ink"
         aria-label="Switch between metric and imperial units"
       >
@@ -87,11 +89,15 @@ const axes = [
       save('armag:theme', next);
     });
 
-    document.getElementById('unit-toggle')?.addEventListener('click', () => {
-      const next = root.getAttribute('data-units') === 'imperial' ? 'metric' : 'imperial';
-      if (next === 'imperial') root.setAttribute('data-units', 'imperial');
-      else root.removeAttribute('data-units');
-      save('armag:units', next);
-    });
+    // Every unit toggle on the page, not one by id: the sticky entry bar
+    // carries a second one, and two elements cannot share an id.
+    for (const button of document.querySelectorAll('[data-unit-toggle]')) {
+      button.addEventListener('click', () => {
+        const next = root.getAttribute('data-units') === 'imperial' ? 'metric' : 'imperial';
+        if (next === 'imperial') root.setAttribute('data-units', 'imperial');
+        else root.removeAttribute('data-units');
+        save('armag:units', next);
+      });
+    }
   })();
 </script>

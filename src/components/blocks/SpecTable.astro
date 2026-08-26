@@ -1,0 +1,188 @@
+---
+/**
+ * The specification table, rendered from the row registry — SPEC.md §9.2.
+ *
+ * Every row on this page comes from `lib/compare/rows.ts`, which reads them out
+ * of the Zod schema. Nothing here names a field. That is the whole point: the
+ * compare table renders the same rows from the same registry, so a field added
+ * to `gun.ts` appears in both without an edit in either (Instruction.md
+ * Phase 6), and neither can quietly fall behind the other.
+ *
+ * Groups are `<details open>` — collapsible at every breakpoint, open by
+ * default, per SPEC.md §11. A reader who collapses a group is telling us
+ * something; a group that cannot be collapsed on desktop is telling them the
+ * page knows better.
+ */
+import FigureValue from './FigureValue.astro';
+import StatusBadge from './StatusBadge.astro';
+import UnitValue from './UnitValue.astro';
+
+import { AXIS_PREFIX, taxonomyHref, type TaxonomyAxisKey } from '../../lib/content/href.ts';
+import { formatYears } from '../../lib/render/format.ts';
+import type { CompareCell } from '../../lib/compare/entry.ts';
+import { groupRows, type CompareRow } from '../../lib/compare/rows.ts';
+
+interface Props {
+  rows: readonly CompareRow[];
+  cells: Record<string, CompareCell>;
+  groupOrder: readonly string[];
+  /** Unique per page — the ƒ popovers need distinct ids. */
+  idPrefix: string;
+}
+
+const { rows, cells, groupOrder, idPrefix } = Astro.props;
+
+const grouped = groupRows(rows, groupOrder);
+
+/** Only some axes have a taxonomy route; `fire-mode` deliberately has none. */
+const linkFor = (axis: string | undefined, term: string): string | null =>
+  axis && axis in AXIS_PREFIX ? taxonomyHref(axis as TaxonomyAxisKey, term) : null;
+
+const money = (cell: Extract<CompareCell, { kind: 'money' }>): string =>
+  cell.amount === null
+    ? 'not recorded'
+    : `${cell.currency} ${cell.amount.toLocaleString('en-GB')} · ${cell.year} · ${cell.market}`;
+---
+
+<div class="grid gap-6 lg:grid-cols-2">
+  {
+    grouped.map((bucket) => (
+      <details open class="rounded-lg border border-line bg-surface-1 p-4">
+        <summary class="type-heading cursor-pointer text-sm uppercase tracking-wider text-ink-muted">
+          {bucket.group}
+        </summary>
+        <dl class="mt-3">
+          {bucket.rows.map((row) => {
+            const cell = cells[row.key];
+            return (
+              <div class="grid grid-cols-[minmax(0,11rem)_1fr] gap-x-4 gap-y-1 border-b border-line py-2 last:border-b-0">
+                <dt class="type-data min-w-0 text-sm text-ink-secondary">{row.label}</dt>
+                <dd class="min-w-0">
+                  {(!cell || cell.kind === 'scalar') && (
+                    <>
+                      <div class="flex flex-wrap items-baseline gap-2">
+                        <UnitValue
+                          value={cell && cell.kind === 'scalar' ? cell.value : null}
+                          unit={row.unit ?? ''}
+                          class="text-sm text-ink"
+                        />
+                        {/*
+                          No badge on a figure that simply is not there: the
+                          value already reads "not recorded", and the
+                          `placeholder` badge says the same words a second time.
+                          A real placeholder — one an author wrote deliberately
+                          — reads the same way to a reader either way.
+                        */}
+                        {cell && cell.kind === 'scalar' && cell.value !== null && (
+                          <StatusBadge status={cell.status} />
+                        )}
+                        {cell && cell.kind === 'scalar' && cell.sourceUrl && (
+                          <a
+                            href={cell.sourceUrl}
+                            rel="nofollow noopener"
+                            class="type-data text-xs text-ui-accent"
+                          >
+                            source
+                          </a>
+                        )}
+                      </div>
+                      {cell && cell.kind === 'scalar' && cell.sourceNote && (
+                        <p class="type-data mt-0.5 text-xs text-ink-muted">{cell.sourceNote}</p>
+                      )}
+                    </>
+                  )}
+
+                  {cell?.kind === 'derived' && (
+                    <FigureValue
+                      id={`${idPrefix}-${row.key}`}
+                      label={row.label}
+                      derived={cell.derived}
+                    />
+                  )}
+
+                  {cell?.kind === 'enum' &&
+                    (cell.term === null ? (
+                      <span class="type-data text-sm text-ink-muted">not recorded</span>
+                    ) : linkFor(row.axis, cell.term) ? (
+                      <a href={linkFor(row.axis, cell.term)!} class="type-data text-sm text-ui-accent">
+                        {cell.label}
+                      </a>
+                    ) : (
+                      <span class="type-data text-sm text-ink">{cell.label}</span>
+                    ))}
+
+                  {cell?.kind === 'list' &&
+                    (cell.terms.length === 0 ? (
+                      <span class="type-data text-sm text-ink-muted">not recorded</span>
+                    ) : (
+                      <ul class="flex flex-wrap gap-1.5">
+                        {cell.terms.map((term) => (
+                          <li>
+                            {linkFor(row.axis, term.id) ? (
+                              <a
+                                href={linkFor(row.axis, term.id)!}
+                                class="type-data rounded-full border border-line px-2 py-0.5 text-xs text-ink-secondary no-underline hover:text-ui-accent"
+                              >
+                                {term.label}
+                              </a>
+                            ) : (
+                              <span class="type-data rounded-full border border-line px-2 py-0.5 text-xs text-ink-secondary">
+                                {term.label}
+                              </span>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    ))}
+
+                  {/*
+                    No thousands separator on a bare number. The only such rows
+                    in either schema are a year and a groove count, and
+                    `toLocaleString` rendered an introduction year of 1902 as
+                    "1,902". A count that genuinely wants grouping is a
+                    `propertyValue('')` — a measurement with a source — not
+                    this.
+                  */}
+                  {cell?.kind === 'number' && (
+                    <span class="type-data text-sm text-ink">
+                      {cell.value === null ? (
+                        <span class="text-ink-muted">not recorded</span>
+                      ) : (
+                        String(cell.value)
+                      )}
+                    </span>
+                  )}
+
+                  {cell?.kind === 'text' && (
+                    <span class="type-data text-sm text-ink">
+                      {cell.text ?? <span class="text-ink-muted">not recorded</span>}
+                    </span>
+                  )}
+
+                  {cell?.kind === 'years' && (
+                    <span class="type-data text-sm text-ink">
+                      {formatYears(cell.start === null ? null : { start: cell.start, end: cell.end }) ?? (
+                        <span class="text-ink-muted">not recorded</span>
+                      )}
+                    </span>
+                  )}
+
+                  {cell?.kind === 'money' && (
+                    <div class="flex flex-wrap items-baseline gap-2">
+                      <span
+                        class={`type-data text-sm ${cell.amount === null ? 'text-ink-muted' : 'text-ink'}`}
+                      >
+                        {money(cell)}
+                      </span>
+                      {cell.amount !== null && <StatusBadge status={cell.status} />}
+                    </div>
+                  )}
+                </dd>
+              </div>
+            );
+          })}
+        </dl>
+      </details>
+    ))
+  }
+</div>

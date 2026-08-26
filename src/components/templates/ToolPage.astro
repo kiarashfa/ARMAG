@@ -1,0 +1,56 @@
+---
+/**
+ * The shell every calculator renders through — SPEC.md §9.5.
+ *
+ * *"All are thin UIs over `lib/math` — no tool contains logic that the pages do
+ * not also use."* This shell is what keeps that visible: a tool page is a
+ * heading, a statement of what the tool assumes, one island, and a link to the
+ * methodology. If a tool needs more chrome than this, it has probably grown
+ * logic of its own.
+ *
+ * The assumptions block is not boilerplate. Every calculator here models
+ * something, and the difference between a model and a measurement is the
+ * distinction this whole site is built on — so each one states what it takes
+ * for granted, in the page, above the fold.
+ */
+import BaseLayout from '../ui/BaseLayout.astro';
+import Breadcrumbs from '../blocks/Breadcrumbs.astro';
+import { href } from '../../lib/content/href.ts';
+
+interface Props {
+  title: string;
+  description: string;
+  standfirst: string;
+  /** What the tool takes for granted. Never empty. */
+  assumptions: string[];
+}
+
+const { title, description, standfirst, assumptions } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-8">
+    <Breadcrumbs crumbs={[{ label: 'Tools', path: href('tools') }, { label: title }]} />
+
+    <h1 class="type-display mt-4 text-display text-ink">{title}</h1>
+    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">{standfirst}</p>
+
+    <slot />
+
+    <section id="assumptions" class="mt-(--layout-section-gap) scroll-mt-16">
+      <h2 class="type-title text-xl">
+        <a href="#assumptions" class="text-ink no-underline hover:text-ui-accent">
+          What this assumes
+        </a>
+      </h2>
+      <ul class="type-body mt-3 flex max-w-readable list-disc flex-col gap-2 pl-5 text-sm text-ink-secondary">
+        {assumptions.map((assumption) => <li>{assumption}</li>)}
+      </ul>
+      <p class="type-data mt-4 text-sm">
+        <a href={href('methodology')} class="text-ui-accent">
+          Every formula on this site, and where it came from &rarr;
+        </a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>

@@ -35,7 +35,7 @@ const { id, label, title, triggerClass = '' } = Astro.props;
   type="button"
   popovertarget={id}
   aria-label={label}
-  class={`type-data cursor-pointer rounded border border-line-strong bg-surface-2 px-1.5 py-0.5 text-xs text-ink-secondary transition-colors hover:text-ink ${triggerClass}`}
+  class={`disclosure-trigger ${triggerClass}`}
 >
   <slot name="trigger" />
 </button>
@@ -43,7 +43,7 @@ const { id, label, title, triggerClass = '' } = Astro.props;
 <div
   id={id}
   popover
-  class="max-w-readable rounded-lg border border-line-strong bg-surface-1 p-4 text-ink shadow-2xl"
+  class="disclosure-panel"
 >
   <div class="flex items-start justify-between gap-4">
     <h2 class="type-heading text-sm">{title}</h2>

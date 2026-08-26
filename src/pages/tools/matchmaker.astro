@@ -1,0 +1,46 @@
+---
+/**
+ * `/tools/matchmaker/` — SPEC.md §6 and §9.3.
+ *
+ * The vocabularies are passed into the island rather than imported by it, so
+ * the taxonomy JSON stays out of the client bundle. The cartridge list comes
+ * from the content rather than from a vocabulary, because caliber is not an
+ * axis on this site — the cartridge collection is (SPEC.md §5.4).
+ */
+import ToolPage from '../../components/templates/ToolPage.astro';
+import Matchmaker from '../../components/islands/Matchmaker.svelte';
+
+import { getCartridges } from '../../lib/content/entries.ts';
+import { fileHref, href } from '../../lib/content/href.ts';
+import { actions, eras, roles } from '../../schemas/taxonomy.ts';
+
+const cartridges = (await getCartridges())
+  .map((entry) => ({ id: entry.id, label: entry.data.name }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+
+const terms = (list: { terms: { id: string; label: string }[] }) =>
+  list.terms.map((term) => ({ id: term.id, label: term.label }));
+
+const assumptions = [
+  'This is not a recommendation. Every component of the ranking is a distance from something you stated, in your own terms; nothing here is a judgement about an arm, and no result is scored for effectiveness at any use.',
+  'Recoil tolerance filters on computed free recoil, which excludes the propellant gas term and is therefore a lower bound. It is consistent between entries, which is what makes it usable as a comparison.',
+  'Loaded mass is computed — empty mass, plus the magazine, plus capacity times cartridge mass — so it exists for entries a spec sheet would leave you to work out, and is missing wherever one of those inputs is.',
+  'An entry whose figure is missing is never excluded by a dealbreaker. A gap in our data is not a fact about the arm, and hiding it would present absence as evidence.',
+  'There is no budget filter and no legality filter, deliberately. ARMAG holds launch prices rather than market values, and it holds no jurisdiction data at all.',
+];
+---
+
+<ToolPage
+  title="Matchmaker"
+  description="Rank ARMAG's entries against criteria you state — intended use, cartridge, weight ceiling, capacity floor, action, recoil tolerance and era. Physical and technical fit only."
+  standfirst="State what you are looking for and see which entries match it. Dealbreakers are applied first, then the rest is ranked by how closely it fits what you said — never by how good anything is."
+  assumptions={assumptions}
+>
+  <Matchmaker
+    client:load
+    catalogueSrc={fileHref('catalogue.json')}
+    gunPrefix={href('guns')}
+    vocab={{ role: terms(roles), action: terms(actions), era: terms(eras) }}
+    cartridges={cartridges}
+  />
+</ToolPage>

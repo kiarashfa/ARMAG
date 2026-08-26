@@ -1,0 +1,27 @@
+---
+/**
+ * `/tools/ballistics/` — SPEC.md §6 and §9.5.
+ *
+ * A thin UI over the same RK4 solver that produces every trajectory figure on
+ * the site. Query parameters prefill it, so a cartridge load can deep-link a
+ * reader straight into the numbers it publishes.
+ */
+import ToolPage from '../../components/templates/ToolPage.astro';
+import BallisticsCalculator from '../../components/islands/BallisticsCalculator.svelte';
+import { href } from '../../lib/content/href.ts';
+---
+
+<ToolPage
+  title="Ballistics calculator"
+  description="Drop, wind drift, retained velocity and energy from a G1 or G7 ballistic coefficient, computed by the same solver that renders every trajectory figure on ARMAG."
+  standfirst="Drop, drift, retained velocity and energy, integrated by the same RK4 solver the entry pages use. Your numbers go in; nothing here is sourced, so nothing here carries a status badge."
+  assumptions={[
+    'Standard atmosphere at sea level: 15 °C, 101,325 Pa. Real air density changes the answer, and altitude changes it a great deal.',
+    'The ballistic coefficient is constant across the whole flight. Real coefficients vary with speed, most sharply through the transonic band.',
+    'Spin drift, the Coriolis effect and aerodynamic jump are not modelled. Each needs an input this site does not record — twist-derived stability, latitude, and the crosswind history at the muzzle.',
+    'The solver integrates in 20 mm steps and lands exactly on each requested range with one fractional step, so every reported point is a solution of the same equations rather than an interpolation between two of them.',
+    'A requested range the projectile never reaches is absent from the table rather than filled with a projection.',
+  ]}
+>
+  <BallisticsCalculator client:load cartridgePrefix={href('cartridges')} />
+</ToolPage>
