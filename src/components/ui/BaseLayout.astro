@@ -1,0 +1,87 @@
+---
+/**
+ * The document shell — every page on the site renders through this.
+ *
+ * A layout-less `.mdx` page emits no `<html>` and Pagefind skips it entirely,
+ * so "every narrative page renders through a template" is not a style
+ * preference: it is the condition on which the site is searchable at all.
+ */
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import { absoluteUrl, href } from '../../lib/content/href.ts';
+import '../../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Kept out of the index and out of the sitemap — SPEC.md §12. */
+  noindex?: boolean;
+  /** Canonical path, base included. Defaults to the current URL. */
+  canonicalPath?: string;
+}
+
+const { title, description, noindex = false, canonicalPath } = Astro.props;
+
+const canonical = absoluteUrl(Astro.site, canonicalPath ?? Astro.url.pathname);
+const fullTitle = title === 'ARMAG' ? title : `${title} · ARMAG`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="ARMAG" />
+
+    <link rel="icon" href={href('favicon.svg')} type="image/svg+xml" />
+
+    {/*
+      Runs before first paint, so a visitor who chose light does not see a
+      frame of dark first. Dark is the DEFAULT, not a fallback: the system
+      preference is deliberately not consulted (SPEC.md §11), so this script
+      only ever restores an explicit choice.
+
+      `is:inline` keeps it out of the bundle — a deferred module would run
+      after paint, which is the whole failure this exists to prevent.
+    */}
+    <script is:inline>
+      try {
+        const theme = localStorage.getItem('armag:theme');
+        if (theme === 'light' || theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', theme);
+        }
+        const units = localStorage.getItem('armag:units');
+        if (units === 'imperial') document.documentElement.setAttribute('data-units', 'imperial');
+      } catch {
+        /* Storage can throw in a private window. The defaults are correct. */
+      }
+    </script>
+    <slot name="head" />
+  </head>
+
+  <body class="type-body flex min-h-dvh flex-col bg-surface-0 text-ink">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-surface-2 focus:px-4 focus:py-2 focus:text-ink"
+    >
+      Skip to content
+    </a>
+
+    <Header />
+
+    <main id="main" class="flex-1">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,42 @@
+---
+/**
+ * Breadcrumb trail. Also the source of the `BreadcrumbList` JSON-LD on content
+ * pages (SPEC.md §12), which is emitted in Phase 11 from this same array so the
+ * markup and the structured data cannot describe different paths.
+ */
+import { href } from '../../lib/content/href.ts';
+
+export interface Crumb {
+  label: string;
+  /** Absent for the current page, which is not a link to itself. */
+  path?: string;
+}
+
+interface Props {
+  crumbs: Crumb[];
+}
+
+const { crumbs } = Astro.props;
+const all: Crumb[] = [{ label: 'ARMAG', path: href() }, ...crumbs];
+---
+
+<nav aria-label="Breadcrumb" class="type-data text-xs text-ink-muted">
+  <ol class="flex flex-wrap items-center gap-1">
+    {
+      all.map((crumb, index) => (
+        <li class="flex items-center gap-1">
+          {index > 0 && <span aria-hidden="true">/</span>}
+          {crumb.path ? (
+            <a href={crumb.path} class="hover:text-ui-accent">
+              {crumb.label}
+            </a>
+          ) : (
+            <span aria-current="page" class="text-ink-secondary">
+              {crumb.label}
+            </span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>

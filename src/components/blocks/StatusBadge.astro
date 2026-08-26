@@ -1,0 +1,59 @@
+---
+/**
+ * The data-trust badge — SPEC.md §5.8.
+ *
+ * Four states, four colours, and a word. The colour is not the message: a
+ * reader who cannot distinguish amber from green still reads "estimated", which
+ * is why the label is never replaced by a dot.
+ *
+ * `verified` renders as nothing at all. It is the site's baseline promise, and
+ * a badge on every one of forty rows would train the eye to skip all of them —
+ * including the amber one.
+ */
+import type { ValueStatus } from '../../lib/math/provenance.ts';
+
+interface Props {
+  status: ValueStatus;
+  /** Show a badge even for `verified` — used in the ƒ panel's input list. */
+  always?: boolean;
+}
+
+const { status, always = false } = Astro.props;
+
+const STATUS = {
+  verified: {
+    label: 'verified',
+    className: 'text-status-verified',
+    title: 'Taken from a cited source that states this figure.',
+  },
+  estimated: {
+    label: 'estimated',
+    className: 'text-status-estimated',
+    title: 'Derived or inferred. The basis is stated in the source note.',
+  },
+  placeholder: {
+    label: 'not recorded',
+    className: 'text-status-placeholder',
+    title: 'No sourced figure exists yet. An honest gap, not a zero.',
+  },
+  'conflicting-sources': {
+    label: 'sources disagree',
+    className: 'text-status-conflicting',
+    title: 'Published sources give different figures. The conflict is described in the note.',
+  },
+} as const;
+
+const meta = STATUS[status];
+const hidden = status === 'verified' && !always;
+---
+
+{
+  !hidden && (
+    <span
+      class={`type-data whitespace-nowrap rounded-sm border border-current/30 px-1 text-[0.65rem] uppercase tracking-wide ${meta.className}`}
+      title={meta.title}
+    >
+      {meta.label}
+    </span>
+  )
+}

@@ -1,0 +1,35 @@
+---
+/**
+ * `/makers/<slug>/` — SPEC.md §5.5. The model list is computed from `makerRef`
+ * and is never hand-maintained here.
+ */
+import MakerPage from '../../components/templates/MakerPage.astro';
+import { getGuns, getMakers, modelsOfMaker } from '../../lib/content/entries.ts';
+import { render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const [makers, guns] = await Promise.all([getMakers(), getGuns()]);
+  const nameById = Object.fromEntries(makers.map((m) => [m.id, m.data.name]));
+
+  return makers.map((maker) => ({
+    params: { slug: maker.id },
+    props: {
+      maker,
+      models: modelsOfMaker(guns, maker.id).map((gun) => ({
+        id: gun.id,
+        name: gun.data.name,
+        type: gun.data.type ?? null,
+        introduced: gun.data.introduced,
+      })),
+      relatedMakerNames: nameById,
+    },
+  }));
+}
+
+const { maker, models, relatedMakerNames } = Astro.props;
+const { Content } = await render(maker.narrative);
+---
+
+<MakerPage maker={maker.data} models={models} relatedMakerNames={relatedMakerNames}>
+  <Content />
+</MakerPage>

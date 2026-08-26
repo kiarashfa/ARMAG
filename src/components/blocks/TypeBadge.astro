@@ -1,0 +1,51 @@
+---
+/**
+ * The firearm-type chip — SPEC.md §11's content accent.
+ *
+ * The accent is per **type**, never per manufacturer, and it is separate from
+ * the UI accent by design: links and focus rings must not change colour with
+ * the subject, or focus states become unpredictable.
+ *
+ * Tailwind resolves utilities by scanning source text, so a class assembled at
+ * runtime is never generated. The accent classes are therefore written out in
+ * full in a lookup below rather than interpolated — the failure mode otherwise
+ * is a silently unstyled badge, which nobody notices for weeks.
+ */
+import { accentForType, labelFor } from '../../schemas/taxonomy.ts';
+import { taxonomyHref } from '../../lib/content/href.ts';
+
+interface Props {
+  /** A `type` vocabulary id, or null for a `kind: 'family'` entry. */
+  type?: string | null;
+  /** Link to the taxonomy page. Off inside a link, to avoid nesting anchors. */
+  link?: boolean;
+  size?: 'sm' | 'md';
+}
+
+const { type = null, link = true, size = 'md' } = Astro.props;
+
+const ACCENT_CLASS = {
+  handgun: 'bg-type-handgun-surface text-type-handgun',
+  rifle: 'bg-type-rifle-surface text-type-rifle',
+  shotgun: 'bg-type-shotgun-surface text-type-shotgun',
+  smg: 'bg-type-smg-surface text-type-smg',
+  machinegun: 'bg-type-machinegun-surface text-type-machinegun',
+  platform: 'bg-type-platform-surface text-type-platform',
+} as const;
+
+const accent = accentForType(type);
+const label = type ? (labelFor('type', type) ?? type) : 'Platform';
+const classes = `type-data inline-block rounded-sm uppercase tracking-wider ${ACCENT_CLASS[accent]} ${
+  size === 'sm' ? 'px-1.5 py-0.5 text-[0.65rem]' : 'px-2 py-1 text-xs'
+}`;
+---
+
+{
+  link && type ? (
+    <a href={taxonomyHref('type', type)} class={`${classes} no-underline`}>
+      {label}
+    </a>
+  ) : (
+    <span class={classes}>{label}</span>
+  )
+}

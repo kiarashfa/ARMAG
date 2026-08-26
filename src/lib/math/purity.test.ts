@@ -14,8 +14,12 @@
  *  2. **No fps-per-inch constant, anywhere in the codebase.** SPEC.md §8.2.
  *  3. **No damage, lethality or stopping-power metric, anywhere.** SPEC.md §14.
  *
- * Comments are stripped before scanning, so a file may — and `velocity.ts` and
- * `energy.ts` do — explain at length why these things are absent.
+ * Only the CODE in each file is scanned — comments are stripped, and an
+ * `.astro` file contributes its frontmatter and scripts but not its markup. That
+ * is deliberate: `/methodology/` and `/editorial-policy/` exist to explain, in
+ * prose that ships, why there is no fps-per-inch constant and no stopping-power
+ * metric, and a scanner that could not tell the explanation from the thing would
+ * force the site to stop explaining itself to keep its own test green.
  */
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync, statSync } from 'node:fs';
@@ -40,6 +44,33 @@ function walk(dir: string): string[] {
 /** Line and block comments removed, so prose about a rule is not the rule. */
 function stripComments(source: string): string {
   return source.replace(/\/\*[\s\S]*?\*\//g, ' ').replace(/(^|[^:])\/\/.*$/gm, '$1');
+}
+
+/**
+ * The CODE in a file, with markup and comments removed.
+ *
+ * This distinction is load-bearing rather than cosmetic. `/methodology/` and
+ * `/editorial-policy/` exist precisely to explain, in prose that ships, why
+ * there is no fps-per-inch constant and no stopping-power metric — and a
+ * scanner that could not tell the explanation from the thing would force the
+ * site to stop explaining itself in order to keep its own test green.
+ *
+ * So: for an `.astro` file only the frontmatter fence and any `<script>` block
+ * are code; for a `.svelte` file only its `<script>` blocks; everything else is
+ * code throughout. Comments are stripped from all of them.
+ */
+function codeOf(file: string, source: string): string {
+  const scriptsIn = (text: string): string[] =>
+    [...text.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map((match) => match[1] ?? '');
+
+  if (file.endsWith('.astro')) {
+    const fenced = /^---[\r\n]+([\s\S]*?)[\r\n]+---/.exec(source);
+    return stripComments([fenced?.[1] ?? '', ...scriptsIn(source)].join('\n'));
+  }
+  if (file.endsWith('.svelte')) {
+    return stripComments(scriptsIn(source).join('\n'));
+  }
+  return stripComments(source);
 }
 
 const rel = (file: string) => path.relative(repoRoot, file).split(path.sep).join('/');
@@ -120,7 +151,7 @@ test('no fps-per-inch constant exists anywhere in the codebase', () => {
 
   const failures: string[] = [];
   for (const file of codeFiles) {
-    const code = stripComments(readFileSync(file, 'utf8'));
+    const code = codeOf(file, readFileSync(file, 'utf8'));
     for (const pattern of patterns) {
       if (pattern.test(code)) failures.push(`${rel(file)}: matches ${pattern}`);
     }
@@ -152,7 +183,7 @@ test('no damage, lethality or stopping-power metric exists anywhere', () => {
 
   const failures: string[] = [];
   for (const file of codeFiles) {
-    const code = stripComments(readFileSync(file, 'utf8'));
+    const code = codeOf(file, readFileSync(file, 'utf8'));
     for (const pattern of patterns) {
       if (pattern.test(code)) failures.push(`${rel(file)}: matches ${pattern}`);
     }

@@ -1,0 +1,126 @@
+---
+/**
+ * An image with its licence attached — SPEC.md §10.
+ *
+ * **Attribution is attached to the image, not listed on a page.** An "i" button
+ * opens a native popover carrying the file's author, licence with a link, the
+ * source page and any licence note. `/attributions/` therefore carries only
+ * what cannot be attached to an artefact: SIPRI's mandatory credit line,
+ * Wikidata's CC0 notice, data-source acknowledgements.
+ *
+ * The credit text is **always in the DOM**, so it is present for screen
+ * readers, for Pagefind, and for anyone auditing our licensing without running
+ * our JavaScript. No island, no per-image hydration: this renders tens of
+ * thousands of times.
+ */
+import Disclosure from './Disclosure.astro';
+import { assetUrl } from '../../lib/content/href.ts';
+import { ATTRIBUTION_REQUIRED, type ImageRef } from '../../schemas/primitives.ts';
+
+interface Props {
+  image: ImageRef;
+  /** Unique on the page — the popover's id. */
+  id: string;
+  /** The hero loads eagerly; everything else waits. */
+  priority?: boolean;
+  class?: string;
+  sizes?: string;
+}
+
+const { image, id, priority = false, class: className = '', sizes } = Astro.props;
+
+const LICENSE_LABEL: Record<string, string> = {
+  cc0: 'CC0 — public domain dedication',
+  'public-domain': 'Public domain',
+  'cc-by': 'CC BY',
+  'cc-by-sa': 'CC BY-SA',
+  'cc-by-nc': 'CC BY-NC',
+  'cc-by-nd': 'CC BY-ND',
+  gfdl: 'GFDL',
+  'manufacturer-press-grant': 'Manufacturer press grant',
+  'fair-use-editorial': 'Editorial use',
+  'trademark-nominative-use': 'Trademark, nominative use',
+};
+
+const credit = image.credit;
+const licenseLabel = `${LICENSE_LABEL[credit.licenseType] ?? credit.licenseType}${
+  credit.licenseVersion ? ` ${credit.licenseVersion}` : ''
+}`;
+const needsAttribution = ATTRIBUTION_REQUIRED.has(credit.licenseType);
+---
+
+<figure class={`relative ${className}`}>
+  <img
+    src={assetUrl(image.src)}
+    alt={image.alt}
+    width={image.width}
+    height={image.height}
+    sizes={sizes}
+    loading={priority ? 'eager' : 'lazy'}
+    decoding={priority ? 'sync' : 'async'}
+    fetchpriority={priority ? 'high' : 'auto'}
+    class="h-auto w-full rounded bg-surface-2 object-contain"
+  />
+
+  <div class="absolute right-2 top-2">
+    <Disclosure id={id} label={`Image credit and licence for: ${image.alt}`} title="Image credit">
+      <span slot="trigger" aria-hidden="true">i</span>
+
+      <dl class="type-data grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-xs">
+        {
+          credit.title && (
+            <>
+              <dt class="text-ink-muted">Title</dt>
+              <dd class="text-ink">{credit.title}</dd>
+            </>
+          )
+        }
+        {
+          credit.author && (
+            <>
+              <dt class="text-ink-muted">Author</dt>
+              <dd class="text-ink">
+                {credit.author}
+                {needsAttribution && (
+                  <span class="ml-1 text-ink-muted">(attribution required)</span>
+                )}
+              </dd>
+            </>
+          )
+        }
+        <dt class="text-ink-muted">Licence</dt>
+        <dd class="text-ink">
+          {
+            credit.licenseUrl ? (
+              <a href={credit.licenseUrl} rel="nofollow noopener" class="text-ui-accent">
+                {licenseLabel}
+              </a>
+            ) : (
+              licenseLabel
+            )
+          }
+        </dd>
+        <dt class="text-ink-muted">Source</dt>
+        <dd class="min-w-0 break-words text-ink">
+          <a href={credit.sourceUrl} rel="nofollow noopener" class="text-ui-accent">
+            {credit.sourceUrl}
+          </a>
+        </dd>
+        {
+          credit.licenseNote && (
+            <>
+              <dt class="text-ink-muted">Note</dt>
+              <dd class="text-ink">{credit.licenseNote}</dd>
+            </>
+          )
+        }
+      </dl>
+    </Disclosure>
+  </div>
+
+  {
+    image.caption && (
+      <figcaption class="type-data mt-2 text-xs text-ink-muted">{image.caption}</figcaption>
+    )
+  }
+</figure>

@@ -1,0 +1,108 @@
+---
+/**
+ * `/editorial-policy/` — SPEC.md §14, published rather than internal.
+ *
+ * The red lines are stated here because they are also restated in the authoring
+ * playbook: an agent will otherwise happily "complete" a section on any of
+ * them, and a rule nobody can read is a rule nobody can hold us to.
+ */
+import BaseLayout from '../components/ui/BaseLayout.astro';
+import Breadcrumbs from '../components/blocks/Breadcrumbs.astro';
+import Section from '../components/blocks/Section.astro';
+---
+
+<BaseLayout
+  title="Editorial policy"
+  description="What ARMAG will not publish, and why: no manufacturing instructions, no stopping-power metrics, no legal or regulatory layer."
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <Breadcrumbs crumbs={[{ label: 'Editorial policy' }]} />
+    <h1 class="type-display mt-4 text-display text-ink">Editorial policy</h1>
+    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+      These are permanent exclusions, not things awaiting a later version. Each one is enforced by
+      the build where it can be, rather than by anyone remembering it.
+    </p>
+
+    <Section id="not-published" title="Not authored, not linked, not summarised">
+      <ul class="prose type-body flex max-w-readable list-disc flex-col gap-2 pl-5 text-ink-secondary">
+        <li>Manufacturing or fabrication instructions of any kind.</li>
+        <li>Conversion to automatic fire, or any modification defeating a regulatory control.</li>
+        <li>3D-printable files or their sources.</li>
+        <li>Acquisition workarounds.</li>
+        <li>
+          Any content whose purpose is to help someone obtain or modify a firearm outside the
+          ordinary lawful process.
+        </li>
+      </ul>
+      <p class="type-body mt-4 max-w-readable text-sm text-ink-muted">
+        Handloading data falls under the first line: there is no powder-charge field in the
+        database, and there will not be one. Published velocity for a given barrel length is a
+        measurement; a charge weight is a recipe.
+      </p>
+    </Section>
+
+    <Section id="no-stopping-power" title="No damage, lethality or stopping-power metric. Ever.">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          Muzzle energy and retained energy are physics, and they appear prominently. Momentum and
+          sectional density are physics too. <strong class="text-ink">Stopping power is not.</strong>
+          It is a discredited idea with a long history of unsourceable numbers, and any index built
+          on it — however scientific its formula looks — is a claim about wounding dressed as
+          arithmetic.
+        </p>
+        <p class="mt-4">
+          This includes indices that are conventionally published elsewhere. Taylor's Knock-Out
+          factor is one: it was devised to rank dangerous-game rifles by their stunning effect, its
+          dimensions are momentum times diameter, and it means nothing physically. It is not
+          implemented here, and an automated test fails the build if it ever appears.
+        </p>
+      </div>
+    </Section>
+
+    <Section id="no-legal-layer" title="No legal or regulatory layer">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          No jurisdiction data, no legality flags, no filtering by what is permitted where.
+          Technical facts — fire modes, barrel length, capacity — are recorded as facts, because
+          that is what they are.
+        </p>
+        <p class="mt-4">
+          This was considered and rejected rather than overlooked. Jurisdiction rules change yearly,
+          and a stale legality flag on a static site is worse than none at all: it is wrong in a way
+          that looks authoritative. The site states what a firearm is, never what you may do.
+        </p>
+      </div>
+    </Section>
+
+    <Section id="no-winners" title="No winners">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          Comparison tables carry no "winner" badges and the matchmaker ranks nothing on
+          effectiveness. Lighter is better for carry and worse for recoil; higher capacity is better
+          for some readers and irrelevant to others. The site does not know what you want, and
+          pretending otherwise is exactly the editorial failure it exists to avoid.
+        </p>
+        <p class="mt-4">
+          Where a bar is drawn next to a number, its length is that value's percentile within a
+          stated comparison set, and the label is the real value with its real unit. Never a
+          normalised score out of a hundred.
+        </p>
+      </div>
+    </Section>
+
+    <Section id="imagery" title="Imagery">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          Real photographs only. <strong class="text-ink">No AI-generated firearm imagery, ever.</strong>
+          Image models get variant-level details wrong, which is the exact thing this site exists to
+          get right, and a subtly incorrect photorealistic image does more damage to a reference work
+          than a missing one.
+        </p>
+        <p class="mt-4">
+          Every image is self-hosted and carries its licence, author and source in the credit panel
+          on the image itself, not in a list somewhere else.
+        </p>
+      </div>
+    </Section>
+  </div>
+</BaseLayout>

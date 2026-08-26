@@ -1,0 +1,75 @@
+---
+/**
+ * `/guns/<slug>/` — SPEC.md §6. The canonical URL of a firearm, and it never
+ * moves: the slug is flat and type-prefixed rather than mirroring any
+ * classification, so re-tagging or re-grouping an entry cannot break a link.
+ */
+import GunPage from '../../components/templates/GunPage.astro';
+import {
+  getCartridges,
+  getGuns,
+  getMakers,
+  lineageOf,
+  membersOfFamily,
+  LINEAGE_LABEL,
+} from '../../lib/content/entries.ts';
+import { figuresForGun } from '../../lib/content/derived.ts';
+import { eraForYear } from '../../schemas/taxonomy.ts';
+import { render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const [guns, cartridges, makers] = await Promise.all([getGuns(), getCartridges(), getMakers()]);
+
+  const cartridgeById = new Map(cartridges.map((c) => [c.id, c]));
+  const makerById = new Map(makers.map((m) => [m.id, m]));
+  const gunById = new Map(guns.map((g) => [g.id, g]));
+
+  return guns.map((gun) => {
+    const primary = gun.data.chamberings.find((c) => c.primary) ?? gun.data.chamberings[0];
+    const cartridge = primary ? cartridgeById.get(primary.cartridgeRef)?.data : undefined;
+    const lineage = lineageOf(guns, gun.id);
+
+    return {
+      params: { slug: gun.id },
+      props: {
+        gun,
+        cartridge,
+        makerName: gun.data.makerRef ? (makerById.get(gun.data.makerRef)?.data.name ?? null) : null,
+        familyName: gun.data.familyRef ? (gunById.get(gun.data.familyRef)?.data.name ?? null) : null,
+        cartridgeNames: Object.fromEntries(cartridges.map((c) => [c.id, c.data.name])),
+        familyMembers: membersOfFamily(guns, gun.id).map((m) => ({ id: m.id, name: m.data.name })),
+        lineageOut: lineage.outgoing.map((edge) => ({
+          label: LINEAGE_LABEL[edge.edge]?.outgoing ?? edge.edge,
+          entry: { id: edge.target.id, name: edge.target.data.name },
+        })),
+        lineageIn: lineage.incoming.map((edge) => ({
+          label: LINEAGE_LABEL[edge.edge]?.incoming ?? edge.edge,
+          entry: { id: edge.source.id, name: edge.source.data.name },
+        })),
+      },
+    };
+  });
+}
+
+const { gun, cartridge, makerName, familyName, cartridgeNames, familyMembers, lineageOut, lineageIn } =
+  Astro.props;
+
+const { Content } = await render(gun.narrative);
+const figures = figuresForGun(gun.data, cartridge);
+const era = gun.data.introduced ? eraForYear(gun.data.introduced) : null;
+---
+
+<GunPage
+  gun={gun.data}
+  makerName={makerName}
+  familyName={familyName}
+  cartridgeNames={cartridgeNames}
+  era={era}
+  statStrip={figures.statStrip}
+  derivedMetrics={figures.metrics}
+  familyMembers={familyMembers}
+  lineageOut={lineageOut}
+  lineageIn={lineageIn}
+>
+  <Content />
+</GunPage>

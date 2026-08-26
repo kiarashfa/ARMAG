@@ -1,0 +1,43 @@
+---
+/** `/cartridges/` — the collection index. Each entry is also its caliber view. */
+import BaseLayout from '../../components/ui/BaseLayout.astro';
+import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
+import { getCartridges } from '../../lib/content/entries.ts';
+import { cartridgeHref } from '../../lib/content/href.ts';
+
+const cartridges = (await getCartridges()).sort((a, b) => a.data.name.localeCompare(b.data.name));
+---
+
+<BaseLayout
+  title="Cartridges"
+  description="Every cartridge on ARMAG: dimensions and pressures transcribed from the published standard, with the firearms chambered in each."
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <Breadcrumbs crumbs={[{ label: 'Cartridges' }]} />
+    <h1 class="type-display mt-4 text-display text-ink">Cartridges</h1>
+    <p class="type-body mt-3 max-w-lede text-lg text-ink-secondary">
+      A cartridge is the input to every ballistic figure on every firearm chambered in it, so it is
+      sourced once here rather than re-typed on each page. Each entry is also its caliber view.
+    </p>
+
+    {
+      cartridges.length === 0 ? (
+        <p class="type-data mt-8 text-sm text-ink-muted">No cartridges authored yet.</p>
+      ) : (
+        <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {cartridges.map((cartridge) => (
+            <li class="rounded-lg border border-line bg-surface-1 p-3">
+              <a href={cartridgeHref(cartridge.id)} class="type-data text-sm text-ui-accent">
+                {cartridge.data.name}
+              </a>
+              <p class="type-data text-xs text-ink-muted">
+                Introduced {cartridge.data.introduced}
+                {cartridge.data.loads.length === 0 ? ' · identity only' : ''}
+              </p>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</BaseLayout>

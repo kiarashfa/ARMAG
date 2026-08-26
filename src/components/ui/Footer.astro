@@ -1,0 +1,47 @@
+---
+/**
+ * Site footer, carrying the disclaimer required on **every page** by
+ * SPEC.md §14. The full version lives on `/about/`; this is the short form,
+ * and it is not optional or collapsible anywhere.
+ */
+import { href } from '../../lib/content/href.ts';
+
+const year = new Date().getUTCFullYear();
+---
+
+<footer class="mt-(--layout-section-gap) border-t border-line bg-surface-1">
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-8">
+    <div class="flex flex-wrap gap-x-8 gap-y-4">
+      <div class="max-w-readable">
+        <p class="type-title text-base">ARMAG</p>
+        <p class="type-data mt-2 text-sm text-ink-secondary">
+          A free, non-profit reference for modern firearms. Every number is either sourced or
+          derived from sourced numbers by a formula you can open and check.
+        </p>
+      </div>
+
+      <nav aria-label="About this site" class="type-data flex flex-col gap-2 text-sm">
+        <a href={href('about')} class="text-ink-secondary hover:text-ui-accent">About</a>
+        <a href={href('methodology')} class="text-ink-secondary hover:text-ui-accent">Methodology</a>
+        <a href={href('editorial-policy')} class="text-ink-secondary hover:text-ui-accent">
+          Editorial policy
+        </a>
+        <a href={href('attributions')} class="text-ink-secondary hover:text-ui-accent">
+          Attributions
+        </a>
+      </nav>
+    </div>
+
+    <p class="type-data mt-8 max-w-lede border-t border-line pt-4 text-xs text-ink-muted">
+      <strong class="text-ink-secondary">Reference information only.</strong> ARMAG is not legal
+      advice, not safety instruction, and not a substitute for a manufacturer's manual or qualified
+      training. Figures are transcribed from published sources and may contain errors; check
+      anything that matters against the source we cite.
+      <a href={href('about')} class="text-ui-accent">Read the full disclaimer</a>.
+    </p>
+
+    <p class="type-data mt-4 text-xs text-ink-muted">
+      © {year}. Content licences are recorded per image and per citation.
+    </p>
+  </div>
+</footer>

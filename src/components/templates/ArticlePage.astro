@@ -1,0 +1,55 @@
+---
+/**
+ * An editorial article — the magazine half of ARMAG (SPEC.md §5.6).
+ *
+ * Long-form, each one linking twenty or more entries. The prose column is
+ * narrower than a reference page's because this is text somebody reads several
+ * paragraphs of rather than scans — `max-w-readable` is 76ch for exactly that
+ * reason.
+ */
+import BaseLayout from '../ui/BaseLayout.astro';
+import Breadcrumbs from '../blocks/Breadcrumbs.astro';
+import ImageFigure from '../blocks/ImageFigure.astro';
+import { href } from '../../lib/content/href.ts';
+import type { ImageRef } from '../../schemas/primitives.ts';
+
+interface Props {
+  id: string;
+  title: string;
+  standfirst: string;
+  published: string;
+  updated?: string;
+  heroImage?: ImageRef;
+}
+
+const { id, title, standfirst, published, updated, heroImage } = Astro.props;
+---
+
+<BaseLayout title={title} description={standfirst}>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <Breadcrumbs crumbs={[{ label: 'Articles', path: href('articles') }, { label: title }]} />
+
+    <article class="mt-4">
+      <header class="max-w-lede">
+        <h1 class="type-display text-display text-ink">{title}</h1>
+        <p class="type-body mt-4 text-lg text-ink-secondary">{standfirst}</p>
+        <p class="type-data mt-3 text-sm text-ink-muted">
+          <time datetime={published}>{published}</time>
+          {updated && <span> · updated <time datetime={updated}>{updated}</time></span>}
+        </p>
+      </header>
+
+      {
+        heroImage && (
+          <div class="mt-8">
+            <ImageFigure image={heroImage} id={`img-hero-${id}`} priority />
+          </div>
+        )
+      }
+
+      <div class="prose type-body mt-8 max-w-readable text-ink-secondary">
+        <slot />
+      </div>
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,66 @@
+---
+/**
+ * A glossary term — SPEC.md §5.6.
+ *
+ * Single-file MDX, no data twin. Every term here is auto-crosslinked from every
+ * occurrence in any prose on the site by a rehype plugin (Phase 11), so link
+ * density needs no manual upkeep and survives renames.
+ *
+ * The `assault rifle` entry states the technical definition explicitly —
+ * intermediate cartridge, select fire, detachable magazine — because that page
+ * will absorb a great deal of argument and the definition is the only thing
+ * that ends it.
+ */
+import BaseLayout from '../ui/BaseLayout.astro';
+import Breadcrumbs from '../blocks/Breadcrumbs.astro';
+import Section from '../blocks/Section.astro';
+import { glossaryHref, href } from '../../lib/content/href.ts';
+
+interface Props {
+  term: string;
+  short: string;
+  aka: string[];
+  seeAlso: { id: string; term: string }[];
+}
+
+const { term, short, aka, seeAlso } = Astro.props;
+---
+
+<BaseLayout title={term} description={short}>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <Breadcrumbs crumbs={[{ label: 'Glossary', path: href('glossary') }, { label: term }]} />
+
+    <article class="mt-4">
+      <h1 class="type-display text-display text-ink">{term}</h1>
+      <p class="type-body mt-3 max-w-lede text-lg text-ink-secondary">{short}</p>
+      {
+        aka.length > 0 && (
+          <p class="type-data mt-2 text-sm text-ink-muted">Also called {aka.join(', ')}</p>
+        )
+      }
+
+      <div class="prose type-body mt-8 max-w-readable text-ink-secondary">
+        <slot />
+      </div>
+
+      {
+        seeAlso.length > 0 && (
+          <Section id="see-also" title="See also">
+            <ul class="flex flex-wrap gap-2">
+              {seeAlso.map((related) => (
+                <li>
+                  <a
+                    href={glossaryHref(related.id)}
+                    class="type-data rounded border border-line px-3 py-1.5 text-sm text-ink-secondary no-underline hover:text-ui-accent"
+                  >
+                    {related.term}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Section>
+        )
+      }
+    </article>
+  </div>
+</BaseLayout>

@@ -1,0 +1,57 @@
+---
+/**
+ * One row of a specification table — a sourced `PropertyValue`, not a derived
+ * one. (`FigureValue` is its counterpart for anything the math engine
+ * computed.)
+ *
+ * Every row carries its status badge and, where the figure is verified, a link
+ * to the source. SPEC.md §13 gate 2 makes `sourceUrl` mandatory on `verified`
+ * precisely so that link always exists: spot-checking has to be a click, or at
+ * three thousand entries nobody will ever check anything.
+ */
+import StatusBadge from './StatusBadge.astro';
+import UnitValue from './UnitValue.astro';
+import type { PropertyValue } from '../../schemas/primitives.ts';
+
+interface Props {
+  label: string;
+  value?: PropertyValue | null;
+  /** For an enum or a name — anything that is not a measured quantity. */
+  text?: string | null;
+  /** Rendered under the value: a caveat, an interpolation note. */
+  note?: string | null;
+}
+
+const { label, value = null, text = null, note = null } = Astro.props;
+const hasValue = value !== null && value !== undefined;
+---
+
+<div class="grid grid-cols-[minmax(0,11rem)_1fr] gap-x-4 gap-y-1 border-b border-line py-2 last:border-b-0">
+  <dt class="type-data min-w-0 text-sm text-ink-secondary">{label}</dt>
+  <dd class="min-w-0">
+    <div class="flex flex-wrap items-baseline gap-2">
+      {
+        hasValue ? (
+          <UnitValue value={value.value} unit={value.unit} class="text-sm text-ink" />
+        ) : (
+          <span class="type-data text-sm text-ink">{text ?? 'not recorded'}</span>
+        )
+      }
+      {hasValue && <StatusBadge status={value.status} />}
+      {
+        hasValue && value.sourceUrl && (
+          <a href={value.sourceUrl} rel="nofollow noopener" class="type-data text-xs text-ui-accent">
+            source
+          </a>
+        )
+      }
+    </div>
+    {
+      (note ?? (hasValue ? value.sourceNote : null)) && (
+        <p class="type-data mt-0.5 text-xs text-ink-muted">
+          {note ?? value!.sourceNote}
+        </p>
+      )
+    }
+  </dd>
+</div>

@@ -1,0 +1,11 @@
+---
+/** `/era/<term>/` — a computed browse view. SPEC.md §7: taxonomy pages own no content. */
+import TaxonomyPage from '../../components/templates/TaxonomyPage.astro';
+import { taxonomyPathsFor } from '../../lib/content/taxonomy-views.ts';
+
+export const getStaticPaths = () => taxonomyPathsFor('era');
+
+const { axis, axisLabel, term, entries, siblings } = Astro.props;
+---
+
+<TaxonomyPage axis={axis} axisLabel={axisLabel} term={term} entries={entries} siblings={siblings} />

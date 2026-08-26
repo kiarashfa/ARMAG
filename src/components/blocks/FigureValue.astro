@@ -1,0 +1,125 @@
+---
+/**
+ * A derived figure and its ƒ panel — SPEC.md §8.4, and the thing this site is
+ * actually for.
+ *
+ * The spec table is table stakes: anyone has a spec sheet. What nobody else has
+ * is a number you can open, which is why the derived-metrics panel sits **above**
+ * the spec table on a gun page and why this component carries so much weight.
+ *
+ * The panel shows the formula, every input with its own value and a link to its
+ * own source, and the assumptions the calculation makes. If the value is
+ * blocked because an input has no figure, it says which input — a blank that
+ * explains itself, rather than one that looks broken.
+ */
+import Disclosure from './Disclosure.astro';
+import StatusBadge from './StatusBadge.astro';
+import UnitValue from './UnitValue.astro';
+import { formatValue } from '../../lib/render/format.ts';
+import type { Derived } from '../../lib/math/provenance.ts';
+
+interface Props {
+  /** Unique on the page — the popover's id. */
+  id: string;
+  label: string;
+  derived: Derived;
+  /** Larger treatment, for the five-number stat strip. */
+  emphasis?: boolean;
+}
+
+const { id, label, derived, emphasis = false } = Astro.props;
+
+const blocked = derived.value === null;
+const sourceCount = derived.inputs.filter((input) => input.sourceUrl).length;
+---
+
+<div class="flex flex-col gap-1">
+  <div class="type-data flex items-center gap-2 text-xs uppercase tracking-wider text-ink-muted">
+    <span>{label}</span>
+    <Disclosure
+      id={id}
+      label={`Show how ${label} was calculated`}
+      title={`How ${label} is calculated`}
+    >
+      <span slot="trigger" aria-hidden="true" class="font-serif italic">ƒ</span>
+
+      <p class="type-data rounded bg-surface-2 px-2 py-1 text-sm text-ink">
+        {derived.formula}
+      </p>
+
+      {
+        blocked ? (
+          <p class="type-data mt-3 text-sm text-status-placeholder">
+            Not calculated: <strong>{derived.blockedBy}</strong> has no sourced figure yet. Nothing
+            is substituted for a missing input.
+          </p>
+        ) : (
+          <>
+            <h3 class="type-heading mt-4 text-xs uppercase tracking-wider text-ink-muted">
+              Inputs
+            </h3>
+            <ul class="mt-2 flex flex-col gap-2">
+              {derived.inputs.map((input) => (
+                <li class="type-data flex flex-wrap items-baseline gap-x-2 text-sm">
+                  <span class="text-ink-secondary">{input.label}</span>
+                  <UnitValue value={input.value} unit={input.unit} class="text-ink" />
+                  <StatusBadge status={input.status} always />
+                  {input.sourceUrl && (
+                    <a
+                      href={input.sourceUrl}
+                      rel="nofollow noopener"
+                      class="text-xs text-ui-accent"
+                    >
+                      source
+                    </a>
+                  )}
+                  {input.sourceNote && (
+                    <span class="type-data w-full text-xs text-ink-muted">{input.sourceNote}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+
+      {
+        derived.assumptions.length > 0 && (
+          <>
+            <h3 class="type-heading mt-4 text-xs uppercase tracking-wider text-ink-muted">
+              Assumptions
+            </h3>
+            <ul class="type-data mt-2 flex list-disc flex-col gap-1 pl-4 text-xs text-ink-secondary">
+              {derived.assumptions.map((assumption) => (
+                <li>{assumption}</li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+
+      <p class="type-data mt-4 border-t border-line pt-2 text-xs text-ink-muted">
+        {
+          sourceCount === 0
+            ? 'No input on this calculation carries a clickable source yet.'
+            : `${sourceCount} of ${derived.inputs.length} inputs link to their source.`
+        }
+      </p>
+    </Disclosure>
+  </div>
+
+  <div class="flex flex-wrap items-baseline gap-2">
+    {
+      blocked ? (
+        <span class={`type-data text-ink-muted ${emphasis ? 'text-xl' : 'text-base'}`}>
+          not recorded
+        </span>
+      ) : (
+        <span class={emphasis ? 'type-stat text-stat text-ink' : 'type-data text-base text-ink'}>
+          <UnitValue value={derived.value} unit={derived.unit} />
+        </span>
+      )
+    }
+    <StatusBadge status={derived.status} />
+  </div>
+</div>

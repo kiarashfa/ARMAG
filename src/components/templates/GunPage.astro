@@ -1,0 +1,514 @@
+---
+/**
+ * The gun page — SPEC.md §11, in the order that section specifies:
+ *
+ *   hero → five-number stat strip → lede → **derived metrics** → variants →
+ *   specifications → silhouette → lineage → gallery → related → references
+ *
+ * The derived-metrics panel sits **above** the spec table deliberately. The
+ * spec table is table stakes; anyone has a spec sheet. The ƒ panel is the
+ * product.
+ *
+ * This template takes props and fetches nothing. The route joins the content
+ * and computes the derived figures; the dev render harness passes fixtures
+ * through the same door. One implementation, two callers, no drift.
+ */
+import BaseLayout from '../ui/BaseLayout.astro';
+import Breadcrumbs from '../blocks/Breadcrumbs.astro';
+import FigureValue from '../blocks/FigureValue.astro';
+import ImageFigure from '../blocks/ImageFigure.astro';
+import Section from '../blocks/Section.astro';
+import SpecRow from '../blocks/SpecRow.astro';
+import TypeBadge from '../blocks/TypeBadge.astro';
+import UnitValue from '../blocks/UnitValue.astro';
+
+import { cartridgeHref, gunHref, makerHref, taxonomyHref } from '../../lib/content/href.ts';
+import { formatYears, humanise } from '../../lib/render/format.ts';
+import { labelFor } from '../../schemas/taxonomy.ts';
+import type { GunData } from '../../schemas/gun.ts';
+import type { Derived } from '../../lib/math/provenance.ts';
+
+export interface GunPageDerived {
+  label: string;
+  derived: Derived;
+}
+
+export interface RelatedEntry {
+  id: string;
+  name: string;
+  type?: string | null;
+  note?: string;
+}
+
+interface Props {
+  gun: GunData;
+  /** Resolved display name of the maker, if `makerRef` points anywhere. */
+  makerName?: string | null;
+  familyName?: string | null;
+  /** Cartridge display names by id, for the chambering rows. */
+  cartridgeNames: Record<string, string>;
+  /** Computed era id. Never authored (SPEC.md §7). */
+  era?: string | null;
+  /** The five-number strip. Exactly five, in this order, or fewer if unknown. */
+  statStrip: GunPageDerived[];
+  /** Everything else the math engine produced for this entry. */
+  derivedMetrics: GunPageDerived[];
+  /** Computed from `familyRef`, never hand-maintained. */
+  familyMembers?: RelatedEntry[];
+  lineageOut?: { label: string; entry: RelatedEntry }[];
+  lineageIn?: { label: string; entry: RelatedEntry }[];
+}
+
+const {
+  gun,
+  makerName = null,
+  familyName = null,
+  cartridgeNames,
+  era = null,
+  statStrip,
+  derivedMetrics,
+  familyMembers = [],
+  lineageOut = [],
+  lineageIn = [],
+} = Astro.props;
+
+const years = formatYears(gun.productionYears);
+const primary = gun.chamberings.find((c) => c.primary) ?? gun.chamberings[0];
+const gallery = gun.images.slice(1);
+const hero = gun.images[0];
+
+/** Eight is the tab cap; past it the panels stack (see `global.css`). */
+const stacked = gun.variants.length > 8;
+const tabGroup = `variants-${gun.id}`;
+
+const identity = [
+  { label: 'Type', value: gun.type ? (labelFor('type', gun.type) ?? gun.type) : null, axis: 'type' as const, term: gun.type },
+  { label: 'Action', value: gun.action ? (labelFor('action', gun.action) ?? gun.action) : null, axis: 'action' as const, term: gun.action },
+  {
+    label: 'Operating system',
+    value: gun.operatingSystem ? (labelFor('operating-system', gun.operatingSystem) ?? gun.operatingSystem) : null,
+    axis: 'operating-system' as const,
+    term: gun.operatingSystem,
+  },
+];
+---
+
+<BaseLayout
+  title={gun.name}
+  description={`${gun.name}${makerName ? `, ${makerName}` : ''}${
+    years ? `, ${years}` : ''
+  }. Sourced specifications, derived ballistics, and the formula behind every figure.`}
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <Breadcrumbs
+      crumbs={[
+        ...(gun.type
+          ? [{ label: labelFor('type', gun.type) ?? gun.type, path: taxonomyHref('type', gun.type) }]
+          : []),
+        { label: gun.name },
+      ]}
+    />
+
+    {/* ── Hero ─────────────────────────────────────────────────────────── */}
+    <header class="mt-4 grid gap-6 lg:grid-cols-[1fr_minmax(0,28rem)] lg:items-end">
+      <div>
+        <TypeBadge type={gun.type ?? null} />
+        <h1 class="type-display mt-3 text-display text-ink">{gun.name}</h1>
+        {
+          gun.nativeName && (
+            <p class="type-title mt-1 text-xl text-ink-secondary" lang="und">
+              {gun.nativeName}
+            </p>
+          )
+        }
+        <p class="type-data mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-secondary">
+          {
+            makerName && gun.makerRef && (
+              <a href={makerHref(gun.makerRef)} class="text-ui-accent">
+                {makerName}
+              </a>
+            )
+          }
+          {years && <span>{years}</span>}
+          {
+            era && (
+              <a href={taxonomyHref('era', era)} class="text-ink-muted hover:text-ui-accent">
+                {labelFor('era', era) ?? humanise(era)}
+              </a>
+            )
+          }
+        </p>
+
+        {
+          gun.aliases.length > 0 && (
+            <p class="type-data mt-2 text-sm text-ink-muted">
+              Also known as {gun.aliases.map((a) => a.name).join(', ')}
+            </p>
+          )
+        }
+
+        {
+          gun.roles.length > 0 && (
+            <ul class="mt-3 flex flex-wrap gap-2">
+              {gun.roles.map((role) => (
+                <li>
+                  <a
+                    href={taxonomyHref('role', role)}
+                    class="type-data rounded-full border border-line-strong px-2 py-0.5 text-xs text-ink-secondary no-underline hover:text-ui-accent"
+                  >
+                    {labelFor('role', role) ?? humanise(role)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
+
+      {hero && <ImageFigure image={hero} id={`img-hero-${gun.id}`} priority sizes="(min-width: 1024px) 28rem, 100vw" />}
+    </header>
+
+    {/* ── Five-number stat strip ───────────────────────────────────────── */}
+    {
+      statStrip.length > 0 && (
+        <div class="mt-8 grid gap-4 rounded-lg border border-line bg-surface-1 p-4 sm:grid-cols-2 lg:grid-cols-5">
+          {statStrip.map((stat, i) => (
+            <FigureValue
+              id={`stat-${gun.id}-${i}`}
+              label={stat.label}
+              derived={stat.derived}
+              emphasis
+            />
+          ))}
+        </div>
+      )
+    }
+
+    {/* ── Lede ─────────────────────────────────────────────────────────── */}
+    <div class="prose type-body mt-8 max-w-lede text-lg text-ink-secondary">
+      <slot name="lede" />
+    </div>
+
+    {/* ── Derived metrics: the product ─────────────────────────────────── */}
+    {
+      derivedMetrics.length > 0 && (
+        <Section
+          id="derived"
+          title="Derived figures"
+          standfirst="Computed from the sourced values above. Open ƒ on any figure for the formula, its inputs, and the assumptions it makes."
+        >
+          <div class="grid gap-5 rounded-lg border border-line bg-surface-1 p-5 sm:grid-cols-2 lg:grid-cols-3">
+            {derivedMetrics.map((metric, i) => (
+              <FigureValue id={`derived-${gun.id}-${i}`} label={metric.label} derived={metric.derived} />
+            ))}
+          </div>
+        </Section>
+      )
+    }
+
+    {/* ── Variants ─────────────────────────────────────────────────────── */}
+    {
+      gun.variants.length > 0 && (
+        <Section id="variants" title="Variants">
+          <div class="variants">
+            <label class="delta-toggle type-data mb-4 inline-flex cursor-pointer items-center gap-2 text-sm text-ink-secondary">
+              <input type="checkbox" class="accent-[var(--color-ui-accent)]" />
+              Compare all variants in one table
+            </label>
+
+            <div class={`tabs ${stacked ? 'tabs--stacked' : ''}`}>
+              <div class="tabstrip flex flex-wrap gap-2" role="tablist">
+                {gun.variants.map((variant, i) => (
+                  <label class="tab type-data cursor-pointer rounded border border-line px-3 py-1.5 text-sm text-ink-secondary">
+                    <input type="radio" name={tabGroup} checked={i === 0} />
+                    <span>{variant.name}</span>
+                  </label>
+                ))}
+              </div>
+
+              <div class="tabpanels mt-4">
+                {gun.variants.map((variant) => (
+                  <div class="tabpanel rounded-lg border border-line bg-surface-1 p-4">
+                    {/*
+                      Its own heading, in the static HTML — the condition on
+                      which variants-as-tabs was accepted at all (SPEC.md §12).
+                    */}
+                    <h3 class="type-heading text-base text-ink">{variant.name}</h3>
+                    {variant.nativeName && (
+                      <p class="type-data text-sm text-ink-muted">{variant.nativeName}</p>
+                    )}
+                    {formatYears(variant.productionYears) && (
+                      <p class="type-data text-sm text-ink-secondary">
+                        {formatYears(variant.productionYears)}
+                      </p>
+                    )}
+                    {variant.summary && (
+                      <p class="type-body mt-2 max-w-readable text-sm text-ink-secondary">
+                        {variant.summary}
+                      </p>
+                    )}
+                    {variant.promotedTo && (
+                      <p class="type-data mt-2 text-sm">
+                        <a href={gunHref(variant.promotedTo)} class="text-ui-accent">
+                          This variant now has its own page →
+                        </a>
+                      </p>
+                    )}
+
+                    <dl class="mt-3">
+                      {Object.entries(variant.overrides).map(([field, value]) =>
+                        value && typeof value === 'object' && 'unit' in value ? (
+                          <SpecRow label={humanise(field)} value={value as never} />
+                        ) : null,
+                      )}
+                    </dl>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/*
+              The delta table: only what each variant CHANGES, which is the
+              whole delta-override pattern of SPEC.md §5.2 made visible.
+            */}
+            <div class="delta-table overflow-x-auto">
+              <table class="type-data w-full min-w-[36rem] text-sm">
+                <thead>
+                  <tr class="border-b border-line-strong text-left text-ink-muted">
+                    <th scope="col" class="p-2">Variant</th>
+                    <th scope="col" class="p-2">Years</th>
+                    <th scope="col" class="p-2">Changes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {gun.variants.map((variant) => (
+                    <tr class="border-b border-line align-top">
+                      <th scope="row" class="p-2 text-left font-normal text-ink">
+                        {variant.name}
+                      </th>
+                      <td class="p-2 text-ink-secondary">
+                        {formatYears(variant.productionYears) ?? '—'}
+                      </td>
+                      <td class="p-2 text-ink-secondary">
+                        {Object.keys(variant.overrides).map(humanise).join(', ') || 'no spec change'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </Section>
+      )
+    }
+
+    {/* ── Specifications ───────────────────────────────────────────────── */}
+    <Section id="specifications" title="Specifications">
+      <div class="grid gap-6 lg:grid-cols-2">
+        <details open class="rounded-lg border border-line bg-surface-1 p-4">
+          <summary class="type-heading cursor-pointer text-sm uppercase tracking-wider text-ink-muted">
+            Identity
+          </summary>
+          <dl class="mt-3">
+            {identity.map((row) => (
+              <SpecRow label={row.label} text={row.value} />
+            ))}
+            <SpecRow
+              label="Fire modes"
+              text={gun.fireModes.map((m) => labelFor('fire-mode', m) ?? humanise(m)).join(', ') || null}
+            />
+            <SpecRow
+              label="Feed"
+              text={gun.feedSystem.map((f) => labelFor('feed', f) ?? humanise(f)).join(', ') || null}
+            />
+            <SpecRow
+              label="Designed in"
+              text={gun.designedIn ? (labelFor('country', gun.designedIn) ?? humanise(gun.designedIn)) : null}
+            />
+            <SpecRow
+              label="Produced in"
+              text={gun.producedIn.map((c) => labelFor('country', c) ?? humanise(c)).join(', ') || null}
+            />
+            {familyName && gun.familyRef && <SpecRow label="Family" text={familyName} />}
+          </dl>
+        </details>
+
+        <details open class="rounded-lg border border-line bg-surface-1 p-4">
+          <summary class="type-heading cursor-pointer text-sm uppercase tracking-wider text-ink-muted">
+            Dimensions and mass
+          </summary>
+          <dl class="mt-3">
+            <SpecRow label="Mass, empty" value={gun.massEmpty} />
+            <SpecRow label="Magazine, empty" value={gun.massMagazineEmpty} />
+            <SpecRow label="Length" value={gun.length} />
+            <SpecRow label="Length, folded" value={gun.lengthFolded} />
+            <SpecRow label="Width" value={gun.width} />
+            <SpecRow label="Height" value={gun.height} />
+            <SpecRow label="Barrel length" value={gun.barrelLength} />
+          </dl>
+        </details>
+
+        <details open class="rounded-lg border border-line bg-surface-1 p-4">
+          <summary class="type-heading cursor-pointer text-sm uppercase tracking-wider text-ink-muted">
+            Sights and rifling
+          </summary>
+          <dl class="mt-3">
+            <SpecRow label="Sight radius" value={gun.sightRadius} />
+            <SpecRow label="Sight height over bore" value={gun.sightHeightOverBore} />
+            <SpecRow label="Rifling twist" value={gun.riflingTwist} />
+            <SpecRow label="Twist direction" text={gun.twistDirection ?? null} />
+            <SpecRow label="Grooves" text={gun.riflingGrooves ? String(gun.riflingGrooves) : null} />
+            <SpecRow label="Sight graduation" value={gun.sightGraduation} />
+          </dl>
+        </details>
+
+        <details open class="rounded-lg border border-line bg-surface-1 p-4">
+          <summary class="type-heading cursor-pointer text-sm uppercase tracking-wider text-ink-muted">
+            Operation
+          </summary>
+          <dl class="mt-3">
+            <SpecRow label="Cyclic rate" value={gun.cyclicRate} />
+            <SpecRow label="Trigger pull" value={gun.triggerPull} />
+            <SpecRow label="Effective range" value={gun.effectiveRange} />
+            <SpecRow label="Units produced" value={gun.productionTotal} />
+          </dl>
+        </details>
+      </div>
+
+      {
+        gun.chamberings.length > 0 && (
+          <div class="mt-6 rounded-lg border border-line bg-surface-1 p-4">
+            <h3 class="type-heading text-sm uppercase tracking-wider text-ink-muted">Chamberings</h3>
+            <ul class="mt-3 flex flex-col gap-2">
+              {gun.chamberings.map((chambering) => (
+                <li class="type-data flex flex-wrap items-baseline gap-x-3 text-sm">
+                  <a href={cartridgeHref(chambering.cartridgeRef)} class="text-ui-accent">
+                    {cartridgeNames[chambering.cartridgeRef] ?? chambering.cartridgeRef}
+                  </a>
+                  {chambering.primary && (
+                    <span class="text-xs uppercase tracking-wide text-ink-muted">primary</span>
+                  )}
+                  <span class="text-ink-secondary">
+                    <UnitValue value={chambering.capacity.value} unit="" /> rounds
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </Section>
+
+    {/* ── Scale silhouette — the island lands in Phase 6 ───────────────── */}
+    <Section
+      id="silhouette"
+      title="Scale"
+      standfirst="A to-scale outline against family siblings. The dimensions are sourced; the shape is a representative outline for the type, and is labelled as such."
+    >
+      <p class="type-data rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted">
+        The silhouette renderer is Phase 6. The dimensions it will draw from are in the table above.
+      </p>
+    </Section>
+
+    {/* ── Lineage ──────────────────────────────────────────────────────── */}
+    {
+      (lineageOut.length > 0 || lineageIn.length > 0 || familyMembers.length > 0) && (
+        <Section id="lineage" title="Lineage">
+          <div class="grid gap-6 sm:grid-cols-2">
+            {[
+              { heading: 'This design', edges: lineageOut },
+              { heading: 'What came from it', edges: lineageIn },
+            ].map((group) =>
+              group.edges.length > 0 ? (
+                <div>
+                  <h3 class="type-heading text-sm uppercase tracking-wider text-ink-muted">
+                    {group.heading}
+                  </h3>
+                  <ul class="mt-2 flex flex-col gap-1">
+                    {group.edges.map((edge) => (
+                      <li class="type-data text-sm">
+                        <span class="text-ink-muted">{edge.label}</span>{' '}
+                        <a href={gunHref(edge.entry.id)} class="text-ui-accent">
+                          {edge.entry.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null,
+            )}
+
+            {familyMembers.length > 0 && (
+              <div>
+                <h3 class="type-heading text-sm uppercase tracking-wider text-ink-muted">
+                  In this family
+                </h3>
+                <ul class="mt-2 flex flex-col gap-1">
+                  {familyMembers.map((member) => (
+                    <li class="type-data text-sm">
+                      <a href={gunHref(member.id)} class="text-ui-accent">
+                        {member.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </Section>
+      )
+    }
+
+    {/* ── Gallery ──────────────────────────────────────────────────────── */}
+    {
+      gallery.length > 0 && (
+        <Section id="gallery" title="Gallery">
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {gallery.map((image, i) => (
+              <ImageFigure image={image} id={`img-${gun.id}-${i}`} sizes="(min-width: 640px) 33vw, 100vw" />
+            ))}
+          </div>
+        </Section>
+      )
+    }
+
+    {/* ── Narrative body ───────────────────────────────────────────────── */}
+    <Section id="detail" title="Detail">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <slot />
+      </div>
+    </Section>
+
+    {/* ── References ───────────────────────────────────────────────────── */}
+    <Section
+      id="references"
+      title="References"
+      standfirst="This entry's own bibliography. Every citation key on this page resolves into this list."
+    >
+      <ol class="flex list-decimal flex-col gap-3 pl-5">
+        {
+          gun.references.map((reference) => (
+            <li id={`ref-${reference.key}`} class="type-data text-sm text-ink-secondary">
+              {reference.url ? (
+                <a href={reference.url} rel="nofollow noopener" class="text-ui-accent">
+                  {reference.title}
+                </a>
+              ) : (
+                <span class="text-ink">{reference.title}</span>
+              )}
+              {reference.publisher && <span> · {reference.publisher}</span>}
+              {reference.year && <span> · {reference.year}</span>}
+              {reference.revision && <span> · {reference.revision}</span>}
+              {reference.accessed && <span class="text-ink-muted"> · read {reference.accessed}</span>}
+              {reference.license && <span class="text-ink-muted"> · {reference.license}</span>}
+            </li>
+          ))
+        }
+      </ol>
+
+      <p class="type-data mt-4 text-xs text-ink-muted">
+        Last verified {gun.lastVerified} · review status: {gun.reviewStatus}
+      </p>
+    </Section>
+  </div>
+</BaseLayout>

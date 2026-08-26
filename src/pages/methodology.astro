@@ -1,0 +1,146 @@
+---
+/**
+ * `/methodology/` — SPEC.md §8.
+ *
+ * The formulas are public because "the reader can open it and check" has to be
+ * true at the level of the whole engine, not just per figure.
+ */
+import BaseLayout from '../components/ui/BaseLayout.astro';
+import Breadcrumbs from '../components/blocks/Breadcrumbs.astro';
+import Section from '../components/blocks/Section.astro';
+import thresholds from '../data/thresholds.json';
+---
+
+<BaseLayout
+  title="Methodology"
+  description="How ARMAG computes every derived figure: the formulas, the drag model, the status rules, and how tier is scored."
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <Breadcrumbs crumbs={[{ label: 'Methodology' }]} />
+    <h1 class="type-display mt-4 text-display text-ink">Methodology</h1>
+    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+      Every derived figure on the site is produced by one set of pure functions, imported by both
+      the page build and the interactive tools. A figure rendered into the HTML and one recomputed
+      in your browser cannot disagree, because they are the same function.
+    </p>
+
+    <Section id="status" title="Status propagation">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          A derived value inherits the <strong class="text-ink">worst status among its inputs</strong>.
+          Verified times verified is verified; any estimated input makes the output estimated; if the
+          published record disagrees about an input, the output says so too.
+        </p>
+        <p class="mt-4">
+          An input with no number blocks the calculation entirely. We do not substitute a typical
+          value, because a typical value is a number nobody measured. The page says which input is
+          missing instead.
+        </p>
+        <p class="mt-4">
+          The completeness score counts only verified values. Estimating your way to a full spec
+          sheet therefore produces a low-tier entry covered in amber badges — inventing numbers buys
+          nothing, which is the point.
+        </p>
+      </div>
+    </Section>
+
+    <Section id="ballistics" title="Ballistics">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          Trajectories are integrated with a fourth-order Runge–Kutta scheme in three dimensions, so
+          wind drift comes out of the same solver as drop. Drag uses the G1 and G7 standard drag
+          functions — public-domain US Army Ballistic Research Laboratory data — scaled by the
+          ballistic coefficient. The reference condition is the International Standard Atmosphere at
+          sea level, which is what published tables are quoted at.
+        </p>
+        <p class="mt-4">
+          <strong class="text-ink">Not modelled:</strong> spin drift, Coriolis and aerodynamic jump.
+          Each needs inputs this site does not record — latitude, firing azimuth, gyroscopic
+          stability — and producing a more-decimal-places answer by inventing them would be worse
+          than the honest omission.
+        </p>
+        <p class="mt-4">
+          The solver is checked in the test suite against a closed-form vacuum trajectory, against
+          an independent open-source implementation, and against manufacturer-published tables. The
+          tolerances are stated in the tests rather than asserted here.
+        </p>
+      </div>
+    </Section>
+
+    <Section id="velocity" title="Velocity and barrel length">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          Muzzle velocity belongs to a cartridge <em>and</em> a barrel length together, and almost
+          nobody publishes it for the pairing you want. Between two sourced barrel lengths we
+          interpolate, and label the figure as interpolated.
+        </p>
+        <p class="mt-4">
+          <strong class="text-ink">Outside the sourced range we project nothing.</strong> A 3-inch
+          barrel with data only from 4 to 6 inches shows the nearest measured figure with its actual
+          barrel length stated. The familiar "about 25 feet per second per inch" rule of thumb does
+          not exist anywhere in this codebase: the real figure depends on the cartridge, the powder
+          and where on the curve you are, and it can go negative.
+        </p>
+      </div>
+    </Section>
+
+    <Section id="recoil" title="Recoil">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          Free recoil is computed from the momentum leaving the muzzle and the mass of the arm as
+          carried. Because ARMAG does not record powder-charge weights, the propellant gas term is
+          excluded and the figure is a <strong class="text-ink">lower bound</strong>, marked as an
+          estimate and consistent between entries.
+        </p>
+        <p class="mt-4">
+          "Free" means unrestrained: nothing about a stock, a pad, a brake or a shooter is modelled,
+          because none of those is a property of the arm. It is a physical comparison, not a
+          prediction of what recoil will feel like.
+        </p>
+      </div>
+    </Section>
+
+    <Section id="tier" title="Completeness and tier">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          Tier is computed from a completeness score, never asserted by whoever wrote the entry. The
+          weights are below and are open to revision as the database grows.
+        </p>
+      </div>
+      <table class="type-data mt-4 w-full max-w-readable text-sm">
+        <thead>
+          <tr class="border-b border-line-strong text-left text-ink-muted">
+            <th scope="col" class="p-2">Contribution</th>
+            <th scope="col" class="p-2 text-right">Points each</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            Object.entries(thresholds.completeness.weights).map(([key, weight]) => (
+              <tr class="border-b border-line">
+                <th scope="row" class="p-2 text-left font-normal text-ink-secondary">
+                  {key.replace(/([A-Z])/g, ' $1').replace(/^./, (c) => c.toUpperCase())}
+                </th>
+                <td class="p-2 text-right text-ink">{weight}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+      <p class="type-data mt-3 max-w-readable text-sm text-ink-muted">
+        Tier 1 at {thresholds.completeness.tierFloor.tier1} points, Tier 2 at{' '}
+        {thresholds.completeness.tierFloor.tier2}. Only verified values count toward any of it.
+      </p>
+    </Section>
+
+    <Section id="units" title="Units">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          SI is what is stored. Imperial is computed and shown by the toggle in the header; it is
+          never stored in the database and never indexed by the site search. Cartridge names are
+          never converted — a .45 ACP is a .45 ACP in either system.
+        </p>
+      </div>
+    </Section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,114 @@
+---
+/**
+ * A browse axis — SPEC.md §7.
+ *
+ * **Taxonomy pages own no content.** Every one of them is a computed view over
+ * tagged entries, built at build time, which is what makes re-tagging an entry
+ * safe at any moment: no page has to be edited, and no URL moves.
+ *
+ * The one exception on the site is `/cartridges/<slug>/`, which is both a real
+ * entry and the caliber view — see `CartridgePage.astro`.
+ */
+import BaseLayout from '../ui/BaseLayout.astro';
+import Breadcrumbs from '../blocks/Breadcrumbs.astro';
+import Section from '../blocks/Section.astro';
+import TypeBadge from '../blocks/TypeBadge.astro';
+
+import { gunHref, taxonomyHref, type TaxonomyAxisKey } from '../../lib/content/href.ts';
+import { humanise, plural } from '../../lib/render/format.ts';
+import type { VocabTerm } from '../../schemas/taxonomy.ts';
+
+export interface TaxonomyEntry {
+  id: string;
+  name: string;
+  type?: string | null;
+  makerName?: string | null;
+  introduced?: number;
+}
+
+interface Props {
+  axis: TaxonomyAxisKey;
+  axisLabel: string;
+  term: VocabTerm;
+  entries: TaxonomyEntry[];
+  /** The other terms on this axis, for the tab strip. */
+  siblings: VocabTerm[];
+}
+
+const { axis, axisLabel, term, entries, siblings } = Astro.props;
+const sorted = [...entries].sort((a, b) => (a.introduced ?? 0) - (b.introduced ?? 0));
+---
+
+<BaseLayout
+  title={term.label}
+  description={`${plural(entries.length, 'firearm')} tagged ${term.label} on ARMAG.${
+    term.description ? ` ${term.description}` : ''
+  }`}
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <Breadcrumbs crumbs={[{ label: axisLabel }, { label: term.label }]} />
+
+    <header class="mt-4">
+      <p class="type-data text-xs uppercase tracking-widest text-ink-muted">{axisLabel}</p>
+      <h1 class="type-display mt-1 text-display text-ink">{term.label}</h1>
+      {
+        term.description && (
+          <p class="type-body mt-3 max-w-lede text-lg text-ink-secondary">{term.description}</p>
+        )
+      }
+      {
+        term.aka && term.aka.length > 0 && (
+          <p class="type-data mt-2 text-sm text-ink-muted">Also called {term.aka.join(', ')}</p>
+        )
+      }
+    </header>
+
+    {/*
+      The type tab strip, borrowed from weapon-select UI (SPEC.md §11). Plain
+      links, not a widget: each one is a real crawlable page.
+    */}
+    <nav aria-label={`Other ${axisLabel.toLowerCase()} terms`} class="mt-6 flex flex-wrap gap-2">
+      {
+        siblings.map((sibling) => (
+          <a
+            href={taxonomyHref(axis, sibling.id)}
+            aria-current={sibling.id === term.id ? 'page' : undefined}
+            class={`type-data rounded border px-3 py-1.5 text-sm no-underline ${
+              sibling.id === term.id
+                ? 'border-line-strong bg-surface-2 text-ink'
+                : 'border-line text-ink-secondary hover:text-ui-accent'
+            }`}
+          >
+            {sibling.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <Section id="entries" title={plural(entries.length, 'entry', 'entries')}>
+      {
+        sorted.length === 0 ? (
+          <p class="type-data text-sm text-ink-muted">
+            Nothing is tagged {term.label} yet. The page exists because the term does — an axis with
+            no examples is an untested code path, not a missing page.
+          </p>
+        ) : (
+          <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {sorted.map((entry) => (
+              <li class="rounded-lg border border-line bg-surface-1 p-3">
+                <TypeBadge type={entry.type ?? null} link={false} size="sm" />
+                <a href={gunHref(entry.id)} class="type-data mt-2 block text-sm text-ui-accent">
+                  {entry.name}
+                </a>
+                <p class="type-data text-xs text-ink-muted">
+                  {[entry.makerName, entry.introduced].filter(Boolean).join(' · ') ||
+                    humanise(entry.id)}
+                </p>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </Section>
+  </div>
+</BaseLayout>

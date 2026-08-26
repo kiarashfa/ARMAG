@@ -1,0 +1,89 @@
+---
+/**
+ * Site header — wordmark, the browse axes, and the two toggles.
+ *
+ * Both toggles are plain buttons with a few lines of inline script rather than
+ * hydrated islands. A theme switch that needs 12 kB of framework to change one
+ * attribute is a bad trade against the SPEC.md §11 budget of under 100 kB of JS
+ * per page, and neither toggle has state worth a component.
+ */
+import { href, taxonomyHref } from '../../lib/content/href.ts';
+
+const axes = [
+  { label: 'Pistols', axis: 'type', term: 'pistol' },
+  { label: 'Rifles', axis: 'type', term: 'rifle' },
+  { label: 'Shotguns', axis: 'type', term: 'shotgun' },
+] as const;
+---
+
+<header class="border-b border-line bg-surface-0">
+  <div
+    class="mx-auto flex max-w-(--layout-max) flex-wrap items-center gap-x-6 gap-y-3 px-(--layout-gutter) py-3"
+  >
+    <a href={href()} class="type-title text-lg tracking-tight text-ink no-underline">
+      ARMAG
+    </a>
+
+    <nav aria-label="Browse" class="type-data flex flex-wrap items-center gap-4 text-sm">
+      {
+        axes.map((item) => (
+          <a href={taxonomyHref(item.axis, item.term)} class="text-ink-secondary hover:text-ui-accent">
+            {item.label}
+          </a>
+        ))
+      }
+      <a href={href('cartridges')} class="text-ink-secondary hover:text-ui-accent">Cartridges</a>
+      <a href={href('glossary')} class="text-ink-secondary hover:text-ui-accent">Glossary</a>
+    </nav>
+
+    <div class="ml-auto flex items-center gap-2">
+      <button
+        type="button"
+        id="unit-toggle"
+        class="type-data rounded border border-line-strong bg-surface-1 px-2 py-1 text-xs text-ink-secondary hover:text-ink"
+        aria-label="Switch between metric and imperial units"
+      >
+        <span class="u-metric">Metric</span><span class="u-imperial" data-pagefind-ignore
+          >Imperial</span
+        >
+      </button>
+
+      <button
+        type="button"
+        id="theme-toggle"
+        class="type-data rounded border border-line-strong bg-surface-1 px-2 py-1 text-xs text-ink-secondary hover:text-ink"
+        aria-label="Switch between the dark and light theme"
+      >
+        Theme
+      </button>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  (() => {
+    const root = document.documentElement;
+    const save = (key, value) => {
+      try {
+        localStorage.setItem(key, value);
+      } catch {
+        /* A private window can refuse. The toggle still works for this page. */
+      }
+    };
+
+    document.getElementById('theme-toggle')?.addEventListener('click', () => {
+      // No attribute means dark, because dark is the default rather than a
+      // fallback. Setting it explicitly is how a light choice survives a reload.
+      const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      save('armag:theme', next);
+    });
+
+    document.getElementById('unit-toggle')?.addEventListener('click', () => {
+      const next = root.getAttribute('data-units') === 'imperial' ? 'metric' : 'imperial';
+      if (next === 'imperial') root.setAttribute('data-units', 'imperial');
+      else root.removeAttribute('data-units');
+      save('armag:units', next);
+    });
+  })();
+</script>

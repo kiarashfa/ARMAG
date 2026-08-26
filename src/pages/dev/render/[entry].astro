@@ -1,0 +1,107 @@
+---
+/**
+ * The render harness — Instruction.md Phase 4's definition of done.
+ *
+ * Renders each template against `test-fixtures/render/fixture-entry.ts`, which
+ * carries all four trust statuses at once so every path through `FigureValue`,
+ * `SpecRow` and `StatusBadge` is visible on one screen.
+ *
+ * Dev-only, by the same mechanism as the token page: `getStaticPaths` returns
+ * nothing in a production build, so no page is emitted, nothing needs a
+ * noindex, and no fixture can ever be mistaken for content.
+ *
+ * The templates take props and fetch nothing, so this harness and the real
+ * route at `/guns/<slug>/` drive **the same template code**. That is the whole
+ * reason the fixture can live outside `src/content/` without the tested path
+ * diverging from the shipped one.
+ */
+import GunPage from '../../../components/templates/GunPage.astro';
+import CartridgePage from '../../../components/templates/CartridgePage.astro';
+import MakerPage from '../../../components/templates/MakerPage.astro';
+
+import { figuresForGun } from '../../../lib/content/derived.ts';
+import { eraForYear } from '../../../schemas/taxonomy.ts';
+import {
+  FIXTURE_CARTRIDGE,
+  FIXTURE_GUN,
+  FIXTURE_MAKER,
+} from '../../../../test-fixtures/render/fixture-entry.ts';
+
+export function getStaticPaths() {
+  if (!import.meta.env.DEV) return [];
+  return [{ params: { entry: 'gun' } }, { params: { entry: 'cartridge' } }, { params: { entry: 'maker' } }];
+}
+
+const { entry } = Astro.params;
+
+const figures = figuresForGun(FIXTURE_GUN, FIXTURE_CARTRIDGE);
+const era = FIXTURE_GUN.introduced ? eraForYear(FIXTURE_GUN.introduced) : null;
+---
+
+{
+  entry === 'gun' && (
+    <GunPage
+      gun={FIXTURE_GUN}
+      makerName={FIXTURE_MAKER.name}
+      cartridgeNames={{ [FIXTURE_CARTRIDGE.id]: FIXTURE_CARTRIDGE.name }}
+      era={era}
+      statStrip={figures.statStrip}
+      derivedMetrics={figures.metrics}
+      lineageOut={[]}
+      lineageIn={[]}
+    >
+      <p slot="lede">
+        A render fixture, not a real firearm. It exists to exercise every template path at once:
+        a verified figure with a live source link, an estimated one with its basis, a figure whose
+        sources disagree, and a missing one that blocks two derived calculations downstream.
+      </p>
+
+      <p>
+        The body of the entry renders here, through the same prose column a real narrative would
+        use. Everything above it — the stat strip, the derived panel, the variant tabs and the
+        grouped specifications — is driven by the fixture data rather than written out.
+      </p>
+      <p>
+        The cyclic rate is deliberately absent, so the magazine-dump figure above reports which
+        input is missing instead of estimating one. That is the behaviour worth looking at on this
+        page.
+      </p>
+    </GunPage>
+  )
+}
+
+{
+  entry === 'cartridge' && (
+    <CartridgePage
+      cartridge={FIXTURE_CARTRIDGE}
+      chamberedIn={[{ id: FIXTURE_GUN.id, name: FIXTURE_GUN.name, makerName: FIXTURE_MAKER.name }]}
+    >
+      <p slot="lede">
+        A render fixture cartridge. The load table below carries three sourced velocity points, which
+        is what lets a gun page interpolate honestly between them.
+      </p>
+      <p>
+        The narrative body of a cartridge entry renders here.
+      </p>
+    </CartridgePage>
+  )
+}
+
+{
+  entry === 'maker' && (
+    <MakerPage
+      maker={FIXTURE_MAKER}
+      models={[
+        {
+          id: FIXTURE_GUN.id,
+          name: FIXTURE_GUN.name,
+          type: FIXTURE_GUN.type ?? null,
+          introduced: FIXTURE_GUN.introduced,
+        },
+      ]}
+    >
+      <p slot="lede">A render fixture manufacturer, with one computed entry attributed to it.</p>
+      <p>The narrative body of a maker entry renders here.</p>
+    </MakerPage>
+  )
+}

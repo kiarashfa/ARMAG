@@ -1,0 +1,244 @@
+---
+/**
+ * The cartridge page — SPEC.md §5.4.
+ *
+ * **This page is also the caliber taxonomy page.** It carries real authored
+ * content *and* the computed list of every arm chambered in it, which is the
+ * one deliberate exception to "taxonomy pages own no content". It is what turns
+ * the site's highest-traffic query class — "9mm vs .45 ACP" — into a page with
+ * substance rather than an auto-generated list.
+ *
+ * The cartridge is also the input to every ballistic figure on every gun page
+ * that chambers it, which is why its dimensions are sourced once here rather
+ * than re-typed forty times.
+ */
+import BaseLayout from '../ui/BaseLayout.astro';
+import Breadcrumbs from '../blocks/Breadcrumbs.astro';
+import ImageFigure from '../blocks/ImageFigure.astro';
+import Section from '../blocks/Section.astro';
+import SpecRow from '../blocks/SpecRow.astro';
+import UnitValue from '../blocks/UnitValue.astro';
+
+import { gunHref, href } from '../../lib/content/href.ts';
+import { humanise } from '../../lib/render/format.ts';
+import type { CartridgeData } from '../../schemas/cartridge.ts';
+
+export interface ChamberedIn {
+  id: string;
+  name: string;
+  makerName?: string | null;
+}
+
+interface Props {
+  cartridge: CartridgeData;
+  /** Computed from `chamberings[].cartridgeRef`, never hand-maintained. */
+  chamberedIn: ChamberedIn[];
+}
+
+const { cartridge, chamberedIn } = Astro.props;
+const identityOnly = cartridge.loads.length === 0;
+---
+
+<BaseLayout
+  title={cartridge.name}
+  description={`${cartridge.name}: dimensions, pressure and load data transcribed from the published standard, plus every firearm chambered in it.`}
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <Breadcrumbs crumbs={[{ label: 'Cartridges', path: href('cartridges') }, { label: cartridge.name }]} />
+
+    <header class="mt-4">
+      <h1 class="type-display mt-2 text-display text-ink">{cartridge.name}</h1>
+      {
+        cartridge.nativeName && (
+          <p class="type-title mt-1 text-xl text-ink-secondary" lang="und">
+            {cartridge.nativeName}
+          </p>
+        )
+      }
+      <p class="type-data mt-3 flex flex-wrap gap-x-4 text-sm text-ink-secondary">
+        <span>Introduced {cartridge.introduced}</span>
+        {cartridge.designedBy && <span>{cartridge.designedBy}</span>}
+        {
+          cartridge.standard !== 'none' && (
+            <span class="uppercase tracking-wide text-ink-muted">
+              {cartridge.standard.toUpperCase()} standard
+            </span>
+          )
+        }
+      </p>
+      {
+        cartridge.aliases.length > 0 && (
+          <p class="type-data mt-2 max-w-lede text-sm text-ink-muted">
+            Also known as {cartridge.aliases.map((a) => a.name).join(', ')} — the same cartridge
+            under different names, all of which find this page.
+          </p>
+        )
+      }
+    </header>
+
+    <div class="prose type-body mt-6 max-w-lede text-lg text-ink-secondary">
+      <slot name="lede" />
+    </div>
+
+    <Section id="dimensions" title="Dimensions and pressure">
+      <div class="grid gap-6 lg:grid-cols-2">
+        <div class="rounded-lg border border-line bg-surface-1 p-4">
+          <dl>
+            <SpecRow label="Bullet diameter" value={cartridge.bulletDiameter} />
+            <SpecRow label="Neck diameter" value={cartridge.neckDiameter} />
+            <SpecRow label="Base diameter" value={cartridge.baseDiameter} />
+            <SpecRow label="Rim diameter" value={cartridge.rimDiameter} />
+            <SpecRow label="Case length" value={cartridge.caseLength} />
+            <SpecRow label="Overall length" value={cartridge.overallLength} />
+          </dl>
+        </div>
+        <div class="rounded-lg border border-line bg-surface-1 p-4">
+          <dl>
+            <SpecRow label="Case type" text={humanise(cartridge.caseType)} />
+            <SpecRow label="Case shape" text={cartridge.caseShape ? humanise(cartridge.caseShape) : null} />
+            <SpecRow label="Maximum pressure" value={cartridge.maxPressure} />
+            <SpecRow
+              label="Pressure standard"
+              text={cartridge.pressureStandard ? cartridge.pressureStandard.toUpperCase() : null}
+              note="SAAMI and C.I.P. measure pressure differently. Their figures are not interchangeable, which is why the body is always named."
+            />
+          </dl>
+        </div>
+      </div>
+    </Section>
+
+    {/* ── Loads ────────────────────────────────────────────────────────── */}
+    <Section
+      id="loads"
+      title="Loads"
+      standfirst={
+        identityOnly
+          ? undefined
+          : 'Velocity is recorded per barrel length as published. A gun page interpolates between these points and never projects beyond them.'
+      }
+    >
+      {
+        identityOnly ? (
+          <p class="type-data rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted">
+            No load data recorded yet. Without a sourced bullet mass and velocity there is nothing
+            honest to compute, so the ballistic figures on pages that chamber this cartridge stay
+            blank rather than being estimated into existence.
+          </p>
+        ) : (
+          <div class="flex flex-col gap-4">
+            {cartridge.loads.map((load) => (
+              <div class="rounded-lg border border-line bg-surface-1 p-4">
+                <h3 class="type-heading text-base text-ink">{load.name}</h3>
+                {load.manufacturer && (
+                  <p class="type-data text-sm text-ink-muted">{load.manufacturer}</p>
+                )}
+                <dl class="mt-3 grid gap-x-6 sm:grid-cols-2">
+                  <SpecRow label="Bullet mass" value={load.bulletMass} />
+                  <SpecRow label="Cartridge mass" value={load.cartridgeMass} />
+                  <SpecRow label="Bullet type" text={load.bulletType ?? null} />
+                  <SpecRow label="G1 BC" value={load.bcG1} />
+                  <SpecRow label="G7 BC" value={load.bcG7} />
+                </dl>
+
+                {load.velocityByBarrel.length > 0 && (
+                  <div class="mt-4 overflow-x-auto">
+                    <table class="type-data w-full min-w-[20rem] text-sm">
+                      <caption class="type-data pb-2 text-left text-xs text-ink-muted">
+                        Sourced velocity by barrel length
+                      </caption>
+                      <thead>
+                        <tr class="border-b border-line-strong text-left text-ink-muted">
+                          <th scope="col" class="p-2">Barrel</th>
+                          <th scope="col" class="p-2">Velocity</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {load.velocityByBarrel.map((point) => (
+                          <tr class="border-b border-line">
+                            <td class="p-2 text-ink-secondary">
+                              <UnitValue value={point.barrelLength.value} unit="mm" />
+                            </td>
+                            <td class="p-2 text-ink">
+                              <UnitValue value={point.velocity.value} unit="m/s" />
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )
+      }
+    </Section>
+
+    {/* ── The computed half: this IS the caliber taxonomy view ─────────── */}
+    <Section
+      id="chambered-in"
+      title="Chambered in"
+      standfirst="Computed from every entry that lists this cartridge. Nothing here is hand-maintained."
+    >
+      {
+        chamberedIn.length === 0 ? (
+          <p class="type-data text-sm text-ink-muted">No entry on the site is chambered in it yet.</p>
+        ) : (
+          <ul class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {chamberedIn.map((gun) => (
+              <li class="rounded border border-line bg-surface-1 p-3">
+                <a href={gunHref(gun.id)} class="type-data text-sm text-ui-accent">
+                  {gun.name}
+                </a>
+                {gun.makerName && (
+                  <p class="type-data text-xs text-ink-muted">{gun.makerName}</p>
+                )}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </Section>
+
+    {
+      cartridge.images.length > 0 && (
+        <Section id="gallery" title="Gallery">
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {cartridge.images.map((image, i) => (
+              <ImageFigure image={image} id={`img-${cartridge.id}-${i}`} />
+            ))}
+          </div>
+        </Section>
+      )
+    }
+
+    <Section id="detail" title="Detail">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <slot />
+      </div>
+    </Section>
+
+    <Section id="references" title="References">
+      <ol class="flex list-decimal flex-col gap-3 pl-5">
+        {
+          cartridge.references.map((reference) => (
+            <li id={`ref-${reference.key}`} class="type-data text-sm text-ink-secondary">
+              {reference.url ? (
+                <a href={reference.url} rel="nofollow noopener" class="text-ui-accent">
+                  {reference.title}
+                </a>
+              ) : (
+                <span class="text-ink">{reference.title}</span>
+              )}
+              {reference.revision && <span> · {reference.revision}</span>}
+              {reference.accessed && <span class="text-ink-muted"> · read {reference.accessed}</span>}
+            </li>
+          ))
+        }
+      </ol>
+      <p class="type-data mt-4 text-xs text-ink-muted">
+        Last verified {cartridge.lastVerified} · review status: {cartridge.reviewStatus}
+      </p>
+    </Section>
+  </div>
+</BaseLayout>

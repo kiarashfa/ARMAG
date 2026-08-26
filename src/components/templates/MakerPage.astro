@@ -1,0 +1,155 @@
+---
+/**
+ * The manufacturer page — SPEC.md §5.5.
+ *
+ * Partial content: the narrative and identity are authored, and **the model
+ * list is always computed** from `makerRef` on the gun entries. Re-attributing
+ * an arm is therefore a one-file change, and this page can never fall out of
+ * step with the entries it lists.
+ */
+import BaseLayout from '../ui/BaseLayout.astro';
+import Breadcrumbs from '../blocks/Breadcrumbs.astro';
+import ImageFigure from '../blocks/ImageFigure.astro';
+import Section from '../blocks/Section.astro';
+import SpecRow from '../blocks/SpecRow.astro';
+import TypeBadge from '../blocks/TypeBadge.astro';
+
+import { gunHref, href, makerHref, taxonomyHref } from '../../lib/content/href.ts';
+import { humanise } from '../../lib/render/format.ts';
+import { labelFor } from '../../schemas/taxonomy.ts';
+import type { MakerData } from '../../schemas/maker.ts';
+
+export interface MakerModel {
+  id: string;
+  name: string;
+  type?: string | null;
+  introduced?: number;
+}
+
+interface Props {
+  maker: MakerData;
+  models: MakerModel[];
+  /** Resolved names for the corporate-lineage links. */
+  relatedMakerNames?: Record<string, string>;
+}
+
+const { maker, models, relatedMakerNames = {} } = Astro.props;
+const countryLabel = labelFor('country', maker.country) ?? humanise(maker.country);
+const sorted = [...models].sort((a, b) => (a.introduced ?? 0) - (b.introduced ?? 0));
+---
+
+<BaseLayout
+  title={maker.name}
+  description={`${maker.name}, ${countryLabel}, founded ${maker.founded}. Every ARMAG entry attributed to this manufacturer.`}
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <Breadcrumbs crumbs={[{ label: 'Makers', path: href('makers') }, { label: maker.name }]} />
+
+    <header class="mt-4 grid gap-6 lg:grid-cols-[1fr_minmax(0,18rem)] lg:items-start">
+      <div>
+        <h1 class="type-display mt-2 text-display text-ink">{maker.name}</h1>
+        {
+          maker.nativeName && (
+            <p class="type-title mt-1 text-xl text-ink-secondary" lang="und">
+              {maker.nativeName}
+            </p>
+          )
+        }
+        <p class="type-data mt-3 flex flex-wrap gap-x-4 text-sm text-ink-secondary">
+          <a href={taxonomyHref('country', maker.country)} class="text-ui-accent">{countryLabel}</a>
+          <span>
+            {maker.founded}
+            {maker.dissolved ? `–${maker.dissolved}` : '–present'}
+          </span>
+          {
+            maker.website && (
+              <a href={maker.website} rel="nofollow noopener" class="text-ui-accent">
+                Official site
+              </a>
+            )
+          }
+        </p>
+      </div>
+
+      {maker.logo && <ImageFigure image={maker.logo} id={`logo-${maker.id}`} />}
+    </header>
+
+    <div class="prose type-body mt-6 max-w-lede text-lg text-ink-secondary">
+      <slot name="lede" />
+    </div>
+
+    {
+      (maker.parentCompany || maker.successorOf || maker.predecessorOf) && (
+        <Section id="corporate" title="Corporate lineage">
+          <dl class="max-w-readable rounded-lg border border-line bg-surface-1 p-4">
+            {(
+              [
+                ['Parent company', maker.parentCompany],
+                ['Successor to', maker.successorOf],
+                ['Predecessor of', maker.predecessorOf],
+              ] as const
+            ).map(([label, id]) =>
+              id ? (
+                <div class="grid grid-cols-[minmax(0,11rem)_1fr] gap-x-4 border-b border-line py-2 last:border-b-0">
+                  <dt class="type-data text-sm text-ink-secondary">{label}</dt>
+                  <dd class="type-data text-sm">
+                    <a href={makerHref(id)} class="text-ui-accent">
+                      {relatedMakerNames[id] ?? id}
+                    </a>
+                  </dd>
+                </div>
+              ) : null,
+            )}
+          </dl>
+          <p class="type-data mt-2 max-w-lede text-xs text-ink-muted">
+            A rename is not a new company, and an arm made in 1974 was made by whoever existed in
+            1974. Both names get a page, and the link runs between them.
+          </p>
+        </Section>
+      )
+    }
+
+    <Section
+      id="models"
+      title="Entries"
+      standfirst="Computed from every entry attributed to this manufacturer. Nothing here is hand-maintained."
+    >
+      {
+        sorted.length === 0 ? (
+          <p class="type-data text-sm text-ink-muted">No entries attributed here yet.</p>
+        ) : (
+          <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {sorted.map((model) => (
+              <li class="rounded-lg border border-line bg-surface-1 p-3">
+                <TypeBadge type={model.type ?? null} link={false} size="sm" />
+                <a href={gunHref(model.id)} class="type-data mt-2 block text-sm text-ui-accent">
+                  {model.name}
+                </a>
+                {model.introduced && (
+                  <p class="type-data text-xs text-ink-muted">{model.introduced}</p>
+                )}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </Section>
+
+    <Section id="detail" title="Detail">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <slot />
+      </div>
+    </Section>
+
+    <Section id="facts" title="Record">
+      <dl class="max-w-readable rounded-lg border border-line bg-surface-1 p-4">
+        <SpecRow label="Country" text={countryLabel} />
+        <SpecRow label="Founded" text={String(maker.founded)} />
+        <SpecRow label="Dissolved" text={maker.dissolved ? String(maker.dissolved) : 'still trading'} />
+      </dl>
+      <p class="type-data mt-4 text-xs text-ink-muted">
+        Last verified {maker.lastVerified} · review status: {maker.reviewStatus}
+      </p>
+    </Section>
+  </div>
+</BaseLayout>

@@ -392,3 +392,104 @@
     scroll-behavior: auto !important;
   }
 }
+
+/*
+ * ── The unit toggle ────────────────────────────────────────────────────────
+ *
+ * Both the metric and the imperial string are in the HTML; this shows one.
+ * See `lib/render/format.ts` for why that beats a hydrated converter: it works
+ * with JavaScript disabled, switches with no hydration and no layout shift, and
+ * the two strings are the same function's output so they cannot disagree.
+ *
+ * The imperial half also carries `data-pagefind-ignore`, so SPEC.md §8.1 holds:
+ * imperial is computed, never stored, never indexed.
+ */
+.u-imperial {
+  display: none;
+}
+[data-units='imperial'] .u-metric {
+  display: none;
+}
+[data-units='imperial'] .u-imperial {
+  display: inline;
+}
+
+/*
+ * ── Variant tabs, without JavaScript ───────────────────────────────────────
+ *
+ * SPEC.md §12 accepted variants-as-tabs on one condition: **every panel is in
+ * the static HTML with its own heading.** These are radio buttons, so the
+ * panels are all rendered, all indexable, and the group is keyboard-navigable
+ * with the arrow keys for free.
+ *
+ * The correlation between the checked tab and its panel is written out for
+ * eight positions rather than generated per page. Eight is already more tabs
+ * than a reader can hold in their head; past that the `.tabs--stacked` escape
+ * hatch shows every panel at once, which is worse to browse and better than
+ * showing nothing.
+ */
+@layer components {
+  .tab input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .tabpanel {
+    display: none;
+  }
+
+  .tabs:has(.tabstrip > .tab:nth-child(1) input:checked) .tabpanels > .tabpanel:nth-child(1) {
+    display: block;
+  }
+  .tabs:has(.tabstrip > .tab:nth-child(2) input:checked) .tabpanels > .tabpanel:nth-child(2) {
+    display: block;
+  }
+  .tabs:has(.tabstrip > .tab:nth-child(3) input:checked) .tabpanels > .tabpanel:nth-child(3) {
+    display: block;
+  }
+  .tabs:has(.tabstrip > .tab:nth-child(4) input:checked) .tabpanels > .tabpanel:nth-child(4) {
+    display: block;
+  }
+  .tabs:has(.tabstrip > .tab:nth-child(5) input:checked) .tabpanels > .tabpanel:nth-child(5) {
+    display: block;
+  }
+  .tabs:has(.tabstrip > .tab:nth-child(6) input:checked) .tabpanels > .tabpanel:nth-child(6) {
+    display: block;
+  }
+  .tabs:has(.tabstrip > .tab:nth-child(7) input:checked) .tabpanels > .tabpanel:nth-child(7) {
+    display: block;
+  }
+  .tabs:has(.tabstrip > .tab:nth-child(8) input:checked) .tabpanels > .tabpanel:nth-child(8) {
+    display: block;
+  }
+
+  .tabs--stacked .tabpanel {
+    display: block;
+  }
+
+  /* The focus ring has to be drawn on the label, since the input is hidden. */
+  .tab:has(input:focus-visible) {
+    outline: 2px solid var(--color-ui-accent);
+    outline-offset: 2px;
+  }
+
+  .tab:has(input:checked) {
+    background-color: var(--color-surface-2);
+    color: var(--color-ink);
+    border-color: var(--color-line-strong);
+  }
+
+  /* "Compare all variants" swaps the tab strip for one delta table. */
+  .variants .delta-table {
+    display: none;
+  }
+  .variants:has(.delta-toggle input:checked) .delta-table {
+    display: block;
+  }
+  .variants:has(.delta-toggle input:checked) .tabs {
+    display: none;
+  }
+}

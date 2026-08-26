@@ -1,0 +1,80 @@
+---
+/**
+ * `/about/` — carries the full disclaimer that SPEC.md §14 requires in the
+ * footer of every page and in full here.
+ */
+import BaseLayout from '../components/ui/BaseLayout.astro';
+import Breadcrumbs from '../components/blocks/Breadcrumbs.astro';
+import Section from '../components/blocks/Section.astro';
+import { href } from '../lib/content/href.ts';
+---
+
+<BaseLayout
+  title="About"
+  description="What ARMAG is, how it is sourced, and the disclaimer that applies to every page on it."
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <Breadcrumbs crumbs={[{ label: 'About' }]} />
+    <h1 class="type-display mt-4 text-display text-ink">About ARMAG</h1>
+    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+      A free, non-profit reference for modern firearms: one page per firearm, one per cartridge, one
+      per manufacturer, joined by a lineage graph and driven by a real physics engine. No login, no
+      advertising, no cookies, no tracking, no backend.
+    </p>
+
+    <Section id="difference" title="What makes it different">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          Anyone has a spec sheet. The difference here is that <strong class="text-ink">
+            every number is either sourced or derived from sourced numbers by a formula you can open
+            and check</strong
+          >. There is no third category.
+        </p>
+        <p class="mt-4">
+          Each figure carries a status. <em>Verified</em> means a cited source states it, and the
+          citation is a link you can click. <em>Estimated</em> means we worked it out, and the panel
+          tells you from what. <em>Sources disagree</em> means the published record itself conflicts,
+          and the note says how. <em>Not recorded</em> means we do not know — an honest gap, never a
+          plausible-looking guess.
+        </p>
+        <p class="mt-4">
+          Derived figures inherit the worst status of their inputs. Feed an estimate into a
+          calculation and the result is marked as an estimate, however confident the arithmetic
+          looks. A figure with no number behind it is not computed at all.
+        </p>
+      </div>
+    </Section>
+
+    <Section id="disclaimer" title="Disclaimer">
+      <div class="prose type-body max-w-readable rounded-lg border border-line-strong bg-surface-1 p-5 text-ink-secondary">
+        <p>
+          <strong class="text-ink">ARMAG is reference information only.</strong> It is not legal
+          advice, not safety instruction, and not a substitute for a manufacturer's manual or
+          qualified in-person training.
+        </p>
+        <p class="mt-4">
+          Figures are transcribed from published sources and may contain errors, including errors
+          present in those sources. Derived figures are models: they describe idealised conditions,
+          not the arm in your hands on the day. Check anything that matters against the source we
+          cite, and where safety is involved, against the manufacturer.
+        </p>
+        <p class="mt-4">
+          Nothing here tells you what you may lawfully do. ARMAG carries no jurisdiction data and no
+          legality flags, by deliberate decision — see the
+          <a href={href('editorial-policy')} class="text-ui-accent">editorial policy</a>. The site
+          states what a firearm <em>is</em>, never what a reader <em>may do</em>.
+        </p>
+      </div>
+    </Section>
+
+    <Section id="tone" title="Tone">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          Encyclopedic throughout, including on arms associated with atrocity or crime. Facts,
+          sourced, without celebration and without editorialising. An arm's history is part of what
+          it is, and omitting it would be its own kind of dishonesty.
+        </p>
+      </div>
+    </Section>
+  </div>
+</BaseLayout>

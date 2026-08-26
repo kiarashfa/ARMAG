@@ -1,0 +1,63 @@
+---
+/**
+ * The site's ONE disclosure primitive — SPEC.md §11.
+ *
+ * Native Popover API: no island, no hydration, no JavaScript of ours at all.
+ * Both things that disclose on this site use it — image credits and the ƒ
+ * formula panels — and Instruction.md is explicit that there must not be two
+ * implementations. This component will render tens of thousands of times, so
+ * anything it costs is multiplied by the whole database.
+ *
+ * The content is **always in the DOM**, open or closed, which is what makes it
+ * present for screen readers, for Pagefind, and for anyone auditing image
+ * licensing without running our JavaScript.
+ *
+ * Tailwind's preflight resets `margin: 0`, which breaks the user-agent rule
+ * that centres an open popover; `global.css` restates `margin: auto` for
+ * `[popover]`. Without that line every panel on the site opens in the top-left
+ * corner of the viewport.
+ */
+interface Props {
+  /** Unique per page. The popover's id and the trigger's target. */
+  id: string;
+  /** Accessible name of the trigger, e.g. 'Show how this was calculated'. */
+  label: string;
+  /** Heading inside the panel. */
+  title: string;
+  /** Extra classes for the trigger button. */
+  triggerClass?: string;
+}
+
+const { id, label, title, triggerClass = '' } = Astro.props;
+---
+
+<button
+  type="button"
+  popovertarget={id}
+  aria-label={label}
+  class={`type-data cursor-pointer rounded border border-line-strong bg-surface-2 px-1.5 py-0.5 text-xs text-ink-secondary transition-colors hover:text-ink ${triggerClass}`}
+>
+  <slot name="trigger" />
+</button>
+
+<div
+  id={id}
+  popover
+  class="max-w-readable rounded-lg border border-line-strong bg-surface-1 p-4 text-ink shadow-2xl"
+>
+  <div class="flex items-start justify-between gap-4">
+    <h2 class="type-heading text-sm">{title}</h2>
+    <button
+      type="button"
+      popovertarget={id}
+      popovertargetaction="hide"
+      class="type-data rounded px-1.5 text-sm text-ink-muted hover:text-ink"
+      aria-label="Close"
+    >
+      ✕
+    </button>
+  </div>
+  <div class="mt-3">
+    <slot />
+  </div>
+</div>

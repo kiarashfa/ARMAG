@@ -138,8 +138,20 @@ export function termsOf(axis: string): VocabTerm[] {
   return AUTHORED_VOCABULARIES[axis]?.terms ?? [];
 }
 
+/**
+ * Every vocabulary that has LABELS, including the computed ones.
+ *
+ * Separate from `AUTHORED_VOCABULARIES` because the two questions are
+ * different: "may an author write this tag?" excludes era, but "what do I call
+ * this term on screen?" must include it, or an era renders as its slug.
+ */
+const LABELLED_VOCABULARIES: Record<string, Vocabulary> = {
+  ...AUTHORED_VOCABULARIES,
+  era: eras,
+};
+
 export function labelFor(axis: string, id: string): string | undefined {
-  return termsOf(axis).find((t) => t.id === id)?.label;
+  return LABELLED_VOCABULARIES[axis]?.terms.find((t) => t.id === id)?.label;
 }
 
 /**

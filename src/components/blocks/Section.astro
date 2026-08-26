@@ -1,0 +1,29 @@
+---
+/**
+ * A titled page section with a stable anchor.
+ *
+ * The anchor is what the desktop section rail links to and what a citation from
+ * an article points at, so it is derived from the id rather than the title:
+ * rewording a heading must never break an inbound link (SPEC.md §2 principle 1
+ * applies to fragments too).
+ */
+interface Props {
+  id: string;
+  title: string;
+  /** Shown under the heading — what this section is for. */
+  standfirst?: string;
+  class?: string;
+}
+
+const { id, title, standfirst, class: className = '' } = Astro.props;
+---
+
+<section id={id} class={`mt-(--layout-section-gap) scroll-mt-16 ${className}`}>
+  <h2 class="type-title text-xl">
+    <a href={`#${id}`} class="text-ink no-underline hover:text-ui-accent">{title}</a>
+  </h2>
+  {standfirst && <p class="type-body mt-1 max-w-lede text-sm text-ink-secondary">{standfirst}</p>}
+  <div class="mt-4">
+    <slot />
+  </div>
+</section>

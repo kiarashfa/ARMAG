@@ -1,0 +1,66 @@
+---
+/**
+ * `/attributions/` — SPEC.md §10.
+ *
+ * Deliberately short. **Attribution is attached to the image, not listed on a
+ * page**: every photograph carries its author, licence and source in the credit
+ * panel on the image itself. This page carries only what cannot be attached to
+ * an artefact — mandatory credit lines for datasets, and software credits.
+ */
+import BaseLayout from '../components/ui/BaseLayout.astro';
+import Breadcrumbs from '../components/blocks/Breadcrumbs.astro';
+import Section from '../components/blocks/Section.astro';
+---
+
+<BaseLayout
+  title="Attributions"
+  description="Data-source credits and licences that cannot be attached to an individual image or citation."
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+    <Breadcrumbs crumbs={[{ label: 'Attributions' }]} />
+    <h1 class="type-display mt-4 text-display text-ink">Attributions</h1>
+    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+      Image credits live on the images. Click the <span class="type-data">i</span> on any photograph
+      for its author, licence and source page. What follows is everything that has nowhere else to
+      go.
+    </p>
+
+    <Section id="data" title="Data sources">
+      <dl class="prose type-body max-w-readable text-ink-secondary">
+        <dt class="type-heading text-base text-ink">Wikidata</dt>
+        <dd class="mt-1">
+          Identifiers, native-script labels and aliases. Wikidata content is released under CC0.
+        </dd>
+
+        <dt class="type-heading mt-4 text-base text-ink">US Army Ballistic Research Laboratory</dt>
+        <dd class="mt-1">
+          The G1 and G7 standard drag functions, which are in the public domain. Transcribed from
+          the tables published by JBM Ballistics and cross-checked against an independent
+          implementation.
+        </dd>
+
+        <dt class="type-heading mt-4 text-base text-ink">SAAMI and C.I.P.</dt>
+        <dd class="mt-1">
+          Cartridge and chamber dimensions and maximum pressures. We transcribe the figures and
+          never republish the drawings.
+        </dd>
+
+        <dt class="type-heading mt-4 text-base text-ink">US Bureau of Labor Statistics</dt>
+        <dd class="mt-1">
+          Consumer Price Index series, used to adjust historical prices. Baked into the site at
+          authoring time; the published site makes no runtime API call to anyone.
+        </dd>
+      </dl>
+    </Section>
+
+    <Section id="software" title="Software">
+      <div class="prose type-body max-w-readable text-ink-secondary">
+        <p>
+          Built with Astro, Svelte and Tailwind CSS. Site search by Pagefind. The ballistics solver
+          is our own; open-source implementations are used as a validation corpus in the test suite
+          rather than as a dependency, and are credited in the fixtures that record their output.
+        </p>
+      </div>
+    </Section>
+  </div>
+</BaseLayout>

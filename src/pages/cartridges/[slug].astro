@@ -1,0 +1,33 @@
+---
+/**
+ * `/cartridges/<slug>/` — a real content entry AND the caliber taxonomy view
+ * (SPEC.md §5.4). The "chambered in" list is computed, never authored.
+ */
+import CartridgePage from '../../components/templates/CartridgePage.astro';
+import { getCartridges, getGuns, getMakers, gunsChamberedIn } from '../../lib/content/entries.ts';
+import { render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const [cartridges, guns, makers] = await Promise.all([getCartridges(), getGuns(), getMakers()]);
+  const makerById = new Map(makers.map((m) => [m.id, m.data.name]));
+
+  return cartridges.map((cartridge) => ({
+    params: { slug: cartridge.id },
+    props: {
+      cartridge,
+      chamberedIn: gunsChamberedIn(guns, cartridge.id).map((gun) => ({
+        id: gun.id,
+        name: gun.data.name,
+        makerName: gun.data.makerRef ? (makerById.get(gun.data.makerRef) ?? null) : null,
+      })),
+    },
+  }));
+}
+
+const { cartridge, chamberedIn } = Astro.props;
+const { Content } = await render(cartridge.narrative);
+---
+
+<CartridgePage cartridge={cartridge.data} chamberedIn={chamberedIn}>
+  <Content />
+</CartridgePage>

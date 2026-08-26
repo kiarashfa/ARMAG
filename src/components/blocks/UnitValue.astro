@@ -1,0 +1,41 @@
+---
+/**
+ * One SI value, rendered for both unit systems.
+ *
+ * Both strings go into the HTML and CSS shows one of them (see
+ * `lib/render/format.ts` for why this beats a hydrated converter). The imperial
+ * half carries `data-pagefind-ignore`, so SPEC.md §8.1's rule — imperial is
+ * computed, never stored and **never indexed** — survives the fact that it is
+ * present in the markup.
+ *
+ * A value of `null` renders the honest gap rather than a dash that could be
+ * mistaken for a zero (SPEC.md §2 principle 6).
+ */
+import { formatValue } from '../../lib/render/format.ts';
+
+interface Props {
+  value: number | null;
+  unit: string;
+  /** What to show when there is no figure. */
+  emptyLabel?: string;
+  class?: string;
+}
+
+const { value, unit, emptyLabel = 'not recorded', class: className = '' } = Astro.props;
+const formatted = formatValue(value, unit);
+---
+
+{
+  formatted === null ? (
+    <span class={`type-data text-ink-muted ${className}`}>{emptyLabel}</span>
+  ) : formatted.identical ? (
+    <span class={`type-data tabular-nums ${className}`}>{formatted.metric}</span>
+  ) : (
+    <span class={`type-data tabular-nums ${className}`}>
+      <span class="u-metric">{formatted.metric}</span>
+      <span class="u-imperial" data-pagefind-ignore>
+        {formatted.imperial}
+      </span>
+    </span>
+  )
+}

@@ -1,33 +1,74 @@
 ---
 /**
- * Homepage — placeholder.
+ * Homepage.
  *
- * Phase 0's only job is to prove the toolchain: Astro serves under `BASE`,
- * Tailwind compiles, TypeScript type-checks. The real homepage (SPEC.md §11 —
- * spotlight + catalogue) is Phase 5, and it renders through `BaseLayout`
- * (Phase 4) rather than owning a document shell like this one.
+ * Now renders through `BaseLayout` like every other page, which is not a
+ * cosmetic change: SPEC.md §14 requires the disclaimer in the footer of **every**
+ * page, and a page that owns its own document shell is a page that quietly
+ * doesn't have one.
  *
- * The base path is read from `import.meta.env.BASE_URL`, not imported from
- * `astro.config.ts`: importing the config into a page would drag the whole
- * integration graph into the page's module graph. `href()` (SPEC.md §6) will
- * wrap this same env var and is written in Phase 4, when there is a second
- * link on the site for it to serve.
+ * The spotlight and the faceted catalogue (SPEC.md §9.1) are Phase 5 and slot
+ * into this page without moving it.
  */
-import '../styles/global.css';
+import BaseLayout from '../components/ui/BaseLayout.astro';
+import { href, taxonomyHref } from '../lib/content/href.ts';
+import { types } from '../schemas/taxonomy.ts';
+import TypeBadge from '../components/blocks/TypeBadge.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ARMAG</title>
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
-  </head>
-  <body class="type-body bg-surface-0 text-ink">
-    <main class="mx-auto max-w-2xl p-8">
-      <h1 class="type-title text-2xl">ARMAG</h1>
-      <p class="mt-2 text-sm text-ink-muted">Scaffold. No content yet.</p>
-    </main>
-  </body>
-</html>
+<BaseLayout
+  title="ARMAG"
+  description="A free reference for modern firearms. Every number is either sourced or derived from sourced numbers by a formula you can open and check."
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-10">
+    <h1 class="type-display text-display text-ink">ARMAG</h1>
+    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+      A reference and magazine for firearms: one page per firearm, one per cartridge, one per
+      manufacturer, joined by a lineage graph and driven by a real physics engine.
+      <strong class="text-ink">
+        Every number is either sourced or derived from sourced numbers by a formula you can open and
+        check.</strong
+      > There is no third category.
+    </p>
+
+    <nav aria-label="Browse by type" class="mt-8">
+      <h2 class="type-heading text-xs uppercase tracking-widest text-ink-muted">Browse by type</h2>
+      <ul class="mt-3 flex flex-wrap gap-2">
+        {
+          types.terms.map((term) => (
+            <li>
+              <a href={taxonomyHref('type', term.id)} class="no-underline">
+                <TypeBadge type={term.id} link={false} />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="mt-10 grid gap-4 sm:grid-cols-3">
+      {
+        [
+          { label: 'Cartridges', path: href('cartridges'), note: 'Each entry is also its caliber view.' },
+          { label: 'Manufacturers', path: href('makers'), note: 'Model lists are computed, never typed.' },
+          { label: 'Glossary', path: href('glossary'), note: 'Technical definitions, linked from every page.' },
+        ].map((card) => (
+          <a
+            href={card.path}
+            class="rounded-lg border border-line bg-surface-1 p-4 no-underline hover:border-line-strong"
+          >
+            <span class="type-heading text-base text-ui-accent">{card.label}</span>
+            <span class="type-data mt-1 block text-sm text-ink-muted">{card.note}</span>
+          </a>
+        ))
+      }
+    </div>
+
+    <p class="type-data mt-10 max-w-lede rounded-lg border border-dashed border-line-strong bg-surface-1 p-4 text-sm text-ink-muted">
+      The spotlight and the faceted catalogue are not built yet. The entries themselves are authored
+      in a later phase — the templates, the physics engine and the integrity gates came first, on
+      purpose: it is much cheaper to get the shape of an entry right before there are three thousand
+      of them.
+    </p>
+  </div>
+</BaseLayout>

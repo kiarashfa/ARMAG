@@ -1,0 +1,27 @@
+---
+/** `/glossary/<slug>/` — a single term. */
+import GlossaryPage from '../../components/templates/GlossaryPage.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const terms = await getCollection('glossary');
+  const byId = new Map(terms.map((term) => [term.id, term.data.term]));
+
+  return terms.map((entry) => ({
+    params: { slug: entry.id },
+    props: {
+      entry,
+      seeAlso: entry.data.seeAlso
+        .filter((id) => byId.has(id))
+        .map((id) => ({ id, term: byId.get(id)! })),
+    },
+  }));
+}
+
+const { entry, seeAlso } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<GlossaryPage term={entry.data.term} short={entry.data.short} aka={entry.data.aka} seeAlso={seeAlso}>
+  <Content />
+</GlossaryPage>
