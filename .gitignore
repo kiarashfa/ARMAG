@@ -1,0 +1,23 @@
+# --- Build output ---
+dist/
+.astro/
+node_modules/
+
+# --- Pagefind index ---
+
+# --- Logs ---
+
+
+# --- Environment ---
+.env
+
+# --- Editor / OS cruft ---
+.idea/
+.vscode/
+.claude/
+
+# --- Internal working files ---
+CLAUDE.md
+
+# --- Others ---
+reference/
