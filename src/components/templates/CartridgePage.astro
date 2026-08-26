@@ -43,7 +43,7 @@ const identityOnly = cartridge.loads.length === 0;
   title={cartridge.name}
   description={`${cartridge.name}: dimensions, pressure and load data transcribed from the published standard, plus every firearm chambered in it.`}
 >
-  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+  <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Cartridges', path: href('cartridges') }, { label: cartridge.name }]} />
 
     <header class="mt-4">

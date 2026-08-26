@@ -482,6 +482,19 @@
     border-color: var(--color-line-strong);
   }
 
+
+  /*
+   * The server-rendered catalogue rows, hidden once the island is live.
+   *
+   * They are not a placeholder: with JavaScript disabled they ARE the
+   * catalogue, and they are what a crawler reads. The island sets
+   * `data-catalogue-hydrated` on the document when it mounts, which is the
+   * only moment at which hiding them is honest.
+   */
+  [data-catalogue-hydrated] .catalogue-static {
+    display: none;
+  }
+
   /* "Compare all variants" swaps the tab strip for one delta table. */
   .variants .delta-table {
     display: none;

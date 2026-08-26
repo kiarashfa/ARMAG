@@ -18,6 +18,8 @@
     "check:self": "node scripts/integrity/check-self.mjs",
     "check:site": "node scripts/integrity/check-site.mjs",
     "check:assets": "node scripts/integrity/check-assets.mjs",
+    "fixture:lay": "node scripts/dev/render-fixture.mjs",
+    "fixture:clear": "node scripts/dev/render-fixture.mjs --remove",
     "postbuild:index": "pagefind --site dist",
     "astro": "astro"
   },

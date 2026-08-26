@@ -1,0 +1,93 @@
+---
+/**
+ * The server-rendered catalogue — SPEC.md §9.1's "first 50 rows statically
+ * rendered so something exists before hydration".
+ *
+ * It is not a placeholder. With JavaScript disabled this **is** the catalogue,
+ * so it carries real links and real figures rather than a spinner, and it is
+ * what a crawler sees. The island hides it by setting `data-catalogue-hydrated`
+ * on the document; the CSS lives in `global.css` beside the other one-line
+ * behavioural rules.
+ */
+import { gunHref } from '../../lib/content/href.ts';
+import UnitValue from './UnitValue.astro';
+import type { CatalogueRow } from '../../lib/content/catalogue.ts';
+
+interface Props {
+  rows: CatalogueRow[];
+  total: number;
+}
+
+const { rows, total } = Astro.props;
+---
+
+<div class="catalogue-static mt-4">
+  {
+    rows.length === 0 ? (
+      <p class="type-data rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted">
+        No entries are authored yet. The catalogue, the filters and the search all work; there is
+        simply nothing in the database for them to work on until the entries are written.
+      </p>
+    ) : (
+      <>
+        <div class="overflow-x-auto">
+          <table class="type-data w-full min-w-[44rem] text-sm">
+            <caption class="type-data pb-2 text-left text-xs text-ink-muted">
+              {rows.length === total
+                ? `All ${total} entries`
+                : `First ${rows.length} of ${total} entries — the rest load with the filters`}
+            </caption>
+            <thead>
+              <tr class="border-b border-line-strong text-left text-ink-muted">
+                <th scope="col" class="p-2">Name</th>
+                <th scope="col" class="p-2">Maker</th>
+                <th scope="col" class="p-2">Cartridge</th>
+                <th scope="col" class="p-2 text-right">Introduced</th>
+                <th scope="col" class="p-2 text-right">Mass</th>
+                <th scope="col" class="p-2 text-right">Barrel</th>
+                <th scope="col" class="p-2 text-right">Capacity</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row) => (
+                <tr class="border-b border-line">
+                  <th scope="row" class="p-2 text-left font-normal">
+                    {row.hasPage ? (
+                      <a href={gunHref(row.id)} class="text-ui-accent">
+                        {row.name}
+                      </a>
+                    ) : (
+                      <>
+                        <span class="text-ink">{row.name}</span>
+                        <span class="ml-1 text-xs text-ink-muted">(no page yet)</span>
+                      </>
+                    )}
+                  </th>
+                  <td class="p-2 text-ink-secondary">{row.makerName ?? '—'}</td>
+                  <td class="p-2 text-ink-secondary">{row.cartridgeName ?? '—'}</td>
+                  <td class="p-2 text-right text-ink-secondary">{row.year ?? '—'}</td>
+                  <td class="p-2 text-right text-ink-secondary">
+                    <UnitValue value={row.massKg} unit="kg" emptyLabel="—" />
+                  </td>
+                  <td class="p-2 text-right text-ink-secondary">
+                    <UnitValue value={row.barrelMm} unit="mm" emptyLabel="—" />
+                  </td>
+                  <td class="p-2 text-right text-ink-secondary">
+                    <UnitValue value={row.capacity} unit="" emptyLabel="—" />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <noscript>
+          <p class="type-data mt-3 text-xs text-ink-muted">
+            Filtering and sorting need JavaScript. Every entry above is still a link, and the browse
+            pages by type, action, country and era are plain pages that work without it.
+          </p>
+        </noscript>
+      </>
+    )
+  }
+</div>

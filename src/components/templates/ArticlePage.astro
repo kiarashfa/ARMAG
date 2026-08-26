@@ -26,7 +26,7 @@ const { id, title, standfirst, published, updated, heroImage } = Astro.props;
 ---
 
 <BaseLayout title={title} description={standfirst}>
-  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+  <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Articles', path: href('articles') }, { label: title }]} />
 
     <article class="mt-4">

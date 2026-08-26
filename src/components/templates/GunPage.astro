@@ -73,7 +73,6 @@ const {
 } = Astro.props;
 
 const years = formatYears(gun.productionYears);
-const primary = gun.chamberings.find((c) => c.primary) ?? gun.chamberings[0];
 const gallery = gun.images.slice(1);
 const hero = gun.images[0];
 
@@ -99,7 +98,7 @@ const identity = [
     years ? `, ${years}` : ''
   }. Sourced specifications, derived ballistics, and the formula behind every figure.`}
 >
-  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+  <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs
       crumbs={[
         ...(gun.type

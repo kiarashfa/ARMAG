@@ -1,19 +1,53 @@
 ---
 /**
- * Homepage.
+ * Homepage — SPEC.md §11.1 and §16: spotlight plus catalogue for v1, with a
+ * bespoke design later.
  *
- * Now renders through `BaseLayout` like every other page, which is not a
- * cosmetic change: SPEC.md §14 requires the disclaimer in the footer of **every**
- * page, and a page that owns its own document shell is a page that quietly
- * doesn't have one.
- *
- * The spotlight and the faceted catalogue (SPEC.md §9.1) are Phase 5 and slot
- * into this page without moving it.
+ * The catalogue is rendered twice on purpose. `CatalogueStatic` is the real,
+ * crawlable, JavaScript-free list; the island replaces it once hydrated and
+ * adds the filters, the sort and the card view. Neither is a fallback for the
+ * other in the usual sense — with JavaScript off, the static one *is* the
+ * catalogue.
  */
 import BaseLayout from '../components/ui/BaseLayout.astro';
-import { href, taxonomyHref } from '../lib/content/href.ts';
-import { types } from '../schemas/taxonomy.ts';
+import CatalogueStatic from '../components/blocks/CatalogueStatic.astro';
+import Catalogue from '../components/islands/Catalogue.svelte';
 import TypeBadge from '../components/blocks/TypeBadge.astro';
+
+import { buildCatalogue, STATIC_ROW_COUNT } from '../lib/content/catalogue.ts';
+import { getCartridges, getGuns, getMakers } from '../lib/content/entries.ts';
+import { fileHref, href, taxonomyHref } from '../lib/content/href.ts';
+import {
+  actions,
+  countries,
+  eras,
+  feedSystems,
+  operatingSystems,
+  roles,
+  types,
+} from '../schemas/taxonomy.ts';
+
+const [guns, cartridges, makers] = await Promise.all([getGuns(), getCartridges(), getMakers()]);
+const rows = buildCatalogue(guns, cartridges, makers);
+
+/**
+ * Vocabulary labels are passed *into* the island rather than imported by it.
+ * That keeps the eight taxonomy JSON files out of the client bundle — they are
+ * build-time data, and shipping them would be shipping the whole vocabulary to
+ * render a dozen chips.
+ */
+const terms = (list: { terms: { id: string; label: string }[] }) =>
+  list.terms.map((term) => ({ id: term.id, label: term.label }));
+
+const vocab = {
+  type: terms(types),
+  action: terms(actions),
+  operatingSystem: terms(operatingSystems),
+  feed: terms(feedSystems),
+  role: terms(roles),
+  country: terms(countries),
+  era: terms(eras),
+};
 ---
 
 <BaseLayout
@@ -46,7 +80,7 @@ import TypeBadge from '../components/blocks/TypeBadge.astro';
       </ul>
     </nav>
 
-    <div class="mt-10 grid gap-4 sm:grid-cols-3">
+    <div class="mt-8 grid gap-4 sm:grid-cols-3">
       {
         [
           { label: 'Cartridges', path: href('cartridges'), note: 'Each entry is also its caliber view.' },
@@ -64,11 +98,30 @@ import TypeBadge from '../components/blocks/TypeBadge.astro';
       }
     </div>
 
-    <p class="type-data mt-10 max-w-lede rounded-lg border border-dashed border-line-strong bg-surface-1 p-4 text-sm text-ink-muted">
-      The spotlight and the faceted catalogue are not built yet. The entries themselves are authored
-      in a later phase — the templates, the physics engine and the integrity gates came first, on
-      purpose: it is much cheaper to get the shape of an entry right before there are three thousand
-      of them.
-    </p>
+    <section id="catalogue" class="mt-(--layout-section-gap) scroll-mt-16">
+      <h2 class="type-title text-xl">
+        <a href="#catalogue" class="text-ink no-underline hover:text-ui-accent">Catalogue</a>
+      </h2>
+      <p class="type-body mt-1 max-w-lede text-sm text-ink-secondary">
+        Every entry in the database, including the ones too thin to have earned a page yet. Filters
+        and sort order are kept in the address bar, so any view here is a link you can share.
+      </p>
+
+      <CatalogueStatic rows={rows.slice(0, STATIC_ROW_COUNT)} total={rows.length} />
+
+      {/*
+        `client:load`, not `client:visible`: the catalogue sits below the fold,
+        and the island is what reads the filter state out of the URL. Waiting
+        for it to scroll into view would mean a shared link showed the unfiltered
+        list until the reader happened to scroll to it.
+      */}
+      <Catalogue
+        client:load
+        src={fileHref('catalogue.json')}
+        gunPrefix={href('guns')}
+        vocab={vocab}
+        staticCount={Math.min(rows.length, STATIC_ROW_COUNT)}
+      />
+    </section>
   </div>
 </BaseLayout>

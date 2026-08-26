@@ -42,7 +42,7 @@ const sorted = [...models].sort((a, b) => (a.introduced ?? 0) - (b.introduced ??
   title={maker.name}
   description={`${maker.name}, ${countryLabel}, founded ${maker.founded}. Every ARMAG entry attributed to this manufacturer.`}
 >
-  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+  <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Makers', path: href('makers') }, { label: maker.name }]} />
 
     <header class="mt-4 grid gap-6 lg:grid-cols-[1fr_minmax(0,18rem)] lg:items-start">

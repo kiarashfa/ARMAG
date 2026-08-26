@@ -27,7 +27,7 @@ const { term, short, aka, seeAlso } = Astro.props;
 ---
 
 <BaseLayout title={term} description={short}>
-  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
+  <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Glossary', path: href('glossary') }, { label: term }]} />
 
     <article class="mt-4">

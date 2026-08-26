@@ -7,7 +7,8 @@
  * attribute is a bad trade against the SPEC.md §11 budget of under 100 kB of JS
  * per page, and neither toggle has state worth a component.
  */
-import { href, taxonomyHref } from '../../lib/content/href.ts';
+import { fileHref, href, taxonomyHref } from '../../lib/content/href.ts';
+import SiteSearch from '../islands/SiteSearch.svelte';
 
 const axes = [
   { label: 'Pistols', axis: 'type', term: 'pistol' },
@@ -16,7 +17,7 @@ const axes = [
 ] as const;
 ---
 
-<header class="border-b border-line bg-surface-0">
+<header class="border-b border-line bg-surface-0" data-pagefind-ignore>
   <div
     class="mx-auto flex max-w-(--layout-max) flex-wrap items-center gap-x-6 gap-y-3 px-(--layout-gutter) py-3"
   >
@@ -37,6 +38,13 @@ const axes = [
     </nav>
 
     <div class="ml-auto flex items-center gap-2">
+      {/*
+        `client:idle`, not `client:visible`: the overlay owns the `/` and Ctrl-K
+        shortcuts, so it has to be listening even while its own button is
+        off-screen. The Pagefind runtime itself still waits for the first open.
+      */}
+      <SiteSearch client:idle bundle={fileHref('pagefind/pagefind.js')} />
+
       <button
         type="button"
         id="unit-toggle"

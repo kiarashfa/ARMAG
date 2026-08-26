@@ -32,6 +32,7 @@ import { cartridgeDataSchema, cartridgeNarrativeSchema } from '../schemas/cartri
 import { gunDataSchema, gunNarrativeSchema } from '../schemas/gun.ts';
 import { makerDataSchema, makerNarrativeSchema } from '../schemas/maker.ts';
 import { hedgeWordsIn } from '../schemas/primitives.ts';
+import { jaccard, proseWords, shingles } from '../lib/render/prose.ts';
 import defaultThresholds from '../data/thresholds.json' with { type: 'json' };
 
 // ---------------------------------------------------------------------------
@@ -252,42 +253,12 @@ async function readJson(full: string, display: string, violations: Violation[]):
 // The near-duplicate prose gate — SPEC.md §13 gate 4
 // ---------------------------------------------------------------------------
 
-/**
- * Reduces MDX prose to the bag of words a reader would actually see.
- *
- * Import statements, JSX components, code fences, link targets and citation
- * markers are all stripped: two entries that share a component import are not
- * two entries that share prose, and counting the markup would both mask real
- * duplication and invent fake duplication between short entries.
+/*
+ * The prose helpers live in `lib/render/prose.ts` because the completeness
+ * score imports them too (SPEC.md §5.9). Two definitions of "a word of prose"
+ * would let an entry clear the 60-word publication floor while this gate saw
+ * too few words to compare, and both would look like they were working.
  */
-export function proseWords(body: string): string[] {
-  return body
-    .replace(/^import\s+.*$/gm, ' ')
-    .replace(/^export\s+.*$/gm, ' ')
-    .replace(/```[\s\S]*?```/g, ' ')
-    .replace(/<[^>]*>/g, ' ')
-    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
-    .replace(/[#*_`>|~-]+/g, ' ')
-    .toLowerCase()
-    .split(/[^a-z0-9']+/)
-    .filter((w) => w.length > 0);
-}
-
-function shingles(words: string[], size: number): Set<string> {
-  const set = new Set<string>();
-  for (let i = 0; i + size <= words.length; i += 1) {
-    set.add(words.slice(i, i + size).join(' '));
-  }
-  return set;
-}
-
-function jaccard(a: Set<string>, b: Set<string>): number {
-  if (a.size === 0 || b.size === 0) return 0;
-  let shared = 0;
-  const [small, large] = a.size <= b.size ? [a, b] : [b, a];
-  for (const item of small) if (large.has(item)) shared += 1;
-  return shared / (a.size + b.size - shared);
-}
 
 // ---------------------------------------------------------------------------
 // The checks
