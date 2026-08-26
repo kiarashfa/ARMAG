@@ -1,10 +1,394 @@
-/*
- * Global stylesheet.
- *
- * Phase 0 wires Tailwind v4 and nothing else. The design-token layer
- * (SPEC.md §11 — light and dark sets, the UI accent, the six content accents,
- * the type scale, tabular numerals) is Phase 1 and lands in `src/styles/`
- * before the first component is written, because retrofitting tokens is the
- * single most expensive mistake available at this stage.
- */
 @import "tailwindcss";
+
+/*
+ * ARMAG design tokens — SPEC.md §11.
+ *
+ * Registered in `@theme` so Tailwind generates real utilities
+ * (`bg-surface-1`, `text-ink-muted`, `text-type-handgun`) rather than every
+ * component reaching for an arbitrary value.
+ *
+ * ── Three rules this file exists to enforce ─────────────────────────────────
+ *
+ * 1. DARK IS THE DEFAULT (SPEC.md §11). The values in `@theme` below are the
+ *    dark set. Light is an override, applied only when a visitor asks for it
+ *    by setting `data-theme="light"`. The system `prefers-color-scheme` is
+ *    deliberately NOT consulted — "dark by default" is a product decision, not
+ *    a fallback, and a light-set machine would otherwise never see it.
+ *
+ * 2. TWO SEPARATE COLOUR SYSTEMS. `--color-ui-accent` is one constant colour
+ *    for links, focus rings and controls; it must never change with the
+ *    subject, or focus states become unpredictable. `--color-type-*` is the
+ *    content accent, per firearm type, and is used only for the hero band,
+ *    type badges and the catalogue's type column.
+ *
+ * 3. EVERY COLOUR IS A TOKEN PAIR. Every `--color-*` defined here has a
+ *    distinct value in the light block below — the same hex in both themes is
+ *    a bug, and `tokens.test.mjs` fails the build if a token is defined in one
+ *    theme only, or if any foreground/surface pair drops below WCAG AA.
+ *
+ * Tailwind's stock palette is cleared (`--color-*: initial`). `bg-red-500`
+ * therefore does not exist, which is what makes "fully tokenised from the
+ * first commit" a fact rather than an intention.
+ */
+@theme {
+  --color-*: initial;
+
+  /* The two non-colours every layout needs. */
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  /*
+   * Type registers. Both resolve to the platform's own face: the system font
+   * already ships optical sizing, tracking tables and legibility tuning, and
+   * overriding it needs a reason we do not yet have. The registers are
+   * distinguished by weight, size, tracking and leading instead — which is
+   * where the hierarchy actually lives. A bespoke display face changes these
+   * two lines and nothing else.
+   */
+  --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI Variable Display",
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI Variable Text",
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono", Menlo,
+    Consolas, monospace;
+
+  /*
+   * Two sizes beyond Tailwind's stock scale, because two things on this site
+   * are deliberately louder than anything else: the entry name in the hero,
+   * and the five numbers in the stat strip (SPEC.md §11). Both are fluid, so
+   * neither needs a breakpoint override.
+   */
+  --text-display: clamp(2.75rem, 1.9rem + 4.2vw, 4.75rem);
+  --text-display--line-height: 1.02;
+  --text-display--letter-spacing: -0.035em;
+
+  --text-stat: clamp(1.75rem, 1.25rem + 2.2vw, 2.75rem);
+  --text-stat--line-height: 1.05;
+  --text-stat--letter-spacing: -0.02em;
+
+  /*
+   * Spacing base, stated rather than inherited. Every `p-4`, `gap-6` and
+   * `mt-2` on the site is a multiple of this one value.
+   */
+  --spacing: 0.25rem;
+
+  /*
+   * Easing. The browser built-ins are too weak to read as deliberate; these
+   * are the strong equivalents. `ease-in` is deliberately absent — it delays
+   * the exact moment the user is watching, and is never correct for UI.
+   */
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+
+  /* ── DARK, the default. Mirrored value-for-value by the light block. ────── */
+
+  /*
+   * Surfaces. Four steps, widely enough separated that a card reads as raised
+   * without its border doing all the work: at a 1.05:1 step the separation
+   * measures as present and reads as absent.
+   */
+  --color-surface-0: oklch(15.5% 0.008 255);
+  --color-surface-1: oklch(19.5% 0.009 255);
+  --color-surface-2: oklch(24% 0.011 255);
+  --color-surface-3: oklch(30% 0.013 255);
+
+  /*
+   * Text. `ink-muted` is the constrained one: it carries captions, source
+   * notes and figure provenance — exactly the small text that can least
+   * afford a shortfall — and it must clear AA on `surface-3`, not just on the
+   * page background, because chips and wells are where it usually sits.
+   */
+  --color-ink: oklch(96% 0.004 255);
+  --color-ink-secondary: oklch(80% 0.008 255);
+  --color-ink-muted: oklch(68% 0.009 255);
+
+  /*
+   * Lines, and they promise different things.
+   *
+   * `line` is a decorative divider — a table rule, a section separator — and
+   * carries no contrast guarantee. `line-strong` is the border you reach for
+   * when it must be PERCEIVABLE: a form control, a focused row, a selected
+   * card. It holds 3:1 against all four surfaces (WCAG 1.4.11), which is why
+   * it is lighter here than a divider wants to be. Using it as a table rule
+   * will look heavy; that is the token doing its job, not a wrong value.
+   */
+  --color-line: oklch(28% 0.011 255);
+  --color-line-strong: oklch(58% 0.014 255);
+
+  /*
+   * The UI accent — one colour, every theme, never subject-dependent.
+   * Cyan-azure (h 215) rather than a blue, so it stays separable from the
+   * machine-gun steel blue (h 250) it will sit beside in a catalogue row.
+   */
+  --color-ui-accent: oklch(76% 0.13 215);
+  --color-ui-accent-hover: oklch(86% 0.10 215);
+
+  /*
+   * Data-trust status colours — SPEC.md §5.8.
+   *
+   * These are SIGNALS and are deliberately the most saturated colours on the
+   * site (C >= 0.13). The content accents below are deliberately muted
+   * (C <= 0.11). That chroma split is what keeps `status-conflicting` (red,
+   * h 22) legible as a warning next to `type-shotgun` (rust, h 38), and
+   * `status-estimated` (amber, h 88) distinct from `type-handgun` (h 72),
+   * which are the two collisions this palette cannot design away by hue.
+   */
+  --color-status-verified: oklch(74% 0.15 155);
+  --color-status-estimated: oklch(80% 0.14 88);
+  --color-status-placeholder: oklch(68% 0.008 255);
+  --color-status-conflicting: oklch(72% 0.16 22);
+
+  /*
+   * Content accents, per firearm TYPE — never per manufacturer.
+   *
+   * Six accents cover the eight taxonomy types (SPEC.md §7): pistol and
+   * revolver share handgun; rifle and carbine share rifle; submachine-gun and
+   * pdw share smg. `platform` is the neutral used by `kind: 'family'` entries,
+   * which have no single type.
+   *
+   * Each is a pair: `--color-type-X` is the readable one (badge text, the type
+   * column, rule lines) and clears AA on every surface including its own tint;
+   * `--color-type-X-surface` is the tint (hero band, badge fill) and carries
+   * `--color-ink` at AA.
+   */
+  --color-type-handgun: oklch(78% 0.10 72);
+  --color-type-handgun-surface: oklch(27% 0.045 72);
+  --color-type-rifle: oklch(78% 0.07 135);
+  --color-type-rifle-surface: oklch(27% 0.035 135);
+  --color-type-shotgun: oklch(76% 0.09 38);
+  --color-type-shotgun-surface: oklch(27% 0.040 38);
+  --color-type-smg: oklch(78% 0.09 300);
+  --color-type-smg-surface: oklch(27% 0.045 300);
+  --color-type-machinegun: oklch(78% 0.06 250);
+  --color-type-machinegun-surface: oklch(27% 0.035 250);
+  --color-type-platform: oklch(78% 0.010 255);
+  --color-type-platform-surface: oklch(27% 0.010 255);
+}
+
+/*
+ * ── LIGHT ──────────────────────────────────────────────────────────────────
+ *
+ * Scoped to `[data-theme='light']` rather than `:root[data-theme='light']` on
+ * purpose: custom properties inherit, so scoping to the attribute alone lets
+ * ANY subtree be rendered in the other theme. That is what makes the token
+ * reference page able to show both themes side by side on one screen — and
+ * later, a light-theme screenshot without a second page load.
+ *
+ * Every token in `@theme` above is redefined here. None gets its only
+ * definition inside a theme block; `tokens.test.mjs` fails if one does, which
+ * is what turns a missing token into a build error rather than an invisible
+ * inheritance from whatever the browser felt like.
+ *
+ * The warm accents run darker here than they look like they should — amber at
+ * 46% reads closer to bronze than to gold. That is the price of 4.5:1 on a
+ * 99%-lightness page, and the alternative is a badge that cannot be read.
+ */
+[data-theme='light'] {
+  --color-surface-0: oklch(99% 0.002 255);
+  --color-surface-1: oklch(96.5% 0.004 255);
+  --color-surface-2: oklch(93.5% 0.005 255);
+  --color-surface-3: oklch(88% 0.007 255);
+
+  --color-ink: oklch(22% 0.012 255);
+  --color-ink-secondary: oklch(43% 0.011 255);
+  --color-ink-muted: oklch(48% 0.011 255);
+
+  --color-line: oklch(86% 0.006 255);
+  --color-line-strong: oklch(57% 0.010 255);
+
+  --color-ui-accent: oklch(44% 0.15 215);
+  --color-ui-accent-hover: oklch(38% 0.13 215);
+
+  --color-status-verified: oklch(46% 0.14 155);
+  --color-status-estimated: oklch(46% 0.13 88);
+  --color-status-placeholder: oklch(48% 0.010 255);
+  --color-status-conflicting: oklch(46% 0.17 22);
+
+  --color-type-handgun: oklch(46% 0.10 72);
+  --color-type-handgun-surface: oklch(93% 0.045 72);
+  --color-type-rifle: oklch(45% 0.07 135);
+  --color-type-rifle-surface: oklch(93% 0.035 135);
+  --color-type-shotgun: oklch(46% 0.10 38);
+  --color-type-shotgun-surface: oklch(93% 0.040 38);
+  --color-type-smg: oklch(46% 0.11 300);
+  --color-type-smg-surface: oklch(93% 0.040 300);
+  --color-type-machinegun: oklch(46% 0.07 250);
+  --color-type-machinegun-surface: oklch(93% 0.030 250);
+  --color-type-platform: oklch(46% 0.010 255);
+  --color-type-platform-surface: oklch(93% 0.008 255);
+}
+
+/*
+ * `color-scheme` makes the browser's OWN surfaces — scrollbars, form controls,
+ * date pickers, the flash of background before first paint — follow the theme.
+ * Omitting it is the classic half-done dark mode: the page goes dark and the
+ * scrollbar stays white.
+ */
+:root {
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+}
+
+/*
+ * Layout and measure tokens.
+ *
+ * Not in `@theme` because none of them should become a Tailwind colour or
+ * spacing utility — they are read by name, in a handful of places, by the page
+ * shell and the prose containers.
+ */
+:root {
+  --layout-gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
+  --layout-max: 88rem;
+  --layout-section-gap: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
+
+  /*
+   * Measure — how wide a line of text is allowed to get. Two settings,
+   * because the two jobs are different:
+   *
+   *  - `readable` (76ch) is for text someone reads several paragraphs of: the
+   *    top of the comfortable 60-80ch band rather than the middle, which is
+   *    the concession a wide reference layout earns.
+   *  - `lede` (92ch) is for the one or two paragraphs directly under a page
+   *    title. They are read once, at a glance, and setting them wider is what
+   *    makes the top of a page look deliberate at 1440px and above.
+   *
+   * Both clamp to 100%, so neither can overflow a narrow screen.
+   */
+  --measure-readable: 76ch;
+  --measure-lede: 92ch;
+}
+
+@utility max-w-readable {
+  max-width: min(var(--measure-readable), 100%);
+}
+
+@utility max-w-lede {
+  max-width: min(var(--measure-lede), 100%);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-surface-0);
+    color: var(--color-ink);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    min-height: 100dvh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /*
+   * Tabular numerals everywhere a number can be compared to the number above
+   * it — SPEC.md §11. A spec table set in proportional figures looks amateur
+   * instantly, and the columns genuinely stop lining up.
+   *
+   * Applied structurally (every table, and anything in the data register)
+   * rather than as a class an author has to remember, because the failure mode
+   * is silent: nobody files a bug saying the digits are 0.4px out.
+   */
+  table,
+  .type-data,
+  .type-stat {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /*
+   * Optical sizing discipline: tracking tightens as display text grows,
+   * leading tightens with it, and body and table text sit near zero. A single
+   * global `letter-spacing` would be wrong at one end or the other.
+   */
+  .type-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-optical-sizing: auto;
+    text-wrap: balance;
+  }
+
+  .type-title {
+    font-family: var(--font-display);
+    font-weight: 650;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  .type-heading {
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .type-body {
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  /* The stat-strip readout: a big number that must not wrap or re-flow. */
+  .type-stat {
+    font-family: var(--font-display);
+    font-weight: 650;
+    white-space: nowrap;
+  }
+
+  /* Dense data rows want tighter leading than prose, not looser. */
+  .type-data {
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  /*
+   * A themed subtree re-declares its own ink.
+   *
+   * `color` inherits as a COMPUTED value: `html { color: var(--color-ink) }`
+   * resolves the variable once, at `html`, and every descendant inherits that
+   * finished colour — including a descendant that redefines `--color-ink`.
+   * Without this line a `[data-theme='light']` panel inside a dark page
+   * inherits near-white text and renders white on white.
+   *
+   * A toggle that sets `data-theme` on `<html>` never hits this, because
+   * `html` declares its own colour — which is exactly why it would have been
+   * found late, by someone building the second themed thing on the site.
+   */
+  [data-theme] {
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ui-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /*
+   * Tailwind's preflight resets `margin: 0` on everything, which breaks the
+   * user-agent rule that centres an open `[popover]` in the viewport — it
+   * lands in the top-left corner instead. The Native Popover API is the single
+   * disclosure primitive on this site (SPEC.md §11), shared by image credits
+   * and the f formula panels, so this one line is load-bearing.
+   */
+  [popover] {
+    margin: auto;
+  }
+}
+
+/*
+ * Reduced motion is a gentler equivalent, not the absence of feedback.
+ * Transform-based movement goes; opacity and colour changes that aid
+ * comprehension stay.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,321 @@
+---
+/**
+ * Token reference — Instruction.md Phase 1's "scratch page that renders every
+ * token in both themes".
+ *
+ * ── Why this is a dynamic route ────────────────────────────────────────────
+ * It must exist in `npm run dev` and must never reach `dist/`. A dynamic route
+ * whose `getStaticPaths` returns nothing in a production build is the cheapest
+ * way to get exactly that: no page is emitted, so there is nothing to noindex,
+ * nothing to keep out of the sitemap, and nothing to remember later.
+ *
+ * ── Why the class names are written out in full ────────────────────────────
+ * Tailwind finds utilities by scanning source text for literal candidates. A
+ * class assembled at runtime (`bg-${name}`) is never generated and fails
+ * silently as an unstyled element — so every utility below appears verbatim in
+ * this file. That is also the point: it proves `@theme` really does emit
+ * `bg-surface-2` and `text-type-smg` as utilities.
+ *
+ * ── Where the numbers come from ────────────────────────────────────────────
+ * Measured in the browser: the token's colour is painted to a canvas and the
+ * pixel read back, so the ratio is what the display actually shows, gamut
+ * clamping included. The authority is still `src/styles/tokens.test.mjs`,
+ * which runs the same maths in CI; this page is for looking at, which is the
+ * half a test cannot do.
+ */
+export function getStaticPaths() {
+  return import.meta.env.DEV ? [{ params: { view: 'tokens' } }] : [];
+}
+
+import '../../styles/global.css';
+
+const SURFACES = [
+  { name: 'surface-0', token: '--color-surface-0', bg: 'bg-surface-0' },
+  { name: 'surface-1', token: '--color-surface-1', bg: 'bg-surface-1' },
+  { name: 'surface-2', token: '--color-surface-2', bg: 'bg-surface-2' },
+  { name: 'surface-3', token: '--color-surface-3', bg: 'bg-surface-3' },
+];
+
+const TEXT_TOKENS = [
+  { name: 'ink', token: '--color-ink', fg: 'text-ink' },
+  { name: 'ink-secondary', token: '--color-ink-secondary', fg: 'text-ink-secondary' },
+  { name: 'ink-muted', token: '--color-ink-muted', fg: 'text-ink-muted' },
+  { name: 'ui-accent', token: '--color-ui-accent', fg: 'text-ui-accent' },
+  { name: 'ui-accent-hover', token: '--color-ui-accent-hover', fg: 'text-ui-accent-hover' },
+  { name: 'status-verified', token: '--color-status-verified', fg: 'text-status-verified' },
+  { name: 'status-estimated', token: '--color-status-estimated', fg: 'text-status-estimated' },
+  { name: 'status-placeholder', token: '--color-status-placeholder', fg: 'text-status-placeholder' },
+  { name: 'status-conflicting', token: '--color-status-conflicting', fg: 'text-status-conflicting' },
+];
+
+const TYPES = [
+  {
+    label: 'Handgun', covers: 'pistol · revolver',
+    fg: 'text-type-handgun', bg: 'bg-type-handgun-surface',
+    fgToken: '--color-type-handgun', bgToken: '--color-type-handgun-surface',
+  },
+  {
+    label: 'Rifle', covers: 'rifle · carbine',
+    fg: 'text-type-rifle', bg: 'bg-type-rifle-surface',
+    fgToken: '--color-type-rifle', bgToken: '--color-type-rifle-surface',
+  },
+  {
+    label: 'Shotgun', covers: 'shotgun',
+    fg: 'text-type-shotgun', bg: 'bg-type-shotgun-surface',
+    fgToken: '--color-type-shotgun', bgToken: '--color-type-shotgun-surface',
+  },
+  {
+    label: 'SMG / PDW', covers: 'submachine-gun · pdw',
+    fg: 'text-type-smg', bg: 'bg-type-smg-surface',
+    fgToken: '--color-type-smg', bgToken: '--color-type-smg-surface',
+  },
+  {
+    label: 'Machine gun', covers: 'machine-gun',
+    fg: 'text-type-machinegun', bg: 'bg-type-machinegun-surface',
+    fgToken: '--color-type-machinegun', bgToken: '--color-type-machinegun-surface',
+  },
+  {
+    label: 'Platform', covers: "kind: 'family'",
+    fg: 'text-type-platform', bg: 'bg-type-platform-surface',
+    fgToken: '--color-type-platform', bgToken: '--color-type-platform-surface',
+  },
+];
+
+const THEMES = [
+  { label: 'Dark — the default', attr: undefined },
+  { label: 'Light — data-theme=light', attr: 'light' },
+];
+
+const HEADING = 'type-heading mt-10 text-xs uppercase tracking-[0.2em] text-ink-muted';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ARMAG tokens</title>
+  </head>
+  <body class="type-body bg-surface-0 text-ink">
+    <div class="grid gap-px bg-line lg:grid-cols-2">
+      {
+        THEMES.map((theme) => (
+          <section data-theme={theme.attr} class="bg-surface-0 px-5 py-8">
+            <h1 class="type-title text-2xl">{theme.label}</h1>
+            <p class="type-data mt-1 text-sm text-ink-muted">
+              Ratios measured in-browser. Text needs 4.5:1, borders 3:1.
+            </p>
+
+            <h2 class={HEADING}>Surfaces</h2>
+            <div class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+              {SURFACES.map((s) => (
+                <div class={`${s.bg} rounded border border-line p-3`}>
+                  <div class="type-data text-xs text-ink-secondary">{s.name}</div>
+                  <div class="type-data mt-8 text-[0.65rem] text-ink-muted" data-swatch={s.token} />
+                </div>
+              ))}
+            </div>
+
+            <h2 class={HEADING}>Every text token, on every surface</h2>
+            <div class="mt-3 grid gap-2 sm:grid-cols-2">
+              {SURFACES.map((s) => (
+                <div class={`${s.bg} rounded border border-line p-3`}>
+                  <div class="type-data mb-2 text-[0.65rem] uppercase tracking-widest text-ink-muted">
+                    on {s.name}
+                  </div>
+                  {TEXT_TOKENS.map((t) => (
+                    <div class="flex items-baseline justify-between gap-3">
+                      <span class={`type-data ${t.fg} text-sm`}>{t.name} 1,247.5</span>
+                      <span
+                        class="type-data text-[0.65rem] text-ink-muted"
+                        data-fg={t.token}
+                        data-bg={s.token}
+                        data-min="4.5"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+
+            <h2 class={HEADING}>Content accents — per firearm type</h2>
+            <div class="mt-3 grid gap-2 sm:grid-cols-2">
+              {TYPES.map((t) => (
+                <div class={`${t.bg} rounded border border-line p-3`}>
+                  <div class="flex items-baseline justify-between gap-2">
+                    <span class={`type-heading ${t.fg} text-sm`}>{t.label}</span>
+                    <span
+                      class={`type-data ${t.fg} text-[0.65rem]`}
+                      data-fg={t.fgToken}
+                      data-bg={t.bgToken}
+                      data-min="4.5"
+                    />
+                  </div>
+                  <div class="flex items-baseline justify-between gap-2">
+                    <span class="type-data text-xs text-ink">{t.covers}</span>
+                    <span
+                      class="type-data text-[0.65rem] text-ink"
+                      data-fg="--color-ink"
+                      data-bg={t.bgToken}
+                      data-min="4.5"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h2 class={HEADING}>Lines</h2>
+            <div class="mt-3 space-y-3 rounded bg-surface-1 p-3">
+              <div class="type-data flex items-center justify-between gap-3 border-b border-line pb-2 text-xs text-ink-secondary">
+                <span>line — decorative divider, no contrast promise</span>
+              </div>
+              <div class="type-data flex items-center justify-between gap-3 rounded border-2 border-line-strong p-2 text-xs text-ink-secondary">
+                <span>line-strong — perceivable border</span>
+                <span
+                  class="type-data text-[0.65rem] text-ink-muted"
+                  data-fg="--color-line-strong"
+                  data-bg="--color-surface-1"
+                  data-min="3"
+                />
+              </div>
+            </div>
+
+            <h2 class={HEADING}>Type registers</h2>
+            <div class="mt-3 space-y-4 rounded bg-surface-1 p-4">
+              <p class="type-display text-display">Kalashnikov</p>
+              <p class="type-stat text-stat">715 m/s</p>
+              <p class="type-title text-2xl">Type 56 — licensed production</p>
+              <p class="type-heading text-lg">Specifications</p>
+              <p class="type-body max-w-readable text-base text-ink-secondary">
+                Body register at the readable measure (76ch). The line length is capped so the
+                paragraph stays in the comfortable band rather than running the full width of a
+                reference layout.
+              </p>
+              <p class="type-body max-w-lede text-lg text-ink-secondary">
+                Lede register at the wider measure (92ch), for the paragraph directly under a page
+                title — read once, at a glance.
+              </p>
+            </div>
+
+            <h2 class={HEADING}>Tabular numerals — every column must line up</h2>
+            <table class="type-data mt-3 w-full rounded bg-surface-1 text-sm">
+              <tbody>
+                <tr class="border-b border-line">
+                  <td class="p-2 text-ink-secondary">Muzzle velocity</td>
+                  <td class="p-2 text-right text-ink">715.0 m/s</td>
+                </tr>
+                <tr class="border-b border-line">
+                  <td class="p-2 text-ink-secondary">Muzzle energy</td>
+                  <td class="p-2 text-right text-ink">1,991.4 J</td>
+                </tr>
+                <tr>
+                  <td class="p-2 text-ink-secondary">Mass, empty</td>
+                  <td class="p-2 text-right text-ink">3,470.0 g</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 class={HEADING}>Focus ring, press target, popover</h2>
+            <div class="mt-3 flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                class="type-data rounded border border-line-strong bg-surface-2 px-3 py-2 text-sm text-ink"
+              >
+                Tab to me — focus ring is the UI accent
+              </button>
+              <button
+                type="button"
+                popovertarget="popover-demo"
+                class="type-data rounded border border-line-strong bg-surface-2 px-3 py-2 text-sm text-ui-accent"
+              >
+                Open popover
+              </button>
+              <div
+                id="popover-demo"
+                popover
+                class="rounded border border-line-strong bg-surface-1 p-4 text-ink shadow-lg"
+              >
+                <p class="type-heading text-sm">Centred, with zero JavaScript.</p>
+                <p class="type-data mt-1 max-w-readable text-xs text-ink-muted">
+                  Tailwind preflight resets margin to 0, which parks an open popover in the
+                  top-left corner. The base layer restates margin: auto.
+                </p>
+              </div>
+            </div>
+
+            <h2 class={HEADING}>Layout tokens</h2>
+            <dl class="type-data mt-3 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-xs text-ink-secondary">
+              <dt>--layout-gutter</dt><dd data-value="--layout-gutter" class="text-ink-muted" />
+              <dt>--layout-max</dt><dd data-value="--layout-max" class="text-ink-muted" />
+              <dt>--layout-section-gap</dt><dd data-value="--layout-section-gap" class="text-ink-muted" />
+              <dt>--measure-readable</dt><dd data-value="--measure-readable" class="text-ink-muted" />
+              <dt>--measure-lede</dt><dd data-value="--measure-lede" class="text-ink-muted" />
+              <dt>--spacing</dt><dd data-value="--spacing" class="text-ink-muted" />
+              <dt>--ease-out-strong</dt><dd data-value="--ease-out-strong" class="text-ink-muted" />
+              <dt>--ease-in-out-strong</dt><dd data-value="--ease-in-out-strong" class="text-ink-muted" />
+            </dl>
+          </section>
+        ))
+      }
+    </div>
+
+    <script is:inline>
+      /*
+       * Paint each token to a 1x1 canvas and read the pixel back. That is the
+       * colour the display actually shows — gamut clamping and colour
+       * management included — which a formula over the authored oklch values
+       * can only approximate.
+       */
+      const cv = document.createElement('canvas');
+      cv.width = 1;
+      cv.height = 1;
+      const ctx = cv.getContext('2d', { willReadFrequently: true });
+
+      function rgbOf(cssColor) {
+        ctx.fillStyle = '#000';
+        ctx.fillStyle = cssColor;
+        ctx.fillRect(0, 0, 1, 1);
+        const d = ctx.getImageData(0, 0, 1, 1).data;
+        return [d[0], d[1], d[2]];
+      }
+
+      const lin = (c) => {
+        const n = c / 255;
+        return n <= 0.04045 ? n / 12.92 : Math.pow((n + 0.055) / 1.055, 2.4);
+      };
+      const lum = (rgb) => 0.2126 * lin(rgb[0]) + 0.7152 * lin(rgb[1]) + 0.0722 * lin(rgb[2]);
+
+      function ratio(a, b) {
+        const la = lum(a);
+        const lb = lum(b);
+        return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
+      }
+
+      const varOf = (el, name) => getComputedStyle(el).getPropertyValue(name).trim();
+      const hex = (rgb) => '#' + rgb.map((n) => n.toString(16).padStart(2, '0')).join('');
+
+      for (const el of document.querySelectorAll('[data-swatch]')) {
+        const value = varOf(el, el.dataset.swatch);
+        el.textContent = hex(rgbOf(value));
+        el.title = value;
+      }
+
+      let failures = 0;
+      for (const el of document.querySelectorAll('[data-fg][data-bg]')) {
+        const r = ratio(rgbOf(varOf(el, el.dataset.fg)), rgbOf(varOf(el, el.dataset.bg)));
+        const min = Number(el.dataset.min);
+        const ok = r >= min;
+        if (!ok) failures += 1;
+        el.textContent = r.toFixed(2) + ':1 ' + (ok ? 'AA' : 'FAIL');
+        if (!ok) el.style.color = varOf(el, '--color-status-conflicting');
+      }
+
+      for (const el of document.querySelectorAll('[data-value]')) {
+        el.textContent = varOf(el, el.dataset.value);
+      }
+
+      /* Read by the geometry assertions in Instruction.md §3.5. */
+      document.documentElement.dataset.contrastFailures = String(failures);
+    </script>
+  </body>
+</html>
