@@ -1,0 +1,10 @@
+/*
+ * Global stylesheet.
+ *
+ * Phase 0 wires Tailwind v4 and nothing else. The design-token layer
+ * (SPEC.md §11 — light and dark sets, the UI accent, the six content accents,
+ * the type scale, tabular numerals) is Phase 1 and lands in `src/styles/`
+ * before the first component is written, because retrofitting tokens is the
+ * single most expensive mistake available at this stage.
+ */
+@import "tailwindcss";

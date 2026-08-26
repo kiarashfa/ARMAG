@@ -1,0 +1,33 @@
+---
+/**
+ * Homepage — placeholder.
+ *
+ * Phase 0's only job is to prove the toolchain: Astro serves under `BASE`,
+ * Tailwind compiles, TypeScript type-checks. The real homepage (SPEC.md §11 —
+ * spotlight + catalogue) is Phase 5, and it renders through `BaseLayout`
+ * (Phase 4) rather than owning a document shell like this one.
+ *
+ * The base path is read from `import.meta.env.BASE_URL`, not imported from
+ * `astro.config.ts`: importing the config into a page would drag the whole
+ * integration graph into the page's module graph. `href()` (SPEC.md §6) will
+ * wrap this same env var and is written in Phase 4, when there is a second
+ * link on the site for it to serve.
+ */
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ARMAG</title>
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+  </head>
+  <body class="bg-white text-black">
+    <main class="mx-auto max-w-2xl p-8">
+      <h1 class="text-2xl font-semibold tracking-tight">ARMAG</h1>
+      <p class="mt-2 text-sm">Scaffold. No content yet.</p>
+    </main>
+  </body>
+</html>
