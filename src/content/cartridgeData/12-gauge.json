@@ -1,0 +1,160 @@
+{
+  "id": "12-gauge",
+  "name": "12 gauge",
+  "aliases": [
+    {
+      "name": "12/70",
+      "kind": "metric",
+      "note": "The C.I.P. designation for the 70 mm shell."
+    },
+    {
+      "name": "12 bore",
+      "kind": "nickname",
+      "note": "The usual British term."
+    }
+  ],
+  "standard": "saami",
+  "caseType": "shotshell",
+  "boreDiameter": {
+    "value": 18.42,
+    "unit": "mm",
+    "status": "verified",
+    "source": "saami-z299-2",
+    "sourceUrl": "https://saami.org/wp-content/uploads/2025/09/ANSI-SAAMI-Z299.2-Shotshell-2019-Approved-2025-09-23.pdf",
+    "sourceNote": "Bore diameter of the SAAMI 12-gauge standard smoothbore test barrel, 0.725 in."
+  },
+  "caseLength": {
+    "value": 69.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-12",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/12-55-en.pdf",
+    "sourceNote": "Cartridge maximum for the 12/70 shell, dimension l. This is the fired length of the unfolded case, which the chamber must accept."
+  },
+  "overallLength": {
+    "value": 63.9,
+    "unit": "mm",
+    "status": "verified",
+    "source": "tm-43-0001-27",
+    "sourceUrl": "http://pdf.textfiles.com/manuals/MILITARY/united_states_army_tm_43-0001-27%20-%2029_april_1994.pdf",
+    "sourceNote": "Length of the loaded M19 buckshot cartridge, 2.515 in. A crimped shotshell is shorter than the shell length it is named for."
+  },
+  "rimDiameter": {
+    "value": 22.45,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-12",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/12-55-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension g."
+  },
+  "baseDiameter": {
+    "value": 20.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-12",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/12-55-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension d."
+  },
+  "maxPressure": {
+    "value": 74.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-12",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/12-55-en.pdf",
+    "sourceNote": "Pmax for the 12/70 shell, 740 bar."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "federal-f127rs-slug",
+      "name": "Power-Shok 1 oz rifled slug",
+      "manufacturer": "Federal",
+      "bulletType": "Rifled slug",
+      "bulletMass": {
+        "value": 28.382,
+        "unit": "g",
+        "status": "verified",
+        "source": "federal-f127rs",
+        "sourceUrl": "https://www.federalpremium.com/shotshell/power-shok-rifled-slug/11-F127+RS.html",
+        "sourceNote": "438 gr as published, converted to grams. One ounce."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 762.0,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "Federal publishes the velocity without naming a test barrel. SAAMI Z299.2 specifies a 30.000 in (762.00 mm) standard smoothbore barrel for 12-gauge velocity and pressure work, and this figure is recorded on the basis that a SAAMI member measures in it.",
+            "source": "saami-z299-2",
+            "sourceUrl": "https://saami.org/wp-content/uploads/2025/09/ANSI-SAAMI-Z299.2-Shotshell-2019-Approved-2025-09-23.pdf"
+          },
+          "velocity": {
+            "value": 490.7,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "federal-f127rs",
+            "sourceUrl": "https://www.federalpremium.com/shotshell/power-shok-rifled-slug/11-F127+RS.html",
+            "sourceNote": "1610 fps as published."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/12-gauge/hero.webp",
+      "alt": "Four cartridges side by side: a .45 Auto pistol round, a .410 bore shell, a 20 gauge shell and a 12 gauge shell",
+      "caption": "A 12 gauge shell at the right, beside 20 gauge, .410 bore and a .45 Auto pistol cartridge for scale.",
+      "width": 1455,
+      "height": 1119,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shotshell_001.jpg",
+        "licenseType": "public-domain",
+        "author": "Rookie_Rover",
+        "title": "Shotshell 001"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "cip-12",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, Cal. 12",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/12-55-en.pdf",
+      "revision": "Tab. VII, dated 1984-06-14, revision 2018-10-17",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "saami-z299-2",
+      "type": "standards-body",
+      "title": "ANSI/SAAMI Z299.2, Shotshell Ammunition",
+      "publisher": "SAAMI",
+      "url": "https://saami.org/wp-content/uploads/2025/09/ANSI-SAAMI-Z299.2-Shotshell-2019-Approved-2025-09-23.pdf",
+      "revision": "Z299.2-2019, approved 2025-09-23",
+      "accessed": "2026-08-27",
+      "note": "Section III, standard velocity and pressure test barrel drawings."
+    },
+    {
+      "key": "tm-43-0001-27",
+      "type": "military-manual",
+      "title": "TM 43-0001-27, Army Ammunition Data Sheets: Small Caliber Ammunition",
+      "publisher": "Headquarters, Department of the Army",
+      "url": "http://pdf.textfiles.com/manuals/MILITARY/united_states_army_tm_43-0001-27%20-%2029_april_1994.pdf",
+      "revision": "TM 43-0001-27, 29 April 1994",
+      "year": 1994,
+      "accessed": "2026-08-27",
+      "license": "public domain"
+    },
+    {
+      "key": "federal-f127rs",
+      "type": "manufacturer-spec",
+      "title": "Power-Shok Rifled Slug, 12 Gauge, 438 grain, 2-3/4 in (F127 RS)",
+      "publisher": "Federal Ammunition",
+      "url": "https://www.federalpremium.com/shotshell/power-shok-rifled-slug/11-F127+RS.html",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

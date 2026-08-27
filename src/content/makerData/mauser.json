@@ -1,0 +1,23 @@
+{
+  "id": "mauser",
+  "name": "Mauser",
+  "wikidataId": "Q166203",
+  "country": "germany",
+  "founded": 1811,
+  "dissolved": null,
+  "website": "https://www.mauser.com/",
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-mauser",
+      "type": "wikipedia",
+      "title": "Mauser",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359580557",
+      "lang": "en",
+      "revision": "1359580557",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

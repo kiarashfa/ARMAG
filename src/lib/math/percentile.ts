@@ -85,7 +85,13 @@ export function describePercentile(
   return `${formatted} · ${ordinal(result.percentile)} percentile among ${result.setLabel} (n = ${result.populationSize})`;
 }
 
-function ordinal(n: number): string {
+/**
+ * Exported because three places render a percentile and all three must spell
+ * it the same way. The compare island printed `61th of all entries` until the
+ * pilot batch put a real 61 on the page — a hard-coded suffix, and a label
+ * that read as a rank rather than a percentile.
+ */
+export function ordinal(n: number): string {
   const mod100 = n % 100;
   if (mod100 >= 11 && mod100 <= 13) return `${n}th`;
   switch (n % 10) {

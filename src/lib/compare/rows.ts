@@ -195,6 +195,7 @@ const CARTRIDGE_GROUPS: Record<string, string> = {
   caseShape: 'Identity',
 
   bulletDiameter: 'Dimensions',
+  boreDiameter: 'Dimensions',
   caseLength: 'Dimensions',
   overallLength: 'Dimensions',
   rimDiameter: 'Dimensions',

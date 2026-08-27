@@ -1,0 +1,23 @@
+{
+  "id": "colt",
+  "name": "Colt's Manufacturing Company",
+  "wikidataId": "Q745019",
+  "country": "united-states",
+  "founded": 1855,
+  "dissolved": null,
+  "website": "https://www.colt.com/",
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-colt",
+      "type": "wikipedia",
+      "title": "Colt's Manufacturing Company",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369076841",
+      "lang": "en",
+      "revision": "1369076841",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

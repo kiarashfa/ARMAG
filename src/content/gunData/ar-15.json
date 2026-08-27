@@ -1,0 +1,128 @@
+{
+  "id": "ar-15",
+  "name": "AR-15 platform",
+  "kind": "family",
+  "wikidataId": "Q6889079",
+  "makerRef": null,
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "AR-15",
+      "kind": "nickname"
+    },
+    {
+      "name": "MSR",
+      "kind": "nickname",
+      "note": "Modern sporting rifle, the industry term."
+    }
+  ],
+  "lineage": {},
+  "designedIn": "united-states",
+  "fireModes": [],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [],
+  "producedIn": [
+    "united-states"
+  ],
+  "introduced": 1963,
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-ar-15",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370121593",
+        "sourceNote": "The STANAG 4179 magazine the platform was standardised around."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "223-remington",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-ar-15",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370121593"
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [
+    {
+      "standard": "magazine-pattern",
+      "value": "STANAG 4179"
+    },
+    {
+      "standard": "rail",
+      "value": "MIL-STD-1913"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/guns/ar-15/hero.webp",
+      "alt": "An AR-15 type rifle held in a vertical wall mount",
+      "caption": "An AR-15 type rifle in a wall mount at a Nevada Highway Patrol building.",
+      "width": 1067,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AR-15_Type_Rifle_in_Wall_Mount.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Noah Wulf",
+        "title": "AR-15 Type Rifle in Wall Mount",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/ar-15/stripped-lowers.webp",
+      "alt": "Several stripped AR-15 lower receivers laid out on a bench",
+      "caption": "Stripped lower receivers. In the United States this is the serialised part, which is why the platform is a market rather than a product.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mitch_Barrie_-_flickr_-_AR-15_stripped_lower_receivers.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Mitch Barrie",
+        "title": "Mitch Barrie - flickr - AR-15 stripped lower receivers",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "src": "images/guns/ar-15/bolt-carrier-group.webp",
+      "alt": "An AR-15 bolt carrier group removed from the rifle and photographed on a plain surface",
+      "caption": "The bolt carrier group. Gas from the barrel is piped into the carrier itself, which is what direct impingement means.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AR-15_Bolt_Carrier_Group_(BCG).jpg",
+        "licenseType": "cc-by",
+        "author": "Tony Webster",
+        "title": "AR-15 Bolt Carrier Group (BCG)",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-ar-15",
+      "type": "wikipedia",
+      "title": "AR-15 style rifle",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370121593",
+      "lang": "en",
+      "revision": "1370121593",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

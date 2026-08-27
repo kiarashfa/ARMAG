@@ -1,0 +1,200 @@
+{
+  "id": "smith-wesson-mp15-sport",
+  "name": "Smith & Wesson M&P15 Sport III",
+  "kind": "model",
+  "wikidataId": "Q7544973",
+  "makerRef": "smith-wesson",
+  "familyRef": "ar-15",
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "M&P15 Sport III",
+      "kind": "nickname"
+    },
+    {
+      "name": "13807",
+      "kind": "export",
+      "note": "The maker's SKU."
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-direct-impingement",
+  "designedIn": "united-states",
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "target",
+    "personal-defence"
+  ],
+  "producedIn": [
+    "united-states"
+  ],
+  "introduced": 2024,
+  "productionYears": {
+    "start": 2024,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 2.957,
+    "unit": "kg",
+    "status": "verified",
+    "source": "sw-sport3-spec",
+    "sourceUrl": "https://smith-wesson.canto.com/direct/document/b3kk6dbf257j79e63lp09hi61s/WG8DmpqhLPIzTaY3n7bM0gobwSU/original?content-type=application%2Fpdf&name=13807_mp15_Sport3_specsheet.pdf",
+    "sourceNote": "6.52 lb (2957 g) as published."
+  },
+  "length": {
+    "value": 889.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "sw-sport3-spec",
+    "sourceUrl": "https://smith-wesson.canto.com/direct/document/b3kk6dbf257j79e63lp09hi61s/WG8DmpqhLPIzTaY3n7bM0gobwSU/original?content-type=application%2Fpdf&name=13807_mp15_Sport3_specsheet.pdf",
+    "sourceNote": "Stock extended, 35 in (89 cm)."
+  },
+  "lengthFolded": {
+    "value": 812.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "sw-sport3-spec",
+    "sourceUrl": "https://smith-wesson.canto.com/direct/document/b3kk6dbf257j79e63lp09hi61s/WG8DmpqhLPIzTaY3n7bM0gobwSU/original?content-type=application%2Fpdf&name=13807_mp15_Sport3_specsheet.pdf",
+    "sourceNote": "Stock collapsed, 32 in (81 cm). The stock telescopes; it does not fold."
+  },
+  "width": {
+    "value": 63.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "sw-sport3-spec",
+    "sourceUrl": "https://smith-wesson.canto.com/direct/document/b3kk6dbf257j79e63lp09hi61s/WG8DmpqhLPIzTaY3n7bM0gobwSU/original?content-type=application%2Fpdf&name=13807_mp15_Sport3_specsheet.pdf",
+    "sourceNote": "2.5 in (6.4 cm)."
+  },
+  "height": {
+    "value": 203.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "sw-sport3-spec",
+    "sourceUrl": "https://smith-wesson.canto.com/direct/document/b3kk6dbf257j79e63lp09hi61s/WG8DmpqhLPIzTaY3n7bM0gobwSU/original?content-type=application%2Fpdf&name=13807_mp15_Sport3_specsheet.pdf",
+    "sourceNote": "Overall height, 8 in (20.3 cm)."
+  },
+  "barrelLength": {
+    "value": 406.4,
+    "unit": "mm",
+    "status": "verified",
+    "source": "sw-sport3-spec",
+    "sourceUrl": "https://smith-wesson.canto.com/direct/document/b3kk6dbf257j79e63lp09hi61s/WG8DmpqhLPIzTaY3n7bM0gobwSU/original?content-type=application%2Fpdf&name=13807_mp15_Sport3_specsheet.pdf",
+    "sourceNote": "16 in (40.6 cm)."
+  },
+  "riflingTwist": {
+    "value": 203.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "sw-sport3-spec",
+    "sourceUrl": "https://smith-wesson.canto.com/direct/document/b3kk6dbf257j79e63lp09hi61s/WG8DmpqhLPIzTaY3n7bM0gobwSU/original?content-type=application%2Fpdf&name=13807_mp15_Sport3_specsheet.pdf",
+    "sourceNote": "One turn in 8 in, five-groove 5R profile."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "sw-sport3-spec",
+        "sourceUrl": "https://smith-wesson.canto.com/direct/document/b3kk6dbf257j79e63lp09hi61s/WG8DmpqhLPIzTaY3n7bM0gobwSU/original?content-type=application%2Fpdf&name=13807_mp15_Sport3_specsheet.pdf",
+        "sourceNote": "Supplied with one 30-round magazine."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "223-remington",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "sw-sport3-spec",
+        "sourceUrl": "https://smith-wesson.canto.com/direct/document/b3kk6dbf257j79e63lp09hi61s/WG8DmpqhLPIzTaY3n7bM0gobwSU/original?content-type=application%2Fpdf&name=13807_mp15_Sport3_specsheet.pdf",
+        "sourceNote": "The 5.56 NATO chamber accepts the commercial cartridge as well."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [
+    {
+      "standard": "magazine-pattern",
+      "value": "STANAG 4179"
+    },
+    {
+      "standard": "rail",
+      "value": "MIL-STD-1913",
+      "note": "Full-length Picatinny-style top rail."
+    },
+    {
+      "standard": "rail",
+      "value": "M-LOK",
+      "note": "15 in free-floating handguard."
+    }
+  ],
+  "launchPrice": {
+    "amount": 799,
+    "currency": "USD",
+    "market": "US",
+    "year": 2026,
+    "status": "verified",
+    "source": "sw-sport3-product",
+    "sourceUrl": "https://www.smith-wesson.com/product/mp-15-sport-iii",
+    "sourceNote": "The maker's listed price on the date this entry was written, not the 2024 launch price, which is not published anywhere this site can cite."
+  },
+  "images": [
+    {
+      "src": "images/guns/smith-wesson-mp15-sport/hero.webp",
+      "alt": "A Smith & Wesson M&P15 Sport rifle, right side profile, isolated on a plain background",
+      "caption": "This photograph shows an M&P15 Sport II fitted with an aftermarket grip and sights, not the Sport III described on this page. No image of the Sport III exists under a licence this site can use.",
+      "width": 873,
+      "height": 360,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MP15.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "danphamcdp",
+        "title": "MP15",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "sw-sport3-spec",
+      "type": "manufacturer-spec",
+      "title": "M&P15 SPORT III specification sheet (SKU 13807)",
+      "publisher": "Smith & Wesson Inc.",
+      "url": "https://smith-wesson.canto.com/direct/document/b3kk6dbf257j79e63lp09hi61s/WG8DmpqhLPIzTaY3n7bM0gobwSU/original?content-type=application%2Fpdf&name=13807_mp15_Sport3_specsheet.pdf",
+      "year": 2024,
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "sw-sport3-product",
+      "type": "manufacturer-spec",
+      "title": "M&P15 SPORT III product page",
+      "publisher": "Smith & Wesson Inc.",
+      "url": "https://www.smith-wesson.com/product/mp-15-sport-iii",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "wp-mp15",
+      "type": "wikipedia",
+      "title": "Smith & Wesson M&P15",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362231933",
+      "lang": "en",
+      "revision": "1362231933",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

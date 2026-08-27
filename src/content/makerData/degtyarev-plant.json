@@ -1,0 +1,24 @@
+{
+  "id": "degtyarev-plant",
+  "name": "V. A. Degtyarev Plant",
+  "nativeName": "Завод имени Дегтярёва",
+  "wikidataId": "Q2439883",
+  "country": "russia",
+  "founded": 1916,
+  "dissolved": null,
+  "website": "https://www.zid.ru/",
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-zid",
+      "type": "wikipedia",
+      "title": "Degtyaryov Plant",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359494788",
+      "lang": "en",
+      "revision": "1359494788",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

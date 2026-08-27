@@ -31,7 +31,7 @@ const cartridges = (await getCartridges()).sort((a, b) => a.data.name.localeComp
                 {cartridge.data.name}
               </a>
               <p class="type-data text-xs text-ink-muted">
-                Introduced {cartridge.data.introduced}
+                {cartridge.data.introduced ? `Introduced ${cartridge.data.introduced}` : 'No single introduction date'}
                 {cartridge.data.loads.length === 0 ? ' · identity only' : ''}
               </p>
             </li>

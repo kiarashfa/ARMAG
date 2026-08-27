@@ -1,0 +1,24 @@
+{
+  "id": "norinco",
+  "name": "Norinco",
+  "nativeName": "中国兵器工业集团有限公司",
+  "wikidataId": "Q1538336",
+  "country": "china",
+  "founded": 1980,
+  "dissolved": null,
+  "website": "http://www.norincogroup.com.cn/",
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-norinco",
+      "type": "wikipedia",
+      "title": "Norinco",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359624247",
+      "lang": "en",
+      "revision": "1359624247",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

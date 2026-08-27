@@ -1,0 +1,25 @@
+{
+  "id": "kalashnikov-concern",
+  "name": "Kalashnikov Concern",
+  "nativeName": "Концерн «Калашников»",
+  "wikidataId": "Q7427495",
+  "country": "russia",
+  "founded": 2013,
+  "dissolved": null,
+  "successorOf": "izhmash",
+  "website": "https://kalashnikovgroup.ru/",
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-kc",
+      "type": "wikipedia",
+      "title": "Kalashnikov Concern",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1366615153",
+      "lang": "en",
+      "revision": "1366615153",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

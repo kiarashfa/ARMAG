@@ -1,0 +1,232 @@
+{
+  "id": "ak-47",
+  "name": "AK-47",
+  "kind": "model",
+  "nativeName": "АК-47",
+  "wikidataId": "Q37116",
+  "makerRef": "izhmash",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Avtomat Kalashnikova",
+      "kind": "native"
+    },
+    {
+      "name": "AK",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "soviet-union",
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "assault-rifle"
+  ],
+  "producedIn": [
+    "soviet-union"
+  ],
+  "introduced": 1949,
+  "productionYears": {
+    "start": 1948,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 3.47,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-ak-47",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371468711",
+    "sourceNote": "Without magazine, Type 3 receiver."
+  },
+  "massMagazineEmpty": {
+    "value": 0.43,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-ak-47",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371468711",
+    "sourceNote": "Early-issue magazine, empty."
+  },
+  "length": {
+    "value": 880,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-ak-47",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371468711",
+    "sourceNote": "With the fixed wooden stock."
+  },
+  "barrelLength": {
+    "value": 415,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-ak-47",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371468711",
+    "sourceNote": "Overall barrel length. The rifled bore is 369 mm of it."
+  },
+  "sightRadius": {
+    "value": 378,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-ak-47",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371468711"
+  },
+  "cyclicRate": {
+    "value": 600,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "wp-ak-47",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371468711"
+  },
+  "effectiveRange": {
+    "value": 350,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-ak-47",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371468711"
+  },
+  "sightGraduation": {
+    "value": 800,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-ak-47",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371468711",
+    "sourceNote": "Rear tangent sight graduated 100 to 800 m."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x39mm",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-ak-47",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371468711",
+        "sourceNote": "30-round box. 20 and 50-round boxes and 40 and 75-round drums are also listed."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "type-1",
+      "name": "Type 1",
+      "productionYears": {
+        "start": 1948,
+        "end": 1951
+      },
+      "summary": "The original stamped receiver, abandoned because Soviet industry could not hold the tolerances at volume.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "type-2",
+      "name": "Type 2",
+      "productionYears": {
+        "start": 1951,
+        "end": 1954
+      },
+      "summary": "Milled receiver, heavier than the stamping it replaced.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "type-3",
+      "name": "Type 3",
+      "productionYears": {
+        "start": 1955,
+        "end": 1959
+      },
+      "summary": "Lightened milled receiver. The figures on this page belong to this variant.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "aks",
+      "name": "AKS",
+      "summary": "Underfolding stamped stock for airborne and vehicle crews.",
+      "overrides": {},
+      "configurations": []
+    }
+  ],
+  "fits": [
+    {
+      "standard": "magazine-pattern",
+      "value": "AK 7.62x39"
+    }
+  ],
+  "productionTotal": {
+    "value": 75000000,
+    "unit": "",
+    "status": "estimated",
+    "sourceNote": "The cited article gives about 75 million AK-47 rifles and about 100 million Kalashnikov-pattern rifles of all kinds. No manufacturer figure is published.",
+    "source": "wp-ak-47",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371468711"
+  },
+  "images": [
+    {
+      "src": "images/guns/ak-47/hero.webp",
+      "alt": "An AK-47 rifle with a wooden stock, right side profile, isolated on a plain background",
+      "caption": "A Soviet AK-47 with a Type 2 milled receiver, made between 1951 and 1955.",
+      "width": 1600,
+      "height": 620,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AK-47_type_II_noBG.png",
+        "licenseType": "cc-by-sa",
+        "author": "User:Nemo5576",
+        "title": "AK-47 type II noBG",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/ak-47/type-3a.webp",
+      "alt": "An AK-47 Type 3A rifle photographed from the right side",
+      "caption": "A Type 3A, the lightened milled receiver.",
+      "width": 900,
+      "height": 332,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AK-47_assault_rifle.jpg",
+        "licenseType": "public-domain",
+        "author": "Ickybicky at en.wikipedia",
+        "title": "AK-47 assault rifle"
+      }
+    },
+    {
+      "src": "images/guns/ak-47/captured-khowst.webp",
+      "alt": "Rifles and ammunition laid out on the ground after being captured",
+      "caption": "Captured Kalashnikov rifles and a Dragunov at Khowst, Afghanistan.",
+      "width": 1200,
+      "height": 782,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Captured_AK-47,_Dragunov_and_ammunition_in_Khowst,_Afghanistan,_during_Exercise_Alamo_Sweep.jpg",
+        "licenseType": "public-domain",
+        "author": "SPC Eric E. Hughes, US Army",
+        "title": "Captured AK-47, Dragunov and ammunition in Khowst, Afghanistan, during Exercise Alamo Sweep"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-ak-47",
+      "type": "wikipedia",
+      "title": "AK-47",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371468711",
+      "lang": "en",
+      "revision": "1371468711",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

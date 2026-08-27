@@ -1,0 +1,316 @@
+{
+  "id": "remington-870",
+  "name": "Remington Model 870",
+  "kind": "model",
+  "wikidataId": "Q171908",
+  "makerRef": "remington-arms",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "870 Wingmaster",
+      "kind": "nickname"
+    },
+    {
+      "name": "870 Express",
+      "kind": "nickname"
+    },
+    {
+      "name": "M870",
+      "kind": "military",
+      "market": "US"
+    }
+  ],
+  "lineage": {},
+  "type": "shotgun",
+  "action": "pump",
+  "operatingSystem": "manual",
+  "designedIn": "united-states",
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "tube"
+  ],
+  "roles": [
+    "hunting",
+    "personal-defence",
+    "law-enforcement"
+  ],
+  "producedIn": [
+    "united-states"
+  ],
+  "introduced": 1950,
+  "productionYears": {
+    "start": 1951,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 3.4019,
+    "unit": "kg",
+    "status": "verified",
+    "source": "remarms-870-fieldmaster",
+    "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster",
+    "sourceNote": "Average weight of the 12-gauge Fieldmaster with a 28 in barrel, 7.5 lb."
+  },
+  "length": {
+    "value": 1231.9,
+    "unit": "mm",
+    "status": "verified",
+    "source": "remarms-870-fieldmaster",
+    "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster",
+    "sourceNote": "Overall length of the 12-gauge Fieldmaster with a 28 in barrel."
+  },
+  "barrelLength": {
+    "value": 711.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "remarms-870-fieldmaster",
+    "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "12-gauge",
+      "capacity": {
+        "value": 4,
+        "unit": "",
+        "status": "verified",
+        "source": "remarms-870-fieldmaster",
+        "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster",
+        "sourceNote": "Magazine capacity. The 3.5 in chambered model holds three of that shell and four of the shorter ones."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "wingmaster",
+      "name": "Wingmaster",
+      "productionYears": {
+        "start": 1950,
+        "end": null
+      },
+      "summary": "The original grade and still the polished-blue, walnut-stocked one. RemArms publishes no dimensional specification for it.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "express",
+      "name": "Express",
+      "productionYears": {
+        "start": 1987,
+        "end": 2023
+      },
+      "summary": "The matte-finished budget grade that took over the volume of the line for thirty-five years, discontinued when the Fieldmaster replaced it.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "fieldmaster",
+      "name": "Fieldmaster",
+      "productionYears": {
+        "start": 2023,
+        "end": null
+      },
+      "summary": "The current field grade, which replaced the Express in 2023 and returned walnut and a vent-rib barrel to the standard-price gun. The figures on this page are this variant in 12 gauge with the 28 in barrel.",
+      "overrides": {},
+      "configurations": [
+        {
+          "id": "fieldmaster-12-26",
+          "name": "12 gauge, 26 in barrel",
+          "overrides": {
+            "massEmpty": {
+              "value": 3.2885,
+              "unit": "kg",
+              "status": "verified",
+              "source": "remarms-870-fieldmaster",
+              "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster",
+              "sourceNote": "SKU R68865."
+            },
+            "length": {
+              "value": 1181.1,
+              "unit": "mm",
+              "status": "verified",
+              "source": "remarms-870-fieldmaster",
+              "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster"
+            },
+            "barrelLength": {
+              "value": 660.4,
+              "unit": "mm",
+              "status": "verified",
+              "source": "remarms-870-fieldmaster",
+              "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster"
+            }
+          }
+        },
+        {
+          "id": "fieldmaster-20-26",
+          "name": "20 gauge, 26 in barrel",
+          "overrides": {
+            "massEmpty": {
+              "value": 2.835,
+              "unit": "kg",
+              "status": "verified",
+              "source": "remarms-870-fieldmaster",
+              "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster",
+              "sourceNote": "SKU R68869."
+            },
+            "length": {
+              "value": 1181.1,
+              "unit": "mm",
+              "status": "verified",
+              "source": "remarms-870-fieldmaster",
+              "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster"
+            },
+            "barrelLength": {
+              "value": 660.4,
+              "unit": "mm",
+              "status": "verified",
+              "source": "remarms-870-fieldmaster",
+              "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster"
+            },
+            "chamberings": [
+              {
+                "cartridgeRef": "20-gauge",
+                "capacity": {
+                  "value": 4,
+                  "unit": "",
+                  "status": "verified",
+                  "source": "remarms-870-fieldmaster",
+                  "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster"
+                },
+                "primary": true
+              }
+            ]
+          }
+        },
+        {
+          "id": "fieldmaster-20-micro",
+          "name": "20 gauge Micro Compact, 18 3/4 in barrel",
+          "overrides": {
+            "massEmpty": {
+              "value": 2.6082,
+              "unit": "kg",
+              "status": "verified",
+              "source": "remarms-870-fieldmaster",
+              "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster",
+              "sourceNote": "SKU R68877."
+            },
+            "length": {
+              "value": 946.15,
+              "unit": "mm",
+              "status": "verified",
+              "source": "remarms-870-fieldmaster",
+              "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster"
+            },
+            "barrelLength": {
+              "value": 476.25,
+              "unit": "mm",
+              "status": "verified",
+              "source": "remarms-870-fieldmaster",
+              "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster"
+            },
+            "chamberings": [
+              {
+                "cartridgeRef": "20-gauge",
+                "capacity": {
+                  "value": 4,
+                  "unit": "",
+                  "status": "verified",
+                  "source": "remarms-870-fieldmaster",
+                  "sourceUrl": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster"
+                },
+                "primary": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/remington-870/hero.webp",
+      "alt": "A Remington 870 Fieldmaster pump-action shotgun, right side profile",
+      "caption": "A Model 870 Fieldmaster, the current field grade.",
+      "width": 1600,
+      "height": 329,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Remington_870_Fieldmaster.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Burnyburnout",
+        "title": "Remington 870 Fieldmaster",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/remington-870/wingmaster.webp",
+      "alt": "A Remington 870 Wingmaster shotgun with a polished blue receiver and walnut stock",
+      "caption": "An 870 Wingmaster, the original 1950 grade.",
+      "width": 1200,
+      "height": 600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Remington_870_Wingmaster_(55416542561).jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Mitch Barrie",
+        "title": "Remington 870 Wingmaster (55416542561)",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/remington-870/express-tactical.webp",
+      "alt": "A Remington 870 Express Tactical shotgun with a short barrel and synthetic furniture",
+      "caption": "An 870 Express Tactical: short barrel, extended magazine tube, synthetic stock.",
+      "width": 1150,
+      "height": 291,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Remington-870-Express-Tactical.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Picanox",
+        "title": "Remington-870-Express-Tactical",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/remington-870/police-model.webp",
+      "alt": "A Remington 870 P police shotgun displayed in a museum",
+      "caption": "An 870 P in the Wehrtechnische Studiensammlung at Koblenz.",
+      "width": 1200,
+      "height": 473,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:0028228352_Remington_Model_870_P_in_Wehrtechnische_Studiensammlung.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Verein der Freunde und Förderer der Wehrtechnischen Studiensammlung Koblenz e. V.",
+        "title": "0028228352 Remington Model 870 P in Wehrtechnische Studiensammlung",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "remarms-870-fieldmaster",
+      "type": "manufacturer-spec",
+      "title": "Model 870 Fieldmaster specifications",
+      "publisher": "RemArms LLC",
+      "url": "https://www.remarms.com/shotguns/pump-action/model-870/model-870-fieldmaster",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "wp-870",
+      "type": "wikipedia",
+      "title": "Remington Model 870",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368228246",
+      "lang": "en",
+      "revision": "1368228246",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

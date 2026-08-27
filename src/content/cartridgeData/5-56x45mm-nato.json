@@ -1,0 +1,190 @@
+{
+  "id": "5-56x45mm-nato",
+  "name": "5.56x45mm NATO",
+  "wikidataId": "Q238456",
+  "aliases": [
+    {
+      "name": "SS109",
+      "kind": "military",
+      "note": "The Belgian FN projectile design NATO standardised."
+    },
+    {
+      "name": "M855",
+      "kind": "military",
+      "note": "The US loading of the SS109 projectile."
+    },
+    {
+      "name": "5.56 NATO",
+      "kind": "nickname"
+    }
+  ],
+  "introduced": 1980,
+  "standard": "nato",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 5.7,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "No free NATO dimensional standard is published. The C.I.P. datasheet for the .223 Remington, which shares this bullet, gives a cartridge-maximum bullet diameter of 5.70 mm.",
+    "source": "cip-223",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/223-rem-170406-en.pdf"
+  },
+  "caseLength": {
+    "value": null,
+    "unit": "mm",
+    "status": "placeholder",
+    "sourceNote": "STANAG 4172 is not published free of charge, and C.I.P. standardises only the commercial .223 Remington. No case length is recorded here rather than one borrowed from a different cartridge."
+  },
+  "overallLength": {
+    "value": 57.4,
+    "unit": "mm",
+    "status": "verified",
+    "source": "tm-43-0001-27",
+    "sourceUrl": "http://pdf.textfiles.com/manuals/MILITARY/united_states_army_tm_43-0001-27%20-%2029_april_1994.pdf",
+    "sourceNote": "Length of the M855 cartridge: 2.26 in (57.4 mm)."
+  },
+  "maxPressure": {
+    "value": 379.2,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "tm-43-0001-27",
+    "sourceUrl": "http://pdf.textfiles.com/manuals/MILITARY/united_states_army_tm_43-0001-27%20-%2029_april_1994.pdf",
+    "sourceNote": "Chamber pressure of the M855 cartridge, 55,000 psi. The manual states this as the cartridge's pressure, not as a standard ceiling."
+  },
+  "pressureStandard": "nato",
+  "loads": [
+    {
+      "id": "m855-ball",
+      "name": "M855 ball (SS109)",
+      "manufacturer": "US Government",
+      "bulletType": "FMJ with hardened steel penetrator",
+      "bulletMass": {
+        "value": 4.018,
+        "unit": "g",
+        "status": "verified",
+        "source": "tm-43-0001-27",
+        "sourceUrl": "http://pdf.textfiles.com/manuals/MILITARY/united_states_army_tm_43-0001-27%20-%2029_april_1994.pdf",
+        "sourceNote": "62 gr as published, converted to grams."
+      },
+      "cartridgeMass": {
+        "value": 12.312,
+        "unit": "g",
+        "status": "verified",
+        "source": "tm-43-0001-27",
+        "sourceUrl": "http://pdf.textfiles.com/manuals/MILITARY/united_states_army_tm_43-0001-27%20-%2029_april_1994.pdf",
+        "sourceNote": "Complete round, 190 gr as published, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 508.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-m16",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371381489",
+            "sourceNote": "M16A2 barrel length, 20 in."
+          },
+          "velocity": {
+            "value": 944.9,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "fm-3-22-9",
+            "sourceUrl": "https://www.bits.de/NRANEU/others/amd-us-archive/FM3-22.9(03).pdf",
+            "sourceNote": "Table 2-1, muzzle velocity for the M16A2: 3,100 fps. The M855 is the manual's service round for that rifle."
+          }
+        },
+        {
+          "barrelLength": {
+            "value": 368.3,
+            "unit": "mm",
+            "status": "verified",
+            "source": "colt-mle-2026",
+            "sourceUrl": "https://www.colt.com/wp-content/uploads/2026/04/2026-MLE-Catalog-Q2.pdf",
+            "sourceNote": "M4 carbine barrel length as published by the maker: 14.5 in (368.3 mm)."
+          },
+          "velocity": {
+            "value": 905.3,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "fm-3-22-9",
+            "sourceUrl": "https://www.bits.de/NRANEU/others/amd-us-archive/FM3-22.9(03).pdf",
+            "sourceNote": "Table 2-1, muzzle velocity for the M4: 2,970 fps."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/5-56x45mm-nato/hero.webp",
+      "alt": "A single 5.56x45mm NATO cartridge photographed upright against a plain background",
+      "caption": "A 5.56x45mm NATO round. The green-tipped M855 loading is not distinguishable at this scale.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_5.56x45mm_NATO_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "title": "Cartridge 5.56x45mm NATO CC BY-SA 4.0 by Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "tm-43-0001-27",
+      "type": "military-manual",
+      "title": "TM 43-0001-27, Army Ammunition Data Sheets: Small Caliber Ammunition",
+      "publisher": "Headquarters, Department of the Army",
+      "url": "http://pdf.textfiles.com/manuals/MILITARY/united_states_army_tm_43-0001-27%20-%2029_april_1994.pdf",
+      "revision": "TM 43-0001-27, 29 April 1994",
+      "year": 1994,
+      "accessed": "2026-08-27",
+      "license": "public domain"
+    },
+    {
+      "key": "fm-3-22-9",
+      "type": "military-manual",
+      "title": "FM 3-22.9, Rifle Marksmanship M16A1, M16A2/3, M16A4 and M4 Carbine",
+      "publisher": "Headquarters, Department of the Army",
+      "url": "https://www.bits.de/NRANEU/others/amd-us-archive/FM3-22.9(03).pdf",
+      "revision": "FM 3-22.9 (FM 23-9), Change 1",
+      "year": 2003,
+      "accessed": "2026-08-27",
+      "license": "public domain",
+      "note": "Table 2-1, Characteristics of the M16-/M4-series weapons."
+    },
+    {
+      "key": "cip-223",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 223 Rem.",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/223-rem-170406-en.pdf",
+      "revision": "Tab. I, dated 1984-06-14, revision 2017-05-17",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "wp-m16",
+      "type": "wikipedia",
+      "title": "M16 rifle",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371381489",
+      "lang": "en",
+      "revision": "1371381489",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "colt-mle-2026",
+      "type": "manufacturer-spec",
+      "title": "Colt Military and Law Enforcement Catalog, Q2 2026",
+      "publisher": "Colt's Manufacturing Company",
+      "url": "https://www.colt.com/wp-content/uploads/2026/04/2026-MLE-Catalog-Q2.pdf",
+      "year": 2026,
+      "accessed": "2026-08-27"
+    }
+  ]
+}

@@ -184,6 +184,17 @@ test('between two sourced points the velocity is interpolated and says so', () =
   assert.ok(result.caveat!.includes('102') && result.caveat!.includes('127'));
 });
 
+test('no barrel length at all is no answer, not an interpolation', () => {
+  // A `kind: 'family'` entry has no barrel, so the seam in `derived.ts` hands
+  // this NaN. Before the guard it fell through to the bracket search and came
+  // back labelled 'interpolated' with a null value — a confident description
+  // of arithmetic that never happened. Found on the AR-15 page, Phase 8.
+  const result = velocityForBarrel(POINTS, Number.NaN);
+  assert.equal(result.basis, 'none');
+  assert.equal(result.velocity.value, null);
+  assert.equal(result.atBarrelLengthMm, null);
+});
+
 test('outside the sourced range nothing is projected — SPEC.md §8.2', () => {
   const short = velocityForBarrel(POINTS, 76);
   assert.equal(short.basis, 'nearest-sourced');

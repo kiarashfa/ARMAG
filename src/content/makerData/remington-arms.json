@@ -1,0 +1,23 @@
+{
+  "id": "remington-arms",
+  "name": "Remington Arms",
+  "wikidataId": "Q1122504",
+  "country": "united-states",
+  "founded": 1816,
+  "dissolved": null,
+  "website": "https://www.remarms.com/",
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-rem",
+      "type": "wikipedia",
+      "title": "Remington Arms",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362536243",
+      "lang": "en",
+      "revision": "1362536243",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

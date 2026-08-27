@@ -10,7 +10,7 @@
  * The comparison set is named in the DOM, not in a tooltip, because a bar whose
  * population is unstated is exactly the unitless score §8.5 rejects.
  */
-import type { PercentileResult } from '../../lib/math/percentile.ts';
+import { ordinal, type PercentileResult } from '../../lib/math/percentile.ts';
 
 interface Props {
   result: PercentileResult;
@@ -26,11 +26,11 @@ const width = Math.max(2, Math.round(result.fraction * 100));
   <div
     class="h-1 w-full overflow-hidden rounded-full bg-surface-3"
     role="img"
-    aria-label={`${result.percentile}th percentile among ${result.setLabel}, out of ${result.populationSize}`}
+    aria-label={`${ordinal(result.percentile)} percentile among ${result.setLabel}, out of ${result.populationSize}`}
   >
     <div class={`h-full rounded-full ${fillClass}`} style={`width: ${width}%`}></div>
   </div>
   <p class="type-data mt-1 text-[0.65rem] text-ink-muted">
-    {result.percentile}th percentile among {result.setLabel} (n = {result.populationSize})
+    {ordinal(result.percentile)} percentile among {result.setLabel} (n = {result.populationSize})
   </p>
 </div>

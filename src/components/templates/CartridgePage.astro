@@ -63,7 +63,7 @@ const identityOnly = cartridge.loads.length === 0;
         )
       }
       <p class="type-data mt-3 flex flex-wrap gap-x-4 text-sm text-ink-secondary">
-        <span>Introduced {cartridge.introduced}</span>
+        {cartridge.introduced && <span>Introduced {cartridge.introduced}</span>}
         {cartridge.designedBy && <span>{cartridge.designedBy}</span>}
         {
           cartridge.standard !== 'none' && (

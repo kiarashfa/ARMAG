@@ -1,0 +1,161 @@
+{
+  "id": "9x19mm-parabellum",
+  "name": "9x19mm Parabellum",
+  "wikidataId": "Q135550",
+  "aliases": [
+    {
+      "name": "9mm Luger",
+      "kind": "commercial",
+      "note": "The C.I.P. designation and the usual name on a US ammunition box."
+    },
+    {
+      "name": "9mm Parabellum",
+      "kind": "nickname"
+    },
+    {
+      "name": "9x19mm",
+      "kind": "metric"
+    },
+    {
+      "name": "9mm NATO",
+      "kind": "military",
+      "note": "The NATO service load, which is loaded above commercial pressure."
+    }
+  ],
+  "designedBy": "Georg Luger",
+  "introduced": 1902,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "tapered",
+  "bulletDiameter": {
+    "value": 9.03,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page28.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 19.15,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page28.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 29.69,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page28.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 9.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page28.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 9.65,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page28.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 9.93,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page28.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 235.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-9mm",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page28.pdf",
+    "sourceNote": "Pmax 2350 bar, transducer method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "federal-ae9dp-115-fmj",
+      "name": "American Eagle 115 gr FMJ",
+      "manufacturer": "Federal",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 7.452,
+        "unit": "g",
+        "status": "verified",
+        "source": "federal-ae9dp",
+        "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE9DP.html",
+        "sourceNote": "115 gr as published, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 101.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "federal-ae9dp",
+            "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE9DP.html",
+            "sourceNote": "Test barrel length as published: 4 inches."
+          },
+          "velocity": {
+            "value": 359.7,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "federal-ae9dp",
+            "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE9DP.html",
+            "sourceNote": "1180 fps as published."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/9x19mm-parabellum/hero.webp",
+      "alt": "A single 9x19mm Parabellum cartridge photographed upright against a plain background",
+      "caption": "A 9x19mm Parabellum round with a full metal jacket bullet.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_9x19mm_Parabellum_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "title": "Cartridge 9x19mm Parabellum CC BY-SA 4.0 by Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "cip-9mm",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 9 mm Luger",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page28.pdf",
+      "revision": "Tab. IV, dated 1984-06-14, revision 2008-09-23",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "federal-ae9dp",
+      "type": "manufacturer-spec",
+      "title": "American Eagle Handgun 9mm Luger 115 grain FMJ (AE9DP)",
+      "publisher": "Federal Ammunition",
+      "url": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE9DP.html",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "223-remington",
+  "name": ".223 Remington",
+  "wikidataId": "Q2076678",
+  "aliases": [
+    {
+      "name": "223 Rem.",
+      "kind": "commercial",
+      "note": "The C.I.P. spelling."
+    },
+    {
+      "name": "5.56x45mm",
+      "kind": "metric",
+      "note": "Shares the case and bullet with the NATO round but not the chamber or the pressure ceiling."
+    }
+  ],
+  "designedBy": "Remington Arms",
+  "introduced": 1964,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 5.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-223",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/223-rem-170406-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 44.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-223",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/223-rem-170406-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 57.4,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-223",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/223-rem-170406-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 9.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-223",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/223-rem-170406-en.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 6.43,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-223",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/223-rem-170406-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 9.58,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-223",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/223-rem-170406-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 430.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-223",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/223-rem-170406-en.pdf",
+    "sourceNote": "Pmax 4300 bar, transducer method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "federal-ae223-55-fmj",
+      "name": "American Eagle 55 gr FMJ",
+      "manufacturer": "Federal",
+      "bulletType": "FMJ boat tail",
+      "bulletMass": {
+        "value": 3.564,
+        "unit": "g",
+        "status": "verified",
+        "source": "federal-ae223",
+        "sourceUrl": "https://www.federalpremium.com/rifle/american-eagle/american-eagle-rifle/11-AE223.html",
+        "sourceNote": "55 gr as published, converted to grams."
+      },
+      "bcG1": {
+        "value": 0.269,
+        "unit": "",
+        "status": "verified",
+        "source": "federal-ae223",
+        "sourceUrl": "https://www.federalpremium.com/rifle/american-eagle/american-eagle-rifle/11-AE223.html",
+        "sourceNote": "G1 ballistic coefficient as published."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/223-remington/hero.webp",
+      "alt": "A .223 Remington cartridge photographed beside a 5.56x45mm NATO cartridge for comparison",
+      "caption": "The .223 Remington beside the 5.56x45mm NATO round it shares a case with.",
+      "width": 1201,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Caliber_cartridge_comparison_-_.223_Remington_and_5.56x45mm_NATO.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "title": "Caliber cartridge comparison - .223 Remington and 5.56x45mm NATO",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "cip-223",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 223 Rem.",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/223-rem-170406-en.pdf",
+      "revision": "Tab. I, dated 1984-06-14, revision 2017-05-17",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "federal-ae223",
+      "type": "manufacturer-spec",
+      "title": "American Eagle Rifle .223 Rem 55 grain FMJ (AE223)",
+      "publisher": "Federal Ammunition",
+      "url": "https://www.federalpremium.com/rifle/american-eagle/american-eagle-rifle/11-AE223.html",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

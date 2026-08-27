@@ -1,0 +1,89 @@
+{
+  "id": "20-gauge",
+  "name": "20 gauge",
+  "aliases": [
+    {
+      "name": "20/70",
+      "kind": "metric",
+      "note": "The C.I.P. designation for the 70 mm shell."
+    },
+    {
+      "name": "20 bore",
+      "kind": "nickname"
+    }
+  ],
+  "standard": "saami",
+  "caseType": "shotshell",
+  "boreDiameter": {
+    "value": 15.62,
+    "unit": "mm",
+    "status": "verified",
+    "source": "saami-z299-2",
+    "sourceUrl": "https://saami.org/wp-content/uploads/2025/09/ANSI-SAAMI-Z299.2-Shotshell-2019-Approved-2025-09-23.pdf",
+    "sourceNote": "Bore diameter of the SAAMI 20-gauge standard smoothbore test barrel, 0.615 in."
+  },
+  "caseLength": {
+    "value": 69.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-20",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/tabvii-20-en.pdf",
+    "sourceNote": "Cartridge maximum for the 20/70 shell, dimension l."
+  },
+  "overallLength": {
+    "value": null,
+    "unit": "mm",
+    "status": "placeholder",
+    "sourceNote": "No free source publishes a loaded length for a 20-gauge shell, and the figure varies with the crimp and the payload."
+  },
+  "rimDiameter": {
+    "value": 19.4,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-20",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/tabvii-20-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension g."
+  },
+  "baseDiameter": {
+    "value": 17.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-20",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/tabvii-20-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension d."
+  },
+  "maxPressure": {
+    "value": 83.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-20",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/tabvii-20-en.pdf",
+    "sourceNote": "Pmax for the 20/70 shell, 830 bar."
+  },
+  "pressureStandard": "cip",
+  "loads": [],
+  "images": [],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "cip-20",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, Cal. 20",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/tabvii-20-en.pdf",
+      "revision": "Tab. VII, dated 1984-06-14, revision 2020-11-10",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "saami-z299-2",
+      "type": "standards-body",
+      "title": "ANSI/SAAMI Z299.2, Shotshell Ammunition",
+      "publisher": "SAAMI",
+      "url": "https://saami.org/wp-content/uploads/2025/09/ANSI-SAAMI-Z299.2-Shotshell-2019-Approved-2025-09-23.pdf",
+      "revision": "Z299.2-2019, approved 2025-09-23",
+      "accessed": "2026-08-27",
+      "note": "Section III, standard velocity and pressure test barrel drawings."
+    }
+  ]
+}

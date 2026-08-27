@@ -72,7 +72,12 @@ export function velocityForBarrel(
     .filter(usable)
     .sort((a, b) => (a.barrelLength.value as number) - (b.barrelLength.value as number));
 
-  if (known.length === 0) {
+  // A non-finite request means the caller had no barrel length at all — a
+  // family entry, or an arm whose barrel nobody publishes. Without this guard
+  // the bracket search below falls through to the outermost pair and labels
+  // the answer 'interpolated', which is a confident-sounding description of
+  // arithmetic on NaN. Found on the AR-15 platform page in the pilot batch.
+  if (known.length === 0 || !Number.isFinite(barrelLengthMm)) {
     return {
       basis: 'none',
       atBarrelLengthMm: null,

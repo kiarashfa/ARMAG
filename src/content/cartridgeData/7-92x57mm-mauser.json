@@ -1,0 +1,203 @@
+{
+  "id": "7-92x57mm-mauser",
+  "name": "7.92x57mm Mauser",
+  "wikidataId": "Q259287",
+  "aliases": [
+    {
+      "name": "8mm Mauser",
+      "kind": "commercial"
+    },
+    {
+      "name": "8 x 57 IS",
+      "kind": "metric",
+      "note": "The C.I.P. designation. I is for Infanterie; S is the 1905 bore."
+    },
+    {
+      "name": "7.9mm",
+      "kind": "nickname",
+      "note": "Common in British and Commonwealth sources."
+    }
+  ],
+  "designedBy": "German Rifle Test Commission",
+  "introduced": 1905,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 8.22,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/8-x-57-is-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 57.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/8-x-57-is-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 82.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/8-x-57-is-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 11.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/8-x-57-is-en.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 9.08,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/8-x-57-is-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.94,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/8-x-57-is-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 390.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-8x57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/8-x-57-is-en.pdf",
+    "sourceNote": "Pmax 3900 bar, transducer method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "s-patrone-1903",
+      "name": "S Patrone, 1903 pattern ball",
+      "manufacturer": "German Empire",
+      "bulletType": "Pointed FMJ",
+      "bulletMass": {
+        "value": 9.9,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-gewehr-98",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010",
+        "sourceNote": "Stated with the muzzle velocity in the cited article: 9.9 g (154 gr) ball."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 740,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-gewehr-98",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010",
+            "sourceNote": "Gewehr 98 barrel length."
+          },
+          "velocity": {
+            "value": 878.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-gewehr-98",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010",
+            "sourceNote": "Muzzle velocity with 1903-pattern ball ammunition from the Gewehr 98."
+          }
+        }
+      ]
+    },
+    {
+      "id": "rws-dk-11-7",
+      "name": "RWS DK 11.7 g",
+      "manufacturer": "RWS",
+      "bulletType": "Bonded soft point",
+      "bulletMass": {
+        "value": 11.7,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-8x57",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362896740",
+        "sourceNote": "Ballistics table of the cited article."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 600,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-8x57",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362896740",
+            "sourceNote": "Test barrel length stated with the ballistics table of the cited article."
+          },
+          "velocity": {
+            "value": 820.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-8x57",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362896740",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7-92x57mm-mauser/hero.webp",
+      "alt": "A 7.92x57mm Mauser cartridge photographed upright against a plain background",
+      "caption": "A 7.92x57mm Mauser round.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_7.92x57mm_Mauser_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "title": "Cartridge 7.92x57mm Mauser CC BY-SA 4.0 by Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "cip-8x57",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 8 x 57 IS",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/8-x-57-is-en.pdf",
+      "revision": "Tab. I, dated 1984-06-14, revision 2016-05-18",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "wp-8x57",
+      "type": "wikipedia",
+      "title": "7.92x57mm Mauser",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362896740",
+      "lang": "en",
+      "revision": "1362896740",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "wp-gewehr-98",
+      "type": "wikipedia",
+      "title": "Gewehr 98",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368993010",
+      "lang": "en",
+      "revision": "1368993010",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

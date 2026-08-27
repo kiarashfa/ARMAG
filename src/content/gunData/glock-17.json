@@ -1,0 +1,271 @@
+{
+  "id": "glock-17",
+  "name": "Glock 17",
+  "kind": "model",
+  "wikidataId": "Q172172",
+  "makerRef": "glock",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "P80",
+      "kind": "military",
+      "market": "AT",
+      "years": {
+        "start": 1982,
+        "end": null
+      }
+    },
+    {
+      "name": "Pistole 80",
+      "kind": "military",
+      "market": "AT"
+    }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "austria",
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "duty-sidearm",
+    "concealed-carry",
+    "law-enforcement"
+  ],
+  "producedIn": [
+    "austria",
+    "united-states"
+  ],
+  "introduced": 1982,
+  "productionYears": {
+    "start": 1982,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 0.63,
+    "unit": "kg",
+    "status": "verified",
+    "source": "glock-g17gen5",
+    "sourceUrl": "https://us.glock.com/en/products/law-enforcement/pistols/g17-gen5",
+    "sourceNote": "Weight without magazine, 630 g."
+  },
+  "massMagazineEmpty": {
+    "value": 0.078,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "The maker publishes 708 g with an empty magazine and 630 g without one. The difference is the magazine.",
+    "source": "glock-g17gen5",
+    "sourceUrl": "https://us.glock.com/en/products/law-enforcement/pistols/g17-gen5"
+  },
+  "length": {
+    "value": 202,
+    "unit": "mm",
+    "status": "verified",
+    "source": "glock-g17gen5",
+    "sourceUrl": "https://us.glock.com/en/products/law-enforcement/pistols/g17-gen5",
+    "sourceNote": "Overall length."
+  },
+  "width": {
+    "value": 34,
+    "unit": "mm",
+    "status": "verified",
+    "source": "glock-g17gen5",
+    "sourceUrl": "https://us.glock.com/en/products/law-enforcement/pistols/g17-gen5",
+    "sourceNote": "Overall width. Slide width is 25.5 mm."
+  },
+  "height": {
+    "value": 139,
+    "unit": "mm",
+    "status": "verified",
+    "source": "glock-g17gen5",
+    "sourceUrl": "https://us.glock.com/en/products/law-enforcement/pistols/g17-gen5",
+    "sourceNote": "Height including magazine."
+  },
+  "barrelLength": {
+    "value": 114,
+    "unit": "mm",
+    "status": "verified",
+    "source": "glock-g17gen5",
+    "sourceUrl": "https://us.glock.com/en/products/law-enforcement/pistols/g17-gen5"
+  },
+  "sightRadius": {
+    "value": 165,
+    "unit": "mm",
+    "status": "verified",
+    "source": "glock-g17gen5",
+    "sourceUrl": "https://us.glock.com/en/products/law-enforcement/pistols/g17-gen5",
+    "sourceNote": "Sight radius with polymer sights."
+  },
+  "triggerPull": {
+    "value": 26,
+    "unit": "N",
+    "status": "verified",
+    "source": "glock-g17gen5",
+    "sourceUrl": "https://us.glock.com/en/products/law-enforcement/pistols/g17-gen5"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 17,
+        "unit": "",
+        "status": "verified",
+        "source": "glock-g17gen5",
+        "sourceUrl": "https://us.glock.com/en/products/law-enforcement/pistols/g17-gen5",
+        "sourceNote": "Standard magazine. 10, 19, 24, 31 and 33-round magazines are also listed."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "gen-1",
+      "name": "First generation",
+      "productionYears": {
+        "start": 1982,
+        "end": 1988
+      },
+      "summary": "The pistol as adopted by Austria in 1982: pebble-textured frame, no finger grooves and no accessory rail.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "gen-2",
+      "name": "Second generation",
+      "productionYears": {
+        "start": 1988,
+        "end": 1997
+      },
+      "summary": "Checkering added to the front and back straps. No published dimensional change.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "gen-3",
+      "name": "Third generation",
+      "productionYears": {
+        "start": 1998,
+        "end": 2010
+      },
+      "summary": "Finger grooves, a thumb rest and an accessory rail on the dust cover.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "gen-4",
+      "name": "Fourth generation",
+      "productionYears": {
+        "start": 2010,
+        "end": 2017
+      },
+      "summary": "Dual recoil spring assembly, reversible magazine catch and interchangeable backstraps.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "gen-5",
+      "name": "Fifth generation",
+      "productionYears": {
+        "start": 2017,
+        "end": null
+      },
+      "summary": "Finger grooves removed, ambidextrous slide stop, flared magazine well and the Glock Marksman barrel. This is the generation the maker publishes dimensions for, and therefore the one every figure on this page belongs to.",
+      "overrides": {},
+      "configurations": []
+    }
+  ],
+  "fits": [
+    {
+      "standard": "magazine-pattern",
+      "value": "Glock 17 9x19"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/guns/glock-17/hero.webp",
+      "alt": "A Glock 17 pistol photographed from the right side on a plain surface",
+      "caption": "A Glock 17, right side.",
+      "width": 1600,
+      "height": 1063,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glock_17_(6825676904).jpg",
+        "licenseType": "cc-by",
+        "author": "Askild Antonsen",
+        "title": "Glock 17 (6825676904)",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "src": "images/guns/glock-17/size-comparison.webp",
+      "alt": "Three Glock pistols laid out in a row for size comparison, with English captions",
+      "caption": "The Glock 17 beside the shorter 19 and the subcompact 26, all in 9x19mm.",
+      "width": 1200,
+      "height": 630,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:GLOCK_171926E.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Domenjod",
+        "title": "GLOCK 171926E",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/glock-17/atf-right-profile.webp",
+      "alt": "A Glock 17 pistol isolated against a white background, right side profile",
+      "caption": "A studio profile released by the US Bureau of Alcohol, Tobacco, Firearms and Explosives.",
+      "width": 1200,
+      "height": 600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glock_17_(transparent_background).jpg",
+        "licenseType": "public-domain",
+        "author": "U.S. Bureau of Alcohol, Tobacco, Firearms and Explosives",
+        "title": "Glock 17 (transparent background)"
+      }
+    },
+    {
+      "src": "images/guns/glock-17/tampere-police-museum.webp",
+      "alt": "A row of Glock pistols displayed in a museum case",
+      "caption": "Glock pistols in the Police Museum at Tampere, Finland.",
+      "width": 1200,
+      "height": 280,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glock_pistols.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Tiia Monto",
+        "title": "Glock pistols",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "glock-g17gen5",
+      "type": "manufacturer-spec",
+      "title": "G17 Gen5 technical data",
+      "publisher": "Glock Inc.",
+      "url": "https://us.glock.com/en/products/law-enforcement/pistols/g17-gen5",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "wp-glock",
+      "type": "wikipedia",
+      "title": "Glock",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371474807",
+      "lang": "en",
+      "revision": "1371474807",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

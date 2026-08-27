@@ -10,6 +10,15 @@
     "requiresResolvingCartridgeRef": true
   },
 
+  "familyPublicationFloor": {
+    "note": "SPEC.md §5.9's floor is model-shaped: it asks for six verified core specs, and a `kind: 'family'` entry has no mass, no length and no barrel because a platform spans manufacturers (SPEC.md §5.1). Applying the model floor to a family made the AR-15 an unlinked catalogue row while its page existed and was linked from its own members. A family's substance is its computed member list and its prose, and `family/no-members` already fails the build when that list is empty, so what is left to require here is an image and real prose.",
+    "verifiedCoreSpecs": 0,
+    "images": 1,
+    "proseWords": 60,
+    "requiresResolvingMakerRef": false,
+    "requiresResolvingCartridgeRef": true
+  },
+
   "completeness": {
     "note": "SPEC.md §5.9 — tier is COMPUTED from this score, never asserted by an author. Only `verified` values count: an estimated figure contributes nothing, so estimating your way to a full page produces a Tier 3 entry covered in amber badges. Inventing numbers buys nothing. Weights are provisional until the pilot batch.",
     "weights": {

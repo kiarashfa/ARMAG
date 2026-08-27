@@ -1,0 +1,222 @@
+{
+  "id": "type-56",
+  "name": "Type 56",
+  "kind": "model",
+  "nativeName": "56式自動步槍",
+  "wikidataId": "Q1142312",
+  "makerRef": "norinco",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Type 56 assault rifle",
+      "kind": "military",
+      "market": "CN"
+    },
+    {
+      "name": "AKM-56",
+      "kind": "export"
+    }
+  ],
+  "lineage": {
+    "licensedProductionOf": "ak-47"
+  },
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "china",
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "assault-rifle"
+  ],
+  "producedIn": [
+    "china"
+  ],
+  "introduced": 1956,
+  "productionYears": {
+    "start": 1956,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 3.8,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-type-56",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367792794",
+    "sourceNote": "Type 56 with the fixed stock."
+  },
+  "length": {
+    "value": 882,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-type-56",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367792794",
+    "sourceNote": "Type 56 with the fixed stock."
+  },
+  "barrelLength": {
+    "value": 414,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-type-56",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367792794"
+  },
+  "cyclicRate": {
+    "value": 650,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "wp-type-56",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367792794"
+  },
+  "sightGraduation": {
+    "value": 800,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-type-56",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367792794",
+    "sourceNote": "Rear sight adjustable from 100 to 800 m."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x39mm",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-type-56",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367792794",
+        "sourceNote": "20, 30 and 40-round detachable box magazines are listed."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "type-56-1",
+      "name": "Type 56-1",
+      "summary": "Underfolding stamped stock, in the pattern of the Soviet AKS.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.7,
+          "unit": "kg",
+          "status": "verified",
+          "source": "wp-type-56",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367792794"
+        },
+        "length": {
+          "value": 874,
+          "unit": "mm",
+          "status": "verified",
+          "source": "wp-type-56",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367792794",
+          "sourceNote": "Stock extended."
+        },
+        "lengthFolded": {
+          "value": 654,
+          "unit": "mm",
+          "status": "verified",
+          "source": "wp-type-56",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367792794",
+          "sourceNote": "Stock folded."
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "type-56-2",
+      "name": "Type 56-2",
+      "summary": "Side-folding stock hinged on the right of the receiver.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.9,
+          "unit": "kg",
+          "status": "verified",
+          "source": "wp-type-56",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367792794"
+        }
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [
+    {
+      "standard": "magazine-pattern",
+      "value": "AK 7.62x39"
+    }
+  ],
+  "productionTotal": {
+    "value": 10000000,
+    "unit": "",
+    "status": "estimated",
+    "sourceNote": "The cited article gives more than ten million, attributed to a secondary source. No Chinese state figure is published.",
+    "source": "wp-type-56",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367792794"
+  },
+  "images": [
+    {
+      "src": "images/guns/type-56/hero.webp",
+      "alt": "Both sides of a Chinese Type 56-1 rifle shown one above the other",
+      "caption": "A Type 56-1, both sides. The underfolding stock is the visible difference from the fixed-stock Type 56.",
+      "width": 1600,
+      "height": 1061,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chinese_Type_56-1_Assault_Rifle_both_sides.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "RRT877",
+        "title": "Chinese Type 56-1 Assault Rifle both sides",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/type-56/left-side.webp",
+      "alt": "A Chinese Type 56-1 rifle photographed from the left side",
+      "caption": "The left side of the same rifle.",
+      "width": 1200,
+      "height": 398,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chinese_Type_56-1_Assault_Rifle_other_side.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "RRT877",
+        "title": "Chinese Type 56-1 Assault Rifle other side",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/type-56/factory-66-marking.webp",
+      "alt": "Close-up of a triangle-and-66 factory marking stamped into a rifle receiver",
+      "caption": "The triangle-66 arsenal mark, which identifies the state factory that made this rifle.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AK_factory_66_marking_on_a_Chinese_Type_56-1_assault_rifle.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "RRT877",
+        "title": "AK factory 66 marking on a Chinese Type 56-1 assault rifle",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-type-56",
+      "type": "wikipedia",
+      "title": "Type 56 assault rifle",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367792794",
+      "lang": "en",
+      "revision": "1367792794",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

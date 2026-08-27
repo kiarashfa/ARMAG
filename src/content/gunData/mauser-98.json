@@ -1,0 +1,203 @@
+{
+  "id": "mauser-98",
+  "name": "Mauser Gewehr 98",
+  "kind": "model",
+  "wikidataId": "Q166313",
+  "makerRef": "mauser",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Gewehr 98",
+      "kind": "military",
+      "market": "DE",
+      "years": {
+        "start": 1898,
+        "end": 1935
+      }
+    },
+    {
+      "name": "M98",
+      "kind": "nickname"
+    },
+    {
+      "name": "Mauser 98",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "germany",
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "fixed-box",
+    "stripper"
+  ],
+  "roles": [
+    "service-rifle"
+  ],
+  "producedIn": [
+    "germany"
+  ],
+  "introduced": 1898,
+  "productionYears": {
+    "start": 1898,
+    "end": 1918
+  },
+  "massEmpty": {
+    "value": 4.09,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-gewehr-98",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010",
+    "sourceNote": "With an empty magazine."
+  },
+  "length": {
+    "value": 1250,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-gewehr-98",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010"
+  },
+  "barrelLength": {
+    "value": 740,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-gewehr-98",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010"
+  },
+  "effectiveRange": {
+    "value": 500,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-gewehr-98",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010",
+    "sourceNote": "With iron sights."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-92x57mm-mauser",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-gewehr-98",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010",
+        "sourceNote": "Internal box magazine, loaded from five-round stripper clips."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "kar-98a",
+      "name": "Karabiner 98a",
+      "summary": "The 1908 cavalry and artillery carbine, shortened and lightened, with a turned-down bolt handle.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.5,
+          "unit": "kg",
+          "status": "verified",
+          "source": "wp-gewehr-98",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010"
+        },
+        "length": {
+          "value": 1090,
+          "unit": "mm",
+          "status": "verified",
+          "source": "wp-gewehr-98",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010"
+        },
+        "barrelLength": {
+          "value": 590,
+          "unit": "mm",
+          "status": "verified",
+          "source": "wp-gewehr-98",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010"
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "kar-98b",
+      "name": "Karabiner 98b",
+      "summary": "A post-1918 rebuild of the full-length rifle with a turned-down bolt handle and a tangent rear sight, called a carbine to stay inside the Versailles limits on rifle production. It is not shorter than the Gewehr 98.",
+      "overrides": {},
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "productionTotal": {
+    "value": 9000000,
+    "unit": "",
+    "status": "estimated",
+    "sourceNote": "The cited article gives more than nine million, attributed to a Bavarian Army Museum catalogue. Imperial production was spread over at least a dozen plants and no consolidated figure was published at the time.",
+    "source": "wp-gewehr-98",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368993010"
+  },
+  "images": [
+    {
+      "src": "images/guns/mauser-98/hero.webp",
+      "alt": "A Gewehr 98 bolt-action rifle, right side profile, isolated on a plain background",
+      "caption": "A Gewehr 98 made in 1898, from the collection of the Swedish Army Museum.",
+      "width": 1200,
+      "height": 480,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gewehr_98_noBG.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "title": "Gewehr 98 noBG",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/mauser-98/right-profile.webp",
+      "alt": "A Gewehr 98 rifle photographed against a grey background, right side",
+      "caption": "The same rifle against a grey field.",
+      "width": 1200,
+      "height": 480,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gewehr_98_greyBG_02.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "title": "Gewehr 98 greyBG 02",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/mauser-98/sectioned-model.webp",
+      "alt": "A cutaway instructional model of a Gewehr 98 showing the action and magazine internally",
+      "caption": "A sectioned instructional model: the two forward locking lugs and the internal box magazine are the features every later Mauser copy took.",
+      "width": 1200,
+      "height": 512,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gewehr_98_Schnittmodell.jpg",
+        "licenseType": "cc-by",
+        "author": "Markscheider",
+        "title": "Gewehr 98 Schnittmodell",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-gewehr-98",
+      "type": "wikipedia",
+      "title": "Gewehr 98",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368993010",
+      "lang": "en",
+      "revision": "1368993010",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

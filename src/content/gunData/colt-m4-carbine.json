@@ -1,0 +1,247 @@
+{
+  "id": "colt-m4-carbine",
+  "name": "Colt M4 Carbine",
+  "kind": "model",
+  "wikidataId": "Q214688",
+  "makerRef": "colt",
+  "familyRef": "ar-15",
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "M4",
+      "kind": "military",
+      "market": "US",
+      "years": {
+        "start": 1994,
+        "end": null
+      }
+    },
+    {
+      "name": "Carbine, Caliber 5.56 mm, M4",
+      "kind": "military",
+      "market": "US"
+    },
+    {
+      "name": "R0977",
+      "kind": "export",
+      "note": "Colt's own catalogue number for the 14.5 in gun."
+    }
+  ],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-direct-impingement",
+  "designedIn": "united-states",
+  "fireModes": [
+    "semi",
+    "burst"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "assault-rifle"
+  ],
+  "producedIn": [
+    "united-states"
+  ],
+  "introduced": 1994,
+  "productionYears": {
+    "start": 1987,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 2.9438,
+    "unit": "kg",
+    "status": "verified",
+    "source": "fm-3-22-9",
+    "sourceUrl": "https://www.bits.de/NRANEU/others/amd-us-archive/FM3-22.9(03).pdf",
+    "sourceNote": "Table 2-1, weight without magazine and sling, 6.49 lb."
+  },
+  "length": {
+    "value": 838.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "fm-3-22-9",
+    "sourceUrl": "https://www.bits.de/NRANEU/others/amd-us-archive/FM3-22.9(03).pdf",
+    "sourceNote": "Buttstock open."
+  },
+  "lengthFolded": {
+    "value": 755.65,
+    "unit": "mm",
+    "status": "verified",
+    "source": "fm-3-22-9",
+    "sourceUrl": "https://www.bits.de/NRANEU/others/amd-us-archive/FM3-22.9(03).pdf",
+    "sourceNote": "Buttstock closed. The stock telescopes rather than folding, over four positions."
+  },
+  "barrelLength": {
+    "value": 368.3,
+    "unit": "mm",
+    "status": "verified",
+    "source": "colt-mle-2026",
+    "sourceUrl": "https://www.colt.com/wp-content/uploads/2026/04/2026-MLE-Catalog-Q2.pdf",
+    "sourceNote": "14.5 in, from the maker's catalogue."
+  },
+  "riflingTwist": {
+    "value": 177.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "fm-3-22-9",
+    "sourceUrl": "https://www.bits.de/NRANEU/others/amd-us-archive/FM3-22.9(03).pdf",
+    "sourceNote": "Table 2-1, right hand, one turn in 7 in."
+  },
+  "twistDirection": "right",
+  "cyclicRate": {
+    "value": null,
+    "unit": "rpm",
+    "status": "conflicting-sources",
+    "source": "fm-3-22-9",
+    "sourceUrl": "https://www.bits.de/NRANEU/others/amd-us-archive/FM3-22.9(03).pdf",
+    "sourceNote": "FM 3-22.9 Table 2-1 gives 700 to 900 rounds per minute for the M4. TM 9-1005-319-10 gives 700 to 970 for the same weapon. Two Army publications disagree about the upper bound, so no figure is recorded."
+  },
+  "effectiveRange": {
+    "value": 500,
+    "unit": "m",
+    "status": "verified",
+    "source": "fm-3-22-9",
+    "sourceUrl": "https://www.bits.de/NRANEU/others/amd-us-archive/FM3-22.9(03).pdf",
+    "sourceNote": "Maximum effective range against point targets. Against area targets the manual gives 600 m."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "fm-3-22-9",
+        "sourceUrl": "https://www.bits.de/NRANEU/others/amd-us-archive/FM3-22.9(03).pdf",
+        "sourceNote": "STANAG 4179 magazine."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "m4a1",
+      "name": "M4A1",
+      "summary": "Fully automatic in place of the three-round burst, and from 2014 a heavier barrel profile and an ambidextrous selector.",
+      "overrides": {
+        "fireModes": [
+          "semi",
+          "automatic"
+        ]
+      },
+      "configurations": []
+    },
+    {
+      "id": "m4-mws",
+      "name": "M4 MWS",
+      "summary": "Modular Weapon System: the handguard is replaced by a rail adapter carrying MIL-STD-1913 rails on all four faces.",
+      "overrides": {},
+      "configurations": []
+    }
+  ],
+  "fits": [
+    {
+      "standard": "magazine-pattern",
+      "value": "STANAG 4179"
+    },
+    {
+      "standard": "rail",
+      "value": "MIL-STD-1913"
+    },
+    {
+      "standard": "muzzle-thread",
+      "value": "1/2-28"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/guns/colt-m4-carbine/hero.webp",
+      "alt": "An M4 carbine fitted with a rail adapter system and a red dot sight, right side",
+      "caption": "An M4 with the Modular Weapon System rail adapter and an M68 close combat optic.",
+      "width": 1600,
+      "height": 781,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PEO_M4_Carbine_RAS_M68_CCO.png",
+        "licenseType": "public-domain",
+        "author": "Photo Courtesy of PEO Soldier",
+        "title": "PEO M4 Carbine RAS M68 CCO"
+      }
+    },
+    {
+      "src": "images/guns/colt-m4-carbine/in-service-iraq.webp",
+      "alt": "A soldier holding an M4 carbine fitted with a rail system and optic",
+      "caption": "An M4 MWS in service in Iraq.",
+      "width": 1200,
+      "height": 957,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colt_M4_MWS_Carbine_Iraq.jpg",
+        "licenseType": "public-domain",
+        "author": "Staff Sergeant James Harper Jr., United States Air Force",
+        "title": "Colt M4 MWS Carbine Iraq"
+      }
+    },
+    {
+      "src": "images/guns/colt-m4-carbine/m4a1-flattop.webp",
+      "alt": "Line profile of an M4A1 carbine with a flat-top upper receiver",
+      "caption": "An M4A1 with the flat-top upper: no carry handle, a rail in its place.",
+      "width": 1032,
+      "height": 432,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M4A1-flattop.png",
+        "licenseType": "public-domain",
+        "author": "Source: PEO SoldierDerivative: User:MathKnight",
+        "title": "M4A1-flattop"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "fm-3-22-9",
+      "type": "military-manual",
+      "title": "FM 3-22.9, Rifle Marksmanship M16A1, M16A2/3, M16A4 and M4 Carbine",
+      "publisher": "Headquarters, Department of the Army",
+      "url": "https://www.bits.de/NRANEU/others/amd-us-archive/FM3-22.9(03).pdf",
+      "revision": "FM 3-22.9 (FM 23-9), Change 1",
+      "year": 2003,
+      "accessed": "2026-08-27",
+      "license": "public domain",
+      "note": "Table 2-1."
+    },
+    {
+      "key": "tm-9-1005-319-10",
+      "type": "military-manual",
+      "title": "TM 9-1005-319-10, Operator's Manual, Rifle 5.56 mm M16A2/M16A3/M16A4 and Carbine M4/M4A1",
+      "publisher": "Headquarters, Department of the Army",
+      "url": "https://mcarbo.americommerce.com/.Owners%20Manuals/tm-9-1005-319-10-2010-operator-s-manual-for-rifle-5.56-mm-m16a2-m16a3-m4-web.pdf",
+      "revision": "TM 9-1005-319-10, Revision 2 (2010)",
+      "year": 2010,
+      "accessed": "2026-08-27",
+      "license": "public domain"
+    },
+    {
+      "key": "colt-mle-2026",
+      "type": "manufacturer-spec",
+      "title": "Colt Military and Law Enforcement Catalog, Q2 2026",
+      "publisher": "Colt's Manufacturing Company",
+      "url": "https://www.colt.com/wp-content/uploads/2026/04/2026-MLE-Catalog-Q2.pdf",
+      "year": 2026,
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "wp-m4",
+      "type": "wikipedia",
+      "title": "M4 carbine",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371259998",
+      "lang": "en",
+      "revision": "1371259998",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

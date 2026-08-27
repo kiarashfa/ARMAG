@@ -1,0 +1,23 @@
+{
+  "id": "izhmash",
+  "name": "Izhmash",
+  "nativeName": "Ижмаш",
+  "country": "russia",
+  "founded": 1807,
+  "dissolved": 2013,
+  "predecessorOf": "kalashnikov-concern",
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-izh",
+      "type": "wikipedia",
+      "title": "Kalashnikov Concern",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1366615153",
+      "lang": "en",
+      "revision": "1366615153",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

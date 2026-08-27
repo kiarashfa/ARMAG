@@ -1,0 +1,218 @@
+{
+  "id": "pkm",
+  "name": "PKM",
+  "kind": "model",
+  "nativeName": "Пулемёт Калашникова модернизированный",
+  "wikidataId": "Q159495",
+  "makerRef": "degtyarev-plant",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Pulemyot Kalashnikova Modernizirovanny",
+      "kind": "native"
+    },
+    {
+      "name": "PKMS",
+      "kind": "military",
+      "note": "The same gun on the Stepanov tripod."
+    }
+  ],
+  "lineage": {},
+  "type": "machine-gun",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "soviet-union",
+  "fireModes": [
+    "automatic"
+  ],
+  "feedSystem": [
+    "belt"
+  ],
+  "roles": [
+    "general-purpose"
+  ],
+  "producedIn": [
+    "soviet-union",
+    "russia"
+  ],
+  "introduced": 1969,
+  "productionYears": {
+    "start": 1969,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 7.5,
+    "unit": "kg",
+    "status": "verified",
+    "source": "zid-pkm",
+    "sourceUrl": "https://web.archive.org/web/20141105144702/http://zid.ru/eng/products/47/detail/222",
+    "sourceNote": "Maker figure, gun with its integral bipod."
+  },
+  "length": {
+    "value": 1160,
+    "unit": "mm",
+    "status": "verified",
+    "source": "zid-pkm",
+    "sourceUrl": "https://web.archive.org/web/20141105144702/http://zid.ru/eng/products/47/detail/222",
+    "sourceNote": "Overall dimensions given as 1160 x 215 x 372 mm."
+  },
+  "width": {
+    "value": 215,
+    "unit": "mm",
+    "status": "verified",
+    "source": "zid-pkm",
+    "sourceUrl": "https://web.archive.org/web/20141105144702/http://zid.ru/eng/products/47/detail/222"
+  },
+  "height": {
+    "value": 372,
+    "unit": "mm",
+    "status": "verified",
+    "source": "zid-pkm",
+    "sourceUrl": "https://web.archive.org/web/20141105144702/http://zid.ru/eng/products/47/detail/222"
+  },
+  "barrelLength": {
+    "value": 605,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-pk",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369035270",
+    "sourceNote": "Barrel length for the PK series."
+  },
+  "sightRadius": {
+    "value": 663,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-pk",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369035270"
+  },
+  "riflingTwist": {
+    "value": 240,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-pk",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369035270",
+    "sourceNote": "One turn in 240 mm, four right-hand grooves."
+  },
+  "twistDirection": "right",
+  "riflingGrooves": 4,
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "sourceNote": "The maker publishes a range of 600 to 800 rounds per minute and no single figure. This is the midpoint of that range; the schema stores one number.",
+    "source": "zid-pkm",
+    "sourceUrl": "https://web.archive.org/web/20141105144702/http://zid.ru/eng/products/47/detail/222"
+  },
+  "effectiveRange": {
+    "value": 1000,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-pk",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369035270"
+  },
+  "sightGraduation": {
+    "value": 1500,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-pk",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369035270",
+    "sourceNote": "Rear tangent sight graduated in 100 m increments from 100 to 1500 m."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x54mmr",
+      "capacity": {
+        "value": 100,
+        "unit": "",
+        "status": "verified",
+        "source": "zid-pkm",
+        "sourceUrl": "https://web.archive.org/web/20141105144702/http://zid.ru/eng/products/47/detail/222",
+        "sourceNote": "Rounds in the smaller of the two issued belt boxes. The maker also lists a 200-round box, and 250-round boxes are used on the tripod."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "pkms",
+      "name": "PKMS",
+      "summary": "The PKM on L. V. Stepanov 6T5 tripod, adopted with it in 1969. The tripod weighs 4.5 kg and the pair 12 kg.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "pkmb",
+      "name": "PKMB",
+      "summary": "The armoured-vehicle pintle mounting version.",
+      "overrides": {},
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/pkm/hero.webp",
+      "alt": "A PKM general-purpose machine gun on its bipod, right side",
+      "caption": "A PKM on its integral bipod.",
+      "width": 1600,
+      "height": 1201,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Machine_gun_762_KK_PKM_20180604.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Santeri Viinamäki",
+        "title": "Machine gun 762 KK PKM 20180604",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/pkm/helsinki-museum.webp",
+      "alt": "A PKM machine gun with a 100-round ammunition box displayed in a museum",
+      "caption": "A PK-series gun with the 100-round belt box attached.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7,62_KK_PKM_Helsinki_2012.JPG",
+        "licenseType": "public-domain",
+        "author": "MKFI",
+        "title": "7,62 KK PKM Helsinki 2012"
+      }
+    },
+    {
+      "src": "images/guns/pkm/left-profile.webp",
+      "alt": "A PKM machine gun photographed from the left side against a plain background",
+      "caption": "Left side. The feed tray cover hinges at the front.",
+      "width": 1200,
+      "height": 387,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PKM_DD-ST-85-01257.JPEG",
+        "licenseType": "public-domain",
+        "title": "PKM DD-ST-85-01257"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "zid-pkm",
+      "type": "manufacturer-spec",
+      "title": "7.62 mm PKM Kalashnikov modernized machine gun",
+      "publisher": "V. A. Degtyarev Plant",
+      "url": "https://web.archive.org/web/20141105144702/http://zid.ru/eng/products/47/detail/222",
+      "accessed": "2026-08-27",
+      "note": "Archived copy of the maker product page; the live page has since been withdrawn."
+    },
+    {
+      "key": "wp-pk",
+      "type": "wikipedia",
+      "title": "PK machine gun",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369035270",
+      "lang": "en",
+      "revision": "1369035270",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

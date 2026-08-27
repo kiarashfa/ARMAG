@@ -1,0 +1,23 @@
+{
+  "id": "smith-wesson",
+  "name": "Smith & Wesson",
+  "wikidataId": "Q463090",
+  "country": "united-states",
+  "founded": 1852,
+  "dissolved": null,
+  "website": "https://www.smith-wesson.com/",
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-sw",
+      "type": "wikipedia",
+      "title": "Smith & Wesson",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369899810",
+      "lang": "en",
+      "revision": "1369899810",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

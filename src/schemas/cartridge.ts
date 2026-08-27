@@ -146,14 +146,32 @@ export const cartridgeDataSchema = z
 
     /** Often a person rather than a company, so free text, not a maker ref. */
     designedBy: z.string().optional(),
-    introduced: introducedYear,
+    /**
+     * Optional, unlike a firearm model's. A 12-gauge shell is a lineage rather
+     * than a product launch: the gauge predates the metallic cartridge and the
+     * modern 12/70 shell has no single introduction date anybody publishes.
+     * Requiring the field would have guaranteed an invented year on exactly
+     * the entries where nobody could check it. Found authoring the shotshells
+     * in the Phase 8 pilot batch.
+     */
+    introduced: introducedYear.optional(),
     productionYears: yearRange.optional(),
 
     standard: standardsBody,
     caseType,
     caseShape: caseShape.optional(),
 
-    bulletDiameter: propertyValue('mm'),
+    /**
+     * Optional because a shotshell has no single projectile: it may leave the
+     * barrel as nine 00 pellets, one slug or a sabot, and picking one of those
+     * to call "the bullet" would be inventing a fact. A shotshell records
+     * `boreDiameter` instead, and the refinement below enforces the choice
+     * rather than leaving it to an author's memory. Discovered authoring the
+     * Remington 870 in the Phase 8 pilot batch.
+     */
+    bulletDiameter: propertyValue('mm').optional(),
+    /** Bore diameter — the meaningful calibre figure for a shotshell. */
+    boreDiameter: propertyValue('mm').optional(),
     caseLength: propertyValue('mm'),
     overallLength: propertyValue('mm'),
     /** Rim, neck and base diameters, where the datasheet gives them. */
@@ -190,6 +208,31 @@ export const cartridgeDataSchema = z
           'a maximum pressure must say which body measured it — SAAMI and C.I.P. use different methods and their figures are not interchangeable',
       });
     }
+    const isShotshell = cartridge.caseType === 'shotshell';
+    if (isShotshell) {
+      if (cartridge.bulletDiameter) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['bulletDiameter'],
+          message:
+            'a shotshell has no single projectile diameter — record `boreDiameter` instead (SPEC.md §5.4)',
+        });
+      }
+      if (!cartridge.boreDiameter) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['boreDiameter'],
+          message: 'a shotshell must record its `boreDiameter`',
+        });
+      }
+    } else if (!cartridge.bulletDiameter) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['bulletDiameter'],
+        message: 'a cartridge with a single projectile must record its `bulletDiameter`',
+      });
+    }
+
     const loadIds = cartridge.loads.map((l) => l.id);
     const dupes = [...new Set(loadIds.filter((id, i) => loadIds.indexOf(id) !== i))];
     if (dupes.length > 0) {

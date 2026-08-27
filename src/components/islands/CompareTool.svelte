@@ -21,6 +21,7 @@
    */
   import { untrack } from 'svelte';
   import { formatValue } from '../../lib/render/format.ts';
+  import { ordinal } from '../../lib/math/percentile.ts';
   import type { CompareCell, CompareEntry } from '../../lib/compare/entry.ts';
   import type { CompareRow } from '../../lib/compare/rows.ts';
 
@@ -258,7 +259,7 @@
         ></div>
       </div>
       <p class="type-data mt-0.5 text-[0.6rem] text-ink-muted">
-        {percentile.percentile}th of {percentile.setLabel} (n = {percentile.populationSize})
+        {ordinal(percentile.percentile)} percentile among {percentile.setLabel} (n = {percentile.populationSize})
       </p>
     </div>
   {/if}

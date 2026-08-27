@@ -1,0 +1,154 @@
+{
+  "id": "7-62x39mm",
+  "name": "7.62x39mm",
+  "wikidataId": "Q259196",
+  "aliases": [
+    {
+      "name": "M43",
+      "kind": "military",
+      "note": "The Soviet designation, from the 1943 development programme."
+    },
+    {
+      "name": "7.62 Soviet",
+      "kind": "nickname"
+    }
+  ],
+  "designedBy": "Nikolai Elizarov and Boris Semin",
+  "introduced": 1944,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.92,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-762x39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-62-x-39-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 38.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-762x39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-62-x-39-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 56.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-762x39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-62-x-39-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 11.35,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-762x39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-62-x-39-en.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 8.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-762x39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-62-x-39-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.35,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-762x39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-62-x-39-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 355.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-762x39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-62-x-39-en.pdf",
+    "sourceNote": "Pmax 3550 bar, transducer method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "sb-124-fmj",
+      "name": "Sellier & Bellot 124 gr FMJ",
+      "manufacturer": "Sellier & Bellot",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 8.0,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-762x39",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371601372",
+        "sourceNote": "Ballistics table of the cited article."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 520,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-762x39",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371601372",
+            "sourceNote": "Test barrel length stated with the ballistics table of the cited article."
+          },
+          "velocity": {
+            "value": 738.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-762x39",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371601372",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7-62x39mm/hero.webp",
+      "alt": "A 7.62x39mm cartridge with a lacquered steel case photographed upright",
+      "caption": "A 7.62x39mm M43 round in a lacquered steel case.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_7.62x39mm_M43_Steel_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "title": "Cartridge 7.62x39mm M43 Steel CC BY-SA 4.0 by Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "cip-762x39",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 7,62 x 39",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-62-x-39-en.pdf",
+      "revision": "Tab. I, dated 1989-01-04, revision 2013-05-22",
+      "accessed": "2026-08-27"
+    },
+    {
+      "key": "wp-762x39",
+      "type": "wikipedia",
+      "title": "7.62x39mm",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371601372",
+      "lang": "en",
+      "revision": "1371601372",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

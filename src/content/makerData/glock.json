@@ -1,0 +1,23 @@
+{
+  "id": "glock",
+  "name": "Glock Ges.m.b.H.",
+  "wikidataId": "Q702135",
+  "country": "austria",
+  "founded": 1963,
+  "dissolved": null,
+  "website": "https://www.glock.com/",
+  "lastVerified": "2026-08-27",
+  "reviewStatus": "spot-checked",
+  "references": [
+    {
+      "key": "wp-glock",
+      "type": "wikipedia",
+      "title": "Glock",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371474807",
+      "lang": "en",
+      "revision": "1371474807",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-27"
+    }
+  ]
+}

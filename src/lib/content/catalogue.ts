@@ -165,7 +165,18 @@ export function buildCatalogue(
         thresholds.completeness.weights,
         thresholds.completeness.tierFloor,
       );
-      const floor = meetsPublicationFloor(input, thresholds.publicationFloor);
+      // SPEC.md §5.9's floor is written for models: six verified core specs,
+      // a maker and a cartridge. A `kind: 'family'` entry has none of the
+      // first and cannot have the second, because a platform spans
+      // manufacturers (SPEC.md §5.1) and has no mass, length or barrel of its
+      // own. Applying it unchanged made the AR-15 an unlinked row saying "no
+      // page yet" while its page existed and was linked from its own members.
+      // The family floor lives beside the model one in thresholds.json.
+      // Found in the Phase 8 pilot batch.
+      const floor = meetsPublicationFloor(
+        input,
+        data.kind === 'family' ? thresholds.familyPublicationFloor : thresholds.publicationFloor,
+      );
 
       // Through the same seam a gun page renders from, so the matchmaker and
       // the entry it links to can never quote two different recoil figures.

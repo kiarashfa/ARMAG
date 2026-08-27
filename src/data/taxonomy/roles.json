@@ -14,6 +14,8 @@
     { "id": "competition", "label": "Competition" },
     { "id": "concealed-carry", "label": "Concealed carry" },
     { "id": "duty-sidearm", "label": "Duty sidearm" },
-    { "id": "personal-defence", "label": "Personal defence" }
+    { "id": "personal-defence", "label": "Personal defence" },
+    { "id": "general-purpose", "label": "General-purpose automatic", "description": "The general-purpose machine gun role: sustained automatic fire from a bipod or a tripod, in a full-power rifle cartridge. Added in the Phase 8 pilot batch, where the PKM had no role term that fitted." },
+    { "id": "law-enforcement", "label": "Law enforcement", "description": "Adopted for police and other civil-enforcement issue. Distinct from `duty-sidearm`, which is specifically a handgun role." }
   ]
 }
