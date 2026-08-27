@@ -1,148 +1,219 @@
 {
   "note": "The contract `npm run check:self` enforces (SPEC.md §13 gate 7). Each entry names a deliberately-broken fixture and the rule id that must fire on it. If a rule stops firing, the gate it belongs to has rotted and check:self exits non-zero. `why` is there so whoever sees the failure knows what the fixture was defending, not just which assertion broke. `messageContains` pins the generic `schema/invalid` rule to the specific refinement under test — without it, a fixture could keep passing check:self on an unrelated schema error long after the rule it exists for was deleted.",
-
   "expected": [
     {
       "file": "test-fixtures/broken-content/content/guns/orphan-narrative.mdx",
-      "rules": ["pairing/missing-data"],
+      "rules": [
+        "pairing/missing-data"
+      ],
       "why": "a narrative file with no structured-data sibling must not build — the two-file pattern is the whole content model (SPEC.md §5.1)"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/orphan-data.json",
-      "rules": ["pairing/missing-narrative"],
+      "rules": [
+        "pairing/missing-narrative"
+      ],
       "why": "a data file with no narrative sibling would render as a page with a spec table and no prose"
     },
     {
       "file": "test-fixtures/broken-content/content/guns/wrong-id.mdx",
-      "rules": ["id/filename-mismatch", "id/narrative-data-mismatch"],
+      "rules": [
+        "id/filename-mismatch",
+        "id/narrative-data-mismatch"
+      ],
       "why": "the filename is the URL slug; an id that disagrees with it makes every cross-reference ambiguous, and SPEC.md §2 principle 1 is that canonical URLs never move"
     },
     {
       "file": "test-fixtures/broken-content/content/guns/identity-drift.mdx",
-      "rules": ["id/narrative-data-mismatch"],
+      "rules": [
+        "id/narrative-data-mismatch"
+      ],
       "why": "the paired files must agree on identity, or the page's title and its specs describe different arms"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/dangling-maker.json",
-      "rules": ["maker-ref/unresolved"],
+      "rules": [
+        "maker-ref/unresolved"
+      ],
       "why": "makerRef drives the country axis, the maker page's computed model list and the breadcrumb — an unresolved one renders an arm nobody made"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/dangling-family.json",
-      "rules": ["family-ref/unresolved"],
+      "rules": [
+        "family-ref/unresolved"
+      ],
       "why": "the family page's member list is computed from familyRef, so a dangling one is a membership claim nothing can honour"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/family-is-model.json",
-      "rules": ["family-ref/wrong-kind"],
+      "rules": [
+        "family-ref/wrong-kind"
+      ],
       "why": "SPEC.md §5.1 — a family is a soft grouping entry of its own, never another model. Pointing familyRef at a model rebuilds the parent hierarchy the content model exists to avoid"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/childless-family.json",
-      "rules": ["family/no-members"],
+      "rules": [
+        "family/no-members"
+      ],
       "why": "a family page whose computed member list comes back empty is a page about nothing"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/dangling-cartridge.json",
-      "rules": ["cartridge-ref/unresolved"],
+      "rules": [
+        "cartridge-ref/unresolved"
+      ],
       "why": "the cartridge is the input to every ballistic figure on the page (SPEC.md §5.4) — an unresolved one silently removes the entire derived layer"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/lineage-loop-a.json",
-      "rules": ["lineage/cycle"],
+      "rules": [
+        "lineage/cycle"
+      ],
       "why": "a lineage loop would hang the family-tree renderer rather than fail it, which is worse than a wrong edge"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/dangling-citation.json",
-      "rules": ["citation/unresolved"],
+      "rules": [
+        "citation/unresolved"
+      ],
       "why": "SPEC.md §2 principle 3 — every number has a source. A citation key pointing at nothing is a number with no provenance, which is the same thing as an uncited number"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/fabricated-placeholder.json",
-      "rules": ["schema/invalid"],
+      "rules": [
+        "schema/invalid"
+      ],
       "messageContains": "requires `value: null`",
       "why": "THE important one: a plausible-looking invented figure hiding behind status 'placeholder'. This is precisely the failure mode 'no fabricated data, ever' exists to stop"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/verified-without-url.json",
-      "rules": ["trust/verified-without-url"],
+      "rules": [
+        "trust/verified-without-url"
+      ],
       "why": "SPEC.md §13 gate 2 — spot-checking must be a click. A citation nobody can open is a citation nobody will check"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/assumed-but-verified.json",
-      "rules": ["trust/assumed-but-verified"],
+      "rules": [
+        "trust/assumed-but-verified"
+      ],
       "why": "SPEC.md §13 gate 3, the highest-value check on the site. In the Markey model benchmark four of five models passed content checks while inventing at least one figure, and the tell was always a hedging note behind a 'verified' badge"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/assumed-but-verified.json",
-      "rules": ["schema/invalid"],
+      "rules": [
+        "schema/invalid"
+      ],
       "messageContains": "hedging note",
       "why": "gate 3 is enforced TWICE on purpose: as a Zod refinement so it fires in the editor at the exact field, and as a walker rule so this gate has a rule id of its own. Both are asserted, because losing either one loses something real"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/verified-without-url.json",
-      "rules": ["schema/invalid"],
+      "rules": [
+        "schema/invalid"
+      ],
       "messageContains": "requires a `sourceUrl`",
       "why": "the same double enforcement for gate 2 — the schema refinement is what an author actually sees while writing"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/unlicensed-image.json",
-      "rules": ["schema/invalid"],
+      "rules": [
+        "schema/invalid"
+      ],
       "messageContains": "licenseType",
       "why": "an image credit without a licenceType fails both the walker (auditability) and the schema (imageCredit requires it)"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/lineage-loop-b.json",
-      "rules": ["lineage/cycle"],
+      "rules": [
+        "lineage/cycle"
+      ],
       "why": "a cycle is reported from every entry on it, so whichever file the author opens names the loop"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/invalid-tag.json",
-      "rules": ["schema/invalid"],
+      "rules": [
+        "schema/invalid"
+      ],
       "messageContains": "Invalid option",
       "why": "an unlisted taxonomy tag must fail the build naming the vocabulary file to fix, rather than silently creating an orphan taxonomy page (SPEC.md §7)"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/authored-era.json",
-      "rules": ["schema/invalid"],
+      "rules": [
+        "schema/invalid"
+      ],
       "messageContains": "Unrecognized key",
       "why": "era is COMPUTED from the introduction year and must never be authored (SPEC.md §7). The data schemas are strict objects, which also catches a mistyped field name — the failure mode where `barrelLenght` is silently ignored and the spec table shows a gap nobody can explain"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/unlicensed-image.json",
-      "rules": ["image/missing-license"],
+      "rules": [
+        "image/missing-license"
+      ],
       "why": "every image's legal basis must be auditable rather than assumed (SPEC.md §10) — an image with no recorded licence must never reach the site"
     },
     {
       "file": "test-fixtures/broken-content/content/guns/copycat-a.mdx",
-      "rules": ["prose/near-duplicate"],
+      "rules": [
+        "prose/near-duplicate"
+      ],
       "why": "SPEC.md §13 gate 4. With many parallel authors writing about mechanically similar arms, boilerplate is a certainty rather than a risk, and a database of 3,000 identical paragraphs is worth less than one of 300 real ones"
     },
     {
       "file": "test-fixtures/broken-content/content/guns/copycat-b.mdx",
-      "rules": ["prose/near-duplicate"],
+      "rules": [
+        "prose/near-duplicate"
+      ],
       "why": "reported against BOTH files, because fixing a duplicate needs to see both of them"
     }
   ],
-
   "expectedScriptFailures": [
     {
       "script": "scripts/integrity/check-assets.mjs",
-      "argv": ["--root", "test-fixtures/broken-assets", "--quiet"],
+      "argv": [
+        "--root",
+        "test-fixtures/broken-assets",
+        "--quiet"
+      ],
       "stderrContains": "not webp",
       "why": "SPEC.md §10 is WebP only, and the pixel caps are read from the file header rather than trusted from a JSON field — a `width` nobody measured is not a measurement"
     },
     {
       "script": "scripts/integrity/check-assets.mjs",
-      "argv": ["--root", "test-fixtures/broken-assets", "--hero-max-bytes", "10", "--quiet"],
+      "argv": [
+        "--root",
+        "test-fixtures/broken-assets",
+        "--hero-max-bytes",
+        "10",
+        "--quiet"
+      ],
       "stderrContains": "exceeds the hero cap",
       "why": "proves the byte cap still bites, without committing an oversized binary to git history forever"
     },
     {
       "script": "scripts/integrity/check-site.mjs",
-      "argv": ["--dist", "test-fixtures/broken-dist", "--env", "test-fixtures/broken-dist/fake.env"],
+      "argv": [
+        "--dist",
+        "test-fixtures/broken-dist",
+        "--env",
+        "test-fixtures/broken-dist/fake.env"
+      ],
       "stderrContains": "FIXTURE_API_KEY",
       "why": "SPEC.md §13 gate 6 — a static site has no server to hide a key behind, so anything reaching dist/ is published. The fixture key is fake; the gate reports the variable NAME and never the value, because a leak report that quotes the secret is a second leak"
+    },
+    {
+      "script": "scripts/integrity/check-site.mjs",
+      "argv": [
+        "--dist",
+        "test-fixtures/broken-armory",
+        "--env",
+        "test-fixtures/broken-armory/.absent"
+      ],
+      "stderrContains": "A blocked page is never fetched",
+      "why": "SPEC.md §12 and Instruction.md Phase 7 — the /armory/ noindex triple, asserted on all three legs at once. The fixture breaks every one of them: no noindex meta, listed in the sitemap, and disallowed in robots.txt. The third is the counter-intuitive leg and the reason they are checked together: blocking a noindex page means it is never fetched, so the noindex is never read"
     }
   ]
 }

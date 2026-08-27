@@ -68,8 +68,12 @@ function backing(): Storage | null {
 const NOTICE = {
   unavailable:
     'This browser will not let the site store anything, so nothing here will be remembered after you leave.',
+  // "a different version", not "an older one": a blob can also come from a
+  // NEWER build, which is what a visitor sees after using a preview deploy or
+  // restoring an old browser profile. Saying "older" would be wrong exactly
+  // when the message matters most.
   version:
-    'A saved item was written by an older version of this site and could not be read, so it was cleared.',
+    'A saved item was written by a different version of this site and could not be read, so it was cleared.',
   invalid: 'A saved item was damaged and could not be read, so it was cleared.',
 } as const;
 

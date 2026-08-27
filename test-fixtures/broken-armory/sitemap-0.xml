@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Deliberately lists a NOINDEX_PATHS page. Advertising a page you have asked a
+  crawler not to index is the invitation half of the mistake; the Disallow in
+  the robots.txt beside this file is the other half.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://kiarashfa.github.io/ARMAG/</loc></url>
+  <url><loc>https://kiarashfa.github.io/ARMAG/armory/</loc></url>
+</urlset>

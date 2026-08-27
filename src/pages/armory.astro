@@ -1,0 +1,90 @@
+---
+/**
+ * `/armory/` — SPEC.md §6 and §9.4.
+ *
+ * ── The noindex triple, and why all three parts matter ────────────────────
+ * This page is `noindex`, it is **excluded from the sitemap**, and it is
+ * **not** disallowed in `robots.txt`. That combination is deliberate and it is
+ * asserted together by `check:site`:
+ *
+ *  - `noindex` says do not index it.
+ *  - Sitemap exclusion removes the invitation.
+ *  - *Not* being blocked in robots.txt is what makes the first one work at all:
+ *    a blocked page is never fetched, so its `noindex` is never read, and it
+ *    can sit in the index as "fetched but not indexed" indefinitely. Blocking
+ *    it would be the well-meaning move that guarantees the outcome.
+ *
+ * The page owns no content in the usual sense — everything on it is the
+ * visitor's, held in their own browser — so there is nothing here worth
+ * indexing even if it could be.
+ */
+import BaseLayout from '../components/ui/BaseLayout.astro';
+import Armory from '../components/islands/Armory.svelte';
+import { fileHref, href } from '../lib/content/href.ts';
+---
+
+<BaseLayout
+  title="My Armory"
+  description="A private shelf for the firearms you own or follow, kept in your own browser. No account, no server, nothing sent anywhere."
+  noindex
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-8">
+    <h1 class="type-display text-display text-ink">My Armory</h1>
+    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+      Numbered bays for the arms you own or follow, with the empty ones left visible.
+      <strong class="text-ink">
+        Everything here is kept in this browser and is never sent anywhere</strong
+      > — there is no account and no server to have one on. Clear your site data and it is gone, so take
+      a backup if it matters to you.
+    </p>
+
+    <Armory
+      client:load
+      catalogueSrc={fileHref('catalogue.json')}
+      dataPrefix={href('compare', 'data')}
+      gunPrefix={href('guns')}
+      armoryPath={href('armory')}
+    />
+
+    <noscript>
+      <p
+        class="type-data mt-6 rounded-lg border border-line bg-surface-1 p-4 text-sm text-ink-secondary"
+      >
+        My Armory is a browser feature: the shelf is stored on this device and nowhere else, so it
+        needs JavaScript to read and write it. Nothing else on ARMAG does —
+        <a href={href()} class="text-ui-accent">the catalogue</a>, every entry page and every
+        specification table work without it.
+      </p>
+    </noscript>
+
+    <section id="what-leaves" class="mt-(--layout-section-gap) scroll-mt-16">
+      <h2 class="type-title text-xl">
+        <a href="#what-leaves" class="text-ink no-underline hover:text-ui-accent">
+          What can leave this browser
+        </a>
+      </h2>
+      <div class="mt-3 grid max-w-readable gap-4 sm:grid-cols-2">
+        <div>
+          <h3 class="type-heading text-sm text-ink">A share link</h3>
+          <p class="type-body mt-1 text-sm text-ink-secondary">
+            Which arms are in which bays. Nothing else — not a nickname, not a date, not a price,
+            not a round count. It is built from three fields by name, and the schema that reads it
+            back rejects a link carrying anything more.
+          </p>
+        </div>
+        <div>
+          <h3 class="type-heading text-sm text-ink">A backup file</h3>
+          <p class="type-body mt-1 text-sm text-ink-secondary">
+            Everything, ownership included. It is a separate, explicitly labelled action, and the
+            page says so where you press it rather than here.
+          </p>
+        </div>
+      </div>
+      <p class="type-body mt-4 max-w-readable text-sm text-ink-secondary">
+        <strong class="text-ink">There is no serial number field anywhere on this site</strong>, not
+        in the shelf, not in the backup, not in the link. A leaked save must never be a theft
+        shopping list, and a nickname does the same job for you.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

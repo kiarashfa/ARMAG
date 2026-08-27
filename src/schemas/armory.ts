@@ -27,8 +27,12 @@ import { isoDate, slug } from './primitives.ts';
  */
 export const ARMORY_SCHEMA_VERSION = 1;
 
-/** Namespaced so nothing else on the origin can collide with it. */
-export const ARMORY_STORAGE_KEY = 'armag:armory:v1';
+/*
+ * There is deliberately no storage-key constant here. `lib/storage` owns key
+ * construction — it namespaces this store to `armag:armory` and carries the
+ * version in its own `{ v, data }` envelope — and a key written out a second
+ * time in this file was already disagreeing with the real one.
+ */
 
 /**
  * The NRA condition scale, as published. Used with a base value the **user**
