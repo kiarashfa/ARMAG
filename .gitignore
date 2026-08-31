@@ -33,3 +33,6 @@ plan/
 
 # --- Others ---
 reference/
+
+# --- Authoring caches (not committed: copies of other people's indexes) ---
+.cache/

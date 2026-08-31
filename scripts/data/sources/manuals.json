@@ -1,0 +1,81 @@
+{
+  "note": "Public-domain US military manuals — FRICTION-LOG A2 called these 'the best free firearm sources'. FM 3-22.9 Table 2-1 was the single densest source in the pilot batch. What is recorded per manual is its DESIGNATION, because that is what the citation needs: `referenceEntry` requires `revision` on a military-manual citation and the designation is what someone re-finds it by. A host is a convenience and goes stale — army.mil withdrew its own copies and the mirrors in the friction log now 403 or 404. `manuals.mjs check` re-probes every URL here; `manuals.mjs find` resolves a designation to a permanent Internet Archive identifier when they all die.",
+  "checked": "2026-08-31",
+  "manuals": [
+    {
+      "designation": "FM 3-22.9",
+      "title": "Rifle Marksmanship, M16A1, M16A2/3, M16A4 and M4 Carbine",
+      "publisher": "Headquarters, Department of the Army",
+      "year": 2008,
+      "covers": ["colt-m4-carbine", "ar-15", "5-56x45mm-nato"],
+      "contents": "Table 2-1 gives weight, overall length, barrel length, rifling twist, muzzle velocity, cyclic rate and maximum effective range for five weapons in one table. Verified against by the pilot batch.",
+      "urls": [
+        {
+          "url": "https://archive.org/details/fm-3-22.9-rifle-marksmanship-m-16-m-4-series-weapons",
+          "host": "Internet Archive",
+          "status": null
+        }
+      ]
+    },
+    {
+      "designation": "TC 3-22.9",
+      "title": "Rifle and Carbine",
+      "publisher": "Headquarters, Department of the Army",
+      "year": 2016,
+      "covers": ["colt-m4-carbine", "ar-15"],
+      "contents": "The current successor to FM 3-22.9. Reorganised around the weapon system rather than the marksmanship task, so its data tables are laid out differently — check both before concluding a figure is unpublished.",
+      "urls": [
+        {
+          "url": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN34193_TC%203-22x9%20FINAL%20WEB.pdf",
+          "host": "armypubs.army.mil",
+          "status": null,
+          "note": "armypubs is NOT the same host as www.army.mil, which 403s every non-browser client. This one serves PDFs directly."
+        }
+      ]
+    },
+    {
+      "designation": "TM 43-0001-27",
+      "title": "Army Ammunition Data Sheets — Small Caliber Ammunition, FSC 1305",
+      "publisher": "Headquarters, Department of the Army",
+      "year": 1994,
+      "covers": ["5-56x45mm-nato", "7-62x51mm-nato", "9x19mm-parabellum"],
+      "contents": "Per-cartridge mass, length, chamber pressure and muzzle velocity for every US service round. WARNING — it also prints propellant type and charge weight for each; SPEC.md §14 puts that outside the line and there is no field for it. Do not transcribe it anywhere, including into a sourceNote (FRICTION-LOG A8).",
+      "urls": [
+        {
+          "url": "https://archive.org/details/tm-43-0001-27-small-caliber-ammunition",
+          "host": "Internet Archive",
+          "status": null
+        }
+      ]
+    },
+    {
+      "designation": "TM 9-1005-319-10",
+      "title": "Operator's Manual — Rifle, 5.56 mm, M16A2/M16A3/M16A4 and Carbine, 5.56 mm, M4/M4A1",
+      "publisher": "Headquarters, Department of the Army",
+      "year": 2010,
+      "covers": ["colt-m4-carbine"],
+      "contents": "Operator-level data. Its cyclic rate for the M4 is 700–970 rpm where FM 3-22.9 says 700–900 — the pilot batch recorded that disagreement as `conflicting-sources` rather than picking one.",
+      "urls": [
+        {
+          "url": "https://archive.org/details/manuallib-id-2671392",
+          "host": "Internet Archive",
+          "status": null
+        }
+      ]
+    }
+  ],
+  "deadHosts": [
+    {
+      "host": "www.bits.de/NRANEU/others/amd-us-archive/",
+      "note": "Recorded as working in FRICTION-LOG A2 on 2026-08-27. Returns 403 to every client on 2026-08-31."
+    },
+    {
+      "host": "pdf.textfiles.com/manuals/MILITARY/",
+      "note": "Recorded as working in FRICTION-LOG A2. Does not resolve at all on 2026-08-31."
+    },
+    {
+      "host": "www.army.mil",
+      "note": "403 to any non-browser client. armypubs.army.mil is a different host and does serve PDFs."
+    }
+  ]
+}
