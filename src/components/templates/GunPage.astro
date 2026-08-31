@@ -25,7 +25,16 @@ import SpecTable from '../blocks/SpecTable.astro';
 import TypeBadge from '../blocks/TypeBadge.astro';
 import UnitValue from '../blocks/UnitValue.astro';
 
-import { cartridgeHref, gunHref, href, makerHref, taxonomyHref } from '../../lib/content/href.ts';
+import {
+  absoluteUrl,
+  assetUrl,
+  cartridgeHref,
+  gunHref,
+  href,
+  makerHref,
+  taxonomyHref,
+} from '../../lib/content/href.ts';
+import { entryArticle } from '../../lib/render/json-ld.ts';
 import { formatYears, humanise } from '../../lib/render/format.ts';
 import { labelFor } from '../../schemas/taxonomy.ts';
 import type { GunData } from '../../schemas/gun.ts';
@@ -106,14 +115,37 @@ const hero = gun.images[0];
 const stacked = gun.variants.length > 8;
 const tabGroup = `variants-${gun.id}`;
 
+/**
+ * SPEC.md §12 — `TechArticle`, never `Product`. `json-ld.ts` throws on the
+ * commerce vocabulary, so the ban is kept by construction rather than by
+ * remembering it here. `launchPrice` is rendered on the page as a sourced
+ * historical figure and is deliberately absent from the structured data: a
+ * price in JSON-LD is an offer to a machine that never reads the caption.
+ */
+const description = `${gun.name}${makerName ? `, ${makerName}` : ''}${
+  years ? `, ${years}` : ''
+}. Sourced specifications, derived ballistics, and the formula behind every figure.`;
+
+const jsonLd = entryArticle({
+  type: 'TechArticle',
+  name: gun.name,
+  description,
+  url: absoluteUrl(Astro.site, gunHref(gun.id)),
+  images: gun.images.map((image) => absoluteUrl(Astro.site, assetUrl(image.src))),
+  dateModified: gun.lastVerified,
+  about: [
+    gun.type ? labelFor('type', gun.type) : null,
+    ...gun.roles.map((role) => labelFor('role', role)),
+    gun.designedIn ? labelFor('country', gun.designedIn) : null,
+  ].filter((term): term is string => typeof term === 'string'),
+  citation: gun.references.map((reference) =>
+    [reference.title, reference.publisher, reference.year].filter(Boolean).join(', '),
+  ),
+});
+
 ---
 
-<BaseLayout
-  title={gun.name}
-  description={`${gun.name}${makerName ? `, ${makerName}` : ''}${
-    years ? `, ${years}` : ''
-  }. Sourced specifications, derived ballistics, and the formula behind every figure.`}
->
+<BaseLayout title={gun.name} description={description} jsonLd={jsonLd}>
   <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <ActionBar id={gun.id} name={gun.name} />
 

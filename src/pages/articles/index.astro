@@ -1,16 +1,30 @@
 ---
 /** `/articles/` — editorial index. */
 import BaseLayout from '../../components/ui/BaseLayout.astro';
+import { itemList } from '../../lib/render/json-ld.ts';
 import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
-import { articleHref } from '../../lib/content/href.ts';
+import { absoluteUrl, articleHref } from '../../lib/content/href.ts';
 
 const articles = (await getCollection('articles')).sort((a, b) =>
   b.data.published.localeCompare(a.data.published),
 );
+
+/** SPEC.md §12 — a browse view is an `ItemList`. */
+const jsonLd = itemList(
+  'Articles on ARMAG',
+  articles.map((article) => ({
+    name: article.data.title,
+    url: absoluteUrl(Astro.site, articleHref(article.id)),
+  })),
+);
 ---
 
-<BaseLayout title="Articles" description="Long-form editorial from ARMAG.">
+<BaseLayout
+  title="Articles"
+  description="Long-form editorial from ARMAG."
+  jsonLd={jsonLd}
+>
   <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Articles' }]} />
     <h1 class="type-display mt-4 text-display text-ink">Articles</h1>

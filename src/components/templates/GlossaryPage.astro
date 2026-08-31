@@ -14,19 +14,31 @@
 import BaseLayout from '../ui/BaseLayout.astro';
 import Breadcrumbs from '../blocks/Breadcrumbs.astro';
 import Section from '../blocks/Section.astro';
-import { glossaryHref, href } from '../../lib/content/href.ts';
+import { absoluteUrl, glossaryHref, href } from '../../lib/content/href.ts';
+import { definedTerm } from '../../lib/render/json-ld.ts';
 
 interface Props {
+  /** The term's own id, for its canonical URL in the structured data. */
+  id: string;
   term: string;
   short: string;
   aka: string[];
   seeAlso: { id: string; term: string }[];
 }
 
-const { term, short, aka, seeAlso } = Astro.props;
+const { id, term, short, aka, seeAlso } = Astro.props;
+
+/** SPEC.md §12 — a glossary entry is a `DefinedTerm` in a `DefinedTermSet`. */
+const jsonLd = definedTerm({
+  term,
+  description: short,
+  url: absoluteUrl(Astro.site, glossaryHref(id)),
+  aka,
+  setUrl: absoluteUrl(Astro.site, href('glossary')),
+});
 ---
 
-<BaseLayout title={term} description={short}>
+<BaseLayout title={term} description={short} jsonLd={jsonLd}>
   <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Glossary', path: href('glossary') }, { label: term }]} />
 

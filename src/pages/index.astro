@@ -16,7 +16,8 @@ import TypeBadge from '../components/blocks/TypeBadge.astro';
 
 import { buildCatalogue, STATIC_ROW_COUNT } from '../lib/content/catalogue.ts';
 import { getCartridges, getGuns, getMakers } from '../lib/content/entries.ts';
-import { fileHref, href, taxonomyHref } from '../lib/content/href.ts';
+import { absoluteUrl, fileHref, gunHref, href, taxonomyHref } from '../lib/content/href.ts';
+import { itemList } from '../lib/render/json-ld.ts';
 import {
   actions,
   countries,
@@ -48,11 +49,29 @@ const vocab = {
   country: terms(countries),
   era: terms(eras),
 };
+
+/**
+ * SPEC.md §12 — `ItemList` on the catalogue view. This page IS the catalogue
+ * (SPEC.md §16), so the list is the whole row set rather than the first
+ * screenful: a crawler that reads the structured data should see what a reader
+ * who scrolls sees.
+ *
+ * A row below the publication floor carries no `url` (SPEC.md §5.9), which is
+ * exactly what `itemList` does with a missing one — it is named, not linked.
+ */
+const catalogueJsonLd = itemList(
+  'Firearms on ARMAG',
+  rows.map((row) => ({
+    name: row.name,
+    url: row.hasPage ? absoluteUrl(Astro.site, gunHref(row.id)) : undefined,
+  })),
+);
 ---
 
 <BaseLayout
   title="ARMAG"
   description="A free reference for modern firearms. Every number is either sourced or derived from sourced numbers by a formula you can open and check."
+  jsonLd={catalogueJsonLd}
 >
   <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-10">
     <h1 class="type-display text-display text-ink">ARMAG</h1>

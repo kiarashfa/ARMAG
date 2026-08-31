@@ -214,6 +214,52 @@
       ],
       "stderrContains": "A blocked page is never fetched",
       "why": "SPEC.md §12 and Instruction.md Phase 7 — the /armory/ noindex triple, asserted on all three legs at once. The fixture breaks every one of them: no noindex meta, listed in the sitemap, and disallowed in robots.txt. The third is the counter-intuitive leg and the reason they are checked together: blocking a noindex page means it is never fetched, so the noindex is never read"
+    },
+    {
+      "script": "scripts/integrity/check-site.mjs",
+      "argv": [
+        "--dist",
+        "test-fixtures/broken-seo",
+        "--env",
+        "test-fixtures/broken-seo/.absent"
+      ],
+      "stderrContains": "forbids Product, Offer, price and availability",
+      "why": "SPEC.md §12 — no Product, no Offer, no price, no availability. `json-ld.ts` throws on this shape while a page is being built, so the only route to dist/ is markup written by hand; this fixture takes exactly that route, which is why the gate has to exist in both places."
+    },
+    {
+      "script": "scripts/integrity/check-site.mjs",
+      "argv": [
+        "--dist",
+        "test-fixtures/broken-seo",
+        "--env",
+        "test-fixtures/broken-seo/.absent"
+      ],
+      "stderrContains": "a 3D engine outside /guns/<slug>/range/",
+      "why": "SPEC.md §11 fences Three.js to the v2 shooting range so it can never become part of a spec page's JS budget. No range page exists in v1, so the fence is currently absolute."
+    },
+    {
+      "script": "scripts/integrity/check-site.mjs",
+      "argv": [
+        "--dist",
+        "test-fixtures/broken-seo",
+        "--env",
+        "test-fixtures/broken-seo/.absent"
+      ],
+      "stderrContains": "and nothing was built there",
+      "why": "The crosslink plugins mint links from the content files rather than from typed markup, so a link to a page that does not exist is a build product and nothing else would catch it. It found a real one on its first run: `/ARMAG/favicon.svg/`, on all 238 pages."
+    },
+    {
+      "script": "scripts/integrity/check-site.mjs",
+      "argv": [
+        "--dist",
+        "test-fixtures/broken-seo",
+        "--env",
+        "test-fixtures/broken-seo/.absent",
+        "--js-budget-bytes",
+        "1"
+      ],
+      "stderrContains": "per-page budget in SPEC.md",
+      "why": "SPEC.md §11 states the JS budget \"so it is checkable\". Driven at one byte rather than by committing a fat bundle to git history forever — the same trick the hero byte-cap fixture uses."
     }
   ]
 }

@@ -46,6 +46,12 @@
     "minShingles": 12
   },
 
+  "site": {
+    "note": "SPEC.md §11 states the performance budgets \"so they are checkable\"; `check:site` is where they are checked. `jsBudgetBytes` is the uncompressed weight of every module a page loads, followed transitively, plus its inline scripts. `/armory/` is exempt and the reason is on the record (CLAUDE.md item 142): it validates a hostile input with the same Zod schema the rest of the site is built on, and about 60 kB of its weight is that schema — a smaller hand-written validator would drift from the real one.",
+    "jsBudgetBytes": 102400,
+    "jsBudgetExemptPaths": ["/armory/"]
+  },
+
   "assets": {
     "note": "SPEC.md §10. Per-file caps alone are not enough — a thousand compliant files still overrun a 1 GB Pages site — so `check:assets` also enforces a running total and prints usage on every build. Hero and gallery are told apart by filename: `hero.webp` is the hero, every other file is gallery.",
     "format": "webp",

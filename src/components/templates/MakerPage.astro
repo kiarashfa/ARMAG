@@ -14,7 +14,8 @@ import Section from '../blocks/Section.astro';
 import SpecRow from '../blocks/SpecRow.astro';
 import TypeBadge from '../blocks/TypeBadge.astro';
 
-import { gunHref, href, makerHref, taxonomyHref } from '../../lib/content/href.ts';
+import { absoluteUrl, assetUrl, gunHref, href, makerHref, taxonomyHref } from '../../lib/content/href.ts';
+import { entryArticle, itemList } from '../../lib/render/json-ld.ts';
 import { humanise } from '../../lib/render/format.ts';
 import { labelFor } from '../../schemas/taxonomy.ts';
 import type { MakerData } from '../../schemas/maker.ts';
@@ -36,12 +37,39 @@ interface Props {
 const { maker, models, relatedMakerNames = {} } = Astro.props;
 const countryLabel = labelFor('country', maker.country) ?? humanise(maker.country);
 const sorted = [...models].sort((a, b) => (a.introduced ?? 0) - (b.introduced ?? 0));
+
+const description = `${maker.name}, ${countryLabel}${
+  maker.founded ? `, founded ${maker.founded}` : ''
+}. Every ARMAG entry attributed to this manufacturer.`;
+
+/**
+ * Two nodes, because this page is two things (SPEC.md §5.5): an authored
+ * article about the maker, and a computed list of its models. `Organization`
+ * would describe the company more precisely, but SPEC.md §12 fixes the
+ * vocabulary at Article/TechArticle + ItemList and a second vocabulary here
+ * would be a decision nobody made.
+ */
+const jsonLd = [
+  entryArticle({
+    type: 'Article',
+    name: maker.name,
+    description,
+    url: absoluteUrl(Astro.site, makerHref(maker.id)),
+    images: maker.logo ? [absoluteUrl(Astro.site, assetUrl(maker.logo.src))] : undefined,
+    dateModified: maker.lastVerified,
+    about: [maker.name, countryLabel],
+    citation: maker.references.map((reference) =>
+      [reference.title, reference.publisher, reference.year].filter(Boolean).join(', '),
+    ),
+  }),
+  itemList(
+    `Firearms attributed to ${maker.name}`,
+    sorted.map((model) => ({ name: model.name, url: absoluteUrl(Astro.site, gunHref(model.id)) })),
+  ),
+];
 ---
 
-<BaseLayout
-  title={maker.name}
-  description={`${maker.name}, ${countryLabel}${maker.founded ? `, founded ${maker.founded}` : ''}. Every ARMAG entry attributed to this manufacturer.`}
->
+<BaseLayout title={maker.name} description={description} jsonLd={jsonLd}>
   <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Makers', path: href('makers') }, { label: maker.name }]} />
 

@@ -7,9 +7,11 @@
  * preference: it is the condition on which the site is searchable at all.
  */
 import Header from './Header.astro';
+import JsonLd from '../blocks/JsonLd.astro';
 import Footer from './Footer.astro';
 import CompareTray from '../islands/CompareTray.svelte';
-import { absoluteUrl, href } from '../../lib/content/href.ts';
+import { absoluteUrl, fileHref, href } from '../../lib/content/href.ts';
+import type { JsonLdNode } from '../../lib/render/json-ld.ts';
 import '../../styles/global.css';
 
 interface Props {
@@ -19,9 +21,15 @@ interface Props {
   noindex?: boolean;
   /** Canonical path, base included. Defaults to the current URL. */
   canonicalPath?: string;
+  /**
+   * Structured data for whatever this page is *about* — SPEC.md §12. The
+   * `BreadcrumbList` is not passed here: `Breadcrumbs.astro` emits its own from
+   * the array it is already rendering, so the two cannot disagree.
+   */
+  jsonLd?: JsonLdNode | JsonLdNode[];
 }
 
-const { title, description, noindex = false, canonicalPath } = Astro.props;
+const { title, description, noindex = false, canonicalPath, jsonLd } = Astro.props;
 
 const canonical = absoluteUrl(Astro.site, canonicalPath ?? Astro.url.pathname);
 const fullTitle = title === 'ARMAG' ? title : `${title} · ARMAG`;
@@ -43,7 +51,16 @@ const fullTitle = title === 'ARMAG' ? title : `${title} · ARMAG`;
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="ARMAG" />
 
-    <link rel="icon" href={href('favicon.svg')} type="image/svg+xml" />
+    {/*
+      `fileHref`, not `href`: a file is not a directory, and `href()` appends
+      the trailing slash that `trailingSlash: 'always'` requires of a page. It
+      shipped as `/ARMAG/favicon.svg/` on all 238 pages and nothing noticed —
+      a 404 on a favicon is silent in the browser. Found by the internal-link
+      assertion in `check:site`.
+    */}
+    <link rel="icon" href={fileHref('favicon.svg')} type="image/svg+xml" />
+
+    {jsonLd && <JsonLd node={jsonLd} />}
 
     {/*
       Runs before first paint, so a visitor who chose light does not see a

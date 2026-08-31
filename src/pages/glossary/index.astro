@@ -5,16 +5,27 @@
  * density needs no manual upkeep and survives renames.
  */
 import BaseLayout from '../../components/ui/BaseLayout.astro';
+import { itemList } from '../../lib/render/json-ld.ts';
 import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
-import { glossaryHref } from '../../lib/content/href.ts';
+import { absoluteUrl, glossaryHref } from '../../lib/content/href.ts';
 
 const terms = (await getCollection('glossary')).sort((a, b) =>
   a.data.term.localeCompare(b.data.term),
 );
+
+/** SPEC.md §12 — a browse view is an `ItemList`. */
+const jsonLd = itemList(
+  'ARMAG glossary',
+  terms.map((entry) => ({
+    name: entry.data.term,
+    url: absoluteUrl(Astro.site, glossaryHref(entry.id)),
+  })),
+);
 ---
 
 <BaseLayout
+  jsonLd={jsonLd}
   title="Glossary"
   description="The vocabulary of firearms, defined technically. Every term is linked automatically from every page that uses it."
 >

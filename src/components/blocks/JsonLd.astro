@@ -1,0 +1,23 @@
+---
+/**
+ * One `<script type="application/ld+json">` block — SPEC.md §12.
+ *
+ * Built once and used everywhere, for the same reason `Disclosure` is: two
+ * implementations of one primitive means the commerce ban is enforced in one
+ * of them and forgotten in the other. `serialize()` throws on `Product`,
+ * `Offer`, `price` and `availability`, so every JSON-LD node on the site
+ * passes that gate by construction rather than by review.
+ *
+ * `set:html` is correct here and safe: the payload is JSON, not markup, and
+ * `serialize()` escapes `<` so no string inside it can close the element.
+ */
+import { serialize, type JsonLdNode } from '../../lib/render/json-ld.ts';
+
+interface Props {
+  node: JsonLdNode | JsonLdNode[];
+}
+
+const { node } = Astro.props;
+---
+
+<script type="application/ld+json" is:inline set:html={serialize(node)} />

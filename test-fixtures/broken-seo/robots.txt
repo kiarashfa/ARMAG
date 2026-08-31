@@ -1,0 +1,5 @@
+# Correct on purpose. This fixture breaks the Phase 11 gates and nothing else,
+# so a failure it reports is unambiguously the gate under test rather than the
+# noindex triple, which has its own fixture in `broken-armory/`.
+User-agent: *
+Allow: /

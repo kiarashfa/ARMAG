@@ -587,6 +587,70 @@
     padding-bottom: calc(var(--tray-height, 4.5rem) + 0.5rem);
   }
 
+  /*
+   * ── Prose ────────────────────────────────────────────────────────────────
+   *
+   * Preflight resets every margin, so `.prose` had no paragraph rhythm at all
+   * and every narrative on the site ran together as one block. Found in Phase
+   * 11 by looking at a glossary page, three phases after the container class
+   * was introduced — nothing about it fails a geometry assertion, and it is
+   * invisible in a spec table because a spec table has no paragraphs.
+   *
+   * `em` rather than `rem`, so the lede (which is set at `text-lg`) spaces
+   * itself proportionally to its own size.
+   */
+  .prose > * + * {
+    margin-top: 1em;
+  }
+
+  .prose ul,
+  .prose ol {
+    padding-left: 1.5em;
+    list-style: revert;
+  }
+
+  .prose li + li {
+    margin-top: 0.35em;
+  }
+
+  .prose strong {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+
+  /*
+   * ── Crosslinks — SPEC.md §12 ─────────────────────────────────────────────
+   *
+   * Both kinds are underlined, not merely coloured: colour alone is not a
+   * distinguishable link, and this prose is set in `ink-secondary` where an
+   * accent hue is the only difference an eye would have to go on.
+   *
+   * The two kinds are told apart by line style rather than by a second hue.
+   * An entry link takes the reader to another page of the site; a glossary
+   * link explains a word in place, carries the one-line definition as its
+   * `title`, and is dotted for the same reason a dictionary entry is set
+   * differently from a cross-reference. A page dense in both must not read as
+   * two competing accent colours.
+   */
+  .prose a,
+  a[data-crosslink] {
+    color: var(--color-ui-accent);
+    text-decoration: underline;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 0.18em;
+  }
+
+  a[data-crosslink='glossary'] {
+    color: inherit;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--color-ui-accent);
+  }
+
+  a[data-crosslink='glossary']:hover,
+  a[data-crosslink='glossary']:focus-visible {
+    color: var(--color-ui-accent);
+  }
+
   /* "Compare all variants" swaps the tab strip for one delta table. */
   .variants .delta-table {
     display: none;

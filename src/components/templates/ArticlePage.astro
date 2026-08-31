@@ -10,7 +10,8 @@
 import BaseLayout from '../ui/BaseLayout.astro';
 import Breadcrumbs from '../blocks/Breadcrumbs.astro';
 import ImageFigure from '../blocks/ImageFigure.astro';
-import { href } from '../../lib/content/href.ts';
+import { absoluteUrl, articleHref, assetUrl, href } from '../../lib/content/href.ts';
+import { entryArticle } from '../../lib/render/json-ld.ts';
 import type { ImageRef } from '../../schemas/primitives.ts';
 
 interface Props {
@@ -23,9 +24,20 @@ interface Props {
 }
 
 const { id, title, standfirst, published, updated, heroImage } = Astro.props;
+
+/** SPEC.md §12 — editorial is `Article`; the spec entries are `TechArticle`. */
+const jsonLd = entryArticle({
+  type: 'Article',
+  name: title,
+  description: standfirst,
+  url: absoluteUrl(Astro.site, articleHref(id)),
+  images: heroImage ? [absoluteUrl(Astro.site, assetUrl(heroImage.src))] : undefined,
+  datePublished: published,
+  dateModified: updated ?? published,
+});
 ---
 
-<BaseLayout title={title} description={standfirst}>
+<BaseLayout title={title} description={standfirst} jsonLd={jsonLd}>
   <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Articles', path: href('articles') }, { label: title }]} />
 

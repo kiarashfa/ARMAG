@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Known-bad SEO fixture</title>
+
+    <!--
+      Deliberate defect 1 — commerce JSON-LD. SPEC.md §12 forbids Product,
+      Offer, price and availability outright: an ARMAG entry is an encyclopedia
+      article, not a listing, and marking one up this way is a claim to a
+      machine that never reads the page.
+
+      `json-ld.ts` throws on this shape while a page is being built, so the only
+      way it can reach dist/ is markup written by hand — which is exactly the
+      route this fixture takes.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "A firearm marked up as merchandise",
+        "offers": { "@type": "Offer", "price": 599, "availability": "InStock" }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Known-bad SEO fixture</h1>
+
+    <!--
+      Deliberate defect 2 — an internal link to a page nothing built. The
+      crosslink plugins mint links from the content files rather than from
+      typed markup, so a link to a page that does not exist is a build product
+      and no other gate would see it.
+    -->
+    <p>See the <a href="/ARMAG/guns/a-page-nobody-built/">missing entry</a>.</p>
+  </body>
+</html>

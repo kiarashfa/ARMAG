@@ -1,0 +1,114 @@
+name: Deploy to GitHub Pages
+
+# SPEC.md §13 — three jobs, in order:
+#   verify  → the integrity checks must still catch known-bad content, + type check
+#   build   → withastro/action, which runs the gated `npm run build`
+#   deploy  → actions/deploy-pages
+#
+# ── One thing must be done by hand, once ────────────────────────────────────
+# Repo Settings → Pages → Source must be set to "GitHub Actions" (not "Deploy
+# from a branch"). Until it is, `verify` and `build` pass and `deploy` fails
+# with "Not Found" or "Pages site not configured" — a confusing error for a
+# correct workflow. It is a UI change and cannot be made from here.
+#
+# ── The base path ───────────────────────────────────────────────────────────
+# `BASE = '/ARMAG'` in astro.config.ts must match the repository name character
+# for character: Pages serves a project site at https://<user>.github.io/<repo>/
+# and that path is case-sensitive. Renaming the repo without changing `BASE`
+# produces a site where every page 404s and CI is green (SPEC.md §6).
+
+on:
+  push:
+    branches: [main]
+  # The verify gate runs on branches too, so a mistake is caught before it
+  # reaches main. `build` and `deploy` are skipped there — see their `if:`.
+  pull_request:
+    branches: [main]
+  # Lets a deploy be re-run without a commit, which is exactly what is needed
+  # when the fix was the Pages setting rather than the code.
+  workflow_dispatch:
+
+# Least privilege: only the deploy job gets pages/id-token, granted there.
+permissions:
+  contents: read
+
+# Serialised per branch rather than globally: two pushes to main must not
+# deploy over each other, but a pull-request check has no reason to hold up a
+# deploy of main. `cancel-in-progress: false` because a half-finished deploy is
+# worse than a queued one.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  # The gate that proves the integrity checks themselves still work.
+  #
+  # `check:self` runs the checks against `test-fixtures/`, a set of deliberately
+  # broken entries and artefacts, and fails if any of them is *not* caught. A
+  # check that has silently stopped catching problems is worse than no check,
+  # because the green build is then a claim nobody is testing.
+  #
+  # `npm run test` also runs inside the gated build below. The duplication is
+  # deliberate and cheap: it keeps this job a complete, readable answer to "is
+  # this code sound", and stops a failing test from ever reaching a build
+  # attempt.
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Unit tests
+        run: npm run test
+
+      - name: Integrity self-test (known-bad fixtures must still fail)
+        run: npm run check:self
+
+      - name: Type check
+        run: npm run check
+
+  build:
+    needs: verify
+    # A pull request is verified, not published. Nothing is deployed until the
+    # change is on main.
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      # Runs `npm run build` — the full gated pipeline from SPEC.md §13
+      # (test → check:content → astro build → postbuild:index → check:site →
+      # check:assets) — and uploads dist/ as the Pages artifact. `npm run build`
+      # is this action's default command for npm, so the gate is not bypassed.
+      #
+      # `.env` is gitignored and absent here, which is correct: the API keys in
+      # it are authoring-time only (scripts/data/ never runs in the build), and
+      # check:site's secret-leak gate simply has nothing to look for. The gate
+      # that matters on CI is that nothing in the repo *contains* a key.
+      - uses: withastro/action@v6
+        with:
+          node-version: 24
+          package-manager: npm
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

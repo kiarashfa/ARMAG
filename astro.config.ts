@@ -1,11 +1,17 @@
 // @ts-check
+import { fileURLToPath } from 'node:url';
+
 import { defineConfig } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import svelte from '@astrojs/svelte';
 import tailwindcss from '@tailwindcss/vite';
 
 import integrity from './src/integrations/integrity.ts';
+import { aliasRedirects } from './src/integrations/alias-redirects.ts';
+import rehypeCrosslink from './src/integrations/rehype-crosslink.ts';
+import rehypeGlossary from './src/integrations/rehype-glossary.ts';
 
 /**
  * SPEC.md §6 — while the site lives on the github.io subdomain, `site` is the
@@ -36,12 +42,23 @@ export const BASE = '/ARMAG';
  */
 export const NOINDEX_PATHS = ['/armory/'];
 
+const CONTENT_ROOT = fileURLToPath(new URL('./src/content', import.meta.url));
+
+/**
+ * SPEC.md §6 — every alias an entry declares becomes a static redirect to the
+ * canonical URL, so a guessed or linked "/guns/m9/" lands somewhere instead of
+ * 404ing, and no second page claims to be the entry. See
+ * `alias-redirects.ts` for the three rules that decide which aliases qualify.
+ */
+const ALIAS_REDIRECTS = aliasRedirects(CONTENT_ROOT, BASE);
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE,
   base: BASE,
   // SPEC.md §6/§12 — canonical URLs always end in a slash.
   trailingSlash: 'always',
+  redirects: ALIAS_REDIRECTS,
   // GitHub Pages cannot run a server; static is the only valid output.
   output: 'static',
   integrations: [
@@ -54,6 +71,29 @@ export default defineConfig({
       filter: (page) => !NOINDEX_PATHS.some((path) => new URL(page).pathname === `${BASE}${path}`),
     }),
   ],
+  markdown: {
+    /**
+     * SPEC.md §12 and §5.6 — internal link density with no manual upkeep.
+     * Both plugins derive their vocabulary from the content files rather than
+     * from anything typed, so the links survive a rename.
+     *
+     * **Order is load-bearing.** Entry names run first: they are the more
+     * specific claim on a piece of text, and once an entry link exists the
+     * glossary pass cannot reach inside it, because `a` is a skip tag in the
+     * shared walker.
+     *
+     * Configured through `unified({...})` rather than the top-level
+     * `markdown.rehypePlugins`, which Astro 7 deprecates and warns about on
+     * every dev-server start. `@astrojs/mdx` extends this config by default,
+     * so it is set once here and not twice.
+     */
+    processor: unified({
+      rehypePlugins: [
+        [rehypeCrosslink, { contentRoot: CONTENT_ROOT, base: BASE }],
+        [rehypeGlossary, { contentRoot: CONTENT_ROOT, base: BASE }],
+      ],
+    }),
+  },
   vite: {
     // Tailwind v4 is a Vite plugin, not an Astro integration (SPEC.md §3).
     plugins: [tailwindcss()],

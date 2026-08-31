@@ -14,7 +14,8 @@ import Breadcrumbs from '../blocks/Breadcrumbs.astro';
 import Section from '../blocks/Section.astro';
 import TypeBadge from '../blocks/TypeBadge.astro';
 
-import { gunHref, taxonomyHref, type TaxonomyAxisKey } from '../../lib/content/href.ts';
+import { absoluteUrl, gunHref, taxonomyHref, type TaxonomyAxisKey } from '../../lib/content/href.ts';
+import { itemList } from '../../lib/render/json-ld.ts';
 import { humanise, plural } from '../../lib/render/format.ts';
 import type { VocabTerm } from '../../schemas/taxonomy.ts';
 
@@ -37,14 +38,19 @@ interface Props {
 
 const { axis, axisLabel, term, entries, siblings } = Astro.props;
 const sorted = [...entries].sort((a, b) => (a.introduced ?? 0) - (b.introduced ?? 0));
+
+const description = `${plural(entries.length, 'firearm')} tagged ${term.label} on ARMAG.${
+  term.description ? ` ${term.description}` : ''
+}`;
+
+/** SPEC.md §12 — a computed browse view is an `ItemList`, never an article. */
+const jsonLd = itemList(
+  `${term.label} — ${axisLabel}`,
+  sorted.map((entry) => ({ name: entry.name, url: absoluteUrl(Astro.site, gunHref(entry.id)) })),
+);
 ---
 
-<BaseLayout
-  title={term.label}
-  description={`${plural(entries.length, 'firearm')} tagged ${term.label} on ARMAG.${
-    term.description ? ` ${term.description}` : ''
-  }`}
->
+<BaseLayout title={term.label} description={description} jsonLd={jsonLd}>
   <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: axisLabel }, { label: term.label }]} />
 

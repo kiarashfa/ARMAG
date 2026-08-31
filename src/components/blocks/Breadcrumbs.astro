@@ -1,10 +1,14 @@
 ---
 /**
  * Breadcrumb trail. Also the source of the `BreadcrumbList` JSON-LD on content
- * pages (SPEC.md §12), which is emitted in Phase 11 from this same array so the
- * markup and the structured data cannot describe different paths.
+ * pages (SPEC.md §12), emitted here from the same array the visible trail
+ * renders from, so the markup and the structured data cannot describe
+ * different paths. A template that shows a trail gets the structured data for
+ * it with no second call and nothing to keep in step.
  */
-import { href } from '../../lib/content/href.ts';
+import JsonLd from './JsonLd.astro';
+import { absoluteUrl, href } from '../../lib/content/href.ts';
+import { breadcrumbList } from '../../lib/render/json-ld.ts';
 
 export interface Crumb {
   label: string;
@@ -18,7 +22,11 @@ interface Props {
 
 const { crumbs } = Astro.props;
 const all: Crumb[] = [{ label: 'ARMAG', path: href() }, ...crumbs];
+
+const node = breadcrumbList(all, (path) => absoluteUrl(Astro.site, path));
 ---
+
+<JsonLd node={node} />
 
 <nav aria-label="Breadcrumb" class="type-data text-xs text-ink-muted">
   <ol class="flex flex-wrap items-center gap-1">

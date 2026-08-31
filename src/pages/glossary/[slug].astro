@@ -22,6 +22,6 @@ const { entry, seeAlso } = Astro.props;
 const { Content } = await render(entry);
 ---
 
-<GlossaryPage term={entry.data.term} short={entry.data.short} aka={entry.data.aka} seeAlso={seeAlso}>
+<GlossaryPage id={entry.id} term={entry.data.term} short={entry.data.short} aka={entry.data.aka} seeAlso={seeAlso}>
   <Content />
 </GlossaryPage>

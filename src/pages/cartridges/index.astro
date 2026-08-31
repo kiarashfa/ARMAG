@@ -1,14 +1,25 @@
 ---
 /** `/cartridges/` — the collection index. Each entry is also its caliber view. */
 import BaseLayout from '../../components/ui/BaseLayout.astro';
+import { itemList } from '../../lib/render/json-ld.ts';
 import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
 import { getCartridges } from '../../lib/content/entries.ts';
-import { cartridgeHref } from '../../lib/content/href.ts';
+import { absoluteUrl, cartridgeHref } from '../../lib/content/href.ts';
 
 const cartridges = (await getCartridges()).sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+/** SPEC.md §12 — a browse view is an `ItemList`. */
+const jsonLd = itemList(
+  'Cartridges on ARMAG',
+  cartridges.map((cartridge) => ({
+    name: cartridge.data.name,
+    url: absoluteUrl(Astro.site, cartridgeHref(cartridge.id)),
+  })),
+);
 ---
 
 <BaseLayout
+  jsonLd={jsonLd}
   title="Cartridges"
   description="Every cartridge on ARMAG: dimensions and pressures transcribed from the published standard, with the firearms chambered in each."
 >

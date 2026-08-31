@@ -20,7 +20,8 @@ import SpecRow from '../blocks/SpecRow.astro';
 import SpecTable from '../blocks/SpecTable.astro';
 import UnitValue from '../blocks/UnitValue.astro';
 
-import { gunHref, href } from '../../lib/content/href.ts';
+import { absoluteUrl, assetUrl, cartridgeHref, gunHref, href } from '../../lib/content/href.ts';
+import { entryArticle } from '../../lib/render/json-ld.ts';
 import type { CartridgeData } from '../../schemas/cartridge.ts';
 import type { CompareCell } from '../../lib/compare/entry.ts';
 import { CARTRIDGE_GROUP_ORDER, CARTRIDGE_REGISTRY } from '../../lib/compare/rows.ts';
@@ -44,12 +45,25 @@ interface Props {
 
 const { cartridge, chamberedIn, cells } = Astro.props;
 const identityOnly = cartridge.loads.length === 0;
+
+const description = `${cartridge.name}: dimensions, pressure and load data transcribed from the published standard, plus every firearm chambered in it.`;
+
+/** SPEC.md §12 — a cartridge entry is a `TechArticle`, not a listing. */
+const jsonLd = entryArticle({
+  type: 'TechArticle',
+  name: cartridge.name,
+  description,
+  url: absoluteUrl(Astro.site, cartridgeHref(cartridge.id)),
+  images: cartridge.images.map((image) => absoluteUrl(Astro.site, assetUrl(image.src))),
+  dateModified: cartridge.lastVerified,
+  about: [cartridge.name, ...cartridge.aliases.map((alias) => alias.name)],
+  citation: cartridge.references.map((reference) =>
+    [reference.title, reference.publisher, reference.year].filter(Boolean).join(', '),
+  ),
+});
 ---
 
-<BaseLayout
-  title={cartridge.name}
-  description={`${cartridge.name}: dimensions, pressure and load data transcribed from the published standard, plus every firearm chambered in it.`}
->
+<BaseLayout title={cartridge.name} description={description} jsonLd={jsonLd}>
   <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Cartridges', path: href('cartridges') }, { label: cartridge.name }]} />
 

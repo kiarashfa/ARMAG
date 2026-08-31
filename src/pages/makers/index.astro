@@ -1,16 +1,30 @@
 ---
 /** `/makers/` — the manufacturer index. Every model list on these pages is computed. */
 import BaseLayout from '../../components/ui/BaseLayout.astro';
+import { itemList } from '../../lib/render/json-ld.ts';
 import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
 import { getMakers } from '../../lib/content/entries.ts';
-import { makerHref } from '../../lib/content/href.ts';
+import { absoluteUrl, makerHref } from '../../lib/content/href.ts';
 import { labelFor } from '../../schemas/taxonomy.ts';
 import { humanise } from '../../lib/render/format.ts';
 
 const makers = (await getMakers()).sort((a, b) => a.data.name.localeCompare(b.data.name));
+
+/** SPEC.md §12 — a browse view is an `ItemList`. */
+const jsonLd = itemList(
+  'Manufacturers on ARMAG',
+  makers.map((maker) => ({
+    name: maker.data.name,
+    url: absoluteUrl(Astro.site, makerHref(maker.id)),
+  })),
+);
 ---
 
-<BaseLayout title="Manufacturers" description="Every manufacturer with an entry on ARMAG.">
+<BaseLayout
+  title="Manufacturers"
+  description="Every manufacturer with an entry on ARMAG."
+  jsonLd={jsonLd}
+>
   <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Makers' }]} />
     <h1 class="type-display mt-4 text-display text-ink">Manufacturers</h1>
