@@ -1,0 +1,186 @@
+{
+  "id": "5-8x42mm",
+  "name": "5.8×42mm",
+  "wikidataId": "Q2667492",
+  "aliases": [
+    {
+      "name": "DBP87",
+      "kind": "military",
+      "note": "The original service loading."
+    },
+    {
+      "name": "5.8 Chinese",
+      "kind": "nickname"
+    }
+  ],
+  "designedBy": "People’s Liberation Army",
+  "introduced": 1987,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 42.2,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8-42mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+    "sourceNote": "No standards body publishes this cartridge: C.I.P. does not list it and the Chinese GJB standard is not free. This is the uncited infobox figure of the article named, and it is a lead rather than a standard."
+  },
+  "overallLength": {
+    "value": 58,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8-42mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+    "sourceNote": "No standards body publishes this cartridge: C.I.P. does not list it and the Chinese GJB standard is not free. This is the uncited infobox figure of the article named, and it is a lead rather than a standard."
+  },
+  "bulletDiameter": {
+    "value": 5.8,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8-42mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+    "sourceNote": "No standards body publishes this cartridge: C.I.P. does not list it and the Chinese GJB standard is not free. This is the uncited infobox figure of the article named, and it is a lead rather than a standard."
+  },
+  "rimDiameter": {
+    "value": 10.42,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8-42mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+    "sourceNote": "No standards body publishes this cartridge: C.I.P. does not list it and the Chinese GJB standard is not free. This is the uncited infobox figure of the article named, and it is a lead rather than a standard."
+  },
+  "neckDiameter": {
+    "value": 6.65,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8-42mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+    "sourceNote": "No standards body publishes this cartridge: C.I.P. does not list it and the Chinese GJB standard is not free. This is the uncited infobox figure of the article named, and it is a lead rather than a standard."
+  },
+  "baseDiameter": {
+    "value": 10.4,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8-42mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+    "sourceNote": "No standards body publishes this cartridge: C.I.P. does not list it and the Chinese GJB standard is not free. This is the uncited infobox figure of the article named, and it is a lead rather than a standard."
+  },
+  "loads": [
+    {
+      "id": "dbp87-95-ball",
+      "name": "DBP87/95 ball",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 4.15,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-5-8-42mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+        "sourceNote": "Ballistics table of the cited article, which publishes bullet mass in grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 557,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-5-8-42mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+            "sourceNote": "Test barrel stated as 557 mm."
+          },
+          "velocity": {
+            "value": 930,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-5-8-42mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dbp88-heavy-ball",
+      "name": "DBP88 heavy ball",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 5,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-5-8-42mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+        "sourceNote": "Ballistics table of the cited article, which publishes bullet mass in grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 557,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-5-8-42mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+            "sourceNote": "Test barrel stated as 557 mm."
+          },
+          "velocity": {
+            "value": 870,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-5-8-42mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dbp10-ball",
+      "name": "DBP10 ball",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 4.6,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-5-8-42mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+        "sourceNote": "Ballistics table of the cited article, which publishes bullet mass in grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 557,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-5-8-42mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+            "sourceNote": "Test barrel stated as 557 mm."
+          },
+          "velocity": {
+            "value": 915,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-5-8-42mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-5-8-42mm",
+      "type": "wikipedia",
+      "title": "5.8×42mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1351746144",
+      "lang": "en",
+      "revision": "1351746144",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

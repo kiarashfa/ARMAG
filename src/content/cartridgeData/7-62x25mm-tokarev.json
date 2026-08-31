@@ -1,0 +1,133 @@
+{
+  "id": "7-62x25mm-tokarev",
+  "name": "7.62×25mm Tokarev",
+  "aliases": [
+    {
+      "name": "7.62 mm Type P",
+      "kind": "military",
+      "note": "The Chinese service designation."
+    }
+  ],
+  "introduced": 1930,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 25,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-x-25-tokarev",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page9.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 35.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-x-25-tokarev",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page9.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.9,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-x-25-tokarev",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page9.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 9.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-x-25-tokarev",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page9.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 9.83,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-x-25-tokarev",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page9.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 8.49,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-x-25-tokarev",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page9.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 250,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7-62-x-25-tokarev",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page9.pdf",
+    "sourceNote": "C.I.P. Pmax 2500 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "fmj-85",
+      "name": "5.5 g full metal jacket",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 5.5,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-7-62-25mm-tokarev",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368766875",
+        "sourceNote": "Ballistics table of the cited article, which publishes bullet mass in grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 120,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-7-62-25mm-tokarev",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368766875",
+            "sourceNote": "Test barrel stated as 120 mm."
+          },
+          "velocity": {
+            "value": 469,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-7-62-25mm-tokarev",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368766875",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-7-62-x-25-tokarev",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7,62 x 25 Tokarev",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page9.pdf",
+      "revision": "2006-09-19",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-7-62-25mm-tokarev",
+      "type": "wikipedia",
+      "title": "7.62×25mm Tokarev",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368766875",
+      "lang": "en",
+      "revision": "1368766875",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q259170"
+}

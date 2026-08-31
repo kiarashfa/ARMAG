@@ -1,0 +1,107 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "producedIn": [
+    "united-states"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [],
+  "roles": [
+    "personal-defence"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "20-gauge",
+      "capacity": {
+        "value": 2,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-ithaca-auto-burglar",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1293391475",
+        "sourceNote": "Two barrels, one round each. It has no magazine."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/ithaca-auto-burglar/hero.webp",
+      "alt": "A black-and-white studio photograph of a short double-barrelled shotgun with no shoulder stock: two side-by-side barrels cut to about a foot, a chequered pistol grip and two triggers",
+      "caption": "An ATF studio photograph of the Auto & Burglar Gun. The two triggers below the action are the whole firing mechanism — a break action has nothing to cycle.",
+      "width": 800,
+      "height": 305,
+      "credit": {
+        "author": "U.S. Bureau of Alcohol, Tobacco, Firearms and Explosives",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ithaca_Auto_&_Burglar_Gun.png",
+        "title": "File:Ithaca Auto & Burglar Gun.png",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "ithaca-auto-burglar",
+  "name": "Ithaca Auto & Burglar Gun",
+  "makerRef": "ithaca-gun-company",
+  "type": "shotgun",
+  "action": "break",
+  "operatingSystem": "manual",
+  "designedIn": "united-states",
+  "introduced": 1922,
+  "productionYears": {
+    "start": 1922,
+    "end": 1933
+  },
+  "massEmpty": {
+    "value": 2,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-ithaca-auto-burglar",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1293391475",
+    "sourceNote": "Published as 2 kg, with 4.5 lb given alongside it."
+  },
+  "length": {
+    "value": 406,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-ithaca-auto-burglar",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1293391475"
+  },
+  "barrelLength": {
+    "value": 317,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-ithaca-auto-burglar",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1293391475",
+    "sourceNote": "A 257 mm barrel was also offered."
+  },
+  "productionTotal": {
+    "value": 4000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-ithaca-auto-burglar",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1293391475",
+    "sourceNote": "The cited article gives \"approx. 4,000\" and names no source for it."
+  },
+  "references": [
+    {
+      "key": "wp-ithaca-auto-burglar",
+      "type": "wikipedia",
+      "title": "Ithaca Auto & Burglar",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1293391475",
+      "lang": "en",
+      "revision": "1293391475",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q1675269"
+}

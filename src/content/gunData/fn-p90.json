@@ -1,0 +1,140 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "PS90",
+      "kind": "commercial",
+      "note": "The semi-automatic, long-barrelled civilian version."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "belgium"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence",
+    "law-enforcement"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "5-7x28mm",
+      "capacity": {
+        "value": 50,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-fn-p90",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368378586",
+        "sourceNote": "Detachable box magazine lying flat along the top of the receiver."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/fn-p90/hero.webp",
+      "alt": "An FN P90 seen from the left against a pale background: a smooth polymer bullpup shell with a large thumbhole grip, a red-dot sight on top and a long translucent magazine lying flat along the receiver",
+      "caption": "A P90 with the magazine in place. It lies flat along the top of the weapon and a ramp turns each round ninety degrees on the way to the chamber.",
+      "width": 1600,
+      "height": 733,
+      "credit": {
+        "author": "DickClarkMises",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:FN_P90_PDW.jpg",
+        "title": "File:FN P90 PDW.jpg",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    }
+  ],
+  "id": "fn-p90",
+  "name": "FN P90",
+  "makerRef": "fn-herstal",
+  "type": "pdw",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "belgium",
+  "introduced": 1990,
+  "productionYears": {
+    "start": 1990,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 2.631,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-fn-p90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368378586",
+    "sourceNote": "Published as 5.8 lb; 1 lb = 0.45359237 kg exactly. P90; the PS90 is published at 6.28 lb."
+  },
+  "length": {
+    "value": 505,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-fn-p90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368378586",
+    "sourceNote": "P90; the PS90 is 666 mm."
+  },
+  "barrelLength": {
+    "value": 264,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-fn-p90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368378586",
+    "sourceNote": "P90; the PS90 barrel is 407 mm."
+  },
+  "width": {
+    "value": 55,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-fn-p90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368378586"
+  },
+  "height": {
+    "value": 210,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-fn-p90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368378586"
+  },
+  "cyclicRate": {
+    "value": 975,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-fn-p90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368378586",
+    "sourceNote": "The article publishes 850–1,100 rounds/min. Recorded as the midpoint of that range."
+  },
+  "effectiveRange": {
+    "value": 200,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-fn-p90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368378586"
+  },
+  "references": [
+    {
+      "key": "wp-fn-p90",
+      "type": "wikipedia",
+      "title": "FN P90",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368378586",
+      "lang": "en",
+      "revision": "1368378586",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q318588"
+}

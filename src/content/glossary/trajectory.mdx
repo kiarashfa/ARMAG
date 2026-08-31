@@ -1,0 +1,23 @@
+---
+id: trajectory
+term: "Trajectory"
+aka:
+  - "Drop"
+  - "Zero"
+short: "The curved path of a projectile in flight, and by extension the table or chart describing it."
+seeAlso:
+  - ballistic-coefficient
+  - muzzle-energy
+---
+
+A bullet begins falling the instant it leaves the barrel and never stops. Because the sights sit above
+the bore, a rifle is aimed with the barrel tilted slightly upwards, so the path crosses the line of sight twice
+— once close in, once at the distance the rifle is zeroed for — and runs above it in between.
+
+Everything about that curve depends on four things: how fast the bullet starts, how well it holds that speed,
+how high the sights sit above the bore, and the air it is flying through. Change the zero distance and the whole
+picture changes; change the altitude and it changes again.
+
+The solver behind the charts on this site integrates the equations of motion directly rather than interpolating
+a published table. It does not model spin drift, Coriolis effect or aerodynamic jump, because this site does not
+record the inputs those need.

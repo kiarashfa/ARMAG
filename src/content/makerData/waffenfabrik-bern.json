@@ -1,0 +1,24 @@
+{
+  "id": "waffenfabrik-bern",
+  "name": "Waffenfabrik Bern",
+  "nativeName": "Eidgenössische Waffenfabrik Bern",
+  "wikidataId": "Q3565061",
+  "country": "switzerland",
+  "founded": 1871,
+  "dissolved": null,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-waffenfabrik-bern",
+      "type": "wikipedia",
+      "title": "Waffenfabrik Bern",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1328167177",
+      "lang": "en",
+      "revision": "1328167177",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Three-line rifle",
+      "kind": "nickname",
+      "note": "A line is a tenth of an inch; three of them is 7.62 mm."
+    },
+    {
+      "name": "M91/30",
+      "kind": "military",
+      "note": "The 1930 modernisation, and the configuration this entry records."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "russian-empire",
+    "soviet-union",
+    "france",
+    "united-states",
+    "poland",
+    "romania"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "fixed-box",
+    "stripper"
+  ],
+  "roles": [
+    "service-rifle",
+    "sniper"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x54mmr",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-mosin-nagant",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371939456",
+        "sourceNote": "Integral box magazine, loaded from stripper clips."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/mosin-nagant/hero.webp",
+      "alt": "Two views of a Mosin–Nagant rifle on a grey background, left and right sides, with a long light-coloured wooden stock, a bolt handle projecting straight out and a small protruding magazine",
+      "caption": "A Model 1891 infantry rifle from the Swedish Army Museum. The dimensions on this page are the later M91/30, which is shorter.",
+      "width": 1600,
+      "height": 588,
+      "credit": {
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mosin-Nagant_M1891_-_Ryssland_-_AM.032971.jpg",
+        "title": "File:Mosin-Nagant M1891 - Ryssland - AM.032971.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "mosin-nagant",
+  "name": "Mosin–Nagant",
+  "nativeName": "Винтовка Мосина",
+  "makerRef": "tula-arms-plant",
+  "type": "rifle",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "russian-empire",
+  "introduced": 1891,
+  "productionYears": {
+    "start": 1891,
+    "end": 1973
+  },
+  "massEmpty": {
+    "value": 4,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-mosin-nagant",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371939456",
+    "sourceNote": "M91/30. The M38 carbine is published at 3.4 kg and the M44 at 4.1 kg."
+  },
+  "length": {
+    "value": 1232,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-mosin-nagant",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371939456",
+    "sourceNote": "M91/30; the carbines are 1,013 mm."
+  },
+  "barrelLength": {
+    "value": 730,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-mosin-nagant",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371939456",
+    "sourceNote": "M91/30; the carbines are 514 mm."
+  },
+  "sightGraduation": {
+    "value": 2000,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-mosin-nagant",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371939456",
+    "sourceNote": "Rear ladder graduated to 2,000 m on the M91/30; the M38 and M44 stop at 1,000 m."
+  },
+  "productionTotal": {
+    "value": 37000000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-mosin-nagant",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371939456",
+    "sourceNote": "The cited article gives \"c. 37,000,000\" for Russian and Soviet production."
+  },
+  "references": [
+    {
+      "key": "wp-mosin-nagant",
+      "type": "wikipedia",
+      "title": "Mosin–Nagant",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371939456",
+      "lang": "en",
+      "revision": "1371939456",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q154321"
+}

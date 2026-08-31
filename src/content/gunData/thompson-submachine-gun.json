@@ -1,0 +1,163 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Tommy gun",
+      "kind": "nickname"
+    },
+    {
+      "name": "M1928A1",
+      "kind": "military"
+    },
+    {
+      "name": "Chicago typewriter",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states",
+    "united-kingdom"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box",
+    "drum"
+  ],
+  "roles": [
+    "personal-defence",
+    "law-enforcement"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-thompson-submachine-gun",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372206709",
+        "sourceNote": "Box magazines of 20 and 30 rounds; drums of 50 and 100. The M1 and M1A1 do not accept drums."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "m1928a1",
+      "name": "M1928A1",
+      "productionYears": {
+        "start": 1928,
+        "end": 1942
+      },
+      "summary": "The Blish-locked service version, with the Cutts compensator, finned barrel and drum capability.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "m1",
+      "name": "M1",
+      "productionYears": {
+        "start": 1942,
+        "end": 1943
+      },
+      "summary": "Wartime simplification: the Blish lock deleted in favour of straight blowback, the finned barrel and compensator gone, the cocking handle moved to the side, and no drum.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "m1a1",
+      "name": "M1A1",
+      "productionYears": {
+        "start": 1943,
+        "end": 1945
+      },
+      "summary": "The M1 with a fixed firing pin machined into the bolt face instead of a separate hammer.",
+      "overrides": {},
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/thompson-submachine-gun/hero.webp",
+      "alt": "A Thompson submachine gun standing on a wooden table, with a walnut butt, two wooden grips, a finned barrel and a large circular drum magazine below the receiver",
+      "caption": "A Thompson M1921 with the 50-round drum. The finned barrel, the front grip and the drum were all deleted from the wartime M1, along with the Blish lock inside.",
+      "width": 970,
+      "height": 524,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Campbell_Thompson.jpg",
+        "title": "File:Campbell Thompson.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "id": "thompson-submachine-gun",
+  "name": "Thompson submachine gun",
+  "makerRef": "auto-ordnance",
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-delayed-friction",
+  "designedIn": "united-states",
+  "introduced": 1921,
+  "productionYears": {
+    "start": 1921,
+    "end": 1945
+  },
+  "massEmpty": {
+    "value": 4.899,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-thompson-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372206709",
+    "sourceNote": "Published as 10.8 lb; 1 lb = 0.45359237 kg exactly. Empty, M1928A1; the M1 is published at 10 lb."
+  },
+  "length": {
+    "value": 855.98,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-thompson-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372206709",
+    "sourceNote": "Published as 33.7 in; 1 in = 25.4 mm exactly. M1928A1 with compensator; the M1 and M1A1 are 31.9 in."
+  },
+  "barrelLength": {
+    "value": 267.208,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-thompson-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372206709",
+    "sourceNote": "Published as 10.52 in; 1 in = 25.4 mm exactly."
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-thompson-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372206709",
+    "sourceNote": "Published per variant and as ranges: 900 rpm (M1921), 600–725 (M1928), 700–800 (M1A1). Recorded as the M1A1 lower bound; see the note on ranges in the methodology page."
+  },
+  "references": [
+    {
+      "key": "wp-thompson-submachine-gun",
+      "type": "wikipedia",
+      "title": "Thompson submachine gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372206709",
+      "lang": "en",
+      "revision": "1372206709",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q269593"
+}

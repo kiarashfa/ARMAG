@@ -1,0 +1,142 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Galil SAR",
+      "kind": "military",
+      "note": "Short Assault Rifle — the configuration this entry’s dimensions describe."
+    }
+  ],
+  "lineage": {
+    "derivedFrom": "ak-47"
+  },
+  "producedIn": [
+    "israel",
+    "south-africa",
+    "italy"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "assault-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 35,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-iwi-galil",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371293647",
+        "sourceNote": "Proprietary magazines of 35, 50 and 65 rounds; STANAG 30-round magazines also fit."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "7-62x51mm-nato",
+      "capacity": {
+        "value": 25,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-iwi-galil",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371293647",
+        "sourceNote": "Proprietary box magazine."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/iwi-galil/hero.webp",
+      "alt": "A soldier in desert camouflage crouching against a wall in an urban street, holding a Galil rifle with a folding tubular stock and a curved magazine",
+      "caption": "An Estonian soldier with a Galil SAR. No freely licensed specimen photograph of the rifle exists on Wikimedia Commons; this is the closest usable image.",
+      "width": 975,
+      "height": 1462,
+      "credit": {
+        "author": "Sgt. David Foley, U.S. Army.",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Estonian_soldier_DA-SD-06-03436_c1.jpg",
+        "title": "File:Estonian soldier DA-SD-06-03436 c1.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "iwi-galil",
+  "name": "IWI Galil",
+  "nativeName": "גליל",
+  "makerRef": "israel-weapon-industries",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "israel",
+  "introduced": 1972,
+  "productionYears": {
+    "start": 1972,
+    "end": 1998
+  },
+  "massEmpty": {
+    "value": 3.75,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-iwi-galil",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371293647",
+    "sourceNote": "SAR. The AR is published at 3.95 kg and the ARM at 4.35 kg."
+  },
+  "length": {
+    "value": 850,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-iwi-galil",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371293647",
+    "sourceNote": "SAR, stock extended."
+  },
+  "lengthFolded": {
+    "value": 614,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-iwi-galil",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371293647",
+    "sourceNote": "SAR, stock folded."
+  },
+  "barrelLength": {
+    "value": 332,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-iwi-galil",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371293647",
+    "sourceNote": "SAR. The AR and ARM use a 460 mm barrel."
+  },
+  "cyclicRate": {
+    "value": 650,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "wp-iwi-galil",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371293647"
+  },
+  "references": [
+    {
+      "key": "wp-iwi-galil",
+      "type": "wikipedia",
+      "title": "IWI Galil",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371293647",
+      "lang": "en",
+      "revision": "1371293647",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q276093"
+}

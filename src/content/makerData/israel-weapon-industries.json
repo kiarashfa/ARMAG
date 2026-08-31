@@ -1,0 +1,25 @@
+{
+  "id": "israel-weapon-industries",
+  "name": "Israel Weapon Industries",
+  "nativeName": "תעשייות נשק ישראליות",
+  "wikidataId": "Q2660084",
+  "country": "israel",
+  "founded": 1933,
+  "dissolved": null,
+  "website": "https://www.iwi.net/",
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-israel-weapon-industries",
+      "type": "wikipedia",
+      "title": "Israel Weapon Industries",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359024556",
+      "lang": "en",
+      "revision": "1359024556",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

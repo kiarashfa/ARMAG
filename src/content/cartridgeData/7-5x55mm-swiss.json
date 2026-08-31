@@ -1,0 +1,103 @@
+{
+  "id": "7-5x55mm-swiss",
+  "name": "7.5×55mm Swiss",
+  "aliases": [
+    {
+      "name": "GP 11",
+      "kind": "military",
+      "note": "Gewehrpatrone 1911, the service loading."
+    },
+    {
+      "name": "7.5×55mm Schmidt–Rubin",
+      "kind": "nickname"
+    }
+  ],
+  "introduced": 1911,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 55.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-5-x-55-suisse",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-5-x-55-suisse-en.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 77.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-5-x-55-suisse",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-5-x-55-suisse-en.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.78,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-5-x-55-suisse",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-5-x-55-suisse-en.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 12.65,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-5-x-55-suisse",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-5-x-55-suisse-en.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 12.64,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-5-x-55-suisse",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-5-x-55-suisse-en.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 8.58,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-5-x-55-suisse",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-5-x-55-suisse-en.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 380,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7-5-x-55-suisse",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-5-x-55-suisse-en.pdf",
+    "sourceNote": "C.I.P. Pmax 3800 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [],
+  "references": [
+    {
+      "key": "cip-7-5-x-55-suisse",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7,5 x 55 Suisse",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-5-x-55-suisse-en.pdf",
+      "revision": "2016-05-18",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-7-5-55mm-swiss",
+      "type": "wikipedia",
+      "title": "7.5×55mm Swiss",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1340949012",
+      "lang": "en",
+      "revision": "1340949012",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q259142"
+}

@@ -1,0 +1,138 @@
+{
+  "id": "7-92x33mm-kurz",
+  "name": "7.92×33mm Kurz",
+  "aliases": [
+    {
+      "name": "7.9mm Kurzpatrone",
+      "kind": "military"
+    },
+    {
+      "name": "8mm Kurz",
+      "kind": "nickname"
+    }
+  ],
+  "nativeName": "7,92 × 33 mm Kurz",
+  "designedBy": "Polte ammunition works, Magdeburg",
+  "introduced": 1938,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 33,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-92-x-33-kurz",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-92-x-33-kurz-en.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 48,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-92-x-33-kurz",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-92-x-33-kurz-en.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 8.22,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-92-x-33-kurz",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-92-x-33-kurz-en.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 11.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-92-x-33-kurz",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-92-x-33-kurz-en.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 11.94,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-92-x-33-kurz",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-92-x-33-kurz-en.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 9.04,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-92-x-33-kurz",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-92-x-33-kurz-en.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 340,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7-92-x-33-kurz",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-92-x-33-kurz-en.pdf",
+    "sourceNote": "C.I.P. Pmax 3400 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "ball",
+      "name": "Service ball",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 8.1,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-7-92-33mm-kurz",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345370824",
+        "sourceNote": "Ballistics table of the cited article, which publishes bullet mass in grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 419,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-7-92-33mm-kurz",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345370824",
+            "sourceNote": "Test barrel stated as 419 mm, the StG 44’s barrel length."
+          },
+          "velocity": {
+            "value": 685,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-7-92-33mm-kurz",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345370824",
+            "sourceNote": "Ballistics table of the cited article, attributed there to Cartridges of the World."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-7-92-x-33-kurz",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7,92 x 33 kurz",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-92-x-33-kurz-en.pdf",
+      "revision": "2014-05-20",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-7-92-33mm-kurz",
+      "type": "wikipedia",
+      "title": "7.92×33mm Kurz",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1345370824",
+      "lang": "en",
+      "revision": "1345370824",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q259269"
+}

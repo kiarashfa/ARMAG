@@ -1,0 +1,124 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "U.S. Rifle, Caliber .30, M1",
+      "kind": "military"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states",
+    "italy"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "en-bloc"
+  ],
+  "roles": [
+    "service-rifle",
+    "battle-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "30-06-springfield",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-m1-garand",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369864245",
+        "sourceNote": "En bloc clip, loaded into an integral magazine."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/m1-garand/hero.webp",
+      "alt": "Two views of an M1 Garand rifle on a pale cloth, left and right sides, with a full-length walnut stock and the operating rod running along the right of the barrel",
+      "caption": "An M1 Garand in .30-06 from the Swedish Army Museum. The rod visible along the right side is the operating rod driven by the long-stroke gas piston.",
+      "width": 1600,
+      "height": 749,
+      "credit": {
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M1_Garand_rifle_-_USA_-_30-06_-_Armémuseum.jpg",
+        "title": "File:M1 Garand rifle - USA - 30-06 - Armémuseum.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "m1-garand",
+  "name": "M1 Garand",
+  "makerRef": "springfield-armory",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "united-states",
+  "introduced": 1936,
+  "productionYears": {
+    "start": 1934,
+    "end": 1957
+  },
+  "massEmpty": {
+    "value": 4.309,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-m1-garand",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369864245",
+    "sourceNote": "Published as 9.5 lb; 1 lb = 0.45359237 kg exactly. The article publishes 9.5–11.6 lb across configurations; the lower figure is recorded."
+  },
+  "length": {
+    "value": 1104.9,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m1-garand",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369864245",
+    "sourceNote": "Published as 43.5 in; 1 in = 25.4 mm exactly."
+  },
+  "barrelLength": {
+    "value": 609.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m1-garand",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369864245",
+    "sourceNote": "Published as 24 in; 1 in = 25.4 mm exactly."
+  },
+  "effectiveRange": {
+    "value": 457.2,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-m1-garand",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369864245",
+    "sourceNote": "Published as 500 yd; 1 yd = 0.9144 m exactly."
+  },
+  "productionTotal": {
+    "value": 5468772,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-m1-garand",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369864245"
+  },
+  "references": [
+    {
+      "key": "wp-m1-garand",
+      "type": "wikipedia",
+      "title": "M1 Garand",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369864245",
+      "lang": "en",
+      "revision": "1369864245",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q204046"
+}

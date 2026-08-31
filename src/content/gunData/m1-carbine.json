@@ -1,0 +1,133 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Carbine, Caliber .30, M1",
+      "kind": "military"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence",
+    "service-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "30-carbine",
+      "capacity": {
+        "value": 15,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-m1-carbine",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370823947",
+        "sourceNote": "Detachable box magazines of 15 and 30 rounds."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/m1-carbine/hero.webp",
+      "alt": "Two views of an M1 carbine on a pale cloth, left and right sides, with a slim walnut stock, a short barrel and a straight box magazine ahead of the trigger guard",
+      "caption": "An M1 Carbine from the Swedish Army Museum. At 2.36 kg it weighs about half what the M1 Garand does.",
+      "width": 1600,
+      "height": 780,
+      "credit": {
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M1_Carbine_Mk_I_-_USA_-_Armémuseum.jpg",
+        "title": "File:M1 Carbine Mk I - USA - Armémuseum.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "m1-carbine",
+  "name": "M1 carbine",
+  "makerRef": "winchester-repeating-arms",
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "united-states",
+  "introduced": 1942,
+  "productionYears": {
+    "start": 1942,
+    "end": 1945
+  },
+  "massEmpty": {
+    "value": 2.359,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-m1-carbine",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370823947",
+    "sourceNote": "Published as 5.2 lb; 1 lb = 0.45359237 kg exactly. Empty."
+  },
+  "length": {
+    "value": 904.24,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m1-carbine",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370823947",
+    "sourceNote": "Published as 35.6 in; 1 in = 25.4 mm exactly."
+  },
+  "barrelLength": {
+    "value": 450.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m1-carbine",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370823947",
+    "sourceNote": "Published as 17.75 in; 1 in = 25.4 mm exactly."
+  },
+  "effectiveRange": {
+    "value": 300,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-m1-carbine",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370823947"
+  },
+  "productionTotal": {
+    "value": 6121309,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-m1-carbine",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370823947",
+    "sourceNote": "Second World War production."
+  },
+  "launchPrice": {
+    "amount": 45,
+    "currency": "USD",
+    "market": "US",
+    "year": 1943,
+    "status": "estimated",
+    "source": "wp-m1-carbine",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370823947",
+    "sourceNote": "The cited article gives \"about $45\" as the wartime unit cost without naming a year; 1943 is recorded because that is the year the article’s own inflation template uses."
+  },
+  "references": [
+    {
+      "key": "wp-m1-carbine",
+      "type": "wikipedia",
+      "title": "M1 carbine",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370823947",
+      "lang": "en",
+      "revision": "1370823947",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q695988"
+}

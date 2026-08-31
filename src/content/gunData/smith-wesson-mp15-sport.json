@@ -17,7 +17,9 @@
       "note": "The maker's SKU."
     }
   ],
-  "lineage": {},
+  "lineage": {
+    "cloneOf": "m16-rifle"
+  },
   "type": "rifle",
   "action": "self-loading",
   "operatingSystem": "gas-direct-impingement",
@@ -49,7 +51,7 @@
     "sourceNote": "6.52 lb (2957 g) as published."
   },
   "length": {
-    "value": 889.0,
+    "value": 889,
     "unit": "mm",
     "status": "verified",
     "source": "sw-sport3-spec",

@@ -1,0 +1,23 @@
+{
+  "id": "rsaf-enfield",
+  "name": "Royal Small Arms Factory",
+  "wikidataId": "Q1432129",
+  "country": "united-kingdom",
+  "founded": 1816,
+  "dissolved": 1988,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-royal-small-arms-factory",
+      "type": "wikipedia",
+      "title": "Royal Small Arms Factory",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359694035",
+      "lang": "en",
+      "revision": "1359694035",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

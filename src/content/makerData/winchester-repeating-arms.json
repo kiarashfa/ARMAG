@@ -1,0 +1,23 @@
+{
+  "id": "winchester-repeating-arms",
+  "name": "Winchester Repeating Arms Company",
+  "wikidataId": "Q1469447",
+  "country": "united-states",
+  "founded": 1866,
+  "dissolved": 2006,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-winchester-repeating-arms-company",
+      "type": "wikipedia",
+      "title": "Winchester Repeating Arms Company",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359639383",
+      "lang": "en",
+      "revision": "1359639383",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

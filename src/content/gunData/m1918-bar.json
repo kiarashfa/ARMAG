@@ -1,0 +1,127 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "BAR",
+      "kind": "nickname"
+    },
+    {
+      "name": "Rifle, caliber .30, automatic, Browning, M1918",
+      "kind": "military"
+    },
+    {
+      "name": "M1918A2",
+      "kind": "military",
+      "note": "The 1938 revision, with a bipod and two automatic rates instead of a semi-automatic setting."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states",
+    "belgium",
+    "sweden",
+    "poland"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "general-purpose"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "30-06-springfield",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-m1918-browning-automatic-rifle",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363334542",
+        "sourceNote": "Detachable box magazine; a 40-round magazine was issued for anti-aircraft use."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/m1918-bar/hero.webp",
+      "alt": "An M1918 Browning automatic rifle isolated on white, seen from the left, with a dark wooden butt, a wooden forend, a straight 20-round magazine below the receiver and a folding bipod at the muzzle",
+      "caption": "An M1918A2 from the Army Heritage Museum. The bipod at the muzzle and the absence of a semi-automatic setting are what distinguish the 1938 revision from the rifle of 1918.",
+      "width": 1440,
+      "height": 468,
+      "credit": {
+        "author": "United States Army",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Army_Heritage_Museum_B.A.R..jpg",
+        "title": "File:Army Heritage Museum B.A.R..jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "m1918-bar",
+  "name": "M1918 Browning automatic rifle",
+  "makerRef": "colt",
+  "type": "machine-gun",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "united-states",
+  "introduced": 1918,
+  "productionYears": {
+    "start": 1917,
+    "end": 1960
+  },
+  "barrelLength": {
+    "value": 610,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m1918-browning-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363334542"
+  },
+  "cyclicRate": {
+    "value": 575,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-m1918-browning-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363334542",
+    "sourceNote": "The article publishes 500–650 rounds/min for the M1918, M1922 and M1918A1, and two selectable rates for the M1918A2. Recorded as the midpoint of the first range."
+  },
+  "sightGraduation": {
+    "value": 1371.6,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-m1918-browning-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363334542",
+    "sourceNote": "Published as sight adjustments from 100 to 1,500 yd; 1 yd = 0.9144 m exactly."
+  },
+  "productionTotal": {
+    "value": 351554,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-m1918-browning-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363334542",
+    "sourceNote": "M1918: 102,174 and M1918A2: 249,380, as broken down in the cited article."
+  },
+  "references": [
+    {
+      "key": "wp-m1918-browning-automatic-rifle",
+      "type": "wikipedia",
+      "title": "M1918 Browning automatic rifle",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363334542",
+      "lang": "en",
+      "revision": "1363334542",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q60642"
+}

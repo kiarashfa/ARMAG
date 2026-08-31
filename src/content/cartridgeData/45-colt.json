@@ -1,0 +1,100 @@
+{
+  "id": "45-colt",
+  "name": ".45 Colt",
+  "aliases": [
+    {
+      "name": ".45 Long Colt",
+      "kind": "nickname",
+      "note": "A retronym coined to distinguish it from the shorter .45 Schofield; Colt never used it."
+    }
+  ],
+  "designedBy": "US Army and Colt",
+  "introduced": 1873,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 32.64,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-colt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page78.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 40.64,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-colt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page78.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 11.58,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-colt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page78.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-colt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page78.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 12.19,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-colt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page78.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 12.19,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-colt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page78.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 110,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-45-colt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page78.pdf",
+    "sourceNote": "C.I.P. Pmax 1100 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [],
+  "references": [
+    {
+      "key": "cip-45-colt",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 45 Colt",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page78.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-45-colt",
+      "type": "wikipedia",
+      "title": ".45 Colt",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368451355",
+      "lang": "en",
+      "revision": "1368451355",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q1820043"
+}

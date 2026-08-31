@@ -1,0 +1,24 @@
+{
+  "id": "mas-saint-etienne",
+  "name": "Manufacture d'armes de Saint-Étienne",
+  "nativeName": "Manufacture d'armes de Saint-Étienne",
+  "wikidataId": "Q3287029",
+  "country": "france",
+  "founded": 1764,
+  "dissolved": 2001,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-manufacture-d-armes-de-saint-etienne",
+      "type": "wikipedia",
+      "title": "Manufacture d'armes de Saint-Étienne",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359701491",
+      "lang": "en",
+      "revision": "1359701491",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

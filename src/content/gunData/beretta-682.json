@@ -1,0 +1,102 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "682 Gold E",
+      "kind": "commercial"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "italy"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [],
+  "roles": [
+    "competition",
+    "target"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "12-gauge",
+      "capacity": {
+        "value": 2,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-beretta-682",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1296587666",
+        "sourceNote": "Two barrels, one round each. It has no magazine."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "20-gauge",
+      "capacity": {
+        "value": 2,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-beretta-682",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1296587666",
+        "sourceNote": "Two barrels, one round each."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [
+    {
+      "id": "sporting",
+      "name": "Sporting",
+      "summary": "Sporting clays configuration, usually with 28- or 30-inch barrels and interchangeable chokes.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "trap",
+      "name": "Trap",
+      "summary": "Trap configuration: a higher rib and a stock built to shoot above the point of aim, because a trap target is always rising.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "skeet",
+      "name": "Skeet",
+      "summary": "Skeet configuration, with shorter barrels and open chokes for close crossing targets.",
+      "overrides": {},
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [],
+  "id": "beretta-682",
+  "name": "Beretta 682",
+  "makerRef": "beretta",
+  "type": "shotgun",
+  "action": "break",
+  "operatingSystem": "manual",
+  "designedIn": "italy",
+  "introduced": 1984,
+  "productionYears": {
+    "start": 1984,
+    "end": null
+  },
+  "references": [
+    {
+      "key": "wp-beretta-682",
+      "type": "wikipedia",
+      "title": "Beretta 682",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1296587666",
+      "lang": "en",
+      "revision": "1296587666",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q13629343"
+}

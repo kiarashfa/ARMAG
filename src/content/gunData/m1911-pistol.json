@@ -1,0 +1,139 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Automatic Pistol, Caliber .45, M1911",
+      "kind": "military"
+    },
+    {
+      "name": "Colt Government",
+      "kind": "commercial"
+    },
+    {
+      "name": "1911",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states",
+    "china",
+    "norway"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "duty-sidearm",
+    "competition",
+    "concealed-carry"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": 7,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-m1911-pistol",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371262262",
+        "sourceNote": "Magazines of 7, 8, 9, 10 and 12 rounds are listed."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/m1911-pistol/hero.webp",
+      "alt": "An M1911A1 pistol fieldstripped on a white background: slide, frame with wooden grips, barrel with its swinging link, recoil spring and guide, bushing, slide stop, magazine and three cartridges",
+      "caption": "A Springfield-made M1911A1 fieldstripped. The barrel at lower left carries the swinging link that unlocks it from the slide — the whole of the short-recoil mechanism, in one part.",
+      "width": 1600,
+      "height": 940,
+      "credit": {
+        "author": "Quelle: Jan Hrdonka en:User:Hrd10 / Freisteller, Erweiterung, Bildbearbeitung & Retusche von Auge=mit",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:COLT_M1911A1_fieldstrip_noBG_2.jpg",
+        "title": "File:COLT M1911A1 fieldstrip noBG 2.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "id": "m1911-pistol",
+  "name": "M1911 pistol",
+  "makerRef": "colt",
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "united-states",
+  "introduced": 1911,
+  "productionYears": {
+    "start": 1911,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 1.106,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-m1911-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371262262",
+    "sourceNote": "Published as 39 oz empty with magazine, so this figure includes an empty magazine; 1 oz = 28.349523125 g exactly."
+  },
+  "length": {
+    "value": 215.9,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m1911-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371262262",
+    "sourceNote": "Published as 8.5 in; 1 in = 25.4 mm exactly."
+  },
+  "barrelLength": {
+    "value": 127.762,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m1911-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371262262",
+    "sourceNote": "Published as 5.03 in; 1 in = 25.4 mm exactly. Government model; the Commander is 4.25 in and the Officer 3.5 in."
+  },
+  "productionTotal": {
+    "value": 4294345,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-m1911-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371262262",
+    "sourceNote": "Total including licensed copies; Colt’s own production is given as 2,734,345."
+  },
+  "launchPrice": {
+    "amount": 26.38,
+    "currency": "USD",
+    "market": "US",
+    "year": 1938,
+    "status": "verified",
+    "source": "wp-m1911-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371262262",
+    "sourceNote": "US government contract price, 1938 — not a retail price and not the 1911 launch price."
+  },
+  "references": [
+    {
+      "key": "wp-m1911-pistol",
+      "type": "wikipedia",
+      "title": "M1911 pistol",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371262262",
+      "lang": "en",
+      "revision": "1371262262",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q201419"
+}

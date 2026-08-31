@@ -1,0 +1,138 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Type 95",
+      "kind": "military"
+    },
+    {
+      "name": "QBZ-97",
+      "kind": "export",
+      "market": "CA",
+      "note": "The 5.56 mm export version."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "china"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box",
+    "drum"
+  ],
+  "roles": [
+    "service-rifle",
+    "assault-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "5-8x42mm",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-qbz-95",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356442512",
+        "sourceNote": "Detachable box magazine; a 75-round drum is also issued."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/qbz-95/hero.webp",
+      "alt": "A short bullpup rifle mounted on a museum display wall, seen from the left, with a carrying-handle sight, a curved magazine behind the trigger and a Chinese and English label below",
+      "caption": "The QBZ-95B-1 carbine on display, not the full-length rifle this entry’s figures describe. The label beside it gives 609 mm and 2.9 kg for the carbine.",
+      "width": 1600,
+      "height": 1000,
+      "credit": {
+        "author": "Tyg728",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:95B-1_short_assault_rifle_20220203.jpg",
+        "title": "File:95B-1 short assault rifle 20220203.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "id": "qbz-95",
+  "name": "QBZ-95",
+  "nativeName": "95式自动步枪",
+  "makerRef": "norinco",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "china",
+  "introduced": 1997,
+  "productionYears": {
+    "start": 1995,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 3.4,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-qbz-95",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356442512"
+  },
+  "length": {
+    "value": 760,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-qbz-95",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356442512"
+  },
+  "barrelLength": {
+    "value": 463,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-qbz-95",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356442512"
+  },
+  "cyclicRate": {
+    "value": 650,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "wp-qbz-95",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356442512"
+  },
+  "effectiveRange": {
+    "value": 400,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-qbz-95",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356442512",
+    "sourceNote": "Published as the point-target range; 600–800 m is given for an area target."
+  },
+  "productionTotal": {
+    "value": 3000000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-qbz-95",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356442512"
+  },
+  "references": [
+    {
+      "key": "wp-qbz-95",
+      "type": "wikipedia",
+      "title": "QBZ-95",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1356442512",
+      "lang": "en",
+      "revision": "1356442512",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q290942"
+}

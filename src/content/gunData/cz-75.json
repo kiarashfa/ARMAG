@@ -1,0 +1,138 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "ČZ 75",
+      "kind": "native"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "czechia",
+    "czechoslovakia"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "duty-sidearm",
+    "competition",
+    "law-enforcement"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 16,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-cz-75",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369040393",
+        "sourceNote": "The article gives 10–26 rounds depending on version and calibre; 16 is the standard full-size magazine."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/cz-75/hero.webp",
+      "alt": "A CZ 75 pistol isolated on white, seen from the left, with “MODEL 75 CAL. 9 PARA” and “MADE IN CZECHOSLOVAKIA” stamped on the slide and chequered black grips",
+      "caption": "An original 1977 CZ 75 — a first-generation “short rail” gun. The slide sits inside the frame rails rather than outside them, which is the design’s defining feature.",
+      "width": 1600,
+      "height": 1077,
+      "credit": {
+        "author": "Vidiot savant",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:1977_CZ-75.png",
+        "title": "File:1977 CZ-75.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "id": "cz-75",
+  "name": "CZ 75",
+  "makerRef": "ceska-zbrojovka",
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "czechoslovakia",
+  "introduced": 1976,
+  "productionYears": {
+    "start": 1976,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 1.12,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-cz-75",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369040393"
+  },
+  "length": {
+    "value": 206.3,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-cz-75",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369040393"
+  },
+  "width": {
+    "value": 32.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-cz-75",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369040393"
+  },
+  "height": {
+    "value": 138,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-cz-75",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369040393"
+  },
+  "barrelLength": {
+    "value": 120,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-cz-75",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369040393"
+  },
+  "effectiveRange": {
+    "value": 100,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-cz-75",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369040393"
+  },
+  "productionTotal": {
+    "value": 1000000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-cz-75",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369040393",
+    "sourceNote": "The cited article gives \"1,000,000+\" as at October 2007, so this is a floor and it is nearly two decades old."
+  },
+  "references": [
+    {
+      "key": "wp-cz-75",
+      "type": "wikipedia",
+      "title": "CZ 75",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369040393",
+      "lang": "en",
+      "revision": "1369040393",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q588894"
+}

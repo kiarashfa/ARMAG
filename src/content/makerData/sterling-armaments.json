@@ -1,0 +1,22 @@
+{
+  "id": "sterling-armaments",
+  "name": "Sterling Armaments Company",
+  "wikidataId": "Q7611363",
+  "country": "united-kingdom",
+  "dissolved": 1988,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-sterling-armaments-company",
+      "type": "wikipedia",
+      "title": "Sterling Armaments Company",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1354947597",
+      "lang": "en",
+      "revision": "1354947597",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

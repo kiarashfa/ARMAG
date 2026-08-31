@@ -1,0 +1,25 @@
+{
+  "id": "fn-herstal",
+  "name": "FN Herstal",
+  "nativeName": "Fabrique Nationale de Herstal",
+  "wikidataId": "Q747353",
+  "country": "belgium",
+  "founded": 1889,
+  "dissolved": null,
+  "website": "https://www.fnherstal.com/",
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-fn-herstal",
+      "type": "wikipedia",
+      "title": "FN Herstal",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369345890",
+      "lang": "en",
+      "revision": "1369345890",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

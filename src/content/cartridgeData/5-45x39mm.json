@@ -1,0 +1,165 @@
+{
+  "id": "5-45x39mm",
+  "name": "5.45×39mm",
+  "aliases": [
+    {
+      "name": "5.45 Soviet",
+      "kind": "nickname"
+    }
+  ],
+  "introduced": 1974,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 39.82,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-45-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/5-45-x-39-en.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 57,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-45-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/5-45-x-39-en.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 5.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-45-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/5-45-x-39-en.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 10,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-45-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/5-45-x-39-en.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 10,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-45-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/5-45-x-39-en.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 6.29,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-45-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/5-45-x-39-en.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 355,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-5-45-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/5-45-x-39-en.pdf",
+    "sourceNote": "C.I.P. Pmax 3550 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "7n6",
+      "name": "7N6 ball",
+      "bulletType": "FMJ, mild steel core",
+      "bulletMass": {
+        "value": 3.43,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-5-45-39mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371607862",
+        "sourceNote": "Ballistics table of the cited article, which publishes bullet mass in grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 415,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-5-45-39mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371607862",
+            "sourceNote": "Test barrel stated as 415 mm, the AK-74’s barrel length."
+          },
+          "velocity": {
+            "value": 880,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-5-45-39mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371607862",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    },
+    {
+      "id": "7u1",
+      "name": "7U1 subsonic",
+      "bulletType": "FMJ subsonic",
+      "bulletMass": {
+        "value": 5.2,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-5-45-39mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371607862",
+        "sourceNote": "Ballistics table of the cited article."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 200,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-5-45-39mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371607862",
+            "sourceNote": "Test barrel stated separately as 200 mm for the 7U1 loading, fired from the suppressed AKS-74UB."
+          },
+          "velocity": {
+            "value": 303,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-5-45-39mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371607862",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-5-45-x-39",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 5,45 x 39",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/5-45-x-39-en.pdf",
+      "revision": "2015-05-19",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-5-45-39mm",
+      "type": "wikipedia",
+      "title": "5.45×39mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371607862",
+      "lang": "en",
+      "revision": "1371607862",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q238437"
+}

@@ -1,0 +1,135 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [
+    "ar-15"
+  ],
+  "aliases": [
+    {
+      "name": "M27 IAR",
+      "kind": "military",
+      "note": "The US Marine Corps automatic rifle variant."
+    },
+    {
+      "name": "HK416N",
+      "kind": "export",
+      "market": "NO",
+      "note": "The Norwegian service version."
+    }
+  ],
+  "lineage": {
+    "derivedFrom": "ar-15"
+  },
+  "producedIn": [
+    "germany",
+    "united-states"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "assault-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-heckler-koch-hk416",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369565248",
+        "sourceNote": "STANAG magazine."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [
+    {
+      "standard": "magazine-pattern",
+      "value": "STANAG 4179"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/guns/heckler-koch-hk416/hero.webp",
+      "alt": "An HK416 rifle isolated on white, seen from the left, with a collapsible stock, a red-dot sight and a vertical foregrip on a railed handguard, and a curved 30-round magazine",
+      "caption": "A Norwegian Army HK416N with an Aimpoint sight and a vertical grip. The layout and controls are the AR-15’s; the gas system underneath the handguard is not.",
+      "width": 1600,
+      "height": 623,
+      "credit": {
+        "author": "Dybdal .",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HK416.jpg",
+        "title": "File:HK416.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    }
+  ],
+  "id": "heckler-koch-hk416",
+  "name": "Heckler & Koch HK416",
+  "makerRef": "heckler-koch",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "germany",
+  "introduced": 2004,
+  "productionYears": {
+    "start": 2004,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 3.485,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-heckler-koch-hk416",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369565248",
+    "sourceNote": "The article publishes 3.12–3.85 kg for the A5 without a magazine, across barrel lengths. Recorded as the midpoint of that range."
+  },
+  "length": {
+    "value": 1030,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-heckler-koch-hk416",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369565248",
+    "sourceNote": "A5 with the retractable stock extended."
+  },
+  "lengthFolded": {
+    "value": 709,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-heckler-koch-hk416",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369565248",
+    "sourceNote": "A5 with the retractable stock collapsed."
+  },
+  "cyclicRate": {
+    "value": 850,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "wp-heckler-koch-hk416",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369565248"
+  },
+  "references": [
+    {
+      "key": "wp-heckler-koch-hk416",
+      "type": "wikipedia",
+      "title": "Heckler & Koch HK416",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369565248",
+      "lang": "en",
+      "revision": "1369565248",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q741107"
+}

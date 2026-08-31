@@ -1,0 +1,138 @@
+{
+  "id": "44-magnum",
+  "name": ".44 Magnum",
+  "aliases": [
+    {
+      "name": ".44 Remington Magnum",
+      "kind": "commercial"
+    },
+    {
+      "name": "10.9×33mmR",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Elmer Keith and Remington",
+  "introduced": 1956,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 32.64,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/44-rem-mag-200922-en.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 40.89,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/44-rem-mag-200922-en.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 10.97,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/44-rem-mag-200922-en.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/44-rem-mag-200922-en.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 11.61,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/44-rem-mag-200922-en.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 11.58,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/44-rem-mag-200922-en.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 280,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-44-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/44-rem-mag-200922-en.pdf",
+    "sourceNote": "C.I.P. Pmax 2800 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "rem-240-sjhp",
+      "name": "Remington 240 gr semi-jacketed hollow point",
+      "manufacturer": "Remington",
+      "bulletType": "SJHP",
+      "bulletMass": {
+        "value": 15.55,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-44-magnum",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987370",
+        "sourceNote": "Published as 240 gr; 1 gr = 0.06479891 g exactly."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 190.5,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-44-magnum",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987370",
+            "sourceNote": "Test barrel stated as 7.5 inches."
+          },
+          "velocity": {
+            "value": 359.7,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-44-magnum",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987370",
+            "sourceNote": "Published as 1,180 ft/s."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-44-rem-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 44 Rem. Mag.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/44-rem-mag-200922-en.pdf",
+      "revision": "2020-11-10",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-44-magnum",
+      "type": "wikipedia",
+      "title": ".44 Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368987370",
+      "lang": "en",
+      "revision": "1368987370",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q94598"
+}

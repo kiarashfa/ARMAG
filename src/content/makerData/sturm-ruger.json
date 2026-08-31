@@ -1,0 +1,24 @@
+{
+  "id": "sturm-ruger",
+  "name": "Sturm, Ruger & Co.",
+  "wikidataId": "Q1508526",
+  "country": "united-states",
+  "founded": 1949,
+  "dissolved": null,
+  "website": "https://ruger.com/",
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-sturm-ruger-co",
+      "type": "wikipedia",
+      "title": "Sturm, Ruger & Co.",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367675188",
+      "lang": "en",
+      "revision": "1367675188",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

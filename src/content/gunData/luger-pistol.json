@@ -1,0 +1,122 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "P08",
+      "kind": "military",
+      "note": "Pistole 08, the German service designation."
+    },
+    {
+      "name": "Parabellum-Pistole",
+      "kind": "commercial"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "germany",
+    "switzerland",
+    "united-kingdom"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "duty-sidearm"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-luger-pistol",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369143532",
+        "sourceNote": "Detachable box magazine. A 32-round drum was made for the artillery model."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/luger-pistol/hero.webp",
+      "alt": "A close-up of the rear of a Luger pistol against a white background, showing the toggle links raised into an inverted V above the frame, with the chequered wooden grip below",
+      "caption": "A detail of the toggle, caught part-way through its travel rather than a photograph of the whole pistol. At rest the two links lie flat and slightly below their pivots, which is what locks the breech.",
+      "width": 1600,
+      "height": 1175,
+      "credit": {
+        "author": "Rama",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Luger_IMG_6761b.jpg",
+        "title": "File:Luger IMG 6761b.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+      }
+    }
+  ],
+  "id": "luger-pistol",
+  "name": "Luger pistol",
+  "nativeName": "Pistole 08",
+  "makerRef": "dwm",
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "german-empire",
+  "introduced": 1900,
+  "productionYears": {
+    "start": 1900,
+    "end": 1953
+  },
+  "massEmpty": {
+    "value": 0.871,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-luger-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369143532"
+  },
+  "length": {
+    "value": 222,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-luger-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369143532"
+  },
+  "barrelLength": {
+    "value": 100,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-luger-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369143532",
+    "sourceNote": "Pistole 08. The Pistole 00 is 120 mm and the Lange Pistole 1908 is 200 mm."
+  },
+  "productionTotal": {
+    "value": 3000000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-luger-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369143532"
+  },
+  "references": [
+    {
+      "key": "wp-luger-pistol",
+      "type": "wikipedia",
+      "title": "Luger pistol",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369143532",
+      "lang": "en",
+      "revision": "1369143532",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q154199"
+}

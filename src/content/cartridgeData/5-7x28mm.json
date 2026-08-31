@@ -1,0 +1,115 @@
+{
+  "id": "5-7x28mm",
+  "name": "FN 5.7×28mm",
+  "aliases": [
+    {
+      "name": "5.7×28mm",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "FN Herstal",
+  "introduced": 1990,
+  "standard": "cip",
+  "caseType": "rebated-rim",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 28.9,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-7-x-28",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 40.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-7-x-28",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 5.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-7-x-28",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 7.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-7-x-28",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 7.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-7-x-28",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 6.38,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-5-7-x-28",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 345,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-5-7-x-28",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf",
+    "sourceNote": "C.I.P. Pmax 3450 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "ss190",
+      "name": "SS190 armour-piercing ball",
+      "manufacturer": "FN Herstal",
+      "bulletType": "FMJ, steel penetrator",
+      "bulletMass": {
+        "value": 2.009,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-fn-5-7-28mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367519979",
+        "sourceNote": "Published as 31 gr; 1 gr = 0.06479891 g exactly."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-5-7-x-28",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 5,7 x 28",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page7.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-fn-5-7-28mm",
+      "type": "wikipedia",
+      "title": "FN 5.7×28mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367519979",
+      "lang": "en",
+      "revision": "1367519979",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q238461"
+}

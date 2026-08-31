@@ -1,0 +1,171 @@
+{
+  "id": "30-06-springfield",
+  "name": ".30-06 Springfield",
+  "aliases": [
+    {
+      "name": "7.62×63mm",
+      "kind": "metric",
+      "note": "The C.I.P. datasheet lists this as an alternative name."
+    },
+    {
+      "name": ".30 Gov’t 06",
+      "kind": "military"
+    }
+  ],
+  "designedBy": "Springfield Armory",
+  "introduced": 1906,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 63.35,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-06-spring",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page111.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 84.84,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-06-spring",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page111.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-06-spring",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page111.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-06-spring",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page111.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 11.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-06-spring",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page111.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 8.63,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-06-spring",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page111.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 405,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-30-06-spring",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page111.pdf",
+    "sourceNote": "C.I.P. Pmax 4050 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "sp-180",
+      "name": "180 gr soft point",
+      "bulletType": "SP",
+      "bulletMass": {
+        "value": 11.66,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-30-06-springfield",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367735276",
+        "sourceNote": "Published as 180 gr; 1 gr = 0.06479891 g exactly."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-30-06-springfield",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367735276",
+            "sourceNote": "Test barrel stated as 24 inches."
+          },
+          "velocity": {
+            "value": 823,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-30-06-springfield",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367735276",
+            "sourceNote": "Published as 2,700 ft/s."
+          }
+        }
+      ]
+    },
+    {
+      "id": "bt-150",
+      "name": "150 gr ballistic tip",
+      "bulletType": "Polymer-tipped",
+      "bulletMass": {
+        "value": 9.72,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-30-06-springfield",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367735276",
+        "sourceNote": "Published as 150 gr; 1 gr = 0.06479891 g exactly."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-30-06-springfield",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367735276",
+            "sourceNote": "Test barrel stated as 24 inches."
+          },
+          "velocity": {
+            "value": 887,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-30-06-springfield",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367735276",
+            "sourceNote": "Published as 2,910 ft/s."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-30-06-spring",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 30-06 Spring.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page111.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-30-06-springfield",
+      "type": "wikipedia",
+      "title": ".30-06 Springfield",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367735276",
+      "lang": "en",
+      "revision": "1367735276",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q158721"
+}

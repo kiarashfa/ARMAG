@@ -52,7 +52,18 @@ export const makerDataSchema = z
     wikidataId: wikidataId.optional(),
 
     country: countryTag,
-    founded: year,
+    /**
+     * Optional, and the reason is the same one that made a cartridge's
+     * `introduced` optional (FRICTION-LOG B2). Sterling Armaments built the
+     * British service submachine gun for thirty years and no free source
+     * publishes the year the company was founded; the encyclopedia article
+     * establishes only that it existed during the Second World War. A mandatory
+     * field there offers exactly two options — invent a year, or drop an arm
+     * that is otherwise fully sourced — and Instruction.md §0 rule 2 rejects
+     * both: a missing figure is an honest gap, and if the schema will not let
+     * you record one, the schema is wrong. Found in Phase 10.
+     */
+    founded: year.optional(),
     dissolved: year.nullable().default(null),
 
     /** Current corporate owner — a maker id. */
@@ -75,7 +86,7 @@ export const makerDataSchema = z
   })
   .strict()
   .superRefine((maker, ctx) => {
-    if (maker.dissolved !== null && maker.dissolved < maker.founded) {
+    if (maker.dissolved !== null && maker.founded !== undefined && maker.dissolved < maker.founded) {
       ctx.addIssue({
         code: 'custom',
         path: ['dissolved'],

@@ -1,0 +1,145 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "MP7A1",
+      "kind": "military"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "germany"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "4-6x30mm",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-heckler-koch-mp7",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370163649",
+        "sourceNote": "Detachable box magazines of 20, 30 and 40 rounds."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/heckler-koch-mp7/hero.webp",
+      "alt": "An MP7A1 isolated on white, seen from the left, with a folding front grip, a red-dot sight on the top rail, a telescoping stock and a short magazine in the pistol grip",
+      "caption": "An MP7A1 with a reflex sight fitted. The whole weapon is 638 mm with the stock out and holds twenty rounds in the grip.",
+      "width": 1600,
+      "height": 917,
+      "credit": {
+        "author": "KrisfromGermany",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HK_MP7_Bundeswehr_noBG.png",
+        "title": "File:HK MP7 Bundeswehr noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "id": "heckler-koch-mp7",
+  "name": "Heckler & Koch MP7",
+  "makerRef": "heckler-koch",
+  "type": "pdw",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "germany",
+  "introduced": 2001,
+  "productionYears": {
+    "start": 2001,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 1.9,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370163649",
+    "sourceNote": "With a 20-round empty magazine. The MP7A1 with magazine is published at 2.1 kg."
+  },
+  "length": {
+    "value": 638,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370163649",
+    "sourceNote": "Stock extended; 415 mm collapsed."
+  },
+  "lengthFolded": {
+    "value": 415,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370163649",
+    "sourceNote": "Stock collapsed."
+  },
+  "barrelLength": {
+    "value": 180,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370163649"
+  },
+  "width": {
+    "value": 51,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370163649"
+  },
+  "height": {
+    "value": 169.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370163649"
+  },
+  "cyclicRate": {
+    "value": 950,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370163649"
+  },
+  "effectiveRange": {
+    "value": 200,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370163649"
+  },
+  "references": [
+    {
+      "key": "wp-heckler-koch-mp7",
+      "type": "wikipedia",
+      "title": "Heckler & Koch MP7",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370163649",
+      "lang": "en",
+      "revision": "1370163649",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q815469"
+}

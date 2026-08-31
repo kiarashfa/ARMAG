@@ -1,0 +1,104 @@
+{
+  "id": "45-acp",
+  "name": ".45 ACP",
+  "aliases": [
+    {
+      "name": ".45 Auto",
+      "kind": "commercial",
+      "note": "The C.I.P. and SAAMI name."
+    },
+    {
+      "name": "11.43×23mm",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "John Browning",
+  "introduced": 1905,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 22.81,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/45-auto-en-1.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 32.39,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/45-auto-en-1.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 11.48,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/45-auto-en-1.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 12.19,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/45-auto-en-1.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 12.09,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/45-auto-en-1.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/45-auto-en-1.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 130,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-45-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/45-auto-en-1.pdf",
+    "sourceNote": "C.I.P. Pmax 1300 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [],
+  "references": [
+    {
+      "key": "cip-45-auto",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 45 Auto",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/45-auto-en-1.pdf",
+      "revision": "2020-04-21",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-45-acp",
+      "type": "wikipedia",
+      "title": ".45 ACP",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371893258",
+      "lang": "en",
+      "revision": "1371893258",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q158803"
+}

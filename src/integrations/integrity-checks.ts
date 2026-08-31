@@ -32,6 +32,7 @@ import { cartridgeDataSchema, cartridgeNarrativeSchema } from '../schemas/cartri
 import { gunDataSchema, gunNarrativeSchema } from '../schemas/gun.ts';
 import { makerDataSchema, makerNarrativeSchema } from '../schemas/maker.ts';
 import { hedgeWordsIn } from '../schemas/primitives.ts';
+import { AUTHORED_VOCABULARIES } from '../schemas/taxonomy.ts';
 import { jaccard, proseWords, shingles } from '../lib/render/prose.ts';
 import defaultThresholds from '../data/thresholds.json' with { type: 'json' };
 
@@ -486,6 +487,30 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
         message:
           'no entry names this as its family, so the computed member list is empty — either add the members or remove the family entry (SPEC.md §5.1)',
       });
+    }
+  }
+
+  /*
+   * A vocabulary term's `succeededBy` must name a term that still exists.
+   *
+   * Added in Phase 10, after pruning `countries.json` to the terms the content
+   * actually used silently removed `serbia` and left Yugoslavia pointing at
+   * nothing. Nothing caught it: the pointer is inside a data file rather than a
+   * content entry, and the renderer would simply have produced a link to a page
+   * that is not built. Historical states are first-class terms here (SPEC.md
+   * §7), so the succession links between them are content, not decoration.
+   */
+  for (const [axis, vocabulary] of Object.entries(AUTHORED_VOCABULARIES)) {
+    const termIds = new Set(vocabulary.terms.map((term) => term.id));
+    for (const term of vocabulary.terms) {
+      const successor = (term as { succeededBy?: string }).succeededBy;
+      if (successor && !termIds.has(successor)) {
+        violations.push({
+          file: `src/data/taxonomy/${axis}`,
+          rule: 'taxonomy/succession-unresolved',
+          message: `term '${term.id}' is succeededBy '${successor}', which is not a term on this axis — pruning or renaming a term must not leave a succession pointer dangling`,
+        });
+      }
     }
   }
 

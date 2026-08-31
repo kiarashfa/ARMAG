@@ -1,0 +1,145 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "L2A3",
+      "kind": "military",
+      "note": "The British service designation."
+    },
+    {
+      "name": "Patchett machine carbine",
+      "kind": "military",
+      "note": "The wartime prototype name, after its designer."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-kingdom",
+    "canada",
+    "india"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence",
+    "service-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 34,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-sterling-submachine-gun",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1366339843",
+        "sourceNote": "A curved 34-round magazine; Sten and Lanchester magazines of 32 and 50 rounds also fit."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/sterling-submachine-gun/hero.webp",
+      "alt": "A Sterling submachine gun on museum stands against a grey background, seen from the left with the stock folded under, showing a perforated tubular receiver and a black plastic pistol grip",
+      "caption": "An L2A3 from the US Naval History and Heritage Command collection, stock folded. The holes along the barrel jacket are cooling ports; the magazine, which is fitted on the left, is absent here.",
+      "width": 1280,
+      "height": 386,
+      "credit": {
+        "author": "Unidentified US Naval History and Heritage Command photographer",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Submachine_Gun,_9mm,_L2A3,_Sterling,_British,_S-N_UF57A5347_(NHHC_2002-11-2)_(Right_side,_stock_unfolded).jpg",
+        "title": "File:Submachine Gun, 9mm, L2A3, Sterling, British, S-N UF57A5347 (NHHC 2002-11-2) (Right side, stock unfolded).jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "sterling-submachine-gun",
+  "name": "Sterling submachine gun",
+  "makerRef": "sterling-armaments",
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "united-kingdom",
+  "introduced": 1953,
+  "productionYears": {
+    "start": 1953,
+    "end": 1988
+  },
+  "massEmpty": {
+    "value": 2.7,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-sterling-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1366339843"
+  },
+  "length": {
+    "value": 686,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-sterling-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1366339843",
+    "sourceNote": "Stock extended."
+  },
+  "lengthFolded": {
+    "value": 481,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-sterling-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1366339843",
+    "sourceNote": "Stock folded."
+  },
+  "barrelLength": {
+    "value": 196,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-sterling-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1366339843"
+  },
+  "cyclicRate": {
+    "value": 550,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "wp-sterling-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1366339843"
+  },
+  "effectiveRange": {
+    "value": 200,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-sterling-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1366339843"
+  },
+  "productionTotal": {
+    "value": 400000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-sterling-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1366339843",
+    "sourceNote": "The cited article gives \"400,000+\", so this is a floor rather than a count."
+  },
+  "references": [
+    {
+      "key": "wp-sterling-submachine-gun",
+      "type": "wikipedia",
+      "title": "Sterling submachine gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1366339843",
+      "lang": "en",
+      "revision": "1366339843",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q1473976"
+}

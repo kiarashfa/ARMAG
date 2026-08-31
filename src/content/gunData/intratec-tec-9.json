@@ -1,0 +1,113 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "KG-99",
+      "kind": "commercial",
+      "note": "The earlier Kellgren design the TEC-9 came from."
+    },
+    {
+      "name": "AB-10",
+      "kind": "commercial",
+      "note": "The post-1994 version, renamed and sold without a threaded barrel or barrel shroud."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-tec-9",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367369163",
+        "sourceNote": "Box magazines of 10, 20, 32, 36 and 50 rounds; a 72-round drum was also sold."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [],
+  "id": "intratec-tec-9",
+  "name": "TEC-9",
+  "makerRef": "intratec",
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "united-states",
+  "introduced": 1984,
+  "productionYears": {
+    "start": 1984,
+    "end": 2001
+  },
+  "massEmpty": {
+    "value": 1.315,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-tec-9",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367369163",
+    "sourceNote": "The article publishes 1.23–1.4 kg depending on model. Recorded as the midpoint of that range."
+  },
+  "length": {
+    "value": 279,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-tec-9",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367369163",
+    "sourceNote": "The article publishes 241–317 mm depending on model. Recorded as the midpoint of that range."
+  },
+  "barrelLength": {
+    "value": 101.5,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-tec-9",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367369163",
+    "sourceNote": "The article publishes 76–127 mm depending on model. Recorded as the midpoint of that range; the TEC-9M carries the 76 mm barrel."
+  },
+  "effectiveRange": {
+    "value": 50,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-tec-9",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367369163"
+  },
+  "productionTotal": {
+    "value": 257434,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-tec-9",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367369163"
+  },
+  "references": [
+    {
+      "key": "wp-tec-9",
+      "type": "wikipedia",
+      "title": "TEC-9",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367369163",
+      "lang": "en",
+      "revision": "1367369163",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q1265013"
+}

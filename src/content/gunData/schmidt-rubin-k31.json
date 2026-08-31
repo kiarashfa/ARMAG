@@ -1,0 +1,128 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "K31",
+      "kind": "military"
+    },
+    {
+      "name": "Schmidt–Rubin K31",
+      "kind": "nickname",
+      "note": "Strictly a misnomer: the 1931 action is Furrer’s redesign, not Schmidt’s original."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "switzerland"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "target"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "7-5x55mm-swiss",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-k31",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368980364",
+        "sourceNote": "Detachable box magazine, normally loaded in place from a six-round charger."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/schmidt-rubin-k31/hero.webp",
+      "alt": "A close-up of the open breech of a K31 rifle on a pale blue background, with a six-round charger clip of brass cartridges held in a card sleeve inserted into the receiver above the magazine",
+      "caption": "A charger clip being loaded into a K31. This is the only freely licensed Commons image that shows the mechanism; there is no specimen photograph of the whole rifle.",
+      "width": 1600,
+      "height": 1568,
+      "credit": {
+        "author": "GaryArgh",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:K31_with_phenolic_stripper_clip.jpg",
+        "title": "File:K31 with phenolic stripper clip.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "id": "schmidt-rubin-k31",
+  "name": "Karabiner Modell 1931",
+  "nativeName": "Karabiner Modell 1931",
+  "makerRef": "waffenfabrik-bern",
+  "type": "carbine",
+  "action": "straight-pull",
+  "operatingSystem": "manual",
+  "designedIn": "switzerland",
+  "introduced": 1933,
+  "productionYears": {
+    "start": 1933,
+    "end": 1958
+  },
+  "massEmpty": {
+    "value": 4,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-k31",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368980364",
+    "sourceNote": "Empty."
+  },
+  "length": {
+    "value": 1105,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-k31",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368980364"
+  },
+  "barrelLength": {
+    "value": 652,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-k31",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368980364"
+  },
+  "effectiveRange": {
+    "value": 500,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-k31",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368980364"
+  },
+  "productionTotal": {
+    "value": 528230,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-k31",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368980364"
+  },
+  "references": [
+    {
+      "key": "wp-k31",
+      "type": "wikipedia",
+      "title": "K31",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368980364",
+      "lang": "en",
+      "revision": "1368980364",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q666477"
+}

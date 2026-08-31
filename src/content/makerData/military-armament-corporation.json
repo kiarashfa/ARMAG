@@ -1,0 +1,23 @@
+{
+  "id": "military-armament-corporation",
+  "name": "Military Armament Corporation",
+  "wikidataId": "Q6851966",
+  "country": "united-states",
+  "founded": 1970,
+  "dissolved": 1975,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-military-armament-corporation",
+      "type": "wikipedia",
+      "title": "Military Armament Corporation",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371265132",
+      "lang": "en",
+      "revision": "1371265132",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

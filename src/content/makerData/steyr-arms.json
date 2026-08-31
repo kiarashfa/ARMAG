@@ -1,0 +1,25 @@
+{
+  "id": "steyr-arms",
+  "name": "Steyr Arms",
+  "nativeName": "Steyr Arms GmbH",
+  "wikidataId": "Q591359",
+  "country": "austria",
+  "founded": 1864,
+  "dissolved": null,
+  "website": "https://www.steyr-arms.com/",
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-steyr-arms",
+      "type": "wikipedia",
+      "title": "Steyr Arms",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370306924",
+      "lang": "en",
+      "revision": "1370306924",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

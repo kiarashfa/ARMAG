@@ -1,0 +1,133 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "StG 77",
+      "kind": "military",
+      "note": "Sturmgewehr 77, the Austrian service designation."
+    },
+    {
+      "name": "F88 Austeyr",
+      "kind": "export",
+      "market": "AU"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "austria",
+    "australia",
+    "malaysia"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "assault-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-steyr-aug",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371210441",
+        "sourceNote": "Proprietary translucent box magazines of 30 and 42 rounds."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/steyr-aug/hero.webp",
+      "alt": "A Steyr AUG rifle lying on a pale surface with a green sling, seen from the left: a green polymer bullpup body, a carrying handle containing an optical sight, a folding forward grip, and a translucent magazine lying beside it",
+      "caption": "An AUG with its magazine removed. The tube above the receiver is the 1.5× optical sight cast into the carrying handle — standard issue in 1977, when everyone else had iron sights.",
+      "width": 1600,
+      "height": 914,
+      "credit": {
+        "author": "MoserB",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steyr_AUG_5,56_mm.JPG",
+        "title": "File:Steyr AUG 5,56 mm.JPG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "steyr-aug",
+  "name": "Steyr AUG",
+  "nativeName": "Armee-Universal-Gewehr",
+  "makerRef": "steyr-arms",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "austria",
+  "introduced": 1978,
+  "productionYears": {
+    "start": 1977,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 3.6,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-steyr-aug",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371210441",
+    "sourceNote": "With the 20-inch barrel; 3.3 kg with the 16.4-inch and 3.2 kg with the 15-inch."
+  },
+  "length": {
+    "value": 790,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-steyr-aug",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371210441",
+    "sourceNote": "With the 20-inch barrel; 725 mm with the 16.4-inch and 690 mm with the 15-inch."
+  },
+  "barrelLength": {
+    "value": 508,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-steyr-aug",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371210441",
+    "sourceNote": "The rifle barrel. Barrels of 417 mm and 382 mm are also standard, and the weapon is designed to be changed between them."
+  },
+  "cyclicRate": {
+    "value": 715,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-steyr-aug",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371210441",
+    "sourceNote": "The article publishes 680–750 rounds/min for the AUG HBAR. Recorded as the midpoint of that range; no single figure is given for the standard rifle."
+  },
+  "effectiveRange": {
+    "value": 300,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-steyr-aug",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371210441"
+  },
+  "references": [
+    {
+      "key": "wp-steyr-aug",
+      "type": "wikipedia",
+      "title": "Steyr AUG",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371210441",
+      "lang": "en",
+      "revision": "1371210441",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q221711"
+}

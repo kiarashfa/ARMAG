@@ -1,0 +1,104 @@
+{
+  "id": "22-long-rifle",
+  "name": ".22 Long Rifle",
+  "aliases": [
+    {
+      "name": ".22 LR",
+      "kind": "commercial"
+    },
+    {
+      "name": "22 lfB",
+      "kind": "metric",
+      "note": "German: 22 lang für Büchsen, the C.I.P. datasheet’s own alternative name."
+    }
+  ],
+  "designedBy": "J. Stevens Arms & Tool Company",
+  "introduced": 1887,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 15.57,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-lr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-lr-en.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 25.4,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-lr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-lr-en.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-lr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-lr-en.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 7.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-lr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-lr-en.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 5.74,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-lr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-lr-en.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-lr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-lr-en.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 170,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-22-lr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-lr-en.pdf",
+    "sourceNote": "C.I.P. Pmax 1700 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [],
+  "references": [
+    {
+      "key": "cip-22-lr",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 22 Long Rifle",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-lr-en.pdf",
+      "revision": "2024-05-14",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-22-long-rifle",
+      "type": "wikipedia",
+      "title": ".22 Long Rifle",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362240264",
+      "lang": "en",
+      "revision": "1362240264",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q158715"
+}

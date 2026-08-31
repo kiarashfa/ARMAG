@@ -1,0 +1,23 @@
+{
+  "id": "intratec",
+  "name": "Intratec",
+  "wikidataId": "Q9009067",
+  "country": "united-states",
+  "founded": 1985,
+  "dissolved": 2001,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-intratec",
+      "type": "wikipedia",
+      "title": "Intratec",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367369171",
+      "lang": "en",
+      "revision": "1367369171",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "30-carbine",
+  "name": ".30 Carbine",
+  "aliases": [
+    {
+      "name": "7.62×33mm",
+      "kind": "metric"
+    }
+  ],
+  "introduced": 1941,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 32.77,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-carbine",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page106.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 42.67,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-carbine",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page106.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-carbine",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page106.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 9.14,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-carbine",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page106.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 9.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-carbine",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page106.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 8.53,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-carbine",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page106.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 320,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-30-carbine",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page106.pdf",
+    "sourceNote": "C.I.P. Pmax 3200 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "m1-ball",
+      "name": "M1 ball",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 7.128,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-30-carbine",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987336",
+        "sourceNote": "Published as 110 gr; 1 gr = 0.06479891 g exactly."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 457.2,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-30-carbine",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987336",
+            "sourceNote": "Test barrel stated as 18 inches, the M1 carbine’s own barrel length."
+          },
+          "velocity": {
+            "value": 579,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-30-carbine",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987336",
+            "sourceNote": "Ballistics table of the cited article, attributed to Army Basic Field Manual FM 23-7."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-30-carbine",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 30 Carbine",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page106.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-30-carbine",
+      "type": "wikipedia",
+      "title": ".30 Carbine",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368987336",
+      "lang": "en",
+      "revision": "1368987336",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q155194"
+}

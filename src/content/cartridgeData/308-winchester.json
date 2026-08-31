@@ -1,0 +1,166 @@
+{
+  "id": "308-winchester",
+  "name": ".308 Winchester",
+  "aliases": [
+    {
+      "name": "7.62×51mm",
+      "kind": "metric",
+      "note": "The commercial and military rounds share a chamber but not a pressure specification."
+    }
+  ],
+  "introduced": 1952,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 51.18,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 71.12,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 11.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 8.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 415,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "C.I.P. Pmax 4150 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "fed-168-bthp",
+      "name": "168 gr boat-tail hollow point",
+      "bulletType": "BTHP",
+      "bulletMass": {
+        "value": 10.89,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-308-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890330",
+        "sourceNote": "Published as 168 gr; 1 gr = 0.06479891 g exactly."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-308-winchester",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890330",
+            "sourceNote": "Test barrel stated as 24 inches."
+          },
+          "velocity": {
+            "value": 807.7,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-308-winchester",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890330",
+            "sourceNote": "Published as 2,650 ft/s; 1 ft/s = 0.3048 m/s exactly."
+          }
+        }
+      ]
+    },
+    {
+      "id": "nosler-150",
+      "name": "150 gr Nosler tip",
+      "bulletType": "Polymer-tipped",
+      "bulletMass": {
+        "value": 9.72,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-308-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890330",
+        "sourceNote": "Published as 150 gr; 1 gr = 0.06479891 g exactly."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-308-winchester",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890330",
+            "sourceNote": "Test barrel stated as 24 inches."
+          },
+          "velocity": {
+            "value": 859.5,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-308-winchester",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890330",
+            "sourceNote": "Published as 2,820 ft/s."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-308-win",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 308 Win.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-308-winchester",
+      "type": "wikipedia",
+      "title": ".308 Winchester",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362890330",
+      "lang": "en",
+      "revision": "1362890330",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q2005795"
+}

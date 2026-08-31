@@ -1,0 +1,120 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "The Gun that Won the West",
+      "kind": "nickname",
+      "note": "A Winchester advertising slogan from the 1920s, not a contemporary description."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "tube"
+  ],
+  "roles": [
+    "hunting"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "44-40-winchester",
+      "capacity": {
+        "value": 14,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-winchester-rifle",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372177916",
+        "sourceNote": "Tube magazine under the barrel; the article gives 7 to 14 rounds across barrel lengths."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "22-long-rifle",
+      "capacity": {
+        "value": 14,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-winchester-rifle",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372177916",
+        "sourceNote": "Tube magazine. The 1873 was the first Winchester offered in a rimfire chambering."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/winchester-model-1873/hero.webp",
+      "alt": "A Winchester Model 1873 rifle lying on a wooden surface, seen from the left, with a walnut stock, a colour-cased receiver, an octagonal barrel and a loading lever below the trigger",
+      "caption": "A Model 1873 with the octagonal barrel and the loading gate visible on the right of the receiver. The lever below the trigger guard operates the toggle-link action.",
+      "width": 1600,
+      "height": 421,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Winchester_1873_Rifle.jpg",
+        "title": "File:Winchester 1873 Rifle.jpg",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    }
+  ],
+  "id": "winchester-model-1873",
+  "name": "Winchester Model 1873",
+  "makerRef": "winchester-repeating-arms",
+  "type": "rifle",
+  "action": "lever",
+  "operatingSystem": "manual",
+  "designedIn": "united-states",
+  "introduced": 1873,
+  "productionYears": {
+    "start": 1873,
+    "end": 1923
+  },
+  "massEmpty": {
+    "value": 4.309,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-winchester-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372177916",
+    "sourceNote": "Published as 9.5 lb; 1 lb = 0.45359237 kg exactly. The cited article publishes this for the Winchester rifle series as a whole, illustrated with an 1873; it is not stated for the 1873 specifically."
+  },
+  "length": {
+    "value": 1252.22,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-winchester-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372177916",
+    "sourceNote": "Published as 49.3 in; 1 in = 25.4 mm exactly. Published for the series rather than for this model."
+  },
+  "barrelLength": {
+    "value": 762,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-winchester-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372177916",
+    "sourceNote": "Published as 30 in; 1 in = 25.4 mm exactly. Published for the series rather than for this model; the 1873 was catalogued with 20-, 24- and 30-inch barrels."
+  },
+  "references": [
+    {
+      "key": "wp-winchester-rifle",
+      "type": "wikipedia",
+      "title": "Winchester rifle",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372177916",
+      "lang": "en",
+      "revision": "1372177916",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated"
+}

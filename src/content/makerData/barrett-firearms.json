@@ -1,0 +1,24 @@
+{
+  "id": "barrett-firearms",
+  "name": "Barrett Firearms Manufacturing",
+  "wikidataId": "Q808890",
+  "country": "united-states",
+  "founded": 1982,
+  "dissolved": null,
+  "website": "https://barrett.net/",
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-barrett-firearms-manufacturing",
+      "type": "wikipedia",
+      "title": "Barrett Firearms Manufacturing",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1360519349",
+      "lang": "en",
+      "revision": "1360519349",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

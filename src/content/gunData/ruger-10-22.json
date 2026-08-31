@@ -1,0 +1,130 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "10/22 Carbine",
+      "kind": "commercial"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "rotary",
+    "detachable-box"
+  ],
+  "roles": [
+    "target",
+    "competition",
+    "hunting"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "22-long-rifle",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-ruger-10-22",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368986658",
+        "sourceNote": "Rotary magazine sitting flush with the stock; 15- and 25-round box magazines are also made."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/ruger-10-22/hero.webp",
+      "alt": "A Ruger 10/22 rifle lying on weathered wooden decking, seen from the left, with a plain hardwood stock, a barrel band and a rotary magazine sitting flush with the underside of the stock",
+      "caption": "A standard 10/22 carbine. The magazine is flush with the stock rather than protruding — the point of the rotary design.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "James Case from Philadelphia, Mississippi, U.S.A.",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ruger_10-22_(36612280570).jpg",
+        "title": "File:Ruger 10-22 (36612280570).jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    }
+  ],
+  "id": "ruger-10-22",
+  "name": "Ruger 10/22",
+  "makerRef": "sturm-ruger",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "united-states",
+  "introduced": 1964,
+  "productionYears": {
+    "start": 1964,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 2.268,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-ruger-10-22",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368986658",
+    "sourceNote": "Published as 5 lb; 1 lb = 0.45359237 kg exactly."
+  },
+  "length": {
+    "value": 939.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-ruger-10-22",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368986658",
+    "sourceNote": "Published as 37 in; 1 in = 25.4 mm exactly."
+  },
+  "barrelLength": {
+    "value": 469.9,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-ruger-10-22",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368986658",
+    "sourceNote": "Published as 18.5 in; 1 in = 25.4 mm exactly."
+  },
+  "productionTotal": {
+    "value": 7000000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-ruger-10-22",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368986658",
+    "sourceNote": "The cited article gives \"over 7 million\" as at 2015, so this is a floor and it is a decade old."
+  },
+  "launchPrice": {
+    "amount": 54.5,
+    "currency": "USD",
+    "market": "US",
+    "year": 1965,
+    "status": "verified",
+    "source": "wp-ruger-10-22",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368986658",
+    "sourceNote": "Published as the 1965 price, a year after introduction."
+  },
+  "references": [
+    {
+      "key": "wp-ruger-10-22",
+      "type": "wikipedia",
+      "title": "Ruger 10/22",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368986658",
+      "lang": "en",
+      "revision": "1368986658",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q7378526"
+}

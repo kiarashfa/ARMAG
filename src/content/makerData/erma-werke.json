@@ -1,0 +1,24 @@
+{
+  "id": "erma-werke",
+  "name": "Erma Werke",
+  "nativeName": "Erfurter Maschinenfabrik",
+  "wikidataId": "Q185835",
+  "country": "germany",
+  "founded": 1922,
+  "dissolved": 1997,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-erma-werke",
+      "type": "wikipedia",
+      "title": "Erma Werke",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1289260393",
+      "lang": "en",
+      "revision": "1289260393",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

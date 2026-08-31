@@ -1,0 +1,177 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Mk 16",
+      "kind": "military",
+      "note": "US SOCOM designation for the 5.56 mm SCAR-L."
+    },
+    {
+      "name": "Mk 17",
+      "kind": "military",
+      "note": "US SOCOM designation for the 7.62 mm SCAR-H."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "belgium",
+    "united-states"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "assault-rifle",
+    "battle-rifle",
+    "dmr"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-fn-scar",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362919440",
+        "sourceNote": "STANAG magazine, SCAR-L."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "7-62x51mm-nato",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-fn-scar",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362919440",
+        "sourceNote": "Proprietary box magazine, SCAR-H."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [
+    {
+      "id": "scar-l",
+      "name": "SCAR-L (Mk 16)",
+      "summary": "The 5.56 mm version, and the one whose figures this entry records. Dropped by US SOCOM in 2010 on the argument that it offered too little over an M4.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "scar-h",
+      "name": "SCAR-H (Mk 17)",
+      "summary": "The 7.62 mm version on a longer receiver, which SOCOM kept. The reason the platform is usually described as two rifles rather than one.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "mk20-ssr",
+      "name": "Mk 20 SSR",
+      "summary": "A semi-automatic marksman configuration of the SCAR-H with a longer, heavier barrel and an adjustable stock.",
+      "overrides": {},
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/fn-scar/hero.webp",
+      "alt": "An FN SCAR-L disassembled on a steel workbench: tan upper receiver with the barrel installed, tan lower receiver, folding stock, bolt carrier, recoil spring, small parts, three magazines and a sling",
+      "caption": "A SCAR-L fieldstripped. The upper receiver is one extruded aluminium piece with the barrel clamped into it, which is what makes the barrel changeable in the field.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "The RedBurn",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:FN_SCAR-L_fieldstripped.jpg",
+        "title": "File:FN SCAR-L fieldstripped.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "id": "fn-scar",
+  "name": "FN SCAR",
+  "makerRef": "fn-herstal",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "belgium",
+  "introduced": 2009,
+  "productionYears": {
+    "start": 2004,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 3.29,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-fn-scar",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362919440",
+    "sourceNote": "SCAR-L. The SCAR-H is published at 3.58 kg."
+  },
+  "length": {
+    "value": 889,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-fn-scar",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362919440",
+    "sourceNote": "SCAR-L, stock extended; 635 mm folded. The SCAR-H is 965 mm extended."
+  },
+  "lengthFolded": {
+    "value": 635,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-fn-scar",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362919440",
+    "sourceNote": "SCAR-L, stock folded."
+  },
+  "barrelLength": {
+    "value": 355,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-fn-scar",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362919440",
+    "sourceNote": "SCAR-L. The SCAR-H barrel is 400 mm."
+  },
+  "cyclicRate": {
+    "value": 650,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "wp-fn-scar",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362919440",
+    "sourceNote": "SCAR-L. The SCAR-H is published at 550 rounds/min."
+  },
+  "effectiveRange": {
+    "value": 500,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-fn-scar",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362919440",
+    "sourceNote": "SCAR-L; 600 m is published for the SCAR-H."
+  },
+  "references": [
+    {
+      "key": "wp-fn-scar",
+      "type": "wikipedia",
+      "title": "FN SCAR",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362919440",
+      "lang": "en",
+      "revision": "1362919440",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q27671"
+}

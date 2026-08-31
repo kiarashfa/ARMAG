@@ -1,0 +1,11 @@
+{
+  "note": "Entries whose `wikidataId` deliberately differs from the item their cited Wikipedia article resolves to. `wikidata.mjs verify` treats a listed entry as reviewed and exits 0; an unlisted mismatch fails. Every line here was checked against the Wikidata label, and the reason is the same one in every case: an English Wikipedia article is often broader than the thing this site records (FRICTION-LOG A7 — one item per family, not per model).",
+  "checked": "2026-08-31",
+  "exceptions": {
+    "glock-17": "Q172172 is 'Glock 17 — semi-automatic pistol'. The cited article 'Glock' resolves to Q739882, the pistol brand, which covers the whole series.",
+    "glock": "Q702135 is 'Glock Ges.m.b.H. — Austrian weapons manufacturing company'. The cited article resolves to Q739882, the brand rather than the company.",
+    "5-56x45mm-nato": "Q238456 is '5.56×45mm NATO — intermediate firearms cartridge'. This entry cites the M16 rifle article because that is where its sourced figures come from, not because the article is about the cartridge.",
+    "winchester-model-1873": "No id, deliberately. The cited article 'Winchester rifle' resolves to Q1570235, which is the whole lever-action series; no free article covers the 1873 alone, and a series id on a model entry is a wrong join.",
+    "izhmash": "No id, deliberately. Izhmash and Kalashnikov Concern share Q7427495, so recording it here would duplicate the successor company's key."
+  }
+}

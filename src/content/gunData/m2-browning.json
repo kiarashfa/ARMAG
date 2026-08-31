@@ -1,0 +1,130 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Ma Deuce",
+      "kind": "nickname"
+    },
+    {
+      "name": "M2HB",
+      "kind": "military",
+      "note": "Heavy Barrel — the ground version, and the one this entry describes."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states",
+    "belgium",
+    "united-kingdom"
+  ],
+  "fireModes": [
+    "automatic"
+  ],
+  "feedSystem": [
+    "belt"
+  ],
+  "roles": [
+    "general-purpose"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "50-bmg",
+      "capacity": {
+        "value": 100,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-m2-browning",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372170779",
+        "sourceNote": "Belt-fed from M2 or M9 links. Capacity is a property of the ammunition box, not of the gun."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/m2-browning/hero.webp",
+      "alt": "An M2 Browning heavy machine gun on a low tripod, isolated on white, seen from the left, with a very long heavy barrel, a perforated barrel support and spade grips at the rear",
+      "caption": "An M2HB on the M3 tripod at the Musée de l’Armée. The gun alone is 38 kg; with this tripod and its traverse-and-elevation mechanism the article gives 58 kg.",
+      "width": 1600,
+      "height": 1067,
+      "credit": {
+        "author": "Rama",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M2_Browning,_Musée_de_l'Armée.jpg",
+        "title": "File:M2 Browning, Musée de l'Armée.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en"
+      }
+    }
+  ],
+  "id": "m2-browning",
+  "name": "M2 Browning",
+  "makerRef": "colt",
+  "type": "machine-gun",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "united-states",
+  "introduced": 1933,
+  "productionYears": {
+    "start": 1921,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 38,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-m2-browning",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372170779",
+    "sourceNote": "Gun only. The article gives 58 kg with tripod and traverse-and-elevation mechanism, and 28 kg for the lighter aircraft AN/M2."
+  },
+  "length": {
+    "value": 1654,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m2-browning",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372170779",
+    "sourceNote": "The AN/M2 aircraft version is 1,429 mm."
+  },
+  "barrelLength": {
+    "value": 1143,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m2-browning",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372170779",
+    "sourceNote": "The AN/M2 barrel is 910 mm."
+  },
+  "effectiveRange": {
+    "value": 1800,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-m2-browning",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372170779"
+  },
+  "productionTotal": {
+    "value": 3000000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-m2-browning",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372170779"
+  },
+  "references": [
+    {
+      "key": "wp-m2-browning",
+      "type": "wikipedia",
+      "title": "M2 Browning",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372170779",
+      "lang": "en",
+      "revision": "1372170779",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q218932"
+}

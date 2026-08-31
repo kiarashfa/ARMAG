@@ -1,0 +1,23 @@
+{
+  "id": "auto-ordnance",
+  "name": "Auto-Ordnance Corporation",
+  "wikidataId": "Q607947",
+  "country": "united-states",
+  "founded": 1916,
+  "dissolved": null,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-auto-ordnance-corporation",
+      "type": "wikipedia",
+      "title": "Auto-Ordnance Corporation",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371164617",
+      "lang": "en",
+      "revision": "1371164617",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

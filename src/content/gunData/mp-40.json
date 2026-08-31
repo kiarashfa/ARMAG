@@ -1,0 +1,132 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Schmeisser",
+      "kind": "nickname",
+      "note": "Allied troops named it after Hugo Schmeisser, who did not design it."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "germany",
+    "austria"
+  ],
+  "fireModes": [
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-mp-40",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819426",
+        "sourceNote": "A dual-magazine holder doubling this to 64 was also issued."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/mp-40/hero.webp",
+      "alt": "An MP 40 submachine gun photographed against a grey museum background with a colour calibration chart, stock folded under, the magazine hanging vertically",
+      "caption": "A museum specimen photographed with a colour reference chart. The stock is folded; extended, it adds about 200 mm.",
+      "width": 602,
+      "height": 400,
+      "credit": {
+        "author": "Unknown author Unknown author",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MP-40_Right_Side_SPAR1570_JAN._9._2008.jpg",
+        "title": "File:MP-40 Right Side SPAR1570 JAN. 9. 2008.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "mp-40",
+  "name": "MP 40",
+  "nativeName": "Maschinenpistole 40",
+  "makerRef": "erma-werke",
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "germany",
+  "introduced": 1940,
+  "productionYears": {
+    "start": 1940,
+    "end": 1945
+  },
+  "massEmpty": {
+    "value": 3.97,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-mp-40",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819426"
+  },
+  "length": {
+    "value": 833,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-mp-40",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819426",
+    "sourceNote": "Stock extended."
+  },
+  "lengthFolded": {
+    "value": 630,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-mp-40",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819426",
+    "sourceNote": "Stock folded."
+  },
+  "barrelLength": {
+    "value": 251,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-mp-40",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819426"
+  },
+  "cyclicRate": {
+    "value": 525,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-mp-40",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819426",
+    "sourceNote": "The article publishes 500–550 rounds/min. Recorded as the midpoint of that range."
+  },
+  "productionTotal": {
+    "value": 1100000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-mp-40",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819426",
+    "sourceNote": "The cited article gives 1,100,000 and labels it an estimate."
+  },
+  "references": [
+    {
+      "key": "wp-mp-40",
+      "type": "wikipedia",
+      "title": "MP 40",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370819426",
+      "lang": "en",
+      "revision": "1370819426",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q151044"
+}

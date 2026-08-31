@@ -1,0 +1,135 @@
+{
+  "id": "9x18mm-makarov",
+  "name": "9×18mm Makarov",
+  "aliases": [
+    {
+      "name": "9mm PM",
+      "kind": "military",
+      "note": "From Pistolet Makarova."
+    }
+  ],
+  "nativeName": "9×18 Макаров",
+  "designedBy": "B. V. Semin",
+  "introduced": 1951,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "tapered",
+  "caseLength": {
+    "value": 18.1,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-makarov",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page23.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 25,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-makarov",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page23.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 9.27,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-makarov",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page23.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 9.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-makarov",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page23.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 9.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-makarov",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page23.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 9.91,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-makarov",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page23.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 160,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-9-mm-makarov",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page23.pdf",
+    "sourceNote": "C.I.P. Pmax 1600 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "fmj-95",
+      "name": "95 gr full metal jacket",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 6.156,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-9-18mm-makarov",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364073174",
+        "sourceNote": "Published as 95 gr; 1 gr = 0.06479891 g exactly."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 97,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-9-18mm-makarov",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364073174",
+            "sourceNote": "Test barrel stated as 97 mm, the Makarov pistol’s own barrel length."
+          },
+          "velocity": {
+            "value": 319,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-9-18mm-makarov",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364073174",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-9-mm-makarov",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 9 mm Makarov",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page23.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-9-18mm-makarov",
+      "type": "wikipedia",
+      "title": "9×18mm Makarov",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1364073174",
+      "lang": "en",
+      "revision": "1364073174",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q277462"
+}

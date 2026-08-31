@@ -2,52 +2,182 @@
   "axis": "country",
   "urlPrefix": "/country/",
   "authored": true,
-  "note": "SPEC.md §7 — origin is two fields: `designedIn` (one) and `producedIn[]` (many), because they differ constantly. Historical states are first-class terms, not aliases of their successors: an arm designed in the Soviet Union in 1947 was not designed in Russia, and collapsing the two would silently rewrite history inside a filter. `succeededBy` links them for anyone browsing forward. Seed list — extend it as entries need it; an unlisted country fails the build naming this file.",
+  "note": "SPEC.md §7 — origin is two fields: `designedIn` (one) and `producedIn[]` (many), because they differ constantly. Historical states are first-class terms, not aliases of their successors: an arm designed in the Soviet Union in 1947 was not designed in Russia, and collapsing the two would silently rewrite history inside a filter. `succeededBy` links them for anyone browsing forward. Seed list — extend it as entries need it; an unlisted country fails the build naming this file. Pruned in Phase 10 to the terms the seed content actually uses: an unused term is an empty browse page in the sitemap, and this file's own instruction is to extend it as entries need it. Re-adding one is a single line, and an unlisted country fails the build naming this file, so nothing can be authored against a term that is missing.",
   "terms": [
-    { "id": "argentina", "label": "Argentina" },
-    { "id": "australia", "label": "Australia" },
-    { "id": "austria", "label": "Austria" },
-    { "id": "austria-hungary", "label": "Austria-Hungary", "existed": { "start": 1867, "end": 1918 }, "succeededBy": "austria" },
-    { "id": "belgium", "label": "Belgium" },
-    { "id": "brazil", "label": "Brazil" },
-    { "id": "canada", "label": "Canada" },
-    { "id": "china", "label": "China", "aka": ["PRC"] },
-    { "id": "croatia", "label": "Croatia" },
-    { "id": "czechia", "label": "Czechia", "aka": ["Czech Republic"] },
-    { "id": "czechoslovakia", "label": "Czechoslovakia", "existed": { "start": 1918, "end": 1992 }, "succeededBy": "czechia" },
-    { "id": "denmark", "label": "Denmark" },
-    { "id": "east-germany", "label": "East Germany", "aka": ["German Democratic Republic", "DDR"], "existed": { "start": 1949, "end": 1990 }, "succeededBy": "germany" },
-    { "id": "egypt", "label": "Egypt" },
-    { "id": "finland", "label": "Finland" },
-    { "id": "france", "label": "France" },
-    { "id": "germany", "label": "Germany" },
-    { "id": "hungary", "label": "Hungary" },
-    { "id": "india", "label": "India" },
-    { "id": "iran", "label": "Iran" },
-    { "id": "israel", "label": "Israel" },
-    { "id": "italy", "label": "Italy" },
-    { "id": "japan", "label": "Japan" },
-    { "id": "north-korea", "label": "North Korea" },
-    { "id": "norway", "label": "Norway" },
-    { "id": "pakistan", "label": "Pakistan" },
-    { "id": "poland", "label": "Poland" },
-    { "id": "portugal", "label": "Portugal" },
-    { "id": "romania", "label": "Romania" },
-    { "id": "russia", "label": "Russia" },
-    { "id": "russian-empire", "label": "Russian Empire", "existed": { "start": 1721, "end": 1917 }, "succeededBy": "soviet-union" },
-    { "id": "serbia", "label": "Serbia" },
-    { "id": "singapore", "label": "Singapore" },
-    { "id": "south-africa", "label": "South Africa" },
-    { "id": "south-korea", "label": "South Korea" },
-    { "id": "soviet-union", "label": "Soviet Union", "aka": ["USSR"], "existed": { "start": 1922, "end": 1991 }, "succeededBy": "russia" },
-    { "id": "spain", "label": "Spain" },
-    { "id": "sweden", "label": "Sweden" },
-    { "id": "switzerland", "label": "Switzerland" },
-    { "id": "taiwan", "label": "Taiwan" },
-    { "id": "turkey", "label": "Turkey" },
-    { "id": "ukraine", "label": "Ukraine" },
-    { "id": "united-kingdom", "label": "United Kingdom" },
-    { "id": "united-states", "label": "United States" },
-    { "id": "yugoslavia", "label": "Yugoslavia", "existed": { "start": 1918, "end": 1992 }, "succeededBy": "serbia" }
+    {
+      "id": "argentina",
+      "label": "Argentina"
+    },
+    {
+      "id": "australia",
+      "label": "Australia"
+    },
+    {
+      "id": "austria",
+      "label": "Austria"
+    },
+    {
+      "id": "belgium",
+      "label": "Belgium"
+    },
+    {
+      "id": "brazil",
+      "label": "Brazil"
+    },
+    {
+      "id": "canada",
+      "label": "Canada"
+    },
+    {
+      "id": "china",
+      "label": "China",
+      "aka": [
+        "PRC"
+      ]
+    },
+    {
+      "id": "czechia",
+      "label": "Czechia",
+      "aka": [
+        "Czech Republic"
+      ]
+    },
+    {
+      "id": "czechoslovakia",
+      "label": "Czechoslovakia",
+      "existed": {
+        "start": 1918,
+        "end": 1992
+      },
+      "succeededBy": "czechia"
+    },
+    {
+      "id": "france",
+      "label": "France"
+    },
+    {
+      "id": "german-empire",
+      "label": "German Empire",
+      "existed": {
+        "start": 1871,
+        "end": 1918
+      },
+      "succeededBy": "germany"
+    },
+    {
+      "id": "germany",
+      "label": "Germany"
+    },
+    {
+      "id": "greece",
+      "label": "Greece"
+    },
+    {
+      "id": "india",
+      "label": "India"
+    },
+    {
+      "id": "iran",
+      "label": "Iran"
+    },
+    {
+      "id": "israel",
+      "label": "Israel"
+    },
+    {
+      "id": "italy",
+      "label": "Italy"
+    },
+    {
+      "id": "japan",
+      "label": "Japan"
+    },
+    {
+      "id": "malaysia",
+      "label": "Malaysia"
+    },
+    {
+      "id": "norway",
+      "label": "Norway"
+    },
+    {
+      "id": "pakistan",
+      "label": "Pakistan"
+    },
+    {
+      "id": "poland",
+      "label": "Poland"
+    },
+    {
+      "id": "romania",
+      "label": "Romania"
+    },
+    {
+      "id": "russia",
+      "label": "Russia"
+    },
+    {
+      "id": "russian-empire",
+      "label": "Russian Empire",
+      "existed": {
+        "start": 1721,
+        "end": 1917
+      },
+      "succeededBy": "soviet-union"
+    },
+    {
+      "id": "serbia",
+      "label": "Serbia",
+      "note": "Kept with no entries of its own: Yugoslavia’s `succeededBy` points here, and pruning it would leave a dangling reference. `taxonomy/succession-unresolved` fails the build if that ever happens again."
+    },
+    {
+      "id": "singapore",
+      "label": "Singapore"
+    },
+    {
+      "id": "south-africa",
+      "label": "South Africa"
+    },
+    {
+      "id": "soviet-union",
+      "label": "Soviet Union",
+      "aka": [
+        "USSR"
+      ],
+      "existed": {
+        "start": 1922,
+        "end": 1991
+      },
+      "succeededBy": "russia"
+    },
+    {
+      "id": "sweden",
+      "label": "Sweden"
+    },
+    {
+      "id": "switzerland",
+      "label": "Switzerland"
+    },
+    {
+      "id": "turkey",
+      "label": "Turkey"
+    },
+    {
+      "id": "united-kingdom",
+      "label": "United Kingdom"
+    },
+    {
+      "id": "united-states",
+      "label": "United States"
+    },
+    {
+      "id": "yugoslavia",
+      "label": "Yugoslavia",
+      "existed": {
+        "start": 1918,
+        "end": 1992
+      },
+      "succeededBy": "serbia"
+    }
   ]
 }

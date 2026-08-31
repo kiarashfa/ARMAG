@@ -1,0 +1,85 @@
+{
+  "id": "50-bmg",
+  "name": ".50 BMG",
+  "aliases": [
+    {
+      "name": "12.7×99mm NATO",
+      "kind": "metric"
+    },
+    {
+      "name": ".50 Browning Machine Gun",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "Winchester Repeating Arms Company and Frankford Arsenal",
+  "introduced": 1921,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 99.31,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-bmg",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364906082",
+    "sourceNote": "C.I.P. does not list 12.7×99mm and the NATO standard is not free, so this is the uncited infobox figure of the article named, converted from inches. It is a lead, not a standard."
+  },
+  "overallLength": {
+    "value": 138.43,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-bmg",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364906082",
+    "sourceNote": "C.I.P. does not list 12.7×99mm and the NATO standard is not free, so this is the uncited infobox figure of the article named, converted from inches. It is a lead, not a standard."
+  },
+  "bulletDiameter": {
+    "value": 12.98,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-bmg",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364906082",
+    "sourceNote": "C.I.P. does not list 12.7×99mm and the NATO standard is not free, so this is the uncited infobox figure of the article named, converted from inches. It is a lead, not a standard."
+  },
+  "rimDiameter": {
+    "value": 20.42,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-bmg",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364906082",
+    "sourceNote": "C.I.P. does not list 12.7×99mm and the NATO standard is not free, so this is the uncited infobox figure of the article named, converted from inches. It is a lead, not a standard."
+  },
+  "baseDiameter": {
+    "value": 20.42,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-bmg",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364906082",
+    "sourceNote": "C.I.P. does not list 12.7×99mm and the NATO standard is not free, so this is the uncited infobox figure of the article named, converted from inches. It is a lead, not a standard."
+  },
+  "neckDiameter": {
+    "value": 14.22,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-bmg",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364906082",
+    "sourceNote": "C.I.P. does not list 12.7×99mm and the NATO standard is not free, so this is the uncited infobox figure of the article named, converted from inches. It is a lead, not a standard."
+  },
+  "loads": [],
+  "references": [
+    {
+      "key": "wp-50-bmg",
+      "type": "wikipedia",
+      "title": ".50 BMG",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1364906082",
+      "lang": "en",
+      "revision": "1364906082",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q171628"
+}

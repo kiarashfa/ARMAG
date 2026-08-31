@@ -1,0 +1,178 @@
+{
+  "kind": "model",
+  "familyRef": "ar-15",
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Rifle, Caliber 5.56 mm, M16",
+      "kind": "military"
+    },
+    {
+      "name": "M16A2",
+      "kind": "military",
+      "note": "The 1983 variant this entry’s dimensions describe."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states",
+    "belgium",
+    "canada",
+    "singapore"
+  ],
+  "fireModes": [
+    "semi",
+    "burst",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "assault-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-m16-rifle",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371381489",
+        "sourceNote": "STANAG magazines of 20, 30, 40 and 60 rounds and a 100-round drum are listed."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "m16a1",
+      "name": "M16A1",
+      "productionYears": {
+        "start": 1967,
+        "end": 1982
+      },
+      "summary": "Forward assist, chrome-lined chamber and a 1:12 twist. The rifle of the Vietnam War, and the one whose early reliability problems produced a Congressional inquiry.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "m16a2",
+      "name": "M16A2",
+      "productionYears": {
+        "start": 1983,
+        "end": 1994
+      },
+      "summary": "Three-round burst instead of automatic, a heavier barrel in 1:7 twist for the new SS109 bullet, and an adjustable rear sight. The configuration this entry’s dimensions describe.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "m16a4",
+      "name": "M16A4",
+      "productionYears": {
+        "start": 1998,
+        "end": null
+      },
+      "summary": "A flat-top receiver with a Picatinny rail in place of the fixed carrying handle.",
+      "overrides": {},
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/m16-rifle/hero.webp",
+      "alt": "Two views of an M16A2 rifle isolated on white, left and right sides, showing the carrying handle, the ribbed round handguard and a curved magazine",
+      "caption": "An M16A2 from the Swedish Army Museum — the configuration this entry’s weight, length and barrel figures describe.",
+      "width": 1600,
+      "height": 935,
+      "credit": {
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M16A2_noBG.jpg",
+        "title": "File:M16A2 noBG.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "id": "m16-rifle",
+  "name": "M16 rifle",
+  "makerRef": "colt",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-direct-impingement",
+  "designedIn": "united-states",
+  "introduced": 1964,
+  "productionYears": {
+    "start": 1963,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 3.402,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-m16-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371381489",
+    "sourceNote": "Published as 7.5 lb; 1 lb = 0.45359237 kg exactly. M16A2, without magazine or sling."
+  },
+  "length": {
+    "value": 1006.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m16-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371381489",
+    "sourceNote": "Published as 39.63 in; 1 in = 25.4 mm exactly. M16A2."
+  },
+  "barrelLength": {
+    "value": 508,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m16-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371381489",
+    "sourceNote": "Published as 20 in; 1 in = 25.4 mm exactly."
+  },
+  "cyclicRate": {
+    "value": 800,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-m16-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371381489",
+    "sourceNote": "The article publishes 700–900 rounds/min for the M16A2 and M16A3 and a single 800 for the M16A4. Recorded as the M16A4 figure, which falls inside the earlier range."
+  },
+  "effectiveRange": {
+    "value": 550,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-m16-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371381489",
+    "sourceNote": "Published as the point-target effective range; 800 m is given for an area target."
+  },
+  "productionTotal": {
+    "value": 8000000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-m16-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371381489",
+    "sourceNote": "The cited article gives \"~8 million\" for the M16 itself, separately from about 28 million AR-15–style rifles."
+  },
+  "references": [
+    {
+      "key": "wp-m16-rifle",
+      "type": "wikipedia",
+      "title": "M16 rifle",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371381489",
+      "lang": "en",
+      "revision": "1371381489",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q170318"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "springfield-armory",
+  "name": "Springfield Armory",
+  "wikidataId": "Q1193204",
+  "country": "united-states",
+  "founded": 1777,
+  "dissolved": 1968,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-springfield-armory",
+      "type": "wikipedia",
+      "title": "Springfield Armory",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367526226",
+      "lang": "en",
+      "revision": "1367526226",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

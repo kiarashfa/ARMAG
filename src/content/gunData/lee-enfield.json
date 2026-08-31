@@ -1,0 +1,125 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "SMLE",
+      "kind": "military",
+      "note": "Short, Magazine, Lee–Enfield — the Mk III of 1907."
+    },
+    {
+      "name": "Rifle No. 4",
+      "kind": "military",
+      "note": "The 1941 wartime simplification."
+    },
+    {
+      "name": ".303",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-kingdom",
+    "india",
+    "australia",
+    "canada"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "detachable-box",
+    "stripper"
+  ],
+  "roles": [
+    "service-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "303-british",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-lee-enfield",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368996931",
+        "sourceNote": "Detachable box magazine, normally loaded in place from two five-round charger clips."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "7-62x51mm-nato",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-lee-enfield",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368996931",
+        "sourceNote": "The L8 conversions, the L42A1 sniper rifle and some No. 4 rifles."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/lee-enfield/hero.webp",
+      "alt": "Two views of a Lee–Enfield rifle on a pale background, left and right sides, with a full wooden stock, a bolt handle bent down beside the trigger and a detachable box magazine",
+      "caption": "A No. 4 Mk I made in 1943, from the Swedish Army Museum. The bolt handle sits well back and close to the hand — the reason the action is as fast as it is.",
+      "width": 1600,
+      "height": 800,
+      "credit": {
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lee-Enfield_No_4_Mk_I_(1943)_-_AM.032027.jpg",
+        "title": "File:Lee-Enfield No 4 Mk I (1943) - AM.032027.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "lee-enfield",
+  "name": "Lee–Enfield",
+  "makerRef": "rsaf-enfield",
+  "type": "rifle",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "united-kingdom",
+  "introduced": 1895,
+  "productionYears": {
+    "start": 1895,
+    "end": 1957
+  },
+  "effectiveRange": {
+    "value": 502.92,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-lee-enfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368996931",
+    "sourceNote": "Published as 550 yd; 1 yd = 0.9144 m exactly."
+  },
+  "productionTotal": {
+    "value": 17000000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-lee-enfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368996931",
+    "sourceNote": "The cited article gives \"17,000,000+\", so this is a floor rather than a count."
+  },
+  "references": [
+    {
+      "key": "wp-lee-enfield",
+      "type": "wikipedia",
+      "title": "Lee–Enfield",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368996931",
+      "lang": "en",
+      "revision": "1368996931",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q723346"
+}

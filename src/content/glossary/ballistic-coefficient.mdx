@@ -1,0 +1,24 @@
+---
+id: ballistic-coefficient
+term: "Ballistic coefficient"
+aka:
+  - "BC"
+  - "G1"
+  - "G7"
+short: "A number describing how well a projectile keeps its velocity against air drag, relative to a standard reference shape."
+seeAlso:
+  - muzzle-energy
+  - trajectory
+---
+
+Not a property of the bullet alone. A ballistic coefficient is the ratio of the bullet's sectional
+density to a form factor measured against a specific standard projectile, so the same bullet has different
+coefficients under different standards.
+
+Two standards matter here. G1 is a flat-based reference shape from the 1880s and is what most American
+ammunition makers publish; it fits blunt flat-based bullets reasonably and long boat-tailed ones badly, which is
+why a G1 coefficient often has to be published as several values for different velocity bands. G7 is a
+boat-tailed reference shape and describes a modern long-range rifle bullet far better across its whole flight.
+
+This site stores whichever the source published, labelled, and the trajectory solver uses the matching drag
+table. Mixing them silently would produce a plausible and wrong answer.

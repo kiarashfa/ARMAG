@@ -1,0 +1,25 @@
+{
+  "id": "heckler-koch",
+  "name": "Heckler & Koch",
+  "nativeName": "Heckler & Koch GmbH",
+  "wikidataId": "Q152815",
+  "country": "germany",
+  "founded": 1949,
+  "dissolved": null,
+  "website": "https://www.heckler-koch.com/",
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-heckler-koch",
+      "type": "wikipedia",
+      "title": "Heckler & Koch",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368993462",
+      "lang": "en",
+      "revision": "1368993462",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

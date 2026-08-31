@@ -1,0 +1,90 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "PSP",
+      "kind": "military",
+      "note": "Polizei-Selbstlade-Pistole, the original designation."
+    },
+    {
+      "name": "P7M8",
+      "kind": "commercial",
+      "note": "The eight-round production version."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "germany"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "duty-sidearm",
+    "law-enforcement"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-heckler-koch-p7",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362866466",
+        "sourceNote": "Detachable box magazine; the P7M13 holds thirteen."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/heckler-koch-p7/hero.webp",
+      "alt": "A Heckler & Koch P7M8 pistol on a pale cloth, seen from the left, with a squared black slide, stippled grip panels and a large lever running down the front of the grip",
+      "caption": "A P7M8. The lever down the front of the grip is the squeeze cocker: gripping the pistol cocks the striker, letting go de-cocks it, and there is no other safety.",
+      "width": 1600,
+      "height": 1248,
+      "credit": {
+        "author": "Cortland",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:P7M8_cortland.jpg",
+        "title": "File:P7M8 cortland.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "heckler-koch-p7",
+  "name": "Heckler & Koch P7",
+  "makerRef": "heckler-koch",
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-delayed-gas",
+  "designedIn": "germany",
+  "introduced": 1979,
+  "productionYears": {
+    "start": 1979,
+    "end": 2008
+  },
+  "references": [
+    {
+      "key": "wp-heckler-koch-p7",
+      "type": "wikipedia",
+      "title": "Heckler & Koch P7",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362866466",
+      "lang": "en",
+      "revision": "1362866466",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q1523354"
+}

@@ -1,0 +1,104 @@
+{
+  "id": "44-40-winchester",
+  "name": ".44-40 Winchester",
+  "aliases": [
+    {
+      "name": ".44 WCF",
+      "kind": "commercial",
+      "note": "Winchester Center Fire, the original designation."
+    },
+    {
+      "name": ".44 Largo",
+      "kind": "commercial",
+      "note": "The Spanish designation."
+    }
+  ],
+  "designedBy": "Winchester Repeating Arms Company",
+  "introduced": 1873,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseLength": {
+    "value": 33.15,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page108.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 40.44,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page108.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 10.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page108.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13.34,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page108.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 11.97,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page108.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 11.25,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page108.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 110,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-44-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page108.pdf",
+    "sourceNote": "C.I.P. Pmax 1100 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [],
+  "references": [
+    {
+      "key": "cip-44-40-win",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 44-40 Win.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page108.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-44-40-winchester",
+      "type": "wikipedia",
+      "title": ".44-40 Winchester",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1351556125",
+      "lang": "en",
+      "revision": "1351556125",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q158779"
+}

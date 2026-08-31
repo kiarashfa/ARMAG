@@ -1,0 +1,25 @@
+{
+  "id": "ceska-zbrojovka",
+  "name": "Česká zbrojovka Uherský Brod",
+  "nativeName": "Česká zbrojovka a.s., Uherský Brod",
+  "wikidataId": "Q14545884",
+  "country": "czechia",
+  "founded": 1936,
+  "dissolved": null,
+  "website": "https://www.czub.cz/",
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-ceska-zbrojovka-uhersky-brod",
+      "type": "wikipedia",
+      "title": "Česká zbrojovka Uherský Brod",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363690449",
+      "lang": "en",
+      "revision": "1363690449",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ]
+}

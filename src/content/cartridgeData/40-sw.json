@@ -1,0 +1,168 @@
+{
+  "id": "40-sw",
+  "name": ".40 S&W",
+  "aliases": [
+    {
+      "name": "10×22mm",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Smith & Wesson and Winchester",
+  "introduced": 1990,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 21.59,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-40-s-w",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page66.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 28.83,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-40-s-w",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page66.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 10.17,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-40-s-w",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page66.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 10.77,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-40-s-w",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page66.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 10.77,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-40-s-w",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page66.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 10.74,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-40-s-w",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page66.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 225,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-40-s-w",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page66.pdf",
+    "sourceNote": "C.I.P. Pmax 2250 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "fed-180-fmj",
+      "name": "Federal 180 gr full metal jacket",
+      "manufacturer": "Federal",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 11.66,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-40-s-w",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371072783",
+        "sourceNote": "Ballistics table of the cited article, which publishes bullet mass in grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 101.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-40-s-w",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371072783",
+            "sourceNote": "Test barrel stated as 4 inches."
+          },
+          "velocity": {
+            "value": 300.2,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-40-s-w",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371072783",
+            "sourceNote": "Published as 985 ft/s."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fed-165-fmj",
+      "name": "Federal 165 gr full metal jacket",
+      "manufacturer": "Federal",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 10.69,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-40-s-w",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371072783",
+        "sourceNote": "Ballistics table of the cited article."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 101.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-40-s-w",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371072783",
+            "sourceNote": "Test barrel stated as 4 inches."
+          },
+          "velocity": {
+            "value": 344.4,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-40-s-w",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371072783",
+            "sourceNote": "Published as 1,130 ft/s."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-40-s-w",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 40 S&W",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page66.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-40-s-w",
+      "type": "wikipedia",
+      "title": ".40 S&W",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371072783",
+      "lang": "en",
+      "revision": "1371072783",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q158782"
+}

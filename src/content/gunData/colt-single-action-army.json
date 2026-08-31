@@ -1,0 +1,160 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Peacemaker",
+      "kind": "nickname"
+    },
+    {
+      "name": "Model P",
+      "kind": "commercial"
+    },
+    {
+      "name": "Colt .45",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "cylinder"
+  ],
+  "roles": [
+    "duty-sidearm",
+    "hunting"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "45-colt",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-colt-single-action-army",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368913051",
+        "sourceNote": "Cylinder."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "44-40-winchester",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-colt-single-action-army",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368913051",
+        "sourceNote": "Cylinder. Sold as the Frontier Six-Shooter, to match the Winchester 1873."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "38-special",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-colt-single-action-army",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368913051",
+        "sourceNote": "Cylinder. A twentieth-century chambering."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "357-magnum",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-colt-single-action-army",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368913051",
+        "sourceNote": "Cylinder. Offered from the third generation onwards."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/colt-single-action-army/hero.webp",
+      "alt": "A nickel-finished Colt Single Action Army revolver seen from the left against a mottled brown background, with a long barrel, ejector rod housing and chequered grips",
+      "caption": "A second-generation Colt Single Action Army with the 7.5-inch cavalry barrel — the configuration this entry’s dimensions describe.",
+      "width": 640,
+      "height": 350,
+      "credit": {
+        "author": "Mike Cumpston",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:1956prime2.jpg",
+        "title": "File:1956prime2.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "colt-single-action-army",
+  "name": "Colt Single Action Army",
+  "makerRef": "colt",
+  "type": "revolver",
+  "action": "revolver",
+  "operatingSystem": "manual",
+  "designedIn": "united-states",
+  "introduced": 1873,
+  "productionYears": {
+    "start": 1873,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 1.048,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-colt-single-action-army",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368913051",
+    "sourceNote": "Published as 2.31 lb; 1 lb = 0.45359237 kg exactly. With the 7.5-inch barrel."
+  },
+  "length": {
+    "value": 330.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-colt-single-action-army",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368913051",
+    "sourceNote": "Published as 13 in; 1 in = 25.4 mm exactly. With the 7.5-inch barrel; 11 in with the 5.5-inch and 10.25 in with the 4.75-inch."
+  },
+  "barrelLength": {
+    "value": 190.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-colt-single-action-army",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368913051",
+    "sourceNote": "Published as 7.5 in; 1 in = 25.4 mm exactly. The cavalry length; artillery (5.5 in) and civilian (4.75 in) barrels were also standard."
+  },
+  "productionTotal": {
+    "value": 457000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-colt-single-action-army",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368913051",
+    "sourceNote": "The cited article gives \"457,000+\", so this is a floor rather than a count."
+  },
+  "references": [
+    {
+      "key": "wp-colt-single-action-army",
+      "type": "wikipedia",
+      "title": "Colt Single Action Army",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368913051",
+      "lang": "en",
+      "revision": "1368913051",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q1112183"
+}

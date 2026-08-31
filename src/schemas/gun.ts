@@ -83,7 +83,14 @@ export type GunNarrative = z.infer<typeof gunNarrativeSchema>;
  */
 export const gunAlias = z.object({
   name: z.string().min(1),
-  kind: z.enum(['military', 'export', 'importer', 'nickname', 'native']),
+  /**
+   * `commercial` was added in Phase 10: a maker's own trade designation —
+   * Colt Government, Colt Model P — is not a military designation, not an
+   * export name and not a nickname, and `cartridgeAlias` already had the
+   * term. Without it an author must file a trade name under something
+   * false, which is the failure the escalation rule exists to prevent.
+   */
+  kind: z.enum(['commercial', 'military', 'export', 'importer', 'nickname', 'native']),
   /** Where the alias was used, e.g. 'US', 'DE'. */
   market: z.string().optional(),
   years: yearRange.optional(),

@@ -1,0 +1,167 @@
+{
+  "id": "4-6x30mm",
+  "name": "HK 4.6×30mm",
+  "aliases": [
+    {
+      "name": "4.6×30mm",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Heckler & Koch",
+  "introduced": 1999,
+  "standard": "cip",
+  "caseType": "rebated-rim",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 30.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-4-6-x-30",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-250313-en.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 38.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-4-6-x-30",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-250313-en.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 4.65,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-4-6-x-30",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-250313-en.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-4-6-x-30",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-250313-en.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 8.02,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-4-6-x-30",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-250313-en.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 5.31,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-4-6-x-30",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-250313-en.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 400,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-4-6-x-30",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-250313-en.pdf",
+    "sourceNote": "C.I.P. Pmax 4000 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "dm11",
+      "name": "DM11 ball",
+      "manufacturer": "Heckler & Koch",
+      "bulletType": "Copper-plated steel",
+      "bulletMass": {
+        "value": 2,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-hk-4-6-30mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347648528",
+        "sourceNote": "Ballistics table of the cited article, which publishes bullet mass in grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 180,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-hk-4-6-30mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347648528",
+            "sourceNote": "Test barrel stated as 180 mm, the MP7’s own barrel length."
+          },
+          "velocity": {
+            "value": 720,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-hk-4-6-30mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347648528",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fmj-27",
+      "name": "2.7 g full metal jacket",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 2.7,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-hk-4-6-30mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347648528",
+        "sourceNote": "Ballistics table of the cited article."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 180,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-hk-4-6-30mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347648528",
+            "sourceNote": "Test barrel stated as 180 mm."
+          },
+          "velocity": {
+            "value": 600,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-hk-4-6-30mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347648528",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-4-6-x-30",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 4,6 x 30",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/4-6-x-30-250313-en.pdf",
+      "revision": "2025-05-13",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-hk-4-6-30mm",
+      "type": "wikipedia",
+      "title": "HK 4.6×30mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1347648528",
+      "lang": "en",
+      "revision": "1347648528",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q229873"
+}

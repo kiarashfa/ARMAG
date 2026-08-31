@@ -1,0 +1,148 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Uzi submachine gun",
+      "kind": "military"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "israel",
+    "belgium",
+    "germany"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence",
+    "law-enforcement"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-uzi",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369233342",
+        "sourceNote": "Magazines of 20, 25, 32, 40 and 50 rounds are listed."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": 16,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-uzi",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369233342",
+        "sourceNote": "Magazines of 12, 16 and 22 rounds are listed for this chambering."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/imi-uzi/hero.webp",
+      "alt": "An Uzi submachine gun on a pale background, seen from the left, with a fixed wooden stock, a ribbed metal handguard and the magazine protruding from the pistol grip",
+      "caption": "A 1952 Uzi from the Swedish Army Museum, presented to a UN chief of staff in 1961. Note the fixed wooden stock: the folding metal stock this entry’s length figures describe is a different fitting.",
+      "width": 1200,
+      "height": 476,
+      "credit": {
+        "author": "Armémuseum (Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:1952_General_von_Horn_IMI_Uzi_001_(cropped).jpg",
+        "title": "File:1952 General von Horn IMI Uzi 001 (cropped).jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    }
+  ],
+  "id": "imi-uzi",
+  "name": "Uzi",
+  "nativeName": "עוזי",
+  "makerRef": "israel-weapon-industries",
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "israel",
+  "introduced": 1954,
+  "productionYears": {
+    "start": 1950,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 3.5,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-uzi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369233342"
+  },
+  "length": {
+    "value": 640,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-uzi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369233342",
+    "sourceNote": "Folding stock extended."
+  },
+  "lengthFolded": {
+    "value": 470,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-uzi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369233342",
+    "sourceNote": "Folding stock collapsed. The stockless version is 445 mm."
+  },
+  "barrelLength": {
+    "value": 260,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-uzi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369233342"
+  },
+  "cyclicRate": {
+    "value": 600,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "wp-uzi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369233342",
+    "sourceNote": "Full-size Uzi. The Mini Uzi is published at 950 rpm and the Micro at 1,200–1,500."
+  },
+  "productionTotal": {
+    "value": 2000000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-uzi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369233342",
+    "sourceNote": "The cited article gives \"2,000,000+\", so this is a floor rather than a count."
+  },
+  "references": [
+    {
+      "key": "wp-uzi",
+      "type": "wikipedia",
+      "title": "Uzi",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369233342",
+      "lang": "en",
+      "revision": "1369233342",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q155644"
+}

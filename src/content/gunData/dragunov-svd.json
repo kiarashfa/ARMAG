@@ -1,0 +1,102 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Dragunov",
+      "kind": "nickname"
+    },
+    {
+      "name": "SVD-63",
+      "kind": "military"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "soviet-union",
+    "russia",
+    "china",
+    "romania",
+    "iran"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "dmr",
+    "sniper"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x54mmr",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-svd-rifle",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371794895",
+        "sourceNote": "Detachable box magazine."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/dragunov-svd/hero.webp",
+      "alt": "An SVD rifle isolated on white, seen from the left, with a vented wooden handguard, a skeletonised wooden stock with a raised cheekpiece, a telescopic sight above the receiver and a canvas sling",
+      "caption": "An early SVD with wooden furniture and the PSO-1 sight. Later production replaced the wood with black synthetic parts.",
+      "width": 1600,
+      "height": 643,
+      "credit": {
+        "author": "Hokos",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SVD_Dragunov.jpg",
+        "title": "File:SVD Dragunov.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "id": "dragunov-svd",
+  "name": "SVD",
+  "nativeName": "Снайперская винтовка Драгунова",
+  "makerRef": "izhmash",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "soviet-union",
+  "introduced": 1963,
+  "productionYears": {
+    "start": 1963,
+    "end": null
+  },
+  "effectiveRange": {
+    "value": 800,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-svd-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371794895"
+  },
+  "references": [
+    {
+      "key": "wp-svd-rifle",
+      "type": "wikipedia",
+      "title": "SVD (rifle)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371794895",
+      "lang": "en",
+      "revision": "1371794895",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q159509"
+}

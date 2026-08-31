@@ -1,0 +1,203 @@
+{
+  "id": "7-62x51mm-nato",
+  "name": "7.62×51mm NATO",
+  "aliases": [
+    {
+      "name": "7.62 NATO",
+      "kind": "military"
+    },
+    {
+      "name": "T65",
+      "kind": "military",
+      "note": "The US experimental series the cartridge came out of."
+    }
+  ],
+  "introduced": 1954,
+  "standard": "nato",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 51.18,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "No free dimensional standard publishes the NATO round under that name. Borrowed from the C.I.P. datasheet for the commercial .308 Winchester (L3), which shares the chamber; the two are not interchangeable at the pressure limit."
+  },
+  "overallLength": {
+    "value": 71.12,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "No free dimensional standard publishes the NATO round under that name. Borrowed from the C.I.P. datasheet for the commercial .308 Winchester (L6), which shares the chamber; the two are not interchangeable at the pressure limit."
+  },
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "No free dimensional standard publishes the NATO round under that name. Borrowed from the C.I.P. datasheet for the commercial .308 Winchester (G1), which shares the chamber; the two are not interchangeable at the pressure limit."
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "No free dimensional standard publishes the NATO round under that name. Borrowed from the C.I.P. datasheet for the commercial .308 Winchester (R1), which shares the chamber; the two are not interchangeable at the pressure limit."
+  },
+  "baseDiameter": {
+    "value": 11.96,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "No free dimensional standard publishes the NATO round under that name. Borrowed from the C.I.P. datasheet for the commercial .308 Winchester (P1), which shares the chamber; the two are not interchangeable at the pressure limit."
+  },
+  "neckDiameter": {
+    "value": 8.72,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "cip-308-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+    "sourceNote": "No free dimensional standard publishes the NATO round under that name. Borrowed from the C.I.P. datasheet for the commercial .308 Winchester (H2), which shares the chamber; the two are not interchangeable at the pressure limit."
+  },
+  "maxPressure": {
+    "value": 415,
+    "unit": "MPa",
+    "status": "estimated",
+    "source": "wp-7-62-51mm-nato",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
+    "sourceNote": "The cited article gives 60,191 psi by NATO EPVAT, which is 415.0 MPa — exactly the C.I.P. figure for the .308 Winchester, so the number appears to be a conversion of it rather than an independent measurement. STANAG 2310 is not free."
+  },
+  "pressureStandard": "nato",
+  "loads": [
+    {
+      "id": "m80-ball",
+      "name": "M80 ball",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 9.525,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-7-62-51mm-nato",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
+        "sourceNote": "Published as 147 gr; 1 gr = 0.06479891 g exactly."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 558.8,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-7-62-51mm-nato",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
+            "sourceNote": "Test barrel stated as 22 inches for M80 and M59."
+          },
+          "velocity": {
+            "value": 853,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-7-62-51mm-nato",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    },
+    {
+      "id": "m80a1-epr",
+      "name": "M80A1 enhanced performance round",
+      "bulletType": "EPR",
+      "bulletMass": {
+        "value": 8.424,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-7-62-51mm-nato",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
+        "sourceNote": "Published as 130 gr; 1 gr = 0.06479891 g exactly."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 558.8,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-7-62-51mm-nato",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
+            "sourceNote": "Test barrel stated as 22 inches."
+          },
+          "velocity": {
+            "value": 930,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-7-62-51mm-nato",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    },
+    {
+      "id": "m118lr",
+      "name": "M118LR long range",
+      "bulletType": "BTHP",
+      "bulletMass": {
+        "value": 11.34,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-7-62-51mm-nato",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
+        "sourceNote": "Published as 175 gr; 1 gr = 0.06479891 g exactly."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 558.8,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-7-62-51mm-nato",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
+            "sourceNote": "Test barrel stated as 22 inches."
+          },
+          "velocity": {
+            "value": 792,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-7-62-51mm-nato",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
+            "sourceNote": "Ballistics table of the cited article."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "wp-7-62-51mm-nato",
+      "type": "wikipedia",
+      "title": "7.62×51mm NATO",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
+      "lang": "en",
+      "revision": "1372335181",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "cip-308-win",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 308 Win.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page125.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q259210"
+}

@@ -1,0 +1,133 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "K98k",
+      "kind": "military"
+    },
+    {
+      "name": "Mauser 98k",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {
+    "derivedFrom": "mauser-98"
+  },
+  "producedIn": [
+    "germany",
+    "czechoslovakia",
+    "poland",
+    "yugoslavia"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "fixed-box",
+    "stripper"
+  ],
+  "roles": [
+    "service-rifle",
+    "sniper"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "7-92x57mm-mauser",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-karabiner-98k",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819150",
+        "sourceNote": "Integral box magazine, loaded from stripper clips."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/karabiner-98k/hero.webp",
+      "alt": "Two views of a Karabiner 98k rifle on a white background, left and right sides, with a pale wooden stock, a bolt handle turned down against the receiver and a ladder rear sight",
+      "caption": "A Kar 98k made in 1940, in mint condition, from the Swedish Army Museum. The turned-down bolt handle and the recess cut for it are the visible difference from the Gewehr 98 it was shortened from.",
+      "width": 1600,
+      "height": 759,
+      "credit": {
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kar_98K_-_AM.021488.jpg",
+        "title": "File:Kar 98K - AM.021488.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "karabiner-98k",
+  "name": "Karabiner 98k",
+  "nativeName": "Karabiner 98 kurz",
+  "makerRef": "mauser",
+  "type": "carbine",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "germany",
+  "introduced": 1935,
+  "productionYears": {
+    "start": 1934,
+    "end": 1945
+  },
+  "massEmpty": {
+    "value": 3.9,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-karabiner-98k",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819150",
+    "sourceNote": "The article publishes 3.7–4.1 kg without naming a configuration. Recorded as the midpoint of that range."
+  },
+  "length": {
+    "value": 1110,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-karabiner-98k",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819150"
+  },
+  "barrelLength": {
+    "value": 600,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-karabiner-98k",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819150"
+  },
+  "sightGraduation": {
+    "value": 800,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-karabiner-98k",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819150",
+    "sourceNote": "Published as 500 m with iron sights and 800 m with a telescopic sight; the higher figure is the sight’s graduation."
+  },
+  "productionTotal": {
+    "value": 14600000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-karabiner-98k",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370819150",
+    "sourceNote": "The cited article gives \"14,600,000+\", so this is a floor rather than a count."
+  },
+  "references": [
+    {
+      "key": "wp-karabiner-98k",
+      "type": "wikipedia",
+      "title": "Karabiner 98k",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370819150",
+      "lang": "en",
+      "revision": "1370819150",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q60134"
+}

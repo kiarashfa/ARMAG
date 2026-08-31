@@ -1,0 +1,165 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "HK54",
+      "kind": "military",
+      "note": "The original 1964 factory designation."
+    },
+    {
+      "name": "MP5A3",
+      "kind": "military",
+      "note": "The retractable-stock version most often photographed."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "germany",
+    "united-kingdom",
+    "greece",
+    "turkey",
+    "pakistan",
+    "iran"
+  ],
+  "fireModes": [
+    "semi",
+    "burst",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box",
+    "drum"
+  ],
+  "roles": [
+    "law-enforcement",
+    "personal-defence"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-heckler-koch-mp5",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367066672",
+        "sourceNote": "Box magazines of 15, 30, 40 and 50 rounds; 50- and 100-round drums exist."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "40-sw",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-heckler-koch-mp5",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367066672",
+        "sourceNote": "MP5/40."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/heckler-koch-mp5/hero.webp",
+      "alt": "An MP5 submachine gun photographed at an angle against a white background, with a retractable stock, a curved magazine and “Cal. 9mm x 19” stamped on the receiver",
+      "caption": "An MP5A3 with the retractable stock collapsed. The receiver marking names the chambering; the red E and F below it are the semi-automatic and automatic settings.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Heckler_&_Koch_MP5.jpg : Samuli Silvennoinen derivative work: Hic et nunc",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Heckler_&_Koch_MP5-1.jpg",
+        "title": "File:Heckler & Koch MP5-1.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "id": "heckler-koch-mp5",
+  "name": "Heckler & Koch MP5",
+  "makerRef": "heckler-koch",
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-delayed-roller",
+  "designedIn": "germany",
+  "introduced": 1966,
+  "productionYears": {
+    "start": 1966,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 2.54,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp5",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367066672",
+    "sourceNote": "The MP5K is published at 2 kg."
+  },
+  "length": {
+    "value": 680,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp5",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367066672",
+    "sourceNote": "The MP5K is 325 mm."
+  },
+  "barrelLength": {
+    "value": 225,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp5",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367066672",
+    "sourceNote": "The MP5K barrel is 115 mm."
+  },
+  "width": {
+    "value": 50,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp5",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367066672"
+  },
+  "height": {
+    "value": 260,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp5",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367066672"
+  },
+  "cyclicRate": {
+    "value": 800,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp5",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367066672",
+    "sourceNote": "The MP5K is published at 900 rounds/min and the suppressed MP5SD at 700."
+  },
+  "effectiveRange": {
+    "value": 200,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-heckler-koch-mp5",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367066672"
+  },
+  "references": [
+    {
+      "key": "wp-heckler-koch-mp5",
+      "type": "wikipedia",
+      "title": "Heckler & Koch MP5",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367066672",
+      "lang": "en",
+      "revision": "1367066672",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q155901"
+}

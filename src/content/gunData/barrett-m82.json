@@ -1,0 +1,121 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "M107",
+      "kind": "military",
+      "note": "The US Army designation for the long-range sniper rifle version."
+    },
+    {
+      "name": "Light Fifty",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "sniper"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "50-bmg",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-barrett-m82",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370245669",
+        "sourceNote": "Detachable box magazines of 5 and 10 rounds."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/barrett-m82/hero.webp",
+      "alt": "A Barrett M82A1 rifle isolated on white, seen from the left, with a very long barrel ending in a large rectangular muzzle brake, a bipod, a telescopic sight and a magazine ahead of the pistol grip",
+      "caption": "An M82A1 in Israeli service. The rectangular brake at the muzzle bleeds off a large part of the recoil impulse; the rest is absorbed by the recoiling barrel assembly.",
+      "width": 1600,
+      "height": 649,
+      "credit": {
+        "author": "MathKnight and Zachi Evenor",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barrett-M82A1-Independence-Day-2017-IZE-048-white.jpg",
+        "title": "File:Barrett-M82A1-Independence-Day-2017-IZE-048-white.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    }
+  ],
+  "id": "barrett-m82",
+  "name": "Barrett M82",
+  "makerRef": "barrett-firearms",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "united-states",
+  "introduced": 1989,
+  "productionYears": {
+    "start": 1982,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 13.47,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-barrett-m82",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370245669",
+    "sourceNote": "Published as 29.7 lb; 1 lb = 0.45359237 kg exactly. The article publishes 29.7–32.7 lb across configurations; the lower figure is recorded."
+  },
+  "length": {
+    "value": 1219.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-barrett-m82",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370245669",
+    "sourceNote": "Published as 48 in; 1 in = 25.4 mm exactly. With the 20-inch barrel; 57 in with the 29-inch."
+  },
+  "barrelLength": {
+    "value": 508,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-barrett-m82",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370245669",
+    "sourceNote": "Published as 20 in; 1 in = 25.4 mm exactly. The short barrel; a 29-inch barrel is also offered."
+  },
+  "effectiveRange": {
+    "value": 1800,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-barrett-m82",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370245669"
+  },
+  "references": [
+    {
+      "key": "wp-barrett-m82",
+      "type": "wikipedia",
+      "title": "Barrett M82",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370245669",
+      "lang": "en",
+      "revision": "1370245669",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q505226"
+}

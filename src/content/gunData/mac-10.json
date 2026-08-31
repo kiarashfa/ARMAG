@@ -1,0 +1,104 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "M10",
+      "kind": "military",
+      "note": "The maker’s own designation, Military Armament Corporation Model 10."
+    },
+    {
+      "name": "Ingram MAC-10",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "united-states"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-mac-10",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370808707",
+        "sourceNote": "Detachable box magazine."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/mac-10/hero.webp",
+      "alt": "A MAC-10 machine pistol seen from the left, its short boxy receiver ending in a long cylindrical suppressor that is almost as long as the gun itself",
+      "caption": "A MAC-10 with the suppressor fitted. Nearly every surviving photograph shows one this way: the suppressor was sold with the weapon, and it adds the length and muzzle weight the design badly needs.",
+      "width": 704,
+      "height": 248,
+      "credit": {
+        "author": "Mcumpston at English Wikipedia ( Original text: Mike Cumpston )",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MAC10.jpg",
+        "title": "File:MAC10.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "mac-10",
+  "name": "MAC-10",
+  "makerRef": "military-armament-corporation",
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "united-states",
+  "introduced": 1970,
+  "productionYears": {
+    "start": 1970,
+    "end": 1973
+  },
+  "massEmpty": {
+    "value": 2.84,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-mac-10",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370808707",
+    "sourceNote": "Empty and without a suppressor."
+  },
+  "barrelLength": {
+    "value": 146,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-mac-10",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370808707"
+  },
+  "references": [
+    {
+      "key": "wp-mac-10",
+      "type": "wikipedia",
+      "title": "MAC-10",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370808707",
+      "lang": "en",
+      "revision": "1370808707",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q864465"
+}

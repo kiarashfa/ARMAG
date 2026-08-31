@@ -1,0 +1,141 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Le Clairon",
+      "kind": "nickname",
+      "note": "The bugle, from its shape."
+    },
+    {
+      "name": "FAMAS F1",
+      "kind": "military",
+      "note": "The 1978 service version, and the one this entry describes."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "france"
+  ],
+  "fireModes": [
+    "semi",
+    "burst",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "assault-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 25,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-famas",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369344722",
+        "sourceNote": "Proprietary 25-round magazine on the F1; the G2 takes STANAG 30-round magazines."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/famas/hero.webp",
+      "alt": "A US Marine in camouflage firing a FAMAS rifle at a range, seen over the shooter’s shoulder: a black polymer bullpup with a long carrying handle running most of its length",
+      "caption": "A US Marine on a familiarisation range during a bilateral exercise with the French. No freely licensed specimen photograph of the rifle exists on Wikimedia Commons.",
+      "width": 1600,
+      "height": 1000,
+      "credit": {
+        "author": "U.S. Marine Corps photo by Staff Sgt. Akeel Austin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:10th_Marine_Regiment_French_Bilateral_Visit-_FAMAS_Familiarization_Range_(6919449).jpg",
+        "title": "File:10th Marine Regiment French Bilateral Visit- FAMAS Familiarization Range (6919449).jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "id": "famas",
+  "name": "FAMAS",
+  "nativeName": "Fusil d’Assaut de la Manufacture d’Armes de Saint-Étienne",
+  "makerRef": "mas-saint-etienne",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "blowback-delayed-lever",
+  "designedIn": "france",
+  "introduced": 1978,
+  "productionYears": {
+    "start": 1975,
+    "end": 2000
+  },
+  "massEmpty": {
+    "value": 3.61,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-famas",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369344722",
+    "sourceNote": "F1. The G2 is published at 3.8 kg."
+  },
+  "length": {
+    "value": 757,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-famas",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369344722",
+    "sourceNote": "F1. The FAMAS Commando is 555 mm."
+  },
+  "barrelLength": {
+    "value": 488,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-famas",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369344722",
+    "sourceNote": "F1. The FAMAS Commando barrel is 285 mm."
+  },
+  "cyclicRate": {
+    "value": 1000,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-famas",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369344722",
+    "sourceNote": "The article publishes 900–1,100 rounds/min. Recorded as the midpoint of that range; it is among the highest of any service rifle."
+  },
+  "effectiveRange": {
+    "value": 300,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-famas",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369344722",
+    "sourceNote": "F1; 450 m is published for the G2."
+  },
+  "productionTotal": {
+    "value": 400000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-famas",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369344722",
+    "sourceNote": "F1 production. The G2 is given as 10,000–15,000."
+  },
+  "references": [
+    {
+      "key": "wp-famas",
+      "type": "wikipedia",
+      "title": "FAMAS",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369344722",
+      "lang": "en",
+      "revision": "1369344722",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q219757"
+}

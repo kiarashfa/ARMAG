@@ -1,0 +1,98 @@
+{
+  "id": "303-british",
+  "name": ".303 British",
+  "aliases": [
+    {
+      "name": "7.7×56mmR",
+      "kind": "metric"
+    }
+  ],
+  "introduced": 1889,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 56.44,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-303-british",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page74.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 78.11,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-303-british",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page74.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.92,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-303-british",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page74.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-303-british",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page74.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 11.68,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-303-british",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page74.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 8.59,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-303-british",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page74.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 365,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-303-british",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page74.pdf",
+    "sourceNote": "C.I.P. Pmax 3650 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [],
+  "references": [
+    {
+      "key": "cip-303-british",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 303 British",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page74.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-303-british",
+      "type": "wikipedia",
+      "title": ".303 British",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362890994",
+      "lang": "en",
+      "revision": "1362890994",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q259255"
+}

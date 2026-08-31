@@ -6,6 +6,22 @@
  *   node scripts/data/wikidata.mjs show   Q37116
  *   node scripts/data/wikidata.mjs native Q37116 russia
  *   node scripts/data/wikidata.mjs cite   Q37116
+ *   node scripts/data/wikidata.mjs verify [--fix]
+ *
+ * `verify` exists because of a Phase 10 failure that is worth stating plainly:
+ * 54 of 80 entries in that batch carried a **wrong** `wikidataId`, because they
+ * were typed from memory into a batch generator instead of being resolved.
+ * Q800583 is a Brussels railway station, not the Barrett M82; Q179467 is the
+ * Fourier series, not the M1 Garand. Nothing in the build could catch it — a
+ * Q-id is syntactically valid whatever it points at — and the wrong ones would
+ * have been a silently broken join on every entry.
+ *
+ * So the id is no longer written by hand anywhere. `verify` resolves each
+ * entry's own cited Wikipedia article to its `wikibase_item` and compares;
+ * `--fix` writes the resolved value. Where an entry cites an article broader
+ * than itself (the Winchester Model 1873 cites "Winchester rifle", which is the
+ * whole series), the honest answer is no id at all — FRICTION-LOG A7 — and the
+ * mismatch is reported for a person to resolve rather than auto-written.
  *
  * SPEC.md Appendix A settles what this is for, and the wording is deliberate:
  * **join key, not master list.** Verified 2026-08-26 by SPARQL — `firearm
@@ -244,15 +260,105 @@ async function cmdCite(qid) {
   );
 }
 
+/**
+ * Checks every authored entry's `wikidataId` against the item its own cited
+ * Wikipedia article resolves to.
+ *
+ * The comparison is only meaningful when the entry cites its own article, which
+ * is the normal case. It is not a proof of correctness — an entry could cite the
+ * right article and still deserve no id (see the header) — so a mismatch is
+ * reported, and `--fix` is a convenience for the common case rather than an
+ * authority.
+ */
+async function cmdVerify(fix) {
+  const { readdir, readFile, writeFile } = await import('node:fs/promises');
+  const path = await import('node:path');
+  const { fileURLToPath } = await import('node:url');
+  const root = path.resolve(fileURLToPath(new URL('../..', import.meta.url)));
+
+  const rows = [];
+  for (const dir of ['gunData', 'cartridgeData', 'makerData']) {
+    const full = path.join(root, 'src', 'content', dir);
+    for (const file of await readdir(full).catch(() => [])) {
+      if (!file.endsWith('.json')) continue;
+      const filePath = path.join(full, file);
+      const data = JSON.parse(await readFile(filePath, 'utf8'));
+      const wikipedia = (data.references ?? []).find((r) => r.type === 'wikipedia');
+      if (!wikipedia) continue;
+      rows.push({ filePath, id: data.id, declared: data.wikidataId ?? null, title: wikipedia.title });
+    }
+  }
+
+  const resolved = new Map();
+  for (let i = 0; i < rows.length; i += 40) {
+    const chunk = rows.slice(i, i + 40);
+    const data = await getJson(
+      withQuery(EN, {
+        action: 'query',
+        prop: 'pageprops',
+        ppprop: 'wikibase_item',
+        titles: chunk.map((c) => c.title).join('|'),
+        redirects: '1',
+        format: 'json',
+        formatversion: '2',
+      }),
+    );
+    const byTitle = new Map((data.query?.pages ?? []).map((p) => [p.title, p.pageprops?.wikibase_item ?? null]));
+    const redirects = new Map((data.query?.redirects ?? []).map((r) => [r.from, r.to]));
+    for (const row of chunk) resolved.set(row.id, byTitle.get(redirects.get(row.title) ?? row.title) ?? null);
+  }
+
+  const exceptions = JSON.parse(
+    await readFile(path.join(root, 'scripts', 'data', 'sources', 'wikidata-exceptions.json'), 'utf8'),
+  ).exceptions;
+
+  let mismatches = 0;
+  let reviewed = 0;
+  let written = 0;
+  for (const row of rows) {
+    const actual = resolved.get(row.id);
+    if (row.declared === actual) continue;
+    // A reviewed exception is not a failure: an article is very often broader
+    // than the entry that cites it, and the honest id is then not the article's.
+    if (exceptions[row.id]) {
+      reviewed += 1;
+      if (!fix) console.log(`${row.id}  reviewed exception — ${exceptions[row.id]}`);
+      continue;
+    }
+    mismatches += 1;
+    console.log(`${row.id}`);
+    console.log(`  declared ${row.declared ?? '(none)'}`);
+    console.log(`  "${row.title}" resolves to ${actual ?? '(no item)'}`);
+    if (fix && actual) {
+      const data = JSON.parse(await readFile(row.filePath, 'utf8'));
+      data.wikidataId = actual;
+      await writeFile(row.filePath, `${JSON.stringify(data, null, 2)}
+`, 'utf8');
+      written += 1;
+      console.log('  → written');
+    }
+  }
+  console.log(
+    `\n${rows.length} entr(ies) cite a Wikipedia article; ${mismatches} unreviewed mismatch(es), ` +
+      `${reviewed} reviewed exception(s)${fix ? `, ${written} written` : ''}.`,
+  );
+  if (mismatches > 0) {
+    console.log('\nEither the id is wrong — re-run with --fix — or the article is broader than the entry,');
+    console.log('in which case add it to scripts/data/sources/wikidata-exceptions.json with the reason.');
+    process.exitCode = 1;
+  }
+}
+
 const [command, ...args] = process.argv.slice(2);
 try {
   if (command === 'id') await cmdId(args[0]);
   else if (command === 'show') await cmdShow(args[0]);
   else if (command === 'native') await cmdNative(args[0], args[1]);
   else if (command === 'cite') await cmdCite(args[0]);
+  else if (command === 'verify') await cmdVerify(args.includes('--fix'));
   else {
     console.error(
-      'usage: wikidata.mjs id "Article title" | show Q37116 | native Q37116 <country-term> | cite Q37116',
+      'usage: wikidata.mjs id "Article title" | show Q37116 | native Q37116 <country-term> | cite Q37116 | verify [--fix]',
     );
     process.exitCode = 1;
   }

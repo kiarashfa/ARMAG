@@ -1,0 +1,166 @@
+{
+  "id": "38-special",
+  "name": ".38 Special",
+  "aliases": [
+    {
+      "name": "9×29mmR",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Smith & Wesson",
+  "introduced": 1898,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 29.34,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page57.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 39.37,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page57.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 9.12,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page57.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 11.18,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page57.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 9.63,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page57.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 9.63,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page57.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 150,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-38-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page57.pdf",
+    "sourceNote": "C.I.P. Pmax 1500 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "lrn-158",
+      "name": "158 gr lead round nose",
+      "bulletType": "LRN",
+      "bulletMass": {
+        "value": 10.24,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-38-special",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371269158",
+        "sourceNote": "Ballistics table of the cited article, which publishes bullet mass in grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 101.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-38-special",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371269158",
+            "sourceNote": "Test barrel stated as 4 inches, vented — a vented barrel models a revolver’s cylinder gap and reads slower than a sealed one."
+          },
+          "velocity": {
+            "value": 230.1,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-38-special",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371269158",
+            "sourceNote": "Published as 755 ft/s."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fmj-130",
+      "name": "130 gr full metal jacket",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 8.4,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-38-special",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371269158",
+        "sourceNote": "Ballistics table of the cited article."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 101.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-38-special",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371269158",
+            "sourceNote": "Test barrel stated as 4 inches, vented."
+          },
+          "velocity": {
+            "value": 243.8,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-38-special",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371269158",
+            "sourceNote": "Published as 800 ft/s."
+          }
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "key": "cip-38-special",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 38 Special",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page57.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-38-special",
+      "type": "wikipedia",
+      "title": ".38 Special",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371269158",
+      "lang": "en",
+      "revision": "1371269158",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q24634"
+}

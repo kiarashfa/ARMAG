@@ -1,0 +1,145 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "L1A1 SLR",
+      "kind": "export",
+      "market": "GB",
+      "note": "The British inch-pattern, semi-automatic-only version."
+    },
+    {
+      "name": "Right Arm of the Free World",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "belgium",
+    "united-kingdom",
+    "brazil",
+    "argentina",
+    "india",
+    "australia",
+    "canada",
+    "south-africa"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "battle-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x51mm-nato",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-fn-fal",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369793805",
+        "sourceNote": "Detachable box magazines of 20 and 30 rounds; a 50-round drum exists."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/fn-fal/hero.webp",
+      "alt": "An FN FAL rifle isolated on a grey background, seen from the left, with a black synthetic stock, a carrying handle folded up over the receiver, a long handguard and a straight 20-round magazine",
+      "caption": "A Century Arms–assembled FAL, not a Fabrique Nationale rifle. The pattern is correct; the parts are a commercial build, and no freely licensed photograph of an FN-made rifle was available.",
+      "width": 1600,
+      "height": 491,
+      "credit": {
+        "author": "Snark",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Century_Arms_FN_FAL.jpg",
+        "title": "File:Century Arms FN FAL.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "id": "fn-fal",
+  "name": "FN FAL",
+  "nativeName": "Fusil Automatique Léger",
+  "makerRef": "fn-herstal",
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "belgium",
+  "introduced": 1953,
+  "productionYears": {
+    "start": 1953,
+    "end": 1988
+  },
+  "massEmpty": {
+    "value": 4.25,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-fn-fal",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369793805"
+  },
+  "length": {
+    "value": 1090,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-fn-fal",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369793805"
+  },
+  "barrelLength": {
+    "value": 533,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-fn-fal",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369793805"
+  },
+  "cyclicRate": {
+    "value": 675,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-fn-fal",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369793805",
+    "sourceNote": "The article publishes 650–700 rounds/min. Recorded as the midpoint of that range."
+  },
+  "sightGraduation": {
+    "value": 600,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-fn-fal",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369793805",
+    "sourceNote": "Ramped aperture rear sight, adjustable from 200 m in 100 m increments."
+  },
+  "productionTotal": {
+    "value": 7000000,
+    "unit": "",
+    "status": "verified",
+    "source": "wp-fn-fal",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369793805"
+  },
+  "references": [
+    {
+      "key": "wp-fn-fal",
+      "type": "wikipedia",
+      "title": "FN FAL",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369793805",
+      "lang": "en",
+      "revision": "1369793805",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q329844"
+}

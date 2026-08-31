@@ -1,0 +1,130 @@
+{
+  "kind": "model",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "A-5",
+      "kind": "commercial"
+    },
+    {
+      "name": "Remington Model 11",
+      "kind": "importer",
+      "note": "The American-made version, built under licence while FN could not export."
+    },
+    {
+      "name": "Humpback",
+      "kind": "nickname",
+      "note": "From the squared-off rear of the receiver."
+    }
+  ],
+  "lineage": {},
+  "producedIn": [
+    "belgium",
+    "united-states",
+    "japan"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "tube"
+  ],
+  "roles": [
+    "hunting"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "12-gauge",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-browning-auto-5",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370005160",
+        "sourceNote": "Tube magazine, four rounds plus one chambered; some variants hold two plus one."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "20-gauge",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-browning-auto-5",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370005160",
+        "sourceNote": "Tube magazine."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/browning-auto-5/hero.webp",
+      "alt": "A Browning Auto-5 shotgun lying on an orange-brown wooden surface, seen from the left, with a leather sling, a walnut stock and forend, and a receiver squared off at the rear",
+      "caption": "An Auto-5. The square shoulder at the back of the receiver is the “humpback” profile, and it is there because the barrel and breech travel that far back together.",
+      "width": 1600,
+      "height": 966,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Browning_Auto_5.JPG",
+        "title": "File:Browning Auto 5.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "id": "browning-auto-5",
+  "name": "Browning Auto-5",
+  "makerRef": "fn-herstal",
+  "type": "shotgun",
+  "action": "self-loading",
+  "operatingSystem": "long-recoil",
+  "designedIn": "united-states",
+  "introduced": 1905,
+  "productionYears": {
+    "start": 1902,
+    "end": 1998
+  },
+  "massEmpty": {
+    "value": 4.1,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-browning-auto-5",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370005160"
+  },
+  "length": {
+    "value": 1270,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-browning-auto-5",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370005160"
+  },
+  "barrelLength": {
+    "value": 711,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-browning-auto-5",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370005160"
+  },
+  "references": [
+    {
+      "key": "wp-browning-auto-5",
+      "type": "wikipedia",
+      "title": "Browning Auto-5",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370005160",
+      "lang": "en",
+      "revision": "1370005160",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-08-31"
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "wikidataId": "Q991165"
+}
