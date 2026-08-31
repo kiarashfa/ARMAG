@@ -1,0 +1,44 @@
+---
+/**
+ * The two things you can do with the entry you are looking at.
+ *
+ * ── Why this is not a sticky bar any more ─────────────────────────────────
+ * SPEC.md §11 asked for a sticky per-entry bar carrying name, Compare, Armory
+ * and Units. Built, it turned out to put a second Metric button on screen
+ * beside the header's, doing the same thing — and the entry name in a bar
+ * directly under a header that also names the site is a third line of chrome
+ * before any content. The global controls moved into the one sticky header;
+ * what is left here is entry-specific, so it belongs beside the entry.
+ *
+ * Both controls are real links, so both work with JavaScript disabled.
+ * `CompareTray` upgrades the compare link in place to a toggle when it
+ * hydrates, which is why the identifying data is in attributes rather than in
+ * a component's props. `/armory/` reads `?add=` on load, fills the first free
+ * bay and drops the parameter, so no island has to carry a click across a
+ * navigation.
+ */
+import Icon from './Icon.astro';
+import { compareHref, href } from '../../lib/content/href.ts';
+
+interface Props {
+  id: string;
+  name: string;
+}
+
+const { id, name } = Astro.props;
+
+const action =
+  'type-data flex items-center gap-1.5 rounded border border-line-strong bg-surface-1 px-3 py-1.5 text-xs text-ink-secondary no-underline hover:text-ink';
+---
+
+<div class="mt-5 flex flex-wrap gap-2" data-pagefind-ignore>
+  <a href={compareHref([id])} class={action} data-compare-add={id} data-compare-name={name}>
+    <Icon name="compare" />
+    Compare
+  </a>
+
+  <a href={`${href('armory')}?add=${id}`} class={action}>
+    <Icon name="armory" />
+    Add to Armory
+  </a>
+</div>

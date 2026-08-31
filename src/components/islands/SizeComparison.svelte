@@ -256,7 +256,7 @@
           {/each}
         </ul>
 
-        <p class="type-data mt-3 max-w-readable text-xs text-ink-muted">
+        <p class="type-data mt-3 max-w-note text-xs text-ink-muted">
           Representative outline — <strong class="text-ink-secondary">the dimensions are sourced,
           the shape is not.</strong> Overall length, and barrel length where recorded, come from each
           entry's own figures. The profile is a generic one for the firearm type and says nothing

@@ -13,7 +13,7 @@
  * and computes the derived figures; the dev render harness passes fixtures
  * through the same door. One implementation, two callers, no drift.
  */
-import ActionBar from '../blocks/ActionBar.astro';
+import EntryActions from '../blocks/EntryActions.astro';
 import BaseLayout from '../ui/BaseLayout.astro';
 import Breadcrumbs from '../blocks/Breadcrumbs.astro';
 import FigureValue from '../blocks/FigureValue.astro';
@@ -147,8 +147,6 @@ const jsonLd = entryArticle({
 
 <BaseLayout title={gun.name} description={description} jsonLd={jsonLd}>
   <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
-    <ActionBar id={gun.id} name={gun.name} />
-
     <Breadcrumbs
       crumbs={[
         ...(gun.type
@@ -212,6 +210,8 @@ const jsonLd = entryArticle({
             </ul>
           )
         }
+
+        <EntryActions id={gun.id} name={gun.name} />
       </div>
 
       {hero && <ImageFigure image={hero} id={`img-hero-${gun.id}`} priority sizes="(min-width: 1024px) 28rem, 100vw" />}
@@ -292,7 +292,7 @@ const jsonLd = entryArticle({
                       </p>
                     )}
                     {variant.summary && (
-                      <p class="type-body mt-2 max-w-readable text-sm text-ink-secondary">
+                      <p class="type-body mt-2 max-w-note text-sm text-ink-secondary">
                         {variant.summary}
                       </p>
                     )}
@@ -482,16 +482,28 @@ const jsonLd = entryArticle({
       )
     }
 
-    {/* ── Narrative body ───────────────────────────────────────────────── */}
-    <Section id="detail" title="Detail">
+    {/*
+      ── Narrative body and bibliography, one row on a wide screen ─────────
+      The layout is 88rem and a reading column is 41rem of it. Stretching the
+      prose to fill the rest would put 180 characters on a line; leaving the
+      rest empty is what made the page look broken. So the prose column IS the
+      measure and the references take every remaining pixel — the thing a
+      reader most often wants next while reading a sourced claim, and long
+      titles and publishers genuinely use the width. Below 1024px the two
+      stack in the order they always had.
+    */}
+    <div
+      class="mt-(--layout-section-gap) grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,var(--measure-readable))_minmax(0,1fr)] lg:items-start"
+    >
+    <Section id="detail" title="Detail" flush>
       <div class="prose type-body max-w-readable text-ink-secondary">
         <slot />
       </div>
     </Section>
 
-    {/* ── References ───────────────────────────────────────────────────── */}
     <Section
       id="references"
+      flush
       title="References"
       standfirst="This entry's own bibliography. Every citation key on this page resolves into this list."
     >
@@ -520,5 +532,7 @@ const jsonLd = entryArticle({
         Last verified {gun.lastVerified} · review status: {gun.reviewStatus}
       </p>
     </Section>
+    </div>
+
   </div>
 </BaseLayout>

@@ -89,7 +89,7 @@ const jsonLd = entryArticle({
       </p>
       {
         cartridge.aliases.length > 0 && (
-          <p class="type-data mt-2 max-w-lede text-sm text-ink-muted">
+          <p class="type-data mt-2 max-w-note text-sm text-ink-muted">
             Also known as {cartridge.aliases.map((a) => a.name).join(', ')} — the same cartridge
             under different names, all of which find this page.
           </p>
@@ -112,7 +112,7 @@ const jsonLd = entryArticle({
         groupOrder={CARTRIDGE_GROUP_ORDER}
         idPrefix={`spec-${cartridge.id}`}
       />
-      <p class="type-data mt-3 max-w-readable text-xs text-ink-muted">
+      <p class="type-data mt-3 max-w-note text-xs text-ink-muted">
         SAAMI and C.I.P. measure pressure differently and their figures are not interchangeable,
         which is why the body is always named beside the figure.
       </p>
@@ -223,13 +223,26 @@ const jsonLd = entryArticle({
       )
     }
 
-    <Section id="detail" title="Detail">
+    {/*
+      Narrative and bibliography share one row on a wide screen. The layout is
+      88rem and a reading column is 41rem of it; stretching the prose to fill
+      the rest would put 180 characters on a line, and leaving the rest empty
+      is what made the page look broken. So the prose column IS the measure,
+      and the references take every remaining pixel — they are the thing a
+      reader most often wants next while reading a sourced claim, and long
+      titles and publishers genuinely use the width. Below 1024px the two
+      stack in the order they always had.
+    */}
+    <div
+      class="mt-(--layout-section-gap) grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,var(--measure-readable))_minmax(0,1fr)] lg:items-start"
+    >
+    <Section id="detail" title="Detail" flush>
       <div class="prose type-body max-w-readable text-ink-secondary">
         <slot />
       </div>
     </Section>
 
-    <Section id="references" title="References">
+    <Section id="references" title="References" flush>
       <ol class="flex list-decimal flex-col gap-3 pl-5">
         {
           cartridge.references.map((reference) => (
@@ -251,5 +264,6 @@ const jsonLd = entryArticle({
         Last verified {cartridge.lastVerified} · review status: {cartridge.reviewStatus}
       </p>
     </Section>
+    </div>
   </div>
 </BaseLayout>

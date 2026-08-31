@@ -1,0 +1,49 @@
+---
+/**
+ * The site's icon set — one file, one viewBox, one stroke weight.
+ *
+ * Inline SVG rather than an icon font or a sprite sheet: five icons is a few
+ * hundred bytes of markup, and a sprite would be a second request for
+ * something that has to paint with the header. Every path is stroked in
+ * `currentColor`, so an icon takes the colour of the control it sits in and
+ * needs no theme handling of its own.
+ *
+ * `aria-hidden`, always: every control that carries one also carries a text
+ * label or an `aria-label`, so the icon is decoration to a screen reader. An
+ * icon that announces itself beside a label reads the same thing twice.
+ */
+interface Props {
+  name: 'search' | 'compare' | 'ruler' | 'sun' | 'moon' | 'info' | 'armory';
+  class?: string;
+}
+
+const { name, class: className = 'h-4 w-4' } = Astro.props;
+
+/** 24×24, stroked, round caps. Drawn to read at 16px. */
+const PATHS: Record<Props['name'], string> = {
+  search: 'M10.5 3a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15ZM21 21l-5.2-5.2',
+  // Two panels side by side with a divider: the shape of the compare table.
+  compare: 'M4 5h6v14H4zM14 5h6v14h-6zM12 3v18',
+  // A rule with its graduations — metric and imperial in one object.
+  ruler: 'M3 15 15 3l6 6L9 21zM7.5 10.5l2 2M10.5 7.5l2 2M13.5 4.5l2 2',
+  sun: 'M12 4V2M12 22v-2M4 12H2M22 12h-2M5.6 5.6 4.2 4.2M19.8 19.8l-1.4-1.4M18.4 5.6l1.4-1.4M4.2 19.8l1.4-1.4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z',
+  moon: 'M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z',
+  info: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM12 11v5M12 7.6v.4',
+  // A cabinet: the arms stood in a rack, which is what an armory is.
+  armory: 'M4 3h16v18H4zM9 3v18M15 3v18',
+};
+---
+
+<svg
+  class={className}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.75"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d={PATHS[name]} />
+</svg>

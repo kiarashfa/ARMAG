@@ -14,6 +14,12 @@ import { absoluteUrl, articleHref, assetUrl, href } from '../../lib/content/href
 import { entryArticle } from '../../lib/render/json-ld.ts';
 import type { ImageRef } from '../../schemas/primitives.ts';
 
+export interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
 interface Props {
   id: string;
   title: string;
@@ -21,9 +27,14 @@ interface Props {
   published: string;
   updated?: string;
   heroImage?: ImageRef;
+  /** From `render()`, so the contents list is derived rather than typed. */
+  headings?: Heading[];
 }
 
-const { id, title, standfirst, published, updated, heroImage } = Astro.props;
+const { id, title, standfirst, published, updated, heroImage, headings = [] } = Astro.props;
+
+/** Only the top level: an h3 list turns the rail into a second article. */
+const contents = headings.filter((heading) => heading.depth === 2);
 
 /** SPEC.md §12 — editorial is `Article`; the spec entries are `TechArticle`. */
 const jsonLd = entryArticle({
@@ -59,8 +70,41 @@ const jsonLd = entryArticle({
         )
       }
 
-      <div class="prose type-body mt-8 max-w-readable text-ink-secondary">
-        <slot />
+      {/*
+        Prose and contents share one row on a wide screen. The prose column IS
+        the reading measure — a long-form article is the one place on the site
+        where stretching a line would be indefensible — and the contents take
+        the rest, sticky, so the space beside the text does something instead
+        of being empty.
+      */}
+      <div
+        class="mt-8 grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,var(--measure-readable))_minmax(0,1fr)] lg:items-start"
+      >
+        <div class="prose type-body text-ink-secondary">
+          <slot />
+        </div>
+
+        {
+          contents.length > 1 && (
+            <nav aria-label="In this article" class="lg:sticky lg:top-20">
+              <p class="type-heading text-xs uppercase tracking-widest text-ink-muted">
+                In this article
+              </p>
+              <ol class="mt-3 flex flex-col gap-2">
+                {contents.map((heading) => (
+                  <li>
+                    <a
+                      href={`#${heading.slug}`}
+                      class="type-data text-sm text-ink-secondary hover:text-ui-accent"
+                    >
+                      {heading.text}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )
+        }
       </div>
     </article>
   </div>

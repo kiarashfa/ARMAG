@@ -280,7 +280,7 @@
         </div>
       {/if}
 
-      <p class="type-data mt-6 max-w-readable text-xs text-ink-muted">
+      <p class="type-data mt-6 max-w-note text-xs text-ink-muted">
         Ranking is on physical and technical fit only, never on effectiveness — for any use tag. An
         entry whose figure is missing is kept rather than excluded: a gap in our data is not a fact
         about the arm.

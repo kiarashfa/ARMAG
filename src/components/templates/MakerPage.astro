@@ -9,7 +9,7 @@
  */
 import BaseLayout from '../ui/BaseLayout.astro';
 import Breadcrumbs from '../blocks/Breadcrumbs.astro';
-import ImageFigure from '../blocks/ImageFigure.astro';
+import MakerLogo from '../blocks/MakerLogo.astro';
 import Section from '../blocks/Section.astro';
 import SpecRow from '../blocks/SpecRow.astro';
 import TypeBadge from '../blocks/TypeBadge.astro';
@@ -75,7 +75,17 @@ const jsonLd = [
 
     <header class="mt-4 grid gap-6 lg:grid-cols-[1fr_minmax(0,18rem)] lg:items-start">
       <div>
-        <h1 class="type-display mt-2 text-display text-ink">{maker.name}</h1>
+        {/*
+          The wordmark sits beside the name rather than in a card off to the
+          side: it is the maker's identity, which is what the heading is. Where
+          no mark is held yet, `MakerLogo` draws the placeholder — so the
+          heading has the same shape on every maker page whether or not the
+          artwork has been sourced.
+        */}
+        <div class="flex flex-wrap items-center gap-4">
+          <MakerLogo name={maker.name} logo={maker.logo} size="md" />
+          <h1 class="type-display text-display text-ink">{maker.name}</h1>
+        </div>
         {
           maker.nativeName && (
             <p class="type-title mt-1 text-xl text-ink-secondary" lang="und">
@@ -100,7 +110,6 @@ const jsonLd = [
         </p>
       </div>
 
-      {maker.logo && <ImageFigure image={maker.logo} id={`logo-${maker.id}`} />}
     </header>
 
     <div class="prose type-body mt-6 max-w-lede text-lg text-ink-secondary">
@@ -130,7 +139,7 @@ const jsonLd = [
               ) : null,
             )}
           </dl>
-          <p class="type-data mt-2 max-w-lede text-xs text-ink-muted">
+          <p class="type-data mt-2 max-w-note text-xs text-ink-muted">
             A rename is not a new company, and an arm made in 1974 was made by whoever existed in
             1974. Both names get a page, and the link runs between them.
           </p>
@@ -164,13 +173,26 @@ const jsonLd = [
       }
     </Section>
 
-    <Section id="detail" title="Detail">
+    {/*
+      Narrative and bibliography share one row on a wide screen. The layout is
+      88rem and a reading column is 41rem of it; stretching the prose to fill
+      the rest would put 180 characters on a line, and leaving the rest empty
+      is what made the page look broken. So the prose column IS the measure,
+      and the references take every remaining pixel — they are the thing a
+      reader most often wants next while reading a sourced claim, and long
+      titles and publishers genuinely use the width. Below 1024px the two
+      stack in the order they always had.
+    */}
+    <div
+      class="mt-(--layout-section-gap) grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,var(--measure-readable))_minmax(0,1fr)] lg:items-start"
+    >
+    <Section id="detail" title="Detail" flush>
       <div class="prose type-body max-w-readable text-ink-secondary">
         <slot />
       </div>
     </Section>
 
-    <Section id="facts" title="Record">
+    <Section id="facts" title="Record" flush>
       <dl class="max-w-readable rounded-lg border border-line bg-surface-1 p-4">
         <SpecRow label="Country" text={countryLabel} />
         <SpecRow label="Founded" text={maker.founded ? String(maker.founded) : 'not recorded'} />
@@ -180,5 +202,6 @@ const jsonLd = [
         Last verified {maker.lastVerified} · review status: {maker.reviewStatus}
       </p>
     </Section>
+    </div>
   </div>
 </BaseLayout>

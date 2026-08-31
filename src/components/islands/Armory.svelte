@@ -405,7 +405,7 @@
   {#if incomingShare}
     <div class="mb-4 rounded-lg border border-line-strong bg-surface-1 p-4">
       <h2 class="type-heading text-sm text-ink">A shared armory is in this link</h2>
-      <p class="type-body mt-2 max-w-readable text-sm text-ink-secondary">
+      <p class="type-body mt-2 max-w-note text-sm text-ink-secondary">
         {incomingShare.entries.length} bays, laid out by whoever sent it. It carries no ownership
         data — share links never do. Loading it <strong class="text-ink">replaces</strong> what is on
         this page now, so take a backup first if you want to keep it.
@@ -459,7 +459,7 @@
   {#if pendingCapacity !== null}
     {@const losing = evictedBy(state, pendingCapacity)}
     <div class="mt-3 rounded-lg border border-status-conflicting bg-surface-1 p-4">
-      <p class="type-body max-w-readable text-sm text-ink">
+      <p class="type-body max-w-note text-sm text-ink">
         Dropping to {pendingCapacity} bays would remove
         <strong>{losing.length}</strong>
         {losing.length === 1 ? 'entry' : 'entries'}: {losing.map(nameOf).join(', ')}. Anything else
@@ -754,7 +754,7 @@
           </label>
         </div>
 
-        <p class="type-data mt-2 max-w-readable text-xs text-ink-muted">
+        <p class="type-data mt-2 max-w-note text-xs text-ink-muted">
           ARMAG never suggests a service interval. A wrong one is either a false alarm or a false
           all-clear, and neither is ours to issue.
         </p>
@@ -844,7 +844,7 @@
             </ul>
           {/if}
 
-          <p class="type-data mt-2 max-w-readable text-xs text-ink-muted">
+          <p class="type-data mt-2 max-w-note text-xs text-ink-muted">
             {#if spend && (spend.value ?? 0) > 0}
               You have logged {money(spend.value)} of service.
               {#if spend.assumptions.length > 0}{spend.assumptions[0]}{/if}
@@ -951,7 +951,7 @@
           <h3 class="type-heading text-xs uppercase tracking-widest text-ink-muted">
             Your value estimates
           </h3>
-          <p class="type-data mt-1 max-w-readable text-xs text-ink-muted">
+          <p class="type-data mt-1 max-w-note text-xs text-ink-muted">
             The base the condition grade multiplies. ARMAG has no market-value data and will not
             supply one — this number is yours.
           </p>
@@ -1002,7 +1002,7 @@
     <div class="mt-4 grid gap-4 lg:grid-cols-2">
       <div class="min-w-0 rounded-lg border border-line bg-surface-1 p-4">
         <h3 class="type-heading text-sm text-ink">Share link</h3>
-        <p class="type-body mt-1 max-w-readable text-sm text-ink-secondary">
+        <p class="type-body mt-1 max-w-note text-sm text-ink-secondary">
           Carries <strong class="text-ink">which arms are in which bays, and nothing else</strong>.
           No nicknames, no dates, no prices, no round counts, no condition grades. Safe to post.
         </p>
@@ -1032,7 +1032,7 @@
 
       <div class="min-w-0 rounded-lg border border-line bg-surface-1 p-4">
         <h3 class="type-heading text-sm text-ink">Full backup</h3>
-        <p class="type-body mt-1 max-w-readable text-sm text-ink-secondary">
+        <p class="type-body mt-1 max-w-note text-sm text-ink-secondary">
           Carries <strong class="text-ink">everything, ownership included</strong> — what you paid,
           when you bought it, how many rounds you have fired, every service you logged. It is a
           personal file. Keep it as you would keep any other.

@@ -77,14 +77,34 @@
   let view = $state<'table' | 'cards'>('table');
   let limit = $state(PAGE);
 
+  /**
+   * The seven facet lists are a drawer, closed by default.
+   *
+   * Open, they are 80-odd chips across seven labelled rows — most of a screen
+   * of controls above a catalogue nobody has looked at yet, which is what made
+   * the homepage read as busy. Closed, the toolbar is one row, and what a
+   * reader still sees at all times is what is currently FILTERING the list,
+   * because that is the state that changes what they are looking at. A filter
+   * arriving from the URL opens the drawer, so a shared link explains itself.
+   */
+  let filtersOpen = $state(false);
+
   /* ── URL round-trip ─────────────────────────────────────────────────── */
 
   function readUrl() {
     const params = new URLSearchParams(location.search);
     query = params.get('q') ?? '';
+    // `anyFilter` is accumulated from the PARAMS, never read back off
+    // `selected`. `readUrl` runs inside an $effect, and an effect that reads
+    // the state it also writes hangs the page hard enough that the renderer
+    // stops answering — the same defect as CLAUDE.md item 113, two call frames
+    // away from the write again.
+    let anyFilter = false;
     for (const axis of AXES) {
       const raw = params.get(axis.param);
-      selected[axis.key] = raw ? raw.split(',').filter(Boolean) : [];
+      const values = raw ? raw.split(',').filter(Boolean) : [];
+      selected[axis.key] = values;
+      if (values.length > 0) anyFilter = true;
     }
     const sortParam = params.get('sort');
     if (SORTS.some((s) => s.key === sortParam)) sort = sortParam as SortKey;
@@ -92,6 +112,9 @@
     if (dirParam === 'asc' || dirParam === 'desc') direction = dirParam;
     const viewParam = params.get('view');
     if (viewParam === 'table' || viewParam === 'cards') view = viewParam;
+    // A shared link arriving pre-filtered opens the drawer, so the reader can
+    // see what was applied rather than wondering why the list is short.
+    if (anyFilter) filtersOpen = true;
   }
 
   function writeUrl() {
@@ -237,6 +260,24 @@
     AXES.reduce((total, axis) => total + selected[axis.key].length, 0) + (query ? 1 : 0),
   );
 
+  /**
+   * Every filter currently applied, flattened for the chip row.
+   *
+   * Read from `vocab` rather than from `facets`, because a facet list drops a
+   * term whose count has fallen to zero and an applied filter must stay
+   * visible and removable even when it is the reason nothing matches.
+   */
+  const activeFilters = $derived(
+    AXES.flatMap((axis) =>
+      selected[axis.key].map((id) => ({
+        axis: axis.key,
+        id,
+        multi: axis.multi,
+        label: (vocab[axis.key] ?? []).find((term) => term.id === id)?.label ?? id,
+      })),
+    ),
+  );
+
   const fmt = (value: number | null, digits = 0, suffix = '') =>
     value === null ? '—' : `${value.toFixed(digits)}${suffix}`;
 
@@ -248,37 +289,51 @@
 </script>
 
 <div class="mt-6">
-  <!-- Controls -->
-  <div class="flex flex-wrap items-end gap-3">
-    <!--
-      `min-w-56`, not `min-w-0`. With `flex-1` and no minimum the input shrinks
-      to nothing on a narrow container while its label wraps over three lines
-      and collides with the next control. A minimum makes it wrap to its own
-      row instead, which is what `flex-wrap` is there for.
-    -->
-    <label class="flex min-w-56 flex-1 flex-col gap-1">
-      <span class="type-data whitespace-nowrap text-xs uppercase tracking-widest text-ink-muted">
-        Filter by name
-      </span>
+  <!--
+    ── Toolbar ─────────────────────────────────────────────────────────────
+    One row: search, sort, direction, view, and the filter drawer's handle.
+    Everything that changes what the list SHOWS is here; everything that
+    changes what it CONTAINS is behind the handle, with its count on the
+    button so the drawer never hides state without saying so.
+  -->
+  <div class="flex flex-wrap items-center gap-2">
+    <label class="min-w-56 flex-1">
+      <span class="sr-only">Filter by name or alias</span>
       <input
         type="search"
         bind:value={query}
         oninput={() => (limit = PAGE)}
-        placeholder="Name or alias"
+        placeholder="Search names and aliases…"
         class="type-data w-full rounded border border-line-strong bg-surface-1 px-3 py-2 text-sm text-ink"
       />
     </label>
 
-    <label class="flex shrink-0 flex-col gap-1">
-      <span class="type-data whitespace-nowrap text-xs uppercase tracking-widest text-ink-muted">
-        Sort
-      </span>
+    <button
+      type="button"
+      onclick={() => (filtersOpen = !filtersOpen)}
+      aria-expanded={filtersOpen}
+      aria-controls="catalogue-filters"
+      class={`type-data flex shrink-0 items-center gap-2 rounded border px-3 py-2 text-sm ${
+        activeCount > 0 || filtersOpen
+          ? 'border-line-strong bg-surface-2 text-ink'
+          : 'border-line-strong bg-surface-1 text-ink-secondary hover:text-ink'
+      }`}
+    >
+      Filters
+      {#if activeCount > 0}
+        <span class="rounded-full bg-ui-accent px-1.5 text-xs text-surface-0">{activeCount}</span>
+      {/if}
+      <span aria-hidden="true" class="text-ink-muted">{filtersOpen ? '▴' : '▾'}</span>
+    </button>
+
+    <label class="shrink-0">
+      <span class="sr-only">Sort by</span>
       <select
         bind:value={sort}
         class="type-data rounded border border-line-strong bg-surface-1 px-3 py-2 text-sm text-ink"
       >
         {#each SORTS as option (option.key)}
-          <option value={option.key}>{option.label}</option>
+          <option value={option.key}>Sort: {option.label}</option>
         {/each}
       </select>
     </label>
@@ -287,10 +342,10 @@
     <button
       type="button"
       onclick={() => (direction = direction === 'asc' ? 'desc' : 'asc')}
-      class="type-data shrink-0 whitespace-nowrap rounded border border-line-strong bg-surface-1 px-3 py-2 text-sm text-ink"
+      class="type-data shrink-0 rounded border border-line-strong bg-surface-1 px-3 py-2 text-sm text-ink"
       aria-label={`Sort direction: ${direction === 'asc' ? 'ascending' : 'descending'}`}
     >
-      {direction === 'asc' ? '↑ Ascending' : '↓ Descending'}
+      {direction === 'asc' ? '↑' : '↓'}
     </button>
 
     <div class="flex shrink-0 overflow-hidden rounded border border-line-strong">
@@ -309,33 +364,63 @@
     </div>
   </div>
 
-  <!-- Facets -->
-  <div class="mt-4 flex flex-col gap-3">
-    {#each AXES as axis (axis.key)}
-      {#if facets[axis.key].length > 0}
-        <div class="flex flex-wrap items-baseline gap-2">
-          <span class="type-data w-full shrink-0 text-xs uppercase tracking-widest text-ink-muted sm:w-32">
-            {axis.label}
-          </span>
-          {#each facets[axis.key] as term (term.id)}
-            <button
-              type="button"
-              onclick={() => toggle(axis.key, term.id, axis.multi)}
-              aria-pressed={selected[axis.key].includes(term.id)}
-              class={`type-data rounded-full border px-2.5 py-0.5 text-xs ${
-                selected[axis.key].includes(term.id)
-                  ? 'border-line-strong bg-surface-2 text-ink'
-                  : 'border-line text-ink-secondary hover:text-ink'
-              }`}
-            >
-              {term.label}
-              <span class="text-ink-muted">{term.count}</span>
-            </button>
-          {/each}
-        </div>
-      {/if}
-    {/each}
-  </div>
+  <!--
+    ── Applied filters ─────────────────────────────────────────────────────
+    Always visible, drawer open or shut. Each chip removes its own filter, so
+    undoing one is one click and does not require finding it again among
+    eighty.
+  -->
+  {#if activeFilters.length > 0}
+    <div class="mt-3 flex flex-wrap items-center gap-2">
+      {#each activeFilters as filter (filter.axis + filter.id)}
+        <button
+          type="button"
+          onclick={() => toggle(filter.axis, filter.id, filter.multi)}
+          class="type-data flex items-center gap-1.5 rounded-full border border-line-strong bg-surface-2 px-2.5 py-0.5 text-xs text-ink"
+          aria-label={`Remove filter: ${filter.label}`}
+        >
+          {filter.label}
+          <span aria-hidden="true" class="text-ink-muted">×</span>
+        </button>
+      {/each}
+      <button type="button" onclick={clearAll} class="type-data text-xs text-ui-accent">
+        Clear all
+      </button>
+    </div>
+  {/if}
+
+  <!-- ── The drawer ───────────────────────────────────────────────────── -->
+  {#if filtersOpen}
+    <div
+      id="catalogue-filters"
+      class="mt-3 grid gap-x-6 gap-y-4 rounded-lg border border-line bg-surface-1 p-4 sm:grid-cols-2 xl:grid-cols-3"
+    >
+      {#each AXES as axis (axis.key)}
+        {#if facets[axis.key].length > 0}
+          <div>
+            <p class="type-data text-xs uppercase tracking-widest text-ink-muted">{axis.label}</p>
+            <div class="mt-2 flex flex-wrap gap-1.5">
+              {#each facets[axis.key] as term (term.id)}
+                <button
+                  type="button"
+                  onclick={() => toggle(axis.key, term.id, axis.multi)}
+                  aria-pressed={selected[axis.key].includes(term.id)}
+                  class={`type-data rounded-full border px-2.5 py-0.5 text-xs ${
+                    selected[axis.key].includes(term.id)
+                      ? 'border-line-strong bg-surface-2 text-ink'
+                      : 'border-line text-ink-secondary hover:text-ink'
+                  }`}
+                >
+                  {term.label}
+                  <span class="text-ink-muted">{term.count}</span>
+                </button>
+              {/each}
+            </div>
+          </div>
+        {/if}
+      {/each}
+    </div>
+  {/if}
 
   <!-- Result count -->
   <p class="type-data mt-4 flex flex-wrap items-center gap-3 text-sm text-ink-secondary">
@@ -353,9 +438,6 @@
           ? ` of ${rows.length}`
           : ''}
       </span>
-      {#if activeCount > 0}
-        <button type="button" onclick={clearAll} class="text-ui-accent">Clear filters</button>
-      {/if}
     {/if}
   </p>
 

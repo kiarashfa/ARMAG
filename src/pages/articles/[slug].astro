@@ -9,7 +9,10 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+// `headings` is what `render()` returns beside the component — the article's
+// own h2/h3 tree, derived from the prose rather than typed beside it, so a
+// renamed heading cannot leave a stale contents entry behind.
+const { Content, headings } = await render(entry);
 ---
 
 <ArticlePage
@@ -19,6 +22,7 @@ const { Content } = await render(entry);
   published={entry.data.published}
   updated={entry.data.updated}
   heroImage={entry.data.heroImage}
+  headings={headings}
 >
   <Content />
 </ArticlePage>

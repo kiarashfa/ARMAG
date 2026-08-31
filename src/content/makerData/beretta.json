@@ -21,5 +21,19 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/beretta/logo.webp",
+    "alt": "The Beretta wordmark: the company name in serif capitals beside three arrows in a circle",
+    "caption": "Beretta's current wordmark, as it appears on the slide of a 92-series pistol.",
+    "width": 688,
+    "height": 185,
+    "credit": {
+      "author": "Beretta",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beretta_text_logo.jpg",
+      "title": "File:Beretta text logo.jpg",
+      "licenseType": "public-domain",
+      "licenseNote": "Commons records the image as public domain; the mark itself is a registered trademark of Fabbrica d'Armi Pietro Beretta and is reproduced here to identify the manufacturer, which is nominative use."
+    }
+  }
 }

@@ -20,6 +20,7 @@
  * the population it was measured against — a bar whose population is unstated
  * is exactly the unitless score §8.5 rejects.
  */
+import { assetUrl } from '../content/href.ts';
 import type { CartridgeData } from '../../schemas/cartridge.ts';
 import type { GunData } from '../../schemas/gun.ts';
 import type { PropertyValue } from '../../schemas/primitives.ts';
@@ -80,6 +81,17 @@ export interface CompareEntry {
   cartridgeName: string | null;
   /** False below the publication floor — a column, but no link (SPEC.md §5.9). */
   hasPage: boolean;
+  /**
+   * The entry's hero photograph, for the thumbnail row at the top of the
+   * comparison. Absent for an entry that has no image — two of them do not,
+   * and the column simply says so rather than reserving a broken frame.
+   *
+   * The URL is resolved here, at build time, through the same `assetUrl()`
+   * every other image on the site goes through: SPEC.md §10's second-repository
+   * escape hatch has to hold for this payload too, and a client that prefixed
+   * the path itself would be the one place it did not.
+   */
+  thumb?: { src: string; alt: string; width?: number; height?: number };
   cells: Record<string, CompareCell>;
 }
 
@@ -347,6 +359,14 @@ export function buildCompareEntry(
     makerName: context.makerName ?? null,
     cartridgeName: context.cartridgeName ?? null,
     hasPage: context.hasPage ?? true,
+    thumb: gun.images[0]
+      ? {
+          src: assetUrl(gun.images[0].src),
+          alt: gun.images[0].alt,
+          width: gun.images[0].width,
+          height: gun.images[0].height,
+        }
+      : undefined,
     cells,
   };
 }

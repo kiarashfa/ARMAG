@@ -1,42 +1,60 @@
 ---
 /**
- * Site header — wordmark, the browse axes, and the two toggles.
+ * Site header — the site's ONLY bar of controls.
  *
- * Both toggles are plain buttons with a few lines of inline script rather than
+ * ── Why there is only one ─────────────────────────────────────────────────
+ * There used to be two: this one, and a sticky per-entry bar on every gun page
+ * carrying its own unit toggle. Two bars meant two Metric buttons on the same
+ * screen doing the same thing, which is a bug however you look at it. The
+ * global controls all live here now, this bar is sticky so they stay reachable
+ * on a long page, and the per-entry actions moved into the entry itself
+ * (`EntryActions.astro`), where the thing they act on is visible.
+ *
+ * The toggles are plain buttons with a few lines of inline script rather than
  * hydrated islands. A theme switch that needs 12 kB of framework to change one
- * attribute is a bad trade against the SPEC.md §11 budget of under 100 kB of JS
- * per page, and neither toggle has state worth a component.
+ * attribute is a bad trade against SPEC.md §11's budget, and neither toggle has
+ * state worth a component.
+ *
+ * The wordmark's mark is `public/favicon.svg` referenced as an image, not an
+ * inline copy of the same paths: one file is the site's mark, and a second copy
+ * pasted into the markup is the one that gets left behind when it changes.
  */
-import { fileHref, href, taxonomyHref } from '../../lib/content/href.ts';
+import Icon from '../blocks/Icon.astro';
 import SiteSearch from '../islands/SiteSearch.svelte';
+import { compareHref, fileHref, href } from '../../lib/content/href.ts';
 
-const axes = [
-  { label: 'Pistols', axis: 'type', term: 'pistol' },
-  { label: 'Rifles', axis: 'type', term: 'rifle' },
-  { label: 'Shotguns', axis: 'type', term: 'shotgun' },
-] as const;
+const browse = [
+  { label: 'Cartridges', path: href('cartridges') },
+  { label: 'Manufacturers', path: href('makers') },
+  { label: 'Glossary', path: href('glossary') },
+  { label: 'Tools', path: href('tools') },
+  { label: 'Armory', path: href('armory') },
+];
+
+const control =
+  'type-data flex shrink-0 items-center gap-1.5 rounded border border-line-strong bg-surface-1 px-2 py-1 text-xs text-ink-secondary no-underline hover:text-ink';
 ---
 
-<header class="border-b border-line bg-surface-0" data-pagefind-ignore>
+<header
+  class="sticky top-0 z-40 border-b border-line bg-surface-0/95 backdrop-blur"
+  data-pagefind-ignore
+>
   <div
-    class="mx-auto flex max-w-(--layout-max) flex-wrap items-center gap-x-6 gap-y-3 px-(--layout-gutter) py-3"
+    class="mx-auto flex max-w-(--layout-max) flex-wrap items-center gap-x-5 gap-y-2 px-(--layout-gutter) py-2.5"
   >
-    <a href={href()} class="type-title text-lg tracking-tight text-ink no-underline">
-      ARMAG
+    <a href={href()} class="flex shrink-0 items-center gap-2 text-ink no-underline">
+      <img src={fileHref('favicon.svg')} alt="" width="24" height="24" class="h-6 w-6 rounded" />
+      <span class="type-title text-lg tracking-tight">ARMAG</span>
     </a>
 
-    <nav aria-label="Browse" class="type-data flex flex-wrap items-center gap-4 text-sm">
+    <nav aria-label="Browse" class="type-data flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
       {
-        axes.map((item) => (
-          <a href={taxonomyHref(item.axis, item.term)} class="text-ink-secondary hover:text-ui-accent">
+        browse.map((item) => (
+          <a href={item.path} class="text-ink-secondary hover:text-ui-accent">
             {item.label}
           </a>
         ))
       }
-      <a href={href('cartridges')} class="text-ink-secondary hover:text-ui-accent">Cartridges</a>
-      <a href={href('compare')} class="text-ink-secondary hover:text-ui-accent">Compare</a>
-      <a href={href('tools')} class="text-ink-secondary hover:text-ui-accent">Tools</a>
-      <a href={href('glossary')} class="text-ink-secondary hover:text-ui-accent">Glossary</a>
     </nav>
 
     <div class="ml-auto flex items-center gap-2">
@@ -47,25 +65,39 @@ const axes = [
       */}
       <SiteSearch client:idle bundle={fileHref('pagefind/pagefind.js')} />
 
-      <button
-        type="button"
-        data-unit-toggle
-        class="type-data rounded border border-line-strong bg-surface-1 px-2 py-1 text-xs text-ink-secondary hover:text-ink"
-        aria-label="Switch between metric and imperial units"
-      >
-        <span class="u-metric">Metric</span><span class="u-imperial" data-pagefind-ignore
-          >Imperial</span
-        >
-      </button>
+      <a href={compareHref([])} class={control} aria-label="Compare firearms side by side">
+        <Icon name="compare" />
+        <span class="hidden sm:inline">Compare</span>
+      </a>
 
       <button
         type="button"
-        id="theme-toggle"
-        class="type-data rounded border border-line-strong bg-surface-1 px-2 py-1 text-xs text-ink-secondary hover:text-ink"
-        aria-label="Switch between the dark and light theme"
+        data-unit-toggle
+        class={control}
+        aria-label="Switch between metric and imperial units"
       >
-        Theme
+        <Icon name="ruler" />
+        <span class="hidden sm:inline">
+          <span class="u-metric">Metric</span><span class="u-imperial" data-pagefind-ignore
+            >Imperial</span
+          >
+        </span>
       </button>
+
+      {/*
+        The icon shows what the button DOES, not what the page currently is:
+        on the dark default it offers the sun. `global.css` swaps the pair on
+        `[data-theme='light']`, so no script touches the icon and there is no
+        frame in which the wrong one is showing.
+      */}
+      <button type="button" id="theme-toggle" class={control} aria-label="Switch between the dark and light theme">
+        <span class="theme-sun"><Icon name="sun" /></span>
+        <span class="theme-moon"><Icon name="moon" /></span>
+      </button>
+
+      <a href={href('about')} class={control} aria-label="About ARMAG">
+        <Icon name="info" />
+      </a>
     </div>
   </div>
 </header>
@@ -89,8 +121,8 @@ const axes = [
       save('armag:theme', next);
     });
 
-    // Every unit toggle on the page, not one by id: the sticky entry bar
-    // carries a second one, and two elements cannot share an id.
+    // `querySelectorAll`, not an id: a page may carry more than one unit
+    // control, and two elements cannot share an id.
     for (const button of document.querySelectorAll('[data-unit-toggle]')) {
       button.addEventListener('click', () => {
         const next = root.getAttribute('data-units') === 'imperial' ? 'metric' : 'imperial';

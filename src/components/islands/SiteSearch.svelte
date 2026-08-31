@@ -124,10 +124,28 @@
 <button
   type="button"
   onclick={open}
-  class="type-data flex items-center gap-2 rounded border border-line-strong bg-surface-1 px-2 py-1 text-xs text-ink-secondary hover:text-ink"
+  class="type-data flex shrink-0 items-center gap-1.5 rounded border border-line-strong bg-surface-1 px-2 py-1 text-xs text-ink-secondary hover:text-ink"
   aria-label="Search the site"
 >
-  Search
+  <!--
+    The same 24×24 stroked shape as `blocks/Icon.astro`. It is repeated rather
+    than imported because a Svelte island cannot render an Astro component, and
+    a one-path magnifier is a smaller duplication than a second icon runtime.
+  -->
+  <svg
+    class="h-4 w-4"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.75"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M10.5 3a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15ZM21 21l-5.2-5.2" />
+  </svg>
+  <span class="hidden sm:inline">Search</span>
   <kbd class="rounded border border-line px-1 text-[0.65rem] text-ink-muted">/</kbd>
 </button>
 

@@ -1,0 +1,72 @@
+---
+/**
+ * A manufacturer's wordmark, or an honest placeholder where none is held yet.
+ *
+ * ── Why the placeholder is part of the component ──────────────────────────
+ * Logos arrive one at a time, over months. A list where some rows have a mark
+ * and others have nothing reflows every time one is added and reads as broken
+ * in the meantime. The placeholder reserves the same box and carries the
+ * maker's initials, so the layout is final before the artwork is, and a
+ * missing logo looks deliberate rather than lost.
+ *
+ * It is deliberately drawn as *not a logo*: no plate, muted type, dashed
+ * border. Nobody should mistake it for the mark it stands in for.
+ *
+ * ── Why real marks sit on a light plate ───────────────────────────────────
+ * A wordmark is authored in one colour, usually black, against white. Dropped
+ * straight onto a dark page it disappears. The plate is a fixed near-white in
+ * both themes — the one place on the site that does not follow the theme,
+ * because the artwork it carries does not either.
+ */
+import { assetUrl } from '../../lib/content/href.ts';
+import type { ImageRef } from '../../schemas/primitives.ts';
+
+interface Props {
+  name: string;
+  logo?: ImageRef;
+  /** `sm` for a list row, `md` for a page header. */
+  size?: 'sm' | 'md';
+  class?: string;
+}
+
+const { name, logo, size = 'sm', class: className = '' } = Astro.props;
+
+const box = size === 'sm' ? 'h-9 w-16' : 'h-14 w-28';
+
+/**
+ * Up to two initials from the words that carry meaning. "Heckler & Koch" → HK,
+ * "Smith & Wesson" → SW, "Izhmash" → IZ — a single-word name takes its first
+ * two letters rather than one, because one letter in a box reads as an error.
+ */
+const words = name
+  .split(/[\s.]+/)
+  .map((word) => word.replace(/[^\p{L}\p{N}]/gu, ''))
+  .filter(Boolean);
+
+const initials =
+  words.length >= 2
+    ? `${words[0]![0]}${words[1]![0]}`.toUpperCase()
+    : (words[0] ?? name).slice(0, 2).toUpperCase();
+---
+
+{
+  logo ? (
+    <img
+      src={assetUrl(logo.src)}
+      alt=""
+      width={logo.width}
+      height={logo.height}
+      loading="lazy"
+      decoding="async"
+      class={`logo-plate shrink-0 ${box} ${className}`}
+    />
+  ) : (
+    <span
+      class={`type-data flex shrink-0 items-center justify-center rounded border border-dashed border-line-strong bg-surface-2 text-xs tracking-widest text-ink-muted ${box} ${className}`}
+      aria-hidden="true"
+      title={`No wordmark held for ${name} yet`}
+    >
+      {initials}
+    </span>
+  )
+}

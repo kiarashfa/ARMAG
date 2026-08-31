@@ -13,7 +13,6 @@
  */
 import BaseLayout from '../ui/BaseLayout.astro';
 import Breadcrumbs from '../blocks/Breadcrumbs.astro';
-import Section from '../blocks/Section.astro';
 import { absoluteUrl, glossaryHref, href } from '../../lib/content/href.ts';
 import { definedTerm } from '../../lib/render/json-ld.ts';
 
@@ -51,28 +50,42 @@ const jsonLd = definedTerm({
         )
       }
 
-      <div class="prose type-body mt-8 max-w-readable text-ink-secondary">
-        <slot />
-      </div>
+      {/*
+        Definition and cross-references share one row on a wide screen. A
+        glossary entry is a short piece of prose in a wide layout — the worst
+        case for a lone reading column — and "see also" is exactly what a
+        reader wants next, so it moves out from under the text and into the
+        space beside it.
+      */}
+      <div
+        class="mt-8 grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,var(--measure-readable))_minmax(0,1fr)] lg:items-start"
+      >
+        <div class="prose type-body text-ink-secondary">
+          <slot />
+        </div>
 
-      {
-        seeAlso.length > 0 && (
-          <Section id="see-also" title="See also">
-            <ul class="flex flex-wrap gap-2">
-              {seeAlso.map((related) => (
-                <li>
-                  <a
-                    href={glossaryHref(related.id)}
-                    class="type-data rounded border border-line px-3 py-1.5 text-sm text-ink-secondary no-underline hover:text-ui-accent"
-                  >
-                    {related.term}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </Section>
-        )
-      }
+        {
+          seeAlso.length > 0 && (
+            <nav aria-labelledby="see-also" class="lg:sticky lg:top-20">
+              <p id="see-also" class="type-heading text-xs uppercase tracking-widest text-ink-muted">
+                See also
+              </p>
+              <ul class="mt-3 flex flex-wrap gap-2">
+                {seeAlso.map((related) => (
+                  <li>
+                    <a
+                      href={glossaryHref(related.id)}
+                      class="type-data rounded border border-line px-3 py-1.5 text-sm text-ink-secondary no-underline hover:text-ui-accent"
+                    >
+                      {related.term}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )
+        }
+      </div>
     </article>
   </div>
 </BaseLayout>

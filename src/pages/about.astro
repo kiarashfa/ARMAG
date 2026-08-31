@@ -1,17 +1,67 @@
 ---
 /**
- * `/about/` — carries the full disclaimer that SPEC.md §14 requires in the
- * footer of every page and in full here.
+ * `/about/` — what ARMAG is, who builds it, how to reach or support them, and
+ * the full disclaimer that SPEC.md §14 requires here and in every footer.
+ *
+ * Two columns, and that is the point of the page rather than decoration: the
+ * facts about the person and the project are cards in a rail, the argument is
+ * a reading column beside them. Sections of prose alone would leave half a
+ * wide screen empty — the defect this round set out to remove — and the cards
+ * are the content that genuinely belongs in the other half.
  */
 import BaseLayout from '../components/ui/BaseLayout.astro';
 import Breadcrumbs from '../components/blocks/Breadcrumbs.astro';
-import Section from '../components/blocks/Section.astro';
-import { href } from '../lib/content/href.ts';
+import PayPalMark from '../assets/paypal.svg';
+import CoffeeMark from '../assets/buy-me-a-coffee.svg';
+
+import { getCartridges, getGuns, getMakers } from '../lib/content/entries.ts';
+import { fileHref, href } from '../lib/content/href.ts';
+import { getCollection } from 'astro:content';
+
+const [guns, cartridges, makers, glossary, articles] = await Promise.all([
+  getGuns(),
+  getCartridges(),
+  getMakers(),
+  getCollection('glossary'),
+  getCollection('articles'),
+]);
+
+/**
+ * Counted from the published content at build time, never typed. The same rule
+ * the rest of the site runs on applies to the page that explains the rule.
+ */
+const counts = [
+  { label: 'Firearms', value: guns.length },
+  { label: 'Cartridges', value: cartridges.length },
+  { label: 'Manufacturers', value: makers.length },
+  { label: 'Glossary terms', value: glossary.length },
+  { label: 'Articles', value: articles.length },
+  {
+    label: 'Cited sources',
+    value: [...guns, ...cartridges, ...makers].reduce(
+      (total, entry) => total + entry.data.references.length,
+      0,
+    ),
+  },
+];
+
+const contact = [
+  {
+    label: 'Personal site',
+    url: 'https://kiarashfa.github.io/website/',
+    note: 'kiarashfa.github.io',
+  },
+  { label: 'Email', url: 'mailto:kiarashfa@gmail.com', note: 'kiarashfa@gmail.com' },
+  { label: 'GitHub', url: 'https://github.com/kiarashfa', note: 'github.com/kiarashfa' },
+];
+
+const card = 'rounded-lg border border-line bg-surface-1 p-5';
+const cardTitle = 'type-heading text-xs uppercase tracking-widest text-ink-muted';
 ---
 
 <BaseLayout
   title="About"
-  description="What ARMAG is, how it is sourced, and the disclaimer that applies to every page on it."
+  description="What ARMAG is, how it is sourced, who builds it, and the disclaimer that applies to every page on it."
 >
   <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'About' }]} />
@@ -22,59 +72,194 @@ import { href } from '../lib/content/href.ts';
       advertising, no cookies, no tracking, no backend.
     </p>
 
-    <Section id="difference" title="What makes it different">
-      <div class="prose type-body max-w-readable text-ink-secondary">
+    <div
+      class="mt-10 grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,20rem)_minmax(0,var(--measure-readable))] lg:items-start"
+    >
+      {/* ── The rail ───────────────────────────────────────────────────── */}
+      <aside class="flex flex-col gap-4">
+        <div class={card}>
+          <h2 class={cardTitle}>Who made this</h2>
+          <div class="mt-3 flex items-center gap-3">
+            <img
+              src={fileHref('images/author.webp')}
+              alt="Kiarash Farajzadehahary"
+              width="56"
+              height="56"
+              class="h-14 w-14 rounded-full border border-line"
+            />
+            <div>
+              <p class="type-title text-base text-ink">Kiarash Farajzadehahary</p>
+              <p class="type-data text-xs text-ink-muted">Scientist · developer · designer</p>
+            </div>
+          </div>
+          <p class="type-body mt-4 text-sm text-ink-secondary">
+            I kept running into the same problem: every firearm reference on the internet either
+            copies its numbers from another one without saying where they came from, or argues about
+            them. I wanted one where each figure states its source, each derived figure shows its
+            formula, and a number nobody has published appears as a gap rather than as something
+            plausible. I build it in the open, on my own time, and I would genuinely like to hear
+            when something here is wrong.
+          </p>
+        </div>
+
+        <div class={card}>
+          <h2 class={cardTitle}>Contact</h2>
+          <ul class="mt-3 flex flex-col gap-2">
+            {
+              contact.map((item) => (
+                <li class="type-data flex flex-wrap items-baseline gap-x-2 text-sm">
+                  <a
+                    href={item.url}
+                    rel="noopener"
+                    target={item.url.startsWith('mailto:') ? undefined : '_blank'}
+                    class="text-ui-accent"
+                  >
+                    {item.label}
+                  </a>
+                  <span class="text-xs text-ink-muted">{item.note}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <div class={card}>
+          <h2 class={cardTitle}>Support</h2>
+          <p class="type-body mt-3 text-sm text-ink-secondary">
+            ARMAG is free, ad-free and login-free, and stays that way. If it saved you an argument or
+            an afternoon of cross-checking, you can put something toward the next hundred entries.
+          </p>
+          <div class="mt-4 flex flex-col gap-2">
+            <a
+              href="https://www.paypal.com/donate/?hosted_button_id=S3BD5XFBMMWSJ"
+              target="_blank"
+              rel="noopener"
+              class="type-data flex items-center gap-2 rounded border border-line-strong bg-surface-2 px-3 py-2 text-sm text-ink-secondary no-underline hover:text-ink"
+            >
+              <PayPalMark width="16" height="16" />
+              <span>Donate · PayPal</span>
+            </a>
+            <a
+              href="https://www.buymeacoffee.com/kiarashfa"
+              target="_blank"
+              rel="noopener"
+              class="type-data flex items-center gap-2 rounded border border-line-strong bg-surface-2 px-3 py-2 text-sm text-ink-secondary no-underline hover:text-ink"
+            >
+              <CoffeeMark width="16" height="16" />
+              <span>Buy Me a Coffee</span>
+            </a>
+          </div>
+        </div>
+
+        <div class={card}>
+          <h2 class={cardTitle}>Where it stands</h2>
+          <dl class="mt-3 grid grid-cols-2 gap-x-4 gap-y-2">
+            {
+              counts.map((count) => (
+                <div class="flex items-baseline justify-between gap-2 border-b border-line pb-1">
+                  <dt class="type-data text-xs text-ink-muted">{count.label}</dt>
+                  <dd class="type-stat text-base text-ink">{count.value}</dd>
+                </div>
+              ))
+            }
+          </dl>
+          <p class="type-data mt-3 text-xs text-ink-muted">
+            Counted from the published content at build time. The catalogue is being written; every
+            entry here is written by hand and checked by the same build that publishes it.
+          </p>
+        </div>
+
+        <div class={card}>
+          <h2 class={cardTitle}>Licence</h2>
+          <p class="type-body mt-3 text-sm text-ink-secondary">
+            The site's code and text are published under the KFA Source-Available License 1.0.
+            Photographs and manufacturers' marks are third-party material under their own licences,
+            recorded on each image and summarised on the{' '}
+            <a href={href('attributions')} class="text-ui-accent">attributions</a> page.
+          </p>
+        </div>
+      </aside>
+
+      {/* ── The reading column ─────────────────────────────────────────── */}
+      <div class="prose type-body text-ink-secondary">
+        <h2 id="difference" class="type-title scroll-mt-16 text-xl text-ink">
+          What makes it different
+        </h2>
         <p>
           Anyone has a spec sheet. The difference here is that <strong class="text-ink">
             every number is either sourced or derived from sourced numbers by a formula you can open
             and check</strong
           >. There is no third category.
         </p>
-        <p class="mt-4">
+        <p>
           Each figure carries a status. <em>Verified</em> means a cited source states it, and the
           citation is a link you can click. <em>Estimated</em> means we worked it out, and the panel
           tells you from what. <em>Sources disagree</em> means the published record itself conflicts,
           and the note says how. <em>Not recorded</em> means we do not know — an honest gap, never a
           plausible-looking guess.
         </p>
-        <p class="mt-4">
+        <p>
           Derived figures inherit the worst status of their inputs. Feed an estimate into a
           calculation and the result is marked as an estimate, however confident the arithmetic
           looks. A figure with no number behind it is not computed at all.
         </p>
-      </div>
-    </Section>
-
-    <Section id="disclaimer" title="Disclaimer">
-      <div class="prose type-body max-w-readable rounded-lg border border-line-strong bg-surface-1 p-5 text-ink-secondary">
         <p>
-          <strong class="text-ink">ARMAG is reference information only.</strong> It is not legal
-          advice, not safety instruction, and not a substitute for a manufacturer's manual or
-          qualified in-person training.
+          None of that is a promise about how carefully the entries were written. It is enforced by
+          the build: a figure marked verified with no link fails it, a source note hedging with
+          "approximately" or "same as" fails it, and two entries whose prose reads too much alike
+          fail it naming both files. The <a href={href('methodology')} class="text-ui-accent">
+            methodology
+          </a> page has the whole list.
         </p>
-        <p class="mt-4">
-          Figures are transcribed from published sources and may contain errors, including errors
-          present in those sources. Derived figures are models: they describe idealised conditions,
-          not the arm in your hands on the day. Check anything that matters against the source we
-          cite, and where safety is involved, against the manufacturer.
-        </p>
-        <p class="mt-4">
-          Nothing here tells you what you may lawfully do. ARMAG carries no jurisdiction data and no
-          legality flags, by deliberate decision — see the
-          <a href={href('editorial-policy')} class="text-ui-accent">editorial policy</a>. The site
-          states what a firearm <em>is</em>, never what a reader <em>may do</em>.
-        </p>
-      </div>
-    </Section>
 
-    <Section id="tone" title="Tone">
-      <div class="prose type-body max-w-readable text-ink-secondary">
+        <h2 id="disclaimer" class="type-title mt-10 scroll-mt-16 text-xl text-ink">Disclaimer</h2>
+        <div class="mt-4 rounded-lg border border-line-strong bg-surface-1 p-5">
+          <p>
+            <strong class="text-ink">ARMAG is reference information only.</strong> It is not legal
+            advice, not safety instruction, and not a substitute for a manufacturer's manual or
+            qualified in-person training.
+          </p>
+          <p>
+            Figures are transcribed from published sources and may contain errors, including errors
+            present in those sources. Derived figures are models: they describe idealised
+            conditions, not the arm in your hands on the day. Check anything that matters against
+            the source we cite, and where safety is involved, against the manufacturer.
+          </p>
+          <p>
+            Nothing here tells you what you may lawfully do. ARMAG carries no jurisdiction data and
+            no legality flags, by deliberate decision — see the{' '}
+            <a href={href('editorial-policy')} class="text-ui-accent">editorial policy</a>. The site
+            states what a firearm <em>is</em>, never what a reader <em>may do</em>.
+          </p>
+        </div>
+
+        <h2 id="tone" class="type-title mt-10 scroll-mt-16 text-xl text-ink">Tone</h2>
         <p>
           Encyclopedic throughout, including on arms associated with atrocity or crime. Facts,
           sourced, without celebration and without editorialising. An arm's history is part of what
           it is, and omitting it would be its own kind of dishonesty.
         </p>
+        <p>
+          There is no damage, lethality or "stopping power" figure anywhere on this site, and there
+          never will be. Muzzle and retained energy are physics and appear prominently; stopping
+          power is discredited pseudoscience with no unit and no measurement behind it.
+        </p>
+
+        <h2 id="privacy" class="type-title mt-10 scroll-mt-16 text-xl text-ink">
+          What it keeps, and where
+        </h2>
+        <p>
+          There is no backend, no account and nothing to sign in to. Whatever the site remembers —
+          your <a href={href('armory')} class="text-ui-accent">armory</a>, your comparison, your
+          units, your theme — stays in your own browser and never leaves it. That also means it
+          lives in one browser on one device, and the site cannot move it for you; the armory can
+          hand you a backup file or a share link, and those are the only ways it travels.
+        </p>
+        <p>
+          No serial number field exists anywhere in the schema, in local storage, or in a share
+          link. A test asserts it, on every build.
+        </p>
       </div>
-    </Section>
+    </div>
   </div>
 </BaseLayout>

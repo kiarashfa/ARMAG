@@ -13,16 +13,25 @@ interface Props {
   /** Shown under the heading — what this section is for. */
   standfirst?: string;
   class?: string;
+  /**
+   * Drops the top margin. For a section that is a cell in a grid rather than a
+   * band down the page: the grid owns the spacing, and the margin would push
+   * one column down relative to its neighbour.
+   */
+  flush?: boolean;
 }
 
-const { id, title, standfirst, class: className = '' } = Astro.props;
+const { id, title, standfirst, class: className = '', flush = false } = Astro.props;
 ---
 
-<section id={id} class={`mt-(--layout-section-gap) scroll-mt-16 ${className}`}>
+<section
+  id={id}
+  class={`${flush ? '' : 'mt-(--layout-section-gap)'} scroll-mt-16 ${className}`}
+>
   <h2 class="type-title text-xl">
     <a href={`#${id}`} class="text-ink no-underline hover:text-ui-accent">{title}</a>
   </h2>
-  {standfirst && <p class="type-body mt-1 max-w-lede text-sm text-ink-secondary">{standfirst}</p>}
+  {standfirst && <p class="type-body mt-1 max-w-note text-sm text-ink-secondary">{standfirst}</p>}
   <div class="mt-4">
     <slot />
   </div>

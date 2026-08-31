@@ -324,7 +324,7 @@
         </table>
       </div>
 
-      <p class="type-data mt-3 max-w-readable text-xs text-ink-muted">
+      <p class="type-data mt-3 max-w-note text-xs text-ink-muted">
         These are your numbers, not ours: nothing here is sourced, so nothing carries a status
         badge. For figures that are,
         <a href={cartridgePrefix} class="text-ui-accent">open a cartridge</a> — its loads carry

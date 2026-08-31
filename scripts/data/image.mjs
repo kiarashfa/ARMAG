@@ -126,7 +126,7 @@ async function cmdLicence(rawFile) {
  * taken as one argument rather than two because the two-argument form invites
  * `image.mjs add file ak-47 hero`, which silently writes to the wrong tree.
  */
-async function cmdAdd(rawFile, target, basename) {
+async function cmdAdd(rawFile, target, basename, { replace = false } = {}) {
   if (!target || !/^(guns|cartridges|makers)\/[a-z0-9-]+$/.test(target)) {
     throw new Error(
       `target must be "<collection>/<slug>", e.g. guns/ak-47 — got "${target ?? '(nothing)'}"`,
@@ -156,7 +156,12 @@ async function cmdAdd(rawFile, target, basename) {
 
   const source = meta.thumbUrl ?? meta.originalUrl;
   const bytes = await getBuffer(source);
-  const encoded = await encodeToWebp(bytes, destination);
+  // `--replace` exists because a file already on disk can be WRONG rather than
+  // done: the two Phase 8 heroes were converted before this pipeline existed
+  // and had their alpha channel flattened onto black, which showed as blotches
+  // on the AK and a black box on the M4 in the light theme. Re-encoding is the
+  // fix, and refusing to overwrite would have meant deleting by hand first.
+  const encoded = await encodeToWebp(bytes, destination, { overwrite: replace });
 
   const imageRef = buildImageRef({
     src: probe.src,
@@ -212,13 +217,15 @@ async function cmdCredit(slug) {
   console.log(JSON.stringify(rows, null, 2));
 }
 
-const [command, ...args] = process.argv.slice(2);
+const argv = process.argv.slice(2);
+const replace = argv.includes('--replace');
+const [command, ...args] = argv.filter((arg) => arg !== '--replace');
 try {
   if (command === 'find') await cmdFind(args[0]);
   else if (command === 'search') await cmdSearch(args.join(' '));
   else if (command === 'cat') await cmdCat(args[0]);
   else if (command === 'licence' || command === 'license') await cmdLicence(args[0]);
-  else if (command === 'add') await cmdAdd(args[0], args[1], args[2]);
+  else if (command === 'add') await cmdAdd(args[0], args[1], args[2], { replace });
   else if (command === 'credit') await cmdCredit(args[0]);
   else {
     console.error(

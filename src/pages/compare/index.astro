@@ -32,7 +32,7 @@ const grouped = groupRows(GUN_COMPARE_ROWS, GUN_GROUP_ORDER);
     <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
       Up to {COMPARE_LIMIT} entries, side by side, across {GUN_COMPARE_ROWS.length} rows. The rows are
       generated from the same registry the specification tables use, so nothing recorded on an entry
-      can be missing here.
+      can be missing here.{' '}
       <strong class="text-ink">No column is marked as the winner.</strong> Lighter is better for carry
       and worse for recoil; the site does not know what you are choosing for.
     </p>
@@ -51,7 +51,7 @@ const grouped = groupRows(GUN_COMPARE_ROWS, GUN_GROUP_ORDER);
     <noscript>
       <p class="type-data mt-6 rounded-lg border border-line bg-surface-1 p-4 text-sm text-ink-secondary">
         A comparison is chosen in the address bar, and a static site builds one page for this URL
-        whatever follows the question mark — so this is the one tool here that needs JavaScript. The
+        whatever follows the question mark — so this is the one tool here that needs JavaScript. The{' '}
         <a href={href()} class="text-ui-accent">catalogue</a> and every entry page work without it, and
         each entry page carries the same rows listed below.
       </p>
@@ -61,7 +61,7 @@ const grouped = groupRows(GUN_COMPARE_ROWS, GUN_GROUP_ORDER);
       <h2 class="type-title text-xl">
         <a href="#rows" class="text-ink no-underline hover:text-ui-accent">What is compared</a>
       </h2>
-      <p class="type-body mt-1 max-w-lede text-sm text-ink-secondary">
+      <p class="type-body mt-1 max-w-note text-sm text-ink-secondary">
         Every row, in the order they appear. Derived figures come first: the specification sheet is
         table stakes, the computed layer is what this site is for.
       </p>

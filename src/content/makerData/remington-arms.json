@@ -19,5 +19,19 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-27"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/remington-arms/logo.webp",
+    "alt": "The Remington wordmark: the company name in block capitals",
+    "caption": "The Remington wordmark.",
+    "width": 1200,
+    "height": 257,
+    "credit": {
+      "author": "Remington Arms",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Remington_logo.png",
+      "title": "File:Remington logo.png",
+      "licenseType": "public-domain",
+      "licenseNote": "Commons records the image as public domain; the mark itself is a registered trademark and is reproduced here to identify the manufacturer, which is nominative use."
+    }
+  }
 }

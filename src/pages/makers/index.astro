@@ -3,6 +3,7 @@
 import BaseLayout from '../../components/ui/BaseLayout.astro';
 import { itemList } from '../../lib/render/json-ld.ts';
 import Breadcrumbs from '../../components/blocks/Breadcrumbs.astro';
+import MakerLogo from '../../components/blocks/MakerLogo.astro';
 import { getMakers } from '../../lib/content/entries.ts';
 import { absoluteUrl, makerHref } from '../../lib/content/href.ts';
 import { labelFor } from '../../schemas/taxonomy.ts';
@@ -35,13 +36,18 @@ const jsonLd = itemList(
       ) : (
         <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {makers.map((maker) => (
-            <li class="rounded-lg border border-line bg-surface-1 p-3">
-              <a href={makerHref(maker.id)} class="type-data text-sm text-ui-accent">
-                {maker.data.name}
-              </a>
-              <p class="type-data text-xs text-ink-muted">
-                {labelFor('country', maker.data.country) ?? humanise(maker.data.country)} · {maker.data.founded}
-              </p>
+            <li class="flex items-center gap-3 rounded-lg border border-line bg-surface-1 p-3">
+              <MakerLogo name={maker.data.name} logo={maker.data.logo} />
+              <div class="min-w-0">
+                <a href={makerHref(maker.id)} class="type-data text-sm text-ui-accent">
+                  {maker.data.name}
+                </a>
+                <p class="type-data text-xs text-ink-muted">
+                  {labelFor('country', maker.data.country) ?? humanise(maker.data.country)}
+                  {/* `founded` is optional (Phase 10, item 196) — Sterling has none published. */}
+                  {maker.data.founded && <span> · {maker.data.founded}</span>}
+                </p>
+              </div>
             </li>
           ))}
         </ul>

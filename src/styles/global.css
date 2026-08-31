@@ -248,17 +248,38 @@
    * Measure — how wide a line of text is allowed to get. Two settings,
    * because the two jobs are different:
    *
-   *  - `readable` (76ch) is for text someone reads several paragraphs of: the
-   *    top of the comfortable 60-80ch band rather than the middle, which is
-   *    the concession a wide reference layout earns.
-   *  - `lede` (92ch) is for the one or two paragraphs directly under a page
+   *  - `readable` (41rem ≈ 76 characters of body text) is for text someone
+   *    reads several paragraphs of: the top of the comfortable 60–80
+   *    character band rather than the middle, which is the concession a wide
+   *    reference layout earns.
+   *  - `lede` (50rem) is for the one or two paragraphs directly under a page
    *    title. They are read once, at a glance, and setting them wider is what
    *    makes the top of a page look deliberate at 1440px and above.
    *
    * Both clamp to 100%, so neither can overflow a narrow screen.
+   *
+   * ── Why rem and not ch ────────────────────────────────────────────────
+   * `ch` is the width of "0" in the ELEMENT'S OWN font, so one class produced
+   * three different widths on the same page: `max-w-readable` measured 655px
+   * on a 16px paragraph, 574px on a 14px one and 492px on a 12px caption. The
+   * footer disclaimer is set at 12px, so its "92ch" lede came out at 570px —
+   * a line that stopped at 40% of a 1440px page and looked like a broken
+   * layout, because it was one. A measure is a statement about the reading
+   * column, not about whatever type size happens to sit in it, so it is
+   * anchored to the root font size. `tokens.test.mjs` asserts the unit.
    */
-  --measure-readable: 76ch;
-  --measure-lede: 92ch;
+  --measure-readable: 41rem;
+  --measure-lede: 50rem;
+
+  /*
+   * `note` is the third measure and it exists because the other two were
+   * being used for the wrong job. A caption, a standfirst or a one-line
+   * disclaimer is not a reading column — nobody reads four paragraphs of it —
+   * but it still should not run the full 88rem of the layout. Given its own
+   * token, small supporting text has an explicit width instead of borrowing a
+   * paragraph's and silently getting a different one at every type size.
+   */
+  --measure-note: 34rem;
 }
 
 @utility max-w-readable {
@@ -267,6 +288,10 @@
 
 @utility max-w-lede {
   max-width: min(var(--measure-lede), 100%);
+}
+
+@utility max-w-note {
+  max-width: min(var(--measure-note), 100%);
 }
 
 @layer base {
@@ -649,6 +674,41 @@
   a[data-crosslink='glossary']:hover,
   a[data-crosslink='glossary']:focus-visible {
     color: var(--color-ui-accent);
+  }
+
+  /*
+   * ── A manufacturer's wordmark ────────────────────────────────────────────
+   *
+   * The one surface on the site that does NOT follow the theme, and
+   * deliberately: a wordmark is authored as black on white, so a dark page
+   * would swallow it. `contain` rather than `cover`, because a logo cropped to
+   * fill a box is a logo somebody redrew.
+   *
+   * Not a `--color-*` token: token pairs must differ between themes
+   * (`tokens.test.mjs` enforces it) and this one must not.
+   */
+  .logo-plate {
+    object-fit: contain;
+    border-radius: 0.25rem;
+    border: 1px solid var(--color-line);
+    background-color: oklch(0.98 0.002 255);
+    padding: 0.25rem;
+  }
+
+  /*
+   * The theme button shows what it DOES, not what the page is: the dark
+   * default offers the sun. Swapped in CSS rather than by script, so there is
+   * no frame in which the wrong icon is showing and no work for the inline
+   * head script beyond setting the attribute it already sets.
+   */
+  .theme-moon {
+    display: none;
+  }
+  [data-theme='light'] .theme-sun {
+    display: none;
+  }
+  [data-theme='light'] .theme-moon {
+    display: block;
   }
 
   /* "Compare all variants" swaps the tab strip for one delta table. */

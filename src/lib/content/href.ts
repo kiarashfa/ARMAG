@@ -17,7 +17,15 @@
  * which would drag the whole integration graph into every page's module graph.
  */
 
-const BASE = import.meta.env.BASE_URL;
+/**
+ * `import.meta.env` exists under Vite — in the dev server, in the build, and in
+ * the browser — and does NOT exist under bare Node. `node --test` runs these
+ * modules directly, so a test that reaches this file through any import chain
+ * would throw on module evaluation before a single assertion ran. The fallback
+ * is the no-base path, which is what a test that only needs a shape wants; it
+ * can never mask a misconfigured build, because a build always runs in Vite.
+ */
+const BASE = import.meta.env?.BASE_URL ?? '/';
 
 /**
  * Where assets are served from. Change this one line to move images to a

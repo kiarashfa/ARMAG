@@ -486,6 +486,47 @@
           </tr>
         </thead>
 
+        <!--
+          ── The photographs ────────────────────────────────────────────────
+          First row under the header, before any figure. A comparison of four
+          arms is a comparison of four objects, and the reader knows what they
+          look like long before they know what a 7.62×39mm case length is —
+          the picture is what tells them they picked the right four.
+
+          `object-contain` on a fixed-height box, not `cover`: these are
+          specimen photographs at wildly different aspect ratios, and cropping
+          a rifle to fill a square is cropping off the rifle.
+        -->
+        <tbody>
+          <tr>
+            <th
+              scope="row"
+              class="compare-label bg-surface-0 p-2 text-left align-middle text-xs uppercase tracking-widest text-ink-muted"
+            >
+              Photograph
+            </th>
+            {#each loaded as entry (entry.id)}
+              <td class="compare-col p-2 align-middle">
+                {#if entry.thumb}
+                  <img
+                    src={entry.thumb.src}
+                    alt={entry.thumb.alt}
+                    width={entry.thumb.width}
+                    height={entry.thumb.height}
+                    loading="lazy"
+                    decoding="async"
+                    class="h-20 w-full rounded border border-line bg-surface-1 object-contain p-1"
+                  />
+                {:else}
+                  <span class="type-data flex h-20 items-center justify-center rounded border border-dashed border-line-strong text-xs text-ink-muted">
+                    no photograph
+                  </span>
+                {/if}
+              </td>
+            {/each}
+          </tr>
+        </tbody>
+
         {#each visibleGroups as bucket (bucket.group)}
           <tbody>
             <tr>
@@ -516,7 +557,7 @@
       </table>
     </div>
 
-    <p class="type-data mt-4 max-w-readable text-xs text-ink-muted">
+    <p class="type-data mt-4 max-w-note text-xs text-ink-muted">
       No column is marked as the winner, and none ever will be. Lighter is better for carry and
       worse for recoil; the site does not know which you are choosing for. Bar lengths are
       percentile positions within the population named beneath each one, never a score.

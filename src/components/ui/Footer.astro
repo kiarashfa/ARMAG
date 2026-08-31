@@ -3,45 +3,94 @@
  * Site footer, carrying the disclaimer required on **every page** by
  * SPEC.md §14. The full version lives on `/about/`; this is the short form,
  * and it is not optional or collapsible anywhere.
+ *
+ * ── Why it is a grid ──────────────────────────────────────────────────────
+ * It used to be a blurb and a link list at the top of an otherwise empty
+ * 88rem band, with the disclaimer under them capped at a reading measure it
+ * had no use for — a 12px paragraph that stopped at 40% of a wide screen and
+ * read as a broken layout. Three columns give each piece a real column to
+ * fill, so the width is used by content rather than by whitespace, and each
+ * column is naturally narrow enough to read.
  */
 import { href } from '../../lib/content/href.ts';
 
 const year = new Date().getUTCFullYear();
+
+const about = [
+  { label: 'About', path: href('about') },
+  { label: 'Methodology', path: href('methodology') },
+  { label: 'Editorial policy', path: href('editorial-policy') },
+  { label: 'Attributions', path: href('attributions') },
+];
+
+const browse = [
+  { label: 'Firearms', path: href() },
+  { label: 'Cartridges', path: href('cartridges') },
+  { label: 'Manufacturers', path: href('makers') },
+  { label: 'Glossary', path: href('glossary') },
+  { label: 'Tools', path: href('tools') },
+];
 ---
 
 <footer class="mt-(--layout-section-gap) border-t border-line bg-surface-1" data-pagefind-ignore>
-  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-8">
-    <div class="flex flex-wrap gap-x-8 gap-y-4">
-      <div class="max-w-readable">
-        <p class="type-title text-base">ARMAG</p>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-10">
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,2fr)]">
+      <div>
+        <p class="type-title text-base text-ink">ARMAG</p>
         <p class="type-data mt-2 text-sm text-ink-secondary">
           A free, non-profit reference for modern firearms. Every number is either sourced or
           derived from sourced numbers by a formula you can open and check.
         </p>
       </div>
 
-      <nav aria-label="About this site" class="type-data flex flex-col gap-2 text-sm">
-        <a href={href('about')} class="text-ink-secondary hover:text-ui-accent">About</a>
-        <a href={href('methodology')} class="text-ink-secondary hover:text-ui-accent">Methodology</a>
-        <a href={href('editorial-policy')} class="text-ink-secondary hover:text-ui-accent">
-          Editorial policy
-        </a>
-        <a href={href('attributions')} class="text-ink-secondary hover:text-ui-accent">
-          Attributions
-        </a>
+      <nav aria-label="Browse">
+        <p class="type-heading text-xs uppercase tracking-widest text-ink-muted">Browse</p>
+        <ul class="type-data mt-3 flex flex-col gap-2 text-sm">
+          {
+            browse.map((item) => (
+              <li>
+                <a href={item.path} class="text-ink-secondary hover:text-ui-accent">
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </nav>
+
+      <nav aria-label="About this site">
+        <p class="type-heading text-xs uppercase tracking-widest text-ink-muted">This site</p>
+        <ul class="type-data mt-3 flex flex-col gap-2 text-sm">
+          {
+            about.map((item) => (
+              <li>
+                <a href={item.path} class="text-ink-secondary hover:text-ui-accent">
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+
+      <div>
+        <p class="type-heading text-xs uppercase tracking-widest text-ink-muted">
+          Reference information only
+        </p>
+        <p class="type-data mt-3 text-sm text-ink-secondary">
+          ARMAG is not legal advice, not safety instruction, and not a substitute for a
+          manufacturer's manual or qualified training. Figures are transcribed from published
+          sources and may contain errors; check anything that matters against the source we cite.{' '}
+          <a href={href('about')} class="text-ui-accent">Read the full disclaimer</a>.
+        </p>
+      </div>
     </div>
 
-    <p class="type-data mt-8 max-w-lede border-t border-line pt-4 text-xs text-ink-muted">
-      <strong class="text-ink-secondary">Reference information only.</strong> ARMAG is not legal
-      advice, not safety instruction, and not a substitute for a manufacturer's manual or qualified
-      training. Figures are transcribed from published sources and may contain errors; check
-      anything that matters against the source we cite.
-      <a href={href('about')} class="text-ui-accent">Read the full disclaimer</a>.
-    </p>
-
-    <p class="type-data mt-4 text-xs text-ink-muted">
-      © {year}. Content licences are recorded per image and per citation.
+    <p
+      class="type-data mt-8 flex flex-wrap gap-x-4 gap-y-1 border-t border-line pt-4 text-xs text-ink-muted"
+    >
+      <span>© {year} Kiarash Farajzadehahary.</span>
+      <span>Content licences are recorded per image and per citation.</span>
     </p>
   </div>
 </footer>
