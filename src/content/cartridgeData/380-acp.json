@@ -137,7 +137,23 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/380-acp/hero.webp",
+      "alt": "A .380 ACP cartridge on orange graph paper, short and straight-walled with a rounded jacketed bullet.",
+      "caption": "A .380 ACP round on graph paper.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_.380_ACP_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "title": "File:Cartridge .380 ACP CC BY-SA 4.0 by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q158766"

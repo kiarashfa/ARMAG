@@ -97,7 +97,21 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/44-40-winchester/hero.webp",
+      "alt": "A .44-40 Winchester cartridge lying on its side on a pale ground, carrying an unjacketed lead round-nose bullet.",
+      "caption": "A .44-40 Winchester round with the soft lead bullet the cartridge was designed around.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:44-40_Winchester_-_1.jpg",
+        "title": "File:44-40 Winchester - 1.jpg",
+        "licenseType": "public-domain",
+        "author": "Malis"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q158779"

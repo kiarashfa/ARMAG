@@ -21,5 +21,17 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-27"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/kalashnikov-concern/logo.webp",
+    "alt": "The Kalashnikov Group mark: a black and red angular device above the words KALASHNIKOV in black and GROUP in grey.",
+    "caption": "The Kalashnikov Group mark. Izhmash took this identity when it was reorganised into the Concern in 2013.",
+    "width": 960,
+    "height": 624,
+    "credit": {
+      "sourceUrl": "https://kalashnikovgroup.ru/",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use. Taken from the page recorded as the source."
+    }
+  }
 }

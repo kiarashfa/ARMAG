@@ -514,6 +514,57 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
     }
   }
 
+  /**
+   * --- An alias must not name another entry ------------------------------
+   *
+   * Aliases are first-class here: they are indexed for search and they mint
+   * static redirects (SPEC.md §6). So an alias that slugifies to a DIFFERENT
+   * entry's id is a factual error twice over — it claims one arm is known by
+   * another arm's name, and it asks the redirect layer to shadow a real page.
+   *
+   * `alias-redirects.ts` already refuses to build that redirect, so nothing
+   * breaks; the problem is that nothing *said* anything either. The Heckler &
+   * Koch HK416 carried "M27 IAR" as an alias, correctly, right up until the
+   * M27 became its own entry — at which point the claim quietly became wrong
+   * and no check noticed. An alias can go stale because of a file it does not
+   * mention, which is exactly the class of error a cross-file gate is for.
+   *
+   * Matched on the slugified form rather than the literal string, because that
+   * is what the redirect layer and the search index both key on.
+   */
+  const aliasSlug = (name: string): string =>
+    name
+      .toLowerCase()
+      .normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+
+  for (const pair of [
+    { label: 'gun', ids: new Set(gunsById.keys()) },
+    { label: 'cartridge', ids: cartridgeIds },
+  ] as const) {
+    for (const entry of datas[pair.label]) {
+      const self = String(entry.data.id ?? entry.fileSlug);
+      const aliases = Array.isArray(entry.data.aliases) ? entry.data.aliases : [];
+      for (const alias of aliases) {
+        const name = (alias as AnyRecord)?.name;
+        if (typeof name !== 'string') continue;
+        const slug = aliasSlug(name);
+        if (!slug || slug === self || !pair.ids.has(slug)) continue;
+        violations.push({
+          file: entry.file,
+          rule: 'alias/shadows-entry',
+          message:
+            `alias '${name}' resolves to '${slug}', which is another ${pair.label} entry. ` +
+            'An alias may not name a different entry: it would claim this arm goes by that ' +
+            "one's name, and the redirect it would mint is dropped rather than shadowing a " +
+            'real page. Remove the alias, or promote it if the two really are the same thing',
+        });
+      }
+    }
+  }
+
   for (const maker of datas.maker) {
     for (const field of ['parentCompany', 'predecessorOf', 'successorOf'] as const) {
       const value = maker.data[field];

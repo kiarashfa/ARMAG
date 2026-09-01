@@ -1,0 +1,208 @@
+{
+  "id": "6-5mm-creedmoor",
+  "name": "6.5mm Creedmoor",
+  "wikidataId": "Q15964357",
+  "aliases": [
+    {
+      "name": "6.5 Creedmoor",
+      "kind": "commercial",
+      "note": "The SAAMI designation. C.I.P. files the same round as 6,5 Creedmoor."
+    },
+    {
+      "name": "6.5 CM",
+      "kind": "nickname"
+    },
+    {
+      "name": "6.5x48mm",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Dave Emary of Hornady with Dennis DeMille of Creedmoor Sports",
+  "introduced": 2007,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 6.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-creedmoor",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-creedmoor-200418-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 48.77,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-creedmoor",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-creedmoor-200418-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 71.76,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-creedmoor",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-creedmoor-200418-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 11.99,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-creedmoor",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-creedmoor-200418-en.pdf",
+    "sourceNote": "Dimension R1. The case is rimless, so the rim is 0.04 mm larger than the base rather than a projecting flange."
+  },
+  "neckDiameter": {
+    "value": 7.49,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-creedmoor",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-creedmoor-200418-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-creedmoor",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-creedmoor-200418-en.pdf",
+    "sourceNote": "Dimension P1. Identical to the .308 Winchester family head, which is what lets the round run in an unaltered short action."
+  },
+  "maxPressure": {
+    "value": 435.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-6-5-creedmoor",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-creedmoor-200418-en.pdf",
+    "sourceNote": "Pmax 4350 bar. SAAMI rates the same chambering at 62,000 psi by its own method, so the two ceilings are not interchangeable figures."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornady-120-amax",
+      "name": "120 gr A-MAX",
+      "manufacturer": "Hornady",
+      "bulletType": "A-MAX",
+      "bulletMass": {
+        "value": 7.776,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-6-5mm-creedmoor",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1357301146",
+        "sourceNote": "120 gr as published in the article's ballistics table, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 711.2,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-6-5mm-creedmoor",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1357301146",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 28 inches."
+          },
+          "velocity": {
+            "value": 920.5,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-6-5mm-creedmoor",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1357301146",
+            "sourceNote": "3020 ft/s as published. The table's stated ballistics sources are Hornady, SAAMI and C.I.P."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hornady-143-eld-x",
+      "name": "143 gr ELD-X",
+      "manufacturer": "Hornady",
+      "bulletType": "ELD-X",
+      "bulletMass": {
+        "value": 9.266,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-6-5mm-creedmoor",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1357301146",
+        "sourceNote": "143 gr as published in the article's ballistics table, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 711.2,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-6-5mm-creedmoor",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1357301146",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 28 inches."
+          },
+          "velocity": {
+            "value": 826.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-6-5mm-creedmoor",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1357301146",
+            "sourceNote": "2710 ft/s as published."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/6-5mm-creedmoor/hero.webp",
+      "alt": "Three brass rifle cartridges standing upright against a pine board. All three carry copper jacketed bullets with red polymer tips. The left two are slender and near-identical in height; the right one is visibly shorter in the body and wider at the shoulder.",
+      "caption": "From the left, 6mm Creedmoor, 6.5mm Creedmoor and .308 Winchester. All three share a case head, and the two Creedmoors share a case; the .308 is the shorter, fatter round the short action was originally built for.",
+      "width": 651,
+      "height": 1000,
+      "credit": {
+        "author": "Hellbus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Creedmoors.jpg",
+        "title": "File:Creedmoors.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/6-5mm-creedmoor/lineup.webp",
+      "alt": "Six brass rifle cartridges of the same bullet diameter standing in a row against a pine board, falling in height from a tall belted-looking magnum on the left to a short stubby round on the right. Bullet tips vary: white polymer, bare lead, then two red polymer tips, then a plain copper spitzer.",
+      "caption": "Six 6.5 mm rounds together — from the left .264 Winchester Magnum, 6.5x55mm Swedish, 6.5x52mm Carcano, .260 Remington, 6.5mm Creedmoor and 6.5mm Grendel. The Creedmoor is second from the right, and the point of it is visible here: it holds a long bullet in a case short enough to leave room for one in a magazine sized for the .308.",
+      "width": 1200,
+      "height": 1018,
+      "credit": {
+        "author": "Hellbus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:6.5_lineup.jpg",
+        "title": "File:6.5 lineup.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "cip-6-5-creedmoor",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 6,5 Creedmoor",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-creedmoor-200418-en.pdf",
+      "revision": "Tab. I, adopted 2012-05-30, revised 2020-04-21",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "wp-6-5mm-creedmoor",
+      "type": "wikipedia",
+      "title": "6.5mm Creedmoor",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1357301146",
+      "lang": "en",
+      "revision": "1357301146",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

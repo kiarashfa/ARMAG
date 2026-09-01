@@ -21,5 +21,18 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/steyr-arms/logo.webp",
+    "alt": "The Steyr Arms roundel: the name set across a circle formed of concentric rings, with ARMS below.",
+    "caption": "Steyr Arms' roundel, adopted in 2019.",
+    "width": 1200,
+    "height": 1200,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:STEYR_ARMS_GmbH_Logo_2019.jpg",
+      "title": "File:STEYR ARMS GmbH Logo 2019.jpg",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "Commons records the file as Public domain. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  }
 }

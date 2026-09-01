@@ -1,0 +1,160 @@
+{
+  "id": "stechkin-aps",
+  "name": "Stechkin automatic pistol",
+  "nativeName": "Автоматический пистолет Стечкина",
+  "kind": "model",
+  "wikidataId": "Q1140518",
+  "makerRef": "vyatskiye-polyany",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "APS",
+      "kind": "military",
+      "note": "From the Russian abbreviation for Stechkin automatic pistol."
+    },
+    {
+      "name": "Stechkin",
+      "kind": "nickname"
+    },
+    {
+      "name": "APB",
+      "kind": "military",
+      "note": "The suppressed variant built in 1972-73."
+    }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "soviet-union",
+  "producedIn": [
+    "soviet-union"
+  ],
+  "introduced": 1951,
+  "productionYears": {
+    "start": 1951,
+    "end": 1958
+  },
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "duty-sidearm",
+    "personal-defence"
+  ],
+  "massEmpty": {
+    "value": 1.22,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-stechkin-automatic-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367714458",
+    "sourceNote": "1.22 kg. The article does not say whether the wooden holster-stock is included; the figure is roughly twice a Makarov pistol's."
+  },
+  "length": {
+    "value": 225,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-stechkin-automatic-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367714458",
+    "sourceNote": "Pistol alone, without the holster-stock attached."
+  },
+  "barrelLength": {
+    "value": 140,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-stechkin-automatic-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367714458"
+  },
+  "cyclicRate": {
+    "value": 750,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "wp-stechkin-automatic-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367714458",
+    "sourceNote": "750 rounds a minute, published as a single figure rather than a range. It is the rate the pistol's rate-reducer mechanism exists to produce."
+  },
+  "effectiveRange": {
+    "value": 50,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-stechkin-automatic-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367714458",
+    "sourceNote": "Effective range as published. The same source gives a maximum range of 200 m, which is also the furthest setting on the rear sight."
+  },
+  "sightGraduation": {
+    "value": 200,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-stechkin-automatic-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367714458",
+    "sourceNote": "The rear sight is a rotating drum with settings at 25, 50, 100 and 200 m."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x18mm-makarov",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-stechkin-automatic-pistol",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367714458",
+        "sourceNote": "20-round double-column steel box magazine with a two-position feed."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/stechkin-aps/hero.webp",
+      "alt": "A blued Soviet pistol lying on a plywood bench, seen from the left at an angle. It is unusually long-slided for a pistol, with a chequered brown grip, a slide-mounted selector lever and a large box magazine standing proud of the butt. Attached to the rear of the grip is a hollow wooden holster used as a shoulder stock, longer than the pistol itself.",
+      "caption": "A Stechkin APS with its wooden holster clipped to the butt as a shoulder stock. The lever on the slide is the combined safety, decocker and fire selector; the arsenal mark and year are stamped on the frame above the trigger.",
+      "width": 1600,
+      "height": 1067,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stechkin_APS.jpg",
+        "title": "File:Stechkin APS.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/stechkin-aps/in-service.webp",
+      "alt": "A police officer in woodland camouflage, body armour and a green helmet with a clear visor, firing a black Stechkin pistol two-handed inside a wooden indoor range. The pistol is held without its stock.",
+      "caption": "An officer of the Moscow OMON firing an APS on an indoor range. The pistol is being used here as a pistol, with the holster-stock left off, which is how it was carried in police service.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fighter_of_Moscow_special_police_unit_(OMON)_with_APS.jpg",
+        "title": "File:Fighter of Moscow special police unit (OMON) with APS.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-stechkin-automatic-pistol",
+      "type": "wikipedia",
+      "title": "Stechkin automatic pistol",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367714458",
+      "lang": "en",
+      "revision": "1367714458",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

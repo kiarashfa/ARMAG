@@ -19,5 +19,19 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/ithaca-gun-company/logo.webp",
+    "alt": "A period Ithaca Guns mark: the words set in script on a printed panel.",
+    "caption": "The Ithaca Guns mark as used on company merchandising from 1898.",
+    "width": 1200,
+    "height": 345,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Itchaca_merchandising_1898_to_logo.jpg",
+      "title": "File:Itchaca merchandising 1898 to logo.jpg",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "Commons records the file as No restrictions. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use.",
+      "author": "Internet Archive Book Images"
+    }
+  }
 }

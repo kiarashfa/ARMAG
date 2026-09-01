@@ -1,0 +1,239 @@
+{
+  "id": "9x23mm-steyr",
+  "name": "9x23mm Steyr",
+  "wikidataId": "Q2818772",
+  "aliases": [
+    {
+      "name": "9 mm Steyr",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    },
+    {
+      "name": "9mm Steyr-Hahn",
+      "kind": "nickname",
+      "note": "After the pistol it was made for."
+    }
+  ],
+  "designedBy": "Osterreichische Waffenfabriksgesellschaft",
+  "introduced": 1911,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 9.03,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-steyr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page29.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1. The same bullet diameter as 9x19mm Parabellum."
+  },
+  "caseLength": {
+    "value": 23.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-steyr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page29.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 33.1,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-steyr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page29.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6. The encyclopedia infobox gives 32.99 mm, which is a nominal round rather than the standard's maximum."
+  },
+  "rimDiameter": {
+    "value": 9.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-steyr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page29.pdf",
+    "sourceNote": "Dimension R1, equal to the base because the case is rimless."
+  },
+  "neckDiameter": {
+    "value": 9.62,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-steyr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page29.pdf",
+    "sourceNote": "Dimension H2. Within 0.08 mm of the base, because the case is straight-walled and headspaces on its mouth."
+  },
+  "baseDiameter": {
+    "value": 9.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-mm-steyr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page29.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 135.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-9-mm-steyr",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page29.pdf",
+    "sourceNote": "Pmax 1350 bar. This is a low ceiling for a service pistol round, and it is a modern one set for surviving pre-1918 pistols."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornady-115-fmj",
+      "name": "115 gr FMJ",
+      "manufacturer": "Hornady",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 7.452,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-9-23mm-steyr",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356444708",
+        "sourceNote": "115 gr as published in the article's ballistics table, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 128.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-9-23mm-steyr",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356444708",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 128 mm."
+          },
+          "velocity": {
+            "value": 312.4,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-9-23mm-steyr",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356444708",
+            "sourceNote": "1025 ft/s as published. The table's numbered ballistics sources put Hornady against this row."
+          }
+        }
+      ]
+    },
+    {
+      "id": "fiocchi-115-fmj",
+      "name": "115 gr FMJ",
+      "manufacturer": "Fiocchi",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 7.452,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-9-23mm-steyr",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356444708",
+        "sourceNote": "115 gr as published in the article's ballistics table, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 128.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-9-23mm-steyr",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356444708",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 128 mm."
+          },
+          "velocity": {
+            "value": 329.2,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-9-23mm-steyr",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356444708",
+            "sourceNote": "1080 ft/s as published. The table's numbered ballistics sources put Fiocchi against this row."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hirtenberger-115-fmj",
+      "name": "115 gr FMJ",
+      "manufacturer": "Hirtenberger",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 7.452,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-9-23mm-steyr",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356444708",
+        "sourceNote": "115 gr as published in the article's ballistics table, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 128.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-9-23mm-steyr",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356444708",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 128 mm."
+          },
+          "velocity": {
+            "value": 374.9,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-9-23mm-steyr",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356444708",
+            "sourceNote": "1230 ft/s as published, the fastest of the three rows. The table's numbered ballistics sources put Hirtenberger against it."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/9x23mm-steyr/hero.webp",
+      "alt": "A single 9x23mm Steyr cartridge on orange millimetre graph paper. The brass case is straight-sided and about two and a half times as long as it is wide, and carries a round-nosed bullet whose grey lead core shows through a translucent jacket. The base is flat with no projecting rim.",
+      "caption": "A 9x23mm Steyr round on 1 mm graph paper. The case is straight, rimless and headspaces on its mouth; at 23.2 mm it is 4.05 mm longer than a 9x19mm Parabellum case of the same bullet diameter.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridges_9mm_Steyr.jpg",
+        "title": "File:Cartridges 9mm Steyr.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/9x23mm-steyr/comparison.webp",
+      "alt": "Five nine-millimetre pistol cartridges lying side by side on orange graph paper, rising in length from left to right. The second from the left has a dark grey steel case with a red sealant ring; the rest are brass. The rightmost is the longest and carries a lead-cored round-nosed bullet.",
+      "caption": "From the left, 9x17mm, 9x18mm Makarov, 9x19mm, 9x21mm and 9x23mm Steyr. All five take a bullet of roughly the same diameter, and the Steyr on the right is the longest case of the group.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridges_9x17mm,_9x18mm,_9x19mm,_9x21mm,_9x23mm.jpg",
+        "title": "File:Cartridges 9x17mm, 9x18mm, 9x19mm, 9x21mm, 9x23mm.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "cip-9-mm-steyr",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 9 mm Steyr",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page29.pdf",
+      "revision": "Tab. IV, adopted 1984-06-14, revised 2000-06-07",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "wp-9-23mm-steyr",
+      "type": "wikipedia",
+      "title": "9x23mm Steyr",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1356444708",
+      "lang": "en",
+      "revision": "1356444708",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

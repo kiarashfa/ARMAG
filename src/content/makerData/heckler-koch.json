@@ -21,5 +21,17 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/heckler-koch/logo.webp",
+    "alt": "The Heckler & Koch mark: the letters H and K interlocked, in red on black.",
+    "caption": "The interlocked HK monogram.",
+    "width": 960,
+    "height": 658,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Heckler_%26_Koch",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use. Taken from the page recorded as the source."
+    }
+  }
 }

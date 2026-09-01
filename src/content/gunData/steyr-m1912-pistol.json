@@ -1,0 +1,170 @@
+{
+  "id": "steyr-m1912-pistol",
+  "name": "Steyr M1912",
+  "kind": "model",
+  "wikidataId": "Q553914",
+  "makerRef": "steyr-arms",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Steyr-Hahn",
+      "kind": "nickname",
+      "note": "Hahn is German for hammer, and distinguishes it from the hammerless Roth-Steyr M1907."
+    },
+    {
+      "name": "M12",
+      "kind": "military",
+      "note": "The Austro-Hungarian service designation."
+    },
+    {
+      "name": "Steyr M1911",
+      "kind": "commercial",
+      "note": "The commercial name it was sold under before military adoption."
+    },
+    {
+      "name": "Steyr Repetierpistole M1912/P16",
+      "kind": "military",
+      "note": "The selective-fire version with an extended magazine and a fitted stock."
+    }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "austria-hungary",
+  "producedIn": [
+    "austria-hungary"
+  ],
+  "introduced": 1912,
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "fixed-box",
+    "stripper"
+  ],
+  "roles": [
+    "duty-sidearm"
+  ],
+  "massEmpty": {
+    "value": 1.2,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-steyr-m1912-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367358841",
+    "sourceNote": "1.2 kg, credited in the infobox to Jane's. The magazine is integral, so an empty-versus-loaded distinction does not arise the way it does on a pistol with a detachable one."
+  },
+  "length": {
+    "value": 216,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-steyr-m1912-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367358841"
+  },
+  "height": {
+    "value": 142,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-steyr-m1912-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367358841"
+  },
+  "barrelLength": {
+    "value": 128,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-steyr-m1912-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367358841",
+    "sourceNote": "128 mm, which is also the test barrel length the published 9x23mm Steyr ballistics were measured in."
+  },
+  "effectiveRange": {
+    "value": 50,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-steyr-m1912-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367358841"
+  },
+  "productionTotal": {
+    "value": 300000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-steyr-m1912-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367358841",
+    "sourceNote": "The infobox gives \"up to 300,000\", which is a ceiling rather than a count, so the figure is recorded as an estimate."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x23mm-steyr",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-steyr-m1912-pistol",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367358841",
+        "sourceNote": "Integral eight-round magazine in the grip, filled from above with a stripper clip."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-steyr-m1912-pistol",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367358841",
+        "sourceNote": "German rework. The magazine and its capacity are unchanged."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/steyr-m1912-pistol/hero.webp",
+      "alt": "A blued semi-automatic pistol on a grey ground, seen from the left. The slide is short and sits in a cut-out at the rear of a long one-piece frame; an external hammer stands at the back. The grip carries chequered wooden panels. Markings on the frame read Md.1912 under a crown, and STEYR 1913 on the slide.",
+      "caption": "A Steyr M1912 built in 1913 on a Romanian contract, chambered in 9x23mm Steyr. The crown over \"Md.1912\" is the Romanian acceptance mark; the slide covers only the rear third of the frame, which is what gives the pistol its distinctive outline.",
+      "width": 1600,
+      "height": 1131,
+      "credit": {
+        "author": "Self Loader",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steyr_Hahn_M1912_Romanian_9mm_Steyr_4616b_L_DSC7593.jpg",
+        "title": "File:Steyr Hahn M1912 Romanian 9mm Steyr 4616b L DSC7593.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/steyr-m1912-pistol/with-clip.webp",
+      "alt": "A Steyr M1912 pistol lying on weathered grey planks, seen from the right, beside a green cardboard ammunition packet in German and a metal charger clip holding eight brass cartridges with round-nosed bullets.",
+      "caption": "A 1915-made Steyr-Hahn with a period packet of 9 mm Steyr ammunition and a loaded eight-round charger. The clip is the only way the pistol is loaded: the magazine is part of the frame and cannot be taken out.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Drake00",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steyr-Hahn_M1912.JPG",
+        "title": "File:Steyr-Hahn M1912.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-steyr-m1912-pistol",
+      "type": "wikipedia",
+      "title": "Steyr M1912 pistol",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367358841",
+      "lang": "en",
+      "revision": "1367358841",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

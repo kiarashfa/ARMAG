@@ -131,7 +131,23 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/44-magnum/hero.webp",
+      "alt": "A .44 Magnum cartridge on orange graph paper, its case dark with age and its bullet flat-nosed.",
+      "caption": "A .44 Magnum round on graph paper.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_.44_Magnum.jpg",
+        "title": "File:Cartridge .44 Magnum.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q94598"

@@ -1,0 +1,215 @@
+{
+  "id": "m27-iar",
+  "name": "M27 Infantry Automatic Rifle",
+  "kind": "model",
+  "wikidataId": "Q372294",
+  "makerRef": "heckler-koch",
+  "familyRef": null,
+  "alsoInFamilies": [
+    "ar-15"
+  ],
+  "aliases": [
+    {
+      "name": "M38 Squad Designated Marksman Rifle",
+      "kind": "military",
+      "note": "An M27 with a variable-power optic and a suppressor, issued one per squad."
+    },
+    {
+      "name": "Infantry Automatic Rifle",
+      "kind": "military"
+    }
+  ],
+  "lineage": {
+    "derivedFrom": "heckler-koch-hk416"
+  },
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "germany",
+  "producedIn": [
+    "germany",
+    "united-states"
+  ],
+  "introduced": 2010,
+  "productionYears": {
+    "start": 2010,
+    "end": null
+  },
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "assault-rifle",
+    "dmr"
+  ],
+  "massEmpty": {
+    "value": 3.583,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-m27-infantry-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369134770",
+    "sourceNote": "7.9 lb empty. The article gives 9.8 lb loaded with a sling, so this figure is the bare rifle."
+  },
+  "length": {
+    "value": 937.3,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m27-infantry-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369134770",
+    "sourceNote": "36.9 in, the adjustable stock at its longest setting."
+  },
+  "lengthFolded": {
+    "value": 838.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m27-infantry-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369134770",
+    "sourceNote": "33 in, the adjustable stock fully collapsed. The stock telescopes rather than folding."
+  },
+  "width": {
+    "value": 78.74,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m27-infantry-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369134770",
+    "sourceNote": "3.1 in."
+  },
+  "height": {
+    "value": 238.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m27-infantry-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369134770",
+    "sourceNote": "9.4 in."
+  },
+  "barrelLength": {
+    "value": 419.1,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-m27-infantry-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369134770",
+    "sourceNote": "16.5 in, the standard barrel. A shorter 11 in barrel is issued for the Reconnaissance Weapons Kit."
+  },
+  "cyclicRate": {
+    "value": 800,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-m27-infantry-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369134770",
+    "sourceNote": "The article gives a cyclic range of 700 to 900 rounds a minute; the midpoint of that range is recorded here because a PropertyValue holds one number. The sustained rate is given separately as 36 rounds a minute."
+  },
+  "effectiveRange": {
+    "value": 550,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-m27-infantry-automatic-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369134770",
+    "sourceNote": "Effective range against a point target. The same source gives 700 m against an area target."
+  },
+  "productionTotal": {
+    "value": 14100,
+    "unit": "",
+    "status": "verified",
+    "source": "marine-corps-times-m27",
+    "sourceUrl": "https://www.marinecorpstimes.com/news/your-marine-corps/2019/04/19/all-of-the-marine-m27-rifles-are-in-if-youre-not-a-grunt-or-working-with-them-youre-not-getting-one/",
+    "sourceNote": "The number of rifles the Marine Corps had bought as of April 2019, not a lifetime production figure."
+  },
+  "launchPrice": {
+    "amount": 1300,
+    "currency": "USD",
+    "market": "US",
+    "year": 2018,
+    "status": "verified",
+    "source": "business-insider-m27",
+    "sourceUrl": "https://www.businessinsider.com/marines-buying-m27-rifles-at-half-price-after-a-lawmaker-meltdown-2018-4",
+    "sourceNote": "Unit cost to the Marine Corps under the 2018 contract. This is a government procurement price, not a retail one."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-m27-infantry-automatic-rifle",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369134770",
+        "sourceNote": "STANAG magazine. The programme's original requirement asked for at least 100 rounds and was changed to the standard 30-round magazine."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [
+    {
+      "standard": "magazine-pattern",
+      "value": "STANAG 4179"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/guns/m27-iar/hero.webp",
+      "alt": "An M27 rifle seen from the left against a plain ground. It has a black telescoping stock, an AR-pattern pistol grip and lower receiver marked Heckler & Koch, a long railed handguard with a vertical foregrip at the front, a folding rear sight on the receiver rail, a curved thirty-round magazine and a flash hider at the muzzle. A blue chamber flag hangs from the ejection port.",
+      "caption": "An M27 with a vertical foregrip and its iron sights folded up, shown with a chamber safety flag fitted. The receiver markings read Heckler & Koch GmbH, Made in Germany, and Heckler & Koch Defense Inc., Ashburn VA.",
+      "width": 1400,
+      "height": 550,
+      "credit": {
+        "author": "Steve",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M27_Infantry_Automatic_Rifle_noBG.png",
+        "title": "File:M27 Infantry Automatic Rifle noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/m27-iar/in-service.webp",
+      "alt": "A line of Marines in desert camouflage firing rifles upward from the deck of a ship, the nearest one holding an M27 by a magwell grip with a red-dot sight on the rail and smoke drifting from the muzzle. The ship's superstructure and grey sea fill the background.",
+      "caption": "Marines of the 11th Marine Expeditionary Unit firing M27s from the deck of USS Boxer in August 2026. The rifles carry a squad day optic on the receiver rail and are gripped at the magazine well rather than by a foregrip.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Sgt. Joseph Helms",
+        "sourceUrl": "https://www.dvidshub.net/image/9898959/11th-meu-maritime-raid-force-conducts-live-fire-range-aboard-uss-boxer",
+        "title": "11th MEU Maritime Raid Force Conducts Live-Fire Range Aboard USS Boxer",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Marines (11th Marine Expeditionary Unit), VIRIN 260824-M-YF186-2083. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-m27-infantry-automatic-rifle",
+      "type": "wikipedia",
+      "title": "M27 Infantry Automatic Rifle",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369134770",
+      "lang": "en",
+      "revision": "1369134770",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "marine-corps-times-m27",
+      "type": "periodical",
+      "title": "All of the Marine M27 rifles are in",
+      "publisher": "Marine Corps Times",
+      "url": "https://www.marinecorpstimes.com/news/your-marine-corps/2019/04/19/all-of-the-marine-m27-rifles-are-in-if-youre-not-a-grunt-or-working-with-them-youre-not-getting-one/",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "business-insider-m27",
+      "type": "periodical",
+      "title": "Marines are buying M27 rifles at half price",
+      "publisher": "Business Insider",
+      "url": "https://www.businessinsider.com/marines-buying-m27-rifles-at-half-price-after-a-lawmaker-meltdown-2018-4",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

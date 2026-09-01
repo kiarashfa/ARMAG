@@ -97,7 +97,21 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/22-long-rifle/hero.webp",
+      "alt": "Three rimfire cartridges standing side by side on a pale ground, labelled .22 Long, .22 LR and .22 Win Mag; the .22 LR is the middle and shortest-bulleted of the three.",
+      "caption": "The .22 Long Rifle between the older .22 Long and the longer .22 Winchester Magnum Rimfire, labelled in the photograph.",
+      "width": 400,
+      "height": 462,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:22_Long,_22_LR,_22_Winchester_Magnum.JPG",
+        "title": "File:22 Long, 22 LR, 22 Winchester Magnum.JPG",
+        "licenseType": "public-domain",
+        "author": "Ryan D. Larson"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q158715"

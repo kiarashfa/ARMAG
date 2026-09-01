@@ -20,5 +20,17 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/tula-arms-plant/logo.webp",
+    "alt": "The Tula Arms Plant mark: a standing armourer beside a triangle enclosing the letter T, with the year 1712 below.",
+    "caption": "Tula's mark, carrying the year the plant was founded.",
+    "width": 240,
+    "height": 350,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Tula_Arms_Plant",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use. Taken from the page recorded as the source."
+    }
+  }
 }

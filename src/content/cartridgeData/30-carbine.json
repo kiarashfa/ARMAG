@@ -125,7 +125,23 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/30-carbine/hero.webp",
+      "alt": "A .30 Carbine cartridge standing upright beside a second view of its base, showing the headstamp around the primer.",
+      "caption": "A .30 Carbine round with its headstamp shown beside it.",
+      "width": 1114,
+      "height": 1525,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.30_Carbine_Ball_Mk1_Great_Britain.jpg",
+        "title": "File:.30 Carbine Ball Mk1 Great Britain.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Jim Miles",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q155194"

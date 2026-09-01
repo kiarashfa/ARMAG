@@ -1,0 +1,245 @@
+{
+  "id": "m3-submachine-gun",
+  "name": "M3 submachine gun",
+  "kind": "model",
+  "wikidataId": "Q865005",
+  "makerRef": "guide-lamp",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Grease Gun",
+      "kind": "nickname"
+    },
+    {
+      "name": "United States Submachine Gun, Cal. .45, M3",
+      "kind": "military"
+    },
+    {
+      "name": "M3A1",
+      "kind": "military"
+    },
+    {
+      "name": "T20",
+      "kind": "military"
+    }
+  ],
+  "lineage": {
+    "successorOf": "thompson-submachine-gun"
+  },
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "united-states",
+  "producedIn": [
+    "united-states"
+  ],
+  "introduced": 1942,
+  "fireModes": [
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence"
+  ],
+  "massEmpty": {
+    "value": 3.697,
+    "unit": "kg",
+    "status": "verified",
+    "source": "fm-23-41",
+    "sourceUrl": "https://archive.org/details/FM_23_41_S_G_C_45_M3_1941",
+    "sourceNote": "8.15 lb, gun without magazine, from the general data table in paragraph 2c."
+  },
+  "length": {
+    "value": 756.9,
+    "unit": "mm",
+    "status": "verified",
+    "source": "fm-23-41",
+    "sourceUrl": "https://archive.org/details/FM_23_41_S_G_C_45_M3_1941",
+    "sourceNote": "29.8 in, length over all, paragraph 2c. The wire stock telescopes; the manual publishes no collapsed length."
+  },
+  "barrelLength": {
+    "value": 203.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "fm-23-41",
+    "sourceUrl": "https://archive.org/details/FM_23_41_S_G_C_45_M3_1941",
+    "sourceNote": "8 in, paragraph 2a. The 9 mm conversion barrel is the same length."
+  },
+  "sightRadius": {
+    "value": 266.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "fm-23-41",
+    "sourceUrl": "https://archive.org/details/FM_23_41_S_G_C_45_M3_1941",
+    "sourceNote": "Distance between sights, 10.5 in, paragraph 2c."
+  },
+  "riflingTwist": {
+    "value": 406.4,
+    "unit": "mm",
+    "status": "verified",
+    "source": "fm-23-41",
+    "sourceUrl": "https://archive.org/details/FM_23_41_S_G_C_45_M3_1941",
+    "sourceNote": "One turn in 16 in, uniform, paragraph 2a. The 9 mm barrel is one turn in 10 in."
+  },
+  "twistDirection": "right",
+  "riflingGrooves": 4,
+  "cyclicRate": {
+    "value": 450,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "fm-23-41",
+    "sourceUrl": "https://archive.org/details/FM_23_41_S_G_C_45_M3_1941",
+    "sourceNote": "450 shots per minute in caliber .45, paragraph 3f; the manual gives the same rate for the 9 mm conversion."
+  },
+  "triggerPull": {
+    "value": 26.69,
+    "unit": "N",
+    "status": "estimated",
+    "source": "fm-23-41",
+    "sourceUrl": "https://archive.org/details/FM_23_41_S_G_C_45_M3_1941",
+    "sourceNote": "FM 23-41 paragraph 3k gives a range of 5 to 7 lb; the midpoint of 6 lb is recorded here because a PropertyValue holds one number."
+  },
+  "effectiveRange": {
+    "value": 182.9,
+    "unit": "m",
+    "status": "verified",
+    "source": "fm-23-41",
+    "sourceUrl": "https://archive.org/details/FM_23_41_S_G_C_45_M3_1941",
+    "sourceNote": "Maximum effective range 200 yd, paragraph 3n. The peep sight is fixed for 100 yd."
+  },
+  "productionTotal": {
+    "value": 655363,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-m3-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371518050",
+    "sourceNote": "The encyclopedia infobox totals 606,694 M3 and 48,669 M3A1 but carries no citation for either, so the figure is recorded as an estimate rather than as a published total."
+  },
+  "launchPrice": {
+    "amount": 20,
+    "currency": "USD",
+    "market": "US",
+    "year": 1943,
+    "status": "estimated",
+    "sourceNote": "About US$20 per gun in 1943 as given in the uncited encyclopedia infobox. This is a wartime procurement cost to the US government, not a retail price."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "fm-23-41",
+        "sourceUrl": "https://archive.org/details/FM_23_41_S_G_C_45_M3_1941",
+        "sourceNote": "Box magazine of 30 rounds of caliber .45 ammunition, paragraph 1a."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "verified",
+        "source": "fm-23-41",
+        "sourceUrl": "https://archive.org/details/FM_23_41_S_G_C_45_M3_1941",
+        "sourceNote": "32 rounds of 9 mm, paragraph 1a, using the issued conversion kit of barrel, bolt and magazine adapter."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [
+    {
+      "id": "m3a1",
+      "name": "M3A1",
+      "summary": "Standardised in late 1944. The crank retracting handle that broke in service is deleted altogether: a slot is cut into the top of the bolt and the gun is cocked with a finger through a lengthened ejector port. The magazine loader becomes a bracket built into the stock, the oiler moves into the pistol grip, and the driving springs are lengthened.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.606,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-m3-submachine-gun",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371518050",
+          "sourceNote": "7.95 lb empty from the encyclopedia infobox, which carries no citation. FM 23-41's change sheet for the M3A1 describes the alterations without republishing the data table."
+        }
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/m3-submachine-gun/hero.webp",
+      "alt": "An M3 submachine gun laid on red cloth beside its field manual, a canvas sling, a spare magazine and thirty loose cartridges. The gun is a plain steel tube with a pistol grip, a straight box magazine below it and a bent wire stock extended to the rear.",
+      "caption": "A Guide Lamp M3 with the wire stock extended, photographed with a copy of FM 23-41, a spare 30-round magazine and thirty rounds of .45 ACP. The crank retracting handle on the right of the ejector housing identifies it as an M3 rather than an M3A1.",
+      "width": 1440,
+      "height": 830,
+      "credit": {
+        "author": "Curiosandrelics",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M3-SMG.jpg",
+        "title": "File:M3-SMG.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/m3-submachine-gun/gallery.webp",
+      "alt": "An M3 submachine gun mounted behind glass in a museum case against an ochre wall, with a printed label reading “U.S. M3 sub-machine gun .45 caliber”, a photograph of a tank crew above it and a map of Korea to the right.",
+      "caption": "An M3 in the Fort Lewis Military Museum, Washington, displayed among Korean War weapons. The reflections are from the case glass.",
+      "width": 1200,
+      "height": 797,
+      "credit": {
+        "author": "Joe Mabel",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M3_submachine_gun.jpg",
+        "title": "File:M3 submachine gun.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/m3-submachine-gun/in-service.webp",
+      "alt": "A soldier in camouflage fires an M3A1 submachine gun one-handed on an outdoor range, spent cases in the air beside the ejection port and smoke drifting from the muzzle.",
+      "caption": "A Special Forces weapons sergeant firing an M3A1 at Fort Bragg in 2020. The bolt is cocked through the finger hole rather than by the crank the original M3 carried, which is the change that defines the A1.",
+      "width": 1200,
+      "height": 908,
+      "credit": {
+        "author": "K. Kassens",
+        "sourceUrl": "https://www.dvidshub.net/image/6219032/special-forces-students-range-day",
+        "title": "Special Forces Students Range Day",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Army (United States Army John F. Kennedy Special Warfare Center and School), VIRIN 200511-A-OP908-020. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "fm-23-41",
+      "type": "military-manual",
+      "title": "FM 23-41, Submachine Guns, Caliber .45, M3 and M3A1",
+      "publisher": "War Department / Department of the Army",
+      "url": "https://archive.org/details/FM_23_41_S_G_C_45_M3_1941",
+      "revision": "FM 23-41, with Changes No. 3",
+      "accessed": "2026-08-31",
+      "license": "public domain (US Government work)"
+    },
+    {
+      "key": "wp-m3-submachine-gun",
+      "type": "wikipedia",
+      "title": "M3 submachine gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371518050",
+      "lang": "en",
+      "revision": "1371518050",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -17,6 +17,15 @@
       "label": "Austria"
     },
     {
+      "id": "austria-hungary",
+      "label": "Austria-Hungary",
+      "existed": {
+        "start": 1867,
+        "end": 1918
+      },
+      "succeededBy": "austria"
+    },
+    {
       "id": "belgium",
       "label": "Belgium"
     },
@@ -149,6 +158,10 @@
         "end": 1991
       },
       "succeededBy": "russia"
+    },
+    {
+      "id": "spain",
+      "label": "Spain"
     },
     {
       "id": "sweden",

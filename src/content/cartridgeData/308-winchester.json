@@ -159,7 +159,23 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/308-winchester/hero.webp",
+      "alt": "A .308 Winchester cartridge standing upright on a plain grey ground, lit from the side.",
+      "caption": "A .308 Winchester round with a full metal jacket bullet.",
+      "width": 1600,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.308_Winchester_FMJ.jpg",
+        "title": "File:.308 Winchester FMJ.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Dr. Hans Landa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q2005795"

@@ -1,0 +1,213 @@
+{
+  "id": "45-70",
+  "name": ".45-70",
+  "wikidataId": "Q158787",
+  "aliases": [
+    {
+      "name": ".45-70 Government",
+      "kind": "commercial",
+      "note": "The usual full commercial name."
+    },
+    {
+      "name": "45-70 Govt.",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    },
+    {
+      "name": ".45 Government",
+      "kind": "military"
+    },
+    {
+      "name": "11.6x53mmR",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "United States Army, at Springfield Armory",
+  "introduced": 1873,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 11.63,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-70-govt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page112.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 53.47,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-70-govt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page112.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 64.77,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-70-govt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page112.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6. Rifles with tubular magazines and lever actions are the constraint on how far out a bullet can be seated."
+  },
+  "rimDiameter": {
+    "value": 15.44,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-70-govt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page112.pdf",
+    "sourceNote": "Dimension R1. The rim stands 2.6 mm proud of the base, which is what the case headspaces on."
+  },
+  "neckDiameter": {
+    "value": 12.19,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-70-govt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page112.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 12.84,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-45-70-govt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page112.pdf",
+    "sourceNote": "Dimension P1. The 0.65 mm of taper from base to neck is all the case has; there is no shoulder."
+  },
+  "maxPressure": {
+    "value": 220.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-45-70-govt",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page112.pdf",
+    "sourceNote": "Pmax 2200 bar. SAAMI rates the same chambering at 28,000 CUP by its own method, and the two figures are not interchangeable."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "us-army-1874-405-lead",
+      "name": "Government rifle load, 405 gr lead round nose",
+      "manufacturer": "Frankford Arsenal",
+      "bulletType": "lead round nose",
+      "bulletMass": {
+        "value": 26.24,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-45-70",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367008470",
+        "sourceNote": "405 gr as published in the article's ballistics table, converted to grams. The table attributes the row to Springfield Armory test data published in 1874."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 828.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-45-70",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367008470",
+            "sourceNote": "Test barrel length stated for the ballistics table: 32.6 inches, which is the barrel of the Springfield rifle the data was taken from."
+          },
+          "velocity": {
+            "value": 411.5,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-45-70",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367008470",
+            "sourceNote": "1350 ft/s as published."
+          }
+        }
+      ]
+    },
+    {
+      "id": "us-army-1887-500-lead",
+      "name": "Government rifle load, 500 gr lead round nose",
+      "manufacturer": "Frankford Arsenal",
+      "bulletType": "lead round nose",
+      "bulletMass": {
+        "value": 32.4,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-45-70",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367008470",
+        "sourceNote": "500 gr as published in the article's ballistics table, converted to grams. The table attributes the row to Springfield Armory test data published in 1887."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 828.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-45-70",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367008470",
+            "sourceNote": "Test barrel length stated for the ballistics table: 32.6 inches."
+          },
+          "velocity": {
+            "value": 401.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-45-70",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367008470",
+            "sourceNote": "1315.7 ft/s as published."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/45-70/hero.webp",
+      "alt": "Two .45-70 cartridges on a white ground. One stands upright, a tall straight brass case with a broad flat-nosed bullet whose grey lead tip sits in a copper jacket. The second lies on its side in front, showing a wide flanged rim and a headstamp reading “R-P 45-70 GOVT”.",
+      "caption": "Modern .45-70 ammunition. The lying round shows the rim the case headspaces on and the Remington-Peters headstamp; the standing round carries a flat-nosed jacketed bullet, the profile a tubular magazine requires.",
+      "width": 1152,
+      "height": 1362,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:45-70_Govt.JPG",
+        "title": "File:45-70 Govt.JPG",
+        "licenseType": "cc-by",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/45-70/black-powder.webp",
+      "alt": "A single old .45-70 cartridge lying diagonally on a white ground. The brass case is dark and tarnished, with a copper-coloured rim carrying a worn headstamp, and it is loaded with a plain grey lead round-nosed bullet that shows no jacket.",
+      "caption": "A black-powder-era .45-70 with an unjacketed lead round-nosed bullet and a case darkened with age. Compared with the modern round above, the profile is longer-nosed and the bullet is bare lead rather than jacketed.",
+      "width": 1200,
+      "height": 545,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:45-70_Govt_Sp.JPG",
+        "title": "File:45-70 Govt Sp.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "cip-45-70-govt",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 45-70 Govt.",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page112.pdf",
+      "revision": "Tab. II, adopted 1984-06-14, revised 2002-05-15",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "wp-45-70",
+      "type": "wikipedia",
+      "title": ".45-70",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367008470",
+      "lang": "en",
+      "revision": "1367008470",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

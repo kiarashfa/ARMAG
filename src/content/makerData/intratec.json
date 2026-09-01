@@ -19,5 +19,19 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/intratec/logo.webp",
+    "alt": "The Intratec wordmark: the company name in outlined capitals beside a circular monogram.",
+    "caption": "The Intratec mark, as it appeared on the company’s literature.",
+    "width": 533,
+    "height": 99,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Logo_Intratec.jpg",
+      "title": "File:Logo Intratec.jpg",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "Commons records the file as CC BY 3.0. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use.",
+      "author": "Vinci81"
+    }
+  }
 }

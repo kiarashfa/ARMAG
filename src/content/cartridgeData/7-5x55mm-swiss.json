@@ -96,7 +96,21 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/7-5x55mm-swiss/hero.webp",
+      "alt": "Six 7.5×55mm cartridges held in two metal charger clips, with a seventh loose round standing beside them.",
+      "caption": "Swiss GP 11 rounds in the charger clips the Schmidt–Rubin rifles are loaded from, with one round out of the clip.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:GP11.jpg",
+        "title": "File:GP11.jpg",
+        "licenseType": "public-domain",
+        "author": "Rhodium at German Wikipedia ( Original text: Rhodium )"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q259142"

@@ -357,8 +357,35 @@ const readPlan = async () => {
   return JSON.parse(raw);
 };
 
+/**
+ * Re-derives `done` against the content as it is NOW.
+ *
+ * `build` bakes a `done` flag, and `build` refetches thirteen Wikipedia lists —
+ * so between one build and the next, every entry authored in the meantime is
+ * still listed as work to do. Phase 10 authored 46 guns against a plan whose
+ * snapshot said 12, and `next 3` duly proposed three entries that already
+ * existed. The freshness this needs costs one pass over local JSON, so it is
+ * done on every read rather than trusted from the file.
+ */
+async function withCurrentProgress(plan) {
+  const existing = await existingEntries();
+  const rows = plan.rows.map((row) => {
+    const names = [row.slug, ...row.linkedAs.map(proposeSlug)];
+    const authoredAs = names.filter((n) => existing.ids.has(n) || existing.names.has(n));
+    return {
+      ...row,
+      authoredAs: [...new Set(authoredAs)],
+      done:
+        existing.ids.has(row.slug) ||
+        (row.wikidataId !== null && existing.qids.has(row.wikidataId)) ||
+        existing.names.has(row.slug),
+    };
+  });
+  return { ...plan, rows, counts: { ...plan.counts, done: rows.filter((r) => r.done).length } };
+}
+
 async function cmdStatus() {
-  const plan = await readPlan();
+  const plan = await withCurrentProgress(await readPlan());
   const remaining = plan.rows.filter((r) => !r.done);
   console.log(`plan built ${plan.built}`);
   console.log(`  candidates : ${plan.counts.candidates}`);
@@ -377,7 +404,7 @@ async function cmdStatus() {
 }
 
 async function cmdNext(count, filters) {
-  const plan = await readPlan();
+  const plan = await withCurrentProgress(await readPlan());
   const rows = plan.rows
     .filter((row) => !row.done)
     .filter((row) => !filters.kind || row.kind === filters.kind)

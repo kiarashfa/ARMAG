@@ -9,6 +9,10 @@ Requires Python with `Pillow` (WebP encoding) and `pymupdf` (PDF text).
 
     pip install Pillow pymupdf
 
+`DVIDS_API_KEY` and `DATA_GOV_API_KEY` live in `.env` at the repository root
+(gitignored). They are read by `lib/env.mjs` and are needed only by
+`image.mjs dvids` and `image.mjs si`; everything else works without them.
+
 ## One entry, start to finish
 
 ```
@@ -37,11 +41,14 @@ node scripts/data/cip.mjs sheet "<name>"
 | `new-entry.mjs` | Scaffolds `<slug>.mdx` + `<slug>.json` with a real Wikipedia permalink. Fabricates nothing; the scaffold deliberately fails `check:content`. |
 | `wiki.mjs` | `infobox` \| `loads` \| `refs` \| `cite` \| `raw` \| `grep`. Cites by `?oldid=`, never by title. |
 | `wikidata.mjs` | `id` \| `show` \| `native` \| `cite`. Join key, native name, aliases — not a catalogue. |
-| `image.mjs` | `find` \| `search` \| `cat` \| `licence` \| `add` \| `credit`. Licence is resolved **before** anything is downloaded. |
+| `image.mjs` | `find` \| `search` \| `cat` \| `dvids` \| `si` \| `licence` \| `add` \| `logo` \| `credit`. Three sources — Commons, DVIDS, Smithsonian Open Access — behind one `add`. Licence is resolved **before** anything is downloaded, in every one of them. |
 | `spec.mjs` | `read` \| `pdf`. Five extraction strategies, and it says which one answered. |
 | `cip.mjs` | `sync` \| `find` \| `sheet`. Free cartridge dimensions and pressures. |
 | `manuals.mjs` | `list` \| `check` \| `find`. Public-domain US military manuals, with rot detection. |
 | `cpi.mjs` | Bakes `src/data/cpi.json`. Run once a year. |
+| `logo-enwiki.mjs` | Wordmark candidates from a Wikipedia article's own uploads, including a rendered PNG for each SVG. `--lang de` for a local wiki. |
+| `logo-candidates.mjs` | Sweeps every maker with no wordmark and prints Commons candidates. A survey, not a fetcher. |
+| `image-gaps.mjs` | Sweeps every entry short of photographs, zero-image ones first. `--search` adds what Commons has. |
 
 ## Four rules the scripts enforce so you do not have to remember them
 

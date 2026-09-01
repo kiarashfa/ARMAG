@@ -78,7 +78,23 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/50-bmg/hero.webp",
+      "alt": "A .50 BMG cartridge on orange graph paper, a long bottlenecked case with a white-tipped bullet.",
+      "caption": "A .50 BMG round on graph paper. The white tip marks it as a tracer or incendiary loading rather than ball.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_.50_BMG_DAG.jpg",
+        "title": "File:Cartridge .50 BMG DAG.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q171628"

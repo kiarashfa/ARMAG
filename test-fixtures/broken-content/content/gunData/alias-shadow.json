@@ -1,0 +1,28 @@
+{
+  "id": "alias-shadow",
+  "name": "Alias Shadow",
+  "kind": "model",
+  "makerRef": "fixturemaker",
+  "familyRef": null,
+  "type": "pistol",
+  "action": "self-loading",
+  "introduced": 1990,
+  "designedIn": "austria",
+  "aliases": [
+    {
+      "name": "Dangling Maker",
+      "kind": "nickname",
+      "note": "Deliberately wrong: slugifies to `dangling-maker`, which is a different entry in this fixture set. An alias may not name another entry — it would claim this arm goes by that one's name, and the redirect it asks for is dropped rather than shadowing a real page. Found in production when the HK416 kept claiming M27 IAR after the M27 became its own entry."
+    }
+  ],
+  "lastVerified": "2026-08-26",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "fixture-ref",
+      "type": "web",
+      "title": "Fixture reference",
+      "url": "https://example.org/fixture"
+    }
+  ]
+}

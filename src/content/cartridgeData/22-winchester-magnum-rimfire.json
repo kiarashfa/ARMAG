@@ -1,0 +1,248 @@
+{
+  "id": "22-winchester-magnum-rimfire",
+  "name": ".22 Winchester Magnum Rimfire",
+  "wikidataId": "Q158700",
+  "aliases": [
+    {
+      "name": ".22 WMR",
+      "kind": "commercial",
+      "note": "The usual abbreviation and the name printed on most ammunition boxes."
+    },
+    {
+      "name": ".22 Magnum",
+      "kind": "nickname"
+    },
+    {
+      "name": ".22 Mag",
+      "kind": "nickname"
+    },
+    {
+      "name": "22 Win. Mag. R.F.",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    }
+  ],
+  "designedBy": "Winchester Repeating Arms Company",
+  "introduced": 1959,
+  "productionYears": {
+    "start": 1959,
+    "end": null
+  },
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 5.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-win-mag-rf",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-win-mag-rf-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 26.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-win-mag-rf",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-win-mag-rf-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 34.29,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-win-mag-rf",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-win-mag-rf-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 7.47,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-win-mag-rf",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-win-mag-rf-en.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 6.15,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-win-mag-rf",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-win-mag-rf-en.pdf",
+    "sourceNote": "Dimension H2. The case is straight-walled, so neck and base are the same figure."
+  },
+  "baseDiameter": {
+    "value": 6.15,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-win-mag-rf",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-win-mag-rf-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 160.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-22-win-mag-rf",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-win-mag-rf-en.pdf",
+    "sourceNote": "Pmax 1600 bar. The SAAMI ceiling is quoted elsewhere as 24,000 psi; the two bodies measure differently and their figures are not interchangeable."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "wmr-30-hp",
+      "name": "30 gr hollow point",
+      "bulletType": "HP",
+      "bulletMass": {
+        "value": 1.944,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-22-winchester-magnum-rimfire",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369626875",
+        "sourceNote": "30 gr as published, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-22-winchester-magnum-rimfire",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369626875",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
+          },
+          "velocity": {
+            "value": 701.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-22-winchester-magnum-rimfire",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369626875",
+            "sourceNote": "2300 ft/s as published. The unit was resolved by reproducing the published energy of 352 ft·lbf from mass and velocity."
+          }
+        }
+      ]
+    },
+    {
+      "id": "wmr-40-jhp",
+      "name": "40 gr jacketed hollow point",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 2.592,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-22-winchester-magnum-rimfire",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369626875",
+        "sourceNote": "40 gr as published, converted to grams. This is the original 1959 bullet weight."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-22-winchester-magnum-rimfire",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369626875",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
+          },
+          "velocity": {
+            "value": 571.5,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-22-winchester-magnum-rimfire",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369626875",
+            "sourceNote": "1875 ft/s as published. The unit was resolved by reproducing the published energy of 312 ft·lbf from mass and velocity."
+          }
+        }
+      ]
+    },
+    {
+      "id": "wmr-50-jhp",
+      "name": "50 gr jacketed hollow point",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 3.24,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-22-winchester-magnum-rimfire",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369626875",
+        "sourceNote": "50 gr as published, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-22-winchester-magnum-rimfire",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369626875",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
+          },
+          "velocity": {
+            "value": 466.3,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-22-winchester-magnum-rimfire",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369626875",
+            "sourceNote": "1530 ft/s as published. The unit was resolved by reproducing the published energy of 260 ft·lbf from mass and velocity."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/22-winchester-magnum-rimfire/hero.webp",
+      "alt": "A single .22 Winchester Magnum Rimfire cartridge lying on orange graph paper, bullet uppermost. The bullet is copper-jacketed with a flattened nose, the brass case is straight-sided, and a thin rim projects at the base.",
+      "caption": "A .22 WMR round with a jacketed hollow-point bullet. The bullet is seated inside the case mouth and is the same diameter as the case body, which is what distinguishes the round from the heeled bullet of a .22 Long Rifle.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_.22_Magnum.jpg",
+        "title": "File:Cartridge .22 Magnum.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/22-winchester-magnum-rimfire/gallery.webp",
+      "alt": "Four brass cartridges standing upright side by side on a fabric surface, rising in size from left to right. The two on the left are short, the third is roughly twice their height, and the fourth is taller again with a red polymer tip.",
+      "caption": "Left to right: .22 Short, .22 Long Rifle, .22 WMR and .22 Hornet. The .22 WMR is the third round. The exposed lead bullet of the .22 LR beside it sits on a reduced heel inside a narrower case; the .22 WMR's jacketed bullet is fully enclosed by a case of the same diameter as the bullet.",
+      "width": 959,
+      "height": 1200,
+      "credit": {
+        "author": "Noahsachs",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:22_short_22_long_rifle_22_magnum_22_hornet.JPG",
+        "title": "File:22 short 22 long rifle 22 magnum 22 hornet.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "cip-22-win-mag-rf",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 22 Win. Mag. R.F.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-win-mag-rf-en.pdf",
+      "revision": "Tab. V, adopted 1984-06-14, revised 2008-09-23",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-22-winchester-magnum-rimfire",
+      "type": "wikipedia",
+      "title": ".22 Winchester Magnum Rimfire",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369626875",
+      "lang": "en",
+      "revision": "1369626875",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

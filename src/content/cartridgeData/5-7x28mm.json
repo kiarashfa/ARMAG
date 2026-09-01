@@ -108,7 +108,23 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/5-7x28mm/hero.webp",
+      "alt": "A 5.7×28mm cartridge on orange graph paper, a small bottlenecked case with a short pointed bullet.",
+      "caption": "A 5.7×28mm round on graph paper.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_5.7x28mm_FN_CC_BY-SA_by_Grasyl.jpg",
+        "title": "File:Cartridge 5.7x28mm FN CC BY-SA by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q238461"

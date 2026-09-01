@@ -19,5 +19,17 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/auto-ordnance/logo.webp",
+    "alt": "The Thompson mark: the name in a flowing script across a bullet-shaped outline, with AUTO-ORDNANCE CORPORATION beneath.",
+    "caption": "The Thompson script Auto-Ordnance still trades under, from the company's own site.",
+    "width": 320,
+    "height": 127,
+    "credit": {
+      "sourceUrl": "https://www.auto-ordnance.com/",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use. Taken from the page recorded as the source."
+    }
+  }
 }

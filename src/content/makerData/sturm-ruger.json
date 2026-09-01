@@ -20,5 +20,19 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/sturm-ruger/logo.webp",
+    "alt": "The Ruger mark: a red heraldic eagle inside a red circle.",
+    "caption": "The Ruger eagle, the medallion the company insets into its grips.",
+    "width": 310,
+    "height": 310,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ruger_Grip_Logo_transparent.png",
+      "title": "File:Ruger Grip Logo transparent.png",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "Commons records the file as CC BY-SA 4.0. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use.",
+      "author": "James Case from Philadelphia, Mississippi, U.S.A."
+    }
+  }
 }

@@ -1,0 +1,234 @@
+{
+  "id": "243-winchester",
+  "name": ".243 Winchester",
+  "wikidataId": "Q158704",
+  "aliases": [
+    {
+      "name": "243 Win.",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    },
+    {
+      "name": ".243 Win",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "Winchester Repeating Arms",
+  "introduced": 1955,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 6.17,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-243-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page88.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 51.94,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-243-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page88.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3. The parent .308 Winchester case is 51.18 mm; necking down lengthens it slightly."
+  },
+  "overallLength": {
+    "value": 68.83,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-243-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page88.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-243-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page88.pdf",
+    "sourceNote": "Dimension R1. The .308 Winchester head, unaltered."
+  },
+  "neckDiameter": {
+    "value": 7.01,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-243-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page88.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-243-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page88.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 415.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-243-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page88.pdf",
+    "sourceNote": "Pmax 4150 bar. SAAMI rates the same chambering at 60,000 psi by its own method, and the two figures are not interchangeable."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "243-58-vmax",
+      "name": "58 gr V-MAX",
+      "bulletType": "V-MAX",
+      "bulletMass": {
+        "value": 3.758,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-243-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368413860",
+        "sourceNote": "58 gr as published in the article's ballistics table, converted to grams. It is the lightest bullet the table lists."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-243-winchester",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368413860",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
+          },
+          "velocity": {
+            "value": 1196.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-243-winchester",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368413860",
+            "sourceNote": "3925 ft/s as published. The table names Barnes, Federal and Hornady factory specifications among its sources."
+          }
+        }
+      ]
+    },
+    {
+      "id": "243-85-tsx",
+      "name": "85 gr TSX",
+      "manufacturer": "Barnes",
+      "bulletType": "TSX",
+      "bulletMass": {
+        "value": 5.508,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-243-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368413860",
+        "sourceNote": "85 gr as published in the article's ballistics table, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-243-winchester",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368413860",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
+          },
+          "velocity": {
+            "value": 975.4,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-243-winchester",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368413860",
+            "sourceNote": "3200 ft/s as published."
+          }
+        }
+      ]
+    },
+    {
+      "id": "243-100-btsp",
+      "name": "100 gr boat-tail soft point",
+      "bulletType": "BTSP",
+      "bulletMass": {
+        "value": 6.48,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-243-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368413860",
+        "sourceNote": "100 gr as published in the article's ballistics table, converted to grams. It is the heaviest bullet the table lists, and the weight the 1-in-10-inch twist was chosen for."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-243-winchester",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368413860",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
+          },
+          "velocity": {
+            "value": 902.2,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-243-winchester",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368413860",
+            "sourceNote": "2960 ft/s as published."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/243-winchester/hero.webp",
+      "alt": "Three bottlenecked brass rifle cartridges standing upright against a wooden panel. The left one is smallest, with a plain copper spitzer bullet; the middle is taller with a long slender copper bullet; the right is the same height but visibly wider at the neck and carries a red polymer-tipped bullet.",
+      "caption": "From the left, .223 Remington, .243 Winchester and .308 Winchester. The .243 and the .308 are the same case: the middle round is the right-hand one necked down from a mouth of 8.72 mm to one of 7.01 mm.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Derek280",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.223,_.243,_.308.JPG",
+        "title": "File:.223, .243, .308.JPG",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/243-winchester/versus-6mm-remington.webp",
+      "alt": "Two bottlenecked brass cartridges of almost identical height standing side by side on a speckled worktop. The left carries a red polymer-tipped bullet seated deep into a short neck; the right carries a plain copper spitzer standing further out of a longer neck.",
+      "caption": "6mm Remington on the left and .243 Winchester on the right. The two arrived in the same year with the same bullet diameter, from different parent cases; the Remington holds slightly more, and lost the market anyway.",
+      "width": 569,
+      "height": 1200,
+      "credit": {
+        "author": "Hellbus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:6mm_+_243.jpg",
+        "title": "File:6mm + 243.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "cip-243-win",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 243 Win.",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page88.pdf",
+      "revision": "Tab. I, adopted 1984-06-14, revised 2002-05-15",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "wp-243-winchester",
+      "type": "wikipedia",
+      "title": ".243 Winchester",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368413860",
+      "lang": "en",
+      "revision": "1368413860",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

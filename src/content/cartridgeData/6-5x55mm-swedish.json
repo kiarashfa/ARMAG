@@ -1,0 +1,362 @@
+{
+  "id": "6-5x55mm-swedish",
+  "name": "6.5x55mm Swedish",
+  "wikidataId": "Q245482",
+  "aliases": [
+    {
+      "name": "6.5x55mm",
+      "kind": "metric",
+      "note": "The name the round was standardised under in 1893, chosen so that Sweden and Norway could share one supply."
+    },
+    {
+      "name": "6.5 x 55 SE",
+      "kind": "commercial",
+      "note": "The C.I.P. designation. SE is the ISO country code for Sweden."
+    },
+    {
+      "name": "6.5x55 SKAN",
+      "kind": "commercial",
+      "note": "The Scandinavian shooting associations' designation."
+    },
+    {
+      "name": "6.5x55mm Swedish Mauser",
+      "kind": "nickname",
+      "note": "Common in the English-language trade, though the cartridge predates the Swedish Mauser contract and was designed by a commission rather than by Mauser."
+    },
+    {
+      "name": "6.5x55mm Krag",
+      "kind": "nickname",
+      "note": "The Norwegian half of the same joint adoption."
+    },
+    {
+      "name": "6.5 mm skarp patron m/94",
+      "kind": "military",
+      "note": "The Swedish service designation, abbreviated 6.5 mm sk ptr m/94."
+    }
+  ],
+  "nativeName": "6,5 mm skarp patron m/94",
+  "designedBy": "Joint Norwegian and Swedish rifle commission",
+  "introduced": 1894,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 6.71,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x55",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-55-se-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 55.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x55",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-55-se-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 80.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x55",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-55-se-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 12.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x55",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-55-se-en.pdf",
+    "sourceNote": "Dimension R1. Equal to the base diameter, because the case is rimless."
+  },
+  "neckDiameter": {
+    "value": 7.52,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x55",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-55-se-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 12.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x55",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-55-se-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 380.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-6-5x55",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-55-se-en.pdf",
+    "sourceNote": "Pmax 3800 bar, transducer method. SAAMI rates the same chambering at 351.6 MPa, which is why a European hunting load is not a drop-in equivalent of an American one."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "swedish-prj-m94",
+      "name": "6.5 mm sk ptr m/94 projektil m/94",
+      "manufacturer": "Swedish armed forces",
+      "bulletType": "Long round-nose ball",
+      "bulletMass": {
+        "value": 10.1,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-6-5x55mm-swedish",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367932175",
+        "sourceNote": "10.1 g as published in the article's account of the 1894 service ball."
+      },
+      "cartridgeMass": {
+        "value": 23.45,
+        "unit": "g",
+        "status": "estimated",
+        "source": "nowp-krag-jorgensen",
+        "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+        "sourceNote": "23.45 g for the complete loaded round, from the Norwegian encyclopedia's article on the Krag-Jorgensen, which gives no citation for the figure."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 739.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-6-5x55mm-swedish",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367932175",
+            "sourceNote": "739 mm, the barrel length the article states the velocity was measured from — the m/96 infantry rifle barrel."
+          },
+          "velocity": {
+            "value": 725.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-6-5x55mm-swedish",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367932175",
+            "sourceNote": "725 m/s as published, from a 739 mm barrel."
+          }
+        }
+      ]
+    },
+    {
+      "id": "swedish-prj-m41",
+      "name": "6.5 mm sk ptr m/94 projektil m/41",
+      "manufacturer": "Swedish armed forces",
+      "bulletType": "Spitzer boat tail ball",
+      "bulletMass": {
+        "value": 9.1,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-6-5x55mm-swedish",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367932175",
+        "sourceNote": "9.1 g as published for the D-projectile adopted in 1941."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 739.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-6-5x55mm-swedish",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367932175",
+            "sourceNote": "739 mm, the barrel length the article states the velocity was measured from."
+          },
+          "velocity": {
+            "value": 800.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-6-5x55mm-swedish",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367932175",
+            "sourceNote": "800 m/s as published, from a 739 mm barrel. The article cites Gotavapen's Swedish Military Rifles 1894-1995 for the figure."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lapua-scenar-9g",
+      "name": "Scenar 9.0 g (139 gr)",
+      "manufacturer": "Lapua",
+      "bulletType": "Open tip match",
+      "bulletMass": {
+        "value": 9.0,
+        "unit": "g",
+        "status": "verified",
+        "source": "lapua-4316030",
+        "sourceUrl": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-9g-139gr-4316030/",
+        "sourceNote": "9.0 g (139 gr), bullet code GB458."
+      },
+      "bcG1": {
+        "value": 0.578,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-4316030",
+        "sourceUrl": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-9g-139gr-4316030/",
+        "sourceNote": "BC G1 0.578 as published."
+      },
+      "bcG7": {
+        "value": 0.29,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-4316030",
+        "sourceUrl": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-9g-139gr-4316030/",
+        "sourceNote": "BC G7 0.290 as published."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 740.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "lapua-4316030",
+            "sourceUrl": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-9g-139gr-4316030/",
+            "sourceNote": "Test barrel length 740 mm (29 in) as published beside the ballistics chart."
+          },
+          "velocity": {
+            "value": 800.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "lapua-4316030",
+            "sourceUrl": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-9g-139gr-4316030/",
+            "sourceNote": "Muzzle velocity 800 m/s (2625 fps) as published."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lapua-scenar-8g",
+      "name": "Scenar 8.0 g (123 gr)",
+      "manufacturer": "Lapua",
+      "bulletType": "Open tip match",
+      "bulletMass": {
+        "value": 8.0,
+        "unit": "g",
+        "status": "verified",
+        "source": "lapua-4316032",
+        "sourceUrl": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-8g-123gr-4316032/",
+        "sourceNote": "8.0 g (123 gr), bullet code GB489."
+      },
+      "bcG1": {
+        "value": 0.527,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-4316032",
+        "sourceUrl": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-8g-123gr-4316032/",
+        "sourceNote": "BC G1 0.527 as published."
+      },
+      "bcG7": {
+        "value": 0.263,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-4316032",
+        "sourceUrl": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-8g-123gr-4316032/",
+        "sourceNote": "BC G7 0.263 as published."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 740.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "lapua-4316032",
+            "sourceUrl": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-8g-123gr-4316032/",
+            "sourceNote": "Test barrel length 740 mm (29 in) as published beside the ballistics chart."
+          },
+          "velocity": {
+            "value": 830.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "lapua-4316032",
+            "sourceUrl": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-8g-123gr-4316032/",
+            "sourceNote": "Muzzle velocity 830 m/s (2723 fps) as published."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/6-5x55mm-swedish/hero.webp",
+      "alt": "A single 6.5x55mm Swedish cartridge photographed upright against a white background. The brass case is long and slender with a shallow shoulder, and carries a blunt round-nosed jacketed bullet.",
+      "caption": "A 6.5x55mm Swedish round with a round-nose bullet of the original 1894 service pattern. The shoulder is shallow and the neck long, which is what lets the case seat a bullet of this length without intruding on powder space.",
+      "width": 423,
+      "height": 1600,
+      "credit": {
+        "author": "2331a3eb (OpenOrdnance)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:6.5_×_55mm_Swedish_ammunition_cartridge.jpg",
+        "title": "File:6.5 × 55mm Swedish ammunition cartridge.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "1.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0"
+      }
+    },
+    {
+      "src": "images/cartridges/6-5x55mm-swedish/military-ball.webp",
+      "alt": "A 6.5x55mm military ball cartridge with a silvery round-nosed bullet in a copper-washed case, photographed beside a second view of the same case head. The headstamp is quartered by four segments and marked with a crown, the letters O and M, and the figure 6.",
+      "caption": "A Swedish 6.5 mm skarp patron m/94 projektil m/94 service round, made at Marieberg in Stockholm, with its headstamp alongside. This is the long round-nose service ball the round was adopted with in 1894; the spitzer m/41 projectile replaced it from 1941.",
+      "width": 637,
+      "height": 1200,
+      "credit": {
+        "author": "Jim Miles",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:6.5×55mm_Mauser-Swedish-01.jpg",
+        "title": "File:6.5×55mm Mauser-Swedish-01.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "cip-6-5x55",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 6,5 x 55 SE",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-55-se-en.pdf",
+      "revision": "Tab. I, dated 1984-06-14, revision 2013-05-22",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "lapua-4316030",
+      "type": "manufacturer-spec",
+      "title": "6.5x55 Swedish, 9.0 g (139 gr) Scenar, product 4316030",
+      "publisher": "Nammo Lapua",
+      "url": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-9g-139gr-4316030/",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "lapua-4316032",
+      "type": "manufacturer-spec",
+      "title": "6.5x55 Swedish, 8.0 g (123 gr) Scenar, product 4316032",
+      "publisher": "Nammo Lapua",
+      "url": "https://www.lapua.com/product/6-5x55-swedish-open-tip-match-cartridge-scenar-8g-123gr-4316032/",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-6-5x55mm-swedish",
+      "type": "wikipedia",
+      "title": "6.5×55mm Swedish",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367932175",
+      "lang": "en",
+      "revision": "1367932175",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "nowp-krag-jorgensen",
+      "type": "wikipedia",
+      "title": "Krag-Jørgensen",
+      "publisher": "Wikipedia",
+      "url": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+      "lang": "no",
+      "revision": "25742887",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0",
+      "note": "The Norwegian-language article on the rifle this cartridge was adopted for; it publishes the loaded weight of the service round, which no cartridge source found does."
+    }
+  ]
+}

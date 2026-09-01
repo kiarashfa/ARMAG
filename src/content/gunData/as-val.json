@@ -1,0 +1,171 @@
+{
+  "id": "as-val",
+  "name": "AS Val",
+  "nativeName": "АС «Вал»",
+  "kind": "model",
+  "makerRef": "tula-arms-plant",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Avtomat Spetsialny Val",
+      "kind": "military",
+      "note": "Special automatic rifle Val; the name means rampart or shaft."
+    },
+    {
+      "name": "6P30",
+      "kind": "military",
+      "note": "GRAU designation."
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "soviet-union",
+  "producedIn": [
+    "soviet-union",
+    "russia"
+  ],
+  "introduced": 1987,
+  "productionYears": {
+    "start": 1987,
+    "end": null
+  },
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "assault-rifle"
+  ],
+  "massEmpty": {
+    "value": 2.5,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-as-val-and-vss-vintorez",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368925037",
+    "sourceNote": "AS Val, unloaded. The same source gives 5.7 kg with the NSP-3 night sight fitted."
+  },
+  "length": {
+    "value": 875,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-as-val-and-vss-vintorez",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368925037",
+    "sourceNote": "Skeleton stock extended."
+  },
+  "lengthFolded": {
+    "value": 650,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-as-val-and-vss-vintorez",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368925037",
+    "sourceNote": "Stock folded left along the receiver."
+  },
+  "barrelLength": {
+    "value": 200,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-as-val-and-vss-vintorez",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368925037",
+    "sourceNote": "200 mm, cited in the article to Johnston and Nelson's printed small-arms reference rather than to a clickable document. The barrel is perforated along its length so that gas vents into the surrounding integral suppressor, so the figure is not the distance from breech to muzzle exit."
+  },
+  "cyclicRate": {
+    "value": 850,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-as-val-and-vss-vintorez",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368925037",
+    "sourceNote": "The article gives a range of 800 to 900 rounds a minute; the midpoint is recorded here because a PropertyValue holds one number."
+  },
+  "effectiveRange": {
+    "value": 400,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-as-val-and-vss-vintorez",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368925037",
+    "sourceNote": "Daylight figure. The same source gives 300 m at night."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x39mm",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-as-val-and-vss-vintorez",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368925037",
+        "sourceNote": "The AS Val is primarily used with 20-round magazines; 10-round and 30-round SR-3M magazines also fit."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/as-val/hero.webp",
+      "alt": "A black Kalashnikov-pattern rifle lying on concrete, seen from the right with a tubular skeleton stock extended to the rear. Almost the whole front half of the weapon is a fat cylindrical casing running from the receiver to the muzzle, wider than the receiver itself, with a front sight on top of it. A short curved magazine with horizontal ribs sits below. Several fired cases lie beside it.",
+      "caption": "An AS Val with its skeleton stock extended, photographed with fired 9x39mm cases. The whole barrel section forward of the receiver is the integral suppressor; the ribbed magazine is deliberately different to the touch from a Kalashnikov one.",
+      "width": 1600,
+      "height": 491,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AS_Val_(541-03).jpg",
+        "title": "File:AS Val (541-03).jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/as-val/stock-folded.webp",
+      "alt": "The same rifle on concrete with its wire stock folded flat along the left side of the receiver, so the weapon ends immediately behind the pistol grip. The suppressor tube still makes up more than half its total length.",
+      "caption": "The AS Val with the stock folded, which takes it from 875 mm to 650 mm. Folded, the weapon is shorter than most submachine guns and still carries a rifle-calibre barrel inside the suppressor.",
+      "width": 1200,
+      "height": 774,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AS_Val_(541-14).jpg",
+        "title": "File:AS Val (541-14).jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/as-val/display.webp",
+      "alt": "Three suppressed Russian weapons laid on a snow-dusted black display table with Russian-language specification cards between them. The nearest carries a large telescopic sight; the middle one has a folding wire stock and a ribbed magazine; a printed table lists SP-5, SP-6 and PAB-9 cartridge data.",
+      "caption": "An AS Val displayed between a VSS Vintorez and a scoped rifle at a Russian public event in February 2010, with cards giving the SP-5, SP-6 and PAB-9 cartridge data. The three weapons on the table share the 9x39mm round rather than a single design.",
+      "width": 1200,
+      "height": 755,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AS_Val_rifle.jpg",
+        "title": "File:AS Val rifle.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-as-val-and-vss-vintorez",
+      "type": "wikipedia",
+      "title": "AS Val and VSS Vintorez",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368925037",
+      "lang": "en",
+      "revision": "1368925037",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

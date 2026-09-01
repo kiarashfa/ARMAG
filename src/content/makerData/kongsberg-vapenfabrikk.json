@@ -1,0 +1,48 @@
+{
+  "id": "kongsberg-vapenfabrikk",
+  "name": "Kongsberg Vapenfabrikk",
+  "nativeName": "Kongsberg Våpenfabrikk",
+  "wikidataId": "Q1603219",
+  "country": "norway",
+  "founded": 1814,
+  "dissolved": 1987,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-kongsberg-gruppen",
+      "type": "wikipedia",
+      "title": "Kongsberg Gruppen",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1366844796",
+      "lang": "en",
+      "revision": "1366844796",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0",
+      "note": "The article on the successor company states that Kongsberg is a continuation of Kongsberg Vapenfabrikk, 1814 to 1987."
+    },
+    {
+      "key": "nowp-kongsberg-vapenfabrikk",
+      "type": "wikipedia",
+      "title": "Kongsberg Vapenfabrikk",
+      "publisher": "Wikipedia",
+      "url": "https://no.wikipedia.org/w/index.php?oldid=25247814",
+      "lang": "no",
+      "revision": "25247814",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "logo": {
+    "src": "images/makers/kongsberg-vapenfabrikk/logo.webp",
+    "alt": "The Kongsberg mark: a crowned royal monogram in gold on a red panel, with KONGSBERG in blue capitals beneath.",
+    "caption": "The mark of Kongsberg Gruppen, the group the arms factory became. The crowned monogram is the royal cypher the works has carried since 1814.",
+    "width": 960,
+    "height": 914,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Kongsberg_Gruppen",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use. Taken from the page recorded as the source."
+    }
+  }
+}

@@ -196,7 +196,23 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/7-62x51mm-nato/hero.webp",
+      "alt": "A 7.62×51mm NATO cartridge on orange graph paper, bottlenecked with a long pointed full metal jacket bullet.",
+      "caption": "A 7.62×51mm NATO round on graph paper.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_7.62x51mm_NATO_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "title": "File:Cartridge 7.62x51mm NATO CC BY-SA 4.0 by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q259210"

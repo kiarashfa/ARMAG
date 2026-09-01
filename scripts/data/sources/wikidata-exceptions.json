@@ -6,6 +6,9 @@
     "glock": "Q702135 is 'Glock Ges.m.b.H. — Austrian weapons manufacturing company'. The cited article resolves to Q739882, the brand rather than the company.",
     "5-56x45mm-nato": "Q238456 is '5.56×45mm NATO — intermediate firearms cartridge'. This entry cites the M16 rifle article because that is where its sourced figures come from, not because the article is about the cartridge.",
     "winchester-model-1873": "No id, deliberately. The cited article 'Winchester rifle' resolves to Q1570235, which is the whole lever-action series; no free article covers the 1873 alone, and a series id on a model entry is a wrong join.",
-    "izhmash": "No id, deliberately. Izhmash and Kalashnikov Concern share Q7427495, so recording it here would duplicate the successor company's key."
+    "izhmash": "No id, deliberately. Izhmash and Kalashnikov Concern share Q7427495, so recording it here would duplicate the successor company's key.",
+    "guide-lamp": "No id, deliberately. Guide Lamp was a General Motors division dissolved in 1984 and has no Wikidata item of its own; the cited article 'Inteva Products' resolves to Q6057490, the modern successor company, which is a different legal entity from the one that built the M3. Escalated by the authoring agent rather than edited by it, per PLAYBOOK.md rule 2.",
+    "kongsberg-vapenfabrikk": "Q1603219 is 'Kongsberg Vapenfabrikk — Norwegian arms factory founded 1814'. The cited article 'Kongsberg Gruppen' resolves to Q1770909, the modern successor group; the factory that made the Krag-Jorgensen is the predecessor, not the group. Escalated by the authoring agent, not edited by it.",
+    "as-val": "No id, deliberately. Q118737325 covers 'AS Val and VSS Vintorez' jointly, and the cited article is about both arms; a joint id on a single-model entry is a wrong join, the same case as the PK family (FRICTION-LOG A7). Escalated by the authoring agent, not edited by it."
   }
 }

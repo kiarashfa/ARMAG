@@ -19,5 +19,19 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/rsaf-enfield/logo.webp",
+    "alt": "The Royal Small Arms Factory roundel: a crown within a circle carrying the factory name and ENFIELD below.",
+    "caption": "The Royal Small Arms Factory roundel.",
+    "width": 746,
+    "height": 772,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Small_Arms_Factory_logo.png",
+      "title": "File:Royal Small Arms Factory logo.png",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "Commons records the file as CC BY-SA 4.0. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use.",
+      "author": "Jakednb"
+    }
+  }
 }

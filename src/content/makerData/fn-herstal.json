@@ -21,5 +21,17 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/fn-herstal/logo.webp",
+    "alt": "The FN mark: the letters FN in heavy blue capitals beside a circular FN monogram.",
+    "caption": "FN Herstal's wordmark and roundel.",
+    "width": 597,
+    "height": 205,
+    "credit": {
+      "sourceUrl": "https://www.fnherstal.com/",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use. Taken from the page recorded as the source."
+    }
+  }
 }

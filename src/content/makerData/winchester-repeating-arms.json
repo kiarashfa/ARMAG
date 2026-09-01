@@ -19,5 +19,17 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/winchester-repeating-arms/logo.webp",
+    "alt": "The Winchester mark: the name in slanted serif capitals with REPEATING ARMS beneath, beside a horse and rider.",
+    "caption": "The Winchester wordmark with the rider that has accompanied it since the nineteenth century.",
+    "width": 960,
+    "height": 170,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Winchester_Repeating_Arms_Company",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use. Taken from the page recorded as the source."
+    }
+  }
 }

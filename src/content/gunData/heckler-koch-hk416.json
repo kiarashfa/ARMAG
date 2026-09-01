@@ -6,11 +6,6 @@
   ],
   "aliases": [
     {
-      "name": "M27 IAR",
-      "kind": "military",
-      "note": "The US Marine Corps automatic rifle variant."
-    },
-    {
       "name": "HK416N",
       "kind": "export",
       "market": "NO",

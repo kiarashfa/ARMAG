@@ -167,7 +167,23 @@
       ]
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/5-8x42mm/hero.webp",
+      "alt": "A 5.8×42mm cartridge lying horizontally, its case finished in matt black with a copper-jacketed pointed bullet.",
+      "caption": "A 5.8×42mm round. The black finish on the case is the lacquer used on Chinese service ammunition.",
+      "width": 396,
+      "height": 102,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:5.8x42_mm.jpg",
+        "title": "File:5.8x42 mm.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "B4Ctom1 ( talk )",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "references": [

@@ -19,5 +19,19 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-27"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/colt/logo.webp",
+    "alt": "The Colt wordmark: the company name in capitals, the C drawn as a rearing colt.",
+    "caption": "Colt's wordmark, the rearing colt forming the initial letter.",
+    "width": 470,
+    "height": 310,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colt_logo.png",
+      "title": "File:Colt logo.png",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "Commons records the file as Public domain. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use.",
+      "author": "Unknown author Unknown author"
+    }
+  }
 }

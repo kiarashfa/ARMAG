@@ -3,12 +3,23 @@
  * Image pipeline: a Wikipedia article or a Commons file → a licensed, measured,
  * capped WebP on disk and an `imageRef` block ready to paste.
  *
- *   node scripts/data/image.mjs find    "AK-47"
- *   node scripts/data/image.mjs search  "Remington 870 shotgun"
- *   node scripts/data/image.mjs cat     "AK-47"
+ *   node scripts/data/image.mjs find    "AK-47"          # Commons, from an article
+ *   node scripts/data/image.mjs search  "Remington 870"      # Commons, full text
+ *   node scripts/data/image.mjs cat     "AK-47"              # Commons, by category
+ *   node scripts/data/image.mjs dvids   "M4 carbine"         # US military, in service
+ *   node scripts/data/image.mjs si      "Colt revolver"      # Smithsonian, CC0 specimens
  *   node scripts/data/image.mjs licence "File:AK-47 type II noBG.png"
  *   node scripts/data/image.mjs add     "File:AK-47 type II.jpg" guns/ak-47 hero
+ *   node scripts/data/image.mjs add     dvids:image:6219032      guns/m4 in-service
+ *   node scripts/data/image.mjs add     si:NMAH-AHB2015q114865   guns/colt-saa specimen
  *   node scripts/data/image.mjs credit  ak-47                      # bibliography rows
+ *
+ * ── Three sources, because one was never enough ────────────────────────────
+ * Commons has isolated specimen photographs and runs out on the long tail.
+ * DVIDS has 1.8M US military photographs of arms **in service** — the shots
+ * Commons almost never has. Smithsonian Open Access has museum accession
+ * photography, CC0, which is the specimen shot again where Commons lacks one.
+ * A thin gallery usually means only the first of the three was searched.
  *
  * `add` is the whole phase in one command: fetch → licence capture → WebP →
  * cap enforcement → measure → emit. Instruction.md Phase 9's definition of done
@@ -32,6 +43,8 @@ import {
   searchFiles,
   wikidataIdFor,
 } from './lib/commons.mjs';
+import { assetMeta as dvidsAsset, searchImages as dvidsSearch } from './lib/dvids.mjs';
+import { objectMeta as siObject, searchObjects as siSearch } from './lib/smithsonian.mjs';
 import { getBuffer } from './lib/http.mjs';
 import { buildImageRef, licenseTypeFor } from './lib/imageref.mjs';
 import { REPO_ROOT, capsForBasename, encodeToWebp } from './lib/webp.mjs';
@@ -119,6 +132,110 @@ async function cmdLicence(rawFile) {
 }
 
 /**
+ * `dvids <query>` — US military photography, licence asserted from the branch.
+ *
+ * DVIDS matches CAPTION TEXT, so this returns scenes that mention the arm
+ * rather than photographs of it. The description is printed for exactly that
+ * reason: read it before choosing, and open the image before writing a caption.
+ */
+async function cmdDvids(query) {
+  const rows = await dvidsSearch(query, { max: 12 });
+  console.log(`${rows.length} DVIDS image(s) matching "${query}"\n`);
+  for (const row of rows) {
+    console.log(`  ${row.id}   ${row.branch.padEnd(12)} ${row.width ?? '?'}×${row.height ?? '?'}  ${row.date}`);
+    console.log(`      ${row.title}`);
+    if (row.description) console.log(`      shows  : ${row.description.slice(0, 200)}`);
+    if (row.unit) console.log(`      unit   : ${row.unit}`);
+  }
+  console.log('\nThen: image.mjs add dvids:<id> <collection>/<slug> <basename>');
+}
+
+/** `si <query>` — Smithsonian Open Access, CC0 only, museum specimen shots. */
+async function cmdSmithsonian(query) {
+  const rows = await siSearch(query, { max: 12 });
+  console.log(`${rows.length} CC0 Smithsonian object(s) matching "${query}"\n`);
+  for (const row of rows) {
+    console.log(`  ${row.id.padEnd(26)} ${row.unit.padEnd(6)} ${row.title}`);
+  }
+  console.log('\nThen: image.mjs add si:<image id> <collection>/<slug> <basename>');
+}
+
+/**
+ * A handle → the metadata `buildImageRef` needs, plus where to fetch the file.
+ *
+ * One function so `add` does not care which source it is talking to: every
+ * adapter returns the same `SourceMeta` shape, and every one of them resolves
+ * the licence BEFORE anything is downloaded (Instruction.md Phase 9).
+ */
+/**
+ * SVG is refused, with the way out named.
+ *
+ * Most company wordmarks exist only as SVG, and the encoder is Pillow, which
+ * does not rasterise it. Wikimedia's thumbnailer will render one — but only at
+ * widths it is willing to serve, and a hand-built thumb URL returns HTTP 400
+ * for exactly the non-free logos this path exists for. So the URL is not
+ * guessed here: `logo-enwiki.mjs` asks the API for the rendered PNG and prints
+ * it, and that is what gets pasted in.
+ */
+function refuseSvg(url) {
+  if (!/\.svg(\?|$)/i.test(url)) return url;
+  throw new Error(
+    `${url} is an SVG, and the encoder cannot rasterise one. For a Wikipedia-hosted mark run ` +
+      '`node scripts/data/logo-enwiki.mjs "<Article>"`, which prints a rendered PNG URL for each ' +
+      'candidate. Otherwise find a PNG or JPEG of the same mark.',
+  );
+}
+
+async function resolveSource(handle, { from = null } = {}) {
+  /**
+   * A direct image URL — the route for a manufacturer's own wordmark.
+   *
+   * Commons has a mark for about a third of the makers on this site and
+   * nothing at all for the rest, including Heckler & Koch, Winchester,
+   * Springfield Armory and Glock. A wordmark is not a photograph: the question
+   * it raises is trademark, not copyright, and identifying a manufacturer
+   * beside its own entry is nominative use however the file was served. So
+   * this path exists, it is only reachable from `logo`, and it demands
+   * `--from` — the page the mark was taken from — because a credit that
+   * points at a bare image file tells a reader nothing about where it came
+   * from.
+   */
+  if (/^https?:\/\//i.test(handle)) {
+    if (!from) {
+      throw new Error(
+        'a direct image URL needs --from "<page the mark was taken from>", normally the ' +
+          "manufacturer's own site. The credit records the page, never the raw image file.",
+      );
+    }
+    return {
+      meta: { pageUrl: from, title: null, description: null, licenseShortName: null },
+      download: refuseSvg(handle),
+      label: handle,
+    };
+  }
+
+  if (/^dvids:/i.test(handle)) {
+    const meta = await dvidsAsset(handle.replace(/^dvids:/i, ''));
+    return { meta, download: meta.downloadUrl, label: handle };
+  }
+  if (/^si:/i.test(handle)) {
+    const meta = await siObject(handle.replace(/^si:/i, ''));
+    return { meta, download: meta.downloadUrl, label: handle };
+  }
+
+  const file = asFileTitle(handle);
+  const meta = (await fileMetadata([file])).get(file);
+  if (!meta?.onCommons) {
+    throw new Error(
+      `${file} is not on Commons — do not use it. If you guessed the filename, stop guessing: ` +
+        'run `image.mjs find "<Article title>"` and use only a file it listed. ' +
+        'For a US service arm try `image.mjs dvids "<name>"`, for a museum specimen `image.mjs si "<name>"`.',
+    );
+  }
+  return { meta, download: meta.thumbUrl ?? meta.originalUrl, label: file };
+}
+
+/**
  * `add <file> <collection/slug> <basename>`
  *
  * `collection/slug` is `guns/ak-47` or `cartridges/9x19mm-parabellum`, matching
@@ -126,7 +243,7 @@ async function cmdLicence(rawFile) {
  * taken as one argument rather than two because the two-argument form invites
  * `image.mjs add file ak-47 hero`, which silently writes to the wrong tree.
  */
-async function cmdAdd(rawFile, target, basename, { replace = false } = {}) {
+async function cmdAdd(rawFile, target, basename, { replace = false, licence = null, from = null } = {}) {
   if (!target || !/^(guns|cartridges|makers)\/[a-z0-9-]+$/.test(target)) {
     throw new Error(
       `target must be "<collection>/<slug>", e.g. guns/ak-47 — got "${target ?? '(nothing)'}"`,
@@ -138,14 +255,12 @@ async function cmdAdd(rawFile, target, basename, { replace = false } = {}) {
     );
   }
 
-  const file = asFileTitle(rawFile);
-  const meta = (await fileMetadata([file])).get(file);
-  if (!meta?.onCommons) {
-    throw new Error(
-      `${file} is not on Commons — do not use it. If you guessed the filename, stop guessing: ` +
-        'run `image.mjs find "<Article title>"` and use only a file it listed.',
-    );
-  }
+  const resolved = await resolveSource(rawFile, { from });
+  // A licence override is how `logo` works: see `cmdLogo` for why a wordmark is
+  // recorded as nominative trademark use whatever the source reports about the
+  // image file, and why what the source reported is kept in the note rather
+  // than discarded.
+  const meta = licence ? { ...resolved.meta, ...licence(resolved.meta) } : resolved.meta;
 
   const relative = path.join('public', 'images', ...target.split('/'), `${basename}.webp`);
   const destination = path.join(REPO_ROOT, relative);
@@ -154,8 +269,7 @@ async function cmdAdd(rawFile, target, basename, { replace = false } = {}) {
   // Licence FIRST. A file that cannot produce a valid imageRef is never fetched.
   const probe = buildImageRef({ src: relative.replace(/\\/g, '/').replace(/^public\//, ''), meta });
 
-  const source = meta.thumbUrl ?? meta.originalUrl;
-  const bytes = await getBuffer(source);
+  const bytes = await getBuffer(resolved.download);
   // `--replace` exists because a file already on disk can be WRONG rather than
   // done: the two Phase 8 heroes were converted before this pipeline existed
   // and had their alpha channel flattened onto black, which showed as blotches
@@ -176,12 +290,47 @@ async function cmdAdd(rawFile, target, basename, { replace = false } = {}) {
       `of the ${caps.role} cap ${kb(caps.maxBytes)}  quality ${encoded.quality}` +
       `${encoded.resized ? `  (resized from ${encoded.sourceWidth}×${encoded.sourceHeight})` : ''}`,
   );
-  if (meta.description) console.error(`\nCommons says this file shows:\n  ${meta.description}`);
+  if (meta.description) console.error(`\nThe source says this file shows:\n  ${meta.description}`);
   console.error(
     '\nNow replace both TODOs. `alt` describes what is visible for a reader who cannot see it;\n' +
       '`caption` says what it actually shows, INCLUDING the variant if it is not this entry.',
   );
   console.log(JSON.stringify(imageRef, null, 2));
+}
+
+/**
+ * `logo <maker-slug> <File:...>` — a manufacturer's wordmark.
+ *
+ * A wordmark is not a photograph and its licence question is a different one.
+ * The image file on Commons may be tagged public domain (a plain text logo
+ * below the threshold of originality), "copyrighted free use", or nothing
+ * usable at all — but the thing that actually governs reproducing a maker's
+ * mark beside its own entry is trademark, not copyright, and identifying the
+ * manufacturer is the textbook nominative use. So the ref is recorded as
+ * `trademark-nominative-use`, and what Commons said about the file is kept in
+ * the `licenseNote` rather than thrown away: the record should say what was
+ * found, not only what was concluded.
+ *
+ * This is the one place the licence is asserted rather than mapped, which is
+ * why it is a separate command with its own name instead of a flag on `add`.
+ * Everything else — the download, the WebP cap, the schema validation — is the
+ * same code path.
+ */
+async function cmdLogo(slug, rawFile, { replace = false, from = null } = {}) {
+  if (!slug || !/^[a-z0-9-]+$/.test(slug)) {
+    throw new Error(`maker slug must be lowercase-kebab, e.g. beretta — got "${slug ?? '(nothing)'}"`);
+  }
+  await cmdAdd(rawFile, `makers/${slug}`, 'logo', {
+    replace,
+    from,
+    licence: (meta) => ({
+      licenseType: 'trademark-nominative-use',
+      licenseNote:
+        `${meta.licenseShortName ? `The source records the file as ${meta.licenseShortName}. ` : ''}` +
+        'The mark itself is its owner\'s trademark, reproduced here to identify the ' +
+        'manufacturer whose entry it appears on, which is nominative use.',
+    }),
+  });
 }
 
 /**
@@ -219,18 +368,27 @@ async function cmdCredit(slug) {
 
 const argv = process.argv.slice(2);
 const replace = argv.includes('--replace');
-const [command, ...args] = argv.filter((arg) => arg !== '--replace');
+const fromIndex = argv.indexOf('--from');
+const from = fromIndex === -1 ? null : argv[fromIndex + 1];
+const [command, ...args] = argv.filter(
+  (arg, i) => arg !== '--replace' && arg !== '--from' && i !== fromIndex + 1,
+);
 try {
   if (command === 'find') await cmdFind(args[0]);
   else if (command === 'search') await cmdSearch(args.join(' '));
   else if (command === 'cat') await cmdCat(args[0]);
+  else if (command === 'dvids') await cmdDvids(args.join(' '));
+  else if (command === 'si') await cmdSmithsonian(args.join(' '));
   else if (command === 'licence' || command === 'license') await cmdLicence(args[0]);
   else if (command === 'add') await cmdAdd(args[0], args[1], args[2], { replace });
+  else if (command === 'logo') await cmdLogo(args[0], args[1], { replace, from });
   else if (command === 'credit') await cmdCredit(args[0]);
   else {
     console.error(
       'usage: image.mjs find "Article" | search "words" | cat "Category" | licence "File:X.jpg"\n' +
-        '       image.mjs add "File:X.jpg" guns/<slug> <basename>   (basename: hero, or a descriptive name)\n' +
+        '       image.mjs dvids "words"   (US military, in service)   | si "words"  (Smithsonian, CC0)\n' +
+        '       image.mjs add <File:X.jpg | dvids:image:N | si:IDSID> guns/<slug> <basename> [--replace]\n' +
+        '       image.mjs logo <maker-slug> <File:X.png | https://…> [--from <page>] [--replace]\n' +
         '       image.mjs credit <slug>',
     );
     process.exitCode = 1;

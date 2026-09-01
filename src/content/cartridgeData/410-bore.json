@@ -1,0 +1,196 @@
+{
+  "id": "410-bore",
+  "name": ".410 bore",
+  "wikidataId": "Q782168",
+  "aliases": [
+    {
+      "name": ".410",
+      "kind": "nickname"
+    },
+    {
+      "name": "410/63,5",
+      "kind": "metric",
+      "note": "The C.I.P. designation for the 63.5 mm (2½ in) shell."
+    },
+    {
+      "name": "410/76",
+      "kind": "metric",
+      "note": "The C.I.P. designation for the 76 mm (3 in) shell."
+    },
+    {
+      "name": "36 gauge",
+      "kind": "commercial",
+      "note": "The alternative name C.I.P. records on the datasheet, and the usual continental European designation. The gauge arithmetic does not quite work: a true 36-gauge bore would be about 0.506 in."
+    }
+  ],
+  "introduced": 1874,
+  "standard": "cip",
+  "caseType": "shotshell",
+  "boreDiameter": {
+    "value": 10.41,
+    "unit": "mm",
+    "status": "verified",
+    "source": "saami-z299-2",
+    "sourceUrl": "https://saami.org/wp-content/uploads/2025/09/ANSI-SAAMI-Z299.2-Shotshell-2019-Approved-2025-09-23.pdf",
+    "sourceNote": "Bore diameter of the SAAMI 410 bore standard smoothbore velocity and pressure test barrel, .410 in +.005."
+  },
+  "caseLength": {
+    "value": 63.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-410",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/410-en-2.pdf",
+    "sourceNote": "Cartridge maximum for the 410/63,5 shell, dimension l. This is the fired length of the unfolded case, which the chamber must accept; the same datasheet lists 50.7, 65, 69.8, 72.8 and 76 mm shells sharing every other dimension."
+  },
+  "overallLength": {
+    "value": 60.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "saami-z299-2",
+    "sourceUrl": "https://saami.org/wp-content/uploads/2025/09/ANSI-SAAMI-Z299.2-Shotshell-2019-Approved-2025-09-23.pdf",
+    "sourceNote": "Loaded length of the roll-crimped 2½ in shell, 2.400 in, from the SAAMI 410 Bore 2½ in cartridge and chamber drawing. The folded-crimp figure on the same drawing is 2.360 in."
+  },
+  "rimDiameter": {
+    "value": 13.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-410",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/410-en-2.pdf",
+    "sourceNote": "Cartridge maximum, dimension g."
+  },
+  "baseDiameter": {
+    "value": 12.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-410",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/410-en-2.pdf",
+    "sourceNote": "Cartridge maximum, dimension d."
+  },
+  "maxPressure": {
+    "value": 83.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-410",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/410-en-2.pdf",
+    "sourceNote": "Pmax for the 410/63,5 shell, 830 bar. The 72.8 and 76 mm shells are rated at 1050 bar on the same sheet."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "federal-f412rs-slug",
+      "name": "Power-Shok 1/4 oz rifled slug",
+      "manufacturer": "Federal",
+      "bulletType": "Rifled hollow point slug",
+      "bulletMass": {
+        "value": 7.063,
+        "unit": "g",
+        "status": "verified",
+        "source": "federal-f412rs",
+        "sourceUrl": "https://www.federalpremium.com/shotshell/power-shok-rifled-slug/11-F412+RS.html",
+        "sourceNote": "109 gr as published, converted to grams. A quarter of an ounce, in a 2½ in shell."
+      },
+      "bcG1": {
+        "value": 0.071,
+        "unit": "",
+        "status": "verified",
+        "source": "federal-f412rs",
+        "sourceUrl": "https://www.federalpremium.com/shotshell/power-shok-rifled-slug/11-F412+RS.html",
+        "sourceNote": "Ballistic coefficient .071 as published."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 660.4,
+            "unit": "mm",
+            "status": "estimated",
+            "source": "saami-z299-2",
+            "sourceUrl": "https://saami.org/wp-content/uploads/2025/09/ANSI-SAAMI-Z299.2-Shotshell-2019-Approved-2025-09-23.pdf",
+            "sourceNote": "Federal publishes this velocity without naming a test barrel. SAAMI Z299.2 specifies a 26.000 in (660.40 mm) standard smoothbore barrel for 410 bore velocity and pressure work, and the figure is recorded on the basis that a SAAMI member measures in it."
+          },
+          "velocity": {
+            "value": 541.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "federal-f412rs",
+            "sourceUrl": "https://www.federalpremium.com/shotshell/power-shok-rifled-slug/11-F412+RS.html",
+            "sourceNote": "1775 fps as published."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/410-bore/hero.webp",
+      "alt": "Six empty .410 bore cases lying on a pale wooden surface: four with green plastic hulls and brass heads, and two plain nickel-coloured all-metal cases, one of them standing upright showing its primer and headstamp.",
+      "caption": "Fired .410 bore cases, plastic-hulled and all-metal. The mouths are open because the crimp unfolds when the shell is fired; a loaded round is shorter than the case length it is named for.",
+      "width": 1479,
+      "height": 1600,
+      "credit": {
+        "author": "Yan.gorev",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.410_bore_cartridges.jpg",
+        "title": "File:.410 bore cartridges.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/410-bore/comparison.webp",
+      "alt": "Two all-metal .410 cases beside a .22 Long Rifle cartridge, with a steel rule at the right. One .410 case stands upright showing its open mouth; the other lies on its side showing the headstamp W C C 52. The .410 cases are about three times the diameter of the rimfire round.",
+      "caption": "Two M35 all-metal .410 cases with a .22 Long Rifle cartridge for scale. Cases of this type were issued with the M6 aircrew survival gun, which is why the headstamp is a military one; commercial .410 shells are plastic or paper over a brass head.",
+      "width": 724,
+      "height": 802,
+      "credit": {
+        "author": "Divingpetrel",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:410_bore_M-35_shotgun_shells.jpg",
+        "title": "File:410 bore M-35 shotgun shells.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "cip-410",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, Cal. 410",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-vii/410-en-2.pdf",
+      "revision": "Tab. VII, dated 1984-06-14, revision 2016-05-18",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "saami-z299-2",
+      "type": "standards-body",
+      "title": "ANSI/SAAMI Z299.2, Shotshell Ammunition",
+      "publisher": "SAAMI",
+      "url": "https://saami.org/wp-content/uploads/2025/09/ANSI-SAAMI-Z299.2-Shotshell-2019-Approved-2025-09-23.pdf",
+      "revision": "Z299.2-2019, approved 2025-09-23",
+      "accessed": "2026-08-31",
+      "note": "Section I cartridge and chamber drawings, and the Section III standard velocity and pressure test barrel drawing."
+    },
+    {
+      "key": "federal-f412rs",
+      "type": "manufacturer-spec",
+      "title": "Power-Shok Rifled Slug, 410 Bore, 109 grain, 2-1/2 in (F412 RS)",
+      "publisher": "Federal Ammunition",
+      "url": "https://www.federalpremium.com/shotshell/power-shok-rifled-slug/11-F412+RS.html",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-410-bore",
+      "type": "wikipedia",
+      "title": ".410 bore",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1358916918",
+      "lang": "en",
+      "revision": "1358916918",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

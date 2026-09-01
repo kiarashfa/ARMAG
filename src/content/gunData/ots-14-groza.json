@@ -1,0 +1,190 @@
+{
+  "id": "ots-14-groza",
+  "name": "OTs-14 Groza",
+  "nativeName": "ОЦ-14 «Гроза»",
+  "kind": "model",
+  "wikidataId": "Q142928",
+  "makerRef": "tskib-soo",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "OTs-14-4A Groza-4",
+      "kind": "military",
+      "note": "The 9x39mm model, and the one this entry describes."
+    },
+    {
+      "name": "OTs-14-1A Groza-1",
+      "kind": "military",
+      "note": "The 7.62x39mm model, also known as TKB-0239."
+    },
+    {
+      "name": "Thunderstorm",
+      "kind": "nickname",
+      "note": "The literal meaning of Groza."
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "russia",
+  "producedIn": [
+    "russia"
+  ],
+  "introduced": 1994,
+  "productionYears": {
+    "start": 1994,
+    "end": 1999
+  },
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "assault-rifle",
+    "law-enforcement"
+  ],
+  "massEmpty": {
+    "value": 2.93,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wp-ots-14-groza",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372065167",
+    "sourceNote": "OTs-14-4A-01, the rifle configuration with the vertical foregrip fitted in place of the grenade launcher. With the launcher instead, the same source gives 3.97 kg."
+  },
+  "length": {
+    "value": 565,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-ots-14-groza",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372065167",
+    "sourceNote": "OTs-14-4A-01. The source gives 610 mm for the grenade-launcher configuration, 500 mm for the -02 carbine and 720 mm for the -03."
+  },
+  "width": {
+    "value": 60,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-ots-14-groza",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372065167",
+    "sourceNote": "OTs-14-4A without a grenade launcher; 75 mm with one fitted."
+  },
+  "height": {
+    "value": 294,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-ots-14-groza",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372065167",
+    "sourceNote": "OTs-14-4A without a grenade launcher, as published."
+  },
+  "barrelLength": {
+    "value": 240,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wp-ots-14-groza",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372065167",
+    "sourceNote": "Groza-4, the 9x39mm model. The 7.62x39mm Groza-1 has a 420 mm barrel."
+  },
+  "cyclicRate": {
+    "value": 725,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-ots-14-groza",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372065167",
+    "sourceNote": "The article gives a range of 700 to 750 rounds a minute; the midpoint is recorded here because a PropertyValue holds one number."
+  },
+  "effectiveRange": {
+    "value": 200,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-ots-14-groza",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372065167",
+    "sourceNote": "Groza-4. The 7.62x39mm Groza-1 is given as 300 m."
+  },
+  "sightGraduation": {
+    "value": 200,
+    "unit": "m",
+    "status": "verified",
+    "source": "wp-ots-14-groza",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372065167",
+    "sourceNote": "The rear aperture sight in the carrying handle is a tangent leaf graduated from 50 to 200 m."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x39mm",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-ots-14-groza",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372065167",
+        "sourceNote": "20-round detachable box, shared with the OTs-12 rifle."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "7-62x39mm",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "wp-ots-14-groza",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372065167",
+        "sourceNote": "30-round detachable box on the Groza-1."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/ots-14-groza/hero.webp",
+      "alt": "A colour illustration of a compact bullpup weapon seen from the left against a plain ground. The magazine sits behind the pistol grip, an orange-brown vertical foregrip stands well forward under the barrel, a heavy carrying handle with a tubular body runs along the top, and a short butt pad closes the rear of the receiver.",
+      "caption": "An illustration of the OTs-14-4A-01, the configuration with the vertical foregrip fitted in place of the grenade launcher. Everything behind the trigger is receiver: the magazine sits where a conventional rifle's action would be, which is what makes a 240 mm barrel fit in a 565 mm weapon.",
+      "width": 1200,
+      "height": 560,
+      "credit": {
+        "author": "Tomasz Steifer",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:GrozaOC14_noBG.png",
+        "title": "File:GrozaOC14 noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/ots-14-groza/in-use.webp",
+      "alt": "A man in a black balaclava, black winter jacket and black gloves crouching in snow beside a hedge, shouldering a bullpup weapon with a wooden-coloured handguard visible under the carrying handle and a wide tube under the barrel. The photograph carries a small watermark in the corner.",
+      "caption": "A Groza shouldered, with the grenade-launcher grip unit fitted — the tube below the barrel. The photograph is watermarked by the uploader's source and is the only freely licensed picture found of the weapon in use.",
+      "width": 720,
+      "height": 540,
+      "credit": {
+        "author": "Chris-parker",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D1%8C%D0%B1%D0%B0_%D0%B8%D0%B7_%D0%9E%D0%A6-14.jpeg",
+        "title": "File:Стрельба из ОЦ-14.jpeg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-ots-14-groza",
+      "type": "wikipedia",
+      "title": "OTs-14 Groza",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372065167",
+      "lang": "en",
+      "revision": "1372065167",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

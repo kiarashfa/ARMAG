@@ -1,0 +1,180 @@
+{
+  "id": "6-5x50mmsr-arisaka",
+  "name": "6.5x50mmSR Arisaka",
+  "wikidataId": "Q2985262",
+  "aliases": [
+    {
+      "name": "6.5x50mm Arisaka",
+      "kind": "metric"
+    },
+    {
+      "name": "6,5 x 51 R (Arisaka)",
+      "kind": "commercial",
+      "note": "The C.I.P. designation, which measures the case at 51 mm rather than 50 mm."
+    },
+    {
+      "name": "Type 30 cartridge",
+      "kind": "military",
+      "note": "The 1897 round-nosed original."
+    },
+    {
+      "name": "Type 38 cartridge",
+      "kind": "military",
+      "note": "The 1907 spitzer version, which is the load recorded on this page."
+    },
+    {
+      "name": "6.5mm Japanese",
+      "kind": "nickname"
+    }
+  ],
+  "introduced": 1897,
+  "standard": "cip",
+  "caseType": "semi-rimmed",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 6.63,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-51-r-arisaka",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/6-5-x-51-r-arisaka-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1, and the same figure the encyclopedia infobox gives. The lead sentence of that article instead states 6.705 mm, which the datasheet contradicts."
+  },
+  "caseLength": {
+    "value": 51.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-51-r-arisaka",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/6-5-x-51-r-arisaka-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3. C.I.P. names the round after this figure; the common name rounds it down to 50 mm."
+  },
+  "overallLength": {
+    "value": 76.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-51-r-arisaka",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/6-5-x-51-r-arisaka-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 12.08,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-51-r-arisaka",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/6-5-x-51-r-arisaka-en.pdf",
+    "sourceNote": "Dimension R1. It stands 0.63 mm proud of the base, which is what makes the case semi-rimmed rather than rimmed or rimless."
+  },
+  "neckDiameter": {
+    "value": 7.37,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-51-r-arisaka",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/6-5-x-51-r-arisaka-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.45,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-51-r-arisaka",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/6-5-x-51-r-arisaka-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 295.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-6-5-x-51-r-arisaka",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/6-5-x-51-r-arisaka-en.pdf",
+    "sourceNote": "Pmax 2950 bar. This is the modern commercial ceiling, not an Imperial Japanese Army specification."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "type-38-ball",
+      "name": "Type 38 ball",
+      "bulletType": "FMJ spitzer",
+      "bulletMass": {
+        "value": 9.001,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-6-5-50mmsr-arisaka",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368569657",
+        "sourceNote": "138.9 gr as published in the article's ballistics table, converted to grams; the article's running text gives the same bullet as 9.0 g."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 800.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-6-5-50mmsr-arisaka",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368569657",
+            "sourceNote": "Test barrel length stated for the ballistics table: 800 mm, which is close to the Type 38 rifle's own barrel."
+          },
+          "velocity": {
+            "value": 770.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-6-5-50mmsr-arisaka",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368569657",
+            "sourceNote": "770 m/s as published, in an infobox that declares SI ballistics."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/6-5x50mmsr-arisaka/hero.webp",
+      "alt": "Three bottlenecked brass rifle cartridges standing on a wooden table beside a steel rule marked in millimetres and inches. The middle one is markedly slimmer than the other two and carries a lead-tipped copper bullet; the left has a wider body and a blunter bullet; the right is the tallest, with a jacketed bullet showing a cannelure.",
+      "caption": ".303 British on the left, 6.5x50mmSR Arisaka in the centre and .30-06 Springfield on the right, against a millimetre rule. The Japanese round is the slenderest of the three, and the comparison is the one its critics kept making.",
+      "width": 1281,
+      "height": 1600,
+      "credit": {
+        "author": "Ultratone85",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:6.5x50mm_Japanese_with_.303_British_&_.30-06.JPG",
+        "title": "File:6.5x50mm Japanese with .303 British & .30-06.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/6-5x50mmsr-arisaka/cutaway.webp",
+      "alt": "A grey-toned technical drawing of three sectioned cartridges. The tall one on the left, labelled “Ball”, shows a pointed jacketed bullet seated in a case, with a line pointing to a “pink band” at the case mouth. A shorter one in the centre, labelled “Practice”, has callouts reading copper jacket, lead core and wool fibre. On the right, labelled “Wood”, a case carries a long tapered wooden projectile.",
+      "caption": "Sectioned drawings of three Type 38 rounds from a United States Army and Air Force intelligence manual on Japanese ammunition: the ball round, a practice round with a partly hollow bullet, and a wooden-bulleted blank. The ball round's callout marks a pink band at the case mouth.",
+      "width": 927,
+      "height": 1200,
+      "credit": {
+        "author": "Departments of the Army and the Air Force",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Type_38_6.5mm_ammunition.jpg",
+        "title": "File:Type 38 6.5mm ammunition.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "cip-6-5-x-51-r-arisaka",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 6,5 x 51 R (Arisaka)",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/6-5-x-51-r-arisaka-en.pdf",
+      "revision": "Tab. II, adopted 1984-06-14, revised 2013-05-22",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "wp-6-5-50mmsr-arisaka",
+      "type": "wikipedia",
+      "title": "6.5×50mmSR Arisaka",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368569657",
+      "lang": "en",
+      "revision": "1368569657",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

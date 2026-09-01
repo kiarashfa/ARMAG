@@ -19,5 +19,17 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/springfield-armory/logo.webp",
+    "alt": "The Springfield Armory mark: the name in dark red block capitals over two lines, beside a United States flag.",
+    "caption": "The wordmark of Springfield Armory, Inc. — the commercial company, not the federal armory it is named after.",
+    "width": 960,
+    "height": 334,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Springfield_Armory,_Inc.",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use. Taken from the page recorded as the source."
+    }
+  }
 }

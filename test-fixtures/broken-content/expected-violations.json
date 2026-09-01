@@ -168,6 +168,13 @@
         "prose/near-duplicate"
       ],
       "why": "reported against BOTH files, because fixing a duplicate needs to see both of them"
+    },
+    {
+      "file": "test-fixtures/broken-content/content/gunData/alias-shadow.json",
+      "rules": [
+        "alias/shadows-entry"
+      ],
+      "why": "SPEC.md §6 — aliases are indexed for search and mint static redirects, so an alias that slugifies to a DIFFERENT entry's id claims one arm is known by another arm's name. Found in production: the HK416 carried 'M27 IAR' correctly until the M27 became its own entry, at which point the claim quietly became wrong and nothing said so. An alias can go stale because of a file it does not mention."
     }
   ],
   "expectedScriptFailures": [

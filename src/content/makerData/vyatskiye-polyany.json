@@ -1,0 +1,37 @@
+{
+  "id": "vyatskiye-polyany",
+  "name": "Vyatskiye Polyany Machine-Building Plant",
+  "nativeName": "Вятско-Полянский машиностроительный завод",
+  "wikidataId": "Q4130501",
+  "country": "russia",
+  "founded": 1940,
+  "dissolved": null,
+  "website": "https://molot-guns.ru/",
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-vyatskiye-polyany-machine-building-plant",
+      "type": "wikipedia",
+      "title": "Vyatskiye Polyany Machine-Building Plant",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1355802427",
+      "lang": "en",
+      "revision": "1355802427",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "logo": {
+    "src": "images/makers/vyatskiye-polyany/logo.webp",
+    "alt": "The Molot mark: the word Molot in red Cyrillic capitals, a dash, and the word Oruzhiye, with a rifle-sight device between them.",
+    "caption": "The Molot-Oruzhiye mark of the Vyatskiye Polyany plant.",
+    "width": 655,
+    "height": 105,
+    "credit": {
+      "sourceUrl": "https://molot-guns.ru/",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use. Taken from the page recorded as the source."
+    }
+  }
+}

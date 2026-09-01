@@ -1,0 +1,224 @@
+{
+  "id": "10mm-auto",
+  "name": "10mm Auto",
+  "wikidataId": "Q169130",
+  "aliases": [
+    {
+      "name": "10 mm Auto",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    },
+    {
+      "name": "10mm Automatic",
+      "kind": "commercial"
+    },
+    {
+      "name": "10x25mm",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Jeff Cooper with FFV Norma AB",
+  "introduced": 1983,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 10.17,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-10mm-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/10-mm-auto-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 25.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-10mm-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/10-mm-auto-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 32.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-10mm-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/10-mm-auto-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 10.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-10mm-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/10-mm-auto-en.pdf",
+    "sourceNote": "Dimension R1. Equal to the base diameter, because the case is rimless."
+  },
+  "neckDiameter": {
+    "value": 10.74,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-10mm-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/10-mm-auto-en.pdf",
+    "sourceNote": "Dimension H2. It is within 0.06 mm of the base diameter because the case is straight-walled and headspaces on its mouth."
+  },
+  "baseDiameter": {
+    "value": 10.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-10mm-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/10-mm-auto-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 230.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-10mm-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/10-mm-auto-en.pdf",
+    "sourceNote": "Pmax 2300 bar, transducer method. SAAMI rates the same chambering at 37,500 psi, so the two bodies' ceilings are not interchangeable figures."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "federal-ae10a-180-fmj",
+      "name": "American Eagle 180 gr FMJ",
+      "manufacturer": "Federal",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 11.66,
+        "unit": "g",
+        "status": "verified",
+        "source": "federal-ae10a",
+        "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE10A.html",
+        "sourceNote": "180 gr as published, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 127.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "federal-ae10a",
+            "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE10A.html",
+            "sourceNote": "Test barrel length as published: 5 inches."
+          },
+          "velocity": {
+            "value": 313.9,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "federal-ae10a",
+            "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE10A.html",
+            "sourceNote": "1030 fps as published."
+          }
+        }
+      ]
+    },
+    {
+      "id": "federal-pd10p1-200-jhp",
+      "name": "Punch 200 gr JHP",
+      "manufacturer": "Federal",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 12.96,
+        "unit": "g",
+        "status": "verified",
+        "source": "federal-pd10p1",
+        "sourceUrl": "https://www.federalpremium.com/handgun/punch/11-PD10P1.html",
+        "sourceNote": "200 gr as published, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 127.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "federal-pd10p1",
+            "sourceUrl": "https://www.federalpremium.com/handgun/punch/11-PD10P1.html",
+            "sourceNote": "Test barrel length as published: 5 inches."
+          },
+          "velocity": {
+            "value": 335.3,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "federal-pd10p1",
+            "sourceUrl": "https://www.federalpremium.com/handgun/punch/11-PD10P1.html",
+            "sourceNote": "1100 fps as published."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/10mm-auto/hero.webp",
+      "alt": "A single 10mm Auto cartridge lying on orange graph paper. The brass case is straight-sided with a wide extractor groove above the rim, and carries a grey truncated-cone lead bullet whose flat nose is about two thirds the width of the case.",
+      "caption": "A 10mm Auto round loaded with a truncated-cone lead bullet, photographed on 1 mm graph paper. The case is straight-walled and rimless, and headspaces on its mouth.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_10mm_Auto_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "title": "File:Cartridge 10mm Auto CC BY-SA 4.0 by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/10mm-auto/comparison.webp",
+      "alt": "Four pistol cartridges standing upright side by side on a white ground. From the left: a slim round-nosed 9mm, a shorter flat-nosed .40 S&W of larger diameter, a distinctly taller 10mm Auto with a grey truncated-cone bullet, and a wide .45 ACP with a rounded jacketed bullet.",
+      "caption": "9x19mm Parabellum, .40 S&W, 10mm Auto and .45 ACP together. The 10mm and the .40 share a bullet diameter and a case head; the difference between them is the 3.6 mm of case length visible here.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pistol_calibre_cartridges_comparison_-_9x19mm_Para,_.40_S&W,_10mm_Auto_and_.45_ACP.jpg",
+        "title": "File:Pistol calibre cartridges comparison - 9x19mm Para, .40 S&W, 10mm Auto and .45 ACP.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "cip-10mm-auto",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 10 mm Auto",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/10-mm-auto-en.pdf",
+      "revision": "Tab. IV, dated 1984-10-03, revision 2012-05-30",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "federal-ae10a",
+      "type": "manufacturer-spec",
+      "title": "American Eagle Handgun 10mm Auto 180 grain FMJ (AE10A)",
+      "publisher": "Federal Ammunition",
+      "url": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE10A.html",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "federal-pd10p1",
+      "type": "manufacturer-spec",
+      "title": "Punch Handgun 10mm Auto 200 grain JHP (PD10P1)",
+      "publisher": "Federal Ammunition",
+      "url": "https://www.federalpremium.com/handgun/punch/11-PD10P1.html",
+      "accessed": "2026-08-31"
+    },
+    {
+      "key": "wp-10mm-auto",
+      "type": "wikipedia",
+      "title": "10mm Auto",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371072486",
+      "lang": "en",
+      "revision": "1371072486",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

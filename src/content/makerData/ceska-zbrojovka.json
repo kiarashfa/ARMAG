@@ -21,5 +21,19 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/ceska-zbrojovka/logo.webp",
+    "alt": "The CZ mark: the letters CZ in a circle beside the same letters set large.",
+    "caption": "The mark Česká zbrojovka Uherský Brod trades under, adopted in 2019.",
+    "width": 777,
+    "height": 308,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:CZUB_logo_2019.png",
+      "title": "File:CZUB logo 2019.png",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "Commons records the file as CC BY-SA 4.0. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use.",
+      "author": "Company CZUB"
+    }
+  }
 }

@@ -164,7 +164,22 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/30-06-springfield/hero.webp",
+      "alt": "A drawing of four .30-06 cartridges numbered one to four, each shown beside the bullet it carries: a flat-based round nose, a spitzer, a boat-tail and an armour-piercing type.",
+      "caption": "A drawing rather than a photograph: four .30-06 loadings with their bullets shown separately.",
+      "width": 1600,
+      "height": 1194,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:30-06_Springfield_20260501025802.png",
+        "title": "File:30-06 Springfield 20260501025802.png",
+        "licenseType": "cc0",
+        "author": "BCC015",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q158721"

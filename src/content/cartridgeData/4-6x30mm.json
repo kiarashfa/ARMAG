@@ -160,7 +160,21 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/4-6x30mm/hero.webp",
+      "alt": "A 4.6×30mm cartridge lying horizontally, its bottlenecked brass case marked 31463 and carrying a slender pointed bullet.",
+      "caption": "A 4.6×30mm round. The case is stamped with its lot number.",
+      "width": 1174,
+      "height": 250,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:4,6x30_SP.jpg",
+        "title": "File:4,6x30 SP.jpg",
+        "licenseType": "public-domain",
+        "author": "XIMO at municion.org"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q229873"

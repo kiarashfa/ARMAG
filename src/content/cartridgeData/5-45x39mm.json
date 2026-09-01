@@ -158,7 +158,23 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/5-45x39mm/hero.webp",
+      "alt": "A 5.45×39mm cartridge on orange graph paper, sharply bottlenecked with a long pointed bullet and a red sealant band at the case mouth.",
+      "caption": "A 5.45×39mm round on graph paper. The red ring at the case mouth is the lacquer that seals the bullet.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_5.45x39mm_M74_CC_BY-SA_by_Grasyl.jpg",
+        "title": "File:Cartridge 5.45x39mm M74 CC BY-SA by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q238437"

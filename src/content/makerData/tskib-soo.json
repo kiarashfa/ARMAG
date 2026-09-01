@@ -1,0 +1,39 @@
+{
+  "id": "tskib-soo",
+  "name": "TsKIB SOO",
+  "nativeName": "ЦКИБ СОО",
+  "wikidataId": "Q4502938",
+  "country": "russia",
+  "founded": 1946,
+  "dissolved": null,
+  "website": "http://www.tulatskib.ru",
+  "logo": {
+    "src": "images/makers/tskib-soo/logo.webp",
+    "alt": "The TsKIB SOO mark: two Cyrillic letters in brown serif capitals set inside an open brown ellipse.",
+    "caption": "The bureau's mark, built on the MTs prefix its sporting guns carry.",
+    "width": 300,
+    "height": 152,
+    "credit": {
+      "author": "TsKIB SOO",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:TsKIB_SOO_logo.png",
+      "title": "File:TsKIB SOO logo.png",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "Commons records the file as public domain. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-tskib-soo",
+      "type": "wikipedia",
+      "title": "TsKIB SOO",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368611575",
+      "lang": "en",
+      "revision": "1368611575",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

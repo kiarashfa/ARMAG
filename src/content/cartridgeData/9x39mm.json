@@ -1,0 +1,226 @@
+{
+  "id": "9x39mm",
+  "name": "9x39mm",
+  "wikidataId": "Q277494",
+  "aliases": [
+    {
+      "name": "9 x 39",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    },
+    {
+      "name": "SP-5",
+      "kind": "military",
+      "note": "The subsonic ball load, GRAU index 7N8."
+    },
+    {
+      "name": "SP-6",
+      "kind": "military",
+      "note": "The hard-cored load, GRAU index 7N9."
+    }
+  ],
+  "designedBy": "N. V. Zabelin, L. S. Dvoryaninova, Y. Z. Frolov and E. S. Kornilova",
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 9.27,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/9-x-39-180314-en1.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 38.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/9-x-39-180314-en1.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3. Identical to the parent 7.62x39mm."
+  },
+  "overallLength": {
+    "value": 56.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/9-x-39-180314-en1.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6, and again identical to the 7.62x39mm — the round was made to occupy the same magazine length."
+  },
+  "rimDiameter": {
+    "value": 11.33,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/9-x-39-180314-en1.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 9.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/9-x-39-180314-en1.pdf",
+    "sourceNote": "Dimension H2, against 8.6 mm on the parent case: this is the whole of the modification."
+  },
+  "baseDiameter": {
+    "value": 11.35,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/9-x-39-180314-en1.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 355.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-9-x-39",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/9-x-39-180314-en1.pdf",
+    "sourceNote": "Pmax 3550 bar, transducer method, the same ceiling C.I.P. sets for the 7.62x39mm."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "sp-5",
+      "name": "SP-5 (7N8)",
+      "bulletType": "lead-cored ball",
+      "bulletMass": {
+        "value": 16.1,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-9-39mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372439188",
+        "sourceNote": "16.1 g as published in the article's ballistics table, which declares SI units."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 266.7,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-9-39mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372439188",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 10.5 inches."
+          },
+          "velocity": {
+            "value": 290.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-9-39mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372439188",
+            "sourceNote": "290 m/s as published, which is below the speed of sound at sea level by design."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sp-6",
+      "name": "SP-6 (7N9)",
+      "bulletType": "hard-cored",
+      "bulletMass": {
+        "value": 16.2,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-9-39mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372439188",
+        "sourceNote": "16.2 g as published in the article's ballistics table."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 266.7,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-9-39mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372439188",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 10.5 inches."
+          },
+          "velocity": {
+            "value": 305.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-9-39mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372439188",
+            "sourceNote": "305 m/s as published."
+          }
+        }
+      ]
+    },
+    {
+      "id": "wolf-fmj",
+      "name": "Wolf 278 gr FMJ",
+      "manufacturer": "Wolf",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 18.01,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-9-39mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372439188",
+        "sourceNote": "278 gr as published in the article's ballistics table, converted to grams. The one commercial load in the table."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 266.7,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-9-39mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372439188",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 10.5 inches."
+          },
+          "velocity": {
+            "value": 327.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-9-39mm",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372439188",
+            "sourceNote": "1073 ft/s as published."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/9x39mm/hero.webp",
+      "alt": "Four cartridges with dull grey lacquered steel cases on a black-and-white paper target. Three stand upright and one lies in front. Each carries a stubby copper-jacketed bullet whose forward half is painted bright blue, sealed at the case mouth with a red ring.",
+      "caption": "9x39mm SP-6 rounds, GRAU index 7N9, on a target face. The blue tip is the Soviet marking for this load and the red ring at the mouth is the sealant; the cases are lacquered steel, and the bullet is unusually short and blunt for a rifle round because it is meant to stay subsonic.",
+      "width": 1600,
+      "height": 1033,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SR-3_(539-14).jpg",
+        "title": "File:SR-3 (539-14).jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "cip-9-x-39",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 9 x 39",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/9-x-39-180314-en1.pdf",
+      "revision": "Tab. I, adopted 2018-05-16",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "wp-9-39mm",
+      "type": "wikipedia",
+      "title": "9x39mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372439188",
+      "lang": "en",
+      "revision": "1372439188",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

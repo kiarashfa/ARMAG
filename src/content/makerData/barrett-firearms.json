@@ -20,5 +20,19 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/barrett-firearms/logo.webp",
+    "alt": "The Barrett wordmark: the company name in heavy block capitals, the A drawn as a rifle scope reticle.",
+    "caption": "Barrett's wordmark. The reticle in place of the A is the mark's only device.",
+    "width": 1018,
+    "height": 283,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barrett_Firearms_logo.png",
+      "title": "File:Barrett Firearms logo.png",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "Commons records the file as CC BY-SA 1.0. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use.",
+      "author": "Barrett Firearms Company"
+    }
+  }
 }

@@ -1,0 +1,269 @@
+{
+  "id": "22-hornet",
+  "name": ".22 Hornet",
+  "wikidataId": "Q158698",
+  "aliases": [
+    {
+      "name": "22 Hornet",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    },
+    {
+      "name": "5.6x36mmR Hornet",
+      "kind": "metric",
+      "note": "Not the 5.6x35mmR Vierling, which C.I.P. files separately with a shorter case and a thinner rim."
+    }
+  ],
+  "designedBy": "Townsend Whelen and G. L. Wotkyns",
+  "introduced": 1930,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 5.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-hornet",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page56.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1. Some rifles made before the standard settled are bored for a 0.223 in bullet rather than 0.224 in."
+  },
+  "caseLength": {
+    "value": 35.64,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-hornet",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page56.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 43.76,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-hornet",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page56.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 8.89,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-hornet",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page56.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 6.16,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-hornet",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page56.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 7.59,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-hornet",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page56.pdf",
+    "sourceNote": "Dimension P1. The case tapers 1.43 mm over its length, which is the black-powder .22 WCF profile it inherited."
+  },
+  "maxPressure": {
+    "value": 300.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-22-hornet",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page56.pdf",
+    "sourceNote": "Pmax 3000 bar. SAAMI rates the same chambering at 43,000 psi by its own method, and the two figures are not interchangeable."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornet-35-vmax",
+      "name": "35 gr V-Max",
+      "bulletType": "V-Max",
+      "bulletMass": {
+        "value": 2.268,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-22-hornet",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+        "sourceNote": "35 gr as published in the article's ballistics table, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-22-hornet",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
+          },
+          "velocity": {
+            "value": 932.7,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-22-hornet",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+            "sourceNote": "3060 ft/s as published. The table names Hodgdon Powder Company as its source."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hornet-40-sp",
+      "name": "40 gr soft point",
+      "bulletType": "soft point",
+      "bulletMass": {
+        "value": 2.592,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-22-hornet",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+        "sourceNote": "40 gr as published in the article's ballistics table, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-22-hornet",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
+          },
+          "velocity": {
+            "value": 861.4,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-22-hornet",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+            "sourceNote": "2826 ft/s as published."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hornet-45-sp",
+      "name": "45 gr soft point",
+      "bulletType": "soft point",
+      "bulletMass": {
+        "value": 2.916,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-22-hornet",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+        "sourceNote": "45 gr as published in the article's ballistics table, converted to grams."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-22-hornet",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
+          },
+          "velocity": {
+            "value": 849.5,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-22-hornet",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+            "sourceNote": "2787 ft/s as published."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hornet-55-sp",
+      "name": "55 gr soft point",
+      "bulletType": "soft point",
+      "bulletMass": {
+        "value": 3.564,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-22-hornet",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+        "sourceNote": "55 gr as published in the article's ballistics table, converted to grams. It is the heaviest bullet the table lists."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-22-hornet",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
+          },
+          "velocity": {
+            "value": 808.3,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-22-hornet",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+            "sourceNote": "2652 ft/s as published."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/22-hornet/hero.webp",
+      "alt": "A single .22 Hornet cartridge lying on orange millimetre graph paper. The brass case is long, slim and noticeably tapered, ending in a short shoulder and a narrow neck, and carries a copper-jacketed bullet with an exposed grey lead tip. A thin rim projects at the base.",
+      "caption": "A .22 Hornet loaded with a soft-point bullet, on 1 mm graph paper. The taper down the case body and the small, shallow shoulder are inherited from the black-powder .22 WCF the round was developed out of; the projecting rim is what a break-action or single-shot rifle extracts on.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_.22_Hornet.jpg",
+        "title": "File:Cartridge .22 Hornet.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/22-hornet/comparison.webp",
+      "alt": "Four small brass cartridges standing on a sand-coloured surface, rising in height from left to right. The two on the left are short and plain-walled with a flat rim; the third is longer with a lead-tipped jacketed bullet; the tallest on the right is a bottlenecked case with a red-tipped copper bullet.",
+      "caption": "From the left, .22 Short, .22 Long Rifle, .22 Winchester Magnum Rimfire and .22 Hornet with a 35-grain polymer-tipped bullet. The first three are rimfire; the Hornet is the centrefire round in the same bullet diameter, and roughly twice the case length of the .22 WMR.",
+      "width": 959,
+      "height": 1200,
+      "credit": {
+        "author": "Noahsachs",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:22_short_22_long_rifle_22_magnum_22_hornet.JPG",
+        "title": "File:22 short 22 long rifle 22 magnum 22 hornet.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "cip-22-hornet",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet, 22 Hornet",
+      "publisher": "C.I.P.",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page56.pdf",
+      "revision": "Tab. II, adopted 1984-06-14, revised 2002-05-15",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "wp-22-hornet",
+      "type": "wikipedia",
+      "title": ".22 Hornet",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
+      "lang": "en",
+      "revision": "1332690682",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

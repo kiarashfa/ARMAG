@@ -1,0 +1,44 @@
+{
+  "id": "guide-lamp",
+  "name": "Guide Lamp Division, General Motors",
+  "country": "united-states",
+  "founded": 1906,
+  "dissolved": 1984,
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-inteva-products",
+      "type": "wikipedia",
+      "title": "Inteva Products",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359552836",
+      "lang": "en",
+      "revision": "1359552836",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "wp-m3-submachine-gun",
+      "type": "wikipedia",
+      "title": "M3 submachine gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371518050",
+      "lang": "en",
+      "revision": "1371518050",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "wp-fp-45-liberator",
+      "type": "wikipedia",
+      "title": "FP-45 Liberator",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367556386",
+      "lang": "en",
+      "revision": "1367556386",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

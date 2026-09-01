@@ -131,7 +131,23 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/7-92x33mm-kurz/hero.webp",
+      "alt": "A 7.92×33mm Kurz cartridge standing on a wooden surface in warm light, noticeably short for the width of its case.",
+      "caption": "A 7.92×33mm Kurz round — the short case that gives the intermediate cartridge its name.",
+      "width": 533,
+      "height": 800,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:German_7.92x33mm_Kurz.jpg",
+        "title": "File:German 7.92x33mm Kurz.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "User Cbh on en.wikipedia",
+        "licenseVersion": "3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q259269"

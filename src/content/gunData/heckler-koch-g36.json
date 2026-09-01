@@ -1,0 +1,277 @@
+{
+  "id": "heckler-koch-g36",
+  "name": "Heckler & Koch G36",
+  "kind": "model",
+  "nativeName": "Gewehr 36",
+  "wikidataId": "Q172295",
+  "makerRef": "heckler-koch",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "G36",
+      "kind": "military",
+      "market": "DE"
+    },
+    {
+      "name": "HK50",
+      "kind": "commercial",
+      "note": "The factory designation the rifle was submitted for trials under, before the Bundeswehr adopted it as the G36."
+    },
+    {
+      "name": "G36V",
+      "kind": "export"
+    },
+    {
+      "name": "G36E",
+      "kind": "export",
+      "note": "The earlier name of the export model now called the G36V."
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "germany",
+  "producedIn": [
+    "germany",
+    "spain"
+  ],
+  "introduced": 1996,
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box",
+    "drum"
+  ],
+  "roles": [
+    "service-rifle",
+    "assault-rifle"
+  ],
+  "massEmpty": {
+    "value": 3.63,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-heckler-koch-g36",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+    "sourceNote": "3.63 kg from the encyclopedia infobox, which carries no citation for the figure and does not say whether a magazine is included. Heckler & Koch's own specification page lists weights only through a script the page loads separately, and publishes none in its markup."
+  },
+  "length": {
+    "value": 999.0,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-g36",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+    "sourceNote": "999 mm with the stock extended, from the uncited encyclopedia infobox."
+  },
+  "lengthFolded": {
+    "value": 758.0,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-g36",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+    "sourceNote": "758 mm with the stock folded to the right, from the uncited encyclopedia infobox."
+  },
+  "width": {
+    "value": 64.0,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-g36",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+    "sourceNote": "64 mm from the uncited encyclopedia infobox. The folded stock adds to this and the figure does not say which state it describes."
+  },
+  "height": {
+    "value": 320.0,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-g36",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+    "sourceNote": "320 mm from the uncited encyclopedia infobox, over the carry-handle sight bridge."
+  },
+  "barrelLength": {
+    "value": 480.0,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-g36",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+    "sourceNote": "480 mm for the full-length rifle, from the uncited encyclopedia infobox, which lists 318 mm and 228 mm alongside it for the carbine and compact models."
+  },
+  "riflingTwist": {
+    "value": 178.0,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-g36",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+    "sourceNote": "One turn in 178 mm, given in the encyclopedia's description of the barrel as 1 in 178 mm (1:7 in) with no citation. Heckler & Koch confirms the six-groove right-hand profile but publishes no twist length."
+  },
+  "twistDirection": "right",
+  "riflingGrooves": 6,
+  "cyclicRate": {
+    "value": 750,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "hk-g36",
+    "sourceUrl": "https://www.heckler-koch.com/en/Products/Military%20and%20Law%20Enforcement/Assault%20rifles/G36",
+    "sourceNote": "Rate of fire 750 rounds/min, from the maker's technical specification table."
+  },
+  "triggerPull": {
+    "value": 40.0,
+    "unit": "N",
+    "status": "verified",
+    "source": "hk-g36",
+    "sourceUrl": "https://www.heckler-koch.com/en/Products/Military%20and%20Law%20Enforcement/Assault%20rifles/G36",
+    "sourceNote": "Trigger pull 40 N, from the maker's technical specification table."
+  },
+  "effectiveRange": {
+    "value": 600.0,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-heckler-koch-g36",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+    "sourceNote": "600 m from the uncited encyclopedia infobox. This is a doctrinal figure for the full-length rifle with its 3x sight, not a measurement, and Heckler & Koch quotes a band rather than one number across the family."
+  },
+  "productionTotal": {
+    "value": 260000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-heckler-koch-g36",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+    "sourceNote": "The uncited encyclopedia infobox gives 260,000 or more. The figure is recorded as a floor rather than a total, and it includes the 75,219 rifles built under licence in Spain."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "hk-g36",
+        "sourceUrl": "https://www.heckler-koch.com/en/Products/Military%20and%20Law%20Enforcement/Assault%20rifles/G36",
+        "sourceNote": "The maker lists magazine capacities of 10, 20 and 30 rounds; 30 is the service magazine. The 100-round C-Mag drum is a separate feed device rather than a magazine option on that list."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "g36k",
+      "name": "G36K",
+      "summary": "The carbine, introduced in 1997. Kurz means short: the barrel is cut to 318 mm and given an open-prong flash hider, the handguard is shortened and a bottom rail added. The shorter barrel cannot launch rifle grenades and carries no bayonet lug, but the 40 mm AG36 launcher still fits.",
+      "overrides": {
+        "barrelLength": {
+          "value": 318.0,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-heckler-koch-g36",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+          "sourceNote": "318 mm, the second of the three barrel lengths in the uncited encyclopedia infobox."
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "g36c",
+      "name": "G36C",
+      "summary": "The compact model of 2001, developed from the G36K. Its 228 mm barrel is short enough that the gas block had to be moved towards the muzzle and the piston rod shortened. The carry-handle optic is replaced by a rail with detachable iron sights, and the handguard and stock are shortened to match.",
+      "overrides": {
+        "barrelLength": {
+          "value": 228.0,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-heckler-koch-g36",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+          "sourceNote": "228 mm, the shortest of the three barrel lengths in the uncited encyclopedia infobox."
+        }
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [
+    {
+      "standard": "magazine-pattern",
+      "value": "G36",
+      "note": "The G36 magazine is proprietary and locks to its neighbours by moulded studs so that two or three can be carried side by side."
+    },
+    {
+      "standard": "magazine-pattern",
+      "value": "STANAG 4179",
+      "note": "Only with an adaptor or a modified magazine well. A standard G36 does not take STANAG magazines."
+    },
+    {
+      "standard": "rail",
+      "value": "MIL-STD-1913",
+      "note": "On the later A-series carry handles and on the G36C, which replaced the moulded optic bridge with a rail."
+    }
+  ],
+  "images": [
+    {
+      "src": "images/guns/heckler-koch-g36/hero.webp",
+      "alt": "A Heckler & Koch G36 rifle seen from the left against a plain ground. The receiver, handguard and skeletal side-folding stock are all matt grey polymer; a long open carry handle runs along the top carrying a tubular optical sight with a small reflex sight above it, and a smoke-grey translucent box magazine curves down behind the pistol grip. A black sling loops beneath the weapon.",
+      "caption": "A full-length G36 with the stock extended, the standard 30-round magazine fitted and the dual sight bridge that carries a 3x telescope with a reflex sight mounted above it. The magazine body is translucent so that the remaining rounds can be seen.",
+      "width": 1150,
+      "height": 400,
+      "credit": {
+        "author": "Quelle: DomoK / Freisteller, Erweiterung, Bildbearbeitung & Retusche von Auge=mit",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gewehr_G36_noBG.png",
+        "title": "File:Gewehr G36 noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/heckler-koch-g36/g36k.webp",
+      "alt": "A short black G36 carbine resting on clear acrylic stands on a white exhibition table, seen from the left. The stock is folded forward along the right side of the receiver, the handguard is short and slotted, and a bare muzzle with an open-pronged flash hider projects a little way past it.",
+      "caption": "A G36K displayed at the Modern Day Marine exposition in 1997, the year the carbine was introduced. This is the short-barrelled variant, not the full-length rifle the specifications on this page describe; its stock is folded.",
+      "width": 1024,
+      "height": 800,
+      "credit": {
+        "author": "Sgt. Keith A. Stevenson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:G36_Select-Fire_Carbine.JPEG",
+        "title": "File:G36 Select-Fire Carbine.JPEG",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. section 105: photographed for the United States Marine Corps."
+      }
+    },
+    {
+      "src": "images/guns/heckler-koch-g36/in-service.webp",
+      "alt": "A man in a dark jacket lies prone on grass firing a G36 from a bipod, photographed from behind and to his left. The long slotted handguard, the open carry-handle sight bridge and the folded stock are visible in silhouette against the field.",
+      "caption": "A German police officer shooting a G36 at 300 m during an international competition in 2010. The rifle is on a bipod clamped to the handguard, which is an accessory rather than part of the standard weapon.",
+      "width": 1200,
+      "height": 803,
+      "credit": {
+        "author": "Martin Greeson, U.S. Army",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:German_policeman_with_a_Heckler_&_Koch_G36_rifle.jpg",
+        "title": "File:German policeman with a Heckler & Koch G36 rifle.jpg",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. section 105: photographed for the United States Army."
+      }
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "hk-g36",
+      "type": "manufacturer-spec",
+      "title": "G36 technical specifications",
+      "publisher": "Heckler & Koch GmbH",
+      "url": "https://www.heckler-koch.com/en/Products/Military%20and%20Law%20Enforcement/Assault%20rifles/G36",
+      "accessed": "2026-08-31",
+      "note": "The General block of the specification table. The Dimensions block on the same page is filled in by a script and carries no figures in the page markup."
+    },
+    {
+      "key": "wp-heckler-koch-g36",
+      "type": "wikipedia",
+      "title": "Heckler & Koch G36",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368388400",
+      "lang": "en",
+      "revision": "1368388400",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -74,7 +74,107 @@
     "sourceNote": "C.I.P. Pmax 1300 bar; 1 bar = 0.1 MPa exactly."
   },
   "pressureStandard": "cip",
-  "loads": [],
+  "loads": [
+    {
+      "id": "ae45a-230-fmj",
+      "name": "American Eagle 230 gr FMJ",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 14.9037,
+        "unit": "g",
+        "status": "verified",
+        "source": "federal-ae45a",
+        "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE45A.html",
+        "sourceNote": "230 gr as published, converted at 1 gr = 0.06479891 g."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 127,
+            "unit": "mm",
+            "status": "verified",
+            "source": "federal-ae45a",
+            "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE45A.html",
+            "sourceNote": "Test barrel length as published: 5 inches."
+          },
+          "velocity": {
+            "value": 271.272,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "federal-ae45a",
+            "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE45A.html",
+            "sourceNote": "890 ft/s as published, converted at 1 ft/s = 0.3048 m/s."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hsd45-210-jhp",
+      "name": "Hydra-Shok Deep 210 gr JHP",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 13.6078,
+        "unit": "g",
+        "status": "verified",
+        "source": "federal-p45hsd1",
+        "sourceUrl": "https://www.federalpremium.com/handgun/hydra-shok-deep/11-P45HSD1.html",
+        "sourceNote": "210 gr as published, converted at 1 gr = 0.06479891 g."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 127,
+            "unit": "mm",
+            "status": "verified",
+            "source": "federal-p45hsd1",
+            "sourceUrl": "https://www.federalpremium.com/handgun/hydra-shok-deep/11-P45HSD1.html",
+            "sourceNote": "Test barrel length as published: 5 inches."
+          },
+          "velocity": {
+            "value": 298.704,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "federal-p45hsd1",
+            "sourceUrl": "https://www.federalpremium.com/handgun/hydra-shok-deep/11-P45HSD1.html",
+            "sourceNote": "980 ft/s as published, converted at 1 ft/s = 0.3048 m/s."
+          }
+        }
+      ]
+    },
+    {
+      "id": "syntech-230-fn",
+      "name": "Syntech 230 gr flat nose",
+      "bulletType": "FN",
+      "bulletMass": {
+        "value": 14.9037,
+        "unit": "g",
+        "status": "verified",
+        "source": "federal-ae45sj1",
+        "sourceUrl": "https://www.federalpremium.com/handgun/syntech/11-AE45SJ1.html",
+        "sourceNote": "230 gr as published, converted at 1 gr = 0.06479891 g."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 127,
+            "unit": "mm",
+            "status": "verified",
+            "source": "federal-ae45sj1",
+            "sourceUrl": "https://www.federalpremium.com/handgun/syntech/11-AE45SJ1.html",
+            "sourceNote": "Test barrel length as published: 5 inches."
+          },
+          "velocity": {
+            "value": 252.984,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "federal-ae45sj1",
+            "sourceUrl": "https://www.federalpremium.com/handgun/syntech/11-AE45SJ1.html",
+            "sourceNote": "830 ft/s as published, converted at 1 ft/s = 0.3048 m/s."
+          }
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "key": "cip-45-auto",
@@ -95,10 +195,50 @@
       "revision": "1371893258",
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
+    },
+    {
+      "key": "federal-ae45a",
+      "type": "manufacturer-spec",
+      "title": "American Eagle Handgun 45 Auto 230 grain FMJ (AE45A)",
+      "publisher": "Federal Ammunition",
+      "url": "https://www.federalpremium.com/handgun/american-eagle-handgun/11-AE45A.html",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "federal-p45hsd1",
+      "type": "manufacturer-spec",
+      "title": "Hydra-Shok Deep 45 Auto 210 grain JHP (P45HSD1)",
+      "publisher": "Federal Ammunition",
+      "url": "https://www.federalpremium.com/handgun/hydra-shok-deep/11-P45HSD1.html",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "federal-ae45sj1",
+      "type": "manufacturer-spec",
+      "title": "Syntech Range 45 Auto 230 grain Total Synthetic Jacket (AE45SJ1)",
+      "publisher": "Federal Ammunition",
+      "url": "https://www.federalpremium.com/handgun/syntech/11-AE45SJ1.html",
+      "accessed": "2026-09-01"
     }
   ],
-  "images": [],
-  "lastVerified": "2026-08-31",
+  "images": [
+    {
+      "src": "images/cartridges/45-acp/hero.webp",
+      "alt": "A .45 ACP cartridge on orange graph paper, short and wide with a rounded full metal jacket bullet.",
+      "caption": "A .45 ACP round on graph paper.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_.45_ACP_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "title": "File:Cartridge .45 ACP CC BY-SA 4.0 by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q158803"
 }

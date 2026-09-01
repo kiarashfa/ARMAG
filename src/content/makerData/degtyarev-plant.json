@@ -20,5 +20,17 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-27"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/degtyarev-plant/logo.webp",
+    "alt": "The Degtyarev plant mark: the Cyrillic letters ZiD in white on a dark blue disc, with a star above them.",
+    "caption": "The ZiD mark of the V. A. Degtyarev Plant.",
+    "width": 316,
+    "height": 316,
+    "credit": {
+      "sourceUrl": "https://www.zid.ru/",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use. Taken from the page recorded as the source."
+    }
+  }
 }

@@ -19,5 +19,19 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-27"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/mauser/logo.webp",
+    "alt": "The Mauser banner mark: the name in capitals inside a fluted oval, with the words DAS ORIGINAL beneath.",
+    "caption": "The Mauser banner, the mark the company has used on its receivers for over a century.",
+    "width": 350,
+    "height": 280,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mauser_text_logo.jpg",
+      "title": "File:Mauser text logo.jpg",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "Commons records the file as Public domain. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use.",
+      "author": "Mauser"
+    }
+  }
 }

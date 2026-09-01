@@ -20,5 +20,17 @@
       "license": "CC BY-SA 4.0",
       "accessed": "2026-08-31"
     }
-  ]
+  ],
+  "logo": {
+    "src": "images/makers/dwm/logo.webp",
+    "alt": "The DWM monogram: the letters D, W and M drawn as a single interlaced outline forming a circle.",
+    "caption": "The DWM monogram, the mark found on the toggle of a Luger the company made.",
+    "width": 960,
+    "height": 607,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Deutsche_Waffen-_und_Munitionsfabriken",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use. Taken from the page recorded as the source."
+    }
+  }
 }

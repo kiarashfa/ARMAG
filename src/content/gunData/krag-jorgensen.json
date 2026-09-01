@@ -1,0 +1,275 @@
+{
+  "id": "krag-jorgensen",
+  "name": "Krag-Jorgensen",
+  "kind": "model",
+  "nativeName": "Krag–Jørgensen",
+  "wikidataId": "Q155261",
+  "makerRef": "kongsberg-vapenfabrikk",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Krag",
+      "kind": "nickname"
+    },
+    {
+      "name": "Gevær M/1894",
+      "kind": "military",
+      "market": "NO"
+    },
+    {
+      "name": "M1894",
+      "kind": "military",
+      "market": "NO"
+    },
+    {
+      "name": "Lang-Krag",
+      "kind": "native",
+      "market": "NO"
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "norway",
+  "producedIn": [
+    "norway",
+    "austria"
+  ],
+  "introduced": 1894,
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "fixed-box"
+  ],
+  "roles": [
+    "service-rifle",
+    "target"
+  ],
+  "massEmpty": {
+    "value": 4.0,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "nowp-krag-jorgensen",
+    "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+    "sourceNote": "4.0 kg without bayonet for the M/1894 long rifle, from the Norwegian encyclopedia's per-model list, which cites Hanevik's Norske Militaergeverer etter 1867 for the models but carries no inline citation on the figures themselves."
+  },
+  "length": {
+    "value": 1260.0,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "nowp-krag-jorgensen",
+    "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+    "sourceNote": "Totallengde 126 cm for the M/1894, from the Norwegian encyclopedia's per-model list. The English infobox gives only a band of 986 to 1328 mm across all three national families."
+  },
+  "barrelLength": {
+    "value": 760.0,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "nowp-krag-jorgensen",
+    "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+    "sourceNote": "Lopslengde 76 cm for the M/1894, from the Norwegian encyclopedia's per-model list."
+  },
+  "sightGraduation": {
+    "value": 2200.0,
+    "unit": "m",
+    "status": "estimated",
+    "source": "nowp-krag-jorgensen",
+    "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+    "sourceNote": "The Norwegian encyclopedia states that the sight is graduated to 2200 m. The figure carries no inline citation."
+  },
+  "productionTotal": {
+    "value": 194657,
+    "unit": "",
+    "status": "estimated",
+    "source": "nowp-krag-jorgensen",
+    "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+    "sourceNote": "194,657 M/1894 rifles of all series, from the Norwegian encyclopedia's per-model list. This is the M/1894 alone; the English infobox gives more than 748,500 Krag-Jorgensens across the Norwegian, Danish and American families."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "6-5x55mm-swedish",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "source": "nowp-krag-jorgensen",
+        "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+        "sourceNote": "Five rounds in the magazine and one in the chamber. Both encyclopedia articles state five throughout; neither cites a source for the figure."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "m1895-carbine",
+      "name": "M/1895 cavalry carbine",
+      "summary": "The cavalry carbine of 1895, and with the near-identical M/1897 mountain-artillery and engineer carbine the shortest of the Norwegian Krags. The butt is halved in length and the wood between the receiver and the rear sight is cut away; there is no bayonet lug. The M/1897 differs from it only in where the rear sling swivel is fitted, and the two were issued in one serial series.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.4,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "nowp-krag-jorgensen",
+          "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+          "sourceNote": "3.4 kg, from the Norwegian encyclopedia's per-model list."
+        },
+        "length": {
+          "value": 1020.0,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "nowp-krag-jorgensen",
+          "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+          "sourceNote": "Totallengde 102 cm, from the Norwegian encyclopedia's per-model list."
+        },
+        "barrelLength": {
+          "value": 520.0,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "nowp-krag-jorgensen",
+          "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+          "sourceNote": "Lopslengde 52 cm, from the Norwegian encyclopedia's per-model list."
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "m1912-carbine",
+      "name": "M/1912 carbine",
+      "summary": "The short rifle of 1912, adopted after the long M/1894 was judged unwieldy. It is stocked to the muzzle in the manner of a Lee-Enfield, the bayonet lug moves from the barrel to the fore-end, and the rear sight is set back to just ahead of the receiver to lengthen the sight radius. The action is strengthened over the M/1894's at several points. Its nose cap proved weak, which produced the M/1912/16 and M/1912/18 reworks.",
+      "overrides": {
+        "massEmpty": {
+          "value": 4.0,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "nowp-krag-jorgensen",
+          "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+          "sourceNote": "4.0 kg, from the Norwegian encyclopedia's per-model list."
+        },
+        "length": {
+          "value": 1107.0,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "nowp-krag-jorgensen",
+          "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+          "sourceNote": "Totallengde 110.7 cm, from the Norwegian encyclopedia's per-model list."
+        },
+        "barrelLength": {
+          "value": 610.0,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "nowp-krag-jorgensen",
+          "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+          "sourceNote": "Lopslengde 61 cm, from the Norwegian encyclopedia's per-model list."
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "m1930-sniper",
+      "name": "M/1930 sharpshooter rifle",
+      "summary": "The last and best of three attempts at a sharpshooter's Krag, after the M/1923 and M/1925. It has a thick barrel, a shorter fore-end than the long rifle, a chequered pistol grip and a fine-tuned trigger; the barrel carries no rear sight at all, only a receiver-mounted aperture with interchangeable front-sight inserts. Pre-war rifles are built on the M/1894 action, the 1950-51 batch on the M/1912.",
+      "overrides": {
+        "massEmpty": {
+          "value": 5.0,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "nowp-krag-jorgensen",
+          "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+          "sourceNote": "5.0 kg, from the Norwegian encyclopedia's per-model list."
+        },
+        "length": {
+          "value": 1250.0,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "nowp-krag-jorgensen",
+          "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+          "sourceNote": "Totallengde 125 cm, from the Norwegian encyclopedia's per-model list."
+        },
+        "barrelLength": {
+          "value": 750.0,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "nowp-krag-jorgensen",
+          "sourceUrl": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+          "sourceNote": "Lopslengde 75 cm, from the Norwegian encyclopedia's per-model list."
+        }
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/krag-jorgensen/hero.webp",
+      "alt": "A bolt-action rifle photographed from the right against a pale grey ground, muzzle to the upper right. The stock is plain walnut without a pistol grip; a flat rectangular steel plate on the right of the receiver is the hinged door of the side magazine, and the bolt handle is a straight stem with a round knob. A tangent rear sight sits on the barrel well forward of the receiver, and the barrel is exposed for its last third with two bands.",
+      "caption": "A Norwegian Krag-Jorgensen M/1894 long rifle. The plate ahead of the trigger guard on the right side is the magazine door, which swings down to let five loose rounds be dropped into the horizontal magazine without opening the bolt.",
+      "width": 1600,
+      "height": 864,
+      "credit": {
+        "author": "Digitalmuseum Norwegen",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Krag_Jørgensen_rifle_M_1894.jpg",
+        "title": "File:Krag Jørgensen rifle M 1894.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/krag-jorgensen/m1912-carbine.webp",
+      "alt": "Two views of the same short bolt-action rifle, one above the other on a white ground: the left side above with the muzzle to the right, the right side below with the muzzle to the left. The reddish wooden stock runs the whole length of the barrel to a nose cap, and the rear sight sits immediately ahead of the receiver.",
+      "caption": "A Krag-Jorgensen M/1912 carbine from both sides. This is the short rifle variant, not the M/1894 the main figures on this page describe: the stock runs to the muzzle and the rear sight has moved back against the receiver, which lengthens the sight radius.",
+      "width": 1200,
+      "height": 534,
+      "credit": {
+        "author": "https://digitaltmuseum.no",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Repeterkarabin_6,5x55_Krag_Jørgensen_M1912_noBG.png",
+        "title": "File:Repeterkarabin 6,5x55 Krag Jørgensen M1912 noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-08-31",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "nowp-krag-jorgensen",
+      "type": "wikipedia",
+      "title": "Krag-Jørgensen",
+      "publisher": "Wikipedia",
+      "url": "https://no.wikipedia.org/w/index.php?oldid=25742887",
+      "lang": "no",
+      "revision": "25742887",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0",
+      "note": "The Norwegian article is the only free source found that publishes dimensions per Norwegian model rather than a band across all three national families."
+    },
+    {
+      "key": "wp-krag-jorgensen",
+      "type": "wikipedia",
+      "title": "Krag–Jørgensen",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371346464",
+      "lang": "en",
+      "revision": "1371346464",
+      "accessed": "2026-08-31",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "eb1911-rifle",
+      "type": "book",
+      "title": "Rifle, in the Encyclopaedia Britannica, eleventh edition, volume 23",
+      "author": "Henry Seton-Karr and Charles Francis Atkinson",
+      "publisher": "Cambridge University Press",
+      "year": 1911,
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Rifle",
+      "accessed": "2026-08-31",
+      "license": "public domain",
+      "note": "Its comparative table of military magazine rifles, taken from the British Text Book of Small Arms 1909, covers the Danish 1889 Krag-Jorgensen rather than the Norwegian M/1894, so its figures are cited in the prose and not recorded as this entry's."
+    }
+  ]
+}

@@ -93,7 +93,21 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/45-colt/hero.webp",
+      "alt": "A .45 Colt cartridge lying on its side on a white ground, its long straight case ending in a blunt lead bullet.",
+      "caption": "A .45 Colt round with a lead bullet.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:45_Colt_-_1.jpg",
+        "title": "File:45 Colt - 1.jpg",
+        "licenseType": "public-domain",
+        "author": "Malis"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q1820043"

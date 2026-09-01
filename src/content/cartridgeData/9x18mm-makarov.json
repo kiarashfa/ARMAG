@@ -128,7 +128,23 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/9x18mm-makarov/hero.webp",
+      "alt": "A 9×18mm Makarov cartridge lying on its side, close up, with a steel case and a red sealant ring at the case mouth.",
+      "caption": "A 9×18mm Makarov round with a lacquered steel case.",
+      "width": 975,
+      "height": 557,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:9×18mm_Makarov-horizontal.jpg",
+        "title": "File:9×18mm Makarov-horizontal.jpg",
+        "licenseType": "cc-by-sa",
+        "author": "Grasyl",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q277462"

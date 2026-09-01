@@ -126,7 +126,21 @@
       "accessed": "2026-08-31"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/7-62x25mm-tokarev/hero.webp",
+      "alt": "A 7.62×25mm Tokarev cartridge lying on its side, close up, its bottlenecked case bright and its bullet copper-jacketed.",
+      "caption": "A 7.62×25mm Tokarev round.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7.62x25_-_FMJ_-_SB_-_5.jpg",
+        "title": "File:7.62x25 - FMJ - SB - 5.jpg",
+        "licenseType": "public-domain",
+        "author": "Malis"
+      }
+    }
+  ],
   "lastVerified": "2026-08-31",
   "reviewStatus": "agent-populated",
   "wikidataId": "Q259170"
