@@ -1,0 +1,161 @@
+{
+  "id": "30-40-krag",
+  "name": ".30-40 Krag",
+  "wikidataId": "Q158719",
+  "aliases": [
+    {
+      "name": ".30 U.S.",
+      "kind": "military"
+    },
+    {
+      "name": ".30 Army",
+      "kind": "military"
+    }
+  ],
+  "introduced": 1892,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 58.78,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-40-krag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/30-40-krag-en.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 78.46,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-40-krag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/30-40-krag-en.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-40-krag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/30-40-krag-en.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13.84,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-40-krag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/30-40-krag-en.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 11.71,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-40-krag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/30-40-krag-en.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 8.59,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-40-krag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/30-40-krag-en.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 325,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-30-40-krag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/30-40-krag-en.pdf",
+    "sourceNote": "C.I.P. Pmax 3250 bar; 1 bar = 0.1 MPa exactly. Wikipedia's cited SAAMI figure (47,137 psi / 325 MPa) agrees closely with this."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hdy-180-sp",
+      "name": "Hornady Custom 180 gr spire point",
+      "manufacturer": "Hornady",
+      "bulletType": "SP",
+      "bulletMass": {
+        "value": 11.66,
+        "unit": "g",
+        "status": "verified",
+        "source": "hdy-81202",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/30-40-krag-180-gr-spire-point-custom",
+        "sourceNote": "Published as 180 grains."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hdy-81202",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/30-40-krag-180-gr-spire-point-custom",
+            "sourceNote": "Test barrel stated as 24 inches, in the page's ballistics table header."
+          },
+          "velocity": {
+            "value": 740.8,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hdy-81202",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/30-40-krag-180-gr-spire-point-custom",
+            "sourceNote": "Published as 2,430 ft/s."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/30-40-krag/hero.webp",
+      "alt": "A .30-40 Krag rifle cartridge standing upright, a pointed soft-point bullet with an exposed lead tip seated in a long rimmed brass case, beside a second round lying on its side showing a W.R.A. Co. 30 Army headstamp.",
+      "caption": "A .30-40 Krag rifle cartridge with a soft-point hunting bullet, beside a second round showing its headstamp.",
+      "width": 938,
+      "height": 1326,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:30-40_Krag.JPG",
+        "title": "File:30-40 Krag.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-30-40-krag",
+      "type": "wikipedia",
+      "title": ".30-40 Krag",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1366000609",
+      "lang": "en",
+      "revision": "1366000609",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-30-40-krag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 30-40 Krag",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/30-40-krag-en.pdf",
+      "revision": "2011-05-25",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "hdy-81202",
+      "type": "manufacturer-spec",
+      "title": "30-40 Krag 180 gr SP Custom (product page)",
+      "publisher": "Hornady Manufacturing",
+      "url": "https://www.hornady.com/ammunition/rifle/30-40-krag-180-gr-spire-point-custom",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

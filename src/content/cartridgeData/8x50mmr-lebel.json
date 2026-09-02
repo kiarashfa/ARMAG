@@ -1,0 +1,152 @@
+{
+  "id": "8x50mmr-lebel",
+  "name": "8×50mmR Lebel",
+  "wikidataId": "Q274935",
+  "aliases": [
+    { "name": "8mm Lebel", "kind": "commercial" },
+    { "name": "8 x 51 R Lebel", "kind": "metric", "note": "the C.I.P.'s own designation for the same cartridge" }
+  ],
+  "designedBy": "Nicolas Lebel (Balle M); Georges Desaleux, Atelier de Puteaux (Balle D)",
+  "introduced": 1886,
+  "productionYears": { "start": 1887, "end": 1945 },
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 8.30,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x51r-lebel",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/8-x-51-r-lebel.pdf",
+    "sourceNote": "C.I.P. TDCC table II datasheet, field G1"
+  },
+  "caseLength": {
+    "value": 50.50,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x51r-lebel",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/8-x-51-r-lebel.pdf",
+    "sourceNote": "C.I.P. TDCC table II datasheet, field L3"
+  },
+  "overallLength": {
+    "value": 75.00,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x51r-lebel",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/8-x-51-r-lebel.pdf",
+    "sourceNote": "C.I.P. TDCC table II datasheet, field L6"
+  },
+  "rimDiameter": {
+    "value": 16.00,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x51r-lebel",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/8-x-51-r-lebel.pdf",
+    "sourceNote": "C.I.P. TDCC table II datasheet, field R1"
+  },
+  "neckDiameter": {
+    "value": 8.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x51r-lebel",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/8-x-51-r-lebel.pdf",
+    "sourceNote": "C.I.P. TDCC table II datasheet, field H2"
+  },
+  "baseDiameter": {
+    "value": 13.77,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x51r-lebel",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/8-x-51-r-lebel.pdf",
+    "sourceNote": "C.I.P. TDCC table II datasheet, field P1"
+  },
+  "maxPressure": {
+    "value": 320.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-8x51r-lebel",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/8-x-51-r-lebel.pdf",
+    "sourceNote": "C.I.P. TDCC table II datasheet, Pmax 3200 bar"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "balle-d",
+      "name": "Balle D",
+      "bulletMass": {
+        "value": 12.8,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's running text on the Balle D bronze mono-metal bullet, uncited on Wikipedia itself; no barrel-length-stated velocity exists for this load, so no velocity point is recorded"
+      },
+      "bulletType": "solid 90/10 bronze, spitzer boat-tail"
+    },
+    {
+      "id": "balle-n",
+      "name": "Balle N",
+      "bulletMass": {
+        "value": 15.0,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's running text on the Balle N bullet, uncited on Wikipedia itself; no barrel-length-stated velocity exists for this load, so no velocity point is recorded"
+      },
+      "bulletType": "lead-cored, cupro-nickel-over-steel-jacketed FMJ, spitzer boat-tail"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/8x50mmr-lebel/hero.webp",
+      "alt": "A single 8×50mmR Lebel cartridge lying on graph paper, brass case with a pronounced double taper and a red-banded spitzer bullet",
+      "caption": "An 8×50mmR Lebel round with a pointed (spitzer) jacketed bullet, showing the case's characteristic rimmed, sharply tapered profile — a legacy of necking down the earlier 11×59mmR Gras case.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_8mm_Lebel_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "title": "File:Cartridge 8mm Lebel CC BY-SA 4.0 by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/8x50mmr-lebel/balle-d.webp",
+      "alt": "An 8×50mmR Lebel Balle D cartridge next to its headstamp, reading ART.D. over ATS.C. with the numerals 4 and 09",
+      "caption": "A Balle D-pattern round (mle 1886D) manufactured at the Atelier de Construction de Tarbes, headstamped 4 09 — the museum specimen this photograph documents.",
+      "width": 763,
+      "height": 1200,
+      "credit": {
+        "author": "Jim Miles",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:8mm_Lebel_Tarbes-01.jpg",
+        "title": "File:8mm Lebel Tarbes-01.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-8-50mmr-lebel",
+      "type": "wikipedia",
+      "title": "8×50mmR Lebel",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370035236",
+      "lang": "en",
+      "revision": "1370035236",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-8x51r-lebel",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 8 x 51 R Lebel (table II)",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/8-x-51-r-lebel.pdf",
+      "revision": "2015-05-19",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

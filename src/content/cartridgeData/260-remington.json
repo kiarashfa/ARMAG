@@ -1,0 +1,154 @@
+{
+  "id": "260-remington",
+  "name": ".260 Remington",
+  "wikidataId": "Q158710",
+  "aliases": [],
+  "designedBy": "Remington Arms Company",
+  "introduced": 1997,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 6.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-260-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page97.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 51.69,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-260-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page97.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 71.12,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-260-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page97.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-260-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page97.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 7.54,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-260-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page97.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-260-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page97.pdf",
+    "sourceNote": "Dimension P1. Identical to the .308 Winchester family head, which this case is necked down from."
+  },
+  "maxPressure": {
+    "value": 415.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-260-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page97.pdf",
+    "sourceNote": "Pmax 4150 bar. SAAMI rates the same chambering at 60,000 psi by its own transducer method, close but not identical."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "remington-120gr-accutip",
+      "name": "120 gr AccuTip BT",
+      "manufacturer": "Remington",
+      "bulletType": "AccuTip Boat Tail",
+      "bulletMass": {
+        "value": 7.776,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-260-remington",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356903205",
+        "sourceNote": "120 gr as published in the article's ballistics table, converted to grams (1 gr = 0.06479891 g). The table cites Remington's own ballistics page, which no longer resolves; no test barrel length is stated, so no velocity is recorded for this load."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "remington-140gr-soft-point",
+      "name": "140 gr Soft Point",
+      "manufacturer": "Remington",
+      "bulletType": "Soft Point",
+      "bulletMass": {
+        "value": 9.072,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-260-remington",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1356903205",
+        "sourceNote": "140 gr as published in the article's ballistics table, converted to grams (1 gr = 0.06479891 g). No test barrel length is stated for this row, so no velocity is recorded."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/260-remington/hero.webp",
+      "alt": "A single rifle cartridge on a transparent background, viewed from the side: a brass bottlenecked case with a visible headstamp and a copper jacketed bullet with a red polymer tip.",
+      "caption": "A loaded .260 Remington round. The case is a .308 Winchester shortened and necked down to hold a 6.72 mm bullet, the same short-action approach later reused by the 6.5mm Creedmoor.",
+      "width": 1496,
+      "height": 290,
+      "credit": {
+        "author": "Hellbus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:260_Remington_transparent.png",
+        "title": "File:260 Remington transparent.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/260-remington/dimensions.webp",
+      "alt": "A black and white technical line drawing of a rifle cartridge in profile, fully dimensioned in millimetres with inches in brackets: rim, base, shoulder and neck diameters, shoulder and ogive angles, and case, shoulder and overall lengths.",
+      "caption": "C.I.P. maximum cartridge dimensional drawing of the .260 Remington, showing the 40-degree shoulder shared with its .308 Winchester parent case.",
+      "width": 1123,
+      "height": 797,
+      "credit": {
+        "author": "Francis Flinch at en.wikipedia; derivative work by CaboverPete",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_260.PNG",
+        "title": "File:Cartridge 260.PNG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-260-remington",
+      "type": "wikipedia",
+      "title": ".260 Remington",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1356903205",
+      "lang": "en",
+      "revision": "1356903205",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-260-rem",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 260 Rem.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page97.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "id": "22-short",
+  "name": ".22 short",
+  "wikidataId": "Q158701",
+  "aliases": [
+    {
+      "name": ".22 Kurz",
+      "kind": "metric",
+      "note": "German name recorded on the C.I.P. datasheet."
+    },
+    {
+      "name": ".22 Court",
+      "kind": "metric",
+      "note": "French name recorded on the C.I.P. datasheet."
+    }
+  ],
+  "designedBy": "Smith & Wesson",
+  "introduced": 1857,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 10.69,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-short",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-short-en.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 17.65,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-short",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-short-en.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-short",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-short-en.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 7.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-short",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-short-en.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 5.74,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-short",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-short-en.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-short",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-short-en.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 105.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-22-short",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-short-en.pdf",
+    "sourceNote": "C.I.P. Pmax 1050 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [],
+  "images": [
+    {
+      "src": "images/cartridges/22-short/hero.webp",
+      "alt": "Two rimfire cartridges standing upright side by side on a pale ground: a shorter round-nose cartridge on the left and a taller one on the right.",
+      "caption": "The .22 Short (left) beside the longer .22 Long Rifle (right) for scale.",
+      "width": 572,
+      "height": 500,
+      "credit": {
+        "author": "Bloodshedder (Wikimedia Commons)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:22short22lr.jpg",
+        "title": "File:22short22lr.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-22-short",
+      "type": "wikipedia",
+      "title": ".22 short",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1356291673",
+      "lang": "en",
+      "revision": "1356291673",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-22-short",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 22 Short",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-short-en.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

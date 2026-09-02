@@ -1,0 +1,160 @@
+{
+  "id": "32-acp",
+  "name": ".32 ACP",
+  "wikidataId": "Q158741",
+  "aliases": [
+    {
+      "name": "7.65×17mm Browning",
+      "kind": "metric"
+    },
+    {
+      "name": "7,65 mm Browning",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "John Browning",
+  "introduced": 1899,
+  "standard": "cip",
+  "caseType": "semi-rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 17.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-65-mm-browning",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page12.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 25,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-65-mm-browning",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page12.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-65-mm-browning",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page12.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 9.1,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-65-mm-browning",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page12.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 8.55,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-65-mm-browning",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page12.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 8.52,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-65-mm-browning",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page12.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 160,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7-65-mm-browning",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page12.pdf",
+    "sourceNote": "C.I.P. Pmax 1600 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "fed-ae-71-fmj",
+      "name": "Federal American Eagle 71 gr full metal jacket",
+      "manufacturer": "Federal",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 4.60,
+        "unit": "g",
+        "status": "verified",
+        "source": "fed-ae32ap",
+        "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle/american-eagle-handgun/11-AE32AP.html",
+        "sourceNote": "Published as 71 grains."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 101.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "fed-ae32ap",
+            "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle/american-eagle-handgun/11-AE32AP.html",
+            "sourceNote": "Test barrel stated as 4 inches."
+          },
+          "velocity": {
+            "value": 274.3,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "fed-ae32ap",
+            "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle/american-eagle-handgun/11-AE32AP.html",
+            "sourceNote": "Published as 900 ft/s."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/32-acp/hero.webp",
+      "alt": "A .32 ACP pistol cartridge lying on its side, a round-nose full metal jacket bullet seated in a brass semi-rimmed case with a small extractor groove.",
+      "caption": "A .32 ACP (7.65×17mm Browning) cartridge loaded with an FMJ bullet, from a Sellier & Bellot studio series.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Malis",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:32_ACP_-_FMJ_-_SB_-_1.jpg",
+        "title": "File:32 ACP - FMJ - SB - 1.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-32-acp",
+      "type": "wikipedia",
+      "title": ".32 ACP",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363105882",
+      "lang": "en",
+      "revision": "1363105882",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-7-65-mm-browning",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7,65 mm Browning",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page12.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "fed-ae32ap",
+      "type": "manufacturer-spec",
+      "title": "American Eagle Handgun 32 Auto, 71 gr FMJ (product page)",
+      "publisher": "Federal Premium",
+      "url": "https://www.federalpremium.com/handgun/american-eagle/american-eagle-handgun/11-AE32AP.html",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

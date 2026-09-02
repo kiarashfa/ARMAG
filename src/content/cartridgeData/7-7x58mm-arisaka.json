@@ -1,0 +1,111 @@
+{
+  "id": "7-7x58mm-arisaka",
+  "name": "7.7×58mm Arisaka",
+  "wikidataId": "Q259249",
+  "aliases": [
+    {
+      "name": "Type 99 7.7mm rimless",
+      "kind": "military"
+    }
+  ],
+  "introduced": 1939,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 57.8,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-7x58mm-arisaka",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1334982778",
+    "sourceNote": "Cited article's infobox; no free dimensional standard exists for this Japanese military round."
+  },
+  "overallLength": {
+    "value": 79.6,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-7x58mm-arisaka",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1334982778",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "bulletDiameter": {
+    "value": 7.92,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-7x58mm-arisaka",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1334982778",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "rimDiameter": {
+    "value": 12.07,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-7x58mm-arisaka",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1334982778",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "baseDiameter": {
+    "value": 12.02,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-7x58mm-arisaka",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1334982778",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "neckDiameter": {
+    "value": 8.58,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-7x58mm-arisaka",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1334982778",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "loads": [
+    {
+      "id": "type-99-ordinary",
+      "name": "Type 99 ordinary (ball) cartridge",
+      "manufacturer": "Imperial Japanese Army arsenals",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 11.80,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-7-7x58mm-arisaka",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1334982778",
+        "sourceNote": "Cited article's ballistics table publishes 182 grains, sourced there to a ballistics-reference website rather than a factory or standards document; converted here. No test barrel length is stated anywhere in the article, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7-7x58mm-arisaka/hero.webp",
+      "alt": "A 7.7×58mm Arisaka rifle cartridge lying on graph paper, a pointed copper-jacketed spitzer bullet seated in a long brass bottlenecked case.",
+      "caption": "A 7.7×58mm Type 99 rifle cartridge on graph paper.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_7.7x58mm_Type_99_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "title": "File:Cartridge 7.7x58mm Type 99 CC BY-SA 4.0 by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-7-7x58mm-arisaka",
+      "type": "wikipedia",
+      "title": "7.7×58mm Arisaka",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1334982778",
+      "lang": "en",
+      "revision": "1334982778",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

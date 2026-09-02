@@ -1,0 +1,150 @@
+{
+  "id": "32-20-winchester",
+  "name": ".32-20 Winchester",
+  "wikidataId": "Q158729",
+  "aliases": [
+    {
+      "name": ".32 WCF",
+      "kind": "commercial",
+      "note": "Winchester Center Fire, the cartridge's original commercial name."
+    },
+    {
+      "name": "32-20 Win.",
+      "kind": "commercial",
+      "note": "The C.I.P. datasheet's own name for the cartridge."
+    }
+  ],
+  "designedBy": "Winchester Repeating Arms Company",
+  "introduced": 1882,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 33.4,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-32-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page81.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 40.44,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-32-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page81.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.94,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-32-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page81.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 10.36,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-32-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page81.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 8.98,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-32-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page81.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 8.3,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-32-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page81.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 210.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-32-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page81.pdf",
+    "sourceNote": "C.I.P. Pmax 2100 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "remington-100gr-lrn",
+      "name": "Remington High Performance 100 gr Lead Round Nose",
+      "manufacturer": "Remington",
+      "bulletMass": {
+        "value": 6.48,
+        "unit": "g",
+        "status": "verified",
+        "source": "remington-32-20-100gr",
+        "sourceUrl": "https://www.remington.com/rifle/high-performance-rifle/29-28410.html",
+        "sourceNote": "Published as 100 gr on Remington's own product page."
+      },
+      "bulletType": "Lead Round Nose",
+      "bcG1": {
+        "value": 0.166,
+        "unit": "",
+        "status": "verified",
+        "source": "remington-32-20-100gr",
+        "sourceUrl": "https://www.remington.com/rifle/high-performance-rifle/29-28410.html",
+        "sourceNote": "Published directly on Remington's product page."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/32-20-winchester/hero.webp",
+      "alt": "A tall, bottlenecked rifle-length cartridge with a flat, lead bullet standing beside a shorter, straight-walled pistol cartridge with a rounded copper-jacketed bullet.",
+      "caption": "The .32-20 Winchester (left) beside a .32 ACP (right) for scale.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Dis360",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:32-20--32ACP.JPG",
+        "title": "File:32-20--32ACP.JPG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-32-20-winchester",
+      "type": "wikipedia",
+      "title": ".32-20 Winchester",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368987343",
+      "lang": "en",
+      "revision": "1368987343",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-32-20-win",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 32-20 Win.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page81.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "remington-32-20-100gr",
+      "type": "manufacturer-spec",
+      "title": "High Performance Rifle 32-20 Win, 100 gr Lead Round Nose",
+      "publisher": "Remington Arms Company, LLC",
+      "url": "https://www.remington.com/rifle/high-performance-rifle/29-28410.html",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

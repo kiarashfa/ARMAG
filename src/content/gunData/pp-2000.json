@@ -1,0 +1,123 @@
+{
+  "id": "pp-2000",
+  "name": "PP-2000",
+  "kind": "model",
+  "wikidataId": "Q730669",
+  "makerRef": "kbp-instrument-design-bureau",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "introduced": 2006,
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "russia",
+  "producedIn": ["russia"],
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence", "law-enforcement"],
+  "massEmpty": {
+    "value": 1.4,
+    "unit": "kg",
+    "status": "verified",
+    "source": "kbp-pp2000-archived",
+    "sourceUrl": "http://web.archive.org/web/20120417100833/http://www.kbptula.ru/eng/str/strelk/pp2000.htm",
+    "sourceNote": "Manufacturer's own specification table, \"Weight without magazine, kg\": 1.4."
+  },
+  "length": {
+    "value": 555,
+    "unit": "mm",
+    "status": "verified",
+    "source": "kbp-pp2000-archived",
+    "sourceUrl": "http://web.archive.org/web/20120417100833/http://www.kbptula.ru/eng/str/strelk/pp2000.htm",
+    "sourceNote": "Manufacturer's own specification table, \"Overall length with shoulder rest, mm\": 555 max."
+  },
+  "barrelLength": {
+    "value": 182,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pp-2000",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372043926",
+    "sourceNote": "Cited article's infobox carries no inline citation for this figure, and it does not appear on the manufacturer's own archived specification page."
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "kbp-pp2000-archived",
+    "sourceUrl": "http://web.archive.org/web/20120417100833/http://www.kbptula.ru/eng/str/strelk/pp2000.htm",
+    "sourceNote": "Manufacturer's own specification table publishes a range of 600-800 rds/min; recorded here as the midpoint, per this site's rule that a published range is not a single verified figure."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 44,
+        "unit": "",
+        "status": "verified",
+        "source": "kbp-pp2000-archived",
+        "sourceUrl": "http://web.archive.org/web/20120417100833/http://www.kbptula.ru/eng/str/strelk/pp2000.htm",
+        "sourceNote": "Manufacturer's own specification table lists 20- and 44-round magazines; the larger is recorded here. The PP-2000 is also issued with 9×19mm 7N21 and 7N31 armour-piercing +P+ loads not modelled as separate cartridge entries on this site."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/pp-2000/hero.webp",
+      "alt": "A compact black bullpup-style submachine gun lying on a white surface, with a wire skeleton stock folded back along the top of the receiver, a triangular integral trigger guard doubling as a foregrip, and a green sling attached at the rear.",
+      "caption": "A PP-2000 with its wire shoulder stock folded and a sling fitted.",
+      "width": 1600,
+      "height": 1067,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PP-2000_(350-07).jpg",
+        "title": "File:PP-2000 (350-07).jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/pp-2000/detached-magazine.webp",
+      "alt": "A PP-2000 submachine gun lying on a white surface with its box magazine removed and set below the grip, showing the open magazine well in the pistol grip.",
+      "caption": "A PP-2000 with its magazine detached, showing the magazine housed in the pistol grip.",
+      "width": 1024,
+      "height": 683,
+      "credit": {
+        "author": "Vitaly Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PP-2000_with_detached_magazine.jpg",
+        "title": "File:PP-2000 with detached magazine.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-pp-2000",
+      "type": "wikipedia",
+      "title": "PP-2000",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372043926",
+      "lang": "en",
+      "revision": "1372043926",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "kbp-pp2000-archived",
+      "type": "manufacturer-spec",
+      "title": "PP-2000 (manufacturer specification page, archived 2012-04-17)",
+      "publisher": "KBP Instrument Design Bureau",
+      "url": "http://web.archive.org/web/20120417100833/http://www.kbptula.ru/eng/str/strelk/pp2000.htm",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

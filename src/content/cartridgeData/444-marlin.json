@@ -1,0 +1,153 @@
+{
+  "id": "444-marlin",
+  "name": ".444 Marlin",
+  "wikidataId": "Q4545347",
+  "aliases": [],
+  "designedBy": "Marlin Firearms and Remington Arms",
+  "introduced": 1964,
+  "standard": "cip",
+  "caseType": "semi-rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 56.52,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-444-marlin",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page109.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 65.28,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-444-marlin",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page109.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 10.93,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-444-marlin",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page109.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-444-marlin",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page109.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 11.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-444-marlin",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page109.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 11.51,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-444-marlin",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page109.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 355,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-444-marlin",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page109.pdf",
+    "sourceNote": "C.I.P. Pmax 3550 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hdy-265-ftx",
+      "name": "Hornady LEVERevolution 265 gr FTX",
+      "manufacturer": "Hornady",
+      "bulletType": "FTX",
+      "bulletMass": {
+        "value": 17.17,
+        "unit": "g",
+        "status": "verified",
+        "source": "hdy-82744",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/444-marlin-265-gr-ftx-leverevolution",
+        "sourceNote": "Published as 265 grains."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hdy-82744",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/444-marlin-265-gr-ftx-leverevolution",
+            "sourceNote": "Test barrel stated as 24 inches, in the page's ballistics table header."
+          },
+          "velocity": {
+            "value": 708.7,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hdy-82744",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/444-marlin-265-gr-ftx-leverevolution",
+            "sourceNote": "Published as 2,325 ft/s."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/444-marlin/hero.webp",
+      "alt": "A .444 Marlin rifle cartridge standing upright beside a steel ruler, showing a flat-tipped soft-lead bullet with a crimped gas check seated in a long straight brass case.",
+      "caption": "A .444 Marlin cartridge shown beside a ruler for scale.",
+      "width": 1068,
+      "height": 1600,
+      "credit": {
+        "author": "Ultratone85",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:444_Marlin_with_ruler.jpg",
+        "title": "File:444 Marlin with ruler.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-444-marlin",
+      "type": "wikipedia",
+      "title": ".444 Marlin",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1323043188",
+      "lang": "en",
+      "revision": "1323043188",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-444-marlin",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 444 Marlin",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page109.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "hdy-82744",
+      "type": "manufacturer-spec",
+      "title": "444 Marlin 265 gr FTX LEVERevolution (product page)",
+      "publisher": "Hornady Manufacturing",
+      "url": "https://www.hornady.com/ammunition/rifle/444-marlin-265-gr-ftx-leverevolution",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

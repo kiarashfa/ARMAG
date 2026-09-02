@@ -1,0 +1,36 @@
+{
+  "id": "kbp-instrument-design-bureau",
+  "name": "KBP Instrument Design Bureau",
+  "nativeName": "Конструкторское бюро приборостроения",
+  "wikidataId": "Q1783007",
+  "country": "russia",
+  "founded": 1927,
+  "dissolved": null,
+  "logo": {
+    "src": "images/makers/kbp-instrument-design-bureau/logo.webp",
+    "alt": "The KBP Instrument Design Bureau wordmark: a stylised blue compass-and-target monogram beside the Cyrillic initials КБП in bold sans-serif letters, inside a thin circular ring.",
+    "caption": "The KBP Instrument Design Bureau logo.",
+    "width": 240,
+    "height": 101,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/KBP_Instrument_Design_Bureau",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-kbp-instrument-design-bureau",
+      "type": "wikipedia",
+      "title": "KBP Instrument Design Bureau",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362809834",
+      "lang": "en",
+      "revision": "1362809834",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

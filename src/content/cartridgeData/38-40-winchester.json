@@ -1,0 +1,182 @@
+{
+  "id": "38-40-winchester",
+  "name": ".38-40 Winchester",
+  "wikidataId": "Q158757",
+  "aliases": [
+    {
+      "name": ".38 WCF",
+      "kind": "commercial",
+      "note": "Winchester Center Fire, the cartridge's original commercial name."
+    },
+    {
+      "name": "38-40 Win.",
+      "kind": "commercial",
+      "note": "The C.I.P. datasheet's own name for the cartridge."
+    }
+  ],
+  "designedBy": "Winchester Repeating Arms Company",
+  "introduced": 1874,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 33.15,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page98.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 40.44,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page98.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 10.17,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page98.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13.34,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page98.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 11.93,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page98.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 10.58,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page98.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 115.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-38-40-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page98.pdf",
+    "sourceNote": "C.I.P. Pmax 1150 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "buffalo-bore-heavy-180gr-fn",
+      "name": "Buffalo Bore Heavy 180 gr hard-cast FN",
+      "manufacturer": "Buffalo Bore",
+      "bulletMass": {
+        "value": 11.66,
+        "unit": "g",
+        "status": "verified",
+        "source": "buffalo-bore-38-40-heavy",
+        "sourceUrl": "https://www.buffalobore.com/index.php?l=product_detail&p=600",
+        "sourceNote": "Published as 180 gr on Buffalo Bore's own product page."
+      },
+      "bulletType": "hard-cast flat nose",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 139.7,
+            "unit": "mm",
+            "status": "verified",
+            "source": "buffalo-bore-38-40-heavy",
+            "sourceUrl": "https://www.buffalobore.com/index.php?l=product_detail&p=600",
+            "sourceNote": "Buffalo Bore states a 5.5-inch revolver test barrel for this figure."
+          },
+          "velocity": {
+            "value": 310.9,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "buffalo-bore-38-40-heavy",
+            "sourceUrl": "https://www.buffalobore.com/index.php?l=product_detail&p=600",
+            "sourceNote": "Published muzzle velocity 1,020 fps from the stated 5.5-inch revolver barrel."
+          }
+        },
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "buffalo-bore-38-40-heavy",
+            "sourceUrl": "https://www.buffalobore.com/index.php?l=product_detail&p=600",
+            "sourceNote": "Buffalo Bore states a 24-inch rifle test barrel for this figure."
+          },
+          "velocity": {
+            "value": 433.1,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "buffalo-bore-38-40-heavy",
+            "sourceUrl": "https://www.buffalobore.com/index.php?l=product_detail&p=600",
+            "sourceNote": "Published muzzle velocity 1,421 fps from the stated 24-inch rifle barrel."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/38-40-winchester/hero.webp",
+      "alt": "A single rimmed, bottlenecked brass cartridge lying on its side against a pale ground, with a rounded lead bullet visible at its mouth.",
+      "caption": "A .38-40 Winchester cartridge.",
+      "width": 1268,
+      "height": 530,
+      "credit": {
+        "author": "Tad Marko",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:38-40_WCF_only.jpg",
+        "title": "File:38-40 WCF only.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-38-40-winchester",
+      "type": "wikipedia",
+      "title": ".38-40 Winchester",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1365720108",
+      "lang": "en",
+      "revision": "1365720108",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-38-40-win",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 38-40 Win.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page98.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "buffalo-bore-38-40-heavy",
+      "type": "manufacturer-spec",
+      "title": "Heavy 38 WCF aka 38-40 Winchester Pistol & Handgun Ammunition",
+      "publisher": "Buffalo Bore Ammunition, Inc.",
+      "url": "https://www.buffalobore.com/index.php?l=product_detail&p=600",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

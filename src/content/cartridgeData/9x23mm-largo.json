@@ -1,0 +1,108 @@
+{
+  "id": "9x23mm-largo",
+  "name": "9×23mm Largo",
+  "wikidataId": "Q2818782",
+  "aliases": [
+    {
+      "name": "9mm Bergmann–Bayard",
+      "kind": "military"
+    },
+    {
+      "name": "9 mm Largo",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "Theodor Bergmann and Hugo Schmeisser",
+  "introduced": 1903,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "tapered",
+  "caseLength": {
+    "value": 23.1,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-9x23mm-largo",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359624418",
+    "sourceNote": "Cited article's infobox; no free dimensional standard exists for this cartridge."
+  },
+  "overallLength": {
+    "value": 33.53,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-9x23mm-largo",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359624418",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "bulletDiameter": {
+    "value": 9.0,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-9x23mm-largo",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359624418",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "rimDiameter": {
+    "value": 9.9,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-9x23mm-largo",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359624418",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "baseDiameter": {
+    "value": 9.91,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-9x23mm-largo",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359624418",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "loads": [
+    {
+      "id": "fmj-ball",
+      "name": "Full metal jacket ball",
+      "manufacturer": "Various Spanish and Danish arsenals",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 8.2,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-9x23mm-largo",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359624418",
+        "sourceNote": "Cited article's ballistics table, with no source credited for the row and no test barrel length stated anywhere in the article, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/9x23mm-largo/hero.webp",
+      "alt": "A 9×23mm Largo pistol cartridge standing upright, a round-nose full metal jacket bullet seated in a long, gently tapered brass case.",
+      "caption": "A 9×23mm Largo (9mm Bergmann–Bayard) cartridge.",
+      "width": 286,
+      "height": 400,
+      "credit": {
+        "author": "The38superdude",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:9x23mm_Largo.jpg",
+        "title": "File:9x23mm Largo.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-9x23mm-largo",
+      "type": "wikipedia",
+      "title": "9×23mm Largo",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359624418",
+      "lang": "en",
+      "revision": "1359624418",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

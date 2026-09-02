@@ -1,0 +1,37 @@
+{
+  "id": "pindad",
+  "name": "Pindad",
+  "nativeName": "PT Pindad (Persero)",
+  "wikidataId": "Q7194993",
+  "country": "indonesia",
+  "founded": 1808,
+  "dissolved": null,
+  "website": "https://pindad.com",
+  "logo": {
+    "src": "images/makers/pindad/logo.webp",
+    "alt": "The Pindad wordmark, in yellow lower-case letters with a blue five-pointed star and swoosh above the letter i",
+    "caption": "Pindad's corporate logo.",
+    "width": 142,
+    "height": 73,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Pindad",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-pindad",
+      "type": "wikipedia",
+      "title": "Pindad",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1365412012",
+      "lang": "en",
+      "revision": "1365412012",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "id": "300-aac-blackout",
+  "name": ".300 AAC Blackout",
+  "wikidataId": "Q1579701",
+  "aliases": [
+    {
+      "name": "300 BLK",
+      "kind": "nickname"
+    },
+    {
+      "name": "7.62x35mm",
+      "kind": "metric"
+    }
+  ],
+  "introduced": 2010,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-aac-blackout",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/300-aac-blackout-180801-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 34.75,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-aac-blackout",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/300-aac-blackout-180801-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 57.4,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-aac-blackout",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/300-aac-blackout-180801-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 9.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-aac-blackout",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/300-aac-blackout-180801-en.pdf",
+    "sourceNote": "Dimension R1. Rimless: the base and rim diameters are identical, since the case is derived from the 5.56x45mm/.223 Remington family."
+  },
+  "neckDiameter": {
+    "value": 8.48,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-aac-blackout",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/300-aac-blackout-180801-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 9.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-aac-blackout",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/300-aac-blackout-180801-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 390.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-300-aac-blackout",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/300-aac-blackout-180801-en.pdf",
+    "sourceNote": "Pmax 3900 bar. SAAMI rates the same chambering at 55,000 psi by its own transducer method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornady-110gr-v-max",
+      "name": "110 gr Hornady Black V-MAX",
+      "manufacturer": "Hornady",
+      "bulletType": "V-MAX",
+      "bulletMass": {
+        "value": 7.128,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-300-aac-blackout",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371931949",
+        "sourceNote": "110 gr as published in the article's ballistics table, converted to grams (1 gr = 0.06479891 g)."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 406.4,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-300-aac-blackout",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371931949",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 16 inches."
+          },
+          "velocity": {
+            "value": 723.9,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-300-aac-blackout",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371931949",
+            "sourceNote": "2375 ft/s as published in the article's ballistics table."
+          }
+        }
+      ]
+    },
+    {
+      "id": "220gr-otm-subsonic",
+      "name": "220 gr OTM (subsonic)",
+      "bulletType": "OTM",
+      "bulletMass": {
+        "value": 14.26,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-300-aac-blackout",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371931949",
+        "sourceNote": "220 gr as published in the article's ballistics table, converted to grams (1 gr = 0.06479891 g). No manufacturer named for this row."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 406.4,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-300-aac-blackout",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371931949",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 16 inches."
+          },
+          "velocity": {
+            "value": 307.8,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-300-aac-blackout",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371931949",
+            "sourceNote": "1010 ft/s as published in the article's ballistics table — a subsonic load, well below the round's supersonic loads."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/300-aac-blackout/hero.webp",
+      "alt": "Three brass rifle cartridges standing upright against a dark background. The left has a pink polymer-tipped bullet, the centre a plain copper open-tip bullet, and the right a longer, more sharply pointed copper bullet seated deeper in a shorter visible case.",
+      "caption": "Three .300 AAC Blackout loads: a 125-grain polymer-tip hunting round, a 125-grain open-tip match round, and (right) a 220-grain subsonic round, whose heavier bullet is seated further down into the case.",
+      "width": 924,
+      "height": 1600,
+      "credit": {
+        "author": "Silencertalk",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Three_cartridges_300_AAC_BLACKOUT.jpg",
+        "title": "File:Three cartridges 300 AAC BLACKOUT.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/300-aac-blackout/dimensions.webp",
+      "alt": "A black and white line drawing of a bottlenecked rifle cartridge in profile, dimensioned in inches: case and rim diameter .378, shoulder angle 23 degrees, neck diameter .334, case length to shoulder 1.071 and 1.102, and overall length 2.260 maximum.",
+      "caption": "Dimensional diagram of the .300 AAC Blackout, showing the short 1.368-inch case built to headspace and feed from an unmodified 5.56x45mm/.223 Remington bolt and magazine.",
+      "width": 576,
+      "height": 234,
+      "credit": {
+        "author": "Undefined",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:300_AAC_Blackout-dimensions.gif",
+        "title": "File:300 AAC Blackout-dimensions.gif",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/300-aac-blackout/comparison.webp",
+      "alt": "A rendered illustration of four rifle cartridges standing side by side: a short brass round with a dark bullet, a slightly taller round with a grey-green steel case, and two taller, slimmer brass rounds with pointed bullets.",
+      "caption": "A rendered size comparison, left to right: .300 AAC Blackout, 7.62x39mm, 6.8mm Remington SPC, and 5.56x45mm NATO. The Blackout is built to match 5.56x45mm case-head dimensions and magazine length while carrying a bullet close in diameter to the 7.62x39mm.",
+      "width": 500,
+      "height": 466,
+      "credit": {
+        "author": "Silencertalk",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Size.jpg",
+        "title": "File:Size.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-300-aac-blackout",
+      "type": "wikipedia",
+      "title": ".300 AAC Blackout",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371931949",
+      "lang": "en",
+      "revision": "1371931949",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-300-aac-blackout",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 300 AAC Blackout",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/300-aac-blackout-180801-en.pdf",
+      "revision": "2018-10-17",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "30-03-springfield",
+  "name": ".30-03 Springfield",
+  "wikidataId": "Q4545233",
+  "aliases": [
+    {
+      "name": ".30 Government Model 1903",
+      "kind": "military"
+    }
+  ],
+  "introduced": 1903,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 64.52,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-30-03-springfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890749",
+    "sourceNote": "Cited article's infobox publishes 2.54 in; converted here. No free dimensional standard exists for this obsolete military round, superseded by .30-06 Springfield in 1906."
+  },
+  "overallLength": {
+    "value": 84.84,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-30-03-springfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890749",
+    "sourceNote": "Cited article's infobox publishes 3.34 in; converted here. See caseLength note."
+  },
+  "bulletDiameter": {
+    "value": 7.82,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-30-03-springfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890749",
+    "sourceNote": "Cited article's infobox publishes .308 in; converted here. See caseLength note."
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-30-03-springfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890749",
+    "sourceNote": "Cited article's infobox publishes .473 in; converted here. See caseLength note."
+  },
+  "baseDiameter": {
+    "value": 11.94,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-30-03-springfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890749",
+    "sourceNote": "Cited article's infobox publishes .470 in; converted here. See caseLength note."
+  },
+  "neckDiameter": {
+    "value": 8.64,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-30-03-springfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890749",
+    "sourceNote": "Cited article's infobox publishes .340 in; converted here. See caseLength note."
+  },
+  "loads": [
+    {
+      "id": "m1903-fmj-rn",
+      "name": "M1903 220 gr full metal jacket round-nose ball",
+      "manufacturer": "Frankford Arsenal",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 14.26,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-30-03-springfield",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362890749",
+        "sourceNote": "Cited article's ballistics table publishes 220 grains, with no source credited for the row; converted here. No test barrel length is stated anywhere in the article, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/30-03-springfield/hero.webp",
+      "alt": "A .30-03 Springfield rifle cartridge standing upright with a round-nose bullet showing a bare metal tip, beside its base showing a W.R.A. CO. 30 G. 1903 headstamp.",
+      "caption": "A .30-03 Springfield cartridge with its original 220-grain round-nose bullet, and its 1903-dated Winchester headstamp.",
+      "width": 876,
+      "height": 1600,
+      "credit": {
+        "author": "Jim Miles",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:30-03_Springfield.jpg",
+        "title": "File:30-03 Springfield.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-30-03-springfield",
+      "type": "wikipedia",
+      "title": ".30-03 Springfield",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362890749",
+      "lang": "en",
+      "revision": "1362890749",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

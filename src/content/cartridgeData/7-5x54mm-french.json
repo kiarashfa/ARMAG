@@ -1,0 +1,134 @@
+{
+  "id": "7-5x54mm-french",
+  "name": "7.5×54mm French",
+  "wikidataId": "Q259134",
+  "aliases": [
+    {
+      "name": "7.5×54mm MAS mod. 1929",
+      "kind": "military"
+    },
+    {
+      "name": "7,5 x 54 MAS",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "Manufacture d'armes de Saint-Étienne",
+  "introduced": 1929,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 54.00,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-5x54mm-french",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365947114",
+    "sourceNote": "Cited article's infobox; no free C.I.P. datasheet exists for this cartridge, only its index-page pressure figure, so the dimension is borrowed from the infobox rather than a primary standard."
+  },
+  "overallLength": {
+    "value": 76.00,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-5x54mm-french",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365947114",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "bulletDiameter": {
+    "value": 7.84,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-5x54mm-french",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365947114",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "rimDiameter": {
+    "value": 12.34,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-5x54mm-french",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365947114",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "baseDiameter": {
+    "value": 12.25,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-5x54mm-french",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365947114",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "neckDiameter": {
+    "value": 8.66,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-5x54mm-french",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365947114",
+    "sourceNote": "Cited article's infobox; see caseLength note."
+  },
+  "maxPressure": {
+    "value": 380,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7-5-x-54-mas",
+    "sourceUrl": "https://bobp.cip-bobp.org/en/tdcc_public?page=1&cartridge_type_id=1",
+    "sourceNote": "C.I.P. TDCC index, table 1 (France), Pmax 3800 bar; 1 bar = 0.1 MPa exactly. No full datasheet PDF is published for this cartridge, only the index-page figure."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "balle-c-fmj",
+      "name": "Balle C full metal jacket (French service ball)",
+      "manufacturer": "Manufacture d'armes de Saint-Étienne",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 9.0,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-7-5x54mm-french",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365947114",
+        "sourceNote": "Cited article's ballistics table, sourced there to SurplusRifle.com and Cartridges of the World rather than a factory page; the article lists two test barrels (574 mm and 600 mm) without stating which this row used, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7-5x54mm-french/hero.webp",
+      "alt": "A 7.5×54mm French rifle cartridge lying on its side, a pointed spitzer bullet with a copper-coloured tip seated in a long brass bottlenecked case.",
+      "caption": "A 7.5×54mm French (MAS mod. 1929) service rifle cartridge.",
+      "width": 1040,
+      "height": 208,
+      "credit": {
+        "author": "Self",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7.5x54mmMAS.jpg",
+        "title": "File:7.5x54mmMAS.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-7-5x54mm-french",
+      "type": "wikipedia",
+      "title": "7.5×54mm French",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1365947114",
+      "lang": "en",
+      "revision": "1365947114",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-7-5-x-54-mas",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC index — 7,5 x 54 MAS (table 1, France)",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/en/tdcc_public?page=1&cartridge_type_id=1",
+      "revision": "2021-04-07",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

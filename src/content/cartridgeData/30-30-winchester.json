@@ -1,0 +1,212 @@
+{
+  "id": "30-30-winchester",
+  "name": ".30-30 Winchester",
+  "wikidataId": "Q158718",
+  "aliases": [
+    { "name": ".30 WCF", "kind": "commercial", "note": ".30 Winchester Center Fire, the cartridge's original commercial name" },
+    { "name": "7.8x51R", "kind": "metric" }
+  ],
+  "designedBy": "Winchester Repeating Arms Company",
+  "introduced": 1895,
+  "productionYears": { "start": 1895, "end": null },
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "tapered",
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-30-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page70.pdf",
+    "sourceNote": "C.I.P. TDCC table 2 datasheet, field G1"
+  },
+  "caseLength": {
+    "value": 51.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-30-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page70.pdf",
+    "sourceNote": "C.I.P. TDCC table 2 datasheet, field L3"
+  },
+  "overallLength": {
+    "value": 64.77,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-30-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page70.pdf",
+    "sourceNote": "C.I.P. TDCC table 2 datasheet, field L6"
+  },
+  "rimDiameter": {
+    "value": 12.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-30-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page70.pdf",
+    "sourceNote": "C.I.P. TDCC table 2 datasheet, field R1"
+  },
+  "neckDiameter": {
+    "value": 8.38,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-30-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page70.pdf",
+    "sourceNote": "C.I.P. TDCC table 2 datasheet, field H2"
+  },
+  "baseDiameter": {
+    "value": 10.71,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-30-30-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page70.pdf",
+    "sourceNote": "C.I.P. TDCC table 2 datasheet, field P1"
+  },
+  "maxPressure": {
+    "value": 320.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-30-30-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page70.pdf",
+    "sourceNote": "C.I.P. TDCC table 2 datasheet, Pmax 3200 bar"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornady-160gr-ftx",
+      "name": "Hornady LEVERevolution 160 gr FTX",
+      "manufacturer": "Hornady",
+      "bulletMass": {
+        "value": 10.37,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-30-30-160gr-ftx",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/30-30-win-160-gr-ftx-leverevolution",
+        "sourceNote": "160 gr as published on Hornady's own product page"
+      },
+      "bulletType": "FTX polymer-tip",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-30-30-160gr-ftx",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/30-30-win-160-gr-ftx-leverevolution",
+            "sourceNote": "24-inch test barrel, as stated on Hornady's own product page"
+          },
+          "velocity": {
+            "value": 731.5,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-30-30-160gr-ftx",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/30-30-win-160-gr-ftx-leverevolution",
+            "sourceNote": "published as 2400 ft/s from a 24-inch test barrel; ½mv² reproduces the page's own 2046 ft·lbf muzzle energy figure almost exactly"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hornady-140gr-monoflex",
+      "name": "Hornady LEVERevolution 140 gr MonoFlex",
+      "manufacturer": "Hornady",
+      "bulletMass": {
+        "value": 9.07,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-30-30-140gr-monoflex",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/30-30-win-140-gr-monoflex-leverevolution",
+        "sourceNote": "140 gr as published on Hornady's own product page"
+      },
+      "bulletType": "MonoFlex polymer-tip monolithic copper",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-30-30-140gr-monoflex",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/30-30-win-140-gr-monoflex-leverevolution",
+            "sourceNote": "24-inch test barrel, as stated on Hornady's own product page"
+          },
+          "velocity": {
+            "value": 751.3,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-30-30-140gr-monoflex",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/30-30-win-140-gr-monoflex-leverevolution",
+            "sourceNote": "published as 2465 ft/s from a 24-inch test barrel; ½mv² reproduces the page's own 1889 ft·lbf muzzle energy figure almost exactly"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/30-30-winchester/hero.webp",
+      "alt": "A single .30-30 Winchester cartridge on graph paper: a rimmed, gently tapered brass case topped with a flat-tipped soft-point bullet",
+      "caption": "A commercially loaded .30-30 Winchester round with a flat-nosed soft-point bullet — the flat tip is deliberate, so the bullet cannot set off the primer of the round ahead of it in a lever-action's tubular magazine.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_.30-30_Wincherster_BB_CY-SA_by_Grasyl.jpg",
+        "title": "File:Cartridge .30-30 Wincherster BB CY-SA by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/30-30-winchester/comparison.webp",
+      "alt": "Three rifle cartridges side by side, shortest to tallest: 5.56x45mm NATO, .30-30 Winchester with a round-nosed bullet, and .308 Winchester with a pointed bullet",
+      "caption": "The .30-30 Winchester (centre) shown beside 5.56×45mm NATO (left) and .308 Winchester (right); its round bullet nose and modest case length are typical of a cartridge designed for a tubular lever-action magazine rather than for long-range ballistics.",
+      "width": 831,
+      "height": 1002,
+      "credit": {
+        "author": "Boris Barowski",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:30-30.jpg",
+        "title": "File:30-30.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-30-30-winchester",
+      "type": "wikipedia",
+      "title": ".30-30 Winchester",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372451303",
+      "lang": "en",
+      "revision": "1372451303",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-30-30-win",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 30-30 Win. (table 2)",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page70.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "hornady-30-30-160gr-ftx",
+      "type": "manufacturer-spec",
+      "title": "30-30 Win 160 gr FTX LEVERevolution",
+      "publisher": "Hornady Manufacturing, Inc.",
+      "url": "https://www.hornady.com/ammunition/rifle/30-30-win-160-gr-ftx-leverevolution",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "hornady-30-30-140gr-monoflex",
+      "type": "manufacturer-spec",
+      "title": "30-30 Win 140 gr MonoFlex LEVERevolution",
+      "publisher": "Hornady Manufacturing, Inc.",
+      "url": "https://www.hornady.com/ammunition/rifle/30-30-win-140-gr-monoflex-leverevolution",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

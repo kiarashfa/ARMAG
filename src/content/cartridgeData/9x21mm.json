@@ -1,0 +1,174 @@
+{
+  "id": "9x21mm",
+  "name": "9×21mm",
+  "wikidataId": "Q649326",
+  "aliases": [
+    {
+      "name": "9x21mm IMI",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "Franco Benvenuti Agency (Italy) and Israel Military Industries (IMI)",
+  "introduced": 1980,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "tapered",
+  "bulletDiameter": {
+    "value": 9.03,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x21",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page20.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 21.15,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x21",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page20.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 29.75,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x21",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page20.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 9.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x21",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page20.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 9.63,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x21",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page20.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 9.93,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x21",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page20.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 235.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-9x21",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page20.pdf",
+    "sourceNote": "Pmax 2350 bar."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "fmj-7-45g",
+      "name": "7.45 g FMJ",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 7.45,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-9-21mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327723604",
+        "sourceNote": "As published in the article's ballistics table, sourced there to C.I.P. No test barrel length is stated, so no velocity is recorded for this load."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "fmj-8-00g",
+      "name": "8.00 g FMJ",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 8.0,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-9-21mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327723604",
+        "sourceNote": "As published in the article's ballistics table, sourced there to C.I.P. No test barrel length is stated, so no velocity is recorded for this load."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/9x21mm/hero.webp",
+      "alt": "A single brass pistol cartridge with a round-nose copper jacketed bullet, standing upright on graph paper.",
+      "caption": "A loaded 9x21mm round. The case is a 9x19mm Parabellum case lengthened from 19.05 mm to 21.15 mm, with the bullet seated slightly deeper so the loaded round's overall length is almost unchanged.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_9mm_x21.jpg",
+        "title": "File:Cartridge 9mm x21.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/9x21mm/pistol.webp",
+      "alt": "Close-up of the slide of a black polymer-framed pistol resting in a foam-lined case. The slide is engraved GLOCK, 17 Gen4, AUSTRIA, and 9x21.",
+      "caption": "A Glock 17 Gen4 slide marked \"9x21\" rather than the far more common 9x19mm — a chambering offered specifically for markets, such as Italy, where 9x19mm Parabellum is restricted to military and police use.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Patcrad",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glock_17_(9x21mm).jpg",
+        "title": "File:Glock 17 (9x21mm).jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/9x21mm/dimensions.webp",
+      "alt": "A black and white technical line drawing of a pistol cartridge in profile, dimensioned in millimetres: rim, base and neck diameters, bullet diameter, shoulder and case-mouth angles, and case and overall lengths.",
+      "caption": "C.I.P. maximum cartridge dimensional drawing of the 9x21mm, showing its slight taper rather than a distinct shoulder.",
+      "width": 878,
+      "height": 689,
+      "credit": {
+        "author": "Francis Flinch",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:9x21mm.jpg",
+        "title": "File:9x21mm.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-9-21mm",
+      "type": "wikipedia",
+      "title": "9×21mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1327723604",
+      "lang": "en",
+      "revision": "1327723604",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-9x21",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 9 x 21",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page20.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

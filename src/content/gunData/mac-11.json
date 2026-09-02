@@ -1,0 +1,134 @@
+{
+  "id": "mac-11",
+  "name": "MAC-11",
+  "kind": "model",
+  "wikidataId": "Q2580436",
+  "makerRef": "military-armament-corporation",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Ingram M11",
+      "kind": "commercial"
+    },
+    {
+      "name": "M-11",
+      "kind": "commercial"
+    }
+  ],
+  "lineage": {},
+  "introduced": 1972,
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "united-states",
+  "producedIn": ["united-states"],
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 1.59,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-mac-11",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371331161",
+    "sourceNote": "Cited article's infobox carries no inline citation for this figure; recorded as estimated rather than verified. Unclear whether it includes an empty magazine."
+  },
+  "length": {
+    "value": 248,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-mac-11",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371331161",
+    "sourceNote": "Cited article's infobox, stock folded; carries no inline citation. A second figure of 531 mm is given for the stock extended."
+  },
+  "barrelLength": {
+    "value": 129,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-mac-11",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371331161",
+    "sourceNote": "Cited article's infobox carries no inline citation for this figure."
+  },
+  "cyclicRate": {
+    "value": 1200,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-mac-11",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371331161",
+    "sourceNote": "Cited article attributes this figure to Robert E. Walker, Cartridges and Firearm Identification (CRC Press, 2012) — a book with no clickable source, so recorded as estimated rather than verified. The article itself notes the rate empties a 32-round magazine in roughly two seconds."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "380-acp",
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-mac-11",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371331161",
+        "sourceNote": "Cited article states a 16- or 32-round box magazine, citing a collector reference page (stevespages.com) rather than a factory source."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-mac-11",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371331161",
+        "sourceNote": "Cited article records a 9×19mm Parabellum chambering alongside the original .380 ACP, most commonly as the Cobray M11/9 shown in this entry's hero photograph."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/mac-11/hero.webp",
+      "alt": "A compact black submachine gun with a stubby threaded barrel, a boxy sheet-metal receiver, a vertical pistol grip and no shoulder stock attached, its long magazine extending well below the grip.",
+      "caption": "A Cobray M11/9, a MAC-11-pattern gun rechambered from the original .380 ACP to 9×19mm Parabellum, with a threaded barrel and no stock fitted.",
+      "width": 1600,
+      "height": 1298,
+      "credit": {
+        "author": "Stephen Z",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flickr_-_~Steve_Z~_-_Cobray_M11.jpg",
+        "title": "File:Flickr - ~Steve Z~ - Cobray M11.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    },
+    {
+      "src": "images/guns/mac-11/m11a1.webp",
+      "alt": "A black MAC-11-pattern submachine gun with a folding wire shoulder stock extended to the rear and a fabric sling looped beneath the receiver.",
+      "caption": "A MAC-11/M11A1 with its folding wire stock extended and a sling fitted.",
+      "width": 597,
+      "height": 348,
+      "credit": {
+        "author": "IkapitanzurseeI at English Wikipedia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MAC11.jpg",
+        "title": "File:MAC11.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-mac-11",
+      "type": "wikipedia",
+      "title": "MAC-11",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371331161",
+      "lang": "en",
+      "revision": "1371331161",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

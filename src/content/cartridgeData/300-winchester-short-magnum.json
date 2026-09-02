@@ -1,0 +1,156 @@
+{
+  "id": "300-winchester-short-magnum",
+  "name": ".300 Winchester Short Magnum",
+  "wikidataId": "Q158720",
+  "aliases": [
+    {
+      "name": "300 WSM",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "Winchester",
+  "introduced": 2001,
+  "standard": "cip",
+  "caseType": "rebated-rim",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 53.34,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page122.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 72.64,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page122.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page122.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13.59,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page122.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 14.12,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page122.pdf",
+    "sourceNote": "C.I.P. P1. The base is wider than the rim, the rebated-rim design this cartridge shares with the rest of the WSM family."
+  },
+  "neckDiameter": {
+    "value": 8.74,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page122.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 440,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-300-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page122.pdf",
+    "sourceNote": "C.I.P. Pmax 4400 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hdy-200-eld-x",
+      "name": "Hornady Precision Hunter 200 gr ELD-X",
+      "manufacturer": "Hornady",
+      "bulletType": "ELD-X",
+      "bulletMass": {
+        "value": 12.96,
+        "unit": "g",
+        "status": "verified",
+        "source": "hdy-82208",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/300-wsm-200-gr-eld-x-precision-hunter",
+        "sourceNote": "Published as 200 grains."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hdy-82208",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/300-wsm-200-gr-eld-x-precision-hunter",
+            "sourceNote": "Test barrel stated as 24 inches, in the page's ballistics table header."
+          },
+          "velocity": {
+            "value": 859.5,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hdy-82208",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/300-wsm-200-gr-eld-x-precision-hunter",
+            "sourceNote": "Published as 2,820 ft/s."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/300-winchester-short-magnum/hero.webp",
+      "alt": "Three brass rifle cartridges standing upright: a shorter, wide-bodied round with a plain copper spitzer bullet in the centre, a taller round with a red polymer bullet tip to its left, and a smaller round with a dark case on the right.",
+      "caption": "A .300 WSM cartridge (centre), shown beside a .308 Winchester (left) and a .223 Remington (right) for size comparison.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Derek280",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.300_WSM.JPG",
+        "title": "File:.300 WSM.JPG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-300-wsm",
+      "type": "wikipedia",
+      "title": ".300 Winchester Short Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1351061051",
+      "lang": "en",
+      "revision": "1351061051",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-300-win-short-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 300 Win. Short Mag.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page122.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "hdy-82208",
+      "type": "manufacturer-spec",
+      "title": "300 WSM 200 gr ELD-X Precision Hunter (product page)",
+      "publisher": "Hornady Manufacturing",
+      "url": "https://www.hornady.com/ammunition/rifle/300-wsm-200-gr-eld-x-precision-hunter",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

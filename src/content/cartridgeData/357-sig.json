@@ -1,0 +1,194 @@
+{
+  "id": "357-sig",
+  "name": ".357 SIG",
+  "wikidataId": "Q158755",
+  "aliases": [],
+  "designedBy": "SIGARMS and Federal Premium Ammunition",
+  "introduced": 1994,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 9.03,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-357-sig",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page53.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 21.97,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-357-sig",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page53.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 28.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-357-sig",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page53.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 10.77,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-357-sig",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page53.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 9.68,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-357-sig",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page53.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 10.77,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-357-sig",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page53.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 305.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-357-sig",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page53.pdf",
+    "sourceNote": "Pmax 3050 bar. SAAMI rates the same chambering at 40,000 psi (275.8 MPa) by its own transducer method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "doubletap-fmj-fp",
+      "name": "125 gr DoubleTap FMJ-FP",
+      "manufacturer": "DoubleTap Ammunition",
+      "bulletType": "FMJ-FP",
+      "bulletMass": {
+        "value": 8.1,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-357-sig",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371419921",
+        "sourceNote": "8.1 g as published in the article's ballistics table."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 114.3,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-357-sig",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371419921",
+            "sourceNote": "4.5-inch barrel, stated in the article's footnote for this row, citing DoubleTap's own catalogue page (no longer reachable)."
+          },
+          "velocity": {
+            "value": 441.96,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-357-sig",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371419921",
+            "sourceNote": "1450 ft/s as published in the article's ballistics table."
+          }
+        }
+      ]
+    },
+    {
+      "id": "corbon-pb",
+      "name": "100 gr Cor-Bon Pow'RBall",
+      "manufacturer": "Cor-Bon",
+      "bulletType": "Pow'RBall (PB)",
+      "bulletMass": {
+        "value": 6.48,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-357-sig",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371419921",
+        "sourceNote": "6.48 g as published in the article's ballistics table."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 101.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-357-sig",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371419921",
+            "sourceNote": "4-inch barrel, stated in the article's footnote for this row, citing Cor-Bon's catalogue page."
+          },
+          "velocity": {
+            "value": 487.68,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-357-sig",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371419921",
+            "sourceNote": "1600 ft/s as published in the article's ballistics table."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/357-sig/hero.webp",
+      "alt": "A single brass pistol cartridge with a bottlenecked case and a copper jacketed round-nose bullet, standing upright on graph paper.",
+      "caption": "A loaded .357 SIG round. The visible shoulder is the tell: the case is a 10mm Auto necked down to take a 9mm bullet, built to fit a 10mm- or .40 S&W-sized pistol frame.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_.357_SiG.jpg",
+        "title": "File:Cartridge .357 SiG.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/357-sig/duty-pistol.webp",
+      "alt": "A black semi-automatic pistol lying on its side on a tan surface, beside two loaded box magazines marked SIGSAUER P226 .357 and a single loose cartridge with a jacketed hollow-point bullet.",
+      "caption": "A Texas Department of Public Safety-issue SIG Sauer P226 in .357 SIG, with two agency-marked magazines and a round of duty ammunition. State and federal law enforcement agencies were the round's main market after its 1994 introduction.",
+      "width": 696,
+      "height": 1200,
+      "credit": {
+        "author": "TexasWarhawk",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:THP_P226_DAK.jpg",
+        "title": "File:THP P226 DAK.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-357-sig",
+      "type": "wikipedia",
+      "title": ".357 SIG",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371419921",
+      "lang": "en",
+      "revision": "1371419921",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-357-sig",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 357 SIG",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page53.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

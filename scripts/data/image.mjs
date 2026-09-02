@@ -370,8 +370,11 @@ const argv = process.argv.slice(2);
 const replace = argv.includes('--replace');
 const fromIndex = argv.indexOf('--from');
 const from = fromIndex === -1 ? null : argv[fromIndex + 1];
+// `fromIndex + 1` is only a value position when `--from` was actually passed;
+// without the guard it is 0, which silently eats the command itself.
+const fromValueIndex = fromIndex === -1 ? -1 : fromIndex + 1;
 const [command, ...args] = argv.filter(
-  (arg, i) => arg !== '--replace' && arg !== '--from' && i !== fromIndex + 1,
+  (arg, i) => arg !== '--replace' && arg !== '--from' && i !== fromValueIndex,
 );
 try {
   if (command === 'find') await cmdFind(args[0]);

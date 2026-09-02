@@ -1,0 +1,153 @@
+{
+  "id": "221-remington-fireball",
+  "name": ".221 Remington Fireball",
+  "wikidataId": "Q4545189",
+  "aliases": [
+    {
+      "name": ".221 Fireball",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "Remington / Wayne Leek",
+  "introduced": 1963,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 35.56,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceUrl": "https://web.archive.org/web/20081120154743/http://www.accuratepowder.com/data/PerCaliber2Guide/Handgun/Standarddata/22Cal(5.56mm)/221%20Remington%20Fireball%20T-C%20data%20page%2048.pdf",
+    "sourceNote": "No free SAAMI or C.I.P. datasheet exists for this cartridge. Value read from Accurate Powder's reloading-guide dimensional drawing (1.400 in / 35.56 mm), which matches the figure in the Wikipedia infobox."
+  },
+  "overallLength": {
+    "value": 46.48,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceUrl": "https://web.archive.org/web/20081120154743/http://www.accuratepowder.com/data/PerCaliber2Guide/Handgun/Standarddata/22Cal(5.56mm)/221%20Remington%20Fireball%20T-C%20data%20page%2048.pdf",
+    "sourceNote": "No free SAAMI or C.I.P. datasheet exists for this cartridge. Value read from Accurate Powder's reloading-guide dimensional drawing (1.830 in / 46.48 mm), which matches the figure in the Wikipedia infobox."
+  },
+  "bulletDiameter": {
+    "value": 5.69,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceUrl": "https://web.archive.org/web/20081120154743/http://www.accuratepowder.com/data/PerCaliber2Guide/Handgun/Standarddata/22Cal(5.56mm)/221%20Remington%20Fireball%20T-C%20data%20page%2048.pdf",
+    "sourceNote": "No free SAAMI or C.I.P. datasheet exists for this cartridge. Published as .224 in, the standard bullet diameter shared with every other .22-centerfire cartridge derived from the .222 Remington case."
+  },
+  "rimDiameter": {
+    "value": 9.6,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceUrl": "https://web.archive.org/web/20081120154743/http://www.accuratepowder.com/data/PerCaliber2Guide/Handgun/Standarddata/22Cal(5.56mm)/221%20Remington%20Fireball%20T-C%20data%20page%2048.pdf",
+    "sourceNote": "No free SAAMI or C.I.P. datasheet exists for this cartridge. Value read from Accurate Powder's reloading-guide dimensional drawing (.378 in / 9.60 mm)."
+  },
+  "baseDiameter": {
+    "value": 9.55,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceUrl": "https://web.archive.org/web/20081120154743/http://www.accuratepowder.com/data/PerCaliber2Guide/Handgun/Standarddata/22Cal(5.56mm)/221%20Remington%20Fireball%20T-C%20data%20page%2048.pdf",
+    "sourceNote": "No free SAAMI or C.I.P. datasheet exists for this cartridge. Value read from Accurate Powder's reloading-guide dimensional drawing (.376 in / 9.55 mm)."
+  },
+  "neckDiameter": {
+    "value": 6.43,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceUrl": "https://web.archive.org/web/20081120154743/http://www.accuratepowder.com/data/PerCaliber2Guide/Handgun/Standarddata/22Cal(5.56mm)/221%20Remington%20Fireball%20T-C%20data%20page%2048.pdf",
+    "sourceNote": "No free SAAMI or C.I.P. datasheet exists for this cartridge. Value read from Accurate Powder's reloading-guide dimensional drawing (.253 in / 6.43 mm)."
+  },
+  "loads": [
+    {
+      "id": "nosler-45gr-sp-pistol",
+      "name": "Nosler 45 gr SP",
+      "bulletMass": {
+        "value": 2.916,
+        "unit": "g",
+        "status": "verified",
+        "source": "accurate-221-fireball-tc",
+        "sourceUrl": "https://web.archive.org/web/20081120154743/http://www.accuratepowder.com/data/PerCaliber2Guide/Handgun/Standarddata/22Cal(5.56mm)/221%20Remington%20Fireball%20T-C%20data%20page%2048.pdf",
+        "sourceNote": "Published as 45 gr."
+      },
+      "bulletType": "SP"
+    },
+    {
+      "id": "hornady-50gr-sx-pistol",
+      "name": "Hornady 50 gr SX",
+      "bulletMass": {
+        "value": 3.24,
+        "unit": "g",
+        "status": "verified",
+        "source": "accurate-221-fireball-tc",
+        "sourceUrl": "https://web.archive.org/web/20081120154743/http://www.accuratepowder.com/data/PerCaliber2Guide/Handgun/Standarddata/22Cal(5.56mm)/221%20Remington%20Fireball%20T-C%20data%20page%2048.pdf",
+        "sourceNote": "Published as 50 gr."
+      },
+      "bulletType": "SX"
+    },
+    {
+      "id": "nosler-55gr-sbt-pistol",
+      "name": "Nosler 55 gr SBT",
+      "bulletMass": {
+        "value": 3.564,
+        "unit": "g",
+        "status": "verified",
+        "source": "accurate-221-fireball-tc",
+        "sourceUrl": "https://web.archive.org/web/20081120154743/http://www.accuratepowder.com/data/PerCaliber2Guide/Handgun/Standarddata/22Cal(5.56mm)/221%20Remington%20Fireball%20T-C%20data%20page%2048.pdf",
+        "sourceNote": "Published as 55 gr."
+      },
+      "bulletType": "SBT"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/221-remington-fireball/hero.webp",
+      "alt": "A loaded rifle cartridge with a green polymer-tipped bullet standing beside two loose bullets marked '40 gr' and '55 gr' and a small rimfire round marked '.22 LR', against a ruler marked in inches.",
+      "caption": "A loaded .221 Remington Fireball round beside two bullet weights it can be loaded with and a .22 Long Rifle round for scale.",
+      "width": 496,
+      "height": 536,
+      "credit": {
+        "author": "CaboverPete",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:221_Remington_Fireball.PNG",
+        "title": "File:221 Remington Fireball.PNG",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "src": "images/cartridges/221-remington-fireball/family.webp",
+      "alt": "Five bottlenecked rifle cartridges of increasing size standing in a row against a wooden background, each with a differently coloured bullet tip.",
+      "caption": "The .221 Remington Fireball (second from left, orange tip) among its wider .22-centerfire relatives — from left, .22 TCM, .221 Remington Fireball, .222 Remington, .223 Remington and .222 Remington Magnum.",
+      "width": 1174,
+      "height": 1200,
+      "credit": {
+        "author": "Hellbus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:222_extended_family.jpg",
+        "title": "File:222 extended family.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-221-remington-fireball",
+      "type": "wikipedia",
+      "title": ".221 Remington Fireball",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1336106401",
+      "lang": "en",
+      "revision": "1336106401",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "accurate-221-fireball-tc",
+      "type": "manufacturer-spec",
+      "title": ".221 Remington Fireball — Thompson/Center Contender pistol reload data (page 48)",
+      "publisher": "Accurate Powder (Western Powders, Inc.)",
+      "url": "https://web.archive.org/web/20081120154743/http://www.accuratepowder.com/data/PerCaliber2Guide/Handgun/Standarddata/22Cal(5.56mm)/221%20Remington%20Fireball%20T-C%20data%20page%2048.pdf",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

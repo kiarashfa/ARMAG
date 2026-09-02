@@ -1,0 +1,289 @@
+{
+  "id": "7x57mm-mauser",
+  "name": "7×57mm Mauser",
+  "wikidataId": "Q270069",
+  "aliases": [
+    { "name": "7mm Mauser", "kind": "commercial" },
+    { "name": ".275 Rigby", "kind": "commercial", "note": "the name John Rigby & Co. marketed the same cartridge under in Britain" },
+    { "name": "7 x 57", "kind": "metric" }
+  ],
+  "designedBy": "Paul Mauser",
+  "introduced": 1893,
+  "productionYears": { "start": 1892, "end": null },
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.25,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-x-57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page33.pdf",
+    "sourceNote": "C.I.P. TDCC table 1 datasheet, field G1"
+  },
+  "caseLength": {
+    "value": 57,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-x-57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page33.pdf",
+    "sourceNote": "C.I.P. TDCC table 1 datasheet, field L3"
+  },
+  "overallLength": {
+    "value": 78,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-x-57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page33.pdf",
+    "sourceNote": "C.I.P. TDCC table 1 datasheet, field L6"
+  },
+  "rimDiameter": {
+    "value": 12.1,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-x-57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page33.pdf",
+    "sourceNote": "C.I.P. TDCC table 1 datasheet, field R1"
+  },
+  "neckDiameter": {
+    "value": 8.25,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-x-57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page33.pdf",
+    "sourceNote": "C.I.P. TDCC table 1 datasheet, field H2"
+  },
+  "baseDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-x-57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page33.pdf",
+    "sourceNote": "C.I.P. TDCC table 1 datasheet, field P1"
+  },
+  "maxPressure": {
+    "value": 390.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7-x-57",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page33.pdf",
+    "sourceNote": "C.I.P. TDCC table 1 datasheet, Pmax 3900 bar"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "rws-ks-8g",
+      "name": "RWS KS 8.0 g",
+      "manufacturer": "RWS / RUAG Ammotech",
+      "bulletMass": {
+        "value": 8.0,
+        "unit": "g",
+        "status": "verified",
+        "source": "rws-7x57-ballistics",
+        "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+        "sourceNote": "RWS's own published ballistic table for the KS bullet"
+      },
+      "bulletType": "KS (Kegelspitz) soft point",
+      "bcG1": {
+        "value": 0.290,
+        "unit": "",
+        "status": "verified",
+        "source": "rws-7x57-ballistics",
+        "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+        "sourceNote": "RWS's own published BC value for the KS bullet"
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 600,
+            "unit": "mm",
+            "status": "verified",
+            "source": "rws-7x57-ballistics",
+            "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+            "sourceNote": "RWS's own published test barrel length for this bullet — 600 mm, not the 735 mm the Wikipedia infobox states generically for the article's RWS loads"
+          },
+          "velocity": {
+            "value": 900,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "rws-7x57-ballistics",
+            "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+            "sourceNote": "RWS's own published muzzle velocity (0 m) for the KS bullet"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rws-id-classic-10-5g",
+      "name": "RWS ID Classic 10.5 g",
+      "manufacturer": "RWS / RUAG Ammotech",
+      "bulletMass": {
+        "value": 10.5,
+        "unit": "g",
+        "status": "verified",
+        "source": "rws-7x57-ballistics",
+        "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+        "sourceNote": "RWS's own published ballistic table for the ID Classic bullet"
+      },
+      "bulletType": "ID Classic soft point",
+      "bcG1": {
+        "value": 0.325,
+        "unit": "",
+        "status": "verified",
+        "source": "rws-7x57-ballistics",
+        "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+        "sourceNote": "RWS's own published BC value for the ID Classic bullet"
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 600,
+            "unit": "mm",
+            "status": "verified",
+            "source": "rws-7x57-ballistics",
+            "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+            "sourceNote": "RWS's own published test barrel length for this bullet"
+          },
+          "velocity": {
+            "value": 800,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "rws-7x57-ballistics",
+            "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+            "sourceNote": "RWS's own published muzzle velocity (0 m) for the ID Classic bullet"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rws-hmk-11-2g",
+      "name": "RWS HMK 11.2 g",
+      "manufacturer": "RWS / RUAG Ammotech",
+      "bulletMass": {
+        "value": 11.2,
+        "unit": "g",
+        "status": "verified",
+        "source": "rws-7x57-ballistics",
+        "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+        "sourceNote": "RWS's own published ballistic table for the HMK bullet"
+      },
+      "bulletType": "HMK (Hohlspitzmantelkern) soft point",
+      "bcG1": {
+        "value": 0.383,
+        "unit": "",
+        "status": "verified",
+        "source": "rws-7x57-ballistics",
+        "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+        "sourceNote": "RWS's own published BC value for the HMK bullet"
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 600,
+            "unit": "mm",
+            "status": "verified",
+            "source": "rws-7x57-ballistics",
+            "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+            "sourceNote": "RWS's own published test barrel length for this bullet"
+          },
+          "velocity": {
+            "value": 770,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "rws-7x57-ballistics",
+            "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+            "sourceNote": "RWS's own published muzzle velocity (0 m) for the HMK bullet"
+          }
+        }
+      ]
+    },
+    {
+      "id": "military-173gr",
+      "name": "Factory Military 173 gr",
+      "bulletMass": {
+        "value": 11.2,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; no manufacturer or archival military source located to independently confirm"
+      },
+      "bulletType": "military ball",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 600,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "the Wikipedia infobox's own text specifies a 600 mm barrel for this 173-grain military loading specifically, distinct from the 735 mm figure it gives generically; uncited on Wikipedia itself"
+          },
+          "velocity": {
+            "value": 700,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; ½mv² reproduces the article's own 2746 J energy figure to 0.1%, confirming the m/s reading"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7x57mm-mauser/hero.webp",
+      "alt": "Five rifle cartridges standing upright for size comparison: two 7×57mm Mauser rounds with soft-point bullets on the left, a 7.5×55mm Swiss GP11 in the centre, a .308 Winchester, and a smaller .223 Remington on the right",
+      "caption": "Two 7×57mm Mauser cartridges (left) shown against 7.5×55mm Swiss GP11, .308 Winchester and .223 Remington for scale.",
+      "width": 1576,
+      "height": 1221,
+      "credit": {
+        "author": "Boris Barowski",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ammunition_7x57.jpg",
+        "title": "File:Ammunition 7x57.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/7x57mm-mauser/specimen.webp",
+      "alt": "Close-up of a 7×57mm cartridge case head, headstamped S&B (Sellier & Bellot) and 7x57",
+      "caption": "The case head of a Sellier & Bellot-manufactured 7×57mm round, headstamped S&B and 7x57.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Malis",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7x57_-_SB-_SP_-_5.jpg",
+        "title": "File:7x57 - SB- SP - 5.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-7x57mm-mauser",
+      "type": "wikipedia",
+      "title": "7×57mm Mauser",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362858176",
+      "lang": "en",
+      "revision": "1362858176",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-7-x-57",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7 x 57 (table 1)",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page33.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "rws-7x57-ballistics",
+      "type": "manufacturer-spec",
+      "title": "Rifle cartridges — ballistic data (7 x 57)",
+      "publisher": "RWS / RUAG Ammotech",
+      "url": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
+      "revision": "2009-08-31",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

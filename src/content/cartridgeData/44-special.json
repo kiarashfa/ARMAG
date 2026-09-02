@@ -1,0 +1,158 @@
+{
+  "id": "44-special",
+  "name": ".44 Special",
+  "wikidataId": "Q667409",
+  "aliases": [
+    {
+      "name": "44 S&W Special",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "Smith & Wesson",
+  "introduced": 1907,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 29.46,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-s-w-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page74.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 41.02,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-s-w-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page74.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 10.98,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-s-w-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page74.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-s-w-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page74.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 11.60,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-s-w-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page74.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 11.60,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-44-s-w-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page74.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 100,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-44-s-w-special",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page74.pdf",
+    "sourceNote": "C.I.P. Pmax 1000 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "fed-champion-200-swchp",
+      "name": "Federal Champion Training 200 gr semi-wadcutter hollow point",
+      "manufacturer": "Federal",
+      "bulletType": "SWCHP",
+      "bulletMass": {
+        "value": 12.96,
+        "unit": "g",
+        "status": "verified",
+        "source": "fed-c44sa",
+        "sourceUrl": "https://www.federalpremium.com/handgun/federal-target/champion-training/11-C44SA.html",
+        "sourceNote": "Published as 200 grains."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 101.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "fed-c44sa",
+            "sourceUrl": "https://www.federalpremium.com/handgun/federal-target/champion-training/11-C44SA.html",
+            "sourceNote": "Test barrel stated as \"4-V\" — a 4-inch vented revolver test barrel."
+          },
+          "velocity": {
+            "value": 265.2,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "fed-c44sa",
+            "sourceUrl": "https://www.federalpremium.com/handgun/federal-target/champion-training/11-C44SA.html",
+            "sourceNote": "Published as 870 ft/s."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/44-special/hero.webp",
+      "alt": "Four handgun cartridges standing upright, side by side; a .44 Special round, second from the right with a jacketed hollow-point bullet, is set off against a white background while the other three sit on grey.",
+      "caption": ".40 S&W, .38-40 WCF, .44 Special (highlighted, with a JHP bullet) and .45 ACP cartridges shown for size comparison.",
+      "width": 1600,
+      "height": 1135,
+      "credit": {
+        "author": "Tad Marko",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:40sw_38-40_44spl-highlighted_45acp.png",
+        "title": "File:40sw 38-40 44spl-highlighted 45acp.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-44-special",
+      "type": "wikipedia",
+      "title": ".44 Special",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368969599",
+      "lang": "en",
+      "revision": "1368969599",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-44-s-w-special",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 44 S&W Special",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page74.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "fed-c44sa",
+      "type": "manufacturer-spec",
+      "title": "Champion Training 44 S&W Spl, 200 gr SWCHP (product page)",
+      "publisher": "Federal Premium",
+      "url": "https://www.federalpremium.com/handgun/federal-target/champion-training/11-C44SA.html",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

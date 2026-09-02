@@ -1,0 +1,216 @@
+{
+  "id": "300-winchester-magnum",
+  "name": ".300 Winchester Magnum",
+  "wikidataId": "Q158726",
+  "aliases": [],
+  "designedBy": "Winchester Repeating Arms Company",
+  "introduced": 1963,
+  "standard": "cip",
+  "caseType": "belted",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page20.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 66.55,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page20.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 84.84,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page20.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 13.51,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page20.pdf",
+    "sourceNote": "Dimension R1. The case is belted, so the rim itself is not oversized — the belt just ahead of it is what headspaces the round."
+  },
+  "neckDiameter": {
+    "value": 8.63,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page20.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 13.03,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-300-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page20.pdf",
+    "sourceNote": "Dimension P1, measured ahead of the belt."
+  },
+  "maxPressure": {
+    "value": 430.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-300-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page20.pdf",
+    "sourceNote": "Pmax 4300 bar. SAAMI rates the same chambering at 64,000 psi by its own transducer method, which is not the same figure."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "federal-200gr-terminal-ascent",
+      "name": "200 gr Terminal Ascent",
+      "manufacturer": "Federal Premium",
+      "bulletType": "Terminal Ascent",
+      "bulletMass": {
+        "value": 12.96,
+        "unit": "g",
+        "status": "verified",
+        "source": "federal-300wm-terminal-ascent",
+        "sourceUrl": "https://www.federalpremium.com/rifle/terminal-ascent/11-P300WTA1.html",
+        "sourceNote": "200 gr as published on the product page, converted to grams (1 gr = 0.06479891 g)."
+      },
+      "bcG1": {
+        "value": 0.608,
+        "unit": "",
+        "status": "verified",
+        "source": "federal-300wm-terminal-ascent",
+        "sourceUrl": "https://www.federalpremium.com/rifle/terminal-ascent/11-P300WTA1.html",
+        "sourceNote": "Published as a single figure."
+      },
+      "bcG7": {
+        "value": 0.304,
+        "unit": "",
+        "status": "verified",
+        "source": "federal-300wm-terminal-ascent",
+        "sourceUrl": "https://www.federalpremium.com/rifle/terminal-ascent/11-P300WTA1.html",
+        "sourceNote": "Published as a single figure."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "federal-180gr-barnes-tsx",
+      "name": "180 gr Barnes TSX",
+      "manufacturer": "Federal Premium",
+      "bulletType": "Barnes Triple-Shock X (TSX)",
+      "bulletMass": {
+        "value": 11.66,
+        "unit": "g",
+        "status": "verified",
+        "source": "federal-300wm-barnes-tsx",
+        "sourceUrl": "https://www.federalpremium.com/rifle/barnes-tsx/11-P300WP.html",
+        "sourceNote": "180 gr as published on the product page, converted to grams (1 gr = 0.06479891 g)."
+      },
+      "bcG1": {
+        "value": 0.453,
+        "unit": "",
+        "status": "verified",
+        "source": "federal-300wm-barnes-tsx",
+        "sourceUrl": "https://www.federalpremium.com/rifle/barnes-tsx/11-P300WP.html",
+        "sourceNote": "Published as a single figure. No G7 coefficient given."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/300-winchester-magnum/hero.webp",
+      "alt": "A single brass rifle cartridge with a belted case and a copper jacketed spitzer bullet, standing upright on graph paper.",
+      "caption": "A loaded .300 Winchester Magnum round. The narrow belt ahead of the extractor groove, a holdover from the .375 H&H Magnum this case derives from, is visible just above the base.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_.300_Winchester_Magnum.jpg",
+        "title": "File:Cartridge .300 Winchester Magnum.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/300-winchester-magnum/schematic.webp",
+      "alt": "A black and white technical line drawing of a rifle cartridge in profile, dimensioned in inches with millimetres in brackets: case diameters, shoulder angle, bullet diameter, and case, shoulder-to-bullet, and overall lengths.",
+      "caption": "SAAMI-compliant dimensional drawing of the .300 Winchester Magnum, showing the 25-degree shoulder and belted case head.",
+      "width": 895,
+      "height": 411,
+      "credit": {
+        "author": "Peter Gnanapragasam",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:300WinchesterMagnum01.png",
+        "title": "File:300WinchesterMagnum01.png",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/300-winchester-magnum/in-service.webp",
+      "alt": "A soldier in camouflage and a boonie hat lies prone behind a heavy bolt-action rifle on a bipod, aiming down a large telescopic sight on a gravel range, with two spent brass cases on the ground and two soldiers standing watching behind him.",
+      "caption": "A U.S. Army National Guard sniper candidate fires the XM2010 Enhanced Sniper Rifle, a Remington 700 action rebuilt to chamber .300 Winchester Magnum, during sniper-course selection at Grafenwoehr, Germany, May 2020.",
+      "width": 1200,
+      "height": 844,
+      "credit": {
+        "author": "Staff Sgt. Gregory Stevens",
+        "sourceUrl": "https://www.dvidshub.net/image/6212009/1-8-cav-sniper-training",
+        "title": "1/8 CAV Sniper Training",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Army (2nd Armored Brigade Combat Team, 1st Cavalry Division Public Affairs), VIRIN 200515-A-FG635-3409. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-300-winchester-magnum",
+      "type": "wikipedia",
+      "title": ".300 Winchester Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368911320",
+      "lang": "en",
+      "revision": "1368911320",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-300-win-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 300 Win. Mag.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page20.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "federal-300wm-terminal-ascent",
+      "type": "manufacturer-spec",
+      "title": "Terminal Ascent .300 Win Mag, 200 gr — product page",
+      "publisher": "Federal Premium Ammunition",
+      "url": "https://www.federalpremium.com/rifle/terminal-ascent/11-P300WTA1.html",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "federal-300wm-barnes-tsx",
+      "type": "manufacturer-spec",
+      "title": "Barnes TSX .300 Win Mag, 180 gr — product page",
+      "publisher": "Federal Premium Ammunition",
+      "url": "https://www.federalpremium.com/rifle/barnes-tsx/11-P300WP.html",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "dvids-6212009",
+      "type": "web",
+      "title": "1/8 CAV Sniper Training",
+      "publisher": "DVIDS / U.S. Army",
+      "url": "https://www.dvidshub.net/image/6212009/1-8-cav-sniper-training",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

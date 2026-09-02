@@ -1,0 +1,226 @@
+{
+  "id": "7mm-08-remington",
+  "name": "7mm-08 Remington",
+  "wikidataId": "Q3388221",
+  "aliases": [],
+  "designedBy": "Remington Arms",
+  "introduced": 1980,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.23,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-08-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page35.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 51.69,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-08-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page35.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 71.12,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-08-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page35.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-08-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page35.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 8.0,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-08-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page35.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-08-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page35.pdf",
+    "sourceNote": "Dimension P1. Identical to the .308 Winchester family head this case is necked down from."
+  },
+  "maxPressure": {
+    "value": 415.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7mm-08-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page35.pdf",
+    "sourceNote": "Pmax 4150 bar. SAAMI rates the same chambering at 60,191 psi by its own transducer method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "nosler-140gr-partition",
+      "name": "140 gr Nosler Partition",
+      "manufacturer": "Nosler",
+      "bulletType": "Partition",
+      "bulletMass": {
+        "value": 9.072,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-7mm-08-remington",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368969714",
+        "sourceNote": "140 gr as published in the article's ballistics table, converted to grams (1 gr = 0.06479891 g)."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-7mm-08-remington",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368969714",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches, citing an archived Federal Cartridge Co. ballistics page."
+          },
+          "velocity": {
+            "value": 853.44,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-7mm-08-remington",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368969714",
+            "sourceNote": "2800 ft/s as published in the article's ballistics table."
+          }
+        }
+      ]
+    },
+    {
+      "id": "speer-150gr-hot-cor-sp",
+      "name": "150 gr Speer Hot-Cor SP",
+      "manufacturer": "Speer",
+      "bulletType": "Hot-Cor Soft Point",
+      "bulletMass": {
+        "value": 9.72,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-7mm-08-remington",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368969714",
+        "sourceNote": "150 gr as published in the article's ballistics table, converted to grams (1 gr = 0.06479891 g)."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-7mm-08-remington",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368969714",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches, citing an archived Federal Cartridge Co. ballistics page."
+          },
+          "velocity": {
+            "value": 807.72,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-7mm-08-remington",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368969714",
+            "sourceNote": "2650 ft/s as published in the article's ballistics table."
+          }
+        }
+      ]
+    },
+    {
+      "id": "nosler-175gr-partition",
+      "name": "175 gr Nosler Partition",
+      "manufacturer": "Nosler",
+      "bulletType": "Partition",
+      "bulletMass": {
+        "value": 11.34,
+        "unit": "g",
+        "status": "verified",
+        "source": "wp-7mm-08-remington",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368969714",
+        "sourceNote": "175 gr as published in the article's ballistics table, converted to grams (1 gr = 0.06479891 g). The table separately cites Hodgdon's rifle reloading data for this specific bullet weight."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "wp-7mm-08-remington",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368969714",
+            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
+          },
+          "velocity": {
+            "value": 790.96,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "wp-7mm-08-remington",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368969714",
+            "sourceNote": "2595 ft/s as published in the article's ballistics table."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7mm-08-remington/hero.webp",
+      "alt": "A rifle cartridge standing upright beside its own spent case laid on its side, showing the headstamp, against a plain tan background. The cartridge has a brass bottlenecked case and a copper jacketed bullet with a dark tip.",
+      "caption": "A loaded 7mm-08 Remington round beside a fired case showing its headstamp. The case is a .308 Winchester necked down to 7 mm, unchanged in length or head dimensions.",
+      "width": 500,
+      "height": 650,
+      "credit": {
+        "author": "Ryan D. Larson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7mm-08_Remington.JPG",
+        "title": "File:7mm-08 Remington.JPG",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/7mm-08-remington/comparison.webp",
+      "alt": "Three brass rifle cartridges of different sizes standing side by side against a grey background: a tall one on the left with a long pointed bullet, a slightly shorter and narrower one in the centre, and a shorter, stockier one on the right with its bullet seated deep in the case.",
+      "caption": "Left to right: 7mm-08 Remington, .223 Remington, and .300 AAC Blackout. The 7mm-08's .308-based case is visibly longer than either of the .223-based rounds beside it.",
+      "width": 1023,
+      "height": 1200,
+      "credit": {
+        "author": "Giuseppesola",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7mm-08rem.jpg",
+        "title": "File:7mm-08rem.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-7mm-08-remington",
+      "type": "wikipedia",
+      "title": "7mm-08 Remington",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368969714",
+      "lang": "en",
+      "revision": "1368969714",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-7mm-08-rem",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7 mm-08 Rem.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page35.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

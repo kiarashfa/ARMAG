@@ -1,0 +1,153 @@
+{
+  "id": "218-bee",
+  "name": ".218 Bee",
+  "wikidataId": "Q4545180",
+  "aliases": [],
+  "designedBy": "Winchester",
+  "introduced": 1937,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 34.16,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-218-bee",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page54.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 42.67,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-218-bee",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page54.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 5.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-218-bee",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page54.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 10.36,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-218-bee",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page54.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 8.87,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-218-bee",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page54.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 6.15,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-218-bee",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page54.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 320.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-218-bee",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page54.pdf",
+    "sourceNote": "C.I.P. Pmax 3200 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornady-45gr-hp",
+      "name": "Hornady 45 gr HP",
+      "manufacturer": "Hornady",
+      "bulletMass": {
+        "value": 2.916,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-218-bee-45gr-hp",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/218-bee-45-gr-hp",
+        "sourceNote": "Published as 45 gr on Hornady's own product page."
+      },
+      "bulletType": "HP (InterLock)",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-218-bee-45gr-hp",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/218-bee-45-gr-hp",
+            "sourceNote": "Hornady states a 24-inch test barrel for this product."
+          },
+          "velocity": {
+            "value": 838.2,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-218-bee-45gr-hp",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/218-bee-45-gr-hp",
+            "sourceNote": "Published muzzle velocity 2,750 fps from the stated 24-inch test barrel."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/218-bee/hero.webp",
+      "alt": "Two rimmed, bottlenecked rifle cartridges standing upright against a wooden background: a shorter one with a hollow-point bullet on the left, a taller one with a sharp spitzer bullet on the right.",
+      "caption": "The .218 Bee (left) beside a .223 Remington (right) for scale.",
+      "width": 891,
+      "height": 1500,
+      "credit": {
+        "author": "Hellbus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:218_Bee.jpg",
+        "title": "File:218 Bee.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-218-bee",
+      "type": "wikipedia",
+      "title": ".218 Bee",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1316856743",
+      "lang": "en",
+      "revision": "1316856743",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-218-bee",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 218 Bee",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page54.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "hornady-218-bee-45gr-hp",
+      "type": "manufacturer-spec",
+      "title": "218 Bee 45 gr HP",
+      "publisher": "Hornady Manufacturing, Inc.",
+      "url": "https://www.hornady.com/ammunition/rifle/218-bee-45-gr-hp",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "id": "12-7x55mm-sts-130",
+  "name": "12.7×55mm STs-130",
+  "wikidataId": "Q4548051",
+  "aliases": [
+    { "name": "12.7x55mm", "kind": "metric" },
+    { "name": "СЦ-130", "kind": "native", "note": "Cyrillic rendering of STs-130" }
+  ],
+  "introduced": 2002,
+  "productionYears": { "start": 2002, "end": null },
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 13.01,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; no free dimensional standard exists for this modern Russian military round — C.I.P.'s index has no matching entry"
+  },
+  "caseLength": {
+    "value": 54.91,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; corroborated by a second, independent source (modernfirearms.net, on the related ASh-12.7) which separately states the case is 55 mm long"
+  },
+  "overallLength": {
+    "value": 97.3,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; this is the STs-130 (VKS rifle) loading specifically — the shorter PS-12 loading for the ShAK-12/RSh-12 is 73 mm overall and cannot share a magazine or chamber with it despite the shared case"
+  },
+  "baseDiameter": {
+    "value": 14.86,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; no free dimensional standard exists for this modern Russian military round"
+  },
+  "loads": [
+    {
+      "id": "sts130pt",
+      "name": "STs-130PT",
+      "bulletMass": {
+        "value": 59,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; no barrel length is published anywhere for this cartridge, so no velocity point is recorded"
+      },
+      "bulletType": "sniper, increased accuracy"
+    },
+    {
+      "id": "sts130pt2",
+      "name": "STs-130PT2",
+      "bulletMass": {
+        "value": 48.2,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; no barrel length is published anywhere for this cartridge, so no velocity point is recorded"
+      },
+      "bulletType": "sniper, solid bronze bullet"
+    },
+    {
+      "id": "sts130vps",
+      "name": "STs-130VPS",
+      "bulletMass": {
+        "value": 76,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; no barrel length is published anywhere for this cartridge, so no velocity point is recorded"
+      },
+      "bulletType": "high penetration / armour piercing"
+    },
+    {
+      "id": "ps-12",
+      "name": "PS-12",
+      "bulletMass": {
+        "value": 33,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; this is the shorter ShAK-12/RSh-12 loading, not interchangeable with the VKS's STs-130 loads despite the shared case; no barrel length is published, so no velocity point is recorded"
+      },
+      "bulletType": "ShAK-12 / RSh-12 loading"
+    },
+    {
+      "id": "ps-12b",
+      "name": "PS-12B",
+      "bulletMass": {
+        "value": 17.94,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; this is the shorter ShAK-12/RSh-12 loading, not interchangeable with the VKS's STs-130 loads despite the shared case; no barrel length is published, so no velocity point is recorded"
+      },
+      "bulletType": "ShAK-12 / RSh-12 loading"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/12-7x55mm-sts-130/hero.webp",
+      "alt": "Three 12.7x55mm STs-130 cartridges laid side by side on a blue background, each with a different bullet tip: copper jacketed, plain brass, and grey-tipped",
+      "caption": "Three STs-130 loadings for the Russian VKS sniper rifle, left to right: STs-130PT, STs-130PT2 (solid bronze bullet), and STs-130VPS (high-penetration).",
+      "width": 450,
+      "height": 236,
+      "credit": {
+        "author": "Maxim Popenker",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:VKS_Ammo.jpg",
+        "title": "File:VKS Ammo.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-12-7-55mm-sts-130",
+      "type": "wikipedia",
+      "title": "12.7×55mm STs-130",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1353154653",
+      "lang": "en",
+      "revision": "1353154653",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "modernfirearms-ash12",
+      "type": "web",
+      "title": "ASh-12.7",
+      "author": "Maxim Popenker",
+      "publisher": "Modern Firearms",
+      "url": "https://modernfirearms.net/en/assault-rifles/russia-assault-rifles/ash-12-7-eng/",
+      "accessed": "2026-09-01",
+      "note": "states the STs-130 case is rimless and 55 mm long"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "id": "pindad-ss2",
+  "name": "Pindad SS2",
+  "kind": "model",
+  "nativeName": "Senapan Serbu 2",
+  "wikidataId": "Q2663289",
+  "makerRef": "pindad",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Senapan Serbu 2", "kind": "native", "note": "Indonesian for \"Assault Rifle 2\", the name SS2 abbreviates" }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "indonesia",
+  "producedIn": ["indonesia"],
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["assault-rifle", "service-rifle"],
+  "introduced": 2005,
+  "productionYears": { "start": 2005, "end": null },
+  "massEmpty": {
+    "value": 3.40,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "Military Factory's SS2 spec listing gives 7.50 lb (3.40 kg) empty for the base SS2-V1; recorded as estimated rather than verified because the same listing's barrel-length figure is internally inconsistent with Wikipedia's own sourcing, which lowers confidence in the page generally. No Pindad-published figure for the base V1 was found — the manufacturer's own cited figures cover only the V2, V4, V5, SS3 and SPM-1 variants"
+  },
+  "length": {
+    "value": 990,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself, stock extended; corroborated by Military Factory's independently listed 990 mm overall length"
+  },
+  "lengthFolded": {
+    "value": 740,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself, stock folded"
+  },
+  "barrelLength": {
+    "value": 460,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox 'part_length' for the SS2-V1, uncited on Wikipedia itself"
+  },
+  "cyclicRate": {
+    "value": null,
+    "unit": "rpm",
+    "status": "conflicting-sources",
+    "source": "military-factory-ss2",
+    "sourceUrl": "https://web.archive.org/web/20121015175218/http://militaryfactory.com/smallarms/detail.asp?smallarms_id=594",
+    "sourceNote": "Wikipedia's infobox states 720-760 rpm (uncited on Wikipedia itself); Military Factory's independent spec listing states a single figure of 700 rpm, just outside that range"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox describes 'various STANAG magazines'; Military Factory's spec listing gives a 20- or 30-round detachable box magazine, and 30 rounds is recorded here as the standard STANAG capacity"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "ss2-v2",
+      "name": "SS2-V2",
+      "productionYears": { "start": 2005, "end": null },
+      "summary": "A carbine version of the SS2-V1 with a shorter barrel.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.8,
+          "unit": "kg",
+          "status": "estimated",
+          "sourceNote": "Wikipedia infobox, cited on Wikipedia to an Indonesian-language spec article (lancercell.com) whose ballistic-data table is presented as images rather than text and could not be independently re-read"
+        },
+        "length": {
+          "value": 920,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself, stock extended"
+        },
+        "lengthFolded": {
+          "value": 670,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself, stock folded"
+        },
+        "barrelLength": {
+          "value": 403,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "Wikipedia infobox 'part_length' for the SS2-V2, uncited on Wikipedia itself"
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "ss2-v4",
+      "name": "SS2-V4",
+      "productionYears": { "start": 2006, "end": null },
+      "summary": "The carrying handle is replaced with a Picatinny rail for scope mounting and the barrel lengthened and accurised, marketed as a designated-marksman configuration; 150 units were purchased by the Indonesian Army in 2007.",
+      "overrides": {
+        "massEmpty": {
+          "value": 4.15,
+          "unit": "kg",
+          "status": "estimated",
+          "sourceNote": "Wikipedia infobox, cited on Wikipedia to an Indonesian-language spec article (lancercell.com) whose ballistic-data table is presented as images rather than text and could not be independently re-read"
+        },
+        "length": {
+          "value": 990,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself, stock extended"
+        },
+        "lengthFolded": {
+          "value": 740,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself, stock folded"
+        },
+        "barrelLength": {
+          "value": 460,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "Wikipedia infobox 'part_length' for the SS2-V4, uncited on Wikipedia itself"
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "ss2-v5",
+      "name": "SS2-V5",
+      "productionYears": { "start": 2016, "end": null },
+      "summary": "A lighter, third-generation carbine with a folding-telescoping stock and Picatinny handguard rails, built for vehicle crews and airborne troops; ordered in large numbers by the Indonesian police.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.35,
+          "unit": "kg",
+          "status": "verified",
+          "source": "shephard-indo-defence-2016",
+          "sourceUrl": "https://web.archive.org/web/20161028140957/https://www.shephardmedia.com/news/landwarfareintl/indo-defence-2016-small-arms-revolution/",
+          "sourceNote": "Shephard Media's own reporting from Indo Defence 2016 states the SS2-V5 weighs 3.35 kg without magazine, matching the figure independently given in Wikipedia's infobox"
+        },
+        "barrelLength": {
+          "value": 252,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "Wikipedia infobox 'part_length' for the SS2-V5, uncited on Wikipedia itself"
+        },
+        "length": {
+          "value": null,
+          "unit": "mm",
+          "status": "conflicting-sources",
+          "source": "shephard-indo-defence-2016",
+          "sourceUrl": "https://web.archive.org/web/20161028140957/https://www.shephardmedia.com/news/landwarfareintl/indo-defence-2016-small-arms-revolution/",
+          "sourceNote": "Wikipedia's infobox states 770 mm extended / 520 mm folded (uncited on Wikipedia itself); Shephard Media's own reporting instead states the rifle is 725 mm long, without specifying a stock position — the two published figures disagree and neither is preferred here"
+        }
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/pindad-ss2/hero.webp",
+      "alt": "A Pindad SS2-V1 assault rifle in right side profile: a black rifle with a carrying handle over the receiver, ribbed handguard, side-folding stock extended, and a curved STANAG magazine",
+      "caption": "A Pindad SS2-V1, the base assault rifle configuration, photographed at Indo Defence 2008.",
+      "width": 1024,
+      "height": 300,
+      "credit": {
+        "author": "Dragunova",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SS2-V1_ID2008.jpg",
+        "title": "File:SS2-V1 ID2008.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/pindad-ss2/folded-stock.webp",
+      "alt": "An Indonesian soldier seen from behind, carrying a Pindad SS2 rifle slung across his back with its stock folded to the side",
+      "caption": "An SS2 carried with its side-folding stock folded, showing the compact travelling configuration the folding stock is meant to provide.",
+      "width": 674,
+      "height": 1200,
+      "credit": {
+        "author": "Nafisathallah",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pindad_SS-2.jpg",
+        "title": "File:Pindad SS-2.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "src": "images/guns/pindad-ss2/range-training.webp",
+      "alt": "A kneeling U.S. Army soldier shows an Indonesian TNI soldier a Pindad SS2 rifle fitted with an optical sight during a joint range training exercise",
+      "caption": "A U.S. Army soldier and a Tentara Nasional Indonesia (TNI) soldier with a rail-equipped SS2 during a Pindad SS2 assault rifle range as part of Super Garuda Shield 2022 at Baturaja Training Area, Indonesia.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Spc. Darbi Colson",
+        "sourceUrl": "https://www.dvidshub.net/image/7352307/super-garuda-shield-us-and-tni-soldiers-conduct-range-training",
+        "title": "Super Garuda Shield: U.S. and TNI Soldiers Conduct Range Training",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Army (3rd Mobile Brigade, 25th Infantry Division), VIRIN 220801-A-IV381-1137. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-pindad-ss2",
+      "type": "wikipedia",
+      "title": "Pindad SS2",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371888616",
+      "lang": "en",
+      "revision": "1371888616",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "shephard-indo-defence-2016",
+      "type": "web",
+      "title": "Indo Defence 2016: Small arms revolution",
+      "publisher": "Shephard Media",
+      "url": "https://web.archive.org/web/20161028140957/https://www.shephardmedia.com/news/landwarfareintl/indo-defence-2016-small-arms-revolution/",
+      "revision": "2016-10-28",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "military-factory-ss2",
+      "type": "web",
+      "title": "Pindad SS2 assault rifle (2006)",
+      "publisher": "Military Factory",
+      "url": "https://web.archive.org/web/20121015175218/http://militaryfactory.com/smallarms/detail.asp?smallarms_id=594",
+      "revision": "2012-10-15",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

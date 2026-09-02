@@ -1,0 +1,107 @@
+{
+  "id": "22-long",
+  "name": ".22 long",
+  "wikidataId": "Q1056993",
+  "aliases": [],
+  "introduced": 1871,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 15.57,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-long-en.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 22.56,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-long-en.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-long-en.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 7.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-long-en.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 5.74,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-long-en.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-long-en.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 100.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-22-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-long-en.pdf",
+    "sourceNote": "C.I.P. Pmax 1000 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [],
+  "images": [
+    {
+      "src": "images/cartridges/22-long/hero.webp",
+      "alt": "Two rimfire cartridges standing upright side by side, labelled below as .22 Long and .22 LR; the .22 Long on the left has a lighter-coloured case and a shorter bullet.",
+      "caption": "The .22 Long (left) beside the .22 Long Rifle (right), the cartridge it was largely superseded by.",
+      "width": 300,
+      "height": 395,
+      "credit": {
+        "author": "Ryan D. Larson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:22_Long_and_22_LR.jpg",
+        "title": "File:22 Long and 22 LR.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-22-long",
+      "type": "wikipedia",
+      "title": ".22 long",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1325495864",
+      "lang": "en",
+      "revision": "1325495864",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-22-long",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 22 Long",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-long-en.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

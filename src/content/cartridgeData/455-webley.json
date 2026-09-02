@@ -1,0 +1,133 @@
+{
+  "id": "455-webley",
+  "name": ".455 Webley",
+  "wikidataId": "Q158789",
+  "aliases": [
+    {
+      "name": ".455 Webley Mk II",
+      "kind": "military"
+    },
+    {
+      "name": "455 MK II",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "Royal Small Arms Factory, Enfield",
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 19.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-455-mk-ii",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page87.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length. This is the shorter Mk II case (19.5 mm / .77 in) that C.I.P. standardises; the original Mk I case was longer, at a published .886 in, and is not covered by any free standard."
+  },
+  "overallLength": {
+    "value": 32,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-455-mk-ii",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page87.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 11.57,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-455-mk-ii",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page87.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-455-mk-ii",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page87.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 12.15,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-455-mk-ii",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page87.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 12.14,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-455-mk-ii",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page87.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 90,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-455-mk-ii",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page87.pdf",
+    "sourceNote": "C.I.P. Pmax 900 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "mk-ii-fmj",
+      "name": "Mk II full metal jacket ball",
+      "manufacturer": "Royal Laboratory Woolwich Arsenal",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 17.17,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-455-webley",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368405372",
+        "sourceNote": "Cited article's ballistics table publishes 265 grains; converted here. No test barrel length is stated anywhere in the article for any load, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/455-webley/hero.webp",
+      "alt": "A labelled comparison of six .455 Webley cartridge marks (Mk I through Mk VI) standing upright, showing brass cases of different lengths and bullet-nose shapes ranging from long round-nose to short flat-tipped and hollow-point profiles, with headstamps shown below.",
+      "caption": "The full family of .455 Webley revolver cartridges, marks I through VI, showing the case-length and bullet-shape changes between marks; this entry's dimensions are the Mk II standard.",
+      "width": 1553,
+      "height": 1600,
+      "credit": {
+        "author": "Drake00",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:455_Webley_Revolver.jpg",
+        "title": "File:455 Webley Revolver.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-455-webley",
+      "type": "wikipedia",
+      "title": ".455 Webley",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368405372",
+      "lang": "en",
+      "revision": "1368405372",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-455-mk-ii",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 455 MK II",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page87.pdf",
+      "revision": "1984-06-14",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

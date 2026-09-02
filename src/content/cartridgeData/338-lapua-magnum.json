@@ -1,0 +1,280 @@
+{
+  "id": "338-lapua-magnum",
+  "name": ".338 Lapua Magnum",
+  "wikidataId": "Q158739",
+  "aliases": [
+    {
+      "name": "8.6x70mm",
+      "kind": "metric",
+      "note": "The C.I.P. designation."
+    },
+    {
+      "name": ".338 LM",
+      "kind": "nickname"
+    }
+  ],
+  "designedBy": "Nammo Lapua Oy",
+  "introduced": 1989,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 8.61,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-lapua-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/338-lapua-mag-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 69.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-lapua-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/338-lapua-mag-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 93.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-lapua-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/338-lapua-mag-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "rimDiameter": {
+    "value": 14.93,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-lapua-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/338-lapua-mag-en.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "neckDiameter": {
+    "value": 9.41,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-lapua-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/338-lapua-mag-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 14.91,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-lapua-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/338-lapua-mag-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "maxPressure": {
+    "value": 420.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-338-lapua-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/338-lapua-mag-en.pdf",
+    "sourceNote": "Pmax 4200 bar."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "lapua-250gr-scenar",
+      "name": "16.2 g (250 gr) Scenar",
+      "manufacturer": "Lapua",
+      "bulletType": "Scenar, Open Tip Match (GB488)",
+      "bulletMass": {
+        "value": 16.2,
+        "unit": "g",
+        "status": "verified",
+        "source": "lapua-338-gb488-cartridge",
+        "sourceUrl": "https://www.lapua.com/product/338-lapua-mag-tactical-target-cartridge-scenar-162g-250gr-4318017/",
+        "sourceNote": "16.2 g (250 gr) as published on the product page."
+      },
+      "bcG1": {
+        "value": 0.648,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-338-gb488-bullet",
+        "sourceUrl": "https://www.lapua.com/product/338-cal-scenar-bullet-gb488-162-g-250-gr-otm/",
+        "sourceNote": "Published as a single figure, not banded by velocity range."
+      },
+      "bcG7": {
+        "value": 0.322,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-338-gb488-bullet",
+        "sourceUrl": "https://www.lapua.com/product/338-cal-scenar-bullet-gb488-162-g-250-gr-otm/",
+        "sourceNote": "Published as a single figure, not banded by velocity range."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 680,
+            "unit": "mm",
+            "status": "verified",
+            "source": "lapua-338-gb488-cartridge",
+            "sourceUrl": "https://www.lapua.com/product/338-lapua-mag-tactical-target-cartridge-scenar-162g-250gr-4318017/",
+            "sourceNote": "Test barrel length stated on the product page's metric ballistics chart."
+          },
+          "velocity": {
+            "value": 905,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "lapua-338-gb488-cartridge",
+            "sourceUrl": "https://www.lapua.com/product/338-lapua-mag-tactical-target-cartridge-scenar-162g-250gr-4318017/",
+            "sourceNote": "Muzzle velocity from the product page's metric ballistics chart, 0 m."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lapua-300gr-scenar",
+      "name": "19.4 g (300 gr) Scenar",
+      "manufacturer": "Lapua",
+      "bulletType": "Scenar, Open Tip Match (GB528)",
+      "bulletMass": {
+        "value": 19.4,
+        "unit": "g",
+        "status": "verified",
+        "source": "lapua-338-gb528-cartridge",
+        "sourceUrl": "https://www.lapua.com/product/338-lapua-mag-tactical-target-cartridge-scenar-194g-300gr-4318013/",
+        "sourceNote": "19.4 g (300 gr) as published on the product page."
+      },
+      "bcG1": {
+        "value": 0.736,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-338-gb528-cartridge",
+        "sourceUrl": "https://www.lapua.com/product/338-lapua-mag-tactical-target-cartridge-scenar-194g-300gr-4318013/",
+        "sourceNote": "Published as a single figure, not banded by velocity range."
+      },
+      "bcG7": {
+        "value": 0.368,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-338-gb528-cartridge",
+        "sourceUrl": "https://www.lapua.com/product/338-lapua-mag-tactical-target-cartridge-scenar-194g-300gr-4318013/",
+        "sourceNote": "Published as a single figure, not banded by velocity range."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 680,
+            "unit": "mm",
+            "status": "verified",
+            "source": "lapua-338-gb528-cartridge",
+            "sourceUrl": "https://www.lapua.com/product/338-lapua-mag-tactical-target-cartridge-scenar-194g-300gr-4318013/",
+            "sourceNote": "Test barrel length stated on the product page's metric ballistics chart."
+          },
+          "velocity": {
+            "value": 820,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "lapua-338-gb528-cartridge",
+            "sourceUrl": "https://www.lapua.com/product/338-lapua-mag-tactical-target-cartridge-scenar-194g-300gr-4318013/",
+            "sourceNote": "Muzzle velocity from the product page's metric ballistics chart, 0 m."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/338-lapua-magnum/hero.webp",
+      "alt": "A single brass rifle cartridge with a long copper jacketed bullet tipped in dark green, standing upright on graph paper.",
+      "caption": "A loaded .338 Lapua Magnum round. The long, slender case and boat-tailed bullet are built to hold velocity out past 1,000 metres.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_.338_Lapua_Magnum.jpg",
+        "title": "File:Cartridge .338 Lapua Magnum.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/338-lapua-magnum/comparison.webp",
+      "alt": "Two brass rifle cartridges side by side against a plain grey background, labelled in white and red text. Both carry long pointed bullets and are close in size, the right one slightly longer with a sharper bullet ogive.",
+      "caption": "The .338 Lapua Magnum (left, loaded with a 250 gr Scenar) beside the wildcat .338 Norma Magnum (right, 300 gr Sierra MatchKing) that was designed to fit the same magazine length while using less powder.",
+      "width": 914,
+      "height": 1200,
+      "credit": {
+        "author": "SB Pete ( talk )",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.338_Lapua_Magnum_vs_.338_Norma_Magnum.jpg",
+        "title": "File:.338 Lapua Magnum vs .338 Norma Magnum.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/338-lapua-magnum/development.webp",
+      "alt": "Three brass cartridge cases standing base-up on a scarred metal ammunition can, headstamps facing the camera and legible on the two right-hand rounds.",
+      "caption": "Three sniper calibres compared base-up during a 2016 U.S. Marine Corps caliber study at Fort A.P. Hill: 7.62x51mm NATO, .300 Winchester Magnum, and .338 Lapua Magnum, fired at ranges from 900 to 1,500 m to inform future sniper rifle requirements.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Ashley Calingo",
+        "sourceUrl": "https://www.dvidshub.net/image/2754964/aiming-higher-caliber-developing-future-weapon-systems-marine-corps-snipers",
+        "title": "Aiming for a higher caliber: Developing future weapon systems for Marine Corps snipers",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Marines (Marine Corps Systems Command), VIRIN 160713-M-YL753-413. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-338-lapua-magnum",
+      "type": "wikipedia",
+      "title": ".338 Lapua Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1358573793",
+      "lang": "en",
+      "revision": "1358573793",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-338-lapua-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 338 Lapua Mag.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/338-lapua-mag-en.pdf",
+      "revision": "2016-10-18",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "lapua-338-gb488-cartridge",
+      "type": "manufacturer-spec",
+      "title": ".338 Lapua Mag. / 16.2 g (250 gr) Scenar — product page",
+      "publisher": "Lapua (Nammo)",
+      "url": "https://www.lapua.com/product/338-lapua-mag-tactical-target-cartridge-scenar-162g-250gr-4318017/",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "lapua-338-gb488-bullet",
+      "type": "manufacturer-spec",
+      "title": "8.61 cal Scenar bullet GB488, 16.2 g / 250 gr OTM — product page",
+      "publisher": "Lapua (Nammo)",
+      "url": "https://www.lapua.com/product/338-cal-scenar-bullet-gb488-162-g-250-gr-otm/",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "lapua-338-gb528-cartridge",
+      "type": "manufacturer-spec",
+      "title": ".338 Lapua Mag. / 19.4 g (300 gr) Scenar — product page",
+      "publisher": "Lapua (Nammo)",
+      "url": "https://www.lapua.com/product/338-lapua-mag-tactical-target-cartridge-scenar-194g-300gr-4318013/",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "dvids-2754964",
+      "type": "web",
+      "title": "Aiming for a higher caliber: Developing future weapon systems for Marine Corps snipers",
+      "publisher": "DVIDS / U.S. Marine Corps",
+      "url": "https://www.dvidshub.net/image/2754964/aiming-higher-caliber-developing-future-weapon-systems-marine-corps-snipers",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

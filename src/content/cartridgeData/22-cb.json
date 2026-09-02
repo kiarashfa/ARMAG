@@ -1,0 +1,132 @@
+{
+  "id": "22-cb",
+  "name": ".22 CB",
+  "wikidataId": "Q357474",
+  "aliases": [
+    {
+      "name": ".22 CB Cap",
+      "kind": "commercial"
+    },
+    {
+      "name": "6mm Flobert",
+      "kind": "metric",
+      "note": "The European name; the .22 BB Cap and .22 CB Cap are considered the same cartridge under this name."
+    }
+  ],
+  "designedBy": "Louis-Nicolas Flobert",
+  "introduced": 1888,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 6.86,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-cb-cap",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-cb-cap-en.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length, for the original small-case .22 CB Cap."
+  },
+  "overallLength": {
+    "value": 13.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-cb-cap",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-cb-cap-en.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-cb-cap",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-cb-cap-en.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 7.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-cb-cap",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-cb-cap-en.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-cb-cap",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-cb-cap-en.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-22-cb-cap",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-cb-cap-en.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "loads": [
+    {
+      "id": "dynamit-nobel-6mm-flobert",
+      "name": "Dynamit Nobel 6 mm Flobert Patronen",
+      "bulletMass": {
+        "value": 1.166,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox, citing Cartridges of the World, 11th Edition (Barnes/Skinner, 2006), a book with no clickable primary source; published as 18 gr. No barrel-length-stated velocity exists for this load, so no velocity point is recorded."
+      },
+      "bulletType": "unspecified, 18 gr"
+    },
+    {
+      "id": "sellier-bellot-22-flobert-cb",
+      "name": "Sellier & Bellot .22 FLOBERT CB",
+      "bulletMass": {
+        "value": 1.166,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox, citing Cartridges of the World, 11th Edition (Barnes/Skinner, 2006), a book with no clickable primary source; published as 18 gr. No barrel-length-stated velocity exists for this load, so no velocity point is recorded."
+      },
+      "bulletType": "unspecified, 18 gr"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/22-cb/hero.webp",
+      "alt": "Three rimfire cartridges of increasing size standing upright: a very short, wide-headed cartridge with a conical bullet almost as tall as its case on the left, a slightly taller round-nosed cartridge in the middle, and a longer one on the right.",
+      "caption": "The original small-case .22 CB Cap (left) beside a .22 Short (centre) and a .22 Long Rifle (right) for scale.",
+      "width": 400,
+      "height": 499,
+      "credit": {
+        "author": "Bn450gts at English Wikipedia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bb_capsmall2.jpg",
+        "title": "File:Bb capsmall2.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-22-cb",
+      "type": "wikipedia",
+      "title": ".22 CB",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1346824792",
+      "lang": "en",
+      "revision": "1346824792",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-22-cb-cap",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 22 CB Cap",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-cb-cap-en.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

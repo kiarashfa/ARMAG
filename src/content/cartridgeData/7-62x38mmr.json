@@ -1,0 +1,184 @@
+{
+  "id": "7-62x38mmr",
+  "name": "7.62×38mmR",
+  "wikidataId": "Q259166",
+  "aliases": [
+    { "name": "7.62mm Nagant", "kind": "metric" },
+    { "name": "7.62 Nagant", "kind": "commercial" }
+  ],
+  "designedBy": "Léon Nagant",
+  "introduced": 1895,
+  "productionYears": { "start": 1895, "end": null },
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 7.82,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-nagant",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page10.pdf",
+    "sourceNote": "C.I.P. TDCC table 4 datasheet, field G1"
+  },
+  "caseLength": {
+    "value": 38.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-nagant",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page10.pdf",
+    "sourceNote": "C.I.P. TDCC table 4 datasheet, field L3"
+  },
+  "overallLength": {
+    "value": 37.3,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-nagant",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page10.pdf",
+    "sourceNote": "C.I.P. TDCC table 4 datasheet, field L6 — shorter than the case length itself, because the bullet is seated flush inside the case mouth"
+  },
+  "rimDiameter": {
+    "value": 10.3,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-nagant",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page10.pdf",
+    "sourceNote": "C.I.P. TDCC table 4 datasheet, field R1"
+  },
+  "neckDiameter": {
+    "value": 8.42,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-nagant",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page10.pdf",
+    "sourceNote": "C.I.P. TDCC table 4 datasheet, field H2"
+  },
+  "baseDiameter": {
+    "value": 9.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62-nagant",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page10.pdf",
+    "sourceNote": "C.I.P. TDCC table 4 datasheet, field P1"
+  },
+  "maxPressure": {
+    "value": 77.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7-62-nagant",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page10.pdf",
+    "sourceNote": "C.I.P. TDCC table 4 datasheet, Pmax 770 bar"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "fmj-7g",
+      "name": "FMJ 7 g",
+      "bulletMass": {
+        "value": 7,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; the m/s reading reproduces the article's own published energy to 0.2% via ½mv²"
+      },
+      "bulletType": "FMJ",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 114,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "Wikipedia infobox test_barrel_length, uncited on Wikipedia itself"
+          },
+          "velocity": {
+            "value": 305,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; ½mv² reproduces the published 325 J energy figure to 0.2%, confirming the m/s reading"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fmj-6-35g",
+      "name": "FMJ 6.35 g",
+      "bulletMass": {
+        "value": 6.35,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; the m/s reading reproduces the article's own published energy to 0.5% via ½mv²"
+      },
+      "bulletType": "FMJ",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 114,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "Wikipedia infobox test_barrel_length, uncited on Wikipedia itself"
+          },
+          "velocity": {
+            "value": 225,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; ½mv² reproduces the published 160 J energy figure to 0.5%, confirming the m/s reading"
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7-62x38mmr/hero.webp",
+      "alt": "Three revolver cartridges standing upright and lying flat: .32 S&W Long and .32 H&R Magnum with visible lead or jacketed bullet noses, and a 7.62x38R Nagant whose case mouth is crimped shut over a bullet seated entirely inside the case",
+      "caption": "A commercial 7.62×38mmR round beside .32 S&W Long and .32 H&R Magnum for scale — the Nagant case shows no exposed bullet at all, because the bullet is seated flush with (and crimped inside) the case mouth.",
+      "width": 627,
+      "height": 575,
+      "credit": {
+        "author": "Drake00",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:76238comparison.jpg",
+        "title": "File:76238comparison.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/7-62x38mmr/crimps.webp",
+      "alt": "Seven brass 7.62×38mmR cases standing in a row, each showing a slightly different case-mouth crimp from a different commercial manufacturer",
+      "caption": "Seven commercially manufactured 7.62mm Nagant cases (RWS and Geco of Germany, an unmarked GB headstamp, SFM of France, PS of Czechoslovakia, and a modern GFL of Italy), showing how the mouth crimp that seals the bullet inside the case varies by maker.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Costas-1963",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7,62_mm_Nagant_revolver_cartridges_with_different_case_mouth_crimps.jpg",
+        "title": "File:7,62 mm Nagant revolver cartridges with different case mouth crimps.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-7-62x38mmr",
+      "type": "wikipedia",
+      "title": "7.62×38mmR",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1316173032",
+      "lang": "en",
+      "revision": "1316173032",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-7-62-nagant",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7,62 Nagant (table 4)",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page10.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-09-01"
+    }
+  ]
+}

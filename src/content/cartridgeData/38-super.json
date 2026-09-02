@@ -1,0 +1,153 @@
+{
+  "id": "38-super",
+  "name": ".38 Super",
+  "wikidataId": "Q158769",
+  "aliases": [],
+  "designedBy": "Colt's Manufacturing Company",
+  "introduced": 1929,
+  "standard": "cip",
+  "caseType": "semi-rimmed",
+  "caseShape": "straight",
+  "caseLength": {
+    "value": 22.86,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-super-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page61.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 32.51,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-super-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page61.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 9.04,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-super-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page61.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 10.31,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-super-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page61.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 9.75,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-super-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page61.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 9.75,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-super-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page61.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 230,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-38-super-auto",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page61.pdf",
+    "sourceNote": "C.I.P. Pmax 2300 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "fed-ae-115-jhp",
+      "name": "Federal American Eagle 115 gr jacketed hollow point +P",
+      "manufacturer": "Federal",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 7.45,
+        "unit": "g",
+        "status": "verified",
+        "source": "fed-ae38s3",
+        "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle/american-eagle-handgun/11-AE38S3.html",
+        "sourceNote": "Published as 115 grains."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 127,
+            "unit": "mm",
+            "status": "verified",
+            "source": "fed-ae38s3",
+            "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle/american-eagle-handgun/11-AE38S3.html",
+            "sourceNote": "Test barrel stated as 5 inches."
+          },
+          "velocity": {
+            "value": 344.4,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "fed-ae38s3",
+            "sourceUrl": "https://www.federalpremium.com/handgun/american-eagle/american-eagle-handgun/11-AE38S3.html",
+            "sourceNote": "Published as 1,130 ft/s."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/38-super/hero.webp",
+      "alt": "A .38 Super pistol cartridge standing upright, a round-nose full metal jacket bullet seated in a brass semi-rimmed case.",
+      "caption": "A .38 Super cartridge loaded with a round-nose FMJ bullet.",
+      "width": 221,
+      "height": 245,
+      "credit": {
+        "author": "Ken",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.38_Super.jpg",
+        "title": "File:.38 Super.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-01",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-38-super",
+      "type": "wikipedia",
+      "title": ".38 Super",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368969486",
+      "lang": "en",
+      "revision": "1368969486",
+      "accessed": "2026-09-01",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-38-super-auto",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 38 Super Auto",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page61.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-09-01"
+    },
+    {
+      "key": "fed-ae38s3",
+      "type": "manufacturer-spec",
+      "title": "American Eagle Handgun .38 Super +P, 115 gr JHP (product page)",
+      "publisher": "Federal Premium",
+      "url": "https://www.federalpremium.com/handgun/american-eagle/american-eagle-handgun/11-AE38S3.html",
+      "accessed": "2026-09-01"
+    }
+  ]
+}
