@@ -1,0 +1,192 @@
+{
+  "id": "41-remington-magnum",
+  "name": ".41 Remington Magnum",
+  "wikidataId": "Q4545348",
+  "aliases": [
+    { "name": ".41 Rem. Mag.", "kind": "commercial" },
+    { "name": "41 Mag", "kind": "nickname" }
+  ],
+  "designedBy": "Elmer Keith, Bill Jordan, Skeeter Skelton",
+  "introduced": 1964,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 10.41,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page69.pdf",
+    "source": "cip-41-rem-mag"
+  },
+  "caseLength": {
+    "value": 32.77,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page69.pdf",
+    "source": "cip-41-rem-mag"
+  },
+  "overallLength": {
+    "value": 40.39,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page69.pdf",
+    "source": "cip-41-rem-mag"
+  },
+  "rimDiameter": {
+    "value": 12.5,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page69.pdf",
+    "source": "cip-41-rem-mag"
+  },
+  "neckDiameter": {
+    "value": 11.02,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page69.pdf",
+    "source": "cip-41-rem-mag"
+  },
+  "baseDiameter": {
+    "value": 11.05,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page69.pdf",
+    "source": "cip-41-rem-mag"
+  },
+  "maxPressure": {
+    "value": 300.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page69.pdf",
+    "source": "cip-41-rem-mag"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "170gr-jhp-corbon",
+      "name": "170 gr JHP (Cor-Bon)",
+      "manufacturer": "Cor-Bon",
+      "bulletMass": {
+        "value": 11.02,
+        "unit": "g",
+        "status": "verified",
+        "sourceUrl": "http://ballisticsbytheinch.com/41mag.html",
+        "sourceNote": "170 gr, per Ballistics by the Inch.",
+        "source": "bti-41mag"
+      },
+      "bulletType": "JHP",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 165.1, "unit": "mm", "status": "verified", "sourceUrl": "http://ballisticsbytheinch.com/41mag.html", "source": "bti-41mag" },
+          "velocity": { "value": 388.6, "unit": "m/s", "status": "verified", "sourceUrl": "http://ballisticsbytheinch.com/41mag.html", "sourceNote": "6.5 in test barrel; ½mv² reproduces the published 614 ft·lbf to within 0.1%.", "source": "bti-41mag" }
+        }
+      ]
+    },
+    {
+      "id": "210gr-jhp",
+      "name": "210 gr JHP",
+      "bulletMass": {
+        "value": 13.61,
+        "unit": "g",
+        "status": "verified",
+        "sourceUrl": "http://ballisticsbytheinch.com/41mag.html",
+        "sourceNote": "210 gr, per Ballistics by the Inch.",
+        "source": "bti-41mag"
+      },
+      "bulletType": "JHP",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 165.1, "unit": "mm", "status": "verified", "sourceUrl": "http://ballisticsbytheinch.com/41mag.html", "source": "bti-41mag" },
+          "velocity": { "value": 475.5, "unit": "m/s", "status": "verified", "sourceUrl": "http://ballisticsbytheinch.com/41mag.html", "sourceNote": "6.5 in test barrel; ½mv² reproduces the published 1135 ft·lbf almost exactly.", "source": "bti-41mag" }
+        }
+      ]
+    },
+    {
+      "id": "240gr-fmj-plus-p-winchester",
+      "name": "240 gr FMJ +P (Winchester)",
+      "manufacturer": "Winchester",
+      "bulletMass": {
+        "value": 15.55,
+        "unit": "g",
+        "status": "verified",
+        "sourceUrl": "http://ballisticsbytheinch.com/41mag.html",
+        "sourceNote": "240 gr, per Ballistics by the Inch.",
+        "source": "bti-41mag"
+      },
+      "bulletType": "FMJ +P",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 165.1, "unit": "mm", "status": "verified", "sourceUrl": "http://ballisticsbytheinch.com/41mag.html", "source": "bti-41mag" },
+          "velocity": { "value": 381.0, "unit": "m/s", "status": "verified", "sourceUrl": "http://ballisticsbytheinch.com/41mag.html", "sourceNote": "6.5 in test barrel; ½mv² reproduces the published 833 ft·lbf to within 0.1%.", "source": "bti-41mag" }
+        }
+      ]
+    },
+    {
+      "id": "265gr-hp-gc-buffalo-bore-heavy",
+      "name": "265 gr HP-GC (Buffalo Bore Heavy)",
+      "manufacturer": "Buffalo Bore",
+      "bulletMass": {
+        "value": 17.17,
+        "unit": "g",
+        "status": "verified",
+        "sourceUrl": "http://ballisticsbytheinch.com/41mag.html",
+        "sourceNote": "265 gr, per Ballistics by the Inch.",
+        "source": "bti-41mag"
+      },
+      "bulletType": "HP-GC",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 165.1, "unit": "mm", "status": "verified", "sourceUrl": "http://ballisticsbytheinch.com/41mag.html", "source": "bti-41mag" },
+          "velocity": { "value": 411.5, "unit": "m/s", "status": "verified", "sourceUrl": "http://ballisticsbytheinch.com/41mag.html", "sourceNote": "6.5 in test barrel; ½mv² reproduces the published 1072 ft·lbf almost exactly.", "source": "bti-41mag" }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/41-remington-magnum/hero.webp",
+      "alt": "A rimmed revolver cartridge with a brass case and a soft-point bullet, lying on a millimetre ruler that measures it at roughly 41 mm overall.",
+      "caption": "A .41 Remington Magnum cartridge loaded with a soft-point bullet, shown against a metric scale.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Malis",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:41_Remington_Magnum_-_SP_-_2.jpg",
+        "title": "File:41 Remington Magnum - SP - 2.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-41-remington-magnum",
+      "type": "wikipedia",
+      "title": ".41 Remington Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368969581",
+      "lang": "en",
+      "revision": "1368969581",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-41-rem-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 41 Rem. Mag.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page69.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-09-02"
+    },
+    {
+      "key": "bti-41mag",
+      "type": "web",
+      "title": "Ballistics by the Inch — .41 Magnum",
+      "publisher": "ballisticsbytheinch.com",
+      "url": "http://ballisticsbytheinch.com/41mag.html",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

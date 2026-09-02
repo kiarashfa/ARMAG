@@ -1,0 +1,153 @@
+{
+  "id": "heckler-koch-vp70",
+  "name": "Heckler & Koch VP70",
+  "kind": "model",
+  "wikidataId": "Q1542889",
+  "makerRef": "heckler-koch",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "VP70M", "kind": "commercial" },
+    { "name": "VP70Z", "kind": "commercial" },
+    { "name": "Volkspistole", "kind": "nickname" }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "germany",
+  "producedIn": ["germany"],
+  "introduced": 1970,
+  "fireModes": ["semi", "burst"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 0.82,
+    "unit": "kg",
+    "status": "verified",
+    "sourceUrl": "https://web.archive.org/web/20130101055037/http://www.remtek.com/arms/hk/civ/vp/vp70z.htm",
+    "sourceNote": "Manufacturer specification data for the VP70Z reproduced by Remtek ('information courtesy of Heckler and Koch'), archived; weight is without magazine.",
+    "source": "remtek-vp70z"
+  },
+  "length": {
+    "value": 204,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://web.archive.org/web/20130101055037/http://www.remtek.com/arms/hk/civ/vp/vp70z.htm",
+    "source": "remtek-vp70z"
+  },
+  "barrelLength": {
+    "value": 116,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://web.archive.org/web/20130101055037/http://www.remtek.com/arms/hk/civ/vp/vp70z.htm",
+    "source": "remtek-vp70z"
+  },
+  "width": {
+    "value": 32,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://web.archive.org/web/20130101055037/http://www.remtek.com/arms/hk/civ/vp/vp70z.htm",
+    "source": "remtek-vp70z"
+  },
+  "height": {
+    "value": 142,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://web.archive.org/web/20130101055037/http://www.remtek.com/arms/hk/civ/vp/vp70z.htm",
+    "source": "remtek-vp70z"
+  },
+  "sightRadius": {
+    "value": 175,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://web.archive.org/web/20130101055037/http://www.remtek.com/arms/hk/civ/vp/vp70z.htm",
+    "source": "remtek-vp70z"
+  },
+  "cyclicRate": {
+    "value": 2200,
+    "unit": "rpm",
+    "status": "estimated",
+    "sourceNote": "Stated in the article body for the VP70M's three-round-burst mode, with no inline citation of its own; the VP70Z carries no burst mode and no cyclic rate."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 18,
+        "unit": "",
+        "status": "verified",
+        "sourceUrl": "https://web.archive.org/web/20130101055037/http://www.remtek.com/arms/hk/civ/vp/vp70z.htm",
+        "source": "remtek-vp70z"
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "9x21mm",
+      "capacity": {
+        "value": 18,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "About 400 VP70Z pistols were built in 9×21mm IMI for the Italian civilian market, where 9×19mm was then restricted to military and police use. No source gives a magazine capacity specific to this chambering; the standard 18-round magazine is assumed unchanged."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/heckler-koch-vp70/hero.webp",
+      "alt": "A black polymer-framed pistol lying on its side, slide markings reading 'Mod. VP70Z HECKLER & KOCH GMBH OBERNDORF/N MADE IN GERMANY 9 MM x 19', with a flashlight and holster in the background.",
+      "caption": "A VP70Z, the semi-automatic-only civilian variant, showing its slide markings and the double-action-only trigger.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Hecklerfan",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vp70z.jpg",
+        "title": "File:Vp70z.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/heckler-koch-vp70/stocked.webp",
+      "alt": "A line drawing of a pistol with a long boxy shoulder stock attached behind the grip, shown in profile.",
+      "caption": "A line drawing of the VP70M with its detachable holster-stock mounted, the configuration that enables the three-round-burst mode.",
+      "width": 841,
+      "height": 249,
+      "credit": {
+        "author": "Evers",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:VP70M.jpg",
+        "title": "File:VP70M.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-heckler-koch-vp70",
+      "type": "wikipedia",
+      "title": "Heckler & Koch VP70",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362866507",
+      "lang": "en",
+      "revision": "1362866507",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "remtek-vp70z",
+      "type": "web",
+      "title": "Heckler & Koch VP 70Z Specifications",
+      "publisher": "Remtek (from Heckler & Koch data)",
+      "url": "https://web.archive.org/web/20130101055037/http://www.remtek.com/arms/hk/civ/vp/vp70z.htm",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

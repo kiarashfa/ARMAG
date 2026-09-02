@@ -1,0 +1,139 @@
+{
+  "id": "5-45x18mm",
+  "name": "5.45×18mm",
+  "wikidataId": "Q238418",
+  "aliases": [
+    { "name": "5.45×18mm MPTs", "kind": "military" },
+    { "name": "7N7", "kind": "military", "note": "GRAU index for the standard ball loading." }
+  ],
+  "designedBy": "A.D. Denisova, A.I. Bochin, L.S. Nikolayeva, G.P. Shamina",
+  "introduced": 1973,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 5.63,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page2.pdf",
+    "source": "cip-5-45-x-18"
+  },
+  "caseLength": {
+    "value": 18.03,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page2.pdf",
+    "source": "cip-5-45-x-18"
+  },
+  "overallLength": {
+    "value": 25,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page2.pdf",
+    "source": "cip-5-45-x-18"
+  },
+  "rimDiameter": {
+    "value": 7.64,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page2.pdf",
+    "source": "cip-5-45-x-18"
+  },
+  "neckDiameter": {
+    "value": 6.26,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page2.pdf",
+    "source": "cip-5-45-x-18"
+  },
+  "baseDiameter": {
+    "value": 7.64,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page2.pdf",
+    "source": "cip-5-45-x-18"
+  },
+  "maxPressure": {
+    "value": 175.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page2.pdf",
+    "source": "cip-5-45-x-18"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "7n7-fmj",
+      "name": "7N7 FMJ",
+      "bulletMass": {
+        "value": 3.0,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure, attributed only to 'C.I.P.' with no clickable datasheet page located for this ballistics figure specifically. ½mv² from the stated 320 m/s reproduces 153.6 J, not the infobox's own published 128 J — an internal inconsistency in the source, noted rather than resolved by guessing which figure is correct."
+      },
+      "bulletType": "FMJ",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 84, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox figure, attributed only to 'C.I.P.' with no clickable datasheet page located for this figure specifically." },
+          "velocity": { "value": 320, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure; see the note on bulletMass for the energy inconsistency this figure does not resolve." }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/5-45x18mm/hero.webp",
+      "alt": "A small rimless bottleneck pistol cartridge with a rounded jacketed bullet, photographed on graph paper.",
+      "caption": "A 5.45×18mm 7N7 round.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_5.45x18mm.jpg",
+        "title": "File:Cartridge 5.45x18mm.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/5-45x18mm/psm.webp",
+      "alt": "A small field-stripped pistol laid out in three parts — frame, slide and magazine — on a green cloth.",
+      "caption": "A field-stripped PSM, the compact Soviet pistol the 5.45×18mm cartridge was designed for.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:5,45x18_пистолет_самозарядный_малогабаритный_ПСМ_19.jpg",
+        "title": "File:5,45x18 пистолет самозарядный малогабаритный ПСМ 19.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-5-45x18mm",
+      "type": "wikipedia",
+      "title": "5.45×18mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1203594836",
+      "lang": "en",
+      "revision": "1203594836",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-5-45-x-18",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 5,45 x 18",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page2.pdf",
+      "revision": "2006-09-19",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

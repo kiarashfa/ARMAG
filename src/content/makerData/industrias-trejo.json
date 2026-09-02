@@ -1,0 +1,21 @@
+{
+  "id": "industrias-trejo",
+  "name": "Industrias Trejo de Zacatlán",
+  "country": "mexico",
+  "founded": 1948,
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-trejo-pistol",
+      "type": "wikipedia",
+      "title": "Trejo pistol",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1358025384",
+      "lang": "en",
+      "revision": "1358025384",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

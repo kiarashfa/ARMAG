@@ -1,0 +1,123 @@
+{
+  "id": "la-france-m16k",
+  "name": "La France M16K",
+  "kind": "model",
+  "wikidataId": "Q4042513",
+  "makerRef": "la-france-specialties",
+  "familyRef": "ar-15",
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {
+    "derivedFrom": "m16-rifle"
+  },
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-direct-impingement",
+  "designedIn": "united-states",
+  "producedIn": [
+    "united-states"
+  ],
+  "introduced": 1982,
+  "productionYears": {
+    "start": 1982,
+    "end": 2004
+  },
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence"
+  ],
+  "massEmpty": {
+    "value": 2.3814,
+    "unit": "kg",
+    "status": "verified",
+    "source": "guns-com-m16k-review",
+    "sourceUrl": "https://web.archive.org/web/20170420022611/http://www.guns.com/reviews/la-france-m16k/",
+    "sourceNote": "5.25 lb, unloaded."
+  },
+  "length": {
+    "value": 673.1,
+    "unit": "mm",
+    "status": "verified",
+    "source": "guns-com-m16k-review",
+    "sourceUrl": "https://web.archive.org/web/20170420022611/http://www.guns.com/reviews/la-france-m16k/",
+    "sourceNote": "26.5 in overall, stock extended."
+  },
+  "lengthFolded": {
+    "value": 596.9,
+    "unit": "mm",
+    "status": "verified",
+    "source": "guns-com-m16k-review",
+    "sourceUrl": "https://web.archive.org/web/20170420022611/http://www.guns.com/reviews/la-france-m16k/",
+    "sourceNote": "23.5 in overall, stock collapsed. The AR-15/M16-pattern buttstock telescopes rather than folding."
+  },
+  "barrelLength": {
+    "value": 206.4,
+    "unit": "mm",
+    "status": "verified",
+    "source": "guns-com-m16k-review",
+    "sourceUrl": "https://web.archive.org/web/20170420022611/http://www.guns.com/reviews/la-france-m16k/",
+    "sourceNote": "8.125 in, matching Wikipedia's uncited infobox figure of 8+1/8 in."
+  },
+  "cyclicRate": {
+    "value": null,
+    "unit": "rpm",
+    "status": "conflicting-sources",
+    "source": "national-interest-m16k",
+    "sourceUrl": "https://nationalinterest.org/blog/buzz/could-army-use-smaller-m-16-rifle-107981",
+    "sourceNote": "Wikipedia's infobox states 650 rounds per minute for the 5.56 mm M16K and 625 for the M16K-45, with no inline citation anywhere in the article. The National Interest states the adjustable gas system 'ensures the carbine's cyclical rate remains below 600 rounds per minute.' The two accounts disagree, so no figure is recorded."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "guns-com-m16k-review",
+        "sourceUrl": "https://web.archive.org/web/20170420022611/http://www.guns.com/reviews/la-france-m16k/",
+        "sourceNote": "Guns.com's spec table lists magazine capacities as '20 and 30' without splitting by chambering. Wikipedia's uncited infobox attributes the 30-round box magazine to this 5.56 mm chambering specifically and the 20/30-round M1 Thompson magazine to the separate .45 ACP M16K-45."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-la-france-m16k",
+      "type": "wikipedia",
+      "title": "La France M16K",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1324756921",
+      "lang": "en",
+      "revision": "1324756921",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "guns-com-m16k-review",
+      "type": "web",
+      "title": "M16K",
+      "publisher": "Guns.com",
+      "url": "https://web.archive.org/web/20170420022611/http://www.guns.com/reviews/la-france-m16k/",
+      "accessed": "2026-09-02"
+    },
+    {
+      "key": "national-interest-m16k",
+      "type": "periodical",
+      "title": "Could The Army Use A Smaller M-16 Rifle?",
+      "publisher": "The National Interest",
+      "url": "https://nationalinterest.org/blog/buzz/could-army-use-smaller-m-16-rifle-107981",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "id": "trejo-pistol",
+  "name": "Trejo pistol",
+  "kind": "model",
+  "wikidataId": "Q7837935",
+  "makerRef": "industrias-trejo",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Trejo Modelo 1",
+      "kind": "commercial"
+    },
+    {
+      "name": "Tipo Ráfaga",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "mexico",
+  "introduced": 1948,
+  "producedIn": [
+    "mexico"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "concealed-carry",
+    "personal-defence"
+  ],
+  "massEmpty": {
+    "value": 0.623,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's own specifications table for the Modelo 1 'Tipo Ráfaga', compiled from Guns.com and a Spanish-language enthusiast blog; no single primary source states this figure independently."
+  },
+  "length": {
+    "value": 160,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's own specifications table for the Modelo 1 'Tipo Ráfaga', compiled from Guns.com and a Spanish-language enthusiast blog; no single primary source states this figure independently."
+  },
+  "barrelLength": {
+    "value": 75,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's own specifications table for the Modelo 1 'Tipo Ráfaga', compiled from Guns.com and a Spanish-language enthusiast blog; no single primary source states this figure independently."
+  },
+  "cyclicRate": {
+    "value": 1350,
+    "unit": "rpm",
+    "status": "estimated",
+    "sourceNote": "Sources describe a rate of 1,300-1,400 rounds per minute; midpoint recorded here, range in this note."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "22-long-rifle",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's own specifications table for the Modelo 1 'Tipo Ráfaga', compiled from Guns.com and a Spanish-language enthusiast blog."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-trejo-pistol",
+      "type": "wikipedia",
+      "title": "Trejo pistol",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1358025384",
+      "lang": "en",
+      "revision": "1358025384",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "guns-com-trejo",
+      "type": "web",
+      "title": "The Trejo Machine Pistol: One Hot Tamale",
+      "publisher": "Guns.com",
+      "url": "https://web.archive.org/web/20211113083014/https://www.guns.com/news/2013/07/11/the-trejo-machine-pistol-one-hot-tamale",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

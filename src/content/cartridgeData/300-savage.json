@@ -1,0 +1,168 @@
+{
+  "id": "300-savage",
+  "name": ".300 Savage",
+  "wikidataId": "Q4545249",
+  "aliases": [
+    { "name": "300 Savage", "kind": "commercial" }
+  ],
+  "designedBy": "Savage Arms",
+  "introduced": 1920,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page120.pdf",
+    "source": "cip-300-savage"
+  },
+  "caseLength": {
+    "value": 47.52,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page120.pdf",
+    "source": "cip-300-savage"
+  },
+  "overallLength": {
+    "value": 66.04,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page120.pdf",
+    "source": "cip-300-savage"
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page120.pdf",
+    "source": "cip-300-savage"
+  },
+  "neckDiameter": {
+    "value": 8.61,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page120.pdf",
+    "source": "cip-300-savage"
+  },
+  "baseDiameter": {
+    "value": 11.99,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page120.pdf",
+    "source": "cip-300-savage"
+  },
+  "maxPressure": {
+    "value": 365.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page120.pdf",
+    "source": "cip-300-savage"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "150gr-core-lokt-remington",
+      "name": "150 gr Core-Lokt (Remington)",
+      "manufacturer": "Remington",
+      "bulletMass": {
+        "value": 9.72,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (150 gr), citing MidwayUSA, a retailer rather than Remington directly; Remington's own site did not resolve to a usable product page."
+      },
+      "bulletType": "Core-Lokt soft point",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 609.6, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox states a 24 in test barrel for this cartridge's loads generally." },
+          "velocity": { "value": 801.6, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure (2630 ft/s); ½mv² reproduces the published 2303 ft·lbf closely, but the source is MidwayUSA, a retailer, not Remington directly." }
+        }
+      ]
+    },
+    {
+      "id": "150gr-sst-hornady-superformance",
+      "name": "150 gr SST (Hornady Superformance)",
+      "manufacturer": "Hornady",
+      "bulletMass": {
+        "value": 9.72,
+        "unit": "g",
+        "status": "verified",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/300-savage-150-gr-sst-superformance",
+        "sourceNote": "150 gr, per Hornady's own product page.",
+        "source": "hornady-300savage-150sst"
+      },
+      "bulletType": "SST",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 609.6, "unit": "mm", "status": "verified", "sourceUrl": "https://www.hornady.com/ammunition/rifle/300-savage-150-gr-sst-superformance", "sourceNote": "24 in test barrel, stated on Hornady's own product page.", "source": "hornady-300savage-150sst" },
+          "velocity": { "value": 835.2, "unit": "m/s", "status": "verified", "sourceUrl": "https://www.hornady.com/ammunition/rifle/300-savage-150-gr-sst-superformance", "sourceNote": "Muzzle velocity 2740 ft/s from Hornady's own ballistics table, which does not publish a ballistic coefficient in static HTML.", "source": "hornady-300savage-150sst" }
+        }
+      ]
+    },
+    {
+      "id": "180gr-soft-point-federal",
+      "name": "180 gr soft point (Federal)",
+      "manufacturer": "Federal",
+      "bulletMass": {
+        "value": 11.66,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (180 gr), citing MidwayUSA, a retailer rather than Federal directly."
+      },
+      "bulletType": "soft point",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 609.6, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox states a 24 in test barrel for this cartridge's loads generally." },
+          "velocity": { "value": 716.3, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure (2350 ft/s); ½mv² reproduces the published 2207 ft·lbf closely, but the source is MidwayUSA, a retailer, not Federal directly." }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/300-savage/hero.webp",
+      "alt": "Two rimless bottleneck rifle cartridges standing upright side by side, the left one slightly taller with a red-tipped bullet, the right one with a plain lead-tipped bullet.",
+      "caption": "A .308 Winchester (left) beside a .300 Savage (right), the shorter, older cartridge whose case capacity and short-action length the .308 was designed to match and eventually displace.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Derekm280",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.300savagepic.JPG",
+        "title": "File:.300savagepic.JPG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-300-savage",
+      "type": "wikipedia",
+      "title": ".300 Savage",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370790949",
+      "lang": "en",
+      "revision": "1370790949",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-300-savage",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 300 Savage",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page120.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-02"
+    },
+    {
+      "key": "hornady-300savage-150sst",
+      "type": "web",
+      "title": "300 Savage 150 gr SST Superformance",
+      "publisher": "Hornady Manufacturing",
+      "url": "https://www.hornady.com/ammunition/rifle/300-savage-150-gr-sst-superformance",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

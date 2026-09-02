@@ -1,0 +1,82 @@
+{
+  "id": "476-enfield",
+  "name": ".476 Enfield",
+  "wikidataId": "Q4545379",
+  "aliases": [
+    { "name": ".476 Enfield Mark III", "kind": "military" },
+    { "name": ".455/476 Revolver", "kind": "nickname" }
+  ],
+  "introduced": 1881,
+  "standard": "none",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 11.56,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure (.455 in), citing the book Barnes & Amber 1972 (Frank C. Barnes' Cartridges of the World), which cannot carry a `verified` status without a clickable source. No free C.I.P. or SAAMI standard exists for this obsolete British service cartridge."
+  },
+  "caseLength": {
+    "value": 22.1,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure (0.87 in), citing the book Barnes & Amber 1972, which cannot carry a `verified` status without a clickable source."
+  },
+  "overallLength": {
+    "value": 33.8,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure (1.33 in), citing the book Barnes & Amber 1972, which cannot carry a `verified` status without a clickable source."
+  },
+  "rimDiameter": {
+    "value": 13.46,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure (.530 in), citing the book Barnes & Amber 1972, which cannot carry a `verified` status without a clickable source."
+  },
+  "neckDiameter": {
+    "value": 12.04,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure (.474 in), citing the book Barnes & Amber 1972, which cannot carry a `verified` status without a clickable source."
+  },
+  "baseDiameter": {
+    "value": 12.14,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure (.478 in), citing the book Barnes & Amber 1972, which cannot carry a `verified` status without a clickable source."
+  },
+  "loads": [],
+  "images": [
+    {
+      "src": "images/cartridges/476-enfield/hero.webp",
+      "alt": "Four rimmed revolver cartridges with brass cases and lead round-nose bullets, standing upright side by side; the leftmost is slightly shorter than the other three.",
+      "caption": "A .455 Enfield Mk II (left) beside three .476 Enfield Mk III cartridges, showing minor case and crimp variations between examples of the Mk III.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Drake00",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.455_Enfield_MkII_and_.476_Enfield_MkIII_Revolver_Cartridges.jpg",
+        "title": "File:.455 Enfield MkII and .476 Enfield MkIII Revolver Cartridges.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-476-enfield",
+      "type": "wikipedia",
+      "title": ".476 Enfield",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1350638861",
+      "lang": "en",
+      "revision": "1350638861",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "id": "450-marlin",
+  "name": ".450 Marlin",
+  "wikidataId": "Q4027900",
+  "aliases": [
+    { "name": "450 Marlin", "kind": "commercial" }
+  ],
+  "designedBy": "Hornady and Marlin Firearms",
+  "introduced": 2000,
+  "standard": "cip",
+  "caseType": "belted",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 11.64,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page34.pdf",
+    "source": "cip-450-marlin"
+  },
+  "caseLength": {
+    "value": 53.34,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page34.pdf",
+    "source": "cip-450-marlin"
+  },
+  "overallLength": {
+    "value": 64.76,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page34.pdf",
+    "source": "cip-450-marlin"
+  },
+  "rimDiameter": {
+    "value": 13.51,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page34.pdf",
+    "source": "cip-450-marlin"
+  },
+  "neckDiameter": {
+    "value": 12.21,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page34.pdf",
+    "source": "cip-450-marlin"
+  },
+  "baseDiameter": {
+    "value": 13.03,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page34.pdf",
+    "source": "cip-450-marlin"
+  },
+  "maxPressure": {
+    "value": 330.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page34.pdf",
+    "source": "cip-450-marlin"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "430gr-lbt-lfn-buffalo-bore",
+      "name": "430 gr LBT-LFN (Buffalo Bore)",
+      "manufacturer": "Buffalo Bore",
+      "bulletMass": {
+        "value": 27.86,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (430 gr); Buffalo Bore's cited product page now serves a reorganised catalogue that no longer reliably resolves to this specific listing, so this is not independently reconfirmed."
+      },
+      "bulletType": "LBT-LFN (Lead Long Flat Nose)",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 609.6, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox states a 24 in (SAAMI) test barrel for this cartridge's loads." },
+          "velocity": { "value": 579.1, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure (1900 ft/s); ½mv² reproduces the published 3446 ft·lbf almost exactly, but the source page could not be independently reconfirmed live." }
+        }
+      ]
+    },
+    {
+      "id": "405gr-jfn-buffalo-bore",
+      "name": "405 gr JFN (Buffalo Bore)",
+      "manufacturer": "Buffalo Bore",
+      "bulletMass": {
+        "value": 26.24,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (405 gr); Buffalo Bore's cited product page now serves a reorganised catalogue that no longer reliably resolves to this specific listing, so this is not independently reconfirmed."
+      },
+      "bulletType": "JFN (Copper Jacketed Flat Nose)",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 609.6, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox states a 24 in (SAAMI) test barrel for this cartridge's loads." },
+          "velocity": { "value": 602.0, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure (1975 ft/s); ½mv² reproduces the published 3507 ft·lbf almost exactly, but the source page could not be independently reconfirmed live." }
+        }
+      ]
+    },
+    {
+      "id": "350gr-jfn",
+      "name": "350 gr JFN",
+      "bulletMass": {
+        "value": 22.68,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (350 gr), manufacturer not specified in the article."
+      },
+      "bulletType": "JFN",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 609.6, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox states a 24 in (SAAMI) test barrel for this cartridge's loads." },
+          "velocity": { "value": 640.1, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure (2100 ft/s); ½mv² reproduces the published 3427 ft·lbf almost exactly." }
+        }
+      ]
+    },
+    {
+      "id": "325gr-ftx-hornady-leverevolution",
+      "name": "325 gr FTX (Hornady LEVERevolution)",
+      "manufacturer": "Hornady",
+      "bulletMass": {
+        "value": 21.06,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (325 gr); Hornady's cited product URL no longer resolves (404), so this is not independently reconfirmed against a live manufacturer page."
+      },
+      "bulletType": "FTX (Flex Tip Expanding)",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 609.6, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox states a 24 in (SAAMI) test barrel for this cartridge's loads." },
+          "velocity": { "value": 678.2, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure (2225 ft/s); ½mv² reproduces the published 3572 ft·lbf almost exactly, but the source page could not be independently reconfirmed live." }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/450-marlin/hero.webp",
+      "alt": "Two flat-nosed rifle cartridges standing upright side by side, the left one with a brass case shorter than the taller, nickel-plated case on the right.",
+      "caption": "A .450 Marlin (left, brass case) beside a .458 Winchester Magnum (right, nickel-plated case), the belted magnum round the .450 Marlin was designed to match ballistically in a shorter case sized to work through a lever-action's magazine tube.",
+      "width": 1280,
+      "height": 960,
+      "credit": {
+        "author": "IHMSA80x80 ( talk )",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:450Marlin.JPG",
+        "title": "File:450Marlin.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-450-marlin",
+      "type": "wikipedia",
+      "title": ".450 Marlin",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371849595",
+      "lang": "en",
+      "revision": "1371849595",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-450-marlin",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 450 Marlin",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page34.pdf",
+      "revision": "2009-05-05",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

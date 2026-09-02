@@ -1,0 +1,22 @@
+{
+  "_note": "Plan rows adjudicated out of scope or otherwise unauthorable, with the ruling that settled each. `plan.mjs next` and `status` drop them, so a row decided once is never rediscovered by the next agent. This is the same shape as wikidata-exceptions.json: a judgement a person has made, recorded so the machine stops asking. Remove a row here to put it back in the queue.",
+  "_rules": "slug -> reason. The reason is shown by `plan.mjs skips`, so write it for whoever reopens the question.",
+  "skips": {
+    "gatling-gun": "Crew-served — outside the one-or-two-person boundary (SPEC scope ruling, item 16).",
+    "punt-gun": "Crew-served, boat-mounted — outside the scope boundary (item 16).",
+    "elephant-gun": "A class article, not a model. No single arm to author.",
+    "coach-gun": "A class article, not a model.",
+    "buffalo-rifle": "A class article, not a model.",
+    "heckler-koch-xm8": "Never series-produced — trials only (item 16).",
+    "gyrojet": "Fires self-propelled rockets, not cartridges — the rocket-launcher exclusion (item 16).",
+    "emer-k1": "A 15-16 unit trial batch, never adopted; later reverse-engineered into the unrelated MA-1 Mk III. Never series-produced (item 16).",
+    "joint-venture-protective-carbine": "Blocked, not out of scope: its 5.56x30mm MINSAS cartridge cannot be authored because `caseType` is mandatory and no free source publishes it. Reopen when a source appears.",
+    "glock": "The article already backs `glock-17`. It is the pistol brand, not a model.",
+    "winchester-rifle": "The article is the whole series, already covered by the authored models.",
+    "gauge-firearms": "The article already backs `12-gauge`.",
+    "20-gauge-shotgun": "The article already backs `20-gauge`.",
+    "as-val-and-vss-vintorez": "The article already backs `as-val`.",
+    "amogh-carbine": "Blocked, not out of scope: chambered only in 5.56x30mm MINSAS, whose `caseType` is mandatory and unpublished by any free source. Reopen with the cartridge.",
+    "5-56x30mm-minsas": "Blocked: `caseType` is mandatory and no free source publishes it. Reopen when a source appears; it unblocks amogh-carbine and the JVPC."
+  }
+}

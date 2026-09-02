@@ -1,0 +1,160 @@
+{
+  "id": "17-hmr",
+  "name": ".17 HMR",
+  "wikidataId": "Q591520",
+  "aliases": [
+    { "name": ".17 Hornady Magnum Rimfire", "kind": "commercial" }
+  ],
+  "designedBy": "Hornady",
+  "introduced": 2002,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 4.38,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/17-hmr-en.pdf",
+    "source": "cip-17-hmr"
+  },
+  "caseLength": {
+    "value": 27.03,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/17-hmr-en.pdf",
+    "source": "cip-17-hmr"
+  },
+  "overallLength": {
+    "value": 34.67,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/17-hmr-en.pdf",
+    "source": "cip-17-hmr"
+  },
+  "rimDiameter": {
+    "value": 7.47,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/17-hmr-en.pdf",
+    "source": "cip-17-hmr"
+  },
+  "neckDiameter": {
+    "value": 4.9,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/17-hmr-en.pdf",
+    "source": "cip-17-hmr"
+  },
+  "baseDiameter": {
+    "value": 6.15,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/17-hmr-en.pdf",
+    "source": "cip-17-hmr"
+  },
+  "maxPressure": {
+    "value": 180.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/17-hmr-en.pdf",
+    "source": "cip-17-hmr"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "17gr-v-max",
+      "name": "17 gr V-MAX",
+      "manufacturer": "Hornady",
+      "bulletMass": {
+        "value": 1.102,
+        "unit": "g",
+        "status": "verified",
+        "sourceUrl": "https://www.hornady.com/ammunition/rimfire/17-hmr-17-gr-v-max",
+        "sourceNote": "17 gr, per Hornady's own product page.",
+        "source": "hornady-17hmr-17vmax"
+      },
+      "bulletType": "V-MAX",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 609.6, "unit": "mm", "status": "verified", "sourceUrl": "https://www.hornady.com/ammunition/rimfire/17-hmr-17-gr-v-max", "sourceNote": "24 in test barrel, stated on Hornady's own product page.", "source": "hornady-17hmr-17vmax" },
+          "velocity": { "value": 777.2, "unit": "m/s", "status": "verified", "sourceUrl": "https://www.hornady.com/ammunition/rimfire/17-hmr-17-gr-v-max", "sourceNote": "Muzzle velocity 2550 ft/s from Hornady's own ballistics table, which does not publish a ballistic coefficient in static HTML.", "source": "hornady-17hmr-17vmax" }
+        }
+      ]
+    },
+    {
+      "id": "20gr-xtp",
+      "name": "20 gr XTP",
+      "manufacturer": "Hornady",
+      "bulletMass": {
+        "value": 1.296,
+        "unit": "g",
+        "status": "verified",
+        "sourceUrl": "https://www.hornady.com/ammunition/rimfire/17-hmr-20-gr-xtp",
+        "sourceNote": "20 gr, per Hornady's own product page.",
+        "source": "hornady-17hmr-20xtp"
+      },
+      "bulletType": "XTP",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 609.6, "unit": "mm", "status": "verified", "sourceUrl": "https://www.hornady.com/ammunition/rimfire/17-hmr-20-gr-xtp", "sourceNote": "24 in test barrel, stated on Hornady's own product page.", "source": "hornady-17hmr-20xtp" },
+          "velocity": { "value": 723.9, "unit": "m/s", "status": "verified", "sourceUrl": "https://www.hornady.com/ammunition/rimfire/17-hmr-20-gr-xtp", "sourceNote": "Muzzle velocity 2375 ft/s from Hornady's own ballistics table, which does not publish a ballistic coefficient in static HTML.", "source": "hornady-17hmr-20xtp" }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/17-hmr/hero.webp",
+      "alt": "A close-up of a small rimfire cartridge's brass base, stamped with a Sellier & Bellot headstamp, with a slender pointed bullet with a coloured tip receding out of focus.",
+      "caption": "A Sellier & Bellot .17 HMR round, shown base-first to display its rimfire headstamp.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "commons:user:Malis",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:17_HMR_-_SB_-_1.jpg",
+        "title": "File:17 HMR - SB - 1.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-17-hmr",
+      "type": "wikipedia",
+      "title": ".17 HMR",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370545074",
+      "lang": "en",
+      "revision": "1370545074",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-17-hmr",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 17 HMR",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/17-hmr-en.pdf",
+      "revision": "2012-09-25",
+      "accessed": "2026-09-02"
+    },
+    {
+      "key": "hornady-17hmr-17vmax",
+      "type": "web",
+      "title": "17 HMR 17 gr V-MAX Varmint Express Rimfire",
+      "publisher": "Hornady Manufacturing",
+      "url": "https://www.hornady.com/ammunition/rimfire/17-hmr-17-gr-v-max",
+      "accessed": "2026-09-02"
+    },
+    {
+      "key": "hornady-17hmr-20xtp",
+      "type": "web",
+      "title": "17 HMR 20 gr XTP",
+      "publisher": "Hornady Manufacturing",
+      "url": "https://www.hornady.com/ammunition/rimfire/17-hmr-20-gr-xtp",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

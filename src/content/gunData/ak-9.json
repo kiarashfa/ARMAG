@@ -1,0 +1,102 @@
+{
+  "id": "ak-9",
+  "name": "AK-9",
+  "kind": "model",
+  "wikidataId": "Q2584086",
+  "makerRef": "izhmash",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Avtomat Kalashnikova-9", "kind": "military" }
+  ],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "russia",
+  "producedIn": ["russia"],
+  "introduced": 2007,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence", "law-enforcement"],
+  "massEmpty": {
+    "value": 3.1,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox states 3.8 kg empty with no inline citation of its own; the archived Russian enthusiast site armoury-online.ru gives 3.1 kg without the suppressor and 3.8 kg with it fitted, which resolves the discrepancy, but neither is a manufacturer source."
+  },
+  "length": {
+    "value": 705,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Stock extended, suppressor not fitted. Folded, the AK-9 is 465 mm; with the quick-detachable suppressor fitted it is 881 mm extended or 646 mm folded. Both Wikipedia's infobox and armoury-online.ru give matching figures, but neither is a manufacturer source."
+  },
+  "barrelLength": {
+    "value": 200,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Matched by Wikipedia's infobox and armoury-online.ru; neither is a manufacturer source."
+  },
+  "cyclicRate": {
+    "value": null,
+    "unit": "rpm",
+    "status": "conflicting-sources",
+    "sourceNote": "Wikipedia's infobox states 700-750 rounds per minute with no inline citation; armoury-online.ru states 750-800. The ranges only partly overlap.",
+    "source": "armoury-online-ak9"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x39mm",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure, no inline citation of its own."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/ak-9/hero.webp",
+      "alt": "A black Kalashnikov-pattern carbine with a quick-detachable cylindrical suppressor and a large day/night optical sight mounted on a side rail, lying on a grey mat.",
+      "caption": "An AK-9 fitted with its quick-detachable suppressor and an optical sight on the side-mounted rail.",
+      "width": 1600,
+      "height": 542,
+      "credit": {
+        "author": "Macaque123",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AK-9_Assault_rifle.jpg",
+        "title": "File:AK-9 Assault rifle.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-ak-9",
+      "type": "wikipedia",
+      "title": "AK-9",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1358735996",
+      "lang": "en",
+      "revision": "1358735996",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "armoury-online-ak9",
+      "type": "web",
+      "title": "АК-9 автомат Калашникова - характеристики, ттх, фото",
+      "publisher": "armoury-online.ru",
+      "url": "https://web.archive.org/web/20220528070531/https://www.armoury-online.ru/articles/ar/ru/ak-9/",
+      "lang": "ru",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

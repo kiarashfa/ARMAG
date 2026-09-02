@@ -1,0 +1,146 @@
+{
+  "id": "7-65x21mm-parabellum",
+  "name": "7.65×21mm Parabellum",
+  "wikidataId": "Q259237",
+  "aliases": [
+    { "name": ".30 Luger", "kind": "commercial" },
+    { "name": "7.65 Para", "kind": "nickname" },
+    { "name": "7.65mm Luger", "kind": "commercial" }
+  ],
+  "designedBy": "Georg Luger and Hugo Borchardt",
+  "introduced": 1898,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page14.pdf",
+    "source": "cip-7-65-parabellum"
+  },
+  "caseLength": {
+    "value": 21.59,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page14.pdf",
+    "source": "cip-7-65-parabellum"
+  },
+  "overallLength": {
+    "value": 29.85,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page14.pdf",
+    "source": "cip-7-65-parabellum"
+  },
+  "rimDiameter": {
+    "value": 9.98,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page14.pdf",
+    "source": "cip-7-65-parabellum"
+  },
+  "neckDiameter": {
+    "value": 8.43,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page14.pdf",
+    "source": "cip-7-65-parabellum"
+  },
+  "baseDiameter": {
+    "value": 9.93,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page14.pdf",
+    "source": "cip-7-65-parabellum"
+  },
+  "maxPressure": {
+    "value": 235.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page14.pdf",
+    "source": "cip-7-65-parabellum"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "93gr-fmj-fiocchi-heritage",
+      "name": "93 gr FMJ (Fiocchi Heritage)",
+      "manufacturer": "Fiocchi",
+      "bulletMass": {
+        "value": 6.03,
+        "unit": "g",
+        "status": "verified",
+        "sourceUrl": "https://www.fiocchiusa.com/centerfire-pistol/heritage/33-765B.html",
+        "sourceNote": "93 gr, per Fiocchi's own Heritage product page.",
+        "source": "fiocchi-765b"
+      },
+      "bulletType": "FMJ",
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7-65x21mm-parabellum/hero.webp",
+      "alt": "A single rimless bottleneck pistol cartridge with a rounded full-metal-jacket bullet, on a plain background.",
+      "caption": "A Swiss-made 7.65×21mm Parabellum round.",
+      "width": 1203,
+      "height": 1600,
+      "credit": {
+        "author": "Original uploader was Quickload at en.wikipedia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:T_73.JPG",
+        "title": "File:T 73.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/7-65x21mm-parabellum/comparison.webp",
+      "alt": "Two similar bottleneck pistol cartridges standing upright side by side, the left one slightly shorter than the right.",
+      "caption": "A 7.65×21mm Parabellum (left, made by Western) beside a 7.62×25mm Tokarev (right), a cartridge it strongly resembles in size and shape though the two are not interchangeable.",
+      "width": 885,
+      "height": 960,
+      "credit": {
+        "author": "Votesmall",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:30LugerandTokarev.jpg",
+        "title": "File:30LugerandTokarev.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-7-65x21mm-parabellum",
+      "type": "wikipedia",
+      "title": "7.65×21mm Parabellum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363156061",
+      "lang": "en",
+      "revision": "1363156061",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-7-65-parabellum",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7,65 Parabellum",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page14.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-09-02"
+    },
+    {
+      "key": "fiocchi-765b",
+      "type": "web",
+      "title": "Heritage 30 Luger/7.65PAR 93 Grain FMJ",
+      "publisher": "Fiocchi Ammunition",
+      "url": "https://www.fiocchiusa.com/centerfire-pistol/heritage/33-765B.html",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

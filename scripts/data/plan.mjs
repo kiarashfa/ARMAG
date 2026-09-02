@@ -37,6 +37,7 @@ import { getJson, withQuery } from './lib/http.mjs';
 
 const REPO_ROOT = path.resolve(fileURLToPath(new URL('../..', import.meta.url)));
 const PLAN = path.join(REPO_ROOT, 'plan', 'coverage.json');
+const SKIPS = path.join(REPO_ROOT, 'scripts', 'data', 'sources', 'plan-skips.json');
 const EN = 'https://en.wikipedia.org/w/api.php';
 
 /** Sizes verified 2026-08-26 (CLAUDE.md, research findings). */
@@ -367,31 +368,60 @@ const readPlan = async () => {
  * existed. The freshness this needs costs one pass over local JSON, so it is
  * done on every read rather than trusted from the file.
  */
+/**
+ * Rows a person has already ruled out, and why.
+ *
+ * `done` covers what has been authored; nothing covered what has been JUDGED —
+ * so an out-of-scope row (a Gatling gun, a class article, an arm never series
+ * produced) came back to the top of the queue every batch, and each fresh agent
+ * spent calls rediscovering a decision already recorded in the build log it is
+ * told not to read. Fourteen of the top fourteen rows were in that state.
+ *
+ * Same shape as `wikidata-exceptions.json`: a judgement made once, recorded so
+ * the machine stops asking. Removing a slug from the file requeues the row.
+ */
+async function skippedRows() {
+  const raw = await readFile(SKIPS, 'utf8').catch(() => null);
+  if (!raw) return {};
+  return JSON.parse(raw).skips ?? {};
+}
+
 async function withCurrentProgress(plan) {
   const existing = await existingEntries();
+  const skips = await skippedRows();
   const rows = plan.rows.map((row) => {
     const names = [row.slug, ...row.linkedAs.map(proposeSlug)];
     const authoredAs = names.filter((n) => existing.ids.has(n) || existing.names.has(n));
     return {
       ...row,
       authoredAs: [...new Set(authoredAs)],
+      skipped: skips[row.slug] ?? null,
       done:
         existing.ids.has(row.slug) ||
         (row.wikidataId !== null && existing.qids.has(row.wikidataId)) ||
         existing.names.has(row.slug),
     };
   });
-  return { ...plan, rows, counts: { ...plan.counts, done: rows.filter((r) => r.done).length } };
+  return {
+    ...plan,
+    rows,
+    counts: {
+      ...plan.counts,
+      done: rows.filter((r) => r.done).length,
+      skipped: rows.filter((r) => r.skipped && !r.done).length,
+    },
+  };
 }
 
 async function cmdStatus() {
   const plan = await withCurrentProgress(await readPlan());
-  const remaining = plan.rows.filter((r) => !r.done);
+  const remaining = plan.rows.filter((r) => !r.done && !r.skipped);
   console.log(`plan built ${plan.built}`);
   console.log(`  candidates : ${plan.counts.candidates}`);
   console.log(`  guns       : ${plan.counts.guns}`);
   console.log(`  cartridges : ${plan.counts.cartridges}`);
   console.log(`  authored   : ${plan.counts.done}`);
+  console.log(`  ruled out  : ${plan.counts.skipped}  (see plan.mjs skips)`);
   console.log(`  remaining  : ${remaining.length}\n`);
   const byList = new Map();
   for (const row of remaining) {
@@ -407,6 +437,7 @@ async function cmdNext(count, filters) {
   const plan = await withCurrentProgress(await readPlan());
   const rows = plan.rows
     .filter((row) => !row.done)
+    .filter((row) => !row.skipped)
     .filter((row) => !filters.kind || row.kind === filters.kind)
     .filter((row) => !filters.list || row.sources.includes(filters.list))
     .slice(0, count);
@@ -452,6 +483,12 @@ try {
     });
   } else if (command === 'status') {
     await cmdStatus();
+  } else if (command === 'skips') {
+    const skips = await skippedRows();
+    const names = Object.keys(skips);
+    console.log(`${names.length} rows ruled out. Delete a line from ${SKIPS} to requeue one.
+`);
+    for (const name of names.sort()) console.log(`  ${name.padEnd(34)} ${skips[name]}`);
   } else if (command === 'next') {
     await cmdNext(Number(argv[1] ?? 8), { kind: flag('kind', null), list: flag('list', null) });
   } else {

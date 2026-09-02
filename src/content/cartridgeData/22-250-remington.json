@@ -1,0 +1,160 @@
+{
+  "id": "22-250-remington",
+  "name": ".22-250 Remington",
+  "wikidataId": "Q1795017",
+  "aliases": [
+    { "name": "22-250 Rem.", "kind": "commercial" }
+  ],
+  "designedBy": "Grosvenor Wotkyns, J.E. Gebby, J. Bushnell Smith",
+  "introduced": 1965,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 5.7,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page82.pdf",
+    "source": "cip-22-250-rem"
+  },
+  "caseLength": {
+    "value": 48.46,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page82.pdf",
+    "source": "cip-22-250-rem"
+  },
+  "overallLength": {
+    "value": 59.69,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page82.pdf",
+    "source": "cip-22-250-rem"
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page82.pdf",
+    "source": "cip-22-250-rem"
+  },
+  "neckDiameter": {
+    "value": 6.45,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page82.pdf",
+    "source": "cip-22-250-rem"
+  },
+  "baseDiameter": {
+    "value": 11.93,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page82.pdf",
+    "source": "cip-22-250-rem"
+  },
+  "maxPressure": {
+    "value": 405.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page82.pdf",
+    "source": "cip-22-250-rem"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "50gr-v-max",
+      "name": "50 gr V-MAX",
+      "manufacturer": "Hornady",
+      "bulletMass": {
+        "value": 3.24,
+        "unit": "g",
+        "status": "verified",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/22-250-rem-50-gr-v-max",
+        "sourceNote": "50 gr, per Hornady's own product page.",
+        "source": "hornady-22250-50vmax"
+      },
+      "bulletType": "V-MAX",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 609.6, "unit": "mm", "status": "verified", "sourceUrl": "https://www.hornady.com/ammunition/rifle/22-250-rem-50-gr-v-max", "sourceNote": "24 in test barrel, stated on Hornady's own product page.", "source": "hornady-22250-50vmax" },
+          "velocity": { "value": 1158.2, "unit": "m/s", "status": "verified", "sourceUrl": "https://www.hornady.com/ammunition/rifle/22-250-rem-50-gr-v-max", "sourceNote": "Muzzle velocity 3800 ft/s from Hornady's own ballistics table, which does not publish a ballistic coefficient in static HTML.", "source": "hornady-22250-50vmax" }
+        }
+      ]
+    },
+    {
+      "id": "55gr-v-max",
+      "name": "55 gr V-MAX",
+      "manufacturer": "Hornady",
+      "bulletMass": {
+        "value": 3.564,
+        "unit": "g",
+        "status": "verified",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/22-250-rem-55-gr-v-max",
+        "sourceNote": "55 gr, per Hornady's own product page.",
+        "source": "hornady-22250-55vmax"
+      },
+      "bulletType": "V-MAX",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 609.6, "unit": "mm", "status": "verified", "sourceUrl": "https://www.hornady.com/ammunition/rifle/22-250-rem-55-gr-v-max", "sourceNote": "24 in test barrel, stated on Hornady's own product page.", "source": "hornady-22250-55vmax" },
+          "velocity": { "value": 1121.7, "unit": "m/s", "status": "verified", "sourceUrl": "https://www.hornady.com/ammunition/rifle/22-250-rem-55-gr-v-max", "sourceNote": "Muzzle velocity 3680 ft/s from Hornady's own ballistics table, which does not publish a ballistic coefficient in static HTML.", "source": "hornady-22250-55vmax" }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/22-250-remington/hero.webp",
+      "alt": "A loaded bottleneck rifle cartridge with a pointed bullet standing beside a fired brass case, the case head stamped '22-250'.",
+      "caption": "A loaded .22-250 Remington round beside a fired case showing its headstamp.",
+      "width": 450,
+      "height": 519,
+      "credit": {
+        "author": "Ryan D. Larson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:22-250_Remington.JPG",
+        "title": "File:22-250 Remington.JPG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-22-250-remington",
+      "type": "wikipedia",
+      "title": ".22-250 Remington",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1342699633",
+      "lang": "en",
+      "revision": "1342699633",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-22-250-rem",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 22-250 Rem.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page82.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-02"
+    },
+    {
+      "key": "hornady-22250-50vmax",
+      "type": "web",
+      "title": "22-250 Rem 50 gr V-MAX",
+      "publisher": "Hornady Manufacturing",
+      "url": "https://www.hornady.com/ammunition/rifle/22-250-rem-50-gr-v-max",
+      "accessed": "2026-09-02"
+    },
+    {
+      "key": "hornady-22250-55vmax",
+      "type": "web",
+      "title": "22-250 Rem 55 gr V-MAX",
+      "publisher": "Hornady Manufacturing",
+      "url": "https://www.hornady.com/ammunition/rifle/22-250-rem-55-gr-v-max",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

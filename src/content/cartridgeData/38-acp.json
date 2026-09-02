@@ -1,0 +1,142 @@
+{
+  "id": "38-acp",
+  "name": ".38 ACP",
+  "wikidataId": "Q2660322",
+  "aliases": [
+    { "name": ".38 Automatic Colt Pistol", "kind": "commercial" },
+    { "name": ".38 Auto", "kind": "nickname" }
+  ],
+  "designedBy": "John Browning",
+  "introduced": 1900,
+  "standard": "none",
+  "caseType": "semi-rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 9.04,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "No dedicated C.I.P. datasheet exists for .38 ACP; this figure matches the .38 Super's C.I.P. datasheet exactly, since the two cartridges share the same case and bullet and differ only in loaded pressure."
+  },
+  "caseLength": {
+    "value": 22.86,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "No dedicated C.I.P. datasheet exists for .38 ACP; this figure matches the .38 Super's C.I.P. datasheet exactly."
+  },
+  "overallLength": {
+    "value": 32.51,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "No dedicated C.I.P. datasheet exists for .38 ACP; this figure matches the .38 Super's C.I.P. datasheet exactly."
+  },
+  "rimDiameter": {
+    "value": 10.31,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "No dedicated C.I.P. datasheet exists for .38 ACP; this figure matches the .38 Super's C.I.P. datasheet exactly."
+  },
+  "neckDiameter": {
+    "value": 9.75,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "No dedicated C.I.P. datasheet exists for .38 ACP; this figure matches the .38 Super's C.I.P. datasheet exactly."
+  },
+  "baseDiameter": {
+    "value": 9.75,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "No dedicated C.I.P. datasheet exists for .38 ACP; this figure matches the .38 Super's C.I.P. datasheet exactly."
+  },
+  "maxPressure": {
+    "value": 182.7,
+    "unit": "MPa",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure (26,500 psi), no inline citation of its own. Unlike the case and bullet dimensions, this pressure is genuinely lower than the .38 Super's — the .38 Super is a higher-pressure loading of the same case, not an identical cartridge."
+  },
+  "pressureStandard": "saami",
+  "loads": [
+    {
+      "id": "115gr-fmj",
+      "name": "115 gr FMJ",
+      "bulletMass": {
+        "value": 7.452,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (115 gr), citing the book Cartridges of the World, which cannot carry a `verified` status without a clickable source."
+      },
+      "bulletType": "FMJ",
+      "velocityByBarrel": []
+    },
+    {
+      "id": "125gr-jhp",
+      "name": "125 gr JHP",
+      "bulletMass": {
+        "value": 8.1,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (125 gr), citing the book Cartridges of the World, which cannot carry a `verified` status without a clickable source."
+      },
+      "bulletType": "JHP",
+      "velocityByBarrel": []
+    },
+    {
+      "id": "130gr-fmj",
+      "name": "130 gr FMJ",
+      "bulletMass": {
+        "value": 8.424,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (130 gr), citing the book Cartridges of the World, which cannot carry a `verified` status without a clickable source."
+      },
+      "bulletType": "FMJ",
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/38-acp/hero.webp",
+      "alt": "A small semi-rimmed pistol cartridge with a brass case and a rounded lead bullet.",
+      "caption": "A .38 ACP cartridge.",
+      "width": 244,
+      "height": 358,
+      "credit": {
+        "author": "Ken",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:38_ACP.jpg",
+        "title": "File:38 ACP.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/38-acp/colt1902.webp",
+      "alt": "A worn nickel-finish semi-automatic pistol with chequered wooden grips bearing a Colt medallion, its slide marked 'AUTOMATIC COLT CALIBRE 38 RIMLESS SMOKELESS'.",
+      "caption": "A Colt Model 1902 Sportsman, manufactured in 1905 and chambered for .38 ACP — the round's original commercial pistol.",
+      "width": 1200,
+      "height": 795,
+      "credit": {
+        "author": "Self Loader",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colt_1902_Sportsman_.38_ACP_Sn_8637_R_DSC_8183.jpg",
+        "title": "File:Colt 1902 Sportsman .38 ACP Sn 8637 R DSC 8183.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-38-acp",
+      "type": "wikipedia",
+      "title": ".38 ACP",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1265342493",
+      "lang": "en",
+      "revision": "1265342493",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "8x22mm-nambu",
+  "name": "8×22mm Nambu",
+  "wikidataId": "Q274920",
+  "aliases": [
+    { "name": "8mm Nambu", "kind": "commercial" }
+  ],
+  "designedBy": "Kijirō Nambu",
+  "introduced": 1904,
+  "standard": "none",
+  "caseType": "semi-rimmed",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 8.13,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own and no free C.I.P. or SAAMI standard exists for this obsolete Japanese military cartridge."
+  },
+  "caseLength": {
+    "value": 21.43,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own and no free dimensional standard exists for this obsolete Japanese military cartridge."
+  },
+  "overallLength": {
+    "value": 31.56,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own and no free dimensional standard exists for this obsolete Japanese military cartridge."
+  },
+  "rimDiameter": {
+    "value": 10.5,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own and no free dimensional standard exists for this obsolete Japanese military cartridge."
+  },
+  "neckDiameter": {
+    "value": 8.71,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own and no free dimensional standard exists for this obsolete Japanese military cartridge."
+  },
+  "baseDiameter": {
+    "value": 10.23,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own and no free dimensional standard exists for this obsolete Japanese military cartridge."
+  },
+  "loads": [
+    {
+      "id": "fmj",
+      "name": "FMJ",
+      "bulletMass": {
+        "value": 6.6,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure, no inline citation of its own."
+      },
+      "bulletType": "FMJ",
+      "velocityByBarrel": [
+        {
+          "barrelLength": { "value": 117, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox figure, no inline citation of its own — the Nambu-pattern pistols' barrel length." },
+          "velocity": { "value": 315, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure, no inline citation of its own; ½mv² reproduces the published 328 J energy figure to within 0.2%." }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/8x22mm-nambu/hero.webp",
+      "alt": "A bottleneck brass pistol cartridge with a rounded copper-jacketed bullet, photographed on graph paper.",
+      "caption": "An 8×22mm Nambu round, photographed against a metric grid.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_8mm_Nambu.jpg",
+        "title": "File:Cartridge 8mm Nambu.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-8x22mm-nambu",
+      "type": "wikipedia",
+      "title": "8×22mm Nambu",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367914337",
+      "lang": "en",
+      "revision": "1367914337",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "22-bb",
+  "name": ".22 BB",
+  "wikidataId": "Q4545196",
+  "aliases": [
+    { "name": ".22 BB Cap", "kind": "commercial" },
+    { "name": "6mm Flobert", "kind": "metric", "note": "The European name; the .22 BB Cap and .22 CB Cap are considered the same cartridge under this name." }
+  ],
+  "designedBy": "Louis-Nicolas Flobert",
+  "introduced": 1845,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-bb-cap-en.pdf",
+    "source": "cip-22-bb-cap"
+  },
+  "caseLength": {
+    "value": 6.86,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-bb-cap-en.pdf",
+    "source": "cip-22-bb-cap"
+  },
+  "overallLength": {
+    "value": 11.18,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-bb-cap-en.pdf",
+    "source": "cip-22-bb-cap"
+  },
+  "rimDiameter": {
+    "value": 7.06,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-bb-cap-en.pdf",
+    "source": "cip-22-bb-cap"
+  },
+  "neckDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-bb-cap-en.pdf",
+    "source": "cip-22-bb-cap"
+  },
+  "baseDiameter": {
+    "value": 5.72,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-bb-cap-en.pdf",
+    "source": "cip-22-bb-cap"
+  },
+  "loads": [
+    {
+      "id": "20gr-rn",
+      "name": "20 gr RN",
+      "bulletMass": {
+        "value": 1.296,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (20 gr), citing the book Cartridges of the World, which cannot carry a `verified` status without a clickable source."
+      },
+      "bulletType": "round nose",
+      "velocityByBarrel": []
+    },
+    {
+      "id": "18gr-rn",
+      "name": "18 gr RN",
+      "bulletMass": {
+        "value": 1.166,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (18 gr), citing the book Cartridges of the World, which cannot carry a `verified` status without a clickable source."
+      },
+      "bulletType": "round nose",
+      "velocityByBarrel": []
+    },
+    {
+      "id": "16gr-rn",
+      "name": "16 gr RN",
+      "bulletMass": {
+        "value": 1.037,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure (16 gr), citing the book Cartridges of the World, which cannot carry a `verified` status without a clickable source."
+      },
+      "bulletType": "round nose",
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/22-bb/hero.webp",
+      "alt": "A round tin open to show dozens of tiny cartridges with round ball bullets, one loose cartridge beside it, and a red lid printed 'Flobert-Rundkugeln - Ball breech caps - 6mm - Dynamit Nobel'.",
+      "caption": "A tin of 100 Dynamit Nobel .22 BB Cap (6mm Flobert) rounds, labelled 'ball breech caps' in the European naming.",
+      "width": 1329,
+      "height": 671,
+      "credit": {
+        "author": "Calvinal",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.22_BB_with_Container.jpg",
+        "title": "File:.22 BB with Container.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-22-bb",
+      "type": "wikipedia",
+      "title": ".22 BB",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368385037",
+      "lang": "en",
+      "revision": "1368385037",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-22-bb-cap",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 22 BB Cap",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-v/22-bb-cap-en.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

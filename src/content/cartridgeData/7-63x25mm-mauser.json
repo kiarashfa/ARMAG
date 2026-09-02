@@ -1,0 +1,133 @@
+{
+  "id": "7-63x25mm-mauser",
+  "name": "7.63×25mm Mauser",
+  "wikidataId": "Q259228",
+  "aliases": [
+    { "name": ".30 Mauser", "kind": "commercial" }
+  ],
+  "designedBy": "Deutsche Waffen und Munitionsfabriken",
+  "introduced": 1896,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.86,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/7-63-mauser-en.pdf",
+    "source": "cip-7-63-mauser"
+  },
+  "caseLength": {
+    "value": 25.15,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/7-63-mauser-en.pdf",
+    "source": "cip-7-63-mauser"
+  },
+  "overallLength": {
+    "value": 35.08,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/7-63-mauser-en.pdf",
+    "source": "cip-7-63-mauser"
+  },
+  "rimDiameter": {
+    "value": 9.98,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/7-63-mauser-en.pdf",
+    "source": "cip-7-63-mauser"
+  },
+  "neckDiameter": {
+    "value": 8.46,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/7-63-mauser-en.pdf",
+    "source": "cip-7-63-mauser"
+  },
+  "baseDiameter": {
+    "value": 9.86,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/7-63-mauser-en.pdf",
+    "source": "cip-7-63-mauser"
+  },
+  "maxPressure": {
+    "value": 225.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/7-63-mauser-en.pdf",
+    "source": "cip-7-63-mauser"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "fmj",
+      "name": "FMJ",
+      "bulletMass": {
+        "value": 5.6,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure, no inline citation of its own."
+      },
+      "bulletType": "FMJ",
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7-63x25mm-mauser/hero.webp",
+      "alt": "A bottleneck rifle-length pistol cartridge with a rounded copper-jacketed bullet, photographed on graph paper.",
+      "caption": "A 7.63×25mm Mauser round.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_7.63x25mm_Mauser_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "title": "File:Cartridge 7.63x25mm Mauser CC BY-SA 4.0 by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/7-63x25mm-mauser/lineage.webp",
+      "alt": "Two similar bottleneck cartridges with rounded bullets standing side by side, a darker-cased one on the left and a brighter brass one on the right with small crimp marks near its case mouth.",
+      "caption": "A 7.65×25mm Borchardt (left), the round this cartridge was developed from, beside a 7.63×25mm Mauser (right) showing the neck stab crimps DWM used to secure its bullet.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Drake00",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7.65mm_Borchardt_&_7.63mm_Mauser.JPG",
+        "title": "File:7.65mm Borchardt & 7.63mm Mauser.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-7-63x25mm-mauser",
+      "type": "wikipedia",
+      "title": "7.63×25mm Mauser",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1295401053",
+      "lang": "en",
+      "revision": "1295401053",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-7-63-mauser",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7,63 Mauser",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/7-63-mauser-en.pdf",
+      "revision": "2006-09-19",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

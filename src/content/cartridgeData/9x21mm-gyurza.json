@@ -1,0 +1,123 @@
+{
+  "id": "9x21mm-gyurza",
+  "name": "9×21mm Gyurza",
+  "wikidataId": "Q4646729",
+  "aliases": [
+    { "name": "SP-10", "kind": "military", "note": "7N29 armour-piercing loading." },
+    { "name": "SP-11", "kind": "military", "note": "7N28 loading." },
+    { "name": "9x21 RG054", "kind": "military", "note": "The predecessor round from which the Gyurza family was developed." }
+  ],
+  "designedBy": "TsNIITochMash",
+  "introduced": 1990,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 9.05,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own and no free C.I.P. or SAAMI standard exists for this Russian military cartridge."
+  },
+  "caseLength": {
+    "value": 20.9,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own and no free dimensional standard exists for this Russian military cartridge."
+  },
+  "overallLength": {
+    "value": 32.7,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own and no free dimensional standard exists for this Russian military cartridge."
+  },
+  "rimDiameter": {
+    "value": 9.9,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own and no free dimensional standard exists for this Russian military cartridge."
+  },
+  "baseDiameter": {
+    "value": 9.9,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own and no free dimensional standard exists for this Russian military cartridge."
+  },
+  "loads": [
+    {
+      "id": "sp10-7n29",
+      "name": "SP-10 (7N29)",
+      "bulletMass": {
+        "value": 6.7,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure, citing world.guns.ru (now modernfirearms.net), no inline citation of its own on the cartridge's own page."
+      },
+      "bulletType": "AP steel-core",
+      "velocityByBarrel": []
+    },
+    {
+      "id": "sp11-7n28",
+      "name": "SP-11 (7N28)",
+      "bulletMass": {
+        "value": 7.9,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure, citing world.guns.ru (now modernfirearms.net), no inline citation of its own on the cartridge's own page."
+      },
+      "bulletType": "FMJ",
+      "velocityByBarrel": []
+    },
+    {
+      "id": "sp13-7btz",
+      "name": "SP-13 (7BTZ)",
+      "bulletMass": {
+        "value": 7.2,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia's infobox figure, citing world.guns.ru (now modernfirearms.net), no inline citation of its own on the cartridge's own page."
+      },
+      "bulletType": "expanding",
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/9x21mm-gyurza/hero.webp",
+      "alt": "An upright straight-walled pistol cartridge with a red sealant band at the case mouth and a bullet with a dark steel-coloured tip.",
+      "caption": "A pre-series 9×21 RG054 round from 1994, the direct predecessor of the standardised SP-10/SP-11 Gyurza family rather than a production round itself.",
+      "width": 524,
+      "height": 1074,
+      "credit": {
+        "author": "Costas-1963",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:9mmx21_RG054.jpg",
+        "title": "File:9mmx21 RG054.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-9x21mm-gyurza",
+      "type": "wikipedia",
+      "title": "9×21mm Gyurza",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1298606245",
+      "lang": "en",
+      "revision": "1298606245",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "modernfirearms-sr1",
+      "type": "web",
+      "title": "Serdyukov SPS / SR1 / SR1M pistol (Russia)",
+      "publisher": "Modern Firearms",
+      "url": "https://modernfirearms.net/en/handguns/handguns-en/russia-semi-automatic-pistols/sps-sr1-sr1m-eng/",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

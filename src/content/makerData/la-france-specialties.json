@@ -1,0 +1,28 @@
+{
+  "id": "la-france-specialties",
+  "name": "La France Specialties",
+  "country": "united-states",
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-la-france-m16k",
+      "type": "wikipedia",
+      "title": "La France M16K",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1324756921",
+      "lang": "en",
+      "revision": "1324756921",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "national-interest-m16k",
+      "type": "periodical",
+      "title": "Could The Army Use A Smaller M-16 Rifle?",
+      "publisher": "The National Interest",
+      "url": "https://nationalinterest.org/blog/buzz/could-army-use-smaller-m-16-rifle-107981",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

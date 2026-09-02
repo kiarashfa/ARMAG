@@ -1,0 +1,131 @@
+{
+  "id": "sr-3-vikhr",
+  "name": "SR-3 Vikhr",
+  "nativeName": "СР-3 «Вихрь»",
+  "kind": "model",
+  "wikidataId": "Q545529",
+  "makerRef": "tula-arms-plant",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "AM Vikhr", "kind": "military", "note": "Avtomat Malogabaritnyj 'Vikhr' — 'small-sized automatic rifle', the original designation." },
+    { "name": "Special Development-3", "kind": "military" }
+  ],
+  "lineage": { "derivedFrom": "as-val" },
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "russia",
+  "producedIn": ["russia"],
+  "introduced": 1995,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence", "concealed-carry"],
+  "massEmpty": {
+    "value": 2.1,
+    "unit": "kg",
+    "status": "verified",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SR-3_right_view.jpg",
+    "sourceNote": "TsNIITochMash's own exhibition placard, legible in this entry's hero photograph: 'Масса с магазином без патронов, кг: 2,1' — mass with an empty magazine fitted, 2.1 kg.",
+    "source": "cniitochmash-placard"
+  },
+  "length": {
+    "value": 640,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SR-3_right_view.jpg",
+    "sourceNote": "TsNIITochMash's own exhibition placard, legible in this entry's hero photograph: 'Габаритные размеры, мм: 640/395' — 640 mm with the stock extended, 395 mm folded.",
+    "source": "cniitochmash-placard"
+  },
+  "barrelLength": {
+    "value": 156,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, no inline citation of its own; matched by military-today.com."
+  },
+  "cyclicRate": {
+    "value": 800,
+    "unit": "rpm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia states a published range of 700-900 rounds per minute with no inline citation; midpoint recorded here."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x39mm",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "verified",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SR-3_right_view.jpg",
+        "sourceNote": "TsNIITochMash's own exhibition placard, legible in this entry's hero photograph: 'Емкость магазина, патронов: 20, 10' — 20- and 10-round magazines, shared with the AS Val and VSS Vintorez.",
+        "source": "cniitochmash-placard"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/sr-3-vikhr/hero.webp",
+      "alt": "A compact black submachine-gun-like carbine with a folded top-mounted stock and a curved magazine, lying on a wooden table beside two Russian-language exhibition placards.",
+      "caption": "An SR-3, buttstock folded, photographed beside TsNIITochMash's own exhibition placard giving its mass, dimensions and magazine capacities.",
+      "width": 1600,
+      "height": 1030,
+      "credit": {
+        "author": "Vitaly V. Kuzmin allow to use this picture in Copyright Policy",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SR-3_right_view.jpg",
+        "title": "File:SR-3 right view.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/sr-3-vikhr/extended.webp",
+      "alt": "The same carbine with its skeletal buttstock unfolded and extended to the rear, shown on a plain white background.",
+      "caption": "An SR-3 with its top-folding buttstock extended, the configuration this entry's overall length figure describes.",
+      "width": 1200,
+      "height": 774,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SR-3_(539-12).jpg",
+        "title": "File:SR-3 (539-12).jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-sr-3-vikhr",
+      "type": "wikipedia",
+      "title": "SR-3 Vikhr",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372463626",
+      "lang": "en",
+      "revision": "1372463626",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cniitochmash-placard",
+      "type": "web",
+      "title": "File:SR-3 right view.jpg (TsNIITochMash exhibition placard, legible in photograph)",
+      "publisher": "Wikimedia Commons / TsNIITochMash",
+      "url": "https://commons.wikimedia.org/wiki/File:SR-3_right_view.jpg",
+      "accessed": "2026-09-02"
+    },
+    {
+      "key": "military-today-sr3",
+      "type": "web",
+      "title": "SR-3 Vikhr",
+      "publisher": "Military-Today.com",
+      "url": "https://web.archive.org/web/20230305175621if_/http://www.military-today.com/firearms/sr3_vikhr.htm",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

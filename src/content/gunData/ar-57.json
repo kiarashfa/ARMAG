@@ -1,0 +1,85 @@
+{
+  "id": "ar-57",
+  "name": "AR-57",
+  "kind": "model",
+  "wikidataId": "Q4653537",
+  "makerRef": "ar57-llc",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "AR Five Seven", "kind": "commercial" },
+    { "name": "AR57A1 PDW Carbine", "kind": "commercial" }
+  ],
+  "lineage": { "derivedFrom": "ar-15" },
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "united-states",
+  "producedIn": ["united-states"],
+  "introduced": 2008,
+  "fireModes": ["semi"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 3.379,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "Wikipedia cites AR57 LLC's own product page for the AR-57 PDW carbine (7.45 lb), but that page is only reachable through a 2010 archived snapshot whose catalogue is JavaScript-driven and does not render the figure in static HTML, so it is recorded as estimated rather than independently confirmed."
+  },
+  "length": {
+    "value": 762,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia cites AR57 LLC's own product page for the AR-57 PDW carbine (30 in); see the note on massEmpty for why this is recorded as estimated rather than verified."
+  },
+  "barrelLength": {
+    "value": 406.4,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia cites AR57 LLC's own product page for the AR-57 PDW carbine (16 in); see the note on massEmpty for why this is recorded as estimated rather than verified."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-7x28mm",
+      "capacity": {
+        "value": 50,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "Feeds from FN P90 magazines; Wikipedia's cited AR57 LLC image gallery page states the rifle is supplied with two 50-round P90 magazines. 10-, 30- and 40-round P90 magazines also fit."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/ar-57/hero.webp",
+      "alt": "An AR-15-pattern carbine with a horizontal magazine sheathed in a black cloth cover running above the handguard, a red-dot sight forward of a light green lower receiver, and a fixed carbine-length stock.",
+      "caption": "An AR-57 upper mounted on a lower receiver machined by a different maker (Defense Distributed's 'Objet'), photographed by its builder as a test fit before first firing; the horizontally mounted P90 magazine is the AR-57's defining feature.",
+      "width": 1600,
+      "height": 775,
+      "credit": {
+        "author": "Kamenev",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:DD_AR_57_3.JPG",
+        "title": "File:DD AR 57 3.JPG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-ar-57",
+      "type": "wikipedia",
+      "title": "AR-57",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1353993664",
+      "lang": "en",
+      "revision": "1353993664",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

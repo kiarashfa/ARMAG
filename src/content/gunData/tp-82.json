@@ -1,0 +1,90 @@
+{
+  "id": "tp-82",
+  "name": "TP-82",
+  "nativeName": "ТП-82",
+  "kind": "model",
+  "wikidataId": "Q4449032",
+  "makerRef": "tula-arms-plant",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "shotgun",
+  "action": "break",
+  "designedIn": "soviet-union",
+  "producedIn": ["soviet-union"],
+  "introduced": 1986,
+  "fireModes": ["single-shot"],
+  "feedSystem": [],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 2.4,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's infobox figure, with the detachable machete buttstock attached, carries no inline citation of its own; matched exactly by the secondary reference site modernfirearms.net, which also states 1.6 kg with the buttstock removed."
+  },
+  "length": {
+    "value": 670,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "With the buttstock attached, per modernfirearms.net; the same source gives 360 mm with the buttstock removed. Wikipedia's own infobox states no length."
+  },
+  "barrelLength": {
+    "value": 300,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Per modernfirearms.net, which does not distinguish the shotgun and rifle barrel lengths. Wikipedia's own infobox states no barrel length."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-45x39mm",
+      "capacity": {
+        "value": 1,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "The lower barrel is a single-shot break-open rifle chamber; no magazine is fitted."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/tp-82/hero.webp",
+      "alt": "A dark, blued triple-barrelled pistol with a wooden grip and no buttstock attached, displayed in a museum case beside an ammunition bandolier and its canvas machete sheath.",
+      "caption": "A TP-82 without its detachable machete buttstock, on display at the Military Historical Museum of Artillery, Engineers and Signal Corps in Saint Petersburg, alongside its ammunition bandolier.",
+      "width": 1600,
+      "height": 1071,
+      "credit": {
+        "author": "One half 3544",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:TP-82.jpg",
+        "title": "File:TP-82.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-tp-82",
+      "type": "wikipedia",
+      "title": "TP-82",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370042028",
+      "lang": "en",
+      "revision": "1370042028",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "modernfirearms-tp82",
+      "type": "web",
+      "title": "TP-82 space survival gun (USSR)",
+      "publisher": "Modern Firearms",
+      "url": "https://modernfirearms.net/en/shotguns/russia-shotguns/tp-82-eng/",
+      "accessed": "2026-09-02"
+    }
+  ]
+}

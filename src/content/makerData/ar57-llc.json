@@ -1,0 +1,20 @@
+{
+  "id": "ar57-llc",
+  "name": "AR57 LLC",
+  "country": "united-states",
+  "lastVerified": "2026-09-02",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-ar-57",
+      "type": "wikipedia",
+      "title": "AR-57",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1353993664",
+      "lang": "en",
+      "revision": "1353993664",
+      "accessed": "2026-09-02",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

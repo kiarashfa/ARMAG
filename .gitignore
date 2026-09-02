@@ -25,10 +25,10 @@ Thumbs.db
 # --- Internal working files: never published to GitHub visitors ---
 # How the site is authored is internal.
 CLAUDE.md
+MEMORY.md
 PLAYBOOK.md
-Instruction.md
-SPEC.md
-FRICTION-LOG.md
+agent/
+archive/
 plan/
 
 # --- Others ---
