@@ -1,0 +1,108 @@
+{
+  "id": "ots-23-drotik",
+  "name": "OTs-23 Drotik",
+  "kind": "model",
+  "wikidataId": "Q7073121",
+  "makerRef": "kbp-instrument-design-bureau",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "russia",
+  "producedIn": ["russia"],
+  "introduced": 1993,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["duty-sidearm"],
+  "massEmpty": {
+    "value": 0.96,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-ots-23-drotik",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1271529535",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "length": {
+    "value": 195,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ots-23-drotik",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1271529535",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "barrelLength": {
+    "value": 125,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ots-23-drotik",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1271529535",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "width": {
+    "value": 32,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ots-23-drotik",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1271529535",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "height": {
+    "value": 135,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ots-23-drotik",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1271529535",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "cyclicRate": {
+    "value": 1800,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-ots-23-drotik",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1271529535",
+    "sourceNote": "from the infobox, uncited on Wikipedia, published as a single figure rather than a range"
+  },
+  "effectiveRange": {
+    "value": 50,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-ots-23-drotik",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1271529535",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-45x18mm",
+      "capacity": {
+        "value": 24,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-ots-23-drotik",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1271529535",
+        "sourceNote": "24-round detachable double-column box magazine, from the infobox, uncited on Wikipedia"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-ots-23-drotik",
+      "type": "wikipedia",
+      "title": "OTs-23 Drotik",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1271529535",
+      "lang": "en",
+      "revision": "1271529535",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

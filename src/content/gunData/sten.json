@@ -1,0 +1,150 @@
+{
+  "id": "sten",
+  "name": "Sten",
+  "kind": "model",
+  "wikidataId": "Q211782",
+  "makerRef": "rsaf-enfield",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Sten submachine gun", "kind": "military" },
+    { "name": "Sten Mk II", "kind": "military", "note": "The most widely produced mark, figures below." }
+  ],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "united-kingdom",
+  "producedIn": ["united-kingdom", "canada"],
+  "introduced": 1941,
+  "productionYears": { "start": 1941, "end": 1945 },
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["service-rifle", "personal-defence"],
+  "massEmpty": {
+    "value": 3.2,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-sten",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372528119",
+    "sourceNote": "Mk II, from the infobox, uncited on Wikipedia"
+  },
+  "length": {
+    "value": 762,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-sten",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372528119",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "barrelLength": {
+    "value": 196,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-sten",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372528119",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "cyclicRate": {
+    "value": 550,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-sten",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372528119",
+    "sourceNote": "published as a range of about 500-600 rounds a minute, version dependent; midpoint recorded"
+  },
+  "effectiveRange": {
+    "value": 60,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-sten",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372528119",
+    "sourceNote": "the infobox cites paradata.org.uk for this figure, but that page no longer resolves, so it is recorded as estimated rather than verified"
+  },
+  "productionTotal": {
+    "value": 3700000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-sten",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372528119",
+    "sourceNote": "the infobox gives a range of 3.7-4.6 million across all marks depending on source, uncited; the low end of that range is recorded here"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-sten",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372528119",
+        "sourceNote": "32-round detachable box magazine, from the infobox, uncited on Wikipedia"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/sten/hero.webp",
+      "alt": "A dark-finished Sten Mk II submachine gun seen from above and slightly to the rear, showing its plain tubular receiver, side-mounted magazine housing and skeletal wire shoulder stock",
+      "caption": "A Sten Mk II with the bolt forward and the wire loop stock partially visible, showing the plain welded-tube receiver typical of the design's stamped-and-tube construction.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Tom Oates",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sten_Mk_II_dorsal_view.JPG",
+        "title": "File:Sten Mk II dorsal view.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/sten/in-service.webp",
+      "alt": "A black Sten Mk II submachine gun with a T-shaped wire stock, propped up outdoors on a stony, dirt-covered ground beside a small plaque",
+      "caption": "A Sten Mk II displayed at the Yad Mordechai battlefield reconstruction site in Israel, marking the weapon's wide irregular and militia use well beyond British Commonwealth service.",
+      "width": 1200,
+      "height": 910,
+      "credit": {
+        "author": "User:Bukvoed",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:YM-battlefield-Sten-1.jpg",
+        "title": "File:YM-battlefield-Sten-1.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      }
+    },
+    {
+      "src": "images/guns/sten/magazine.webp",
+      "alt": "Close-up of a long, straight, double-column steel box magazine for a Sten submachine gun, standing on end with a row of cartridges visible through its feed lips",
+      "caption": "A 32-round Sten box magazine, of the horizontal side-feed pattern derived from the German MP 28's magazine design.",
+      "width": 1200,
+      "height": 1200,
+      "credit": {
+        "author": "Rama",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sten_IMG_2578.JPG",
+        "title": "File:Sten IMG 2578.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-sten",
+      "type": "wikipedia",
+      "title": "Sten",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372528119",
+      "lang": "en",
+      "revision": "1372528119",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

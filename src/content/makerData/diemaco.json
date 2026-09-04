@@ -1,0 +1,24 @@
+{
+  "id": "diemaco",
+  "name": "Diemaco",
+  "wikidataId": "Q5274925",
+  "country": "canada",
+  "founded": 1974,
+  "dissolved": 2005,
+  "predecessorOf": "colt-canada",
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-diemaco",
+      "type": "wikipedia",
+      "title": "Diemaco",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1356454546",
+      "lang": "en",
+      "revision": "1356454546",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

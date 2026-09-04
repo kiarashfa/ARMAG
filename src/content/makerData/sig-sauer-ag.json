@@ -1,0 +1,45 @@
+{
+  "id": "sig-sauer-ag",
+  "name": "SIG Sauer AG",
+  "wikidataId": "Q2061718",
+  "country": "switzerland",
+  "founded": 1853,
+  "logo": {
+    "src": "images/makers/sig-sauer-ag/logo.webp",
+    "alt": "A bold, slanted black wordmark reading SIG SAUER with a registered-trademark symbol",
+    "caption": "The SIG Sauer wordmark, taken from Wikipedia's own upload.",
+    "width": 960,
+    "height": 285,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/SIG_Sauer_AG",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-sig-sauer-ag",
+      "type": "wikipedia",
+      "title": "SIG Sauer AG",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369181209",
+      "lang": "en",
+      "revision": "1369181209",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "wp-sig-group",
+      "type": "wikipedia",
+      "title": "SIG Group",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359458248",
+      "lang": "en",
+      "revision": "1359458248",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

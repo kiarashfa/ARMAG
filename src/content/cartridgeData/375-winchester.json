@@ -1,0 +1,115 @@
+{
+  "id": "375-winchester",
+  "name": ".375 Winchester",
+  "wikidataId": "Q2806382",
+  "aliases": [],
+  "designedBy": "Winchester Repeating Arms Company",
+  "introduced": 1978,
+  "productionYears": { "start": 1978, "end": null },
+  "standard": "none",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 9.53,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-375-winchester",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1302346169",
+    "sourceNote": "converted from the infobox's .375 in, uncited on Wikipedia and with no free C.I.P. or SAAMI datasheet found"
+  },
+  "caseLength": {
+    "value": 51.31,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-375-winchester",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1302346169",
+    "sourceNote": "converted from the infobox's 2.020 in, uncited on Wikipedia and with no free C.I.P. or SAAMI datasheet found"
+  },
+  "overallLength": {
+    "value": 65.02,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-375-winchester",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1302346169",
+    "sourceNote": "converted from the infobox's 2.560 in, uncited on Wikipedia and with no free C.I.P. or SAAMI datasheet found"
+  },
+  "rimDiameter": {
+    "value": 12.85,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-375-winchester",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1302346169",
+    "sourceNote": "converted from the infobox's .506 in, uncited on Wikipedia and with no free C.I.P. or SAAMI datasheet found"
+  },
+  "neckDiameter": {
+    "value": 10.16,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-375-winchester",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1302346169",
+    "sourceNote": "converted from the infobox's .400 in, uncited on Wikipedia and with no free C.I.P. or SAAMI datasheet found"
+  },
+  "baseDiameter": {
+    "value": 10.67,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-375-winchester",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1302346169",
+    "sourceNote": "converted from the infobox's .420 in, uncited on Wikipedia and with no free C.I.P. or SAAMI datasheet found"
+  },
+  "maxPressure": {
+    "value": 379.2,
+    "unit": "MPa",
+    "status": "estimated",
+    "source": "wp-375-winchester",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1302346169",
+    "sourceNote": "converted from the infobox's 55,000 psi SAAMI figure, itself uncited on Wikipedia"
+  },
+  "pressureStandard": "saami",
+  "loads": [
+    {
+      "id": "hodgdon-200gr-jfp",
+      "name": "200 gr JFP",
+      "bulletMass": {
+        "value": 12.96,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-375-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1302346169",
+        "sourceNote": "200 gr jacketed flat-point, from Hodgdon's handloading data as reproduced in the infobox; velocity omitted because the only figures published are handloading results, not a factory load, and Hodgdon states no test-barrel length"
+      },
+      "bulletType": "JFP",
+      "velocityByBarrel": []
+    },
+    {
+      "id": "hodgdon-220gr-jfp",
+      "name": "220 gr JFP",
+      "bulletMass": {
+        "value": 14.26,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-375-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1302346169",
+        "sourceNote": "220 gr jacketed flat-point, from Hodgdon's handloading data as reproduced in the infobox; velocity omitted because the only figures published are handloading results, not a factory load, and Hodgdon states no test-barrel length"
+      },
+      "bulletType": "JFP",
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-375-winchester",
+      "type": "wikipedia",
+      "title": ".375 Winchester",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1302346169",
+      "lang": "en",
+      "revision": "1302346169",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

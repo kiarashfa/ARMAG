@@ -1,0 +1,20 @@
+{
+  "id": "cesare-lercker",
+  "name": "Cesare Lercker",
+  "country": "italy",
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-lercker-pistol",
+      "type": "wikipedia",
+      "title": "Lercker pistol",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1227945519",
+      "lang": "en",
+      "revision": "1227945519",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

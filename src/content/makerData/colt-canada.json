@@ -1,0 +1,35 @@
+{
+  "id": "colt-canada",
+  "name": "Colt Canada",
+  "wikidataId": "Q1817100",
+  "country": "canada",
+  "founded": 2005,
+  "successorOf": "diemaco",
+  "logo": {
+    "src": "images/makers/colt-canada/logo.webp",
+    "alt": "A blue wordmark reading COLT in a stylised swept-back font, with a red maple leaf beside the letter T and a registered-trademark symbol",
+    "caption": "The Colt Canada mark, taken from Wikipedia's own upload.",
+    "width": 300,
+    "height": 217,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Colt_Canada",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-colt-canada",
+      "type": "wikipedia",
+      "title": "Colt Canada",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372420387",
+      "lang": "en",
+      "revision": "1372420387",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

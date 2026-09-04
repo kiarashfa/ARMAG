@@ -1,0 +1,124 @@
+{
+  "id": "vickers-machine-gun",
+  "name": "Vickers machine gun",
+  "kind": "model",
+  "wikidataId": "Q754800",
+  "makerRef": "vickers-limited",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Vickers gun", "kind": "nickname" }
+  ],
+  "lineage": {},
+  "type": "machine-gun",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "united-kingdom",
+  "producedIn": ["united-kingdom"],
+  "introduced": 1912,
+  "productionYears": { "start": 1912, "end": 1968 },
+  "fireModes": ["automatic"],
+  "feedSystem": ["belt"],
+  "roles": ["service-rifle"],
+  "massEmpty": {
+    "value": 19.05,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-vickers-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370440719",
+    "sourceNote": "midpoint of the published, uncited all-up range of 33-51 lb, which includes water, tripod or ammunition depending on configuration"
+  },
+  "length": {
+    "value": 914,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vickers-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370440719",
+    "sourceNote": "converted from the infobox's 3 ft, uncited on Wikipedia"
+  },
+  "barrelLength": {
+    "value": 711,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vickers-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370440719",
+    "sourceNote": "converted from the infobox's 28 in, uncited on Wikipedia"
+  },
+  "cyclicRate": {
+    "value": 475,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-vickers-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370440719",
+    "sourceNote": "midpoint of the published, uncited range of 450-500 rounds a minute"
+  },
+  "effectiveRange": {
+    "value": 2000,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-vickers-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370440719",
+    "sourceNote": "converted from the infobox's uncited 2,187 yd direct-fire figure"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "303-british",
+      "capacity": {
+        "value": 250,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-vickers-machine-gun",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370440719",
+        "sourceNote": "250-round canvas belt, from the infobox, uncited on Wikipedia"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/vickers-machine-gun/hero.webp",
+      "alt": "A Vickers machine gun mounted on its low tripod, with its ribbed water-cooling jacket around the barrel and the belt-feed mechanism visible on top of the receiver",
+      "caption": "A Vickers machine gun on display at the Musée de l'Armée, Paris, showing its water-cooling jacket and low tripod mount.",
+      "width": 1600,
+      "height": 1595,
+      "credit": {
+        "author": "Rama .",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vickers_machine_gun,_Musée_de_l'Armée.jpg",
+        "title": "File:Vickers machine gun, Musée de l'Armée.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+      }
+    },
+    {
+      "src": "images/guns/vickers-machine-gun/in-service.webp",
+      "alt": "Two soldiers crouched outdoors cleaning a Vickers machine gun, its barrel jacket and ammunition belt visible on the ground beside them",
+      "caption": "Australian soldiers of the Royal Australian Regiment clean their Vickers gun during the Korean War, after firing more than 60,000 rounds from it over five days.",
+      "width": 640,
+      "height": 646,
+      "credit": {
+        "author": "Hobson, Phillip Oliver",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:3RAR_soldiers_clean_their_Vickers_machine_gun_after_five_days_of_fighting.jpg",
+        "title": "File:3RAR soldiers clean their Vickers machine gun after five days of fighting.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-vickers-machine-gun",
+      "type": "wikipedia",
+      "title": "Vickers machine gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370440719",
+      "lang": "en",
+      "revision": "1370440719",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

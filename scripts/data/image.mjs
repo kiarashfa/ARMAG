@@ -47,7 +47,7 @@ import { assetMeta as dvidsAsset, searchImages as dvidsSearch } from './lib/dvid
 import { objectMeta as siObject, searchObjects as siSearch } from './lib/smithsonian.mjs';
 import { getBuffer } from './lib/http.mjs';
 import { buildImageRef, licenseTypeFor } from './lib/imageref.mjs';
-import { REPO_ROOT, capsForBasename, encodeToWebp } from './lib/webp.mjs';
+import { REPO_ROOT, capsForBasename, encodeToWebp, writeSheet } from './lib/webp.mjs';
 
 const kb = (bytes) => `${Math.round(bytes / 1024)} kB`;
 
@@ -236,6 +236,58 @@ async function resolveSource(handle, { from = null } = {}) {
 }
 
 /**
+ * `sheet <name> <handle> [handle …]` — one numbered contact sheet for triage.
+ *
+ * §6 asks for three searches per subject, which routinely leaves more
+ * candidates than are worth opening. Opening three to five at full size in
+ * order to reject most of them is what makes an image pass expensive: the
+ * sibling recipe site measured 321 k tokens for 70 subjects before it worked
+ * this way.
+ *
+ * Takes handles from any of the three sources — `File:X.jpg`,
+ * `dvids:image:N`, `si:ID` — because `resolveSource` already normalises them,
+ * so one sheet can compare a Commons specimen against a DVIDS in-service shot
+ * side by side, which is exactly the judgement §6 asks for.
+ *
+ * Writes to `.cache/sheets/`, which is gitignored: a sheet is scratch for
+ * choosing, never an asset. **Triage only** — the tiles cannot show a
+ * watermark, a date stamp, or which variant a receiver is, so fetch the
+ * finalist properly before `add`.
+ */
+async function cmdSheet(name, handles) {
+  if (!name || handles.length === 0) {
+    throw new Error('usage: image.mjs sheet <name> <handle> [handle …]');
+  }
+  const tiles = [];
+  const failed = [];
+  for (const [i, handle] of handles.entries()) {
+    const label = String(i + 1).padStart(2, '0');
+    try {
+      const { download, label: resolved } = await resolveSource(handle);
+      tiles.push({ label, bytes: await getBuffer(download) });
+      console.log(`  ${label}  ${resolved}`);
+    } catch (error) {
+      failed.push(`  ${label}  ${handle} — ${error.message}`);
+    }
+  }
+  if (failed.length) {
+    console.log('\ncould not fetch:');
+    for (const line of failed) console.log(line);
+  }
+  if (tiles.length === 0) throw new Error('nothing could be fetched; no sheet written');
+
+  const out = path.join(REPO_ROOT, '.cache', 'sheets', `${name}.webp`);
+  const result = await writeSheet(tiles, out);
+  for (const skip of result.skipped) console.log(`  skipped ${skip}`);
+  console.log(
+    `\n${result.drawn} candidate(s): ${path.relative(REPO_ROOT, out)}\n` +
+      'Read the sheet, pick the number that could be right, then fetch that one ' +
+      'properly before `add` — the sheet is triage and is too small to show a ' +
+      'watermark, a date stamp, or which variant it is.',
+  );
+}
+
+/**
  * `add <file> <collection/slug> <basename>`
  *
  * `collection/slug` is `guns/ak-47` or `cartridges/9x19mm-parabellum`, matching
@@ -385,6 +437,7 @@ try {
   else if (command === 'licence' || command === 'license') await cmdLicence(args[0]);
   else if (command === 'add') await cmdAdd(args[0], args[1], args[2], { replace });
   else if (command === 'logo') await cmdLogo(args[0], args[1], { replace, from });
+  else if (command === 'sheet') await cmdSheet(args[0], args.slice(1));
   else if (command === 'credit') await cmdCredit(args[0]);
   else {
     console.error(
@@ -392,6 +445,7 @@ try {
         '       image.mjs dvids "words"   (US military, in service)   | si "words"  (Smithsonian, CC0)\n' +
         '       image.mjs add <File:X.jpg | dvids:image:N | si:IDSID> guns/<slug> <basename> [--replace]\n' +
         '       image.mjs logo <maker-slug> <File:X.png | https://…> [--from <page>] [--replace]\n' +
+        '       image.mjs sheet <name> <handle> [handle …]   (one tiled sheet, ALL THREE sources)\n' +
         '       image.mjs credit <slug>',
     );
     process.exitCode = 1;

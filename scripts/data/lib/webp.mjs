@@ -37,7 +37,7 @@ export function capsForBasename(basename) {
       };
 }
 
-function runPython(args) {
+function runPython(args, stdin = null) {
   return new Promise((resolve, reject) => {
     // `python` rather than `python3`: this is a Windows-first repo
     // (Instruction.md §1) and `python3` is not on PATH there.
@@ -46,6 +46,10 @@ function runPython(args) {
       // contain characters it cannot represent (Instruction.md §1).
       env: { ...process.env, PYTHONIOENCODING: 'utf-8' },
     });
+    if (stdin !== null) {
+      child.stdin.on('error', () => {}); // a python that died early closes the pipe
+      child.stdin.end(stdin, 'utf8');
+    }
     let out = '';
     let err = '';
     child.stdout.on('data', (d) => (out += d));
@@ -63,6 +67,31 @@ function runPython(args) {
       else reject(new Error(err.trim() || `python exited ${code}`));
     });
   });
+}
+
+/**
+ * Tiles candidate images into one numbered contact sheet, for triage.
+ *
+ * `PLAYBOOK.md` §6 requires three searches per subject, so the agent routinely
+ * has more candidates than it can afford to open. This writes one small sheet
+ * instead; only the finalist is fetched at full size. Triage only — the tiles
+ * cannot show a watermark or which variant a receiver is.
+ *
+ * Takes `[{ label, bytes }]` and returns what the tiler actually drew, so a
+ * candidate that will not decode is reported rather than silently missing.
+ */
+export async function writeSheet(tiles, destination) {
+  await mkdir(path.dirname(destination), { recursive: true });
+  const job = JSON.stringify({
+    out: destination,
+    tiles: tiles.map(({ label, bytes }) => ({
+      label,
+      bytes_b64: Buffer.from(bytes).toString('base64'),
+    })),
+  });
+  const script = path.join(REPO_ROOT, 'scripts', 'data', 'lib', 'sheet.py');
+  const out = await runPython([script], job);
+  return JSON.parse(out);
 }
 
 /**

@@ -1,0 +1,164 @@
+{
+  "id": "sig-sg-550",
+  "name": "SIG SG 550",
+  "kind": "model",
+  "wikidataId": "Q2206398",
+  "makerRef": "sig-sauer-ag",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Stgw 90",
+      "kind": "military",
+      "note": "Sturmgewehr 90, the Swiss Army's service designation."
+    },
+    {
+      "name": "Fass 90",
+      "kind": "military",
+      "note": "Fusil d'assaut 90, the French-language Swiss service designation."
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "switzerland",
+  "producedIn": [
+    "switzerland"
+  ],
+  "introduced": 1986,
+  "productionYears": {
+    "start": 1986,
+    "end": null
+  },
+  "fireModes": [
+    "semi",
+    "burst",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "service-rifle"
+  ],
+  "massEmpty": {
+    "value": 4.1,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-sig-sg-550",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371089050",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "length": {
+    "value": 1000,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-sig-sg-550",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371089050",
+    "sourceNote": "stock extended, from the infobox, uncited on Wikipedia"
+  },
+  "lengthFolded": {
+    "value": 772,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-sig-sg-550",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371089050",
+    "sourceNote": "stock folded, from the infobox, uncited on Wikipedia"
+  },
+  "barrelLength": {
+    "value": 528,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-sig-sg-550",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371089050",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "sightRadius": {
+    "value": 540,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-sig-sg-550",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371089050",
+    "sourceNote": "SG 550, from the infobox, uncited on Wikipedia"
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-sig-sg-550",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371089050",
+    "sourceNote": "published as 'c. 700 rounds/min', uncited on Wikipedia"
+  },
+  "productionTotal": {
+    "value": 600000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-sig-sg-550",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371089050",
+    "sourceNote": "across the whole SG 550 family, uncited on Wikipedia"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-sig-sg-550",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371089050",
+        "sourceNote": "largest of the proprietary 10-, 20- and 30-round box magazines published for the SG 550 series, uncited on Wikipedia; later variants also accept STANAG magazines"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/sig-sg-550/hero.webp",
+      "alt": "A green SIG SG 550 rifle with a folding metal wire stock, ribbed handguard and a translucent curved box magazine, seen from the left",
+      "caption": "A SIG SG 550 (Stgw 90), the Swiss Army's rifle, with its skeletal folding stock extended and a translucent studded magazine fitted.",
+      "width": 1052,
+      "height": 270,
+      "credit": {
+        "author": "stw",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stgw_90_3.jpg",
+        "title": "File:Stgw 90 3.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "src": "images/guns/sig-sg-550/folded-stock.webp",
+      "alt": "The rear of a SIG SG 550 rifle with its triangular wire stock folded flat against the side of the receiver, and two spent cartridge cases lying on the ground beneath it",
+      "caption": "An SG 550 with its folding stock collapsed against the receiver, shortening the rifle for storage or transport.",
+      "width": 1200,
+      "height": 616,
+      "credit": {
+        "author": "Hornet Driver",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:StGw90_geklappt.JPG",
+        "title": "File:StGw90 geklappt.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-sig-sg-550",
+      "type": "wikipedia",
+      "title": "SIG SG 550",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371089050",
+      "lang": "en",
+      "revision": "1371089050",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "id": "daewoo-precision-industries-k2",
+  "name": "Daewoo Precision Industries K2",
+  "kind": "model",
+  "nativeName": "K2 소총",
+  "wikidataId": "Q486020",
+  "makerRef": "snt-motiv",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Daewoo K2", "kind": "commercial" },
+    { "name": "K2", "kind": "military", "market": "South Korea" }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "south-korea",
+  "producedIn": ["south-korea"],
+  "introduced": 1985,
+  "productionYears": { "start": 1982, "end": null },
+  "fireModes": ["semi", "burst", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["service-rifle"],
+  "massEmpty": {
+    "value": 3.4,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-daewoo-precision-industries-k2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363282218",
+    "sourceNote": "without magazine, from the infobox, cited there to SNT Motiv's own product catalogue (sntmotiv.com), a page that could not be independently read for this figure — the PDF is a marketing catalogue with no extractable spec table"
+  },
+  "length": {
+    "value": 980,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-daewoo-precision-industries-k2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363282218",
+    "sourceNote": "stock extended, from the infobox, cited there to SNT Motiv's own catalogue; see the note on massEmpty"
+  },
+  "lengthFolded": {
+    "value": 730,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-daewoo-precision-industries-k2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363282218",
+    "sourceNote": "stock folded, from the infobox, cited there to SNT Motiv's own catalogue; see the note on massEmpty"
+  },
+  "barrelLength": {
+    "value": 465,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-daewoo-precision-industries-k2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363282218",
+    "sourceNote": "from the infobox, cited there to SNT Motiv's own catalogue; see the note on massEmpty"
+  },
+  "cyclicRate": {
+    "value": 800,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "edaily-2016-k2",
+    "sourceUrl": "https://www.edaily.co.kr/news/read?newsId=01170966612809312&mediaCodeNo=257",
+    "sourceNote": "midpoint of a published 700-900 rounds/min range"
+  },
+  "effectiveRange": {
+    "value": 600,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-daewoo-precision-industries-k2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363282218",
+    "sourceNote": "published for the K100 load in the K2 and K2C1, uncited on Wikipedia; the K2C is published at a shorter 500 m with the same load"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-daewoo-precision-industries-k2",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363282218",
+        "sourceNote": "30-round STANAG-pattern box magazine, interchangeable with the M16's; published as 'various STANAG magazines' in the infobox, uncited on Wikipedia"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "k2c1",
+      "name": "K2C1",
+      "productionYears": { "start": 2015, "end": null },
+      "summary": "The rail-equipped upgrade that replaced the original K2 as the Republic of Korea Armed Forces' standard-issue rifle from 2015, adding a flat-top receiver, quad-rail handguard and a collapsible stock without changing the gas-operated action or the 5.56 mm NATO chambering.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.6,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-daewoo-precision-industries-k2",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363282218",
+          "sourceNote": "without magazine, from the infobox, cited there to SNT Motiv's own catalogue; see the note on the parent entry's massEmpty"
+        },
+        "length": {
+          "value": 1014,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-daewoo-precision-industries-k2",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363282218",
+          "sourceNote": "stock extended, from the infobox, cited there to SNT Motiv's own catalogue; a published retracted length of 940 mm has no field on this schema"
+        },
+        "lengthFolded": {
+          "value": 730,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-daewoo-precision-industries-k2",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363282218",
+          "sourceNote": "stock fully collapsed, from the infobox, cited there to SNT Motiv's own catalogue"
+        }
+      },
+      "configurations": [
+        {
+          "id": "k2c1-short-barrel",
+          "name": "Short-barrel configuration",
+          "overrides": {
+            "barrelLength": {
+              "value": 305,
+              "unit": "mm",
+              "status": "estimated",
+              "source": "wp-daewoo-precision-industries-k2",
+              "sourceNote": "a 12 in (305 mm) barrel offered alongside the standard 465 mm barrel, from the article body, uncited on Wikipedia"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/daewoo-precision-industries-k2/hero.webp",
+      "alt": "A black rifle shown in profile against a plain white background, with a short flash suppressor, a ribbed polymer handguard, a folding carrying handle over the receiver, a pistol grip and a solid polymer buttstock",
+      "caption": "A Daewoo K2 rifle, the standard configuration with fixed polymer stock, at the War Memorial of Korea.",
+      "width": 1600,
+      "height": 509,
+      "credit": {
+        "author": "https://commons.wikimedia.org/wiki/User:Shotgunlee",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daewoo_K2_rifle_1_noBG.png",
+        "title": "File:Daewoo K2 rifle 1 noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/daewoo-precision-industries-k2/marine-exchange.webp",
+      "alt": "Two soldiers in camouflage fire black rifles fitted with underbarrel grenade launchers from a firing line of sandbags and drums",
+      "caption": "U.S. Marines fire the Daewoo K2, fitted with a K201 40 mm grenade launcher, during a weapons exchange with Republic of Korea forces at Gimpo in 2015.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Cpl. Tyler S. Giguere, USMC",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daewoo_K2_and_K201_in_Korean_Marine_Exchange_Program_15-3_02.jpg",
+        "title": "File:Daewoo K2 and K201 in Korean Marine Exchange Program 15-3 02.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/daewoo-precision-industries-k2/k2c1-field.webp",
+      "alt": "A kneeling soldier in digital camouflage aims a black rifle fitted with a quad-rail handguard and an optical sight, armoured vehicles visible out of focus behind him",
+      "caption": "A Republic of Korea Army soldier aims a K2C1 rifle — the rail-equipped variant that replaced the original K2 as the standard-issue service rifle — during the Gyeryong Ground Forces Festival, 2025.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Staff Sgt. Reginald Harvey, U.S. Army",
+        "sourceUrl": "https://www.dvidshub.net/image/9326639/gyeryong-ground-forces-festival-2025",
+        "title": "Gyeryong Ground Forces Festival 2025",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Army (8th Army), VIRIN 250918-A-AR378-1559. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-daewoo-precision-industries-k2",
+      "type": "wikipedia",
+      "title": "Daewoo Precision Industries K2",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363282218",
+      "lang": "en",
+      "revision": "1363282218",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "edaily-2016-k2",
+      "type": "web",
+      "title": "[e-무기]60만 장병의 개인화기 'K2' 2020년 퇴역",
+      "author": "Kim Gwan-yong",
+      "publisher": "Edaily",
+      "url": "https://www.edaily.co.kr/news/read?newsId=01170966612809312&mediaCodeNo=257",
+      "year": 2016,
+      "accessed": "2026-09-04",
+      "note": "cited by the Wikipedia infobox as the source for a published cyclic-rate range of 700-900 rounds/min"
+    }
+  ]
+}

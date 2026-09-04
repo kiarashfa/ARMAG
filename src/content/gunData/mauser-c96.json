@@ -1,0 +1,213 @@
+{
+  "id": "mauser-c96",
+  "name": "Mauser C96",
+  "kind": "model",
+  "wikidataId": "Q159527",
+  "makerRef": "mauser",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Broomhandle Mauser", "kind": "nickname" },
+    { "name": "Construktion 96", "kind": "military" }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "germany",
+  "producedIn": ["germany", "china", "spain"],
+  "introduced": 1896,
+  "productionYears": { "start": 1896, "end": 1937 },
+  "fireModes": ["semi"],
+  "feedSystem": ["fixed-box"],
+  "roles": ["duty-sidearm"],
+  "massEmpty": {
+    "value": 1.25,
+    "unit": "kg",
+    "status": "verified",
+    "source": "mf-mauser-c96",
+    "sourceUrl": "http://modernfirearms.net/en/handguns/handguns-en/germany-semi-automatic-pistols/mauser-c-96-eng/",
+    "sourceNote": "unloaded; Wikipedia's own infobox instead gives an uncited 1.13 kg"
+  },
+  "length": {
+    "value": 312,
+    "unit": "mm",
+    "status": "verified",
+    "source": "mf-mauser-c96",
+    "sourceUrl": "http://modernfirearms.net/en/handguns/handguns-en/germany-semi-automatic-pistols/mauser-c-96-eng/",
+    "sourceNote": "with the standard 140 mm barrel; other barrel lengths were also made"
+  },
+  "barrelLength": {
+    "value": 140,
+    "unit": "mm",
+    "status": "verified",
+    "source": "mf-mauser-c96",
+    "sourceUrl": "http://modernfirearms.net/en/handguns/handguns-en/germany-semi-automatic-pistols/mauser-c-96-eng/",
+    "sourceNote": "standard length; 99 mm and other barrel lengths were also produced"
+  },
+  "cyclicRate": {
+    "value": 120,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-mauser-c96",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371853738",
+    "sourceNote": "semi-automatic practical rate of fire, from the infobox, uncited on Wikipedia"
+  },
+  "effectiveRange": {
+    "value": 175,
+    "unit": "m",
+    "status": "verified",
+    "source": "mf-mauser-c96",
+    "sourceUrl": "http://modernfirearms.net/en/handguns/handguns-en/germany-semi-automatic-pistols/mauser-c-96-eng/",
+    "sourceNote": "midpoint of the published 150-200 m range, reached particularly with the shoulder stock attached"
+  },
+  "sightGraduation": {
+    "value": 1000,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-mauser-c96",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371853738",
+    "sourceNote": "tangent rear sight graduated to 1,000 m, from the infobox, uncited on Wikipedia"
+  },
+  "productionTotal": {
+    "value": 1100000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-mauser-c96",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371853738",
+    "sourceNote": "published as '1,100,000+', so this is a floor rather than a count; uncited on Wikipedia"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-63x25mm-mauser",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "verified",
+        "source": "mf-mauser-c96",
+        "sourceUrl": "http://modernfirearms.net/en/handguns/handguns-en/germany-semi-automatic-pistols/mauser-c-96-eng/",
+        "sourceNote": "10-round fixed internal box magazine loaded by stripper clip; 6- and 20-round fixed magazines were also produced"
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "7-65x21mm-parabellum",
+      "capacity": {
+        "value": null,
+        "unit": "",
+        "status": "placeholder",
+        "sourceNote": "no source found giving magazine capacity specifically for this secondary chambering"
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": null,
+        "unit": "",
+        "status": "placeholder",
+        "sourceNote": "no source found giving magazine capacity specifically for this secondary chambering"
+      },
+      "primary": false
+    }
+  ],
+  "variants": [
+    {
+      "id": "m712-schnellfeuer",
+      "name": "M712 Schnellfeuer",
+      "productionYears": { "start": 1932, "end": 1938 },
+      "summary": "A selective-fire version built in the 1930s, feeding from a detachable box magazine, in response to selective-fire C96 copies already being sold from Spain.",
+      "overrides": {
+        "fireModes": ["semi", "automatic"],
+        "feedSystem": ["detachable-box"],
+        "chamberings": [
+          {
+            "cartridgeRef": "7-63x25mm-mauser",
+            "capacity": {
+              "value": 20,
+              "unit": "",
+              "status": "verified",
+              "source": "fw-schnellfeuer",
+              "sourceUrl": "https://www.forgottenweapons.com/mauser-schnellfeuer-or-model-712-machine-pistol/",
+              "sourceNote": "10- and 20-round detachable box magazines"
+            },
+            "primary": true
+          }
+        ],
+        "cyclicRate": {
+          "value": 950,
+          "unit": "rpm",
+          "status": "estimated",
+          "source": "fw-schnellfeuer",
+          "sourceUrl": "https://www.forgottenweapons.com/mauser-schnellfeuer-or-model-712-machine-pistol/",
+          "sourceNote": "midpoint of the published 900-1000 rounds a minute"
+        }
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/mauser-c96/hero.webp",
+      "alt": "A blued Mauser C96 pistol seen from the left, showing its long barrel, fixed magazine ahead of the trigger guard, sweeping wooden grip and a rear tangent sight on top of the barrel",
+      "caption": "A Mauser C96 made around 1910 at Mauser's Oberndorf factory, chambered for 7.63mm Mauser, with its distinctive fixed-magazine 'broomhandle' grip and 1,000 m tangent sight.",
+      "width": 1600,
+      "height": 1038,
+      "credit": {
+        "author": "Self Loader",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mauser_C96_7.63mm_SN_60403_L_DSC8581.jpg",
+        "title": "File:Mauser C96 7.63mm SN 60403 L DSC8581.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/mauser-c96/with-stock.webp",
+      "alt": "A Mauser C96 pistol with a wooden shoulder stock fitted to the rear of its grip, turning it into a short carbine-like weapon",
+      "caption": "A Mauser C96 from the Swedish Army Museum with its wooden shoulder stock attached; the same stock also served as a carrying case for the pistol when detached.",
+      "width": 1198,
+      "height": 333,
+      "credit": {
+        "author": "Armémuseum (Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mauser_C96_004.jpg",
+        "title": "File:Mauser C96 004.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-mauser-c96",
+      "type": "wikipedia",
+      "title": "Mauser C96",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371853738",
+      "lang": "en",
+      "revision": "1371853738",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "mf-mauser-c96",
+      "type": "web",
+      "title": "Mauser C-96",
+      "publisher": "Modern Firearms",
+      "url": "http://modernfirearms.net/en/handguns/handguns-en/germany-semi-automatic-pistols/mauser-c-96-eng/",
+      "accessed": "2026-09-04"
+    },
+    {
+      "key": "fw-schnellfeuer",
+      "type": "web",
+      "title": "Mauser Schnellfeuer, or Model 712, Machine Pistol",
+      "publisher": "Forgotten Weapons",
+      "url": "https://www.forgottenweapons.com/mauser-schnellfeuer-or-model-712-machine-pistol/",
+      "accessed": "2026-09-04"
+    }
+  ]
+}

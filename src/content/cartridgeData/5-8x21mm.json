@@ -1,0 +1,93 @@
+{
+  "id": "5-8x21mm",
+  "name": "5.8×21mm",
+  "wikidataId": "Q4215890",
+  "aliases": [
+    { "name": "5.8×21mm DAP92", "kind": "military" }
+  ],
+  "designedBy": "Norinco",
+  "introduced": 1994,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 6,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8x21mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1342470643",
+    "sourceNote": "from the infobox, which cites a Guns & Ammo web page; no free C.I.P. or SAAMI datasheet exists for this Chinese military round"
+  },
+  "caseLength": {
+    "value": 21.0,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8x21mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1342470643",
+    "sourceNote": "from the infobox, which cites the now-dead municion.org reference site; no free C.I.P. or SAAMI datasheet exists for this Chinese military round"
+  },
+  "overallLength": {
+    "value": 32.5,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8x21mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1342470643",
+    "sourceNote": "from the infobox, uncited on Wikipedia; no free C.I.P. or SAAMI datasheet exists for this Chinese military round"
+  },
+  "rimDiameter": {
+    "value": 7.97,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8x21mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1342470643",
+    "sourceNote": "from the infobox, uncited on Wikipedia; no free C.I.P. or SAAMI datasheet exists for this Chinese military round"
+  },
+  "neckDiameter": {
+    "value": 6.57,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8x21mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1342470643",
+    "sourceNote": "from the infobox, uncited on Wikipedia; no free C.I.P. or SAAMI datasheet exists for this Chinese military round"
+  },
+  "baseDiameter": {
+    "value": 7.95,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-5-8x21mm",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1342470643",
+    "sourceNote": "from the infobox, uncited on Wikipedia; no free C.I.P. or SAAMI datasheet exists for this Chinese military round"
+  },
+  "loads": [
+    {
+      "id": "46gr-ap",
+      "name": "46 gr armour-piercing",
+      "bulletMass": {
+        "value": 2.98,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-5-8x21mm",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1342470643",
+        "sourceNote": "46 gr steel-cored bullet, from the infobox ballistics table; the table's test-barrel field names only 'pistol' and 'submachine gun' with no length in mm, so no velocity point is recorded for either row"
+      },
+      "bulletType": "armour-piercing",
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-5-8x21mm",
+      "type": "wikipedia",
+      "title": "5.8×21mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1342470643",
+      "lang": "en",
+      "revision": "1342470643",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

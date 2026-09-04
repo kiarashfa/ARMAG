@@ -1,0 +1,125 @@
+{
+  "id": "7-65x20mm-long",
+  "name": "7.65×20mm Long",
+  "wikidataId": "Q2818192",
+  "aliases": [
+    { "name": "7.65mm Longue", "kind": "military" }
+  ],
+  "designedBy": "Remington Arms (John Pedersen)",
+  "introduced": 1917,
+  "productionYears": { "start": 1918, "end": 1960 },
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 7.85,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-65x20mm-long",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1324901236",
+    "sourceNote": "from the infobox, uncited on Wikipedia; no free C.I.P. or SAAMI datasheet found for this military round"
+  },
+  "caseLength": {
+    "value": 19.7,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-65x20mm-long",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1324901236",
+    "sourceNote": "from the infobox, uncited on Wikipedia; no free C.I.P. or SAAMI datasheet found for this military round"
+  },
+  "overallLength": {
+    "value": 30.24,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-65x20mm-long",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1324901236",
+    "sourceNote": "from the infobox, uncited on Wikipedia; no free C.I.P. or SAAMI datasheet found for this military round"
+  },
+  "rimDiameter": {
+    "value": 8.5,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-65x20mm-long",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1324901236",
+    "sourceNote": "from the infobox, uncited on Wikipedia; no free C.I.P. or SAAMI datasheet found for this military round"
+  },
+  "neckDiameter": {
+    "value": 8.5,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-65x20mm-long",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1324901236",
+    "sourceNote": "from the infobox, uncited on Wikipedia; no free C.I.P. or SAAMI datasheet found for this military round"
+  },
+  "baseDiameter": {
+    "value": 8.53,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-65x20mm-long",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1324901236",
+    "sourceNote": "from the infobox, uncited on Wikipedia; no free C.I.P. or SAAMI datasheet found for this military round"
+  },
+  "loads": [
+    {
+      "id": "77gr-fmj",
+      "name": "77 gr FMJ ball",
+      "bulletMass": {
+        "value": 4.99,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-7-65x20mm-long",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1324901236",
+        "sourceNote": "77 gr full metal jacket, from the infobox ballistics table, uncited on Wikipedia; the same table states no test-barrel length so no velocity point is recorded"
+      },
+      "bulletType": "FMJ",
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7-65x20mm-long/hero.webp",
+      "alt": "Two 7.65×20mm Longue cartridges lying on their sides against a black background, showing their small, straight, rimless brass cases and round-nosed bullets",
+      "caption": "7.65mm Longue ATS 1948-production cartridges, showing the round's compact, rimless, straight-walled case and round-nosed full metal jacket bullet.",
+      "width": 985,
+      "height": 1231,
+      "credit": {
+        "author": "Hatchetfish",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7.65mm_Longue_ATS_1948_Cartridges.png",
+        "title": "File:7.65mm Longue ATS 1948 Cartridges.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/7-65x20mm-long/headstamp.webp",
+      "alt": "Close-up of a 7.65mm Longue cartridge base, stamped with the letters ATS and the year 1948 around the primer",
+      "caption": "Headstamp of a 7.65mm Longue round produced in 1948 by ATS (Ateliers de Tulle), marking French service production after the Second World War.",
+      "width": 1020,
+      "height": 1020,
+      "credit": {
+        "author": "Hatchetfish",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7.65mm_Longue_ATS_1948_Headstamp.jpg",
+        "title": "File:7.65mm Longue ATS 1948 Headstamp.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-7-65x20mm-long",
+      "type": "wikipedia",
+      "title": "7.65×20mm Long",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1324901236",
+      "lang": "en",
+      "revision": "1324901236",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

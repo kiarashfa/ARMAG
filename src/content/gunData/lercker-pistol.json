@@ -1,0 +1,84 @@
+{
+  "id": "lercker-pistol",
+  "name": "Lercker pistol",
+  "kind": "model",
+  "wikidataId": "Q15955005",
+  "makerRef": "cesare-lercker",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "italy",
+  "producedIn": ["italy"],
+  "introduced": 1950,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 0.93,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-lercker-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1227945519",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "length": {
+    "value": 184,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-lercker-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1227945519",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "barrelLength": {
+    "value": 104,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-lercker-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1227945519",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "cyclicRate": {
+    "value": 1200,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-lercker-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1227945519",
+    "sourceNote": "from the infobox, uncited on Wikipedia, published as a single figure rather than a range"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "25-acp",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-lercker-pistol",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1227945519",
+        "sourceNote": "20-round detachable box magazine, from the infobox, uncited on Wikipedia"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-lercker-pistol",
+      "type": "wikipedia",
+      "title": "Lercker pistol",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1227945519",
+      "lang": "en",
+      "revision": "1227945519",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

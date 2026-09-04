@@ -1,0 +1,132 @@
+{
+  "id": "colt-canada-c7",
+  "name": "Colt Canada C7",
+  "kind": "model",
+  "wikidataId": "Q995577",
+  "makerRef": "diemaco",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "C7A1", "kind": "military" },
+    { "name": "C7A2", "kind": "military" }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-direct-impingement",
+  "designedIn": "canada",
+  "producedIn": ["canada"],
+  "introduced": 1984,
+  "productionYears": { "start": 1982, "end": null },
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["service-rifle"],
+  "massEmpty": {
+    "value": 3.3,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-colt-canada-c7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368709507",
+    "sourceNote": "unloaded, from the infobox, uncited on Wikipedia"
+  },
+  "length": {
+    "value": 1006,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-colt-canada-c7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368709507",
+    "sourceNote": "stock extended, from the infobox, uncited on Wikipedia"
+  },
+  "barrelLength": {
+    "value": 508,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-colt-canada-c7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368709507",
+    "sourceNote": "from the infobox, uncited on Wikipedia"
+  },
+  "cyclicRate": {
+    "value": 825,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-colt-canada-c7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368709507",
+    "sourceNote": "midpoint of the published, uncited range of 700-950 rounds a minute"
+  },
+  "effectiveRange": {
+    "value": 400,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-colt-canada-c7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368709507",
+    "sourceNote": "with iron sights; a magnifying optical sight raises this to a published, uncited 550 m"
+  },
+  "productionTotal": {
+    "value": 250000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-colt-canada-c7",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368709507",
+    "sourceNote": "published as '250,000+' across the C7/C8 family, so this is a floor rather than a count; uncited on Wikipedia"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-colt-canada-c7",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368709507",
+        "sourceNote": "standard STANAG magazine capacity, uncited on Wikipedia, which names only the magazine pattern rather than a round count"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/colt-canada-c7/hero.webp",
+      "alt": "A line of soldiers in camouflage uniforms and helmets aiming black AR-15-pattern rifles fitted with carrying handles and optical sights, standing shoulder to shoulder on a firing line",
+      "caption": "Canadian soldiers with C7A2 rifles during a multinational rifle drill exercise at Camp Blanding, Florida, in 2009.",
+      "width": 1067,
+      "height": 1600,
+      "credit": {
+        "author": "Lance Cpl. Christopher J. Gallagher, U.S. Marine Corps",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Canadian_C7A2_Firing_Line.jpg",
+        "title": "File:Canadian C7A2 Firing Line.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/colt-canada-c7/in-service.webp",
+      "alt": "A soldier in camouflage aiming a black rifle fitted with a red-dot optical sight, with an ejected cartridge case visible in mid-air beside the ejection port",
+      "caption": "A Canadian Army soldier firing a C7A2 during the Winston P. Wilson Armed Forces Skill at Arms Meet in Arkansas, 2018.",
+      "width": 1200,
+      "height": 675,
+      "credit": {
+        "author": "Spc. Patrik Orcutt",
+        "sourceUrl": "https://www.dvidshub.net/image/4368440/winston-p-wilson-afsam-small-arms-championship",
+        "title": "Winston P. Wilson / AFSAM Small Arms Championship",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Joint (National Guard Marksmanship Training Center), VIRIN 180503-Z-JY390-921. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-colt-canada-c7",
+      "type": "wikipedia",
+      "title": "Colt Canada C7",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368709507",
+      "lang": "en",
+      "revision": "1368709507",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

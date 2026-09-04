@@ -1,0 +1,139 @@
+{
+  "id": "m240-machine-gun",
+  "name": "M240 machine gun",
+  "kind": "model",
+  "wikidataId": "Q772765",
+  "makerRef": "fn-herstal",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "FN MAG", "kind": "commercial", "note": "The Belgian-designed general-purpose machine gun the M240 is a US-built version of." },
+    { "name": "M240B", "kind": "military", "note": "The current dismounted-infantry configuration; figures in this entry describe it." }
+  ],
+  "lineage": {},
+  "type": "machine-gun",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "belgium",
+  "producedIn": ["united-states", "belgium"],
+  "introduced": 1977,
+  "productionYears": { "start": 1977, "end": null },
+  "fireModes": ["automatic"],
+  "feedSystem": ["belt"],
+  "roles": ["service-rifle"],
+  "massEmpty": {
+    "value": 12.52,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-m240-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372830647",
+    "sourceNote": "M240B configuration, converted from the infobox's 27.6 lb, uncited on Wikipedia"
+  },
+  "length": {
+    "value": 1262,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-m240-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372830647",
+    "sourceNote": "converted from the infobox's 49.7 in, uncited on Wikipedia"
+  },
+  "barrelLength": {
+    "value": 630,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-m240-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372830647",
+    "sourceNote": "converted from the infobox's 24.8 in, uncited on Wikipedia"
+  },
+  "width": {
+    "value": 119,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-m240-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372830647",
+    "sourceNote": "converted from the infobox's 4.7 in, uncited on Wikipedia"
+  },
+  "height": {
+    "value": 264,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-m240-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372830647",
+    "sourceNote": "converted from the infobox's 10.4 in, uncited on Wikipedia"
+  },
+  "cyclicRate": {
+    "value": 600,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-m240-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372830647",
+    "sourceNote": "midpoint of the published, uncited base rate of 550-650 rounds a minute on the single-port gas setting; three higher adjustable gas settings are also published, up to 850-950 rounds a minute"
+  },
+  "effectiveRange": {
+    "value": 1100,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-m240-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372830647",
+    "sourceNote": "midpoint of the published, uncited 800-1800 m range, which depends on mount"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x51mm-nato",
+      "capacity": {
+        "value": 100,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-m240-machine-gun",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372830647",
+        "sourceNote": "M13 disintegrating-link belt, commonly carried in 100-round pouches; a 50-round assault pouch and the non-disintegrating DM1 belt are also published as feed options"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/m240-machine-gun/hero.webp",
+      "alt": "A black belt-fed machine gun on a plain background, seen from the left, with a rail-mounted optical sight, a folding bipod and a ribbed barrel jacket",
+      "caption": "An M240L, a lightened variant of the M240 machine gun with a titanium receiver, fitted with an ELCAN optical sight. This entry's figures describe the M240B rather than the M240L pictured here.",
+      "width": 1600,
+      "height": 865,
+      "credit": {
+        "author": "Photo Courtesy of PEO Soldier",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PEO_M240L_ELCAN_Left.jpg",
+        "title": "File:PEO M240L ELCAN Left.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/m240-machine-gun/in-service.webp",
+      "alt": "A soldier lying prone in a forest clearing firing a belt-fed machine gun on a bipod, with a burst of muzzle flash visible at the barrel",
+      "caption": "A US Marine firing an M240B machine gun from a bipod during training in Australia, 2021.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "U.S. Marine Corps photo by Cpl. Lydia Gordon",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bounding_with_the_M240B_machine_gun_(6763237).jpg",
+        "title": "File:Bounding with the M240B machine gun (6763237).jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-m240-machine-gun",
+      "type": "wikipedia",
+      "title": "M240 machine gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372830647",
+      "lang": "en",
+      "revision": "1372830647",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

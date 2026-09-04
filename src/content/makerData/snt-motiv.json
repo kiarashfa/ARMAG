@@ -1,0 +1,37 @@
+{
+  "id": "snt-motiv",
+  "name": "SNT Motiv",
+  "nativeName": "SNT모티브 주식회사",
+  "wikidataId": "Q485036",
+  "country": "south-korea",
+  "founded": 1981,
+  "dissolved": null,
+  "website": "https://www.sntmotiv.com/eng/main/main.html",
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-snt-motiv",
+      "type": "wikipedia",
+      "title": "SNT Motiv",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1354393214",
+      "lang": "en",
+      "revision": "1354393214",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-09-04"
+    }
+  ],
+  "logo": {
+    "src": "images/makers/snt-motiv/logo.webp",
+    "alt": "The wordmark \"SNT MOTIV\" in a bold sans-serif, the letters SNT rendered inside an angular blue shield-like emblem to the left of the word MOTIV in dark grey.",
+    "caption": "The SNT Motiv corporate wordmark, from the company's Wikipedia article.",
+    "width": 960,
+    "height": 612,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/SNT_Motiv",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  }
+}

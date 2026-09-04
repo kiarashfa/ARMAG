@@ -1,0 +1,150 @@
+{
+  "id": "m60-machine-gun",
+  "name": "M60 machine gun",
+  "kind": "model",
+  "wikidataId": "Q494361",
+  "makerRef": "saco-defense",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Machine Gun, Caliber 7.62mm, M60", "kind": "military" }
+  ],
+  "lineage": {},
+  "type": "machine-gun",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "united-states",
+  "producedIn": ["united-states"],
+  "introduced": 1957,
+  "productionYears": { "start": 1957, "end": null },
+  "fireModes": ["automatic"],
+  "feedSystem": ["belt"],
+  "roles": ["service-rifle"],
+  "massEmpty": {
+    "value": 10.4,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wgr-m60",
+    "sourceUrl": "http://world.guns.ru/machine/usa/m60-e.html",
+    "sourceNote": "with bipod attached, per World.Guns.ru's specification table for the base M60"
+  },
+  "length": {
+    "value": 1067,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wgr-m60",
+    "sourceUrl": "http://world.guns.ru/machine/usa/m60-e.html",
+    "sourceNote": "base M60; Wikipedia's own infobox gives a different, uncited figure of 1,105 mm"
+  },
+  "barrelLength": {
+    "value": 560,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wgr-m60",
+    "sourceUrl": "http://world.guns.ru/machine/usa/m60-e.html",
+    "sourceNote": "base M60, matching Wikipedia's own uncited infobox figure"
+  },
+  "cyclicRate": {
+    "value": 550,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "man-fas-m60e3",
+    "sourceUrl": "https://man.fas.org/dod-101/sys/land/m60e3.htm",
+    "sourceNote": "published as a single figure; Wikipedia's own infobox instead gives an uncited range of 550-650 rounds a minute"
+  },
+  "effectiveRange": {
+    "value": 1100,
+    "unit": "m",
+    "status": "verified",
+    "source": "man-fas-m60e3",
+    "sourceUrl": "https://man.fas.org/dod-101/sys/land/m60e3.htm"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x51mm-nato",
+      "capacity": {
+        "value": 100,
+        "unit": "",
+        "status": "verified",
+        "source": "wgr-m60",
+        "sourceUrl": "http://world.guns.ru/machine/usa/m60-e.html",
+        "sourceNote": "disintegrating belt, published as carried in 100- or 200-round assault packs"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/m60-machine-gun/hero.webp",
+      "alt": "A green-painted M60 machine gun on its integral bipod, seen from the side, with its perforated barrel jacket, carrying handle and belt of linked cartridges feeding into the receiver from the left",
+      "caption": "An M60 machine gun set up on its bipod, showing the quick-change barrel's carrying handle and the disintegrating-link belt feeding from the left side of the receiver.",
+      "width": 1600,
+      "height": 1069,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M60_machine_gun_DA-ST-84-04992.jpg",
+        "title": "File:M60 machine gun DA-ST-84-04992.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/m60-machine-gun/in-service.webp",
+      "alt": "A soldier in camouflage fatigues and ear protection firing an M60 machine gun from the shoulder, with spent cartridge casings and links scattered on the ground in front of him",
+      "caption": "A 5th Special Forces Group soldier firing an M60 during a family range day at Fort Campbell, Kentucky, in 2024, illustrating the type's continued use in US training well after its peak service era.",
+      "width": 1200,
+      "height": 857,
+      "credit": {
+        "author": "Staff Sgt. Martin Rainen",
+        "sourceUrl": "https://www.dvidshub.net/image/8654434/5th-sfga-63rd-annual-legion-week-family-range",
+        "title": "5th SFG(A) 63rd Annual Legion Week Family Range",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Army (5th Special Forces Group (Airborne)), VIRIN 240919-A-YR619-1047. DVIDS states no separate licence per asset."
+      }
+    },
+    {
+      "src": "images/guns/m60-machine-gun/vietnam-service.webp",
+      "alt": "A soldier sitting on the ground field-stripping and cleaning an M60 machine gun, with its barrel and bipod disassembled beside him",
+      "caption": "A 1st Infantry Division soldier cleans his M60 in Vietnam before the unit's redeployment, showing the weapon's quick-change barrel removed for maintenance.",
+      "width": 1167,
+      "height": 1098,
+      "credit": {
+        "author": "SP6 McDaniel",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:16th_Infantry_Regiment_soldier_cleans_his_M60_machine_gun.jpg",
+        "title": "File:16th Infantry Regiment soldier cleans his M60 machine gun.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-m60-machine-gun",
+      "type": "wikipedia",
+      "title": "M60 machine gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372545355",
+      "lang": "en",
+      "revision": "1372545355",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "wgr-m60",
+      "type": "web",
+      "title": "M60 general purpose machine gun",
+      "publisher": "World.Guns.Ru — Modern Firearms",
+      "url": "http://world.guns.ru/machine/usa/m60-e.html",
+      "accessed": "2026-09-04"
+    },
+    {
+      "key": "man-fas-m60e3",
+      "type": "web",
+      "title": "M60 and M60E3 7.62mm Machine Gun",
+      "publisher": "Federation of American Scientists",
+      "url": "https://man.fas.org/dod-101/sys/land/m60e3.htm",
+      "accessed": "2026-09-04"
+    }
+  ]
+}

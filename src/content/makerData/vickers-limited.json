@@ -1,0 +1,37 @@
+{
+  "id": "vickers-limited",
+  "name": "Vickers Limited",
+  "wikidataId": "Q5195090",
+  "country": "united-kingdom",
+  "founded": 1828,
+  "dissolved": 1927,
+  "logo": {
+    "src": "images/makers/vickers-limited/logo.webp",
+    "alt": "A black-and-white heraldic mark: a crown resting on a large letter V, its two upright strokes formed as furled flags",
+    "caption": "The Vickers Limited corporate mark, a crowned V formed from furled flags.",
+    "width": 300,
+    "height": 300,
+    "credit": {
+      "author": "Emoscopes",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vickers_limited_logo.png",
+      "title": "File:Vickers limited logo.png",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The source records the file as Public domain. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-vickers-limited",
+      "type": "wikipedia",
+      "title": "Vickers Limited",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359619628",
+      "lang": "en",
+      "revision": "1359619628",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

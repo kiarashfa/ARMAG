@@ -1,0 +1,144 @@
+{
+  "id": "sa80",
+  "name": "SA80",
+  "kind": "model",
+  "wikidataId": "Q749038",
+  "makerRef": "rsaf-enfield",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "L85A2", "kind": "military", "note": "The current standard rifle configuration; figures in this entry describe it." },
+    { "name": "Individual Weapon", "kind": "military" }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "united-kingdom",
+  "producedIn": ["united-kingdom"],
+  "introduced": 1985,
+  "productionYears": { "start": 1985, "end": 1994 },
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["service-rifle"],
+  "massEmpty": {
+    "value": 4.98,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-sa80",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369897200",
+    "sourceNote": "L85A2 with SUSAT sight and a loaded 30-round magazine; the infobox cites a UK MoD PDF that no longer resolves and has no working archive link found, so the figure is recorded as estimated rather than verified"
+  },
+  "length": {
+    "value": 785,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-sa80",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369897200",
+    "sourceNote": "L85A2, from the infobox, uncited on Wikipedia"
+  },
+  "barrelLength": {
+    "value": 518,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-sa80",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369897200",
+    "sourceNote": "L85A2, from the infobox, uncited on Wikipedia"
+  },
+  "cyclicRate": {
+    "value": 692,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-sa80",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369897200",
+    "sourceNote": "midpoint of the published, uncited range of 610-775 rounds a minute"
+  },
+  "effectiveRange": {
+    "value": 400,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-sa80",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369897200",
+    "sourceNote": "the infobox cites the British Army's own equipment page, which returned a 403 error rather than resolving, so this figure is recorded as estimated rather than verified"
+  },
+  "productionTotal": {
+    "value": 350000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-sa80",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369897200",
+    "sourceNote": "L85 and L86 combined, published as 'approx. 350,000', uncited on Wikipedia; the L98 cadet rifle's separate figure of approx. 21,700 is not included"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-sa80",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369897200",
+        "sourceNote": "30-round detachable STANAG magazine, from the infobox, uncited on Wikipedia; a 60-round casket magazine and a 20-round carbine magazine are also published for other configurations"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/sa80/hero.webp",
+      "alt": "A British soldier in helmet and body armour kneeling and aiming a black bullpup rifle fitted with an optical sight, with the magazine and pistol grip set well forward of the shoulder stock",
+      "caption": "A British Army soldier of 3 Para with an L85A2, showing the SA80's bullpup layout, with the action and magazine set behind the trigger inside the buttstock.",
+      "width": 1280,
+      "height": 1600,
+      "credit": {
+        "author": "Sgt. Mauricio Campino, U.S. Marine Corps",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:British_L85A2.JPEG",
+        "title": "File:British L85A2.JPEG",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/sa80/handguard-comparison.webp",
+      "alt": "Two SA80 rifle handguards shown one above the other: the upper one plain and rounded, the lower one squared off with accessory rail slots cut into it",
+      "caption": "The original RSAF Enfield handguard (top) beside the railed handguard fitted during Heckler & Koch's A2-standard rebuild of the rifle (bottom).",
+      "width": 578,
+      "height": 431,
+      "credit": {
+        "author": "Original US Army photos by Kaye Richey and Sgt. Christian Aquino, cropping etc. by User:Dvaderv2",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:L85A2_non-railed_handguard_comparison.jpg",
+        "title": "File:L85A2 non-railed handguard comparison.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/sa80/in-service.webp",
+      "alt": "A soldier lying prone on gravel, aiming a black bullpup rifle downrange with an optical sight mounted above the barrel",
+      "caption": "A Royal Netherlands Marine Corps officer firing an SA80 during a multinational training exercise in the Dominican Republic, 2004.",
+      "width": 1200,
+      "height": 787,
+      "credit": {
+        "author": "U.S. Army photo by Kaye Richey",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charles_Suilen_at_Sierra_Prieta-L85A2.jpg",
+        "title": "File:Charles Suilen at Sierra Prieta-L85A2.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-sa80",
+      "type": "wikipedia",
+      "title": "SA80",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369897200",
+      "lang": "en",
+      "revision": "1369897200",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

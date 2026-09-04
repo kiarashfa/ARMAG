@@ -1,0 +1,140 @@
+{
+  "id": "ak-12",
+  "name": "AK-12",
+  "kind": "model",
+  "wikidataId": "Q1902575",
+  "makerRef": "kalashnikov-concern",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "russia",
+  "producedIn": ["russia"],
+  "introduced": 2018,
+  "productionYears": { "start": 2018, "end": null },
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box", "drum"],
+  "roles": ["service-rifle"],
+  "massEmpty": {
+    "value": 3.7,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-ak-12",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365177067",
+    "sourceNote": "empty, from the infobox, uncited on Wikipedia"
+  },
+  "length": {
+    "value": 922,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-12",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365177067",
+    "sourceNote": "stock extended, from the infobox, uncited on Wikipedia"
+  },
+  "lengthFolded": {
+    "value": 688,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-12",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365177067",
+    "sourceNote": "stock folded, from the infobox, uncited on Wikipedia"
+  },
+  "barrelLength": {
+    "value": 415,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-12",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365177067",
+    "sourceNote": "standard-length rifle; the shorter AK-12K and AK-12SK carbine barrels are not recorded on this entry"
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-ak-12",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365177067",
+    "sourceNote": "from the infobox, uncited on Wikipedia, published as a single figure"
+  },
+  "effectiveRange": {
+    "value": 440,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-ak-12",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365177067",
+    "sourceNote": "published as the AK-12's own point-blank range figure, uncited on Wikipedia"
+  },
+  "productionTotal": {
+    "value": 150000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-ak-12",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365177067",
+    "sourceNote": "published as '150,000+' across the AK-12 family, so this is a floor rather than a count; uncited on Wikipedia"
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-45x39mm",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-ak-12",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365177067",
+        "sourceNote": "30-round detachable box magazine, from the infobox, uncited on Wikipedia; 45-round, 60-round and 95-round magazines from other RPK-family weapons are also published as compatible"
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/ak-12/hero.webp",
+      "alt": "A camouflage-patterned AK-12 rifle with a red-dot sight mounted on a top rail, a skeletonised polymer stock and a curved magazine, shown against a plain white background",
+      "caption": "An AK-12 rifle (6P70 pattern) with a red-dot sight and folding stock, displayed at the Army-2016 military-technical forum in Russia.",
+      "width": 1600,
+      "height": 785,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:5,45mm_AK-12_6P70_assault_rifle_at_Military-technical_forum_ARMY-2016_03_noBG.jpg",
+        "title": "File:5,45mm AK-12 6P70 assault rifle at Military-technical forum ARMY-2016 03 noBG.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/ak-12/field-capture.webp",
+      "alt": "A soldier in field gear holding a black rifle with a rust-coloured curved magazine and a folding stock, slung across his chest",
+      "caption": "An AK-12 rifle captured by a Ukrainian Territorial Defense soldier during Russia's invasion of Ukraine, fitted with an older-pattern polymer magazine rather than the rifle's own magazine design.",
+      "width": 1200,
+      "height": 675,
+      "credit": {
+        "author": "110th Territorial Defense Brigade of Zaporizhizhia Region",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:UA_TDF_with_captured_AK-12.jpg",
+        "title": "File:UA TDF with captured AK-12.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-04",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-ak-12",
+      "type": "wikipedia",
+      "title": "AK-12",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1365177067",
+      "lang": "en",
+      "revision": "1365177067",
+      "accessed": "2026-09-04",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}
