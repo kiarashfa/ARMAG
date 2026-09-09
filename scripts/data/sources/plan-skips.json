@@ -19,6 +19,7 @@
     "amogh-carbine": "Blocked, not out of scope: chambered only in 5.56x30mm MINSAS, whose `caseType` is mandatory and unpublished by any free source. Reopen with the cartridge.",
     "5-56x30mm-minsas": "Blocked: `caseType` is mandatory and no free source publishes it. Reopen when a source appears; it unblocks amogh-carbine and the JVPC.",
     "m134-minigun": "Externally powered six-barrel rotary gun, mounted on aircraft and vehicles and driven by an electric motor. Fails the carry test — the same ruling as the M61 Vulcan (item 16).",
-    "armalite-ar-100": "A design study derived from the AR-16 with no evidence of series production; the single-paragraph article cannot meet the publication floor. Series production is the test (item 16). Requeue if a source showing production appears."
+    "armalite-ar-100": "A design study derived from the AR-16 with no evidence of series production; the single-paragraph article cannot meet the publication floor. Series production is the test (item 16). Requeue if a source showing production appears.",
+    "heckler-koch-g11": "Blocked as a cartridge row: the 4.73x33mm is caseless, so it has no head or rim geometry and mandatory caseType has no truthful value, and its case is its propellant, which the no-propellant red line forbids describing. The G11 rifle itself is not blocked by this ruling."
   }
 }

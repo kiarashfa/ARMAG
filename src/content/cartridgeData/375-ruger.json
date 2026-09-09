@@ -1,0 +1,196 @@
+{
+  "id": "375-ruger",
+  "name": ".375 Ruger",
+  "wikidataId": "Q4545308",
+  "aliases": [
+    {
+      "name": "9.5×65.5mm",
+      "kind": "metric"
+    }
+  ],
+  "introduced": 2007,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 65.53,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-375-ruger",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page143.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 84.84,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-375-ruger",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page143.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 9.55,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-375-ruger",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page143.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13.51,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-375-ruger",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page143.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 13.52,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-375-ruger",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page143.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 10.29,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-375-ruger",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page143.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 427.5,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-375-ruger",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page143.pdf",
+    "sourceNote": "C.I.P. Pmax 4275 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "235gr-speer-hot-cor",
+      "name": "235 gr Speer Hot-Cor",
+      "bulletMass": {
+        "value": 15.23,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "235 gr Speer Hot-Cor factory load, via the Wikipedia infobox (no inline citation given there)."
+      },
+      "bulletType": "Speer Hot-Cor",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "24 in test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 968.4,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Factory load figure, via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "270gr-speer-spitzer-btsp",
+      "name": "270 gr Speer Spitzer BTSP",
+      "bulletMass": {
+        "value": 17.5,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "270 gr Speer Spitzer BTSP factory load, via the Wikipedia infobox."
+      },
+      "bulletType": "Speer Spitzer BTSP",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "24 in test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 915.9,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Factory load figure, via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "285gr-speer-grand-slam",
+      "name": "285 gr Speer Grand Slam",
+      "bulletMass": {
+        "value": 18.47,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "285 gr Speer Grand Slam factory load, via the Wikipedia infobox."
+      },
+      "bulletType": "Speer Grand Slam",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "24 in test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 897.9,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Factory load figure, via the Wikipedia infobox."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/375-ruger/hero.webp",
+      "alt": "Three brass rifle cartridges of similar length standing in a row, the middle one topped by a wide copper bullet noticeably thicker than the other two.",
+      "caption": "Three rifle cartridges from left: .376 Steyr, .375 Ruger (centre, the wide-bulleted round) and .30-06 Springfield.",
+      "width": 1127,
+      "height": 1600,
+      "credit": {
+        "author": "Hellbus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:376_375_30-06_rounds.jpg",
+        "title": "File:376 375 30-06 rounds.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-375-ruger",
+      "type": "wikipedia",
+      "title": ".375 Ruger",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1358576323",
+      "lang": "en",
+      "revision": "1358576323",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-375-ruger",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 375 Ruger",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page143.pdf",
+      "revision": "2009-05-05",
+      "accessed": "2026-09-09"
+    }
+  ]
+}

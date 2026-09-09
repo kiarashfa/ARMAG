@@ -1,0 +1,131 @@
+{
+  "id": "aks-74u",
+  "name": "AKS-74U",
+  "kind": "model",
+  "wikidataId": "Q909728",
+  "makerRef": "tula-arms-plant",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "AKSU", "kind": "nickname" }
+  ],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "soviet-union",
+  "producedIn": ["soviet-union"],
+  "introduced": 1979,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 2.7,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-aks-74u",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370842764",
+    "sourceNote": "from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 730,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-aks-74u",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370842764",
+    "sourceNote": "stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 490,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-aks-74u",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370842764",
+    "sourceNote": "stock folded, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 206.5,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-aks-74u",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370842764",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-aks-74u",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370842764",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 350,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-aks-74u",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370842764",
+    "sourceNote": "midpoint of a published 300-400 m range, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-45x39mm",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-aks-74u",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370842764",
+        "sourceNote": "published as 20- or 30-round AK-74 magazines, a 45-round RPK-74 magazine, or a 60-round casket magazine, from the infobox, uncited there; 30 rounds recorded here as the standard AK-74 magazine."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/aks-74u/hero.webp",
+      "alt": "A short black carbine with a wooden pistol grip, a curved orange-tinted magazine and a folding metal stock, photographed at an angle against a plain wall.",
+      "caption": "An AKS-74U carbine with its side-folding stock extended.",
+      "width": 1600,
+      "height": 1113,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AKS-74U_(1).jpg",
+        "title": "File:AKS-74U (1).jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/aks-74u/ukrainian-marine.webp",
+      "alt": "A soldier in a bandana holds a short carbine upright while standing in a line with other soldiers.",
+      "caption": "A Ukrainian Marine carrying an AKS-74U during a multinational training exercise at Camp Lejeune, 1996.",
+      "width": 1200,
+      "height": 796,
+      "credit": {
+        "author": "LCpl M.A. Sunderland, U.S. Marine Corps",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ukrainian_Marine_with_AKS-74U.JPEG",
+        "title": "File:Ukrainian Marine with AKS-74U.JPEG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-aks-74u",
+      "type": "wikipedia",
+      "title": "AKS-74U",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370842764",
+      "lang": "en",
+      "revision": "1370842764",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

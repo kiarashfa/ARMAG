@@ -1,0 +1,129 @@
+{
+  "id": "skorpion",
+  "name": "Škorpion vz. 61",
+  "kind": "model",
+  "wikidataId": "Q835135",
+  "makerRef": "ceska-zbrojovka",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Sa vz. 61", "kind": "military", "market": "Czechoslovakia" }
+  ],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "czechoslovakia",
+  "producedIn": ["czechoslovakia"],
+  "introduced": 1961,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence", "concealed-carry"],
+  "massEmpty": {
+    "value": 1.3,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-skorpion",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368441162",
+    "sourceNote": "from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 517,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-skorpion",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368441162",
+    "sourceNote": "stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 270,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-skorpion",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368441162",
+    "sourceNote": "stock folded, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 115,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-skorpion",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368441162",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 850,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-skorpion",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368441162",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "sightRadius": {
+    "value": 148,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-skorpion",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368441162",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "32-acp",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-skorpion",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368441162",
+        "sourceNote": "published as a 10- or 20-round curved magazine, with an aftermarket 30-round straight magazine also produced, from the infobox, uncited there."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "380-acp",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-skorpion",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368441162",
+        "sourceNote": "the infobox lists .380 ACP alongside .32 ACP, uncited there."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/skorpion/hero.webp",
+      "alt": "A small dark green machine pistol with a curved box magazine, a wire stock folded along the receiver, and a wooden pistol grip.",
+      "caption": "A Škorpion vz. 61 machine pistol with its wire stock folded.",
+      "width": 1600,
+      "height": 988,
+      "credit": {
+        "author": "Land68",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sa_vz._61_Škorpion.jpg",
+        "title": "File:Sa vz. 61 Škorpion.jpg",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-skorpion",
+      "type": "wikipedia",
+      "title": "Škorpion",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368441162",
+      "lang": "en",
+      "revision": "1368441162",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

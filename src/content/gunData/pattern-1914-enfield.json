@@ -1,0 +1,100 @@
+{
+  "id": "pattern-1914-enfield",
+  "name": "Pattern 1914 Enfield",
+  "kind": "model",
+  "wikidataId": "Q45217",
+  "makerRef": "rsaf-enfield",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Rifle, .303 Pattern 1914", "kind": "military", "market": "United Kingdom" }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "united-kingdom",
+  "producedIn": ["united-kingdom"],
+  "introduced": 1916,
+  "fireModes": ["single-shot"],
+  "feedSystem": ["stripper", "fixed-box"],
+  "roles": ["service-rifle", "sniper"],
+  "massEmpty": {
+    "value": 4.08,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-pattern-1914-enfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370152805",
+    "sourceNote": "Converted from 9 lb, unloaded, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 1174.75,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pattern-1914-enfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370152805",
+    "sourceNote": "Converted from 46.25 in, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 660.4,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pattern-1914-enfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370152805",
+    "sourceNote": "Converted from 26 in, from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 731.5,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-pattern-1914-enfield",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370152805",
+    "sourceNote": "Converted from a published 800 yd figure, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "303-british",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-pattern-1914-enfield",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370152805",
+        "sourceNote": "5-round internal magazine loaded from a stripper clip, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/pattern-1914-enfield/hero.webp",
+      "alt": "A long bolt-action rifle with a wooden stock running nearly the full length of the barrel, an aperture sight behind the receiver and a bayonet lug at the muzzle.",
+      "caption": "A Pattern 1914 Enfield rifle chambered in .303 British, from the Swedish Army Museum's collections.",
+      "width": 1600,
+      "height": 738,
+      "credit": {
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rifle_Pattern_1914_Enfield_-_AM.006960.jpg",
+        "title": "File:Rifle Pattern 1914 Enfield - AM.006960.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-pattern-1914-enfield",
+      "type": "wikipedia",
+      "title": "Pattern 1914 Enfield",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370152805",
+      "lang": "en",
+      "revision": "1370152805",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

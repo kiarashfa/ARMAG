@@ -1,0 +1,152 @@
+{
+  "id": "brugger-thomet-mp9",
+  "name": "Brügger & Thomet MP9",
+  "kind": "model",
+  "wikidataId": "Q996888",
+  "makerRef": "brugger-thomet",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "switzerland",
+  "producedIn": ["switzerland"],
+  "introduced": 2001,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence", "law-enforcement"],
+  "massEmpty": {
+    "value": 1.4,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-brugger-thomet-mp9",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347712286",
+    "sourceNote": "cited by the infobox to a B&T datasheet PDF that now 404s; B&T's current product page instead gives 1.7 kg including an Aimpoint sight and 30-round magazine, a different, non-comparable loadout, so that figure is not recorded here."
+  },
+  "length": {
+    "value": 523,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-ag-mp9",
+    "sourceUrl": "https://www.bt-ag.ch/en/mp9",
+    "sourceNote": "Manufacturer's own product page, stock extended (\"Length min./max. 303 / 523 mm\")."
+  },
+  "lengthFolded": {
+    "value": 303,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-ag-mp9",
+    "sourceUrl": "https://www.bt-ag.ch/en/mp9",
+    "sourceNote": "Manufacturer's own product page, stock collapsed."
+  },
+  "barrelLength": {
+    "value": 130,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-ag-mp9",
+    "sourceUrl": "https://www.bt-ag.ch/en/mp9",
+    "sourceNote": "Manufacturer's own product page."
+  },
+  "width": {
+    "value": 45,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-brugger-thomet-mp9",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347712286",
+    "sourceNote": "stock extended, from the infobox, uncited there."
+  },
+  "height": {
+    "value": 246,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-brugger-thomet-mp9",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347712286",
+    "sourceNote": "with 30-round magazine fitted, from the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 900,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-brugger-thomet-mp9",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347712286",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 100,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-brugger-thomet-mp9",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347712286",
+    "sourceNote": "cited by the infobox to a now-dead world.guns.ru page, not independently read for this survey."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "bt-ag-mp9",
+        "sourceUrl": "https://www.bt-ag.ch/en/mp9",
+        "sourceNote": "Manufacturer's own product page lists 20- or 30-round B&T magazines; 30 rounds recorded here as the larger option."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": 25,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-brugger-thomet-mp9",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1347712286",
+        "sourceNote": "the MP45 variant chambered in .45 ACP, from the infobox, uncited there."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/brugger-thomet-mp9/hero.webp",
+      "alt": "A compact black submachine gun with a folded stock along its top, a red-dot sight, a vertical pistol grip and a translucent curved magazine.",
+      "caption": "A Brügger & Thomet MP9 submachine gun with a red-dot sight fitted.",
+      "width": 1600,
+      "height": 1442,
+      "credit": {
+        "author": "Kusi97",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MP9_23-11-2010_11-00_00224.jpg",
+        "title": "File:MP9 23-11-2010 11-00 00224.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-brugger-thomet-mp9",
+      "type": "wikipedia",
+      "title": "Brügger & Thomet MP9",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1347712286",
+      "lang": "en",
+      "revision": "1347712286",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "bt-ag-mp9",
+      "type": "manufacturer-spec",
+      "title": "MP9 submachine gun",
+      "publisher": "Brügger & Thomet AG",
+      "url": "https://www.bt-ag.ch/en/mp9",
+      "accessed": "2026-09-09"
+    }
+  ]
+}

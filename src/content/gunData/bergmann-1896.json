@@ -1,0 +1,105 @@
+{
+  "id": "bergmann-1896",
+  "name": "Bergmann 1896",
+  "kind": "model",
+  "wikidataId": "Q820019",
+  "makerRef": "theodor-bergmann",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "german-empire",
+  "producedIn": ["german-empire"],
+  "introduced": 1896,
+  "fireModes": ["semi"],
+  "feedSystem": ["fixed-box"],
+  "roles": ["duty-sidearm"],
+  "massEmpty": {
+    "value": 1.13,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-bergmann-1896",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1337598071",
+    "sourceNote": "No 3 model, 6.5mm chambering, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 254,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-bergmann-1896",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1337598071",
+    "sourceNote": "No 3 model, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 102,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-bergmann-1896",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1337598071",
+    "sourceNote": "No 3 model, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "6-5mm-bergmann",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-bergmann-1896",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1337598071",
+        "sourceNote": "5-round fixed magazine, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/bergmann-1896/hero.webp",
+      "alt": "A small early automatic pistol with a wooden grip, a short round barrel and an exposed hammer, photographed from the left.",
+      "caption": "A Bergmann 1896 No. 3 pistol chambered in 6.5mm Bergmann.",
+      "width": 1600,
+      "height": 1060,
+      "credit": {
+        "author": "Self Loader",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bergmann_1896_No_3,_6.5mm,_Sn_1685_L_DSC9221.jpg",
+        "title": "File:Bergmann 1896 No 3, 6.5mm, Sn 1685 L DSC9221.jpg",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "src": "images/guns/bergmann-1896/right-side.webp",
+      "alt": "The right side of the same pistol, showing a fan-shaped hinged cover over the loading port and a round cutout in the frame.",
+      "caption": "The right side of a Bergmann 1896 No. 3, showing the fan-shaped cover that opens to expose the fixed magazine for stripper-clip loading.",
+      "width": 1200,
+      "height": 691,
+      "credit": {
+        "author": "Self Loader",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bergmann_1896_No_3,_6.5mm,_Sn_1685_R_DSC9224.jpg",
+        "title": "File:Bergmann 1896 No 3, 6.5mm, Sn 1685 R DSC9224.jpg",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-bergmann-1896",
+      "type": "wikipedia",
+      "title": "Bergmann 1896",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1337598071",
+      "lang": "en",
+      "revision": "1337598071",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

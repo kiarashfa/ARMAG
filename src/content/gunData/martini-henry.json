@@ -1,0 +1,160 @@
+{
+  "id": "martini-henry",
+  "name": "Martini–Henry",
+  "kind": "model",
+  "wikidataId": "Q1905626",
+  "makerRef": "rsaf-enfield",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Martini-Henry",
+      "kind": "nickname",
+      "note": "The plain-hyphen spelling used interchangeably with the en dash form."
+    },
+    {
+      "name": "Aynalı Martin",
+      "kind": "nickname",
+      "market": "TR",
+      "note": "The name used for the rifle in the Ottoman Empire, including in Ottoman-Turkish folk songs."
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "falling-block",
+  "operatingSystem": "manual",
+  "designedIn": "united-kingdom",
+  "producedIn": [
+    "united-kingdom",
+    "united-states",
+    "austria-hungary"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [],
+  "roles": [
+    "service-rifle"
+  ],
+  "introduced": 1871,
+  "productionYears": {
+    "start": 1871,
+    "end": 1889
+  },
+  "massEmpty": {
+    "value": 3.83,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-martini-henry",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370890676",
+    "sourceNote": "Converted from 8 lb 7 oz, unloaded, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 1244.6,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-martini-henry",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370890676",
+    "sourceNote": "Converted from 49 in, from the infobox; no inline citation is given there."
+  },
+  "barrelLength": {
+    "value": 843.79,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-martini-henry",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370890676",
+    "sourceNote": "Converted from 33.22 in, from the infobox; no inline citation is given there."
+  },
+  "effectiveRange": {
+    "value": 365.76,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-martini-henry",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370890676",
+    "sourceNote": "Converted from 400 yd, from the infobox; no inline citation is given there. The article body separately states the rifle was found capable of hitting a man-sized target to about this range."
+  },
+  "productionTotal": {
+    "value": 750000,
+    "unit": "",
+    "status": "estimated",
+    "source": "wp-martini-henry",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370890676",
+    "sourceNote": "Published as a range of approx. 500,000-1,000,000 in the infobox, uncited there; midpoint recorded here."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "577-450-martini-henry",
+      "capacity": {
+        "value": 1,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-martini-henry",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1370890676",
+        "sourceNote": "Derived from the article's description of the rifle as breech-loading and single-shot with no magazine; one round loaded directly into the chamber at a time."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/martini-henry/hero.webp",
+      "alt": "Two views of a Martini-Henry rifle on a pale background, left and right sides, with a full wooden stock, a curved underlever ahead of the trigger guard, a flat steel receiver and a fixed rear sight ahead of the receiver",
+      "caption": "A Martini-Henry Mark I of 1871 in the collections of the Swedish Army Museum. The underlever doubles as the trigger guard: pulling it down and forward tips the breech block clear of the chamber and draws back the striker spring in one motion.",
+      "width": 1600,
+      "height": 625,
+      "credit": {
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martini-Henry_m1871_-_England_-_AM.032017.jpg",
+        "title": "File:Martini-Henry m1871 - England - AM.032017.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/martini-henry/action-parts.webp",
+      "alt": "The disassembled falling-block action of a Martini-Henry Mark II laid out on a wooden bench: the breech block, hammerless striker and coil spring, the underlever, the tumbler and sear, and assorted pins",
+      "caption": "The action of a Martini-Henry Mark II stripped to its parts, showing the block, striker and lever that together form the falling-block breech and its hammerless cocking mechanism.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "SupremeDalek",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martini_Henry_Action_Parts.jpg",
+        "title": "File:Martini Henry Action Parts.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/martini-henry/specimen-detail.webp",
+      "alt": "A re-enactor in Victorian British Army uniform and pith helmet firing a Martini-Henry rifle from a bench rest against a stone wall, smoke and muzzle flash visible at the muzzle",
+      "caption": "A firing demonstration of a Martini-Henry rifle by a costumed re-enactor, showing the smoke and muzzle flash the black-powder cartridge produced.",
+      "width": 1200,
+      "height": 836,
+      "credit": {
+        "author": "Tony Hisgett from Birmingham, UK",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Martini-Henry_Rifle_(6950096771).jpg",
+        "title": "File:Martini-Henry Rifle (6950096771).jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-martini-henry",
+      "type": "wikipedia",
+      "title": "Martini–Henry",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370890676",
+      "lang": "en",
+      "revision": "1370890676",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

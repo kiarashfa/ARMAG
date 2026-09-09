@@ -1,0 +1,132 @@
+{
+  "id": "type-81-assault-rifle",
+  "name": "Type 81 assault rifle",
+  "kind": "model",
+  "wikidataId": "Q2621468",
+  "makerRef": "norinco",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Type 81", "kind": "military", "market": "China" }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "china",
+  "producedIn": ["china"],
+  "introduced": 1983,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box", "drum"],
+  "roles": ["assault-rifle"],
+  "massEmpty": {
+    "value": 3.4,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-type-81-assault-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373254316",
+    "sourceNote": "empty, rifle configuration, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 955,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-type-81-assault-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373254316",
+    "sourceNote": "stock extended, rifle configuration, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 730,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-type-81-assault-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373254316",
+    "sourceNote": "stock folded, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 445,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-type-81-assault-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373254316",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 650,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-type-81-assault-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373254316",
+    "sourceNote": "rifle configuration, from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 400,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-type-81-assault-rifle",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373254316",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x39mm",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-type-81-assault-rifle",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373254316",
+        "sourceNote": "proprietary 30-round detachable box magazine, from the infobox, uncited there; a 75-round drum magazine and a 20-round magazine for the CS/LR14 export version are also published."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/type-81-assault-rifle/hero.webp",
+      "alt": "A rifle with a wooden handguard, a curved 30-round magazine and a folding metal wire stock, mounted on a museum display panel.",
+      "caption": "A Type 81 assault rifle on museum display, with its folding stock and standard 30-round magazine.",
+      "width": 1600,
+      "height": 1000,
+      "credit": {
+        "author": "Tyg728",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Type_81_assault_rifle_20220203.jpg",
+        "title": "File:Type 81 assault rifle 20220203.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/type-81-assault-rifle/gabon-training.webp",
+      "alt": "A soldier in tan uniform fires a rifle at a paper target on a shooting range while a US Marine observes beside him.",
+      "caption": "A Gabonese Armed Forces soldier fires a Type 81 rifle during a joint training range with US Marines at Camp Mokekou, Gabon, 2016.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Cpl. Alexander Mitchell",
+        "sourceUrl": "https://www.dvidshub.net/image/3089764/gabon-us-train-fight-illicit-activity",
+        "title": "Gabon, U.S. train to fight illicit activity",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Marines (U.S. Marine Corps Forces, Europe and Africa), VIRIN 161124-M-ML847-539. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-type-81-assault-rifle",
+      "type": "wikipedia",
+      "title": "Type 81 assault rifle",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373254316",
+      "lang": "en",
+      "revision": "1373254316",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

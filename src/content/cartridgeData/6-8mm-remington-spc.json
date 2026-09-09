@@ -1,0 +1,223 @@
+{
+  "id": "6-8mm-remington-spc",
+  "name": "6.8mm Remington SPC",
+  "wikidataId": "Q245493",
+  "aliases": [
+    {
+      "name": "6.8×43mm Remington SPC",
+      "kind": "metric"
+    }
+  ],
+  "introduced": 2004,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 42.84,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-8-rem-spc",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page31.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 57.4,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-8-rem-spc",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page31.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-8-rem-spc",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page31.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 10.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-8-rem-spc",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page31.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 10.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-8-rem-spc",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page31.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 7.77,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-8-rem-spc",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page31.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 405.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-6-8-rem-spc",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page31.pdf",
+    "sourceNote": "C.I.P. Pmax 4050 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "115gr-fmj",
+      "name": "115 gr Full Metal Jacket",
+      "bulletMass": {
+        "value": 7.45,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "115 gr FMJ factory load, cited by the Wikipedia infobox to an SSA (ssarmory.com) product page."
+      },
+      "bulletType": "Full Metal Jacket",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 406.4,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "16 in test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 784.9,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Factory load figure, via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "120gr-sst",
+      "name": "120 gr SST",
+      "bulletMass": {
+        "value": 7.78,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "120 gr Hornady SST factory load, cited by the Wikipedia infobox to a Hornady product page."
+      },
+      "bulletType": "SST",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 406.4,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "16 in test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 749.8,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Factory load figure, via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "110gr-sierra-pro-hunter",
+      "name": "110 gr Sierra Pro Hunter",
+      "bulletMass": {
+        "value": 7.1,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "110 gr factory load, via the Wikipedia infobox."
+      },
+      "bulletType": "Sierra Pro Hunter",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 406.4,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "16 in test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 762.0,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Factory load figure, via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "85gr-barnes-tsx",
+      "name": "85 gr Barnes TSX",
+      "bulletMass": {
+        "value": 5.5,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "85 gr Barnes TSX, a factory \"tactical\" SSA load, via the Wikipedia infobox."
+      },
+      "bulletType": "Barnes TSX",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 406.4,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "16 in test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 935.7,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Factory load figure, via the Wikipedia infobox."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/6-8mm-remington-spc/hero.webp",
+      "alt": "Two rifle cartridges standing side by side on graph paper, the left one shorter with a copper-and-red bullet tip, the right one taller with a plain copper tip.",
+      "caption": "A 6.8mm Remington SPC cartridge (left) beside a 6.5mm Grendel cartridge (right), both intermediate rifle rounds developed for the AR-15 platform.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridges_6.8mm_SPC_and_6.5mm_Grendel_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "title": "File:Cartridges 6.8mm SPC and 6.5mm Grendel CC BY-SA 4.0 by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-6-8mm-remington-spc",
+      "type": "wikipedia",
+      "title": "6.8mm Remington SPC",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1366782264",
+      "lang": "en",
+      "revision": "1366782264",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-6-8-rem-spc",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 6,8 mm Rem. SPC",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page31.pdf",
+      "revision": "2006-05-16",
+      "accessed": "2026-09-09"
+    }
+  ]
+}

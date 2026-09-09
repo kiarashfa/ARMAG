@@ -1,0 +1,169 @@
+{
+  "id": "vektor-r4",
+  "name": "Vektor R4",
+  "kind": "model",
+  "wikidataId": "Q1138052",
+  "makerRef": "denel-land-systems",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "R4 rifle",
+      "kind": "military",
+      "market": "South Africa"
+    }
+  ],
+  "lineage": {
+    "derivedFrom": "iwi-galil"
+  },
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "south-africa",
+  "producedIn": [
+    "south-africa"
+  ],
+  "introduced": 1980,
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "assault-rifle"
+  ],
+  "massEmpty": {
+    "value": 4.3,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-vektor-r4",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372985246",
+    "sourceNote": "cited by the infobox to Jane's Infantry Weapons 1997-98, a print reference not independently consulted for this survey; a book citation is never `verified` here."
+  },
+  "length": {
+    "value": 877,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vektor-r4",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372985246",
+    "sourceNote": "stock extended, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 460,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vektor-r4",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372985246",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "width": {
+    "value": 60,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vektor-r4",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372985246",
+    "sourceNote": "stock extended, from the infobox, uncited there."
+  },
+  "height": {
+    "value": 260,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vektor-r4",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372985246",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 675,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-vektor-r4",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372985246",
+    "sourceNote": "midpoint of a published 600-750 rounds/min range, from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 500,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-vektor-r4",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372985246",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 35,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-vektor-r4",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372985246",
+        "sourceNote": "35-round detachable magazine, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "r5",
+      "name": "R5",
+      "summary": "A shorter-barrelled carbine version of the R4 for mechanised infantry and support troops, keeping the same action, cartridge and magazine.",
+      "overrides": {}
+    },
+    {
+      "id": "r6",
+      "name": "R6",
+      "summary": "The shortest-barrelled member of the family, a submachine-gun-length carbine built on the same R4 action for vehicle crews and specialist troops.",
+      "overrides": {}
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/vektor-r4/hero.webp",
+      "alt": "An early-production rifle with a folding wire stock, a curved box magazine and a ribbed handguard, displayed in a museum case with a period photograph beside it.",
+      "caption": "An early production R4, presented to South Africa's National Museum of Military History in 1979 as the first military rifle designed and built in South Africa.",
+      "width": 1600,
+      "height": 596,
+      "credit": {
+        "author": "User:Katangais",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:VektorR4.png",
+        "title": "File:VektorR4.png",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      }
+    },
+    {
+      "src": "images/guns/vektor-r4/upgraded.webp",
+      "alt": "A modernised rifle with a black polymer stock, a Picatinny rail along the top of the receiver, and a mounted optical sight.",
+      "caption": "An upgraded Vektor R4 fitted with modern rails and optics, on display at Ysterplaat Air Base, Cape Town.",
+      "width": 1200,
+      "height": 675,
+      "credit": {
+        "author": "Winters229",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vektor_R4_Upgraded.png",
+        "title": "File:Vektor R4 Upgraded.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-vektor-r4",
+      "type": "wikipedia",
+      "title": "Vektor R4",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372985246",
+      "lang": "en",
+      "revision": "1372985246",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

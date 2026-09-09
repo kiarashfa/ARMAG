@@ -1,0 +1,197 @@
+{
+  "id": "iwi-tavor-x95",
+  "name": "IWI Tavor X95",
+  "kind": "model",
+  "wikidataId": "Q15895847",
+  "makerRef": "israel-weapon-industries",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "IWI X95", "kind": "commercial" },
+    { "name": "Micro Tavor", "kind": "nickname" }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "israel",
+  "producedIn": ["israel"],
+  "introduced": 2009,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["assault-rifle"],
+  "massEmpty": {
+    "value": 3.62,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-iwi-tavor-x95",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+    "sourceNote": "X95 380 configuration, from the article's specifications table; no inline citation is given there."
+  },
+  "length": {
+    "value": 640,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-iwi-tavor-x95",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+    "sourceNote": "X95 380 configuration, from the article's specifications table, uncited there."
+  },
+  "barrelLength": {
+    "value": 380,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-iwi-tavor-x95",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+    "sourceNote": "X95 380 configuration, from the article's specifications table, uncited there."
+  },
+  "cyclicRate": {
+    "value": 850,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-iwi-tavor-x95",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+    "sourceNote": "midpoint of a published 750-950 rounds/min range, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-iwi-tavor-x95",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+        "sourceNote": "STANAG magazine, from the infobox, uncited there."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "5-45x39mm",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-iwi-tavor-x95",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+        "sourceNote": "the X95-R variant, chambered for the AK-pattern 5.45x39mm round used by Ukraine, from the infobox, uncited there."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "300-aac-blackout",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-iwi-tavor-x95",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+        "sourceNote": "from the infobox, uncited there."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [
+    {
+      "id": "x95-330",
+      "name": "X95 330",
+      "summary": "The short-barrelled carbine-length X95, keeping the same bullpup action and receiver on a barrel roughly 50 mm shorter than the standard-length X95 380.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.3,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-iwi-tavor-x95",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+          "sourceNote": "from the article's specifications table, uncited there."
+        },
+        "length": {
+          "value": 580,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-iwi-tavor-x95",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+          "sourceNote": "from the article's specifications table, uncited there."
+        },
+        "barrelLength": {
+          "value": 330,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-iwi-tavor-x95",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+          "sourceNote": "from the article's specifications table, uncited there."
+        }
+      }
+    },
+    {
+      "id": "x95-419",
+      "name": "X95 419",
+      "summary": "The longest-barrelled standard X95 configuration, used as a designated-marksman-length rifle.",
+      "overrides": {
+        "length": {
+          "value": 670,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-iwi-tavor-x95",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+          "sourceNote": "from the article's specifications table, uncited there."
+        },
+        "barrelLength": {
+          "value": 419,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-iwi-tavor-x95",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+          "sourceNote": "from the article's specifications table, uncited there."
+        }
+      }
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/iwi-tavor-x95/hero.webp",
+      "alt": "A short black bullpup rifle with a flat-top rail, a reflex sight, an angled foregrip and a bipod, standing on its own bipod legs.",
+      "caption": "An IDF Tavor X95 fitted with a flat-top rail and reflex sight, displayed on Israel's 71st Independence Day, 2019.",
+      "width": 1600,
+      "height": 990,
+      "credit": {
+        "author": "Dr. Zachi Evenor",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:IDF_Tavor_X95_Flattop_-_Zachi_Evenor_2019.jpg",
+        "title": "File:IDF Tavor X95 Flattop - Zachi Evenor 2019.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "src": "images/guns/iwi-tavor-x95/idf-service.webp",
+      "alt": "A helmeted soldier crouches in a doorway aiming a short bullpup rifle fitted with a magnified optic, resting the rifle on a sandbag.",
+      "caption": "An Israeli soldier aims a Micro Tavor X95 in its marksman configuration through a magnified optic.",
+      "width": 1200,
+      "height": 799,
+      "credit": {
+        "author": "IDF Spokesperson's Unit photographer",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Micro_tavor_kalaim.jpg",
+        "title": "File:Micro tavor kalaim.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-iwi-tavor-x95",
+      "type": "wikipedia",
+      "title": "IWI Tavor X95",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371505391",
+      "lang": "en",
+      "revision": "1371505391",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

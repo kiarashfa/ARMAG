@@ -1,0 +1,109 @@
+{
+  "id": "400-cor-bon",
+  "name": ".400 Cor-Bon",
+  "wikidataId": "Q158773",
+  "aliases": [
+    {
+      "name": ".400 Corbon",
+      "kind": "commercial"
+    }
+  ],
+  "introduced": 1997,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 22.81,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .898 in, via the Wikipedia infobox (Cor-Bon ballistics data). No C.I.P. or SAAMI dimensional standard has been located for this cartridge."
+  },
+  "overallLength": {
+    "value": 30.48,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 1.20 in, via the Wikipedia infobox."
+  },
+  "bulletDiameter": {
+    "value": 10.19,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .401 in, via the Wikipedia infobox."
+  },
+  "neckDiameter": {
+    "value": 10.74,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .423 in, via the Wikipedia infobox."
+  },
+  "baseDiameter": {
+    "value": 11.94,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .470 in, via the Wikipedia infobox."
+  },
+  "rimDiameter": {
+    "value": 11.96,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .471 in, via the Wikipedia infobox."
+  },
+  "maxPressure": {
+    "value": 199.9,
+    "unit": "MPa",
+    "status": "estimated",
+    "sourceNote": "Converted from a published 29,000 psi figure, via the Wikipedia infobox."
+  },
+  "pressureStandard": "saami",
+  "loads": [
+    {
+      "id": "135gr-jhp",
+      "name": "135 gr JHP",
+      "bulletMass": {
+        "value": 8.75,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "135 gr JHP factory load, Cor-Bon, via the Wikipedia infobox. No test-barrel length is stated for the load's published velocity, so velocity is not recorded (PLAYBOOK.md §5.1)."
+      },
+      "bulletType": "JHP"
+    },
+    {
+      "id": "150gr-jhp",
+      "name": "150 gr JHP",
+      "bulletMass": {
+        "value": 9.72,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "150 gr JHP factory load, Cor-Bon, via the Wikipedia infobox. No test-barrel length is stated, so velocity is not recorded (PLAYBOOK.md §5.1)."
+      },
+      "bulletType": "JHP"
+    },
+    {
+      "id": "165gr-jhp",
+      "name": "165 gr JHP",
+      "bulletMass": {
+        "value": 10.69,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "165 gr JHP factory load, Cor-Bon, via the Wikipedia infobox. No test-barrel length is stated, so velocity is not recorded (PLAYBOOK.md §5.1)."
+      },
+      "bulletType": "JHP"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-400-cor-bon",
+      "type": "wikipedia",
+      "title": ".400 Cor-Bon",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369192966",
+      "lang": "en",
+      "revision": "1369192966",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

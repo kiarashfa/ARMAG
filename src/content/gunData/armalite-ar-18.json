@@ -1,0 +1,109 @@
+{
+  "id": "armalite-ar-18",
+  "name": "ArmaLite AR-18",
+  "kind": "model",
+  "wikidataId": "Q676855",
+  "makerRef": "armalite",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "united-states",
+  "producedIn": ["united-states"],
+  "introduced": 1969,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["assault-rifle"],
+  "massEmpty": {
+    "value": 3.04,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-armalite-ar-18",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369819561",
+    "sourceNote": "Converted from 6.7 lb, empty, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 965.2,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-armalite-ar-18",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369819561",
+    "sourceNote": "Converted from 38 in, from the infobox; no inline citation is given there."
+  },
+  "barrelLength": {
+    "value": 463.55,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-armalite-ar-18",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369819561",
+    "sourceNote": "Converted from 18.25 in, from the infobox; no inline citation is given there."
+  },
+  "cyclicRate": {
+    "value": 750,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-armalite-ar-18",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369819561",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-armalite-ar-18",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369819561",
+        "sourceNote": "published as 20, 30 or 40-round detachable box magazines, from the infobox, uncited there; 30 rounds recorded here as the most common capacity."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "ar-180",
+      "name": "AR-180",
+      "summary": "The semi-automatic-only civilian version of the AR-18, sold in far greater numbers (around 21,000) than the select-fire military rifle itself, with the same gas system, cartridge and magazines but restricted to semi-automatic fire.",
+      "overrides": {
+        "fireModes": ["semi"]
+      }
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/armalite-ar-18/hero.webp",
+      "alt": "A rifle with a plain tubular receiver, a folding wire stock, a curved box magazine and a slotted flash suppressor at the muzzle.",
+      "caption": "An ArmaLite AR-18 rifle, showing its stamped-steel receiver and folding wire stock, on display at the Parachute Regiment and Airborne Forces Museum.",
+      "width": 1600,
+      "height": 453,
+      "credit": {
+        "author": "https://commons.wikimedia.org/wiki/User:Rama",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Armalite_AR18-IMG_6519_noBG.png",
+        "title": "File:Armalite AR18-IMG 6519 noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-armalite-ar-18",
+      "type": "wikipedia",
+      "title": "ArmaLite AR-18",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369819561",
+      "lang": "en",
+      "revision": "1369819561",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

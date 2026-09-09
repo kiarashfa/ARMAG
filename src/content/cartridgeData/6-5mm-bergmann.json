@@ -1,0 +1,75 @@
+{
+  "id": "6-5mm-bergmann",
+  "name": "6.5mm Bergmann",
+  "wikidataId": "Q2817905",
+  "aliases": [],
+  "introduced": 1895,
+  "standard": "none",
+  "caseType": "semi-rimmed",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 22.1,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .870 in, \"Textbook of Automatic Pistols\", via the Wikipedia infobox. No C.I.P. or SAAMI standard exists for this obsolete pistol round."
+  },
+  "overallLength": {
+    "value": 31.24,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 1.230 in, \"Textbook of Automatic Pistols\", via the Wikipedia infobox."
+  },
+  "bulletDiameter": {
+    "value": 6.6,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .26 in, \"Textbook of Automatic Pistols\", via the Wikipedia infobox."
+  },
+  "neckDiameter": {
+    "value": 7.24,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .285 in, \"Textbook of Automatic Pistols\", via the Wikipedia infobox."
+  },
+  "baseDiameter": {
+    "value": 9.35,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .368 in, \"Textbook of Automatic Pistols\", via the Wikipedia infobox."
+  },
+  "rimDiameter": {
+    "value": 9.45,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .372 in, \"Textbook of Automatic Pistols\", via the Wikipedia infobox."
+  },
+  "loads": [
+    {
+      "id": "76gr-fmj",
+      "name": "76 gr FMJ",
+      "bulletMass": {
+        "value": 4.92,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "76 gr FMJ bullet, \"Textbook of Automatic Pistols\", via the Wikipedia infobox. No test-barrel length is stated for the load's published velocity, so velocity is not recorded (PLAYBOOK.md §5.1)."
+      },
+      "bulletType": "FMJ"
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-6-5mm-bergmann",
+      "type": "wikipedia",
+      "title": "6.5mm Bergmann",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1263187494",
+      "lang": "en",
+      "revision": "1263187494",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

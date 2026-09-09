@@ -1,0 +1,37 @@
+{
+  "id": "harrington-richardson",
+  "name": "Harrington & Richardson Arms Company",
+  "wikidataId": "Q5636289",
+  "country": "united-states",
+  "founded": 1871,
+  "dissolved": 2015,
+  "logo": {
+    "src": "images/makers/harrington-richardson/logo.webp",
+    "alt": "A circular H&R monogram badge marked 1871 beside the words Harrington & Richardson.",
+    "caption": "Harrington & Richardson's wordmark, naming its 1871 founding.",
+    "width": 400,
+    "height": 102,
+    "credit": {
+      "author": "H&R Firearms",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:H&R_1871_text_logo.jpg",
+      "title": "File:H&R 1871 text logo.jpg",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-harrington-richardson",
+      "type": "wikipedia",
+      "title": "Harrington & Richardson",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372967578",
+      "lang": "en",
+      "revision": "1372967578",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-09-09"
+    }
+  ]
+}

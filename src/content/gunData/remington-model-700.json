@@ -1,0 +1,118 @@
+{
+  "id": "remington-model-700",
+  "name": "Remington Model 700",
+  "kind": "model",
+  "wikidataId": "Q857562",
+  "makerRef": "remington-arms",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "rifle",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "united-states",
+  "producedIn": ["united-states"],
+  "introduced": 1962,
+  "fireModes": ["single-shot"],
+  "feedSystem": ["fixed-box", "detachable-box"],
+  "roles": ["hunting", "sniper"],
+  "massEmpty": {
+    "value": 4.08,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-remington-model-700",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369079949",
+    "sourceNote": "Converted from 8.99 lb, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 1054.1,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-remington-model-700",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369079949",
+    "sourceNote": "Converted from 41.5 in, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 539.8,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-remington-model-700",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369079949",
+    "sourceNote": "midpoint of a published 16.5-26 in barrel-length range across the model's many factory configurations, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "308-winchester",
+      "capacity": {
+        "value": 4,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-remington-model-700",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369079949",
+        "sourceNote": "published as a 3- to 6-round internal magazine, or a detachable 10-round magazine on some configurations, from the infobox, uncited there; 4 rounds recorded here as a typical short-action internal-magazine capacity."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "30-06-springfield",
+      "capacity": {
+        "value": 4,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-remington-model-700",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1369079949",
+        "sourceNote": "one of over two dozen factory chamberings the infobox lists for the Model 700; 4 rounds recorded here as a typical long-action internal-magazine capacity."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/remington-model-700/hero.webp",
+      "alt": "A bolt-action rifle with a wooden stock, a mounted telescopic sight and a bipod attached under the forend, resting on a table.",
+      "caption": "A Remington 700 chambered in .308 Winchester, fitted with a scope and bipod.",
+      "width": 1600,
+      "height": 525,
+      "credit": {
+        "author": "Rizuan ( talk )",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Remington_700_Standard.jpg",
+        "title": "File:Remington 700 Standard.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/remington-model-700/jber-training.webp",
+      "alt": "A serviceman in camouflage lies prone behind a scoped bolt-action rifle on a shooting range, sighting toward the camera.",
+      "caption": "US Air Force Staff Sgt. Ryan Link trains with the M24 Sniper Weapon System, the military version of the Remington Model 700, at Joint Base Elmendorf-Richardson, 2014.",
+      "width": 1200,
+      "height": 783,
+      "credit": {
+        "author": "Justin Connaher",
+        "sourceUrl": "https://www.dvidshub.net/image/1447611/jber-airmen-train-with-sniper-weapon-system",
+        "title": "JBER Airmen train with sniper weapon system",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Air Force (Joint Base Elmendorf-Richardson), VIRIN 140711-F-LX370-366. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-remington-model-700",
+      "type": "wikipedia",
+      "title": "Remington Model 700",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369079949",
+      "lang": "en",
+      "revision": "1369079949",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "id": "howa-type-89",
+  "name": "Howa Type 89",
+  "kind": "model",
+  "wikidataId": "Q241837",
+  "makerRef": "howa",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Type 89", "kind": "military", "market": "Japan" }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "japan",
+  "producedIn": ["japan"],
+  "introduced": 1989,
+  "fireModes": ["semi", "burst", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["assault-rifle"],
+  "massEmpty": {
+    "value": 3.5,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-howa-type-89",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372292102",
+    "sourceNote": "from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 916,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-howa-type-89",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372292102",
+    "sourceNote": "fixed-stock configuration, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 420,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-howa-type-89",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372292102",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 750,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-howa-type-89",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372292102",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 500,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-howa-type-89",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372292102",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-howa-type-89",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372292102",
+        "sourceNote": "20 or 30-round detachable STANAG magazines, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "type-89-f",
+      "name": "Type 89-F",
+      "summary": "The folding-stock version of the Type 89, sharing the same action, cartridge and barrel but built with a side-folding stock rather than a fixed one.",
+      "overrides": {
+        "length": {
+          "value": 670,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-howa-type-89",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372292102",
+          "sourceNote": "stock folded, from the infobox, uncited there."
+        }
+      }
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/howa-type-89/hero.webp",
+      "alt": "A black rifle with a fixed stock, a carrying handle over the receiver, a ribbed handguard and a mounted red-dot sight, laid on a table.",
+      "caption": "A Howa Type 89 fitted with a dot-sight aiming aid, displayed at a JGSDF 6th Division anniversary event.",
+      "width": 1280,
+      "height": 960,
+      "credit": {
+        "author": "Crescent moon at Japanese Wikipedia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:JGSDF_Type_89_Assault_Rifle_20100418-01.jpg",
+        "title": "File:JGSDF Type 89 Assault Rifle 20100418-01.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      }
+    },
+    {
+      "src": "images/guns/howa-type-89/staged-rifles.webp",
+      "alt": "A row of rifles with slings and magazines attached, laid on the ground in grass beside a building.",
+      "caption": "Howa Type 89 rifles staged during a Japan Ground Self-Defense Force close-quarters training exercise at Marine Corps Air Station Iwakuni, 2025.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Lance Cpl. Ella Cadby",
+        "sourceUrl": "https://www.dvidshub.net/image/9370839/japan-ground-self-defense-force-members-participate-apprehension-training-during-active-shield-26",
+        "title": "Japan Ground Self-Defense Force members participate in apprehension training during Active Shield 26",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Marines (Marine Corps Air Station Iwakuni), VIRIN 251024-M-MN099-1028. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-howa-type-89",
+      "type": "wikipedia",
+      "title": "Howa Type 89",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372292102",
+      "lang": "en",
+      "revision": "1372292102",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

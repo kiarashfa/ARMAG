@@ -1,0 +1,107 @@
+{
+  "id": "280-british",
+  "name": ".280 British",
+  "wikidataId": "Q2032689",
+  "aliases": [],
+  "introduced": 1945,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 43.43,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 1.71 in, Cartridges of the World, via the Wikipedia infobox. No free dimensional standard exists for this experimental British military round; it never reached C.I.P. or SAAMI standardisation."
+  },
+  "overallLength": {
+    "value": 64.52,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 2.54 in, Cartridges of the World, via the Wikipedia infobox."
+  },
+  "bulletDiameter": {
+    "value": 7.21,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .284 in, Cartridges of the World, via the Wikipedia infobox."
+  },
+  "neckDiameter": {
+    "value": 7.95,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .313 in, Cartridges of the World, via the Wikipedia infobox."
+  },
+  "baseDiameter": {
+    "value": 11.94,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .470 in, Cartridges of the World, via the Wikipedia infobox."
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .473 in, Cartridges of the World, via the Wikipedia infobox."
+  },
+  "maxPressure": {
+    "value": 310.3,
+    "unit": "MPa",
+    "status": "estimated",
+    "sourceNote": "Converted from a published 45,000 psi figure, Cartridges of the World, via the Wikipedia infobox."
+  },
+  "pressureStandard": "saami",
+  "loads": [
+    {
+      "id": "139gr-ball",
+      "name": "139 gr Ball",
+      "bulletMass": {
+        "value": 9.01,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "139 gr ball bullet, Cartridges of the World, via the Wikipedia infobox. No test-barrel length is stated for the load's published velocity, so velocity is not recorded (PLAYBOOK.md §5.1)."
+      },
+      "bulletType": "Ball"
+    },
+    {
+      "id": "140gr-ball-mk1z",
+      "name": "140 gr Ball Mk 1Z",
+      "bulletMass": {
+        "value": 9.07,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "140 gr ball bullet, Mk 1Z loading, Cartridges of the World, via the Wikipedia infobox. No test-barrel length is stated, so velocity is not recorded (PLAYBOOK.md §5.1)."
+      },
+      "bulletType": "Ball"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/280-british/hero.webp",
+      "alt": "Five .280 British ball cartridges standing in a row, one with an orange-coloured aluminium case among the usual brass ones.",
+      "caption": ".280 British ball cartridges; the orange-cased round is made of aluminium rather than brass.",
+      "width": 304,
+      "height": 297,
+      "credit": {
+        "author": "JamesL85 at English Wikipedia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:280british.jpg",
+        "title": "File:280british.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-280-british",
+      "type": "wikipedia",
+      "title": ".280 British",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1333125650",
+      "lang": "en",
+      "revision": "1333125650",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "armalite",
+  "name": "ArmaLite",
+  "wikidataId": "Q547140",
+  "country": "united-states",
+  "founded": 1954,
+  "dissolved": null,
+  "logo": {
+    "src": "images/makers/armalite/logo.webp",
+    "alt": "The word ARMALITE in bold black capitals, an arrowhead-like accent above the letter I.",
+    "caption": "ArmaLite's wordmark.",
+    "width": 1200,
+    "height": 207,
+    "credit": {
+      "author": "Armalite",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Armalite_logo.png",
+      "title": "File:Armalite logo.png",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-armalite",
+      "type": "wikipedia",
+      "title": "ArmaLite",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362257704",
+      "lang": "en",
+      "revision": "1362257704",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-09-09"
+    }
+  ]
+}

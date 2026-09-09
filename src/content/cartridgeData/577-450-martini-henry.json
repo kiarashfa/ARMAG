@@ -1,0 +1,91 @@
+{
+  "id": "577-450-martini-henry",
+  "name": ".577/450 Martini–Henry",
+  "wikidataId": "Q4027907",
+  "aliases": [],
+  "introduced": 1871,
+  "standard": "none",
+  "caseType": "rimmed",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 59.44,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 2.34 in, Cartridges of the World, via the Wikipedia infobox (no primary dimensional standard exists for this obsolete British service round)."
+  },
+  "overallLength": {
+    "value": 79.25,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 3.12 in, Cartridges of the World, via the Wikipedia infobox."
+  },
+  "bulletDiameter": {
+    "value": 11.56,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .455 in, Cartridges of the World, via the Wikipedia infobox."
+  },
+  "neckDiameter": {
+    "value": 12.37,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .487 in, Cartridges of the World, via the Wikipedia infobox."
+  },
+  "baseDiameter": {
+    "value": 16.97,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .668 in, Cartridges of the World, via the Wikipedia infobox."
+  },
+  "rimDiameter": {
+    "value": 18.95,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .746 in, Cartridges of the World, via the Wikipedia infobox."
+  },
+  "loads": [
+    {
+      "id": "lead-alloy-480gr",
+      "name": "480 gr lead alloy",
+      "bulletMass": {
+        "value": 31.1,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "480 gr lead-alloy bullet, Cartridges of the World, via the Wikipedia infobox. No test-barrel length is stated for the load's published velocity, so velocity is not recorded (PLAYBOOK.md §5.1)."
+      },
+      "bulletType": "lead alloy"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/577-450-martini-henry/hero.webp",
+      "alt": "Four .577/450 Martini-Henry cartridges side by side, showing progressively different case necks, colours and bullet tips from left to right.",
+      "caption": "Four .577/450 Martini-Henry cartridges dated 1879, 1885, 1894 and 1898, showing the case's change from rolled to drawn brass and its changing bullet tip colours over the round's service life.",
+      "width": 1600,
+      "height": 946,
+      "credit": {
+        "author": "Jim Miles",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:577_450_Martini-Henry_by_the_years.jpg",
+        "title": "File:577 450 Martini-Henry by the years.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-577-450-martini-henry",
+      "type": "wikipedia",
+      "title": ".577/450 Martini–Henry",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1366237810",
+      "lang": "en",
+      "revision": "1366237810",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

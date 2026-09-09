@@ -1,0 +1,22 @@
+{
+  "id": "cadillac-gage",
+  "name": "Cadillac Gage",
+  "country": "united-states",
+  "dissolved": 1994,
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-textron-marine-land-systems",
+      "type": "wikipedia",
+      "title": "Textron Marine & Land Systems",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359563459",
+      "lang": "en",
+      "revision": "1359563459",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0",
+      "note": "No Wikidata item or free article covers Cadillac Gage as it existed when it built the Stoner 63; Q2932698 is the successor company formed by its 1994 merger with Textron Marine, a distinct legal entity, so wikidataId is left out here rather than recording a wrong join. This article names Cadillac Gage/Textron Marine as its predecessor."
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "id": "stoner-63",
+  "name": "Stoner 63",
+  "kind": "model",
+  "wikidataId": "Q81601",
+  "makerRef": "cadillac-gage",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "united-states",
+  "producedIn": ["united-states"],
+  "introduced": 1963,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["service-rifle"],
+  "massEmpty": {
+    "value": 3.58,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-stoner-63",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+    "sourceNote": "Rifle configuration, from the article's specifications table (not the infobox, which carries no weight or length fields for this modular system); no inline citation is given there."
+  },
+  "length": {
+    "value": 1022,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-stoner-63",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+    "sourceNote": "Rifle configuration, from the article's specifications table, uncited there."
+  },
+  "barrelLength": {
+    "value": 508,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-stoner-63",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+    "sourceNote": "Rifle configuration, from the article's specifications table, uncited there."
+  },
+  "cyclicRate": {
+    "value": 800,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-stoner-63",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+    "sourceNote": "midpoint of a published 700-900 rounds/min range for the AR, Rifle, Carbine and Commando configurations, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-stoner-63",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+        "sourceNote": "published as a 20- or 30-round detachable box magazine for the box-fed configurations, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "carbine",
+      "name": "Carbine",
+      "summary": "The short-barrelled, retractable-stock configuration of the Stoner 63 system, keeping the same receiver group, gas system and box-magazine feed as the rifle on a shorter barrel.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.52,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-stoner-63",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+          "sourceNote": "from the article's specifications table, uncited there."
+        },
+        "length": {
+          "value": 931.7,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-stoner-63",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+          "sourceNote": "stock extended, from the article's specifications table, uncited there."
+        },
+        "lengthFolded": {
+          "value": 675.6,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-stoner-63",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+          "sourceNote": "stock collapsed, from the article's specifications table, uncited there."
+        },
+        "barrelLength": {
+          "value": 398.8,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-stoner-63",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+          "sourceNote": "from the article's specifications table, uncited there."
+        }
+      }
+    },
+    {
+      "id": "commando",
+      "name": "Commando",
+      "summary": "A short-barrelled fixed-stock configuration of the Stoner 63 system, further shortened overall compared to the Carbine.",
+      "overrides": {
+        "massEmpty": {
+          "value": 4.76,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-stoner-63",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+          "sourceNote": "from the article's specifications table, uncited there."
+        },
+        "length": {
+          "value": 913.1,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-stoner-63",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+          "sourceNote": "from the article's specifications table, uncited there."
+        },
+        "barrelLength": {
+          "value": 398.8,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-stoner-63",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+          "sourceNote": "a short, fluted 15.7 in barrel, from the article's specifications table and body text, uncited there."
+        }
+      }
+    },
+    {
+      "id": "ar",
+      "name": "AR (Automatic Rifle)",
+      "summary": "An automatic-rifle configuration of the Stoner 63 built for a squad-support role while still feeding from a detachable box magazine rather than a belt, sharing the rifle's overall length and barrel but built heavier.",
+      "overrides": {
+        "massEmpty": {
+          "value": 4.62,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-stoner-63",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+          "sourceNote": "from the article's specifications table, uncited there."
+        }
+      }
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/stoner-63/hero.webp",
+      "alt": "A rifle in profile with a slotted flash suppressor, a straight synthetic handguard and a curved box magazine.",
+      "caption": "The Stoner 63 in its automatic-rifle configuration, feeding from a detachable box magazine rather than a belt.",
+      "width": 787,
+      "height": 308,
+      "credit": {
+        "author": "Advanced Research Projects Agency",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stoner_63_Assault_rifle.png",
+        "title": "File:Stoner 63 Assault rifle.png",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/stoner-63/quantico-1969.webp",
+      "alt": "Several rifles and a belt-fed light machine gun of the same weapon family displayed together on a pegboard, alongside printed information cards.",
+      "caption": "Stoner 63 configurations displayed together during US Marine Corps trials at Quantico, Virginia, 1969.",
+      "width": 816,
+      "height": 529,
+      "credit": {
+        "author": "USMC Archives",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stoner_63_variants_at_Quantico,_1969.jpg",
+        "title": "File:Stoner 63 variants at Quantico, 1969.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-stoner-63",
+      "type": "wikipedia",
+      "title": "Stoner 63",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363253063",
+      "lang": "en",
+      "revision": "1363253063",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

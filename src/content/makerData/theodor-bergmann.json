@@ -1,0 +1,23 @@
+{
+  "id": "theodor-bergmann",
+  "name": "Bergmann Industriewerke",
+  "country": "german-empire",
+  "founded": 1894,
+  "dissolved": 1922,
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-theodor-bergmann",
+      "type": "wikipedia",
+      "title": "Theodor Bergmann",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370077833",
+      "lang": "en",
+      "revision": "1370077833",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-09-09",
+      "note": "No Wikidata item or free article covers Bergmann's arms company itself; Q72526 is Theodor Bergmann the person, a wrong join for a company record. This article about the founder is the only free source for the firm's founding and closing dates."
+    }
+  ]
+}

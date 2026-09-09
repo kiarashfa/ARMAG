@@ -1,0 +1,35 @@
+{
+  "id": "webley-scott",
+  "name": "Webley & Scott",
+  "wikidataId": "Q4584533",
+  "country": "united-kingdom",
+  "founded": 1790,
+  "dissolved": null,
+  "logo": {
+    "src": "images/makers/webley-scott/logo.webp",
+    "alt": "A stylised WS monogram in dark green and gold beside the words WEBLEY & SCOTT and, in small type below, GUNMAKERS 1790.",
+    "caption": "Webley & Scott's wordmark, naming its 1790 founding.",
+    "width": 524,
+    "height": 142,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Webley_%26_Scott",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-webley-scott",
+      "type": "wikipedia",
+      "title": "Webley & Scott",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1365566483",
+      "lang": "en",
+      "revision": "1365566483",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-09-09"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "nagant",
+  "name": "Fabrique d'armes Émile et Léon Nagant",
+  "wikidataId": "Q423317",
+  "country": "belgium",
+  "founded": 1859,
+  "dissolved": 1931,
+  "logo": {
+    "src": "images/makers/nagant/logo.webp",
+    "alt": "A circular black-and-white badge reading NAGANT above and LIEGE below, framing a shield-shaped coat of arms.",
+    "caption": "Nagant's roundel mark, naming the firm's home city of Liège.",
+    "width": 196,
+    "height": 194,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Fabrique_d%27armes_%C3%89mile_et_L%C3%A9on_Nagant",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-fabrique-d-armes-emile-et-leon-nagant",
+      "type": "wikipedia",
+      "title": "Fabrique d'armes Émile et Léon Nagant",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359506815",
+      "lang": "en",
+      "revision": "1359506815",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-09-09"
+    }
+  ]
+}

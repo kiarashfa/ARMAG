@@ -1,0 +1,254 @@
+{
+  "id": "heckler-koch-hk33",
+  "name": "Heckler & Koch HK33",
+  "kind": "model",
+  "wikidataId": "Q1142081",
+  "makerRef": "heckler-koch",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "blowback-delayed-roller",
+  "designedIn": "germany",
+  "producedIn": ["germany"],
+  "introduced": 1968,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["assault-rifle"],
+  "massEmpty": {
+    "value": 3.65,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "HK33A2, from the infobox. Wikipedia cites this figure to a Small Arms Review 'HK33 Brochure' page that now 404s and could not be independently read, so it is recorded as estimated rather than verified."
+  },
+  "length": {
+    "value": 920,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-hk33",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+    "sourceNote": "HK33A2, stock extended, from the infobox; no inline citation is given there."
+  },
+  "barrelLength": {
+    "value": 390,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-hk33",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+    "sourceNote": "HK33A2, from the infobox; no inline citation is given there."
+  },
+  "cyclicRate": {
+    "value": 750,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-hk33",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+    "sourceNote": "HK33A2, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-heckler-koch-hk33",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+        "sourceNote": "published as 25, 30 or 40-round detachable box magazines, from the infobox, uncited there; 30 rounds recorded here as the most common capacity."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "223-remington",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-heckler-koch-hk33",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+        "sourceNote": "the commercial .223 Remington chambering the infobox lists alongside 5.56x45mm NATO, using the same magazines."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [
+    {
+      "id": "hk33a3",
+      "name": "HK33A3",
+      "summary": "The retractable-stock version of the HK33A2, keeping the same roller-delayed blowback action, barrel and cartridge but replacing the fixed stock with a telescoping one.",
+      "overrides": {
+        "massEmpty": {
+          "value": 4.0,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "from the infobox, uncited there."
+        },
+        "length": {
+          "value": 940,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "stock extended, from the infobox, uncited there."
+        },
+        "lengthFolded": {
+          "value": 735,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "stock collapsed, from the infobox, uncited there."
+        }
+      }
+    },
+    {
+      "id": "hk33ka3",
+      "name": "HK33KA3",
+      "summary": "A short-barrelled carbine variant of the HK33A3 with a retractable stock, keeping the same action and cartridge on a shorter barrel.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.9,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "from the infobox, uncited there."
+        },
+        "length": {
+          "value": 865,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "stock extended, from the infobox, uncited there."
+        },
+        "lengthFolded": {
+          "value": 675,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "stock collapsed, from the infobox, uncited there."
+        },
+        "barrelLength": {
+          "value": 332,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "from the infobox, uncited there."
+        }
+      }
+    },
+    {
+      "id": "hk53",
+      "name": "HK53",
+      "summary": "The shortest-barrelled member of the HK33 family, a compact carbine with a retractable stock that kept the roller-delayed blowback action and 5.56mm chambering of its longer siblings.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.05,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "from the infobox, uncited there."
+        },
+        "length": {
+          "value": 755,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "stock extended, from the infobox, uncited there."
+        },
+        "lengthFolded": {
+          "value": 563,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "stock collapsed, from the infobox, uncited there."
+        },
+        "barrelLength": {
+          "value": 211,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "from the infobox, uncited there."
+        },
+        "cyclicRate": {
+          "value": 700,
+          "unit": "rpm",
+          "status": "estimated",
+          "source": "wp-heckler-koch-hk33",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+          "sourceNote": "from the infobox, uncited there."
+        }
+      }
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/heckler-koch-hk33/hero.webp",
+      "alt": "A black rifle with a stamped-steel receiver, a distinctive slotted flash suppressor, a plastic handguard and a mounted optical sight, resting against a snow-covered birch tree.",
+      "caption": "A Heckler & Koch HK33A2 fitted with a Trijicon Compact ACOG sight.",
+      "width": 1024,
+      "height": 768,
+      "credit": {
+        "author": "yet_another_finn / Mika Järvinen",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HK33A2_Flickr_(yet_another_finn).jpg",
+        "title": "File:HK33A2 Flickr (yet another finn).jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "src": "images/guns/heckler-koch-hk33/chilean-marine.webp",
+      "alt": "Two marines in digital camouflage kneel and aim rifles toward the same objective during a training exercise.",
+      "caption": "A Chilean Marine training alongside a US Marine near Valparaiso, Chile, sighting an HK33.",
+      "width": 1200,
+      "height": 787,
+      "credit": {
+        "author": "Unknown author Unknown author",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chilean_Marine_HK33.jpg",
+        "title": "File:Chilean Marine HK33.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/heckler-koch-hk33/disassembled.webp",
+      "alt": "The barrel, bolt group, stock, pistol grip and magazine of a rifle laid out separately on a concrete surface.",
+      "caption": "A Turkish-issued HK33 field-stripped into its major components.",
+      "width": 1200,
+      "height": 918,
+      "credit": {
+        "author": "MoserB",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Turkish_HK33.JPG",
+        "title": "File:Turkish HK33.JPG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-heckler-koch-hk33",
+      "type": "wikipedia",
+      "title": "Heckler & Koch HK33",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373795397",
+      "lang": "en",
+      "revision": "1373795397",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

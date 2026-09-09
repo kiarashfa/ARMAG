@@ -1,6 +1,6 @@
 {
   "note": "Entries whose `wikidataId` deliberately differs from the item their cited Wikipedia article resolves to. `wikidata.mjs verify` treats a listed entry as reviewed and exits 0; an unlisted mismatch fails. Every line here was checked against the Wikidata label, and the reason is the same one in every case: an English Wikipedia article is often broader than the thing this site records (FRICTION-LOG A7 — one item per family, not per model).",
-  "checked": "2026-09-04",
+  "checked": "2026-09-09",
   "exceptions": {
     "glock-17": "Q172172 is 'Glock 17 — semi-automatic pistol'. The cited article 'Glock' resolves to Q739882, the pistol brand, which covers the whole series.",
     "glock": "Q702135 is 'Glock Ges.m.b.H. — Austrian weapons manufacturing company'. The cited article resolves to Q739882, the brand rather than the company.",
@@ -14,6 +14,8 @@
     "industrias-trejo": "No id, deliberately. Q7837935 is the Trejo pistol, not Industrias Trejo the company; no Wikidata item covers the firm itself, and its only free source is the article about the pistol series. Left out by the authoring agent, not edited by it.",
     "la-france-specialties": "No id, deliberately. Q4042513 is the La France M16K rifle, not La France Specialties the company that built it; no Wikidata item covers the firm itself, and its only free source is the article about its product. Recording the rifle's id on the manufacturer would be a wrong join — the same case as ar57-llc and industrias-trejo.",
     "cesare-lercker": "No id, deliberately. Q15955005 is the Lercker pistol, not Cesare Lercker the gunsmith who built it. No free source names a manufacturing company at all, so the maker's only source is the article about its product; recording the pistol's id on the maker would be a wrong join — the same case as industrias-trejo and ar57-llc.",
-    "saco-defense": "No id, deliberately. Q494361 is the M60 machine gun, not Saco Defense the Maremont ordnance division that built it. Saco Defense has no Wikidata item of its own and no free article beyond its appearance in the M60's manufacturer field."
+    "saco-defense": "No id, deliberately. Q494361 is the M60 machine gun, not Saco Defense the Maremont ordnance division that built it. Saco Defense has no Wikidata item of its own and no free article beyond its appearance in the M60's manufacturer field.",
+    "cadillac-gage": "No id, deliberately. Q2932698 is Textron Marine & Land Systems, the entity formed by a 1994 merger, which is a different legal entity from the 1960s Cadillac Gage Company that built the Stoner 63. Cadillac Gage has no Wikidata item of its own. The same case as guide-lamp and kongsberg-vapenfabrikk. Escalated by the authoring agent, not edited by it.",
+    "theodor-bergmann": "No id, deliberately. Q72526 is Theodor Bergmann the industrialist, not Bergmann's firm; a person's item on a manufacturer record is a wrong join, the same case as cesare-lercker. The firm has no item of its own and its only free source is the article about its pistols. Escalated by the authoring agent, not edited by it."
   }
 }

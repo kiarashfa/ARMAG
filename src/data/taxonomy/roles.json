@@ -4,18 +4,61 @@
   "authored": true,
   "note": "What an arm was designed or adopted for — multi-valued, because most arms have more than one. A role is a design intent recorded from sources, never a recommendation: SPEC.md §14 forbids ranking any arm on effectiveness for any use.",
   "terms": [
-    { "id": "service-rifle", "label": "Service rifle" },
-    { "id": "battle-rifle", "label": "Battle rifle", "description": "Select-fire, full-power rifle cartridge." },
-    { "id": "assault-rifle", "label": "Assault rifle", "description": "Intermediate cartridge, select fire, detachable magazine — the technical definition, stated in the glossary." },
-    { "id": "dmr", "label": "Designated marksman rifle" },
-    { "id": "sniper", "label": "Sniper rifle" },
-    { "id": "hunting", "label": "Hunting" },
-    { "id": "target", "label": "Target shooting" },
-    { "id": "competition", "label": "Competition" },
-    { "id": "concealed-carry", "label": "Concealed carry" },
-    { "id": "duty-sidearm", "label": "Duty sidearm" },
-    { "id": "personal-defence", "label": "Personal defence" },
-    { "id": "general-purpose", "label": "General-purpose automatic", "description": "The general-purpose machine gun role: sustained automatic fire from a bipod or a tripod, in a full-power rifle cartridge. Added in the Phase 8 pilot batch, where the PKM had no role term that fitted." },
-    { "id": "law-enforcement", "label": "Law enforcement", "description": "Adopted for police and other civil-enforcement issue. Distinct from `duty-sidearm`, which is specifically a handgun role." }
+    {
+      "id": "service-rifle",
+      "label": "Service rifle"
+    },
+    {
+      "id": "battle-rifle",
+      "label": "Battle rifle",
+      "description": "Select-fire, full-power rifle cartridge."
+    },
+    {
+      "id": "assault-rifle",
+      "label": "Assault rifle",
+      "description": "Intermediate cartridge, select fire, detachable magazine — the technical definition, stated in the glossary."
+    },
+    {
+      "id": "dmr",
+      "label": "Designated marksman rifle"
+    },
+    {
+      "id": "sniper",
+      "label": "Sniper rifle"
+    },
+    {
+      "id": "hunting",
+      "label": "Hunting"
+    },
+    {
+      "id": "target",
+      "label": "Target shooting"
+    },
+    {
+      "id": "competition",
+      "label": "Competition"
+    },
+    {
+      "id": "concealed-carry",
+      "label": "Concealed carry"
+    },
+    {
+      "id": "duty-sidearm",
+      "label": "Duty sidearm"
+    },
+    {
+      "id": "personal-defence",
+      "label": "Personal defence"
+    },
+    {
+      "id": "general-purpose",
+      "label": "General-purpose automatic",
+      "description": "The general-purpose machine gun role: sustained automatic fire from a bipod or a tripod, in a full-power rifle cartridge. Added in the Phase 8 pilot batch, where the PKM had no role term that fitted."
+    },
+    {
+      "id": "law-enforcement",
+      "label": "Law enforcement",
+      "description": "Adopted for police and other civil-enforcement issue. Distinct from the duty sidearm role, which is specifically a handgun."
+    }
   ]
 }

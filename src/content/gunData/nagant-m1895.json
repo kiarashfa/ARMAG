@@ -1,0 +1,131 @@
+{
+  "id": "nagant-m1895",
+  "name": "Nagant M1895",
+  "kind": "model",
+  "wikidataId": "Q872172",
+  "makerRef": "nagant",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Nagant Revolver",
+      "kind": "commercial"
+    }
+  ],
+  "lineage": {},
+  "type": "revolver",
+  "action": "revolver",
+  "operatingSystem": "manual",
+  "designedIn": "belgium",
+  "producedIn": [
+    "belgium",
+    "russian-empire",
+    "soviet-union",
+    "poland"
+  ],
+  "introduced": 1895,
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "cylinder"
+  ],
+  "roles": [
+    "duty-sidearm"
+  ],
+  "massEmpty": {
+    "value": 0.82,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-nagant-m1895",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372133989",
+    "sourceNote": "unloaded, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 235,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-nagant-m1895",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372133989",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 114,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-nagant-m1895",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372133989",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 46,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-nagant-m1895",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372133989",
+    "sourceNote": "cited by the infobox to a Chuckhawks.com page, not independently read for this survey."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x38mmr",
+      "capacity": {
+        "value": 7,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-nagant-m1895",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372133989",
+        "sourceNote": "7-round cylinder, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/nagant-m1895/hero.webp",
+      "alt": "A small revolver with a checkered wooden grip, an octagonal-topped barrel and an enclosed cylinder, shown against a plain background.",
+      "caption": "A Nagant M1895 double-action service revolver.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "https://commons.wikimedia.org/wiki/User:Atirador",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nagant_M1895_DoubleAction_noBG.jpg",
+        "title": "File:Nagant M1895 DoubleAction noBG.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/nagant-m1895/cutaway.webp",
+      "alt": "A revolver sectioned lengthwise to reveal its internal cylinder, hammer and trigger mechanism, with two cartridges resting beside it.",
+      "caption": "A cutaway Nagant M1895 showing the cylinder and gas-seal mechanism, with its distinctive 7.62x38mmR cartridges.",
+      "width": 1200,
+      "height": 675,
+      "credit": {
+        "author": "Wad53",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nagant_Revolver_cutaway.jpg",
+        "title": "File:Nagant Revolver cutaway.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-nagant-m1895",
+      "type": "wikipedia",
+      "title": "Nagant M1895",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372133989",
+      "lang": "en",
+      "revision": "1372133989",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

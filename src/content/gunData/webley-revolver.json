@@ -1,0 +1,129 @@
+{
+  "id": "webley-revolver",
+  "name": "Webley Revolver",
+  "kind": "model",
+  "wikidataId": "Q589148",
+  "makerRef": "webley-scott",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Webley Mk VI",
+      "kind": "military",
+      "market": "United Kingdom"
+    }
+  ],
+  "lineage": {},
+  "type": "revolver",
+  "action": "revolver",
+  "operatingSystem": "manual",
+  "designedIn": "united-kingdom",
+  "producedIn": [
+    "united-kingdom"
+  ],
+  "introduced": 1887,
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "cylinder"
+  ],
+  "roles": [
+    "duty-sidearm"
+  ],
+  "massEmpty": {
+    "value": 1.09,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-webley-revolver",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365159846",
+    "sourceNote": "Mk VI, unloaded, converted from 2.4 lb, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 285.75,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-webley-revolver",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365159846",
+    "sourceNote": "Mk VI, converted from 11.25 in, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 152.4,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-webley-revolver",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365159846",
+    "sourceNote": "Mk VI, converted from 6 in, from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 45.7,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-webley-revolver",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365159846",
+    "sourceNote": "Converted from a published 50 yd figure, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "455-webley",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-webley-revolver",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365159846",
+        "sourceNote": "6-round cylinder, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/webley-revolver/hero.webp",
+      "alt": "A large break-top revolver with a chequered wooden grip, a long round barrel and a prominent trigger guard, photographed against a plain background.",
+      "caption": "A Webley Mk VI revolver chambered in .455.",
+      "width": 1600,
+      "height": 900,
+      "credit": {
+        "author": "Rama",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Webley_IMG_6789.jpg",
+        "title": "File:Webley IMG 6789.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+      }
+    },
+    {
+      "src": "images/guns/webley-revolver/officers-revolver.webp",
+      "alt": "A worn break-top revolver with a plain wooden grip lying against a mottled brown background.",
+      "caption": "A Webley Mk VI revolver that belonged to 2nd Lieutenant Wilfrid Ayre of the Newfoundland Regiment.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Qwexcxewq",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Officer's_Webley_Mark_VI_Revolver.jpg",
+        "title": "File:Officer's Webley Mark VI Revolver.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-webley-revolver",
+      "type": "wikipedia",
+      "title": "Webley Revolver",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1365159846",
+      "lang": "en",
+      "revision": "1365159846",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

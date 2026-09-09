@@ -1,0 +1,24 @@
+{
+  "id": "howa",
+  "name": "Howa Machinery, Ltd.",
+  "nativeName": "豊和工業株式会社",
+  "wikidataId": "Q911891",
+  "country": "japan",
+  "founded": 1907,
+  "dissolved": null,
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-howa",
+      "type": "wikipedia",
+      "title": "Howa",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1356586620",
+      "lang": "en",
+      "revision": "1356586620",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-09-09"
+    }
+  ]
+}

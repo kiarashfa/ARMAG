@@ -1,0 +1,22 @@
+{
+  "id": "denel-land-systems",
+  "name": "Denel Land Systems",
+  "wikidataId": "Q5256890",
+  "country": "south-africa",
+  "dissolved": null,
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-denel-land-systems",
+      "type": "wikipedia",
+      "title": "Denel Land Systems",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359495277",
+      "lang": "en",
+      "revision": "1359495277",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-09-09"
+    }
+  ]
+}

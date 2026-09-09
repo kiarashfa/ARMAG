@@ -1,0 +1,170 @@
+{
+  "id": "458-winchester-magnum",
+  "name": ".458 Winchester Magnum",
+  "wikidataId": "Q158792",
+  "aliases": [],
+  "introduced": 1956,
+  "standard": "cip",
+  "caseType": "belted",
+  "caseShape": "tapered",
+  "caseLength": {
+    "value": 63.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-458-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page36.pdf",
+    "sourceNote": "C.I.P. L3, maximum case length."
+  },
+  "overallLength": {
+    "value": 84.84,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-458-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page36.pdf",
+    "sourceNote": "C.I.P. L6, maximum cartridge overall length."
+  },
+  "bulletDiameter": {
+    "value": 11.66,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-458-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page36.pdf",
+    "sourceNote": "C.I.P. G1, maximum bullet diameter."
+  },
+  "rimDiameter": {
+    "value": 13.51,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-458-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page36.pdf",
+    "sourceNote": "C.I.P. R1."
+  },
+  "baseDiameter": {
+    "value": 13.03,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-458-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page36.pdf",
+    "sourceNote": "C.I.P. P1."
+  },
+  "neckDiameter": {
+    "value": 12.22,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-458-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page36.pdf",
+    "sourceNote": "C.I.P. H2."
+  },
+  "maxPressure": {
+    "value": 430.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-458-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page36.pdf",
+    "sourceNote": "C.I.P. Pmax 4300 bar; 1 bar = 0.1 MPa exactly."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "300gr-hp",
+      "name": "300 gr HP",
+      "bulletMass": {
+        "value": 19.44,
+        "unit": "g",
+        "status": "verified",
+        "source": "accurate-powder-458-win-mag",
+        "sourceUrl": "http://www.accuratepowder.com/data/PerCaliber2Guide/Rifle/Standarddata(Rifle)/458Cal(11.63mm)/458%20Winchester%20Magnum%20pages%20339%20and%20340.pdf",
+        "sourceNote": "300 gr hollow-point bullet weight from an Accurate Powder handloading data sheet. The sheet's velocity is a maximum-handload result, not a cartridge fact, and is not recorded (PLAYBOOK.md §5.8)."
+      },
+      "bulletType": "HP"
+    },
+    {
+      "id": "350gr-rn",
+      "name": "350 gr RN",
+      "bulletMass": {
+        "value": 22.68,
+        "unit": "g",
+        "status": "verified",
+        "source": "accurate-powder-458-win-mag",
+        "sourceUrl": "http://www.accuratepowder.com/data/PerCaliber2Guide/Rifle/Standarddata(Rifle)/458Cal(11.63mm)/458%20Winchester%20Magnum%20pages%20339%20and%20340.pdf",
+        "sourceNote": "350 gr round-nose bullet weight from an Accurate Powder handloading data sheet. Velocity omitted as a handload result (PLAYBOOK.md §5.8)."
+      },
+      "bulletType": "RN"
+    },
+    {
+      "id": "400gr-fn",
+      "name": "400 gr FN",
+      "bulletMass": {
+        "value": 25.92,
+        "unit": "g",
+        "status": "verified",
+        "source": "accurate-powder-458-win-mag",
+        "sourceUrl": "http://www.accuratepowder.com/data/PerCaliber2Guide/Rifle/Standarddata(Rifle)/458Cal(11.63mm)/458%20Winchester%20Magnum%20pages%20339%20and%20340.pdf",
+        "sourceNote": "400 gr flat-nose bullet weight from an Accurate Powder handloading data sheet. Velocity omitted as a handload result (PLAYBOOK.md §5.8)."
+      },
+      "bulletType": "FN"
+    },
+    {
+      "id": "500gr-rn",
+      "name": "500 gr RN",
+      "bulletMass": {
+        "value": 32.4,
+        "unit": "g",
+        "status": "verified",
+        "source": "accurate-powder-458-win-mag",
+        "sourceUrl": "http://www.accuratepowder.com/data/PerCaliber2Guide/Rifle/Standarddata(Rifle)/458Cal(11.63mm)/458%20Winchester%20Magnum%20pages%20339%20and%20340.pdf",
+        "sourceNote": "500 gr round-nose bullet weight from an Accurate Powder handloading data sheet. Velocity omitted as a handload result (PLAYBOOK.md §5.8)."
+      },
+      "bulletType": "RN"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/458-winchester-magnum/hero.webp",
+      "alt": "A brass .458 Winchester Magnum cartridge shown from the side and from the base, its base showing the raised belt just above the extraction groove.",
+      "caption": "A .458 Winchester Magnum cartridge, its belted base visible in the lower half of the photograph.",
+      "width": 1393,
+      "height": 846,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:458_cal_Winchester_belted_shell.JPG",
+        "title": "File:458 cal Winchester belted shell.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-458-winchester-magnum",
+      "type": "wikipedia",
+      "title": ".458 Winchester Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1301627955",
+      "lang": "en",
+      "revision": "1301627955",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-458-win-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 458 Win. Mag.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page36.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-09"
+    },
+    {
+      "key": "accurate-powder-458-win-mag",
+      "type": "manufacturer-spec",
+      "title": "458 Winchester Magnum handloading data",
+      "publisher": "Accurate Powder (Western Powders, Inc.)",
+      "url": "http://www.accuratepowder.com/data/PerCaliber2Guide/Rifle/Standarddata(Rifle)/458Cal(11.63mm)/458%20Winchester%20Magnum%20pages%20339%20and%20340.pdf",
+      "accessed": "2026-09-09"
+    }
+  ]
+}

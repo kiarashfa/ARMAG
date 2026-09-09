@@ -1,0 +1,211 @@
+{
+  "id": "277-fury",
+  "name": ".277 Fury",
+  "wikidataId": "Q96246407",
+  "aliases": [
+    {
+      "name": "6.8x51mm",
+      "kind": "metric"
+    }
+  ],
+  "introduced": 2019,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 51.18,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 2.015 in, via the Wikipedia infobox; the infobox carries no inline citation to a primary SIG Sauer or SAAMI datasheet."
+  },
+  "overallLength": {
+    "value": 71.76,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 2.825 in, via the Wikipedia infobox."
+  },
+  "bulletDiameter": {
+    "value": 7.06,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .2780 in, via the Wikipedia infobox."
+  },
+  "neckDiameter": {
+    "value": 7.87,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .3100 in, via the Wikipedia infobox."
+  },
+  "baseDiameter": {
+    "value": 11.95,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .4703 in, via the Wikipedia infobox."
+  },
+  "rimDiameter": {
+    "value": 11.99,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .4720 in, via the Wikipedia infobox."
+  },
+  "maxPressure": {
+    "value": 551.6,
+    "unit": "MPa",
+    "status": "estimated",
+    "sourceNote": "Converted from a published 80,000 psi SAAMI maximum average pressure figure, via the Wikipedia infobox; no inline citation to a primary SAAMI datasheet is given."
+  },
+  "pressureStandard": "saami",
+  "loads": [
+    {
+      "id": "113gr-hybrid-ball",
+      "name": "113 gr Hybrid Ball",
+      "bulletMass": {
+        "value": 7.32,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "113 gr bullet, SIG Sauer factory load, via the Wikipedia infobox (no primary citation given there)."
+      },
+      "bulletType": "Hybrid Ball",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 406.4,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "16 in test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 975.4,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "SIG Sauer factory load, via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "135gr-brass-elite-ball",
+      "name": "135 gr Brass Elite Ball",
+      "bulletMass": {
+        "value": 8.75,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "135 gr bullet, SIG Sauer factory load, via the Wikipedia infobox."
+      },
+      "bulletType": "Brass Elite Ball",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 406.4,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "16 in test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 838.2,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "SIG Sauer factory load, via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "135gr-hybrid-match",
+      "name": "135 gr Hybrid Match",
+      "bulletMass": {
+        "value": 8.75,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "135 gr bullet, SIG Sauer factory load, via the Wikipedia infobox."
+      },
+      "bulletType": "Hybrid Match",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 406.4,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "16 in test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 914.4,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "SIG Sauer factory load, via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "140gr-hybrid-hunting",
+      "name": "140 gr Hybrid Hunting",
+      "bulletMass": {
+        "value": 9.07,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "140 gr bullet, SIG Sauer factory load, via the Wikipedia infobox."
+      },
+      "bulletType": "Hybrid Hunting",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 406.4,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "16 in test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 899.2,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "SIG Sauer factory load, via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "155gr-hybrid-match",
+      "name": "155 gr Hybrid Match",
+      "bulletMass": {
+        "value": 10.04,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "155 gr bullet, SIG Sauer factory load, via the Wikipedia infobox."
+      },
+      "bulletType": "Hybrid Match",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "This load's velocity is tested from a 24 in barrel, distinct from the 16 in barrel used for the article's other loads, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 914.4,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "SIG Sauer factory load, via the Wikipedia infobox."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-277-fury",
+      "type": "wikipedia",
+      "title": ".277 Fury",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371559167",
+      "lang": "en",
+      "revision": "1371559167",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

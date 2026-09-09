@@ -1,0 +1,185 @@
+{
+  "id": "6mm-lee-navy",
+  "name": "6mm Lee Navy",
+  "wikidataId": "Q607215",
+  "aliases": [],
+  "introduced": 1895,
+  "standard": "none",
+  "caseType": "semi-rimmed",
+  "caseShape": "bottleneck",
+  "caseLength": {
+    "value": 59.69,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 2.35 in, Barnes & Amber / Sharpe's The Rifle in America, via the Wikipedia infobox. No C.I.P. or SAAMI standard exists for this obsolete US Navy round."
+  },
+  "overallLength": {
+    "value": 79.0,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 3.11 in, via the Wikipedia infobox."
+  },
+  "bulletDiameter": {
+    "value": 6.2,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .244 in, via the Wikipedia infobox."
+  },
+  "neckDiameter": {
+    "value": 7.06,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .278 in, via the Wikipedia infobox."
+  },
+  "baseDiameter": {
+    "value": 11.3,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .445 in, via the Wikipedia infobox."
+  },
+  "rimDiameter": {
+    "value": 11.38,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .448 in, via the Wikipedia infobox."
+  },
+  "loads": [
+    {
+      "id": "75gr",
+      "name": "75 gr",
+      "bulletMass": {
+        "value": 4.86,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "75 gr bullet, Barnes & Amber / Sharpe's The Rifle in America, via the Wikipedia infobox."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "24 in test barrel, the article's default, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 1005.8,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "100gr",
+      "name": "100 gr",
+      "bulletMass": {
+        "value": 6.48,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "100 gr bullet, via the Wikipedia infobox."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "24 in test barrel, the article's default, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 816.9,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "112gr",
+      "name": "112 gr",
+      "bulletMass": {
+        "value": 7.26,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "112 gr bullet, via the Wikipedia infobox."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "24 in test barrel, the article's default, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 807.7,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Via the Wikipedia infobox."
+          }
+        }
+      ]
+    },
+    {
+      "id": "112gr-military",
+      "name": "112 gr military loading",
+      "bulletMass": {
+        "value": 7.26,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "112 gr military-loading bullet fired from the M1895 Lee Navy rifle, via the Wikipedia infobox."
+      },
+      "bulletType": "military loading",
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 711.2,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "28 in barrel of the M1895 Lee Navy rifle, the article's stated exception to its 24 in default test barrel, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 780.3,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Via the Wikipedia infobox."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/6mm-lee-navy/hero.webp",
+      "alt": "Two brass rifle cartridges of slightly different case profile standing beside a stripper clip.",
+      "caption": "Two case variants of the .236/6mm US Navy round beside its stripper clip; the cartridge went through a rimmed development pattern before settling on the semi-rimmed case adopted as 6mm Lee Navy.",
+      "width": 1067,
+      "height": 1600,
+      "credit": {
+        "author": "Costas-1963",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.236-6mm_USN.JPG",
+        "title": "File:.236-6mm USN.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-6mm-lee-navy",
+      "type": "wikipedia",
+      "title": "6mm Lee Navy",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1343104204",
+      "lang": "en",
+      "revision": "1343104204",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

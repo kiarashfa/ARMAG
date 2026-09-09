@@ -1,0 +1,35 @@
+{
+  "id": "brugger-thomet",
+  "name": "Brügger & Thomet",
+  "wikidataId": "Q996867",
+  "country": "switzerland",
+  "founded": 1991,
+  "dissolved": null,
+  "logo": {
+    "src": "images/makers/brugger-thomet/logo.webp",
+    "alt": "The letters B&T in bold black type beside a grey partial ring shape, with the ampersand set in a grey circle.",
+    "caption": "B&T's wordmark.",
+    "width": 960,
+    "height": 1040,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/B%26T",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-b-t",
+      "type": "wikipedia",
+      "title": "B&T",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1365741006",
+      "lang": "en",
+      "revision": "1365741006",
+      "license": "CC BY-SA 4.0",
+      "accessed": "2026-09-09"
+    }
+  ]
+}

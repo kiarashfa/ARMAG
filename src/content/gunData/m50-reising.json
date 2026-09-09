@@ -1,0 +1,154 @@
+{
+  "id": "m50-reising",
+  "name": "M50 Reising",
+  "kind": "model",
+  "wikidataId": "Q693206",
+  "makerRef": "harrington-richardson",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Reising Model 50", "kind": "commercial" }
+  ],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-delayed-lever",
+  "designedIn": "united-states",
+  "producedIn": ["united-states"],
+  "introduced": 1941,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 3.1,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-m50-reising",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1358530557",
+    "sourceNote": "M50, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 895.35,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-m50-reising",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1358530557",
+    "sourceNote": "M50, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 279,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-m50-reising",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1358530557",
+    "sourceNote": "M50, from the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 550,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-m50-reising",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1358530557",
+    "sourceNote": "M50, from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 274,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-m50-reising",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1358530557",
+    "sourceNote": "Converted from a published 300 yd maximum range, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-m50-reising",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1358530557",
+        "sourceNote": "published as a 12- or 20-round detachable box magazine, with a 30-round aftermarket magazine also produced, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "m55",
+      "name": "M55",
+      "summary": "A lighter M50 with a folding wire stock intended for paratroopers, sharing the same delayed-blowback action and .45 ACP chambering but built shorter for jump use.",
+      "overrides": {
+        "massEmpty": {
+          "value": 2.8,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-m50-reising",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1358530557",
+          "sourceNote": "from the infobox, uncited there."
+        },
+        "lengthFolded": {
+          "value": 565.15,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-m50-reising",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1358530557",
+          "sourceNote": "stock retracted, from the infobox; an extended-stock length is not separately published for the M55."
+        },
+        "cyclicRate": {
+          "value": 500,
+          "unit": "rpm",
+          "status": "estimated",
+          "source": "wp-m50-reising",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1358530557",
+          "sourceNote": "from the infobox, uncited there."
+        }
+      }
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/m50-reising/hero.webp",
+      "alt": "A submachine gun with a wooden stock and forend, a perforated barrel jacket and a curved box magazine hanging below the receiver.",
+      "caption": "A Reising Model 50 submachine gun.",
+      "width": 1600,
+      "height": 542,
+      "credit": {
+        "author": "Curiosandrelics",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Reising_SMG_Model_50_noBG.png",
+        "title": "File:Reising SMG Model 50 noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/m50-reising/uscg-beach-patrol.webp",
+      "alt": "A sailor in a peaked cap kneels on a beach beside a German shepherd dog, holding a submachine gun.",
+      "caption": "A US Coast Guardsman on beach patrol with a working dog and a Reising submachine gun during the Second World War.",
+      "width": 767,
+      "height": 803,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:USCG_Beach_Patrol.jpg",
+        "title": "File:USCG Beach Patrol.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-m50-reising",
+      "type": "wikipedia",
+      "title": "M50 Reising",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1358530557",
+      "lang": "en",
+      "revision": "1358530557",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

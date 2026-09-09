@@ -1,0 +1,118 @@
+{
+  "id": "heckler-koch-mark-23",
+  "name": "Heckler & Koch Mark 23",
+  "kind": "model",
+  "wikidataId": "Q1334815",
+  "makerRef": "heckler-koch",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Mk 23 Mod 0", "kind": "military", "market": "United States" }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "germany",
+  "producedIn": ["germany"],
+  "introduced": 1991,
+  "fireModes": ["semi"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["duty-sidearm"],
+  "massEmpty": {
+    "value": 1.2,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-heckler-koch-mark-23",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371977873",
+    "sourceNote": "empty, cited by the infobox to an archived HK-USA spec page (web.archive.org) that could not be independently read for this survey."
+  },
+  "length": {
+    "value": 245.1,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-mark-23",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371977873",
+    "sourceNote": "without suppressor, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 149.1,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-mark-23",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371977873",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "width": {
+    "value": 39.1,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-mark-23",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371977873",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "height": {
+    "value": 150,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-heckler-koch-mark-23",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371977873",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 50,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-heckler-koch-mark-23",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371977873",
+    "sourceNote": "cited by the infobox to an archived Heckler & Koch product page (web.archive.org) that could not be independently read for this survey."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": 12,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-heckler-koch-mark-23",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371977873",
+        "sourceNote": "standard 12-round detachable box magazine; 10-round restricted and 17-, 20- and 24-round extended magazines are also published, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/heckler-koch-mark-23/hero.webp",
+      "alt": "A large semi-automatic pistol with a long cylindrical suppressor threaded onto its barrel, photographed on a mottled tabletop.",
+      "caption": "A Heckler & Koch Mark 23 pistol fitted with its dedicated suppressor.",
+      "width": 1600,
+      "height": 962,
+      "credit": {
+        "author": "Joe Loong",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mark23SuppressedLeft.jpg",
+        "title": "File:Mark23SuppressedLeft.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-heckler-koch-mark-23",
+      "type": "wikipedia",
+      "title": "Heckler & Koch Mark 23",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371977873",
+      "lang": "en",
+      "revision": "1371977873",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

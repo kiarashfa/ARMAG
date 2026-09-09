@@ -1,0 +1,203 @@
+{
+  "id": "car-15",
+  "name": "CAR-15 XM177 Commando",
+  "kind": "model",
+  "wikidataId": "Q646667",
+  "makerRef": "colt",
+  "familyRef": "ar-15",
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "CAR-15", "kind": "commercial" },
+    { "name": "XM177", "kind": "military", "market": "United States" }
+  ],
+  "lineage": { "derivedFrom": "m16-rifle" },
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-direct-impingement",
+  "designedIn": "united-states",
+  "producedIn": ["united-states"],
+  "introduced": 1966,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 2.43,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-car-15",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+    "sourceNote": "Converted from 5.35 lb, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 787.4,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-car-15",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+    "sourceNote": "XM177E1, stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 718.8,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-car-15",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+    "sourceNote": "XM177E1, stock retracted, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 254,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-car-15",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+    "sourceNote": "XM177E1, from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 400,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-car-15",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-car-15",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+        "sourceNote": "30-round box magazine or other STANAG magazines, from the infobox, uncited there."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "223-remington",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-car-15",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+        "sourceNote": "the commercial .223 Remington chambering listed alongside 5.56x45mm NATO in the infobox, using the same magazines."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [
+    {
+      "id": "xm177e2",
+      "name": "XM177E2",
+      "summary": "A slightly longer-barrelled version of the XM177E1 adopted for wider US Army special-operations use in Vietnam, adding a permanently attached moderator that lengthened the weapon overall.",
+      "overrides": {
+        "length": {
+          "value": 825.5,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-car-15",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+          "sourceNote": "stock extended, from the infobox, uncited there."
+        },
+        "lengthFolded": {
+          "value": 756.9,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-car-15",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+          "sourceNote": "stock retracted, from the infobox, uncited there."
+        },
+        "barrelLength": {
+          "value": 292.1,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-car-15",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+          "sourceNote": "from the infobox, uncited there."
+        }
+      }
+    },
+    {
+      "id": "gau-5-a",
+      "name": "GAU-5/A",
+      "summary": "The US Air Force's designation for the XM177E1, issued to aircrew and security forces rather than through Army channels but mechanically identical.",
+      "overrides": {}
+    },
+    {
+      "id": "gau-5a-a",
+      "name": "GAU-5A/A",
+      "summary": "The US Air Force's designation for the XM177E2.",
+      "overrides": {
+        "length": {
+          "value": 825.5,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-car-15",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+          "sourceNote": "stock extended, from the infobox, uncited there."
+        },
+        "lengthFolded": {
+          "value": 756.9,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-car-15",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+          "sourceNote": "stock retracted, from the infobox, uncited there."
+        },
+        "barrelLength": {
+          "value": 292.1,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-car-15",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+          "sourceNote": "from the infobox, uncited there."
+        }
+      }
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/car-15/hero.webp",
+      "alt": "A short black carbine with a fixed carrying handle over the receiver, a ribbed handguard and a curved box magazine, resting on a museum display stand.",
+      "caption": "A US XM177 Commando carbine, serial number 901635, from the Springfield Armory National Historic Site collection.",
+      "width": 640,
+      "height": 305,
+      "credit": {
+        "author": "Springfield Armory National Historic Site",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SMG_XM177_COMMANDO_1.jpg",
+        "title": "File:SMG XM177 COMMANDO 1.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/car-15/seal-training.webp",
+      "alt": "A sailor in camouflage kneels holding a short carbine with a magazine inserted, another sailor visible behind him during a field exercise.",
+      "caption": "A member of Navy SEAL Team 4 carrying a Colt Commando during a 1985 training exercise.",
+      "width": 1071,
+      "height": 1200,
+      "credit": {
+        "author": "JO1 (SS) PETER D. SUNDBERG",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SEAL_Colt_Commando_v2.jpg",
+        "title": "File:SEAL Colt Commando v2.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-car-15",
+      "type": "wikipedia",
+      "title": "CAR-15",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368013368",
+      "lang": "en",
+      "revision": "1368013368",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

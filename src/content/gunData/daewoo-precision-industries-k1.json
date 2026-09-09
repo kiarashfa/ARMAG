@@ -1,0 +1,136 @@
+{
+  "id": "daewoo-precision-industries-k1",
+  "name": "Daewoo Precision Industries K1A",
+  "kind": "model",
+  "wikidataId": "Q483003",
+  "makerRef": "snt-motiv",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Daewoo K1", "kind": "commercial" },
+    { "name": "K1A", "kind": "military", "market": "South Korea" }
+  ],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-direct-impingement",
+  "designedIn": "south-korea",
+  "producedIn": ["south-korea"],
+  "introduced": 1981,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 2.87,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-daewoo-precision-industries-k1",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374026105",
+    "sourceNote": "without magazine, K1A standard (all K1s in service were later upgraded to this standard), from the infobox, uncited there."
+  },
+  "length": {
+    "value": 838,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-daewoo-precision-industries-k1",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374026105",
+    "sourceNote": "stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 653,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-daewoo-precision-industries-k1",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374026105",
+    "sourceNote": "stock retracted, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 263,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-daewoo-precision-industries-k1",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374026105",
+    "sourceNote": "from the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 825,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-daewoo-precision-industries-k1",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374026105",
+    "sourceNote": "midpoint of a published 750-900 rounds/min range, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-daewoo-precision-industries-k1",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374026105",
+        "sourceNote": "current (post-2014) production chambering, using various STANAG magazines, from the infobox, uncited there."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "223-remington",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-daewoo-precision-industries-k1",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374026105",
+        "sourceNote": "pre-2014 production chambering, from the infobox, uncited there."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/daewoo-precision-industries-k1/hero.webp",
+      "alt": "A short black carbine with a folded telescoping stock, a mounted optical sight and a curved box magazine.",
+      "caption": "A Daewoo K1A carbine with its stock collapsed.",
+      "width": 1600,
+      "height": 800,
+      "credit": {
+        "author": "shotgunlee",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daewoo_K1A_SMG_noBG.png",
+        "title": "File:Daewoo K1A SMG noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/daewoo-precision-industries-k1/marine-exchange.webp",
+      "alt": "A Marine in digital camouflage fires a short carbine on a shooting range, another Marine visible behind him.",
+      "caption": "A US Marine fires a Daewoo K1 during a weapons exchange with Republic of Korea forces at Gimpo, 2015.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Cpl. Tyler S. Giguere",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daewoo_K1_in_Korean_Marine_Exchange_Program_15-3_02.jpg",
+        "title": "File:Daewoo K1 in Korean Marine Exchange Program 15-3 02.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-09",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-daewoo-precision-industries-k1",
+      "type": "wikipedia",
+      "title": "Daewoo Precision Industries K1",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1374026105",
+      "lang": "en",
+      "revision": "1374026105",
+      "accessed": "2026-09-09",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}
