@@ -1,0 +1,20 @@
+{
+  "id": "united-defense-supply-corp",
+  "name": "United Defense Supply Corporation",
+  "country": "united-states",
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-united-defense-m42",
+      "type": "wikipedia",
+      "title": "United Defense M42",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367483244",
+      "lang": "en",
+      "revision": "1367483244",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

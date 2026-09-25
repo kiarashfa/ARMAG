@@ -1,0 +1,116 @@
+{
+  "id": "ak-105",
+  "name": "AK-105",
+  "kind": "model",
+  "wikidataId": "Q3267000",
+  "makerRef": "izhmash",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "russia",
+  "producedIn": ["russia"],
+  "introduced": 1994,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["assault-rifle", "personal-defence"],
+  "massEmpty": {
+    "value": 3.2,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-ak-105",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362369204",
+    "sourceNote": "With empty magazine, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 824,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-105",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362369204",
+    "sourceNote": "Stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 586,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-105",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362369204",
+    "sourceNote": "Stock folded, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 314,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-105",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362369204",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 600,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-ak-105",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362369204",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 300,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-ak-105",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362369204",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-45x39mm",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-ak-105",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362369204",
+        "sourceNote": "Published as a 30-round detachable box magazine or 60-round casket magazine, from the infobox, uncited there; 30 rounds recorded here as the standard magazine."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/ak-105/hero.webp",
+      "alt": "A black AK-105 carbine with a side-folding stock and a short curved magazine, photographed against a plain background",
+      "caption": "An AK-105 carbine with a folding stock and the short barrel that distinguishes it from full-length AK-100-series rifles.",
+      "width": 1600,
+      "height": 633,
+      "credit": {
+        "author": "Mike1979 Russia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AK105_Assault_Rifle_Army-2022_2022-08-20_2383.jpg",
+        "title": "File:AK105 Assault Rifle Army-2022 2022-08-20 2383.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-ak-105",
+      "type": "wikipedia",
+      "title": "AK-105",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362369204",
+      "lang": "en",
+      "revision": "1362369204",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

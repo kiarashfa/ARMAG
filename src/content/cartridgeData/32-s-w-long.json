@@ -1,0 +1,142 @@
+{
+  "id": "32-s-w-long",
+  "name": ".32 S&W Long",
+  "wikidataId": "Q158733",
+  "aliases": [
+    {
+      "name": ".32 Colt New Police",
+      "kind": "commercial",
+      "note": "Colt's name for the same round when chambered in its own revolvers."
+    }
+  ],
+  "designedBy": "Smith & Wesson",
+  "introduced": 1896,
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "standard": "cip",
+  "caseLength": {
+    "value": 23.37,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-32-sw-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/32s-w-long-190829-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 32.51,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-32-sw-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/32s-w-long-190829-en.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-32-sw-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/32s-w-long-190829-en.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "baseDiameter": {
+    "value": 8.56,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-32-sw-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/32s-w-long-190829-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 9.53,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-32-sw-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/32s-w-long-190829-en.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 100,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-32-sw-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/32s-w-long-190829-en.pdf",
+    "sourceNote": "Pmax 1000 bar, C.I.P. method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "98gr-lhbwc",
+      "name": "98 gr LHBWC",
+      "bulletType": "LHBWC",
+      "bulletMass": {
+        "value": 6.35,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "98 gr bullet, from a handloading data page (Hodgdon), via the Wikipedia infobox. The published velocity on that page is a maximum-handload result tied to a specific powder charge, not a factory-ammunition figure, so it is not recorded."
+      }
+    },
+    {
+      "id": "90gr-lswc",
+      "name": "90 gr LSWC",
+      "bulletType": "LSWC",
+      "bulletMass": {
+        "value": 5.83,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "90 gr bullet, from the same handloading data page, via the Wikipedia infobox. Velocity not recorded for the same reason."
+      }
+    },
+    {
+      "id": "85gr-jhp",
+      "name": "85 gr JHP",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 5.51,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "85 gr bullet, from the same handloading data page, via the Wikipedia infobox. Velocity not recorded for the same reason."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/32-s-w-long/hero.webp",
+      "alt": "Three revolver cartridges standing upright side by side, labeled .32 S&W Long, .32 H&R Magnum and 7.62x38R Nagant, showing the .32 S&W Long as the shortest of the three",
+      "caption": "A .32 S&W Long cartridge (left) alongside the longer .32 H&R Magnum and the rimmed 7.62×38mmR Nagant round, for size comparison.",
+      "width": 627,
+      "height": 575,
+      "credit": {
+        "author": "Drake00",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:76238comparison.jpg",
+        "title": "File:76238comparison.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-32-s-w-long",
+      "type": "wikipedia",
+      "title": ".32 S&W Long",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371894599",
+      "lang": "en",
+      "revision": "1371894599",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-32-sw-long",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 32 S&W Long",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/32s-w-long-190829-en.pdf",
+      "revision": "2009-05-05",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

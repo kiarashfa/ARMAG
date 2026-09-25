@@ -1,0 +1,175 @@
+{
+  "id": "6mm-remington",
+  "name": "6mm Remington",
+  "wikidataId": "Q2818104",
+  "aliases": [
+    {
+      "name": ".244 Remington",
+      "kind": "commercial",
+      "note": "The cartridge's original 1955 name, before Remington's 1963 rebranding."
+    }
+  ],
+  "designedBy": "Fred Huntington and Mike Walker",
+  "introduced": 1955,
+  "standard": "saami",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 6.19,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.2435 in)."
+  },
+  "neckDiameter": {
+    "value": 7.01,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.276 in)."
+  },
+  "baseDiameter": {
+    "value": 11.96,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.471 in)."
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.473 in)."
+  },
+  "caseLength": {
+    "value": 56.72,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (2.233 in)."
+  },
+  "overallLength": {
+    "value": 71.76,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (2.825 in)."
+  },
+  "maxPressure": {
+    "value": 448.2,
+    "unit": "MPa",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (65,000 psi, SAAMI method)."
+  },
+  "pressureStandard": "saami",
+  "loads": [
+    {
+      "id": "accurate-powder-55gr-bt",
+      "name": "55 gr BT",
+      "bulletType": "BT",
+      "bulletMass": {
+        "value": 3.564,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "55 gr as published by Accurate Powder's reloading-data sheet for the 6mm Remington, converted to grams. A handloading bullet weight, not a factory-ammunition figure; no velocity is recorded from this source."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "accurate-powder-65gr-vmax",
+      "name": "65 gr VMax",
+      "bulletType": "VMax",
+      "bulletMass": {
+        "value": 4.212,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "65 gr as published by Accurate Powder's reloading-data sheet for the 6mm Remington, converted to grams. A handloading bullet weight, not a factory-ammunition figure; no velocity is recorded from this source."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "accurate-powder-80gr-sp",
+      "name": "80 gr SP",
+      "bulletType": "SP",
+      "bulletMass": {
+        "value": 5.184,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "80 gr as published by Accurate Powder's reloading-data sheet for the 6mm Remington, converted to grams. A handloading bullet weight, not a factory-ammunition figure; no velocity is recorded from this source."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "accurate-powder-95gr-bt",
+      "name": "95 gr BT",
+      "bulletType": "BT",
+      "bulletMass": {
+        "value": 6.156,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "95 gr as published by Accurate Powder's reloading-data sheet for the 6mm Remington, converted to grams. A handloading bullet weight, not a factory-ammunition figure; no velocity is recorded from this source."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "accurate-powder-105gr-rnsp",
+      "name": "105 gr RNSP",
+      "bulletType": "RNSP",
+      "bulletMass": {
+        "value": 6.804,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "105 gr as published by Accurate Powder's reloading-data sheet for the 6mm Remington, converted to grams. A handloading bullet weight, not a factory-ammunition figure; no velocity is recorded from this source."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/6mm-remington/hero.webp",
+      "alt": "A single brass bottleneck rifle cartridge with a pointed copper jacketed bullet, standing beside its own base cap",
+      "caption": "A 6mm Remington cartridge.",
+      "width": 461,
+      "height": 426,
+      "credit": {
+        "author": "Ryan D. Larson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:6mm_Remington.JPG",
+        "title": "File:6mm Remington.JPG",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/6mm-remington/comparison-243win.webp",
+      "alt": "Two similar brass bottleneck rifle cartridges without bullets, standing side by side",
+      "caption": "A 6mm Remington case (left) beside a .243 Winchester case (right), the rival dual-purpose 6mm cartridge introduced the same year.",
+      "width": 569,
+      "height": 1200,
+      "credit": {
+        "author": "Hellbus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:6mm_+_243.jpg",
+        "title": "File:6mm + 243.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-6mm-remington",
+      "type": "wikipedia",
+      "title": "6mm Remington",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1320524962",
+      "lang": "en",
+      "revision": "1320524962",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "accurate-powder-6mm-rem",
+      "type": "web",
+      "title": "6mm Remington reloading data",
+      "publisher": "Accurate Powder",
+      "url": "https://web.archive.org/web/20030926161524/http://www.accuratepowder.com/data/PerCaliber2Guide/Rifle/Standarddata%28Rifle%29/243Cal%286.17mm%29/6mm%20Remington%20pages%20207%20and%20208.pdf",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

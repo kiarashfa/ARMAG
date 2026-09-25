@@ -1,0 +1,153 @@
+{
+  "id": "daewoo-telecom-k7",
+  "name": "Daewoo Telecom K7",
+  "kind": "model",
+  "wikidataId": "Q487080",
+  "makerRef": "snt-motiv",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "south-korea",
+  "producedIn": [
+    "south-korea"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence",
+    "law-enforcement"
+  ],
+  "introduced": 2001,
+  "productionYears": {
+    "start": 2001,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 3.1,
+    "unit": "kg",
+    "status": "verified",
+    "source": "sntmotiv-catalog",
+    "sourceUrl": "https://www.sntmotiv.com/kor/business/catalog/defense.pdf",
+    "sourceNote": "As published in SNT Motiv's own defence products catalogue."
+  },
+  "length": {
+    "value": 788,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Stock extended; retracted length is 606 mm."
+  },
+  "lengthFolded": {
+    "value": 606,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Stock retracted."
+  },
+  "barrelLength": {
+    "value": 134,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 1150,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "dema-k7-2018",
+    "sourceUrl": "https://archive.today/20240627120624/https://v.daum.net/v/csBR0AzdjU",
+    "sourceNote": "Midpoint of a published 1,050–1,250 rounds/min range."
+  },
+  "effectiveRange": {
+    "value": 125,
+    "unit": "m",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there: midpoint of a published 100–150 m range."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there: a 30-round magazine; Uzi 30-round and Beretta PM12 32-round magazines are also stated to fit."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/daewoo-telecom-k7/hero.webp",
+      "alt": "A K7 submachine gun with a long ribbed suppressor housing and retractable stock, on a display stand",
+      "caption": "A Daewoo K7 with its suppressed barrel, shown at Defense Asia 2006.",
+      "width": 1600,
+      "height": 1235,
+      "credit": {
+        "author": "shotgunlee",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daewoo_K7_SMG_at_Defense_Asia_2006_0.jpg",
+        "title": "File:Daewoo K7 SMG at Defense Asia 2006 0.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+      }
+    },
+    {
+      "src": "images/guns/daewoo-telecom-k7/museum-display.webp",
+      "alt": "A K7 submachine gun with retractable stock extended, mounted on a museum display stand",
+      "caption": "A K7 on display at the War Memorial of Korea, Seoul.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "웬디러비",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:전쟁기념관_K7_소음기관단총.jpg",
+        "title": "File:전쟁기념관 K7 소음기관단총.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-daewoo-telecom-k7",
+      "type": "wikipedia",
+      "title": "Daewoo Telecom K7",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1330428932",
+      "lang": "en",
+      "revision": "1330428932",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "sntmotiv-catalog",
+      "type": "manufacturer-spec",
+      "title": "SNT Motiv Defense Products Catalogue",
+      "publisher": "SNT Motiv",
+      "url": "https://www.sntmotiv.com/kor/business/catalog/defense.pdf",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "dema-k7-2018",
+      "type": "web",
+      "title": "선택된 특전사만 쓴다는 국산총기 K7",
+      "publisher": "Defense Media Agency",
+      "url": "https://archive.today/20240627120624/https://v.daum.net/v/csBR0AzdjU",
+      "lang": "ko",
+      "year": 2018,
+      "accessed": "2026-09-24"
+    }
+  ]
+}

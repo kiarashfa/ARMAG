@@ -1,0 +1,170 @@
+{
+  "id": "480-ruger",
+  "name": ".480 Ruger",
+  "wikidataId": "Q4545387",
+  "aliases": [
+    {
+      "name": "480 Ruger",
+      "kind": "commercial"
+    },
+    {
+      "name": "12.1×33mmR",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Hornady and Sturm, Ruger & Co.",
+  "introduced": 2001,
+  "standard": "cip",
+  "caseType": "semi-rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 12.08,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/480-ruger-en.pdf",
+    "source": "cip-480-ruger"
+  },
+  "caseLength": {
+    "value": 32.64,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/480-ruger-en.pdf",
+    "source": "cip-480-ruger"
+  },
+  "overallLength": {
+    "value": 41.91,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/480-ruger-en.pdf",
+    "source": "cip-480-ruger"
+  },
+  "rimDiameter": {
+    "value": 13.77,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/480-ruger-en.pdf",
+    "source": "cip-480-ruger"
+  },
+  "neckDiameter": {
+    "value": 12.8,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/480-ruger-en.pdf",
+    "source": "cip-480-ruger"
+  },
+  "baseDiameter": {
+    "value": 12.8,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/480-ruger-en.pdf",
+    "source": "cip-480-ruger"
+  },
+  "maxPressure": {
+    "value": 330.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/480-ruger-en.pdf",
+    "source": "cip-480-ruger"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornady-325gr-xtp-mag",
+      "name": "325 gr XTP Mag",
+      "manufacturer": "Hornady",
+      "bulletType": "XTP Mag",
+      "bulletMass": {
+        "value": 21.06,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-480-325-xtp-mag",
+        "sourceUrl": "https://www.hornady.com/ammunition/handgun/480-ruger-325-gr-xtp-mag",
+        "sourceNote": "325 gr as published on the manufacturer's product page, converted to grams (1 gr = 0.06479891 g)."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 190.5,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-480-325-xtp-mag",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/480-ruger-325-gr-xtp-mag",
+            "sourceNote": "7.5-inch test barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 411.5,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-480-325-xtp-mag",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/480-ruger-325-gr-xtp-mag",
+            "sourceNote": "1,350 ft/s muzzle velocity as published on the manufacturer's product page."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/480-ruger/hero.webp",
+      "alt": "Two short, wide brass revolver cartridges with copper-coloured bullets lying on a crumpled white cloth.",
+      "caption": "Two .480 Ruger cartridges.",
+      "width": 600,
+      "height": 305,
+      "credit": {
+        "author": "Martin.Stursa",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.480_Ruger_Cartridge.jpg",
+        "title": "File:.480 Ruger Cartridge.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/480-ruger/super-redhawk.webp",
+      "alt": "A dark stainless double-action revolver with a long barrel and a rubber grip lying on a white sheet, with several brass cartridges scattered around it.",
+      "caption": "A Ruger Super Redhawk revolver, the arm the .480 Ruger was designed for, with .480 Ruger cartridges.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Original uploader was TDC at en.wikipedia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ruger_Super_Redhawk_.480_Ruger.jpg",
+        "title": "File:Ruger Super Redhawk .480 Ruger.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-480-ruger",
+      "type": "wikipedia",
+      "title": ".480 Ruger",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363127333",
+      "lang": "en",
+      "revision": "1363127333",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-480-ruger",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 480 Ruger",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/480-ruger-en.pdf",
+      "revision": "2004-09-27",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "hornady-480-325-xtp-mag",
+      "type": "manufacturer-spec",
+      "title": "480 Ruger 325 gr XTP Mag",
+      "publisher": "Hornady Manufacturing, Inc.",
+      "url": "https://www.hornady.com/ammunition/handgun/480-ruger-325-gr-xtp-mag",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

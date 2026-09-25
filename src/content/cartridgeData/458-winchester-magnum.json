@@ -74,7 +74,7 @@
         "status": "verified",
         "source": "accurate-powder-458-win-mag",
         "sourceUrl": "http://www.accuratepowder.com/data/PerCaliber2Guide/Rifle/Standarddata(Rifle)/458Cal(11.63mm)/458%20Winchester%20Magnum%20pages%20339%20and%20340.pdf",
-        "sourceNote": "300 gr hollow-point bullet weight from an Accurate Powder handloading data sheet. The sheet's velocity is a maximum-handload result, not a cartridge fact, and is not recorded (PLAYBOOK.md §5.8)."
+        "sourceNote": "300 gr hollow-point bullet weight from an Accurate Powder handloading data sheet. The sheet's velocity is a maximum-handload result, not a cartridge fact, and is not recorded."
       },
       "bulletType": "HP"
     },
@@ -87,7 +87,7 @@
         "status": "verified",
         "source": "accurate-powder-458-win-mag",
         "sourceUrl": "http://www.accuratepowder.com/data/PerCaliber2Guide/Rifle/Standarddata(Rifle)/458Cal(11.63mm)/458%20Winchester%20Magnum%20pages%20339%20and%20340.pdf",
-        "sourceNote": "350 gr round-nose bullet weight from an Accurate Powder handloading data sheet. Velocity omitted as a handload result (PLAYBOOK.md §5.8)."
+        "sourceNote": "350 gr round-nose bullet weight from an Accurate Powder handloading data sheet. Velocity omitted as a handload result."
       },
       "bulletType": "RN"
     },
@@ -100,7 +100,7 @@
         "status": "verified",
         "source": "accurate-powder-458-win-mag",
         "sourceUrl": "http://www.accuratepowder.com/data/PerCaliber2Guide/Rifle/Standarddata(Rifle)/458Cal(11.63mm)/458%20Winchester%20Magnum%20pages%20339%20and%20340.pdf",
-        "sourceNote": "400 gr flat-nose bullet weight from an Accurate Powder handloading data sheet. Velocity omitted as a handload result (PLAYBOOK.md §5.8)."
+        "sourceNote": "400 gr flat-nose bullet weight from an Accurate Powder handloading data sheet. Velocity omitted as a handload result."
       },
       "bulletType": "FN"
     },
@@ -113,7 +113,7 @@
         "status": "verified",
         "source": "accurate-powder-458-win-mag",
         "sourceUrl": "http://www.accuratepowder.com/data/PerCaliber2Guide/Rifle/Standarddata(Rifle)/458Cal(11.63mm)/458%20Winchester%20Magnum%20pages%20339%20and%20340.pdf",
-        "sourceNote": "500 gr round-nose bullet weight from an Accurate Powder handloading data sheet. Velocity omitted as a handload result (PLAYBOOK.md §5.8)."
+        "sourceNote": "500 gr round-nose bullet weight from an Accurate Powder handloading data sheet. Velocity omitted as a handload result."
       },
       "bulletType": "RN"
     }

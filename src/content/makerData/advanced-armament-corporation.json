@@ -1,0 +1,35 @@
+{
+  "id": "advanced-armament-corporation",
+  "name": "Advanced Armament Corporation",
+  "wikidataId": "Q15013032",
+  "country": "united-states",
+  "founded": 1994,
+  "dissolved": null,
+  "logo": {
+    "src": "images/makers/advanced-armament-corporation/logo.webp",
+    "alt": "A red suppressor-shaped emblem beside the black block letters AAC",
+    "caption": "The Advanced Armament Corporation wordmark, with a stylised suppressor icon.",
+    "width": 960,
+    "height": 200,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Advanced_Armament_Corporation",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-advanced-armament-corporation",
+      "type": "wikipedia",
+      "title": "Advanced Armament Corporation",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372657152",
+      "lang": "en",
+      "revision": "1372657152",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -89,26 +89,7 @@
         "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
         "sourceNote": "35 gr as published in the article's ballistics table, converted to grams."
       },
-      "velocityByBarrel": [
-        {
-          "barrelLength": {
-            "value": 609.6,
-            "unit": "mm",
-            "status": "verified",
-            "source": "wp-22-hornet",
-            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
-            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
-          },
-          "velocity": {
-            "value": 932.7,
-            "unit": "m/s",
-            "status": "verified",
-            "source": "wp-22-hornet",
-            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
-            "sourceNote": "3060 ft/s as published. The table names Hodgdon Powder Company as its source."
-          }
-        }
-      ]
+      "velocityByBarrel": []
     },
     {
       "id": "hornet-40-sp",
@@ -122,26 +103,7 @@
         "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
         "sourceNote": "40 gr as published in the article's ballistics table, converted to grams."
       },
-      "velocityByBarrel": [
-        {
-          "barrelLength": {
-            "value": 609.6,
-            "unit": "mm",
-            "status": "verified",
-            "source": "wp-22-hornet",
-            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
-            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
-          },
-          "velocity": {
-            "value": 861.4,
-            "unit": "m/s",
-            "status": "verified",
-            "source": "wp-22-hornet",
-            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
-            "sourceNote": "2826 ft/s as published."
-          }
-        }
-      ]
+      "velocityByBarrel": []
     },
     {
       "id": "hornet-45-sp",
@@ -155,26 +117,7 @@
         "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
         "sourceNote": "45 gr as published in the article's ballistics table, converted to grams."
       },
-      "velocityByBarrel": [
-        {
-          "barrelLength": {
-            "value": 609.6,
-            "unit": "mm",
-            "status": "verified",
-            "source": "wp-22-hornet",
-            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
-            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
-          },
-          "velocity": {
-            "value": 849.5,
-            "unit": "m/s",
-            "status": "verified",
-            "source": "wp-22-hornet",
-            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
-            "sourceNote": "2787 ft/s as published."
-          }
-        }
-      ]
+      "velocityByBarrel": []
     },
     {
       "id": "hornet-55-sp",
@@ -188,26 +131,7 @@
         "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
         "sourceNote": "55 gr as published in the article's ballistics table, converted to grams. It is the heaviest bullet the table lists."
       },
-      "velocityByBarrel": [
-        {
-          "barrelLength": {
-            "value": 609.6,
-            "unit": "mm",
-            "status": "verified",
-            "source": "wp-22-hornet",
-            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
-            "sourceNote": "Test barrel length stated for the whole ballistics table: 24 inches."
-          },
-          "velocity": {
-            "value": 808.3,
-            "unit": "m/s",
-            "status": "verified",
-            "source": "wp-22-hornet",
-            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1332690682",
-            "sourceNote": "2652 ft/s as published."
-          }
-        }
-      ]
+      "velocityByBarrel": []
     }
   ],
   "images": [

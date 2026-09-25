@@ -1,0 +1,134 @@
+{
+  "id": "welrod",
+  "name": "Welrod",
+  "kind": "model",
+  "wikidataId": "Q1935356",
+  "makerRef": "bsa",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "pistol",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "united-kingdom",
+  "producedIn": [
+    "united-kingdom"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "concealed-carry"
+  ],
+  "introduced": 1943,
+  "productionYears": {
+    "start": 1942,
+    "end": null
+  },
+  "length": {
+    "value": 305,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Cited on Wikipedia to a 1945-dated page on timelapse.dk describing the pistol as a roughly 12-inch cylinder; that site did not respond when checked, so the figure is recorded as estimated rather than verified."
+  },
+  "barrelLength": {
+    "value": 83,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (3.25 in). This is the vented barrel and expansion chamber inside the suppressor housing, not a conventional exposed barrel."
+  },
+  "effectiveRange": {
+    "value": 23,
+    "unit": "m",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there: 25 yd stated for daylight use; a separate 7–8 yd figure is given for night use, and the manual states the pistol was most effective fired in contact with the target."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "32-acp",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. The primary production chambering (Mk II / IIA)."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. A later variant (the 9mm Mk I) developed after reported poor field results with the .32 ACP version; the standard 9mm loading is supersonic, so the ported barrel had a larger job to do bringing it below the speed of sound."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/welrod/hero.webp",
+      "alt": "A plain metal cylinder pistol with a small pistol grip magazine and a knurled bolt knob at the rear",
+      "caption": "A Welrod 9mm Mk I, from a collection of pistols used in Norway.",
+      "width": 1600,
+      "height": 758,
+      "credit": {
+        "author": "Askild Antonsen",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Welrod_Mk_I_(6825681998).jpg",
+        "title": "File:Welrod Mk I (6825681998).jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "src": "images/guns/welrod/mk-iia.webp",
+      "alt": "A Welrod Mk IIA pistol, a plain metal tube with magazine grip, laid on a flat surface",
+      "caption": "A Welrod Mk IIA, the primary .32 ACP production version.",
+      "width": 1200,
+      "height": 621,
+      "credit": {
+        "author": "Askild Antonsen",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Welrod_Mk_II_(6825681888).jpg",
+        "title": "File:Welrod Mk II (6825681888).jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "src": "images/guns/welrod/demonstration.webp",
+      "alt": "A man in civilian clothes holding a Welrod pistol during an outdoor weapons demonstration",
+      "caption": "A U.S. Army Foreign Science and Technology Center instructor demonstrating the Welrod's operation to Special Forces personnel at Fort Bragg.",
+      "width": 565,
+      "height": 480,
+      "credit": {
+        "author": "U.S. Army Foreign Science and Technology Center",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Loading_the_Welrod_gun.jpg",
+        "title": "File:Loading the Welrod gun.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-welrod",
+      "type": "wikipedia",
+      "title": "Welrod",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1360537351",
+      "lang": "en",
+      "revision": "1360537351",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

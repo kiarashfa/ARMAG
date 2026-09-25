@@ -1,0 +1,178 @@
+{
+  "id": "brugger-thomet-apc308",
+  "name": "B&T APC308",
+  "kind": "model",
+  "makerRef": "brugger-thomet",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "APC308",
+      "kind": "commercial"
+    }
+  ],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "switzerland",
+  "producedIn": [
+    "switzerland"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "battle-rifle",
+    "law-enforcement"
+  ],
+  "introduced": 2016,
+  "massEmpty": {
+    "value": 4.0,
+    "unit": "kg",
+    "status": "verified",
+    "source": "bt-apc308-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+    "sourceNote": "From the specification table of B&T's APC308 datasheet (2020/04), APC308 column. Given as \"weight empty ... with magazine\"."
+  },
+  "length": {
+    "value": 875,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-apc308-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+    "sourceNote": "From the specification table of B&T's APC308 datasheet (2020/04), APC308 column. Stock open."
+  },
+  "lengthFolded": {
+    "value": 663,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-apc308-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+    "sourceNote": "From the specification table of B&T's APC308 datasheet (2020/04), APC308 column. Stock closed."
+  },
+  "width": {
+    "value": 101,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-apc308-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+    "sourceNote": "From the specification table of B&T's APC308 datasheet (2020/04), APC308 column. Stock closed; 69 mm with the stock open."
+  },
+  "height": {
+    "value": 199,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-apc308-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+    "sourceNote": "From the specification table of B&T's APC308 datasheet (2020/04), APC308 column."
+  },
+  "barrelLength": {
+    "value": 330,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-apc308-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+    "sourceNote": "From the specification table of B&T's APC308 datasheet (2020/04), APC308 column."
+  },
+  "riflingTwist": {
+    "value": 304.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-apc308-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+    "sourceNote": "One turn in 12 inches, right hand, as stated on the datasheet."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x51mm-nato",
+      "capacity": {
+        "value": 25,
+        "unit": "",
+        "status": "verified",
+        "source": "bt-apc308-datasheet",
+        "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+        "sourceNote": "Magpul SR25/M110/AR10-pattern magazines in 10, 20 and 25 rounds; 25 is the largest."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "apc308-dmr",
+      "name": "APC308 DMR",
+      "summary": "The longer-barrelled designated-marksman version.",
+      "overrides": {
+        "massEmpty": {
+          "value": 4.6,
+          "unit": "kg",
+          "status": "verified",
+          "source": "bt-apc308-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+          "sourceNote": "From the specification table of B&T's APC308 datasheet (2020/04), APC308 - DMR column. With magazine."
+        },
+        "length": {
+          "value": 1026,
+          "unit": "mm",
+          "status": "verified",
+          "source": "bt-apc308-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+          "sourceNote": "From the specification table of B&T's APC308 datasheet (2020/04), APC308 - DMR column. Stock open."
+        },
+        "lengthFolded": {
+          "value": 813,
+          "unit": "mm",
+          "status": "verified",
+          "source": "bt-apc308-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+          "sourceNote": "From the specification table of B&T's APC308 datasheet (2020/04), APC308 - DMR column. Stock closed."
+        },
+        "barrelLength": {
+          "value": 480,
+          "unit": "mm",
+          "status": "verified",
+          "source": "bt-apc308-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+          "sourceNote": "From the specification table of B&T's APC308 datasheet (2020/04), APC308 - DMR column."
+        }
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-brugger-thomet-apc",
+      "type": "wikipedia",
+      "title": "Brügger & Thomet APC",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373702344",
+      "lang": "en",
+      "revision": "1373702344",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "bt-apc308-datasheet",
+      "type": "manufacturer-spec",
+      "title": "APC308 7.62 x 51 mm (.308 Win) (datasheet 2020/04)",
+      "publisher": "B&T AG",
+      "url": "https://web.archive.org/web/20240511171319/https://bt-ag.ch/wp-content/uploads/2020/07/APC308-2020_04.pdf",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "tfb-apc308-preview-2016",
+      "type": "periodical",
+      "title": "PREVIEW: The New B&T APC308",
+      "publisher": "The Firearm Blog",
+      "url": "https://www.thefirearmblog.com/blog/2016/10/06/preview-new-bt-apc308/",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

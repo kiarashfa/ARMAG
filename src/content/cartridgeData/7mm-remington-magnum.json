@@ -1,0 +1,190 @@
+{
+  "id": "7mm-remington-magnum",
+  "name": "7mm Remington Magnum",
+  "wikidataId": "Q3387967",
+  "aliases": [],
+  "designedBy": "Remington Arms Company",
+  "introduced": 1962,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.23,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page3.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "neckDiameter": {
+    "value": 8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page3.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 13.03,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page3.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 13.51,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page3.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "caseLength": {
+    "value": 63.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page3.pdf",
+    "sourceNote": "Dimension L3."
+  },
+  "overallLength": {
+    "value": 83.57,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page3.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "maxPressure": {
+    "value": 430,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7mm-rem-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page3.pdf",
+    "sourceNote": "Pmax 4300 bar, C.I.P. method. SAAMI rates the same chambering at 61,000 psi by its own separate method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornady-162gr-eld-x",
+      "name": "162 gr ELD-X Precision Hunter",
+      "manufacturer": "Hornady",
+      "bulletType": "ELD-X",
+      "bulletMass": {
+        "value": 10.5,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-7mm-rm-162-eldx",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/7mm-rem-mag-162-gr-eld-x-precision-hunter",
+        "sourceNote": "162 gr as published on the manufacturer's own current product page."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 610,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-7mm-rm-162-eldx",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/7mm-rem-mag-162-gr-eld-x-precision-hunter",
+            "sourceNote": "24-inch test barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 906.8,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-7mm-rm-162-eldx",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/7mm-rem-mag-162-gr-eld-x-precision-hunter",
+            "sourceNote": "2,975 ft/s as published on the manufacturer's own current product page."
+          }
+        }
+      ]
+    },
+    {
+      "id": "110gr-barnes-tts",
+      "name": "110 gr Barnes TTS",
+      "bulletType": "Barnes TTS",
+      "bulletMass": {
+        "value": 7.13,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From Accurate Powder's reloading-data sheet, cited on Wikipedia. A handloading bullet weight, not a factory-ammunition figure; no velocity is recorded from this source."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "175gr-sp",
+      "name": "175 gr SP",
+      "bulletType": "Soft Point",
+      "bulletMass": {
+        "value": 11.34,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From Accurate Powder's reloading-data sheet, cited on Wikipedia. A handloading bullet weight, not a factory-ammunition figure; no velocity is recorded from this source."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7mm-remington-magnum/hero.webp",
+      "alt": "A single brass belted-magnum rifle cartridge with a pointed bullet, standing beside its own base",
+      "caption": "A 7mm Remington Magnum cartridge.",
+      "width": 460,
+      "height": 500,
+      "credit": {
+        "author": "own work",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7mm_Remington_Magnum.JPG",
+        "title": "File:7mm Remington Magnum.JPG",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/7mm-remington-magnum/comparison.webp",
+      "alt": "Three brass rifle cartridges of increasing size standing side by side",
+      "caption": "From left: .308 Winchester, 7mm Remington Magnum and the larger 7mm Shooting Times Westerner.",
+      "width": 536,
+      "height": 1000,
+      "credit": {
+        "author": "Hellbus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7mm_STW.jpg",
+        "title": "File:7mm STW.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-7mm-remington-magnum",
+      "type": "wikipedia",
+      "title": "7mm Remington Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1318754751",
+      "lang": "en",
+      "revision": "1318754751",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-7mm-rem-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7 mm Rem. Mag.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page3.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "hornady-7mm-rm-162-eldx",
+      "type": "manufacturer-spec",
+      "title": "7mm Rem Mag 162 gr ELD-X Precision Hunter",
+      "publisher": "Hornady Manufacturing, Inc.",
+      "url": "https://www.hornady.com/ammunition/rifle/7mm-rem-mag-162-gr-eld-x-precision-hunter",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

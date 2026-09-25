@@ -1,0 +1,39 @@
+{
+  "id": "star-bonifacio-echeverria",
+  "name": "Star Bonifacio Echeverria, S.A.",
+  "wikidataId": "Q1787417",
+  "country": "spain",
+  "founded": 1905,
+  "dissolved": 1997,
+  "logo": {
+    "src": "images/makers/star-bonifacio-echeverria/logo.webp",
+    "alt": "A red eight-pointed star sign with the word STAR across its center in white letters",
+    "caption": "The Star company mark, a red eight-pointed star, displayed at the Eibar armory museum.",
+    "width": 900,
+    "height": 1200,
+    "credit": {
+      "author": "Txo",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Museo_Eibar_logo_de_Star.JPG",
+      "title": "File:Museo Eibar logo de Star.JPG",
+      "licenseType": "trademark-nominative-use",
+      "licenseVersion": "4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "licenseNote": "The source records the file as CC BY-SA 4.0. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-star-bonifacio-echeverria",
+      "type": "wikipedia",
+      "title": "Star Bonifacio Echeverria",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373335275",
+      "lang": "en",
+      "revision": "1373335275",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

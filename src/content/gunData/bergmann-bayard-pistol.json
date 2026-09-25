@@ -1,0 +1,121 @@
+{
+  "id": "bergmann-bayard-pistol",
+  "name": "Bergmann–Bayard pistol",
+  "kind": "model",
+  "wikidataId": "Q2897122",
+  "makerRef": "anciens-etablissements-pieper",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Pistola Bergmann de 9 mm. modelo 1903", "kind": "military" }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "german-empire",
+  "producedIn": ["belgium", "denmark"],
+  "introduced": 1903,
+  "productionYears": {
+    "start": 1901,
+    "end": 1935
+  },
+  "fireModes": ["semi"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["duty-sidearm"],
+  "massEmpty": {
+    "value": 1.02,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-bergmann-bayard-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1360428462",
+    "sourceNote": "Model 1910/21, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 254,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-bergmann-bayard-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1360428462",
+    "sourceNote": "Model 1910/21, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 101,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-bergmann-bayard-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1360428462",
+    "sourceNote": "Model 1910/21, from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 100,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-bergmann-bayard-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1360428462",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x23mm-largo",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-bergmann-bayard-pistol",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1360428462",
+        "sourceNote": "Published as a 6- or 10-round detachable box magazine, from the infobox, uncited there; 6 rounds recorded here as the standard grip magazine, with a 10-round option also published."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/bergmann-bayard-pistol/hero.webp",
+      "alt": "A blued steel semi-automatic pistol with a long slide-lock mechanism and a wooden grip, photographed from the right side against a plain grey background",
+      "caption": "A Bergmann-Bayard pistol from a 1910 Danish government contract, showing Danish proof and inventory marks.",
+      "width": 1600,
+      "height": 1060,
+      "credit": {
+        "author": "Self Loader",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bergmann-Bayard_9mm_Largo_S-n_8734_R_DSC8591.jpg",
+        "title": "File:Bergmann-Bayard 9mm Largo S-n 8734 R DSC8591.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/bergmann-bayard-pistol/holster.webp",
+      "alt": "A Bergmann-Bayard pistol lying beside its brown leather military holster, a detachable box magazine and several loose cartridges",
+      "caption": "A Danish M1910/21 Bergmann pistol with its issue leather holster, magazine and ammunition.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Costas-1963",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Danish_M1910-21_pistol_w.Holster.jpg",
+        "title": "File:Danish M1910-21 pistol w.Holster.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-bergmann-bayard-pistol",
+      "type": "wikipedia",
+      "title": "Bergmann–Bayard pistol",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1360428462",
+      "lang": "en",
+      "revision": "1360428462",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

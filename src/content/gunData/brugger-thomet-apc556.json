@@ -1,0 +1,242 @@
+{
+  "id": "brugger-thomet-apc556",
+  "name": "B&T APC556",
+  "kind": "model",
+  "makerRef": "brugger-thomet",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "APC556",
+      "kind": "commercial"
+    },
+    {
+      "name": "APC223",
+      "kind": "commercial",
+      "note": "The semi-automatic civilian model."
+    }
+  ],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-short-stroke",
+  "designedIn": "switzerland",
+  "producedIn": [
+    "switzerland"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "assault-rifle",
+    "law-enforcement"
+  ],
+  "introduced": 2015,
+  "massEmpty": {
+    "value": 3.57,
+    "unit": "kg",
+    "status": "verified",
+    "source": "bt-apc556-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+    "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36050. Given as \"weight empty\"."
+  },
+  "length": {
+    "value": 841,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-apc556-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+    "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36050. Stock fully extended; the stock adjusts over 781–841 mm."
+  },
+  "lengthFolded": {
+    "value": 612,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-apc556-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+    "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36050. Stock folded."
+  },
+  "barrelLength": {
+    "value": 308,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-apc556-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+    "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36050. 30.8 cm."
+  },
+  "riflingTwist": {
+    "value": 177.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "bt-apc556-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+    "sourceNote": "One turn in 7 inches, as stated on the datasheet."
+  },
+  "cyclicRate": {
+    "value": 600,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "bt-apc556-datasheet",
+    "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+    "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36050. Selective-fire model."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "bt-apc556-datasheet",
+        "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+        "sourceNote": "STANAG-type magazines; two 30-round polymer magazines are supplied."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "apc556-short",
+      "name": "APC556 (264 mm barrel)",
+      "summary": "The same rifle with a shorter 26.4 cm barrel, item BT-36057.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.47,
+          "unit": "kg",
+          "status": "verified",
+          "source": "bt-apc556-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+          "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36057."
+        },
+        "length": {
+          "value": 797,
+          "unit": "mm",
+          "status": "verified",
+          "source": "bt-apc556-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+          "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36057. Stock fully extended; adjusts over 737–797 mm."
+        },
+        "lengthFolded": {
+          "value": 568,
+          "unit": "mm",
+          "status": "verified",
+          "source": "bt-apc556-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+          "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36057."
+        },
+        "barrelLength": {
+          "value": 264,
+          "unit": "mm",
+          "status": "verified",
+          "source": "bt-apc556-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+          "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36057."
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "apc556-pdw",
+      "name": "APC556 PDW",
+      "summary": "A short-barrelled, short-stocked version offered only with automatic fire, item BT-36063.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.59,
+          "unit": "kg",
+          "status": "verified",
+          "source": "bt-apc556-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+          "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36063."
+        },
+        "length": {
+          "value": 725,
+          "unit": "mm",
+          "status": "verified",
+          "source": "bt-apc556-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+          "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36063. Longest of three stock positions (665, 695, 725 mm)."
+        },
+        "lengthFolded": {
+          "value": 545,
+          "unit": "mm",
+          "status": "verified",
+          "source": "bt-apc556-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+          "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36063."
+        },
+        "barrelLength": {
+          "value": 222,
+          "unit": "mm",
+          "status": "verified",
+          "source": "bt-apc556-datasheet",
+          "sourceUrl": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+          "sourceNote": "From the specification table of B&T's APC556 datasheet (02/2016), column BT-36063."
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "apc556-carbine",
+      "name": "APC556 Carbine",
+      "summary": "The semi-automatic-only model, in both barrel lengths (items BT-36052 and BT-36059).",
+      "overrides": {
+        "fireModes": [
+          "semi"
+        ]
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/brugger-thomet-apc556/hero.webp",
+      "alt": "A line of police tactical officers in navy uniforms, black helmets with night-vision mounts and plate carriers, standing in front of a black armoured vehicle; several hold black short-barrelled rifles with vertical foregrips, and one holds a ballistic shield.",
+      "caption": "Operators of ORKA, the tactical unit of Lithuania's Public Safety Service, armed with APC556 rifles.",
+      "width": 1600,
+      "height": 1066,
+      "credit": {
+        "author": "Lithuanian Ministry of National Defense",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ORKA_unit_(Public_Safety_Service_of_Lithuania).jpg",
+        "title": "File:ORKA unit (Public Safety Service of Lithuania).jpg",
+        "licenseType": "gfdl",
+        "licenseUrl": "http://www.gnu.org/copyleft/fdl.html"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-brugger-thomet-apc",
+      "type": "wikipedia",
+      "title": "Brügger & Thomet APC",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373702344",
+      "lang": "en",
+      "revision": "1373702344",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "bt-apc556-datasheet",
+      "type": "manufacturer-spec",
+      "title": "APC556 – Advanced Police Carbine (datasheet 02/2016)",
+      "publisher": "B&T AG",
+      "url": "https://web.archive.org/web/20240512011402/https://bt-ag.ch/wp-content/uploads/2020/07/APC556_02_2016.pdf",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "tfb-apc556-2015",
+      "type": "periodical",
+      "title": "Brügger & Thomet APC 556/300 Coming in 2015",
+      "publisher": "The Firearm Blog",
+      "url": "https://www.thefirearmblog.com/blog/2015/02/19/brugger-thomet-apc-556300-coming-in-2015/",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

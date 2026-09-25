@@ -1,0 +1,37 @@
+{
+  "id": "fb-lucznik-radom",
+  "name": "FB \"Łucznik\" Radom",
+  "wikidataId": "Q3064033",
+  "country": "poland",
+  "founded": 1922,
+  "dissolved": null,
+  "logo": {
+    "src": "images/makers/fb-lucznik-radom/logo.webp",
+    "alt": "A downward-pointing triangular outline containing the stacked letters F and B",
+    "caption": "The FB (Fabryka Broni) monogram mark.",
+    "width": 146,
+    "height": 124,
+    "credit": {
+      "author": "Unknown author",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Logo_Fabryka_Broni.png",
+      "title": "File:Logo Fabryka Broni.png",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The source records the file as Public domain. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-fb-ucznik-radom",
+      "type": "wikipedia",
+      "title": "FB \"Łucznik\" Radom",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359730369",
+      "lang": "en",
+      "revision": "1359730369",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

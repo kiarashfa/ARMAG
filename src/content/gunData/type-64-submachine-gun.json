@@ -1,0 +1,108 @@
+{
+  "id": "type-64-submachine-gun",
+  "name": "Type 64 submachine gun",
+  "kind": "model",
+  "wikidataId": "Q7860763",
+  "makerRef": null,
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "china",
+  "producedIn": ["china"],
+  "introduced": 1964,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 3.4,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-type-64-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364970246",
+    "sourceNote": "With an empty 20-round magazine, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 860,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-type-64-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364970246",
+    "sourceNote": "Stock open, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 630,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-type-64-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364970246",
+    "sourceNote": "Stock folded, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 245,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-type-64-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364970246",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 1000,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-type-64-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364970246",
+    "sourceNote": "With its dedicated subsonic cartridge, from the infobox, uncited there; the infobox separately gives 1300 rpm with non-dedicated ammunition."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x25mm-tokarev",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-type-64-submachine-gun",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364970246",
+        "sourceNote": "Published as a 20- or 30-round detachable box magazine, from the infobox, uncited there. The weapon was designed around a dedicated subsonic 7.62x25mm Type 64 cartridge not carried on this site, but the article states standard 7.62x25mm Tokarev ammunition also functions in it, at the cost of faster wear on its integral suppressor."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/type-64-submachine-gun/hero.webp",
+      "alt": "A row of four long-barreled firearms displayed behind museum glass, with a Type 64 submachine gun, its long suppressor sleeve visible, third from the left",
+      "caption": "A Type 64 submachine gun (third from left), displayed at the 9th Military Region museum in Vietnam among weapons used by Viet Cong forces.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Unknown author",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Súng_tiểu_liên_Type_64_(thứ_ba_từ_trái_sang)_trưng_bày_tại_bảo_tàng_Quân_khu_9.jpg",
+        "title": "File:Súng tiểu liên Type 64 (thứ ba từ trái sang) trưng bày tại bảo tàng Quân khu 9.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-type-64-submachine-gun",
+      "type": "wikipedia",
+      "title": "Type 64 submachine gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1364970246",
+      "lang": "en",
+      "revision": "1364970246",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

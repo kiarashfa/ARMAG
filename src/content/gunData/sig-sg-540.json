@@ -1,0 +1,184 @@
+{
+  "id": "sig-sg-540",
+  "name": "SIG SG 540",
+  "kind": "model",
+  "wikidataId": "Q1968584",
+  "makerRef": "sig-sauer-ag",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "SG-540",
+      "kind": "commercial"
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "switzerland",
+  "producedIn": [
+    "france",
+    "chile",
+    "portugal"
+  ],
+  "fireModes": [
+    "semi",
+    "burst",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "assault-rifle"
+  ],
+  "introduced": 1977,
+  "productionYears": {
+    "start": 1977,
+    "end": 2002
+  },
+  "massEmpty": {
+    "value": 3.52,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Fixed-stock configuration."
+  },
+  "length": {
+    "value": 950,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Fixed-stock configuration, stock extended."
+  },
+  "lengthFolded": {
+    "value": 733,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Folding-stock configuration."
+  },
+  "barrelLength": {
+    "value": 460,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 725,
+    "unit": "rpm",
+    "status": "estimated",
+    "sourceNote": "Midpoint of a published 650–800 rounds/min range, uncited on Wikipedia."
+  },
+  "sightGraduation": {
+    "value": 500,
+    "unit": "m",
+    "status": "estimated",
+    "sourceNote": "From Wikipedia's design-details section, uncited there: the rear diopter drum's furthest of four settings (100, 200, 300, 500 m)."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there: a 20- or 30-round detachable box magazine; 30 is the larger of the two."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "sg-543",
+      "name": "SG 543",
+      "summary": "The carbine of the family: a folding stock and a shorter barrel, in the same 5.56×45mm NATO chambering as the base SG 540.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3,
+          "unit": "kg",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there. Folding-stock configuration."
+        },
+        "length": {
+          "value": 805,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there. Stock extended."
+        },
+        "lengthFolded": {
+          "value": 569,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there. Stock folded."
+        },
+        "barrelLength": {
+          "value": 300,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there."
+        }
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/sig-sg-540/hero.webp",
+      "alt": "A SIG SG 540 rifle with fixed stock and bipod, photographed in profile against a plain ground",
+      "caption": "An SG 540 with fixed stock, as produced by Manurhin under contract in France.",
+      "width": 1000,
+      "height": 300,
+      "credit": {
+        "author": "https://commons.wikimedia.org/wiki/User:Sanandros",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SG_540_Manurhin_noBG.png",
+        "title": "File:SG 540 Manurhin noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/sig-sg-540/sg-543-specimen.webp",
+      "alt": "A SIG SG 543 carbine with folding stock extended, photographed in profile",
+      "caption": "An SG 543 carbine, the folding-stock 5.56mm variant covered as a variant of this entry. Swedish Army Museum collection.",
+      "width": 1200,
+      "height": 391,
+      "credit": {
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SIG_SG_543_Right.jpg",
+        "title": "File:SIG SG 543 Right.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/sig-sg-540/famae-production.webp",
+      "alt": "A SIG SG 540-1 rifle with folding stock, produced in Chile",
+      "caption": "The SG 540-1, built under licence in Chile by FAMAE for the Chilean Armed Forces.",
+      "width": 600,
+      "height": 401,
+      "credit": {
+        "author": "Fabricas y Maestranzas del Ejercito (Chile)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SG_540-1_FAMAE.jpg",
+        "title": "File:SG 540-1 FAMAE.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-sig-sg-540",
+      "type": "wikipedia",
+      "title": "SIG SG 540",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372688728",
+      "lang": "en",
+      "revision": "1372688728",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

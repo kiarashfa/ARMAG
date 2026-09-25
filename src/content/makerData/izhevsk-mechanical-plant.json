@@ -1,0 +1,24 @@
+{
+  "id": "izhevsk-mechanical-plant",
+  "name": "Izhevsk Mechanical Plant",
+  "wikidataId": "Q1992233",
+  "country": "russia",
+  "founded": 1942,
+  "dissolved": 2013,
+  "predecessorOf": "kalashnikov-concern",
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-izhevsk-mechanical-plant",
+      "type": "wikipedia",
+      "title": "Izhevsk Mechanical Plant",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359555329",
+      "lang": "en",
+      "revision": "1359555329",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

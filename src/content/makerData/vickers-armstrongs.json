@@ -1,0 +1,39 @@
+{
+  "id": "vickers-armstrongs",
+  "name": "Vickers-Armstrongs",
+  "wikidataId": "Q763052",
+  "country": "united-kingdom",
+  "founded": 1927,
+  "dissolved": 1977,
+  "logo": {
+    "src": "images/makers/vickers-armstrongs/logo.webp",
+    "alt": "A plain typeset wordmark reading VICKERS-ARMSTRONGS in capital letters",
+    "caption": "The Vickers-Armstrongs company name in its standard typeset form.",
+    "width": 430,
+    "height": 140,
+    "credit": {
+      "author": "Marcric",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vickers-Armstrongs_text_only.png",
+      "title": "File:Vickers-Armstrongs text only.png",
+      "licenseType": "trademark-nominative-use",
+      "licenseVersion": "4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "licenseNote": "The source records the file as CC BY-SA 4.0. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-vickers-armstrongs",
+      "type": "wikipedia",
+      "title": "Vickers-Armstrongs",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1375138164",
+      "lang": "en",
+      "revision": "1375138164",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

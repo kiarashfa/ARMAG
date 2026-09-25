@@ -1,0 +1,138 @@
+{
+  "id": "sig-sg-542",
+  "name": "SIG SG 542",
+  "kind": "model",
+  "makerRef": "sig-sauer-ag",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "SG-542",
+      "kind": "commercial"
+    },
+    {
+      "name": "FAMAE SG 542-1",
+      "kind": "commercial"
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "switzerland",
+  "producedIn": [
+    "france",
+    "chile"
+  ],
+  "fireModes": [
+    "semi",
+    "burst",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "battle-rifle"
+  ],
+  "introduced": 1977,
+  "productionYears": {
+    "start": 1977,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 3.55,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox for the SG 540 family, uncited there, where it is given for the SG 542."
+  },
+  "length": {
+    "value": 1000,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox for the SG 540 family, uncited there, where it is given for the SG 542. Stock extended."
+  },
+  "lengthFolded": {
+    "value": 754,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox for the SG 540 family, uncited there, where it is given for the SG 542. Stock folded."
+  },
+  "barrelLength": {
+    "value": 465,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox for the SG 540 family, uncited there, where it is given for the SG 542."
+  },
+  "cyclicRate": {
+    "value": 725,
+    "unit": "rpm",
+    "status": "estimated",
+    "sourceNote": "Midpoint of the 650–800 rounds/min range the Wikipedia infobox gives for the whole family, uncited there."
+  },
+  "sightGraduation": {
+    "value": 600,
+    "unit": "m",
+    "status": "estimated",
+    "sourceNote": "From Wikipedia's variants section, uncited there: the SG 542's rear drum adds a 600 m setting to the SG 540's 100, 200, 300 and 500 m."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x51mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From Wikipedia's variants section, uncited there: normally 20- or 30-round box magazines, with 5- and 10-round magazines also made; 30 is the largest."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/sig-sg-542/hero.webp",
+      "alt": "A black rifle with a fixed polymer stock, pistol grip, straight box magazine and a long flash suppressor, lying on its right side on a wooden floor.",
+      "caption": "An SG 542 made by FAMAE in Chile for the Canadian civilian market.",
+      "width": 1600,
+      "height": 447,
+      "credit": {
+        "author": "KickerTom",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SIG_SG_542_2018-1.jpg",
+        "title": "File:SIG SG 542 2018-1.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/sig-sg-542/ecuador.webp",
+      "alt": "Soldiers in woodland camouflage and pale blue helmets marked UN advance across a dry field below mountains, the nearest carrying a black rifle at the ready.",
+      "caption": "Ecuadorian Army soldiers carrying SG 542 rifles during a United Nations training exercise in 2002.",
+      "width": 1200,
+      "height": 1117,
+      "credit": {
+        "author": "Senior Airman JoAnn S. Makinano",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ecuadorian_Army_soldier_participates_at_a_UN_exercise.jpg",
+        "title": "File:Ecuadorian Army soldier participates at a UN exercise.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-sig-sg-540",
+      "type": "wikipedia",
+      "title": "SIG SG 540",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372688728",
+      "lang": "en",
+      "revision": "1372688728",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

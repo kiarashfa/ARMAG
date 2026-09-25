@@ -1,0 +1,212 @@
+{
+  "id": "327-federal-magnum",
+  "name": ".327 Federal Magnum",
+  "wikidataId": "Q2806381",
+  "aliases": [
+    {
+      "name": "7.65×30mmR",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Federal Premium Ammunition and Sturm, Ruger & Co.",
+  "introduced": 2007,
+  "standard": "saami",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 7.92,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.312 in)."
+  },
+  "baseDiameter": {
+    "value": 8.56,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.337 in)."
+  },
+  "rimDiameter": {
+    "value": 9.53,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.375 in)."
+  },
+  "caseLength": {
+    "value": 30.5,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (1.20 in)."
+  },
+  "overallLength": {
+    "value": 37.3,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (1.47 in)."
+  },
+  "maxPressure": {
+    "value": 310.3,
+    "unit": "MPa",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (45,000 psi, SAAMI method)."
+  },
+  "pressureStandard": "saami",
+  "loads": [
+    {
+      "id": "100gr-jhp",
+      "name": "100 gr JHP",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 6.48,
+        "unit": "g",
+        "status": "verified",
+        "source": "bbti-327-federal",
+        "sourceUrl": "http://www.ballisticsbytheinch.com/327mag.html",
+        "sourceNote": "100 gr, chronographed by Ballistics By The Inch."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 78,
+            "unit": "mm",
+            "status": "verified",
+            "source": "bbti-327-federal",
+            "sourceUrl": "http://www.ballisticsbytheinch.com/327mag.html",
+            "sourceNote": "3 1/16-inch barrel, a Ruger SP101 revolver."
+          },
+          "velocity": {
+            "value": 426.7,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "bbti-327-federal",
+            "sourceUrl": "http://www.ballisticsbytheinch.com/327mag.html",
+            "sourceNote": "1,400 ft/s as chronographed by Ballistics By The Inch."
+          }
+        },
+        {
+          "barrelLength": {
+            "value": 140,
+            "unit": "mm",
+            "status": "verified",
+            "source": "bbti-327-federal",
+            "sourceUrl": "http://www.ballisticsbytheinch.com/327mag.html",
+            "sourceNote": "5 1/2-inch barrel, a Ruger Blackhawk revolver."
+          },
+          "velocity": {
+            "value": 504.4,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "bbti-327-federal",
+            "sourceUrl": "http://www.ballisticsbytheinch.com/327mag.html",
+            "sourceNote": "1,655 ft/s as chronographed by Ballistics By The Inch."
+          }
+        }
+      ]
+    },
+    {
+      "id": "115gr-jhp",
+      "name": "115 gr JHP",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 7.45,
+        "unit": "g",
+        "status": "verified",
+        "source": "bbti-327-federal",
+        "sourceUrl": "http://www.ballisticsbytheinch.com/327mag.html",
+        "sourceNote": "115 gr, chronographed by Ballistics By The Inch."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 78,
+            "unit": "mm",
+            "status": "verified",
+            "source": "bbti-327-federal",
+            "sourceUrl": "http://www.ballisticsbytheinch.com/327mag.html",
+            "sourceNote": "3 1/16-inch barrel, a Ruger SP101 revolver."
+          },
+          "velocity": {
+            "value": 396.2,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "bbti-327-federal",
+            "sourceUrl": "http://www.ballisticsbytheinch.com/327mag.html",
+            "sourceNote": "1,300 ft/s as chronographed by Ballistics By The Inch."
+          }
+        },
+        {
+          "barrelLength": {
+            "value": 140,
+            "unit": "mm",
+            "status": "verified",
+            "source": "bbti-327-federal",
+            "sourceUrl": "http://www.ballisticsbytheinch.com/327mag.html",
+            "sourceNote": "5 1/2-inch barrel, a Ruger Blackhawk revolver."
+          },
+          "velocity": {
+            "value": 483.7,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "bbti-327-federal",
+            "sourceUrl": "http://www.ballisticsbytheinch.com/327mag.html",
+            "sourceNote": "1,587 ft/s as chronographed by Ballistics By The Inch."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/327-federal-magnum/hero.webp",
+      "alt": "Two brass rimmed revolver cartridges standing side by side, the right one visibly longer",
+      "caption": "A .327 Federal Magnum cartridge (left) beside a .357 Magnum (right), the round it was built to approach in performance from a shorter, smaller-diameter case.",
+      "width": 1000,
+      "height": 720,
+      "credit": {
+        "author": "Burmiester",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:327magand357mag.png",
+        "title": "File:327magand357mag.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/327-federal-magnum/family-lineup.webp",
+      "alt": "Five .32-calibre handgun cartridges of increasing case length standing in a row",
+      "caption": "From left: .32 Short, .32 ACP, .32 S&W Long, .32 H&R Magnum and .327 Federal Magnum — the lengthening lineage that ends in this cartridge.",
+      "width": 1028,
+      "height": 701,
+      "credit": {
+        "author": "Burmiester",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:32caliberhandguncartridgecomparison.png",
+        "title": "File:32caliberhandguncartridgecomparison.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-327-federal-magnum",
+      "type": "wikipedia",
+      "title": ".327 Federal Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370649995",
+      "lang": "en",
+      "revision": "1370649995",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "bbti-327-federal",
+      "type": "web",
+      "title": "Bench Tests of the .327 Federal Magnum",
+      "publisher": "Ballistics By The Inch",
+      "url": "http://www.ballisticsbytheinch.com/327mag.html",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

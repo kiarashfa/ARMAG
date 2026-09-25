@@ -1,0 +1,206 @@
+{
+  "id": "454-casull",
+  "name": ".454 Casull",
+  "wikidataId": "Q158791",
+  "aliases": [
+    {
+      "name": "454 Casull",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "Dick Casull, Duane Marsh, Jack Fullmer",
+  "introduced": 1983,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 11.49,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/454-casull-en.pdf",
+    "source": "cip-454-casull"
+  },
+  "caseLength": {
+    "value": 35.5,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/454-casull-en.pdf",
+    "source": "cip-454-casull"
+  },
+  "overallLength": {
+    "value": 44.83,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/454-casull-en.pdf",
+    "source": "cip-454-casull"
+  },
+  "rimDiameter": {
+    "value": 13.1,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/454-casull-en.pdf",
+    "source": "cip-454-casull"
+  },
+  "neckDiameter": {
+    "value": 12.12,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/454-casull-en.pdf",
+    "source": "cip-454-casull"
+  },
+  "baseDiameter": {
+    "value": 12.13,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/454-casull-en.pdf",
+    "source": "cip-454-casull"
+  },
+  "maxPressure": {
+    "value": 390.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/454-casull-en.pdf",
+    "source": "cip-454-casull"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornady-240gr-xtp-mag",
+      "name": "240 gr XTP Mag",
+      "manufacturer": "Hornady",
+      "bulletType": "XTP Mag",
+      "bulletMass": {
+        "value": 15.552,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-454-240-xtp-mag",
+        "sourceUrl": "https://www.hornady.com/ammunition/handgun/454-casull-240-gr-xtp-mag",
+        "sourceNote": "240 gr as published on the manufacturer's product page, converted to grams (1 gr = 0.06479891 g)."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 190.5,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-454-240-xtp-mag",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/454-casull-240-gr-xtp-mag",
+            "sourceNote": "7.5-inch barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 579.1,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-454-240-xtp-mag",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/454-casull-240-gr-xtp-mag",
+            "sourceNote": "1,900 ft/s muzzle velocity as published on the manufacturer's product page."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hornady-300gr-xtp-mag",
+      "name": "300 gr XTP Mag",
+      "manufacturer": "Hornady",
+      "bulletType": "XTP Mag",
+      "bulletMass": {
+        "value": 19.44,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-454-300-xtp-mag",
+        "sourceUrl": "https://www.hornady.com/ammunition/handgun/454-casull-300-gr-xtp-mag",
+        "sourceNote": "300 gr as published on the manufacturer's product page, converted to grams (1 gr = 0.06479891 g)."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 190.5,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-454-300-xtp-mag",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/454-casull-300-gr-xtp-mag",
+            "sourceNote": "7.5-inch barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 502.9,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-454-300-xtp-mag",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/454-casull-300-gr-xtp-mag",
+            "sourceNote": "1,650 ft/s muzzle velocity as published on the manufacturer's product page."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/454-casull/hero.webp",
+      "alt": "A single straight-walled brass revolver cartridge with a copper-jacketed hollow-point bullet and a narrow rim, standing upright on orange millimetre graph paper.",
+      "caption": "A .454 Casull cartridge on millimetre graph paper, loaded with a jacketed hollow-point bullet.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_.454_Casull_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "title": "File:Cartridge .454 Casull CC BY-SA 4.0 by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/454-casull/comparison.webp",
+      "alt": "Five brass cartridges standing in a row, decreasing in length from left to right: a long case with a red polymer-tipped bullet, three straight revolver cases with hollow-point bullets, and a small rimfire round.",
+      "caption": "Left to right: .460 S&W Magnum, .454 Casull, .44 Magnum, .45 ACP and .22 Long Rifle. The .454 Casull is second from left.",
+      "width": 800,
+      "height": 716,
+      "credit": {
+        "author": "jarmoore",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_comparison1.jpg",
+        "title": "File:Cartridge comparison1.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-454-casull",
+      "type": "wikipedia",
+      "title": ".454 Casull",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363403309",
+      "lang": "en",
+      "revision": "1363403309",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-454-casull",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 454 Casull",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/454-casull-en.pdf",
+      "revision": "2015-05-19",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "hornady-454-240-xtp-mag",
+      "type": "manufacturer-spec",
+      "title": "454 Casull 240 gr XTP Mag",
+      "publisher": "Hornady Manufacturing, Inc.",
+      "url": "https://www.hornady.com/ammunition/handgun/454-casull-240-gr-xtp-mag",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "hornady-454-300-xtp-mag",
+      "type": "manufacturer-spec",
+      "title": "454 Casull 300 gr XTP Mag",
+      "publisher": "Hornady Manufacturing, Inc.",
+      "url": "https://www.hornady.com/ammunition/handgun/454-casull-300-gr-xtp-mag",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

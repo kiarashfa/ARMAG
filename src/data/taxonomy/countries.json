@@ -38,6 +38,10 @@
       "label": "Canada"
     },
     {
+      "id": "chile",
+      "label": "Chile"
+    },
+    {
       "id": "china",
       "label": "China",
       "aka": [
@@ -61,6 +65,10 @@
       "succeededBy": "czechia"
     },
     {
+      "id": "denmark",
+      "label": "Denmark"
+    },
+    {
       "id": "france",
       "label": "France"
     },
@@ -80,6 +88,10 @@
     {
       "id": "greece",
       "label": "Greece"
+    },
+    {
+      "id": "hungary",
+      "label": "Hungary"
     },
     {
       "id": "india",
@@ -126,6 +138,10 @@
       "label": "Poland"
     },
     {
+      "id": "portugal",
+      "label": "Portugal"
+    },
+    {
       "id": "romania",
       "label": "Romania"
     },
@@ -150,6 +166,10 @@
     {
       "id": "singapore",
       "label": "Singapore"
+    },
+    {
+      "id": "slovakia",
+      "label": "Slovakia"
     },
     {
       "id": "south-africa",

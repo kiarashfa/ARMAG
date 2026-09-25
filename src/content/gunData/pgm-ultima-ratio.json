@@ -1,0 +1,229 @@
+{
+  "id": "pgm-ultima-ratio",
+  "name": "PGM Ultima Ratio",
+  "kind": "model",
+  "wikidataId": "Q2895401",
+  "makerRef": "pgm-precision",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "rifle",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "france",
+  "producedIn": [
+    "france"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "sniper"
+  ],
+  "introduced": 2000,
+  "productionYears": {
+    "start": 2000,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 7.39,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. The Intervention variant, the longest-barrelled of the four covered."
+  },
+  "length": {
+    "value": 1158,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Intervention variant, stock extended."
+  },
+  "lengthFolded": {
+    "value": 873,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Intervention variant, stock folded."
+  },
+  "barrelLength": {
+    "value": 600,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Intervention variant."
+  },
+  "effectiveRange": {
+    "value": 800,
+    "unit": "m",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there, stated specifically for the 7.62×51mm NATO chambering."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x51mm-nato",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there: a 5- or 10-round detachable box magazine; 10 is the larger of the two."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "300-savage",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "7mm-08-remington",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "260-remington",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "6-5mm-creedmoor",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "6-5x47mm-lapua",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there; the infobox gives one 5- or 10-round magazine for every chambering."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "6mm-norma-br",
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there; the infobox gives one 5- or 10-round magazine for every chambering."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [
+    {
+      "id": "commando-i",
+      "name": "Commando I",
+      "summary": "A shorter-barrelled configuration of the Ultima Ratio.",
+      "overrides": {
+        "massEmpty": {
+          "value": 6.26,
+          "unit": "kg",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there."
+        },
+        "barrelLength": {
+          "value": 550,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there."
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "commando-ii",
+      "name": "Commando II",
+      "summary": "The shortest and lightest standard-barrel configuration of the Ultima Ratio.",
+      "overrides": {
+        "massEmpty": {
+          "value": 6.12,
+          "unit": "kg",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there."
+        },
+        "barrelLength": {
+          "value": 470,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there."
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "integral-silencieux",
+      "name": "Integral Silencieux",
+      "summary": "A configuration with an integrated suppressor in place of the standard barrel and muzzle device.",
+      "overrides": {
+        "massEmpty": {
+          "value": 7.08,
+          "unit": "kg",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there."
+        },
+        "barrelLength": {
+          "value": 400,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there."
+        }
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/pgm-ultima-ratio/hero.webp",
+      "alt": "A bolt-action sniper rifle with a bipod and telescopic sight, photographed in profile",
+      "caption": "A PGM Ultima Ratio Commando in Slovenian Army service.",
+      "width": 849,
+      "height": 342,
+      "credit": {
+        "author": "Ministrstvo za obrambo",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ultima_Ratio_Commando_slovenske_vojske.jpg",
+        "title": "File:Ultima Ratio Commando slovenske vojske.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-pgm-ultima-ratio",
+      "type": "wikipedia",
+      "title": "PGM Ultima Ratio",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371925552",
+      "lang": "en",
+      "revision": "1371925552",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "id": "7-62x45mm",
+  "name": "7.62×45mm",
+  "wikidataId": "Q2818191",
+  "aliases": [
+    {
+      "name": "7.62×45mm vz. 52",
+      "kind": "military"
+    }
+  ],
+  "designedBy": "Alois Farlík",
+  "introduced": 1952,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.83,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62x45",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page48.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "neckDiameter": {
+    "value": 8.66,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62x45",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page48.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.3,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62x45",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page48.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 11.3,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62x45",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page48.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "caseLength": {
+    "value": 45,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62x45",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page48.pdf",
+    "sourceNote": "Dimension L3."
+  },
+  "overallLength": {
+    "value": 60,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7-62x45",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page48.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "maxPressure": {
+    "value": 430,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7-62x45",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page48.pdf",
+    "sourceNote": "Pmax 4300 bar."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "8-5g-ball",
+      "name": "8.5 g ball",
+      "bulletMass": {
+        "value": 8.5,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 520,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there."
+          },
+          "velocity": {
+            "value": 760,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7-62x45mm/hero.webp",
+      "alt": "Two brass bottleneck rifle cartridges standing side by side, the left one visibly longer",
+      "caption": "A 7.62×45mm cartridge (left) beside the 7.62×39mm round Czechoslovakia later adopted in its place (right).",
+      "width": 766,
+      "height": 1600,
+      "credit": {
+        "author": "Darkman IV ( talk )",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:45and39.png",
+        "title": "File:45and39.png",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "src": "images/cartridges/7-62x45mm/brass-vs-steel.webp",
+      "alt": "Two 7.62x45mm cartridge cases side by side, one brass-coloured and one dark grey",
+      "caption": "A brass-cased 7.62×45mm cartridge (left) beside a steel-cased example (right).",
+      "width": 581,
+      "height": 1200,
+      "credit": {
+        "author": "Darkman IV ( talk )",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:762x45s.png",
+        "title": "File:762x45s.png",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-7-62x45mm",
+      "type": "wikipedia",
+      "title": "7.62×45mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363374900",
+      "lang": "en",
+      "revision": "1363374900",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-7-62x45",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7,62 x 45",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page48.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "frommer-stop",
+  "name": "Frommer Stop",
+  "kind": "model",
+  "wikidataId": "Q3088395",
+  "makerRef": "fegyver-es-gepgyar",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "long-recoil",
+  "designedIn": "austria-hungary",
+  "producedIn": ["austria-hungary"],
+  "introduced": 1912,
+  "productionYears": {
+    "start": 1912,
+    "end": 1940
+  },
+  "fireModes": ["semi"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["duty-sidearm"],
+  "massEmpty": {
+    "value": 0.61,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-frommer-stop",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372447860",
+    "sourceNote": "From the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 165,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-frommer-stop",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372447860",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 95,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-frommer-stop",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372447860",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "32-acp",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-frommer-stop",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372447860",
+        "sourceNote": "8-round detachable box magazine, from the infobox, uncited there. The pistol was designed around a proprietary, hotter-loaded 7.65mm Frommer cartridge not carried on this site, but the article states it also fires standard .32 ACP ammunition."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "380-acp",
+      "capacity": {
+        "value": 7,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-frommer-stop",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372447860",
+        "sourceNote": "7-round detachable box magazine, from the infobox, uncited there. The export variant, produced 1912-1929, was designed around a proprietary, hotter-loaded 9mm Frommer cartridge not carried on this site, but the article states it also fires standard .380 ACP ammunition."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/frommer-stop/hero.webp",
+      "alt": "A small nickel-finished semi-automatic pistol with wooden grip panels, photographed from the left side against a plain grey background",
+      "caption": "A Frommer Stop pistol chambered in .32 ACP, manufactured in 1917.",
+      "width": 1600,
+      "height": 1060,
+      "credit": {
+        "author": "Self Loader",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frommer_Stop_32_ACP_Sn_149082_L_DSC0291.jpg",
+        "title": "File:Frommer Stop 32 ACP Sn 149082 L DSC0291.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-frommer-stop",
+      "type": "wikipedia",
+      "title": "Frommer Stop",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372447860",
+      "lang": "en",
+      "revision": "1372447860",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

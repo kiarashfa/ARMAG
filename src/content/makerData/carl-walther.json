@@ -1,0 +1,35 @@
+{
+  "id": "carl-walther",
+  "name": "Carl Walther GmbH",
+  "wikidataId": "Q705706",
+  "country": "germany",
+  "founded": 1886,
+  "dissolved": null,
+  "logo": {
+    "src": "images/makers/carl-walther/logo.webp",
+    "alt": "The word WALTHER in blue block capitals on a blue outlined ribbon banner",
+    "caption": "Walther's ribbon wordmark.",
+    "width": 960,
+    "height": 309,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Walther_Logo.svg",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-carl-walther-gmbh",
+      "type": "wikipedia",
+      "title": "Carl Walther GmbH",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1366716955",
+      "lang": "en",
+      "revision": "1366716955",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

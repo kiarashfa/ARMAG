@@ -1,0 +1,195 @@
+{
+  "id": "9-3x62mm",
+  "name": "9.3×62mm",
+  "wikidataId": "Q274993",
+  "aliases": [],
+  "designedBy": "Otto Bock",
+  "introduced": 1905,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 9.3,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-3x62",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page69.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "neckDiameter": {
+    "value": 9.92,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-3x62",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page69.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 12.1,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-3x62",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page69.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 11.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-3x62",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page69.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "caseLength": {
+    "value": 62,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-3x62",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page69.pdf",
+    "sourceNote": "Dimension L3."
+  },
+  "overallLength": {
+    "value": 83.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9-3x62",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page69.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "maxPressure": {
+    "value": 390,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-9-3x62",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page69.pdf",
+    "sourceNote": "Pmax 3900 bar."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "norma-232gr-oryx",
+      "name": "232 gr Norma Oryx",
+      "manufacturer": "Norma",
+      "bulletType": "Oryx",
+      "bulletMass": {
+        "value": 15.03,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there and attributed only generically to Norma without a clickable product page found."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 610,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 800,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there (2,625 ft/s)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "norma-230gr-ecostrike",
+      "name": "230 gr Norma Ecostrike",
+      "manufacturer": "Norma",
+      "bulletType": "Ecostrike",
+      "bulletMass": {
+        "value": 14.9,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there and attributed only generically to Norma without a clickable product page found."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 610,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 805,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there (2,641 ft/s)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "norma-275gr-solid",
+      "name": "275 gr Norma Solid",
+      "manufacturer": "Norma",
+      "bulletType": "Solid",
+      "bulletMass": {
+        "value": 17.82,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there and attributed only generically to Norma without a clickable product page found."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 610,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 747,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there (2,450 ft/s)."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/9-3x62mm/hero.webp",
+      "alt": "A row of brass rifle cartridges with round-nosed bullets, packed in a red box",
+      "caption": "A box of Norma Oryx 232-grain 9.3×62mm cartridges.",
+      "width": 1600,
+      "height": 1055,
+      "credit": {
+        "author": "Arz",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Norma-9.3x62-15g(232gr)-Oryx-20pcs.jpg",
+        "title": "File:Norma-9.3x62-15g(232gr)-Oryx-20pcs.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-9-3x62mm",
+      "type": "wikipedia",
+      "title": "9.3×62mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312343665",
+      "lang": "en",
+      "revision": "1312343665",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-9-3x62",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 9,3 x 62",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page69.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "type-99-rifle",
+  "name": "Type 99 rifle",
+  "kind": "model",
+  "wikidataId": "Q663647",
+  "makerRef": null,
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Type 99 short rifle",
+      "kind": "military"
+    },
+    {
+      "name": "Arisaka Type 99",
+      "kind": "nickname"
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "japan",
+  "producedIn": [
+    "japan"
+  ],
+  "fireModes": [],
+  "feedSystem": [
+    "fixed-box",
+    "stripper"
+  ],
+  "roles": [
+    "service-rifle"
+  ],
+  "introduced": 1939,
+  "productionYears": {
+    "start": 1939,
+    "end": 1945
+  },
+  "massEmpty": {
+    "value": 3.79,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Short rifle; no source states whether it is with or without accessories."
+  },
+  "length": {
+    "value": 1118,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Short rifle; the infobox gives 1,258 mm for the long rifle."
+  },
+  "barrelLength": {
+    "value": 657,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Short rifle."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-7x58mm-arisaka",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. A 5-round internal box magazine loaded from stripper clips."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "long-rifle",
+      "name": "Type 99 long rifle",
+      "summary": "The initial, longer production version, made only in 1940–41; about 38,000 were built before production switched to the short rifle.",
+      "overrides": {
+        "length": {
+          "value": 1258,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there. Given as the alternative length, for the long rifle."
+        }
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/type-99-rifle/hero.webp",
+      "alt": "A bolt-action rifle with a long wooden stock and upper handguard, shown in full from the left side against a black ground, its bolt handle turned down and a sling swivel under the butt.",
+      "caption": "An early-production Type 99 short rifle.",
+      "width": 1600,
+      "height": 560,
+      "credit": {
+        "author": "Tom Loghrin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Type_99_Full_View_2-noback.png",
+        "title": "File:Type 99 Full View 2-noback.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/type-99-rifle/markings.webp",
+      "alt": "A close view looking down on the front of a rifle receiver, stamped with a sixteen-petal chrysanthemum above a single round vent hole and three Japanese characters.",
+      "caption": "The receiver of a Type 99 with its chrysanthemum intact, above the characters for \"Type 99\" and its single vent hole.",
+      "width": 1136,
+      "height": 1200,
+      "credit": {
+        "author": "Tom Loghrin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Type_99_Markings.JPG",
+        "title": "File:Type 99 Markings.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-type-99-rifle",
+      "type": "wikipedia",
+      "title": "Type 99 rifle",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373615638",
+      "lang": "en",
+      "revision": "1373615638",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

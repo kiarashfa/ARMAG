@@ -1,0 +1,187 @@
+{
+  "id": "6-5x47mm-lapua",
+  "name": "6.5×47mm Lapua",
+  "wikidataId": "Q623148",
+  "aliases": [
+    {
+      "name": "6,5 x 47 Lapua",
+      "kind": "commercial"
+    }
+  ],
+  "designedBy": "Nammo Lapua with Grünig & Elmiger",
+  "introduced": 2005,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 6.71,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-47-lapua-en.pdf",
+    "source": "cip-6-5-x-47-lapua"
+  },
+  "caseLength": {
+    "value": 47.0,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-47-lapua-en.pdf",
+    "source": "cip-6-5-x-47-lapua"
+  },
+  "overallLength": {
+    "value": 71.0,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-47-lapua-en.pdf",
+    "source": "cip-6-5-x-47-lapua"
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-47-lapua-en.pdf",
+    "source": "cip-6-5-x-47-lapua"
+  },
+  "neckDiameter": {
+    "value": 7.4,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-47-lapua-en.pdf",
+    "source": "cip-6-5-x-47-lapua"
+  },
+  "baseDiameter": {
+    "value": 11.95,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-47-lapua-en.pdf",
+    "source": "cip-6-5-x-47-lapua"
+  },
+  "maxPressure": {
+    "value": 435.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-47-lapua-en.pdf",
+    "source": "cip-6-5-x-47-lapua"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "lapua-123gr-scenar",
+      "name": "123 gr Scenar",
+      "manufacturer": "Lapua",
+      "bulletType": "Scenar OTM",
+      "bulletMass": {
+        "value": 8.0,
+        "unit": "g",
+        "status": "verified",
+        "source": "lapua-6-5x47-123-scenar",
+        "sourceUrl": "https://www.lapua.com/product/6-5x47-open-tip-match-cartridge-lapua-scenar-8g-123gr-4316011/",
+        "sourceNote": "8.0 g (123 gr) as published on the product page."
+      },
+      "bcG1": {
+        "value": 0.527,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-6-5x47-123-scenar",
+        "sourceUrl": "https://www.lapua.com/product/6-5x47-open-tip-match-cartridge-lapua-scenar-8g-123gr-4316011/",
+        "sourceNote": "Published as a single figure."
+      },
+      "bcG7": {
+        "value": 0.263,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-6-5x47-123-scenar",
+        "sourceUrl": "https://www.lapua.com/product/6-5x47-open-tip-match-cartridge-lapua-scenar-8g-123gr-4316011/",
+        "sourceNote": "Published as a single figure."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "lapua-139gr-scenar",
+      "name": "139 gr Scenar",
+      "manufacturer": "Lapua",
+      "bulletType": "Scenar OTM",
+      "bulletMass": {
+        "value": 9.0,
+        "unit": "g",
+        "status": "verified",
+        "source": "lapua-6-5x47-139-scenar",
+        "sourceUrl": "https://www.lapua.com/product/6-5x47-open-tip-match-cartridge-lapua-scenar-9g-139gr-4316012/",
+        "sourceNote": "9.0 g (139 gr) as published on the product page."
+      },
+      "bcG1": {
+        "value": 0.578,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-6-5x47-139-scenar",
+        "sourceUrl": "https://www.lapua.com/product/6-5x47-open-tip-match-cartridge-lapua-scenar-9g-139gr-4316012/",
+        "sourceNote": "Published as a single figure."
+      },
+      "bcG7": {
+        "value": 0.29,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-6-5x47-139-scenar",
+        "sourceUrl": "https://www.lapua.com/product/6-5x47-open-tip-match-cartridge-lapua-scenar-9g-139gr-4316012/",
+        "sourceNote": "Published as a single figure."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/6-5x47mm-lapua/hero.webp",
+      "alt": "A slender bottlenecked brass rifle cartridge with a red-tipped bullet standing upright on light wood, flanked above by two long loose bullets.",
+      "caption": "A 6.5×47mm Lapua cartridge between two long target bullets, a Lapua 144-grain full-metal-jacket on the left and a Hornady 123-grain A-Max on the right, showing that neither has to sit below the case neck.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grimstod",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:6.5x47_and_Long_Target_bullets.jpg",
+        "title": "File:6.5x47 and Long Target bullets.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-6-5-47mm-lapua",
+      "type": "wikipedia",
+      "title": "6.5×47mm Lapua",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1292319718",
+      "lang": "en",
+      "revision": "1292319718",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-6-5-x-47-lapua",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 6,5 x 47 Lapua",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-47-lapua-en.pdf",
+      "revision": "2014-05-20",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "lapua-6-5x47-123-scenar",
+      "type": "manufacturer-spec",
+      "title": "6.5×47 Lapua / 8.0 g (123 gr) Scenar",
+      "publisher": "Nammo Lapua",
+      "url": "https://www.lapua.com/product/6-5x47-open-tip-match-cartridge-lapua-scenar-8g-123gr-4316011/",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "lapua-6-5x47-139-scenar",
+      "type": "manufacturer-spec",
+      "title": "6.5×47 Lapua / 9.0 g (139 gr) Scenar",
+      "publisher": "Nammo Lapua",
+      "url": "https://www.lapua.com/product/6-5x47-open-tip-match-cartridge-lapua-scenar-9g-139gr-4316012/",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

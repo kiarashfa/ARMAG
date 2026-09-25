@@ -1,0 +1,143 @@
+{
+  "id": "taurus-judge",
+  "name": "Taurus Judge",
+  "kind": "model",
+  "wikidataId": "Q3019288",
+  "makerRef": "taurus-armas",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "4510",
+      "kind": "commercial",
+      "note": "Current model designation, combining .45 Colt and .410 shot in one number."
+    },
+    {
+      "name": "4410",
+      "kind": "commercial",
+      "note": "The original, now discontinued model designation."
+    }
+  ],
+  "lineage": {},
+  "type": "revolver",
+  "action": "revolver",
+  "operatingSystem": "manual",
+  "designedIn": "brazil",
+  "producedIn": [
+    "brazil"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "cylinder"
+  ],
+  "roles": [
+    "concealed-carry",
+    "personal-defence"
+  ],
+  "introduced": 2006,
+  "productionYears": {
+    "start": 2006,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 0.822,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (29 oz), the standard steel 3-inch-barrel model. An alloy-framed 'Ultra-Lite' version and other barrel lengths weigh differently and are not separately recorded here."
+  },
+  "length": {
+    "value": 191,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (7.5 in)."
+  },
+  "width": {
+    "value": 39,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (1.531 in)."
+  },
+  "height": {
+    "value": 137,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (5.394 in)."
+  },
+  "barrelLength": {
+    "value": 76,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (3 in). Taurus has also offered 4-inch and 6.5-inch barrels on this platform."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "45-colt",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From Wikipedia's lead sentence, uncited there: a five-shot cylinder. Larger-frame Judge variants have used 6- or 7-round cylinders."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "410-bore",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From Wikipedia's lead sentence, uncited there: the same five-chamber cylinder also accepts .410 bore shotshells, the revolver's namesake combination."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/taurus-judge/hero.webp",
+      "alt": "A stainless steel Taurus Judge revolver with black rubber grip, photographed against a plain ground",
+      "caption": "A Taurus Judge revolver.",
+      "width": 1200,
+      "height": 600,
+      "credit": {
+        "author": "U.S. Bureau of Alcohol, Tobacco, Firearms and Explosives",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taurus_Judge_(transparent_background).jpg",
+        "title": "File:Taurus Judge (transparent background).jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/taurus-judge/public-defender.webp",
+      "alt": "A stainless steel snub-nosed revolver with a spurless hammer held in a hand",
+      "caption": "The Taurus Public Defender, a smaller-frame concealed-carry variant sharing the Judge's five-round .45 Colt/.410 bore cylinder.",
+      "width": 1200,
+      "height": 819,
+      "credit": {
+        "author": "Harvey Henkelmann",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taurus_Public_Defender.jpg",
+        "title": "File:Taurus Public Defender.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-taurus-judge",
+      "type": "wikipedia",
+      "title": "Taurus Judge",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373647128",
+      "lang": "en",
+      "revision": "1373647128",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

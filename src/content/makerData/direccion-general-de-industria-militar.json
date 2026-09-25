@@ -1,0 +1,30 @@
+{
+  "id": "direccion-general-de-industria-militar",
+  "name": "Dirección General de Industria Militar",
+  "country": "mexico",
+  "founded": 1916,
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-fx-05",
+      "type": "wikipedia",
+      "title": "FX-05 Xiuhcoatl",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1357985448",
+      "lang": "en",
+      "revision": "1357985448",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "infodefensa-mx-industria",
+      "type": "web",
+      "title": "La Industria Militar de México: más de 106 años operando",
+      "publisher": "Infodefensa",
+      "url": "https://www.infodefensa.com/texto-diario/mostrar/4406680/industria-militar-mexico",
+      "lang": "es",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

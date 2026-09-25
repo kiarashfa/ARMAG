@@ -1,0 +1,121 @@
+{
+  "id": "32-h-r-magnum",
+  "name": ".32 H&R Magnum",
+  "wikidataId": "Q1795199",
+  "aliases": [],
+  "designedBy": "Harrington & Richardson and Federal Premium Ammunition",
+  "introduced": 1984,
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "standard": "cip",
+  "caseLength": {
+    "value": 27.31,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 1.075 in, Wikipedia infobox. The C.I.P. datasheet for this round publishes only its maximum pressure, not its dimensions."
+  },
+  "overallLength": {
+    "value": 34.29,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 1.350 in, Wikipedia infobox."
+  },
+  "bulletDiameter": {
+    "value": 7.92,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .312 in, Wikipedia infobox."
+  },
+  "neckDiameter": {
+    "value": 8.56,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .337 in, Wikipedia infobox."
+  },
+  "baseDiameter": {
+    "value": 8.56,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .337 in, Wikipedia infobox."
+  },
+  "rimDiameter": {
+    "value": 9.53,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .375 in, Wikipedia infobox."
+  },
+  "maxPressure": {
+    "value": 140,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-32-h-r-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page41.pdf",
+    "sourceNote": "Pmax 1400 bar, C.I.P. method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "85gr-hp",
+      "name": "85 gr HP",
+      "bulletType": "HP",
+      "bulletMass": {
+        "value": 5.51,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "85 gr bullet, from a handloading data page (Hodgdon), via the Wikipedia infobox. The published velocity on that page is a maximum-handload result tied to a specific powder charge, not a factory-ammunition figure, so it is not recorded."
+      }
+    },
+    {
+      "id": "100gr-jhp",
+      "name": "100 gr JHP",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 6.48,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "100 gr bullet, from the same handloading data page, via the Wikipedia infobox. Velocity not recorded for the same reason."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/32-h-r-magnum/hero.webp",
+      "alt": "Five .32-caliber handgun cartridges of increasing length standing in a row on a wooden surface",
+      "caption": "Five .32-caliber handgun cartridges compared, left to right: .32 Short, .32 ACP, .32 S&W Long, .32 H&R Magnum and .327 Federal Magnum.",
+      "width": 1028,
+      "height": 701,
+      "credit": {
+        "author": "Burmiester",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:32caliberhandguncartridgecomparison.png",
+        "title": "File:32caliberhandguncartridgecomparison.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-32-h-r-magnum",
+      "type": "wikipedia",
+      "title": ".32 H&R Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372403204",
+      "lang": "en",
+      "revision": "1372403204",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-32-h-r-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 32 H&R Mag.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page41.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

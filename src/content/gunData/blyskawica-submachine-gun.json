@@ -1,0 +1,133 @@
+{
+  "id": "blyskawica-submachine-gun",
+  "name": "Błyskawica submachine gun",
+  "kind": "model",
+  "wikidataId": "Q1022095",
+  "makerRef": null,
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "poland",
+  "producedIn": ["poland"],
+  "introduced": 1943,
+  "productionYears": {
+    "start": 1943,
+    "end": 1944
+  },
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 3.22,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-b-yskawica-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372726074",
+    "sourceNote": "From the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 730,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-b-yskawica-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372726074",
+    "sourceNote": "Stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 556,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-b-yskawica-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372726074",
+    "sourceNote": "Stock folded, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 197,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-b-yskawica-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372726074",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 600,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-b-yskawica-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372726074",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 200,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-b-yskawica-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372726074",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-b-yskawica-submachine-gun",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372726074",
+        "sourceNote": "32-round detachable box magazine, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/blyskawica-submachine-gun/hero.webp",
+      "alt": "A slender tubular submachine gun with a perforated barrel jacket, a wooden foregrip and a wire stock, lying on a plain surface",
+      "caption": "A Błyskawica submachine gun on display at the Warsaw Uprising Museum.",
+      "width": 1600,
+      "height": 1067,
+      "credit": {
+        "author": "Przemek P",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Błyskawica_machine_gun_in_Warsaw_Uprising_Museum.jpg",
+        "title": "File:Błyskawica machine gun in Warsaw Uprising Museum.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/blyskawica-submachine-gun/workshop.webp",
+      "alt": "Men working at benches in a cramped clandestine workshop during the Warsaw Uprising, with submachine gun parts and tools visible on the table",
+      "caption": "An underground Warsaw Uprising gunsmith shop producing Błyskawica submachine guns, 1944.",
+      "width": 1200,
+      "height": 849,
+      "credit": {
+        "author": "Eugeniusz Lokajski",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Warsaw_Uprising_by_Lokajski_-_3435.jpg",
+        "title": "File:Warsaw Uprising by Lokajski - 3435.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-b-yskawica-submachine-gun",
+      "type": "wikipedia",
+      "title": "Błyskawica submachine gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372726074",
+      "lang": "en",
+      "revision": "1372726074",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

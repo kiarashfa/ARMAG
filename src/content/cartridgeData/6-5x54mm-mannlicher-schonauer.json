@@ -1,0 +1,162 @@
+{
+  "id": "6-5x54mm-mannlicher-schonauer",
+  "name": "6.5×54mm Mannlicher–Schönauer",
+  "wikidataId": "Q4641594",
+  "aliases": [],
+  "introduced": 1900,
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "standard": "cip",
+  "caseLength": {
+    "value": 53.65,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x54-msch",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page22.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 77.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x54-msch",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page22.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 6.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x54-msch",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page22.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 7.49,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x54-msch",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page22.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.47,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x54-msch",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page22.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 11.52,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5x54-msch",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page22.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 365,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-6-5x54-msch",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page22.pdf",
+    "sourceNote": "Pmax 3650 bar, C.I.P. method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "139gr-norma",
+      "name": "139 gr Norma",
+      "manufacturer": "Norma",
+      "bulletMass": {
+        "value": 9.01,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox. The C.I.P. datasheet the infobox otherwise cites for this cartridge prints only dimensions and pressure, not velocity or bullet mass, so this load figure is not attributable to it and is recorded as estimated."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 444.5,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "17.5 in test barrel, Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 765,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "2510 ft/s, Wikipedia infobox; see note on bulletMass for why this is not attributed to C.I.P."
+          }
+        }
+      ]
+    },
+    {
+      "id": "159gr-rws",
+      "name": "159 gr RWS",
+      "manufacturer": "RWS",
+      "bulletMass": {
+        "value": 10.3,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox; see note on the Norma load for why this is not attributed to C.I.P."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 444.5,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "17.5 in test barrel, Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 750,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "2460 ft/s, Wikipedia infobox."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/6-5x54mm-mannlicher-schonauer/hero.webp",
+      "alt": "A single 6.5x54mm Mannlicher-Schoenauer rifle cartridge standing beside a period box printed 6,5 x 54 M.Sch. in German",
+      "caption": "A 6.5×54mm Mannlicher–Schönauer cartridge with a period German-language ammunition box.",
+      "width": 640,
+      "height": 480,
+      "credit": {
+        "author": "Mani001Obi",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:6,5x54_Mannlicher_Schönauer.jpg",
+        "title": "File:6,5x54 Mannlicher Schönauer.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-6-5-54mm-mannlicher-schonauer",
+      "type": "wikipedia",
+      "title": "6.5×54mm Mannlicher–Schönauer",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1365795356",
+      "lang": "en",
+      "revision": "1365795356",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-6-5x54-msch",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 6,5 x 54 M.-Sch.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page22.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

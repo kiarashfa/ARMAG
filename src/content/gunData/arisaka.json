@@ -1,0 +1,156 @@
+{
+  "id": "arisaka",
+  "name": "Arisaka",
+  "kind": "model",
+  "nativeName": "有坂銃",
+  "wikidataId": "Q3220296",
+  "makerRef": "koishikawa-arsenal",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Arisaka-jū",
+      "kind": "native"
+    },
+    {
+      "name": "Type 38 rifle",
+      "kind": "military"
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "japan",
+  "producedIn": [
+    "japan"
+  ],
+  "fireModes": [],
+  "feedSystem": [
+    "fixed-box",
+    "stripper"
+  ],
+  "roles": [
+    "service-rifle"
+  ],
+  "introduced": 1897,
+  "productionYears": {
+    "start": 1897,
+    "end": 1945
+  },
+  "massEmpty": {
+    "value": 4.19,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox for the Type 38 rifle, uncited there. No arm-mass source states whether a magazine is included."
+  },
+  "length": {
+    "value": 1275,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox for the Type 38 rifle, uncited there. Full-length rifle configuration; the Type 38 carbine measured 966 mm."
+  },
+  "barrelLength": {
+    "value": 797,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox for the Type 38 rifle, uncited there. Full-length rifle configuration; the Type 38 carbine measured 487 mm."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "6-5x50mmsr-arisaka",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "verified",
+        "source": "si-arisaka-type38",
+        "sourceUrl": "https://n2t.net/ark:/65665/ng49ca746a2-1bc5-704b-e053-15f76fa0b4fa",
+        "sourceNote": "Stated for the Type 38 rifle: a non-detachable staggered-row box magazine loaded from a five-round stripper clip."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/arisaka/hero.webp",
+      "alt": "Four Arisaka rifles racked upright behind glass, wood stocks and long barrels visible",
+      "caption": "Arisaka rifles of several generations on display at the Military Museum of the Chinese People's Revolution, Beijing.",
+      "width": 1328,
+      "height": 1600,
+      "credit": {
+        "author": "Gary Todd",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ArisakaDisplay.jpg",
+        "title": "File:ArisakaDisplay.jpg",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "src": "images/guns/arisaka/specimen.webp",
+      "alt": "A Japanese Type 38 rifle with bayonet fixed, photographed against a plain ground",
+      "caption": "A Type 38 rifle with its bayonet fixed, the receiver's chrysanthemum stamp partially ground off. National Museum of American History.",
+      "width": 640,
+      "height": 514,
+      "credit": {
+        "author": "NMAH",
+        "sourceUrl": "https://n2t.net/ark:/65665/ng49ca746a2-1bc5-704b-e053-15f76fa0b4fa",
+        "title": "Japanese Arisaka Rifle with Bayonet",
+        "licenseType": "cc0",
+        "licenseNote": "Smithsonian Open Access, released CC0 by the NMAH. Museum identifier: AF.59478M; 59478M; 214893."
+      }
+    },
+    {
+      "src": "images/guns/arisaka/action-detail.webp",
+      "alt": "Close-up of an Arisaka bolt-action rifle's turned-down bolt handle and receiver",
+      "caption": "The turn-bolt action of a Type 38 rifle, showing the bolt handle and receiver markings.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Ca.garcia.s",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arisaka_Type_38_rifle_action.JPG",
+        "title": "File:Arisaka Type 38 rifle action.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-arisaka",
+      "type": "wikipedia",
+      "title": "Arisaka",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1369456234",
+      "lang": "en",
+      "revision": "1369456234",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "wp-type-38-rifle",
+      "type": "wikipedia",
+      "title": "Type 38 rifle",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1376325323",
+      "lang": "en",
+      "revision": "1376325323",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "si-arisaka-type38",
+      "type": "web",
+      "title": "Japanese Arisaka Rifle with Bayonet",
+      "publisher": "Smithsonian National Museum of American History",
+      "url": "https://n2t.net/ark:/65665/ng49ca746a2-1bc5-704b-e053-15f76fa0b4fa",
+      "lang": "en",
+      "accessed": "2026-09-24",
+      "license": "CC0"
+    }
+  ]
+}

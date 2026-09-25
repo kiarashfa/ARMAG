@@ -1,0 +1,118 @@
+{
+  "id": "300-whisper",
+  "name": ".300 Whisper",
+  "wikidataId": "Q4545250",
+  "aliases": [
+    {
+      "name": ".300-221",
+      "kind": "commercial",
+      "note": "Alternative name reflecting its .221 Fireball parent case."
+    }
+  ],
+  "introduced": 1990,
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "standard": "cip",
+  "caseLength": {
+    "value": 34.9,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, citing C.I.P. specifications. C.I.P. has since withdrawn its separate .300 Whisper sheet, so no reachable copy of the standard was found to verify it against."
+  },
+  "overallLength": {
+    "value": 57,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, citing C.I.P. specifications."
+  },
+  "bulletDiameter": {
+    "value": 7.84,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, citing C.I.P. specifications."
+  },
+  "neckDiameter": {
+    "value": 8.46,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, citing C.I.P. specifications."
+  },
+  "baseDiameter": {
+    "value": 9.54,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, citing C.I.P. specifications."
+  },
+  "rimDiameter": {
+    "value": 9.6,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia infobox, citing C.I.P. specifications."
+  },
+  "maxPressure": {
+    "value": 370,
+    "unit": "MPa",
+    "status": "estimated",
+    "sourceNote": "3700 bar, Wikipedia infobox, citing C.I.P. specifications."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "220gr-jhp",
+      "name": "220 gr JHP",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 14.26,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "220 gr bullet, COR-BON Ammunition, via the Wikipedia infobox. The manufacturer page is no longer reachable to verify directly."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 406.4,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "16 in test barrel, COR-BON Ammunition, via the Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 317,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "1040 ft/s, COR-BON Ammunition, via the Wikipedia infobox. The manufacturer page is no longer reachable to verify directly, so this figure is not recorded as verified despite its clickable but dead-linked origin."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/300-whisper/hero.webp",
+      "alt": "A row of nine rifle and pistol cartridges of increasing size standing upright, labeled by caliber, including .300/.221 (.300 Whisper) near the middle",
+      "caption": "Cartridges left to right: .22 LR, .40 S&W, .45 ACP, .50 AE, .300/.221 (.300 Whisper), .223 Remington, .308 Winchester, .30-06 Springfield, .50 BMG.",
+      "width": 640,
+      "height": 480,
+      "credit": {
+        "author": "The300WhisperGuy at English Wikipedia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:300-221.jpg",
+        "title": "File:300-221.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-300-whisper",
+      "type": "wikipedia",
+      "title": ".300 Whisper",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1366730534",
+      "lang": "en",
+      "revision": "1366730534",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

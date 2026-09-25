@@ -1,0 +1,23 @@
+{
+  "id": "anciens-etablissements-pieper",
+  "name": "Anciens Etablissements Pieper",
+  "wikidataId": "Q4752791",
+  "country": "belgium",
+  "founded": 1884,
+  "dissolved": 1950,
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-anciens-etablissements-pieper",
+      "type": "wikipedia",
+      "title": "Anciens Etablissements Pieper",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1333857732",
+      "lang": "en",
+      "revision": "1333857732",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

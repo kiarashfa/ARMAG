@@ -1,0 +1,138 @@
+{
+  "id": "44-henry",
+  "name": ".44 Henry",
+  "wikidataId": "Q158781",
+  "aliases": [
+    {
+      "name": ".44 Henry Flat",
+      "kind": "commercial"
+    },
+    {
+      "name": ".44 Rimfire",
+      "kind": "nickname"
+    },
+    {
+      "name": ".44 Long Rimfire",
+      "kind": "nickname"
+    },
+    {
+      "name": "11x23mmRF",
+      "kind": "metric",
+      "note": "European designation."
+    }
+  ],
+  "designedBy": "Benjamin Tyler Henry",
+  "introduced": 1860,
+  "standard": "none",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 11.33,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.446 in)."
+  },
+  "neckDiameter": {
+    "value": 11.02,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.434 in). A heeled bullet seated over a straight case rather than a true bottleneck neck."
+  },
+  "baseDiameter": {
+    "value": 11.2,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.441 in)."
+  },
+  "rimDiameter": {
+    "value": 13.16,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.518 in)."
+  },
+  "caseLength": {
+    "value": 22.9,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.903 in)."
+  },
+  "overallLength": {
+    "value": 34.2,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (1.345 in)."
+  },
+  "loads": [
+    {
+      "id": "200gr-lead",
+      "name": "200 gr lead",
+      "bulletType": "lead",
+      "bulletMass": {
+        "value": 12.96,
+        "unit": "g",
+        "status": "verified",
+        "source": "nra-henry-rifle",
+        "sourceUrl": "https://www.americanrifleman.org/content/this-old-gun-model-1860-henry-rifle/",
+        "sourceNote": "200 gr solid lead heeled bullet, as published by American Rifleman."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/44-henry/hero.webp",
+      "alt": "A copper rimfire cartridge with a rounded lead bullet, beside its own headstamped base",
+      "caption": "A .44 Henry Flat cartridge and its rimfire base.",
+      "width": 1006,
+      "height": 1040,
+      "credit": {
+        "author": "Jim Miles",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.44_Henry_Flat.jpg",
+        "title": "File:.44 Henry Flat.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/44-henry/rifle-loading.webp",
+      "alt": "A Henry rifle's open tubular magazine beside loose .44 Henry cartridges and a .44-40 round for comparison",
+      "caption": "A Model 1860 Henry rifle's magazine open for loading, with .44 Henry cartridges beside a .44-40 round for comparison.",
+      "width": 1200,
+      "height": 932,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Henry_Rifle_Loading_pos.JPG",
+        "title": "File:Henry Rifle Loading pos.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-44-henry",
+      "type": "wikipedia",
+      "title": ".44 Henry",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1356737768",
+      "lang": "en",
+      "revision": "1356737768",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "nra-henry-rifle",
+      "type": "periodical",
+      "title": "This Old Gun: Model 1860 Henry Rifle",
+      "author": "Rick Hacker",
+      "publisher": "American Rifleman / National Rifle Association of America",
+      "url": "https://www.americanrifleman.org/content/this-old-gun-model-1860-henry-rifle/",
+      "year": 2021,
+      "accessed": "2026-09-24"
+    }
+  ]
+}

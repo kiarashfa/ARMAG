@@ -1,0 +1,122 @@
+{
+  "id": "9x53mmr",
+  "name": "9×53mmR",
+  "wikidataId": "Q4032814",
+  "aliases": [],
+  "designedBy": "M. N. Blum",
+  "introduced": 1955,
+  "caseType": "rimmed",
+  "caseShape": "bottleneck",
+  "standard": "cip",
+  "caseLength": {
+    "value": 53,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x53r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page47.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 67,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x53r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page47.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 9.27,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x53r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page47.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 9.86,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x53r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page47.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 12.42,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x53r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page47.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 14.48,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9x53r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page47.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 340,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-9x53r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page47.pdf",
+    "sourceNote": "Pmax 3400 bar, C.I.P. method. Wikipedia's infobox cites a Russian source (lveplant.ru) giving a substantially lower 254.8 MPa; this page follows the C.I.P. standards-body figure."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "15g-lve",
+      "name": "15 g LVE",
+      "bulletType": "LVE",
+      "bulletMass": {
+        "value": 15,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "Wikipedia infobox, citing a Russian ammunition-industry source (lveplant.ru). No test-barrel length is stated for the load's published velocity, so velocity is not recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/9x53mmr/hero.webp",
+      "alt": "A museum display card showing three labeled rifle cartridges standing upright: 9x53mmR, 7.62x54mmR and 8.2x66mm, with descriptive text in Russian",
+      "caption": "A museum display comparing 9×53mmR with the 7.62×54mmR it was derived from and an unrelated 8.2×66mm hunting cartridge.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Msgevans00",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:9_x_53_mm_R,_7,623_x_54_mm_R,_8.2_x_66_mm_cartridges.jpg",
+        "title": "File:9 x 53 mm R, 7,623 x 54 mm R, 8.2 x 66 mm cartridges.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-9-53mmr",
+      "type": "wikipedia",
+      "title": "9×53mmR",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371908744",
+      "lang": "en",
+      "revision": "1371908744",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-9x53r",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 9 x 53 R",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page47.pdf",
+      "revision": "1999-03-23",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

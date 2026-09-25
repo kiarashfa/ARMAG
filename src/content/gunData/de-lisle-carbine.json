@@ -1,0 +1,118 @@
+{
+  "id": "de-lisle-carbine",
+  "name": "De Lisle carbine",
+  "kind": "model",
+  "wikidataId": "Q580680",
+  "makerRef": "sterling-armaments",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "De Lisle commando carbine",
+      "kind": "military"
+    }
+  ],
+  "lineage": {
+    "derivedFrom": "lee-enfield"
+  },
+  "type": "carbine",
+  "action": "bolt",
+  "operatingSystem": "manual",
+  "designedIn": "united-kingdom",
+  "producedIn": [
+    "united-kingdom"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [],
+  "introduced": 1943,
+  "productionYears": {
+    "start": 1942,
+    "end": 1945
+  },
+  "massEmpty": {
+    "value": 3.74,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "From Philip Peterson, Standard Catalog of Military Firearms (2011), p. 220 — a book, so recorded as estimated rather than verified per this site's sourcing rule. Given unloaded."
+  },
+  "length": {
+    "value": 902,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From David Rome's 1984 history of the carbine (p. 28), cited on Wikipedia without a clickable link; a book, so recorded as estimated."
+  },
+  "barrelLength": {
+    "value": 210,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From Philip Peterson, Standard Catalog of Military Firearms (2011) — a book, so recorded as estimated rather than verified."
+  },
+  "effectiveRange": {
+    "value": 185,
+    "unit": "m",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (200 yd)."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": 7,
+        "unit": "",
+        "status": "verified",
+        "source": "sofrep-de-lisle",
+        "sourceUrl": "https://web.archive.org/web/20191021011937/https://sofrep.com/specialoperations/de-lisle-carbine-forgotten-reaper/",
+        "sourceNote": "Standard modified M1911-pattern magazine held 7 rounds; an 11-round magazine was also fielded."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/de-lisle-carbine/hero.webp",
+      "alt": "A De Lisle carbine with wooden Lee-Enfield-style stock and a thick cylindrical suppressor housing running most of the barrel's length",
+      "caption": "A De Lisle carbine, showing the integral suppressor housing that makes up more than half its overall length.",
+      "width": 1600,
+      "height": 634,
+      "credit": {
+        "author": "Atirador",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:De_Lisle_Rifle.jpg",
+        "title": "File:De Lisle Rifle.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-de-lisle-carbine",
+      "type": "wikipedia",
+      "title": "De Lisle carbine",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1361696572",
+      "lang": "en",
+      "revision": "1361696572",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "sofrep-de-lisle",
+      "type": "web",
+      "title": "The de Lisle Carbine: Forgotten Reaper",
+      "publisher": "SOFREP",
+      "url": "https://web.archive.org/web/20191021011937/https://sofrep.com/specialoperations/de-lisle-carbine-forgotten-reaper/",
+      "lang": "en",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

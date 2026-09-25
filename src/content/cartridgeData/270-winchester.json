@@ -1,0 +1,207 @@
+{
+  "id": "270-winchester",
+  "name": ".270 Winchester",
+  "wikidataId": "Q2611572",
+  "aliases": [
+    {
+      "name": "6.8×64mm",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Winchester",
+  "introduced": 1925,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page99.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "neckDiameter": {
+    "value": 7.82,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page99.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page99.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page99.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "caseLength": {
+    "value": 64.52,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page99.pdf",
+    "sourceNote": "Dimension L3."
+  },
+  "overallLength": {
+    "value": 84.84,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page99.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "maxPressure": {
+    "value": 430,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-270-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page99.pdf",
+    "sourceNote": "Pmax 4300 bar, C.I.P. method. SAAMI rates the same chambering at 65,000 psi by its own method, a different ceiling from a different pressure-measurement convention."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornady-130gr-sst-superformance",
+      "name": "130 gr SST Superformance",
+      "manufacturer": "Hornady",
+      "bulletType": "SST",
+      "bulletMass": {
+        "value": 8.424,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-270win-130sst",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/270-win-130-gr-sst-superformance",
+        "sourceNote": "130 gr as published on the manufacturer's own current product page."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 610,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-270win-130sst",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/270-win-130-gr-sst-superformance",
+            "sourceNote": "24-inch test barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 975.4,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-270win-130sst",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/270-win-130-gr-sst-superformance",
+            "sourceNote": "3,200 ft/s as published on the manufacturer's own current product page."
+          }
+        }
+      ]
+    },
+    {
+      "id": "90gr-hp",
+      "name": "90 gr HP",
+      "bulletType": "HP",
+      "bulletMass": {
+        "value": 5.832,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. No test barrel length is stated for this ballistics table, so no velocity is recorded for it."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "140gr-sp",
+      "name": "140 gr SP",
+      "bulletType": "SP",
+      "bulletMass": {
+        "value": 9.072,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. No test barrel length is stated for this ballistics table, so no velocity is recorded for it."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "150gr-sp",
+      "name": "150 gr SP",
+      "bulletType": "SP",
+      "bulletMass": {
+        "value": 9.72,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. No test barrel length is stated for this ballistics table, so no velocity is recorded for it."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/270-winchester/hero.webp",
+      "alt": "A single brass bottleneck rifle cartridge with a pointed copper jacketed bullet, standing beside its own base cap",
+      "caption": "A .270 Winchester cartridge loaded with a 130-grain bullet.",
+      "width": 636,
+      "height": 594,
+      "credit": {
+        "author": "Ryan D. Larson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:270_Winchester.JPG",
+        "title": "File:270 Winchester.JPG",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/270-winchester/comparison-wsm.webp",
+      "alt": "Two brass bottleneck rifle cartridges without bullets, standing side by side, the left one visibly shorter and fatter",
+      "caption": "A .270 WSM case (left) beside a .270 Winchester case (right) — the same bullet diameter on two different case designs.",
+      "width": 340,
+      "height": 716,
+      "credit": {
+        "author": "AliveFreeHappy",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:270_WSM_and_270_Win.jpg",
+        "title": "File:270 WSM and 270 Win.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-270-winchester",
+      "type": "wikipedia",
+      "title": ".270 Winchester",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1375386776",
+      "lang": "en",
+      "revision": "1375386776",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-270-win",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 270 Win.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page99.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "hornady-270win-130sst",
+      "type": "manufacturer-spec",
+      "title": "270 Win 130 gr SST Superformance",
+      "publisher": "Hornady Manufacturing, Inc.",
+      "url": "https://www.hornady.com/ammunition/rifle/270-win-130-gr-sst-superformance",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

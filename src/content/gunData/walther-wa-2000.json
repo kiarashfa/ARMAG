@@ -1,0 +1,143 @@
+{
+  "id": "walther-wa-2000",
+  "name": "Walther WA 2000",
+  "kind": "model",
+  "wikidataId": "Q42257",
+  "makerRef": "carl-walther",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "designedIn": "germany",
+  "producedIn": [
+    "germany"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "sniper",
+    "law-enforcement"
+  ],
+  "introduced": 1981,
+  "productionYears": {
+    "start": 1978,
+    "end": 1988
+  },
+  "massEmpty": {
+    "value": 6.95,
+    "unit": "kg",
+    "status": "verified",
+    "source": "walther-wa2000-manual",
+    "sourceUrl": "https://web.archive.org/web/20040617000022/http://www.waltherusa.net/datatabs/wa2000_uebersicht.pdf",
+    "sourceNote": "Unloaded, without scope, as published in Walther USA's own owner's manual."
+  },
+  "length": {
+    "value": 905,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 650,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "triggerPull": {
+    "value": 12.7,
+    "unit": "N",
+    "status": "estimated",
+    "source": "walther-wa2000-manual",
+    "sourceUrl": "https://web.archive.org/web/20040617000022/http://www.waltherusa.net/datatabs/wa2000_uebersicht.pdf",
+    "sourceNote": "Midpoint of a published 1.2–1.4 kg range, from Walther USA's own owner's manual."
+  },
+  "effectiveRange": {
+    "value": 700,
+    "unit": "m",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "300-winchester-magnum",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there: a 5-round box magazine for .300 Winchester Magnum, in place of the 6-round magazine used for the other chamberings."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "7-62x51mm-nato",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "verified",
+        "source": "walther-wa2000-manual",
+        "sourceUrl": "https://web.archive.org/web/20040617000022/http://www.waltherusa.net/datatabs/wa2000_uebersicht.pdf",
+        "sourceNote": "6-round single-stack box magazine, as published in Walther USA's own owner's manual."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "7-5x55mm-swiss",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there, matching the 6-round magazine stated for 7.62×51mm NATO."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/walther-wa-2000/hero.webp",
+      "alt": "A bullpup sniper rifle with a fluted barrel and a telescopic sight, displayed in a museum case",
+      "caption": "A Walther WA 2000 on display at the Wehrtechnische Studiensammlung, Koblenz, Germany.",
+      "width": 1600,
+      "height": 756,
+      "credit": {
+        "author": "Atirador",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Walther_WA_2000.JPG",
+        "title": "File:Walther WA 2000.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-walther-wa-2000",
+      "type": "wikipedia",
+      "title": "Walther WA 2000",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359036858",
+      "lang": "en",
+      "revision": "1359036858",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "walther-wa2000-manual",
+      "type": "manufacturer-spec",
+      "title": "WA 2000 Owner's Manual",
+      "publisher": "Walther USA",
+      "url": "https://web.archive.org/web/20040617000022/http://www.waltherusa.net/datatabs/wa2000_uebersicht.pdf",
+      "year": 2004,
+      "accessed": "2026-09-24"
+    }
+  ]
+}

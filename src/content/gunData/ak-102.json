@@ -1,0 +1,116 @@
+{
+  "id": "ak-102",
+  "name": "AK-102",
+  "kind": "model",
+  "wikidataId": "Q4652127",
+  "makerRef": "kalashnikov-concern",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "russia",
+  "producedIn": ["russia"],
+  "introduced": 1994,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["assault-rifle", "personal-defence"],
+  "massEmpty": {
+    "value": 3,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-ak-102",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351511677",
+    "sourceNote": "Without magazine, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 824,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-102",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351511677",
+    "sourceNote": "Stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 586,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-102",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351511677",
+    "sourceNote": "Stock folded, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 314,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-102",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351511677",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 600,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-ak-102",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351511677",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 500,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-ak-102",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351511677",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-ak-102",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1351511677",
+        "sourceNote": "30-round detachable box magazine, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/ak-102/hero.webp",
+      "alt": "A black AK-102 carbine with a side-folding stock, a vertical foregrip and a curved magazine, displayed hanging on a wire panel at an arms exhibition",
+      "caption": "An AK-102 carbine on exhibition, fitted with a vertical foregrip.",
+      "width": 1600,
+      "height": 1067,
+      "credit": {
+        "author": "Mike1979 Russia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AK-102_assault_rifle_at_Engineering_Technologies_2012.jpg",
+        "title": "File:AK-102 assault rifle at Engineering Technologies 2012.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-ak-102",
+      "type": "wikipedia",
+      "title": "AK-102",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1351511677",
+      "lang": "en",
+      "revision": "1351511677",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

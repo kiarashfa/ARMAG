@@ -1,0 +1,192 @@
+{
+  "id": "fb-glauberyt",
+  "name": "FB Glauberyt",
+  "kind": "model",
+  "wikidataId": "Q2618239",
+  "makerRef": "fb-lucznik-radom",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Pistolet maszynowy wz. 1984", "kind": "military" },
+    { "name": "PM-84", "kind": "military" }
+  ],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "poland",
+  "producedIn": ["poland"],
+  "introduced": 1984,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence", "law-enforcement"],
+  "massEmpty": {
+    "value": 1.84,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-fb-glauberyt",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+    "sourceNote": "PM-84, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 560,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-fb-glauberyt",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+    "sourceNote": "PM-84, stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 354,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-fb-glauberyt",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+    "sourceNote": "PM-84, stock collapsed, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 165,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-fb-glauberyt",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+    "sourceNote": "PM-84, from the infobox, uncited there."
+  },
+  "width": {
+    "value": 51,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-fb-glauberyt",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+    "sourceNote": "PM-84, from the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 600,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-fb-glauberyt",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+    "sourceNote": "PM-84, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x18mm-makarov",
+      "capacity": {
+        "value": 25,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-fb-glauberyt",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+        "sourceNote": "PM-84, published as 15- or 25-round detachable box magazines, from the infobox, uncited there; 25 rounds recorded here as the larger of the two published capacities."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "pm-84p",
+      "name": "PM-84P",
+      "summary": "A 9x19mm Parabellum chambering of the Glauberyt, for markets and customers using NATO-standard pistol ammunition rather than 9x18mm Makarov.",
+      "overrides": {
+        "chamberings": [
+          {
+            "cartridgeRef": "9x19mm-parabellum",
+            "capacity": {
+              "value": 25,
+              "unit": "",
+              "status": "estimated",
+              "source": "wp-fb-glauberyt",
+              "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+              "sourceNote": "From the infobox, uncited there."
+            },
+            "primary": true
+          }
+        ],
+        "massEmpty": {
+          "value": 2.17,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-fb-glauberyt",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+          "sourceNote": "From the infobox, uncited there."
+        },
+        "length": {
+          "value": 575,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-fb-glauberyt",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+          "sourceNote": "Stock extended, from the infobox, uncited there."
+        },
+        "lengthFolded": {
+          "value": 375,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-fb-glauberyt",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+          "sourceNote": "Stock collapsed, from the infobox, uncited there."
+        },
+        "barrelLength": {
+          "value": 185,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-fb-glauberyt",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+          "sourceNote": "From the infobox, uncited there."
+        },
+        "cyclicRate": {
+          "value": 640,
+          "unit": "rpm",
+          "status": "estimated",
+          "source": "wp-fb-glauberyt",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+          "sourceNote": "From the infobox, uncited there."
+        }
+      }
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/fb-glauberyt/hero.webp",
+      "alt": "A dark, boxy submachine gun with a folding metal stock and a straight detachable magazine, displayed on a red cloth beside its holster and additional magazines",
+      "caption": "A PM-84 Glauberyt submachine gun on display at a Polish police headquarters open day.",
+      "width": 1600,
+      "height": 900,
+      "credit": {
+        "author": "WrS.tm.pl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:20250517_224019_Submachine_gun_PM-84_Glauberyt._Voivodeship_Police_Headquarters_in_Łódź,_Poland.jpg",
+        "title": "File:20250517 224019 Submachine gun PM-84 Glauberyt. Voivodeship Police Headquarters in Łódź, Poland.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/fb-glauberyt/field-strip.webp",
+      "alt": "A labeled diagram showing a PM-84 submachine gun field-stripped into its receiver, bolt, barrel and two magazines",
+      "caption": "A PM-84 Glauberyt field-stripped into its major components.",
+      "width": 1000,
+      "height": 693,
+      "credit": {
+        "author": "Aleksander Rawski",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PM-84_NTW_6_93.jpg",
+        "title": "File:PM-84 NTW 6 93.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-fb-glauberyt",
+      "type": "wikipedia",
+      "title": "FB Glauberyt",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1345130460",
+      "lang": "en",
+      "revision": "1345130460",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

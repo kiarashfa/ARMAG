@@ -1,0 +1,139 @@
+{
+  "id": "united-defense-m42",
+  "name": "United Defense M42",
+  "kind": "model",
+  "wikidataId": "Q2031803",
+  "makerRef": "united-defense-supply-corp",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Marlin",
+      "kind": "nickname",
+      "note": "After Marlin Firearms, the company that actually manufactured it under contract."
+    },
+    {
+      "name": "UD M42",
+      "kind": "commercial"
+    }
+  ],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "united-states",
+  "producedIn": [
+    "united-states"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence"
+  ],
+  "introduced": 1942,
+  "productionYears": {
+    "start": 1942,
+    "end": 1943
+  },
+  "massEmpty": {
+    "value": 4.54,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (10 lb)."
+  },
+  "length": {
+    "value": 820,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (32.3 in)."
+  },
+  "barrelLength": {
+    "value": 279,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (11 in)."
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "sourceNote": "Wikipedia's article body states a single figure of 700 rounds/min, uncited; the same article's infobox instead gives an uncited range of 700 to 1000 rounds/min. Neither is a clickable primary source."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From Wikipedia's article body, uncited there: a 20-round magazine designed by John E. Owsley; two were often welded face-to-face for a fast reload. The infobox separately states a 25-round figure, which the body text attributes instead to the unproduced .45 ACP prototype."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/united-defense-m42/hero.webp",
+      "alt": "A United Defense M42 submachine gun with wooden stock and a straight box magazine, photographed against a plain ground",
+      "caption": "A United Defense M42 submachine gun.",
+      "width": 1600,
+      "height": 555,
+      "credit": {
+        "author": "Atirador",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:United_Defence_M42.jpg",
+        "title": "File:United Defence M42.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/united-defense-m42/kachin-scouts.webp",
+      "alt": "Two young Kachin scouts in wartime Burma, one holding an M42 submachine gun",
+      "caption": "Ethnic Kachin scouts serving alongside Merrill's Marauders in Burma, one armed with a UD-42.",
+      "width": 580,
+      "height": 800,
+      "credit": {
+        "author": "US Army",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ethnic_Kachin_Scouts_with_Black_Powder_Rifle_and_UD-42.jpg",
+        "title": "File:Ethnic Kachin Scouts with Black Powder Rifle and UD-42.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/united-defense-m42/kabul-2005.webp",
+      "alt": "A man holding an M42 submachine gun beside a rack of older bolt-action rifles",
+      "caption": "BBC cameraman Peter Jouvenal inspecting a United Defense M42 in Kabul, Afghanistan, 2005 — evidence of the type's long circulation well beyond its original wartime issue.",
+      "width": 803,
+      "height": 1200,
+      "credit": {
+        "author": "ArminWenger",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PeterJouvenalBBCcamerman.JPG",
+        "title": "File:PeterJouvenalBBCcamerman.JPG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-united-defense-m42",
+      "type": "wikipedia",
+      "title": "United Defense M42",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367483244",
+      "lang": "en",
+      "revision": "1367483244",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

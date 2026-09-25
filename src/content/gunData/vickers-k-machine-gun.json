@@ -1,0 +1,128 @@
+{
+  "id": "vickers-k-machine-gun",
+  "name": "Vickers K machine gun",
+  "kind": "model",
+  "wikidataId": "Q749770",
+  "makerRef": "vickers-armstrongs",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Vickers G.O.", "kind": "military" }
+  ],
+  "lineage": {},
+  "type": "machine-gun",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "united-kingdom",
+  "producedIn": ["united-kingdom"],
+  "introduced": 1935,
+  "fireModes": ["automatic"],
+  "feedSystem": ["drum"],
+  "roles": ["general-purpose"],
+  "massEmpty": {
+    "value": 13.4,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-vickers-k-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1318251627",
+    "sourceNote": "From the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 939.8,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vickers-k-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1318251627",
+    "sourceNote": "Converted from a published 37 in figure, Wikipedia infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 529,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vickers-k-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1318251627",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 1075,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-vickers-k-machine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1318251627",
+    "sourceNote": "Midpoint of a published, adjustable 950-1200 rpm range, Wikipedia infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "303-british",
+      "capacity": {
+        "value": 100,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-vickers-k-machine-gun",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1318251627",
+        "sourceNote": "Published as a 60- or 100-round pan magazine, Wikipedia infobox, uncited there; 100 rounds recorded here as the larger of the two published capacities."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/vickers-k-machine-gun/hero.webp",
+      "alt": "A black machine gun with a distinctive perforated barrel jacket, a spade grip and a large pan-shaped magazine on top, mounted on a museum stand",
+      "caption": "A Vickers K machine gun on display, showing its perforated barrel jacket and pan magazine.",
+      "width": 1600,
+      "height": 742,
+      "credit": {
+        "author": "Bukvoed",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vickers-K-machine-gun-batey-haosef-1.jpg",
+        "title": "File:Vickers-K-machine-gun-batey-haosef-1.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    },
+    {
+      "src": "images/guns/vickers-k-machine-gun/lrdg-truck.webp",
+      "alt": "A soldier sits behind a Vickers K machine gun mounted on a truck, with a second gun visible mounted beside him, in a desert setting",
+      "caption": "A Long Range Desert Group patrol member with a Vickers K machine gun mounted on a Chevrolet truck, May 1942, where the gun's light weight and sand-resistant action suited vehicle-mounted use.",
+      "width": 797,
+      "height": 800,
+      "credit": {
+        "author": "No 1 Army Film & Photographic Unit, Graham (Lt)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_member_of_a_Long_Range_Desert_Group_(LRDG)_patrol_poses_with_a_Vickers_'K'_Gas-operated_machine_gun_on_a_Chevrolet_30-cwt_truck,_May_1942._E12410.jpg",
+        "title": "File:A member of a Long Range Desert Group (LRDG) patrol poses with a Vickers 'K' Gas-operated machine gun on a Chevrolet 30-cwt truck, May 1942. E12410.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/vickers-k-machine-gun/aircraft-cockpit.webp",
+      "alt": "A gunner in flying gear operates a Vickers K machine gun from the open rear cockpit of a biplane bomber in flight",
+      "caption": "An RAF air gunner manning a Vickers K in the rear cockpit of a Fairey Battle light bomber, the gun's original intended role.",
+      "width": 1200,
+      "height": 911,
+      "credit": {
+        "author": "Devon S A (Mr) (Royal Air Force official photographer)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vickers_K_cockpit.jpg",
+        "title": "File:Vickers K cockpit.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-vickers-k-machine-gun",
+      "type": "wikipedia",
+      "title": "Vickers K machine gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1318251627",
+      "lang": "en",
+      "revision": "1318251627",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

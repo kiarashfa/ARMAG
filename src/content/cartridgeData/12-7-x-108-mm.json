@@ -1,0 +1,173 @@
+{
+  "id": "12-7-x-108-mm",
+  "name": "12.7×108mm",
+  "wikidataId": "Q171615",
+  "aliases": [],
+  "introduced": 1935,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 12.98,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "neckDiameter": {
+    "value": 13.95,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "baseDiameter": {
+    "value": 21.75,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "rimDiameter": {
+    "value": 21.7,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "caseLength": {
+    "value": 108,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "overallLength": {
+    "value": 147.5,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "loads": [
+    {
+      "id": "api-b32",
+      "name": "API B-32",
+      "bulletType": "API B32 57-BZ-542",
+      "bulletMass": {
+        "value": 48.3,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 1000,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 840,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Midpoint of a published 820–860 m/s range, uncited on Wikipedia."
+          }
+        }
+      ]
+    },
+    {
+      "id": "api-hc-bs",
+      "name": "API-HC BS",
+      "bulletType": "API-HC BS",
+      "bulletMass": {
+        "value": 55.4,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 1000,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 820,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sniper-sn-7n34",
+      "name": "Sniper SN 7N34",
+      "bulletType": "Sniper SN 7N34",
+      "bulletMass": {
+        "value": 59.2,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 1000,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 777.5,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Midpoint of a published 770–785 m/s range, uncited on Wikipedia."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/12-7-x-108-mm/hero.webp",
+      "alt": "A large brass bottleneck cartridge with a red-tipped bullet, standing against a dark background",
+      "caption": "A 12.7×108mm cartridge with an incendiary-marked (red) bullet tip.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Chabster",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:12.7x108mm.jpg",
+        "title": "File:12.7x108mm.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/12-7-x-108-mm/dshk-in-service.webp",
+      "alt": "Soldiers firing a vehicle-mounted DShK heavy machine gun during a live-fire exercise",
+      "caption": "Royal Moroccan Armed Forces soldiers firing a DShK heavy machine gun, chambered for this cartridge, during a 2021 live-fire exercise.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Spc. Nathan Smith",
+        "sourceUrl": "https://www.dvidshub.net/image/6686947/african-lion-2021",
+        "title": "African Lion 2021",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Army (U.S. Army Southern European Task Force, Africa), VIRIN 210609-A-XM236-1003. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-12-7x108mm",
+      "type": "wikipedia",
+      "title": "12.7×108mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359636587",
+      "lang": "en",
+      "revision": "1359636587",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

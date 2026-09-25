@@ -1,0 +1,200 @@
+{
+  "id": "600-nitro-express",
+  "name": ".600 Nitro Express",
+  "wikidataId": "Q4027910",
+  "aliases": [],
+  "designedBy": "W. J. Jeffery & Co.",
+  "introduced": 1899,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "tapered",
+  "bulletDiameter": {
+    "value": 15.75,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-600-n-e",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page130.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "neckDiameter": {
+    "value": 16.51,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-600-n-e",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page130.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 17.78,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-600-n-e",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page130.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 20.57,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-600-n-e",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page130.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "caseLength": {
+    "value": 76.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-600-n-e",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page130.pdf",
+    "sourceNote": "Dimension L3."
+  },
+  "overallLength": {
+    "value": 93.98,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-600-n-e",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page130.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "maxPressure": {
+    "value": 245.0,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-600-n-e",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page130.pdf",
+    "sourceNote": "Pmax 2450 bar."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "900gr-standard",
+      "name": "900 gr (standard loading)",
+      "bulletMass": {
+        "value": 58.32,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From Frank Barnes' Cartridges of the World and John Taylor's African Rifles and Cartridges, as cited on Wikipedia (900 gr) — books, so recorded as estimated rather than verified."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 711,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there (28 in test barrel), stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 563.9,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "The lightest of three standard factory loadings for this bullet weight, per Barnes and Taylor as cited on Wikipedia — books, so recorded as estimated rather than verified (1850 ft/s)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "900gr-medium",
+      "name": "900 gr (medium loading)",
+      "bulletMass": {
+        "value": 58.32,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From Frank Barnes' Cartridges of the World and John Taylor's African Rifles and Cartridges, as cited on Wikipedia (900 gr) — books, so recorded as estimated rather than verified."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 711,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there (28 in test barrel), stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 594.4,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "The middle of three standard factory loadings for this bullet weight, per Barnes and Taylor as cited on Wikipedia — books, so recorded as estimated rather than verified (1950 ft/s)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "900gr-heavy",
+      "name": "900 gr (heaviest loading)",
+      "bulletMass": {
+        "value": 58.32,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From Frank Barnes' Cartridges of the World and John Taylor's African Rifles and Cartridges, as cited on Wikipedia (900 gr) — books, so recorded as estimated rather than verified."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 711,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there (28 in test barrel), stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 624.8,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "The heaviest of three standard factory loadings for this bullet weight, per Barnes and Taylor as cited on Wikipedia — books, so recorded as estimated rather than verified (2050 ft/s)."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/600-nitro-express/hero.webp",
+      "alt": "A rendered brass rifle cartridge with a copper-jacketed rounded bullet, next to its base showing the rimmed head",
+      "caption": "A rendered view of a .600 Nitro Express cartridge and its rimmed base.",
+      "width": 300,
+      "height": 450,
+      "credit": {
+        "author": "Undefined",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:600_NE_3D_color_metalic.jpg",
+        "title": "File:600 NE 3D color metalic.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/600-nitro-express/kynoch-catalogue.webp",
+      "alt": "A historic catalogue illustration of a .600 Nitro Express cartridge marked Kynoch",
+      "caption": "A .600 Nitro Express cartridge as illustrated in a W. J. Jeffery & Co. catalogue, early 1910s.",
+      "width": 1200,
+      "height": 272,
+      "credit": {
+        "author": "Unknown author Unknown author",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.600_Nitro_Express,_Kynoch.jpg",
+        "title": "File:.600 Nitro Express, Kynoch.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-600-nitro-express",
+      "type": "wikipedia",
+      "title": ".600 Nitro Express",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1328663939",
+      "lang": "en",
+      "revision": "1328663939",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-600-n-e",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 600 N.E.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page130.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "id": "338-norma-magnum",
+  "name": ".338 Norma Magnum",
+  "wikidataId": "Q4545282",
+  "aliases": [],
+  "designedBy": "Jimmy Sloan and Norma",
+  "introduced": 2009,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 8.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-norma-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page133.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "neckDiameter": {
+    "value": 9.38,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-norma-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page133.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 14.87,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-norma-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page133.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 14.93,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-norma-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page133.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "caseLength": {
+    "value": 63.3,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-norma-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page133.pdf",
+    "sourceNote": "Dimension L3."
+  },
+  "overallLength": {
+    "value": 93.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-338-norma-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page133.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "maxPressure": {
+    "value": 440,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-338-norma-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page133.pdf",
+    "sourceNote": "Pmax 4400 bar."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "black-hills-300gr-smk",
+      "name": "300 gr Sierra MatchKing",
+      "manufacturer": "Black Hills Ammunition",
+      "bulletType": "Sierra MatchKing",
+      "bulletMass": {
+        "value": 19.44,
+        "unit": "g",
+        "status": "verified",
+        "source": "black-hills-338nm",
+        "sourceUrl": "https://www.black-hills.com/shop/new-rifle-ammo/338-norma-magnum/",
+        "sourceNote": "300 gr as published on the manufacturer's own product page."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 610,
+            "unit": "mm",
+            "status": "verified",
+            "source": "black-hills-338nm",
+            "sourceUrl": "https://www.black-hills.com/shop/new-rifle-ammo/338-norma-magnum/",
+            "sourceNote": "24-inch test barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 800.1,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "black-hills-338nm",
+            "sourceUrl": "https://www.black-hills.com/shop/new-rifle-ammo/338-norma-magnum/",
+            "sourceNote": "2,625 ft/s as published on the manufacturer's own product page."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/338-norma-magnum/hero.webp",
+      "alt": "Two similar brass bottleneck rifle cartridges with pointed bullets, standing side by side for comparison",
+      "caption": "A .338 Lapua Magnum cartridge (left) beside a .338 Norma Magnum (right). The Norma case is visibly shorter, built to seat the same heavy bullet at an overall length that fits shorter magazines.",
+      "width": 1196,
+      "height": 1571,
+      "credit": {
+        "author": "SB Pete ( talk )",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.338_Lapua_Magnum_vs_.338_Norma_Magnum.jpg",
+        "title": "File:.338 Lapua Magnum vs .338 Norma Magnum.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-338-norma-magnum",
+      "type": "wikipedia",
+      "title": ".338 Norma Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1358573962",
+      "lang": "en",
+      "revision": "1358573962",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-338-norma-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 338 Norma Mag.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page133.pdf",
+      "revision": "2010-05-26",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "black-hills-338nm",
+      "type": "manufacturer-spec",
+      "title": ".338 Norma Magnum",
+      "publisher": "Black Hills Ammunition",
+      "url": "https://www.black-hills.com/shop/new-rifle-ammo/338-norma-magnum/",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

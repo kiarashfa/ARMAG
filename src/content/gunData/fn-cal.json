@@ -1,0 +1,125 @@
+{
+  "id": "fn-cal",
+  "name": "FN CAL",
+  "kind": "model",
+  "wikidataId": "Q1389350",
+  "makerRef": "fn-herstal",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "belgium",
+  "producedIn": ["belgium"],
+  "introduced": 1966,
+  "productionYears": {
+    "start": 1966,
+    "end": 1975
+  },
+  "fireModes": ["semi", "burst", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["service-rifle", "assault-rifle"],
+  "massEmpty": {
+    "value": 3,
+    "unit": "kg",
+    "status": "verified",
+    "source": "weaponsystems-fn-cal",
+    "sourceUrl": "https://weaponsystems.net/system/179-FN+CAL",
+    "sourceNote": "Empty, as published on Weaponsystems.net."
+  },
+  "length": {
+    "value": 926,
+    "unit": "mm",
+    "status": "verified",
+    "source": "weaponsystems-fn-cal",
+    "sourceUrl": "https://weaponsystems.net/system/179-FN+CAL",
+    "sourceNote": "As published on Weaponsystems.net; Wikipedia's infobox separately gives 980 mm, uncited there."
+  },
+  "barrelLength": {
+    "value": 467,
+    "unit": "mm",
+    "status": "verified",
+    "source": "weaponsystems-fn-cal",
+    "sourceUrl": "https://weaponsystems.net/system/179-FN+CAL",
+    "sourceNote": "As published on Weaponsystems.net, matching the same figure cited to it in Wikipedia's infobox."
+  },
+  "cyclicRate": {
+    "value": 850,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "weaponsystems-fn-cal",
+    "sourceUrl": "https://weaponsystems.net/system/179-FN+CAL",
+    "sourceNote": "As published on Weaponsystems.net."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "weaponsystems-fn-cal",
+        "sourceUrl": "https://weaponsystems.net/system/179-FN+CAL",
+        "sourceNote": "20- or 30-round detachable box magazine, as published on Weaponsystems.net; Wikipedia's infobox separately mentions a 25-round option."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/fn-cal/hero.webp",
+      "alt": "A black rifle with a distinctive rounded carrying handle over the receiver, a ribbed handguard and a straight detachable magazine, shown on a transparent background",
+      "caption": "An FN CAL rifle, showing its carrying handle and gas-operated action.",
+      "width": 1000,
+      "height": 350,
+      "credit": {
+        "author": "https://en.wikipedia.org/wiki/User:Evers",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:FN_CAL_close1-noBG.png",
+        "title": "File:FN CAL close1-noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/fn-cal/demonstration.webp",
+      "alt": "A man in civilian clothes holds an FN CAL rifle at port arms outdoors, demonstrating it to an unseen audience",
+      "caption": "A U.S. Army Foreign Science and Technology Center specialist demonstrates the FN CAL to Special Forces personnel at Fort Bragg.",
+      "width": 639,
+      "height": 432,
+      "credit": {
+        "author": "U.S. Army Foreign Science and Technology Center",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Harold_Johnson_holds_FN_CAL.jpg",
+        "title": "File:Harold Johnson holds FN CAL.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-fn-cal",
+      "type": "wikipedia",
+      "title": "FN CAL",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368853573",
+      "lang": "en",
+      "revision": "1368853573",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "weaponsystems-fn-cal",
+      "type": "web",
+      "title": "FN CAL",
+      "publisher": "Weaponsystems.net",
+      "url": "https://weaponsystems.net/system/179-FN+CAL",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

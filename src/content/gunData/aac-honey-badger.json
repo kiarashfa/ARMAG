@@ -1,0 +1,96 @@
+{
+  "id": "aac-honey-badger",
+  "name": "AAC Honey Badger",
+  "kind": "model",
+  "wikidataId": "Q2164333",
+  "makerRef": "advanced-armament-corporation",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-direct-impingement",
+  "designedIn": "united-states",
+  "producedIn": ["united-states"],
+  "introduced": 2011,
+  "productionYears": {
+    "start": 2011,
+    "end": 2020
+  },
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 2.95,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-aac-honey-badger",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375408578",
+    "sourceNote": "Converted from a published 6.5 lb figure, Wikipedia infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 736.6,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-aac-honey-badger",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375408578",
+    "sourceNote": "Converted from a published 29 in figure, stock extended, with suppressor fitted, Wikipedia infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 609.6,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-aac-honey-badger",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375408578",
+    "sourceNote": "Converted from a published 24 in figure, stock retracted, with suppressor fitted, Wikipedia infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 152.4,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-aac-honey-badger",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375408578",
+    "sourceNote": "Converted from a published 6 in figure, Wikipedia infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 800,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-aac-honey-badger",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375408578",
+    "sourceNote": "Approximate published figure, Wikipedia infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "300-aac-blackout",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-aac-honey-badger",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375408578",
+        "sourceNote": "Published as accepting standard STANAG magazines, from the infobox, uncited there; 30 rounds recorded here as the common full-length STANAG capacity."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-aac-honey-badger",
+      "type": "wikipedia",
+      "title": "AAC Honey Badger",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1375408578",
+      "lang": "en",
+      "revision": "1375408578",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -45,7 +45,7 @@ export interface RecoilInputs {
 }
 
 const LOWER_BOUND_NOTE =
-  'Propellant gas momentum is excluded: ARMAG does not record charge weights (SPEC.md §14). This is therefore a lower bound on the real free recoil, consistent between entries but smaller than a figure that includes the gas term.';
+  'Propellant gas momentum is excluded: ARMAG does not record charge weights. This is therefore a lower bound on the real free recoil, consistent between entries but smaller than a figure that includes the gas term.';
 
 /**
  * Momentum carried out of the muzzle — the quantity the arm must absorb.

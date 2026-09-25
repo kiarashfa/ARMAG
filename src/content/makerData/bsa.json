@@ -1,0 +1,23 @@
+{
+  "id": "bsa",
+  "name": "Birmingham Small Arms Company",
+  "wikidataId": "Q686178",
+  "country": "united-kingdom",
+  "founded": 1861,
+  "dissolved": 1973,
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-bsa",
+      "type": "wikipedia",
+      "title": "Birmingham Small Arms Company",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1374835395",
+      "lang": "en",
+      "revision": "1374835395",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

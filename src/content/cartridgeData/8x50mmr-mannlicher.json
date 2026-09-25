@@ -1,0 +1,168 @@
+{
+  "id": "8x50mmr-mannlicher",
+  "name": "8×50mmR Mannlicher",
+  "wikidataId": "Q3313404",
+  "aliases": [
+    {
+      "name": "M. 90",
+      "kind": "commercial",
+      "note": "Austro-Hungarian model designation."
+    }
+  ],
+  "introduced": 1890,
+  "caseType": "rimmed",
+  "caseShape": "bottleneck",
+  "standard": "cip",
+  "caseLength": {
+    "value": 50.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x50r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page30.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 76,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x50r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page30.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 8.22,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x50r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page30.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 8.9,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x50r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page30.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 12.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x50r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page30.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 14.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8x50r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page30.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 355,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-8x50r",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page30.pdf",
+    "sourceNote": "Pmax 3550 bar, C.I.P. method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "244gr-m90-rn",
+      "name": "244 gr M90 RN",
+      "bulletType": "RN",
+      "bulletMass": {
+        "value": 15.81,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "244 gr M90 ball load, Wikipedia infobox; the infobox carries no further citation for this figure."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 762,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "30 in test barrel, Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 594,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "1950 ft/s, Wikipedia infobox; the infobox carries no further citation for this figure."
+          }
+        }
+      ]
+    },
+    {
+      "id": "244gr-m93-rn",
+      "name": "244 gr M93 RN",
+      "bulletType": "RN",
+      "bulletMass": {
+        "value": 15.81,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "244 gr M93 ball load, Wikipedia infobox; the infobox carries no further citation for this figure."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 762,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "30 in test barrel, Wikipedia infobox."
+          },
+          "velocity": {
+            "value": 620,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "2035 ft/s, Wikipedia infobox; the infobox carries no further citation for this figure."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/8x50mmr-mannlicher/hero.webp",
+      "alt": "Five 8x50mmR Mannlicher cartridges loaded into a metal en-bloc clip",
+      "caption": "Five 8×50mmR cartridges loaded into a Mannlicher-pattern en-bloc clip, the feed device the round was designed around.",
+      "width": 456,
+      "height": 447,
+      "credit": {
+        "author": "SEBAS",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mannlicher_en-bloc_clip.jpg",
+        "title": "File:Mannlicher en-bloc clip.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-8-50mmr-mannlicher",
+      "type": "wikipedia",
+      "title": "8×50mmR Mannlicher",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373296698",
+      "lang": "en",
+      "revision": "1373296698",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-8x50r",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 8 x 50 R",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page30.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

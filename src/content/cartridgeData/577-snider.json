@@ -1,0 +1,113 @@
+{
+  "id": "577-snider",
+  "name": ".577 Snider",
+  "wikidataId": "Q4545401",
+  "aliases": [
+    {
+      "name": "14.7×51mm",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Edward Mounier Boxer",
+  "introduced": 1866,
+  "standard": "none",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 14.48,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.570 in)."
+  },
+  "neckDiameter": {
+    "value": 15.29,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.602 in)."
+  },
+  "baseDiameter": {
+    "value": 16.76,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.660 in)."
+  },
+  "rimDiameter": {
+    "value": 18.97,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (.747 in)."
+  },
+  "caseLength": {
+    "value": 50.8,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (2.0 in)."
+  },
+  "overallLength": {
+    "value": 62.2,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (2.45 in)."
+  },
+  "loads": [
+    {
+      "id": "480gr-lead",
+      "name": "480 gr lead",
+      "bulletType": "lead",
+      "bulletMass": {
+        "value": 31.1,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From Wikipedia's lead sentence, uncited there (480 gr). A separate infobox figure gives 450 gr for a different loading; no source pairs either bullet weight with a stated test barrel length, so no velocity is recorded for this cartridge."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/577-snider/hero.webp",
+      "alt": "A .577 Snider cartridge with a paper-wrapped case and a rounded lead bullet, beside its own base",
+      "caption": "A British .577 Snider Mk VIII cartridge, adopted in 1869, with its paper-covered case body.",
+      "width": 1120,
+      "height": 1600,
+      "credit": {
+        "author": "Jim Miles",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:577_Snider_uk_1869_MkVIII.jpg",
+        "title": "File:577 Snider uk 1869 MkVIII.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/577-snider/drawn-brass-variant.webp",
+      "alt": "A .577 Snider cartridge with a plain drawn brass case, beside its own base",
+      "caption": "A New Zealand-made .577 Snider cartridge with a drawn brass case, circa 1886 — a later construction than the original paper-covered pattern.",
+      "width": 906,
+      "height": 1200,
+      "credit": {
+        "author": "Jim Miles",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:577_Snider_nz_1886_D_type.jpg",
+        "title": "File:577 Snider nz 1886 D type.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-577-snider",
+      "type": "wikipedia",
+      "title": ".577 Snider",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1374588267",
+      "lang": "en",
+      "revision": "1374588267",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

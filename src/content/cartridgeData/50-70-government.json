@@ -1,0 +1,141 @@
+{
+  "id": "50-70-government",
+  "name": ".50-70 Government",
+  "wikidataId": "Q158809",
+  "aliases": [
+    {
+      "name": ".50-70 Musket",
+      "kind": "commercial",
+      "note": "C.I.P.'s alternate name for the same round."
+    }
+  ],
+  "introduced": 1866,
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "standard": "cip",
+  "caseLength": {
+    "value": 45.01,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-50-70",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/50-70-govt-170428-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 57.15,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-50-70",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/50-70-govt-170428-en.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 13.08,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-50-70",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/50-70-govt-170428-en.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "baseDiameter": {
+    "value": 14.48,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-50-70",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/50-70-govt-170428-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 16.92,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-50-70",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/50-70-govt-170428-en.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 210,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-50-70",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/50-70-govt-170428-en.pdf",
+    "sourceNote": "Pmax 2100 bar, C.I.P. method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "425gr-lead-sp",
+      "name": "425 gr Lead SP",
+      "bulletType": "Lead SP",
+      "bulletMass": {
+        "value": 27.54,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "425 gr bullet, from a handloading data page (Accurate Powder), via the Wikipedia infobox. The published velocity on that page is a maximum-handload result tied to a specific powder charge, not a factory-ammunition figure, so it is not recorded."
+      }
+    },
+    {
+      "id": "550gr-lead-fn",
+      "name": "550 gr Lead FN",
+      "bulletType": "Lead FN",
+      "bulletMass": {
+        "value": 35.64,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "550 gr bullet, from the same handloading data page, via the Wikipedia infobox. Velocity not recorded for the same reason."
+      }
+    },
+    {
+      "id": "400gr-sp",
+      "name": "400 gr SP",
+      "bulletType": "SP",
+      "bulletMass": {
+        "value": 25.92,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "400 gr bullet, from the same handloading data page, via the Wikipedia infobox. Velocity not recorded for the same reason."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/50-70-government/hero.webp",
+      "alt": "A single .50-70 Government cartridge with a brass case and a round-nosed lead bullet, lying on graph paper for scale",
+      "caption": "A .50-70 Government cartridge with its round-nosed lead bullet, shown against a measuring grid.",
+      "width": 1340,
+      "height": 876,
+      "credit": {
+        "author": "Kaltduscher at German Wikipedia (Original text: kaltduscher)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:50-70-gov.jpg",
+        "title": "File:50-70-gov.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-50-70-government",
+      "type": "wikipedia",
+      "title": ".50-70 Government",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1358587858",
+      "lang": "en",
+      "revision": "1358587858",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-50-70",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 50-70 Govt.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/50-70-govt-170428-en.pdf",
+      "revision": "2017-05-17",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

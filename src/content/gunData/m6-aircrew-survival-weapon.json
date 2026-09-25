@@ -1,0 +1,114 @@
+{
+  "id": "m6-aircrew-survival-weapon",
+  "name": "M6 aircrew survival weapon",
+  "kind": "model",
+  "wikidataId": "Q6713910",
+  "makerRef": "ithaca-gun-company",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Rifle-Shotgun, Survival, Caliber .22/.410", "kind": "military" }
+  ],
+  "lineage": {},
+  "type": "shotgun",
+  "action": "break",
+  "operatingSystem": "manual",
+  "designedIn": "united-states",
+  "producedIn": ["united-states"],
+  "introduced": 1952,
+  "fireModes": ["single-shot"],
+  "feedSystem": [],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 2.04,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-m6-aircrew-survival-weapon",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359773331",
+    "sourceNote": "Converted from a published 4.5 lb figure, Wikipedia infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 718,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-m6-aircrew-survival-weapon",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359773331",
+    "sourceNote": "Converted from a published 28.27 in figure, Wikipedia infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 381,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-m6-aircrew-survival-weapon",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359773331",
+    "sourceNote": "Converted from a published 15 in figure, Wikipedia infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 355.6,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-m6-aircrew-survival-weapon",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359773331",
+    "sourceNote": "Converted from a published 14 in figure, Wikipedia infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "22-hornet",
+      "capacity": {
+        "value": 1,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-m6-aircrew-survival-weapon",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359773331",
+        "sourceNote": "The upper barrel is a single-shot break-open rifle chamber; no magazine is fitted."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "410-bore",
+      "capacity": {
+        "value": 1,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-m6-aircrew-survival-weapon",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359773331",
+        "sourceNote": "The lower barrel is a single-shot break-open shotgun chamber; no magazine is fitted."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/m6-aircrew-survival-weapon/hero.webp",
+      "alt": "A folding stainless-steel combination gun with two stacked barrels, a skeletonized wire stock, and simple open sights",
+      "caption": "An original USAF M6 survival weapon, with its .22 Hornet rifle barrel over its .410 bore shotgun barrel.",
+      "width": 1600,
+      "height": 518,
+      "credit": {
+        "author": "Curiosandrelics",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:M6_Survival_Rifle.jpg",
+        "title": "File:M6 Survival Rifle.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-m6-aircrew-survival-weapon",
+      "type": "wikipedia",
+      "title": "M6 aircrew survival weapon",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359773331",
+      "lang": "en",
+      "revision": "1359773331",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

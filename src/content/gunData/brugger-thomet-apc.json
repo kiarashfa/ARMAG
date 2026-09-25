@@ -1,0 +1,164 @@
+{
+  "id": "brugger-thomet-apc",
+  "name": "Brügger & Thomet APC9",
+  "kind": "model",
+  "wikidataId": "Q11818651",
+  "makerRef": "brugger-thomet",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "APC9",
+      "kind": "commercial"
+    },
+    {
+      "name": "Advanced Police Carbine",
+      "kind": "commercial"
+    }
+  ],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "switzerland",
+  "producedIn": [
+    "switzerland"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence",
+    "law-enforcement"
+  ],
+  "introduced": 2011,
+  "productionYears": {
+    "start": 2011,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 2.5,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Stated with an empty 30-round magazine and a red dot sight fitted, not a bare-receiver mass."
+  },
+  "length": {
+    "value": 597,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Stock unfolded; folded length is 385 mm."
+  },
+  "lengthFolded": {
+    "value": 385,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 175,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. The standard APC9 barrel; the APC9 K variant uses a 110 mm barrel."
+  },
+  "cyclicRate": {
+    "value": 1080,
+    "unit": "rpm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there and given as a single figure rather than a range."
+  },
+  "effectiveRange": {
+    "value": 100,
+    "unit": "m",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there: the APC9 accepts 15-, 20-, 25- and 30-round B&T MP9-pattern box magazines; 30 is the largest offered."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "40-sw",
+      "capacity": {
+        "value": null,
+        "unit": "",
+        "status": "placeholder"
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "10mm-auto",
+      "capacity": {
+        "value": null,
+        "unit": "",
+        "status": "placeholder"
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": null,
+        "unit": "",
+        "status": "placeholder"
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/brugger-thomet-apc/hero.webp",
+      "alt": "A B&T APC9 K submachine gun with folding stock and short barrel, photographed in profile against a plain ground",
+      "caption": "The APC9 K, a shortened-barrel variant of the APC9, with its stock folded.",
+      "width": 1600,
+      "height": 1067,
+      "credit": {
+        "author": "PEO Soldier",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:B&T_APC_9_K_side_profile.jpg",
+        "title": "File:B&T APC 9 K side profile.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/brugger-thomet-apc/in-service.webp",
+      "alt": "A soldier firing an APC9K submachine gun fitted with a red dot sight on an outdoor range",
+      "caption": "A U.S. Army trainee firing the APC9K, the compact variant selected under the Army's Sub Compact Weapon programme.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Daniel Amburg",
+        "sourceUrl": "https://www.dvidshub.net/image/7777071/fort-dix-range-33-733mp-hhd-train-with-apc9k-small-submachine-gun-may-3rd-2023",
+        "title": "FORT DIX-RANGE 33 733MP HHD Train with the APC9K small submachine gun. May 3rd 2023",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Army (USASA, Fort Dix), VIRIN 230503-A-IE493-059. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-brugger-thomet-apc",
+      "type": "wikipedia",
+      "title": "Brügger & Thomet APC",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373702344",
+      "lang": "en",
+      "revision": "1373702344",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

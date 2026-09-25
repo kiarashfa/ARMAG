@@ -1,0 +1,155 @@
+{
+  "id": "222-remington",
+  "name": ".222 Remington",
+  "wikidataId": "Q2664963",
+  "aliases": [],
+  "designedBy": "Remington",
+  "introduced": 1950,
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "standard": "cip",
+  "caseLength": {
+    "value": 43.18,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-222-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page84.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 54.1,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-222-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page84.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 5.7,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-222-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page84.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 6.43,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-222-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page84.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 9.58,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-222-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page84.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 9.6,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-222-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page84.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 370,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-222-rem",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page84.pdf",
+    "sourceNote": "Pmax 3700 bar, C.I.P. method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "40gr-hp",
+      "name": "40 gr HP",
+      "bulletType": "HP",
+      "bulletMass": {
+        "value": 2.59,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "40 gr bullet, from a handloading data page (Hodgdon), via the Wikipedia infobox. The published velocity on that page is a maximum-handload result tied to a specific powder charge, not a factory-ammunition figure, so it is not recorded."
+      }
+    },
+    {
+      "id": "50gr-sp",
+      "name": "50 gr SP",
+      "bulletType": "SP",
+      "bulletMass": {
+        "value": 3.24,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "50 gr bullet, from the same handloading data page, via the Wikipedia infobox. Velocity not recorded for the same reason."
+      }
+    },
+    {
+      "id": "55gr-sp",
+      "name": "55 gr SP",
+      "bulletType": "SP",
+      "bulletMass": {
+        "value": 3.56,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "55 gr bullet, from the same handloading data page, via the Wikipedia infobox. Velocity not recorded for the same reason."
+      }
+    },
+    {
+      "id": "60gr-vmax",
+      "name": "60 gr V-Max",
+      "bulletType": "V-Max",
+      "bulletMass": {
+        "value": 3.89,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "60 gr bullet, from the same handloading data page, via the Wikipedia infobox. Velocity not recorded for the same reason."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/222-remington/hero.webp",
+      "alt": "Three similar small-bore rifle cartridges of increasing case length standing on graph paper: .222 Remington, .223 Remington and 5.56x45mm NATO",
+      "caption": ".222 Remington (left) next to its two derivatives, .223 Remington and 5.56×45mm NATO (right), for size comparison.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridges_.222_Remington,_.223_Remington_&_5.56x45mm_NATO.jpg",
+        "title": "File:Cartridges .222 Remington, .223 Remington & 5.56x45mm NATO.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-222-remington",
+      "type": "wikipedia",
+      "title": ".222 Remington",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1374344058",
+      "lang": "en",
+      "revision": "1374344058",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-222-rem",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 222 Rem.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page84.pdf",
+      "revision": "2008-09-13",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

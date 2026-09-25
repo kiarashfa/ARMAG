@@ -1,0 +1,90 @@
+{
+  "id": "pindad-pm2",
+  "name": "Pindad PM2",
+  "kind": "model",
+  "wikidataId": "Q7194992",
+  "makerRef": "pindad",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "indonesia",
+  "producedIn": ["indonesia"],
+  "introduced": 2006,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 2.9,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-pindad-pm2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1291270972",
+    "sourceNote": "With empty magazine, from the infobox; no inline citation is given there. The infobox separately gives 3.18 kg with a loaded magazine."
+  },
+  "length": {
+    "value": 625,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pindad-pm2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1291270972",
+    "sourceNote": "Stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 417,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pindad-pm2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1291270972",
+    "sourceNote": "Stock retracted, from the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-pindad-pm2",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1291270972",
+        "sourceNote": "Published as a 20- or 30-round detachable box magazine, from the infobox, uncited there; 30 rounds recorded here as the larger of the two published capacities."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/pindad-pm2/hero.webp",
+      "alt": "A black compact submachine gun with a rail-equipped upper receiver, a folding stock, a pistol grip and a curved magazine, photographed against a plain white background",
+      "caption": "A Pindad PM2-V1 submachine gun, the version with a picatinny top rail and forend.",
+      "width": 900,
+      "height": 563,
+      "credit": {
+        "author": "PT Pindad",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pindad_PM2-V1_SMG.jpg",
+        "title": "File:Pindad PM2-V1 SMG.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-pindad-pm2",
+      "type": "wikipedia",
+      "title": "Pindad PM2",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1291270972",
+      "lang": "en",
+      "revision": "1291270972",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

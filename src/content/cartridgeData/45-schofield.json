@@ -1,0 +1,146 @@
+{
+  "id": "45-schofield",
+  "name": ".45 Schofield",
+  "wikidataId": "Q4545367",
+  "aliases": [
+    {
+      "name": "45 S&W Schofield",
+      "kind": "commercial"
+    },
+    {
+      "name": ".45 Smith & Wesson",
+      "kind": "nickname"
+    },
+    {
+      "name": "11.5×27mmR",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Smith & Wesson",
+  "introduced": 1875,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 11.58,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page82.pdf",
+    "source": "cip-45-s-w-schofield",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "caseLength": {
+    "value": 27.69,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page82.pdf",
+    "source": "cip-45-s-w-schofield"
+  },
+  "overallLength": {
+    "value": 36.32,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page82.pdf",
+    "source": "cip-45-s-w-schofield"
+  },
+  "rimDiameter": {
+    "value": 12.95,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page82.pdf",
+    "source": "cip-45-s-w-schofield",
+    "sourceNote": "Cartridge maximum, dimension R1."
+  },
+  "neckDiameter": {
+    "value": 12.19,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page82.pdf",
+    "source": "cip-45-s-w-schofield"
+  },
+  "baseDiameter": {
+    "value": 12.19,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page82.pdf",
+    "source": "cip-45-s-w-schofield"
+  },
+  "maxPressure": {
+    "value": 100.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page82.pdf",
+    "source": "cip-45-s-w-schofield"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "230gr-lead",
+      "name": "230 gr lead",
+      "bulletType": "lead",
+      "bulletMass": {
+        "value": 14.904,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "230 gr, the factory lead loading in the Wikipedia infobox, which attributes it to Cartridges of the World (a book). No source pairs its velocity with a test barrel, so none is recorded."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/45-schofield/hero.webp",
+      "alt": "Two straight-walled brass revolver cartridges standing side by side on a white ground: on the left a longer one with a jacketed hollow-point bullet, on the right a slightly shorter one with a grey lead bullet.",
+      "caption": "A .45 Schofield (right) beside the longer .45 Colt it was designed to accompany in service.",
+      "width": 768,
+      "height": 789,
+      "credit": {
+        "author": "Harvey Henkelmann",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:45_Schofield.JPG",
+        "title": "File:45 Schofield.JPG",
+        "licenseType": "cc-by",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/45-schofield/army-cartridges.webp",
+      "alt": "A worn paper cartridge box printed \"12 Revolver Ball Cartridges, Calibre .45, Frankford Arsenal\", above three loose lead-bulleted cartridges and a small steel combination tool, each labelled in German.",
+      "caption": "Period United States Army .45 ammunition: a Frankford Arsenal box of revolver ball cartridges, the short round issued for both the Colt and the Schofield, a .45 Colt, a .45-70 rifle cartridge and an 1879 combination tool. Labels are the photographer's, in German.",
+      "width": 1200,
+      "height": 1023,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.45_Cartridges_Tool_1879.JPG",
+        "title": "File:.45 Cartridges Tool 1879.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-45-schofield",
+      "type": "wikipedia",
+      "title": ".45 Schofield",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1360454578",
+      "lang": "en",
+      "revision": "1360454578",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-45-s-w-schofield",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 45 S&W Schofield",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page82.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

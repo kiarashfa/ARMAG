@@ -1,0 +1,150 @@
+{
+  "id": "38-s-w",
+  "name": ".38 S&W",
+  "wikidataId": "Q158764",
+  "aliases": [
+    {
+      "name": ".38 Colt New Police",
+      "kind": "commercial",
+      "note": "Colt's name for the same round when chambered in its own revolvers."
+    }
+  ],
+  "designedBy": "Smith & Wesson",
+  "introduced": 1877,
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "standard": "cip",
+  "caseLength": {
+    "value": 19.69,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-sw",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/38s-w-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 31.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-sw",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/38s-w-en.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 9.17,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-sw",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/38s-w-en.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 9.79,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-sw",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/38s-w-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 9.82,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-sw",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/38s-w-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 11.18,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-sw",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/38s-w-en.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 120,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-38-sw",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/38s-w-en.pdf",
+    "sourceNote": "Pmax 1200 bar, C.I.P. method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "158gr-lswc",
+      "name": "158 gr LSWC",
+      "bulletType": "LSWC",
+      "bulletMass": {
+        "value": 10.24,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "158 gr bullet, Wikipedia infobox. No test-barrel length is stated for the load's published velocity, so velocity is not recorded."
+      }
+    },
+    {
+      "id": "195gr-lrn",
+      "name": "195 gr LRN",
+      "bulletType": "LRN",
+      "bulletMass": {
+        "value": 12.64,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "195 gr bullet, Wikipedia infobox. No test-barrel length is stated, so velocity is not recorded."
+      }
+    },
+    {
+      "id": "200gr-lrn",
+      "name": "200 gr LRN",
+      "bulletType": "LRN",
+      "bulletMass": {
+        "value": 12.96,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "200 gr bullet, Wikipedia infobox. The published velocity for this load does not reproduce its own published energy figure under either ft/s or m/s, so it is not recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/38-s-w/hero.webp",
+      "alt": "A box of .38 Smith & Wesson cartridges with two loose rounds standing beside it, showing rounded lead bullets in brass cases",
+      "caption": "A modern box of .38 S&W ammunition, with two loose cartridges standing beside it.",
+      "width": 1600,
+      "height": 1053,
+      "credit": {
+        "author": "MorganDWright",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.38_Smith_&_Wesson.jpg",
+        "title": "File:.38 Smith & Wesson.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-38-s-w",
+      "type": "wikipedia",
+      "title": ".38 S&W",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1375942971",
+      "lang": "en",
+      "revision": "1375942971",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-38-sw",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 38 S&W",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/38s-w-en.pdf",
+      "revision": "2020-04-21",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

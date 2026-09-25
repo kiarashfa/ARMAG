@@ -1,0 +1,36 @@
+{
+  "id": "zlatoust-machine-building-plant",
+  "name": "Zlatoust Machine-Building Plant",
+  "nativeName": "Златоустовский машиностроительный завод",
+  "wikidataId": "Q4192427",
+  "country": "russia",
+  "founded": 1939,
+  "dissolved": null,
+  "logo": {
+    "src": "images/makers/zlatoust-machine-building-plant/logo.webp",
+    "alt": "A blue gear-shaped emblem containing a flying bird of prey over three stylised mountain peaks",
+    "caption": "The Zlatoust Machine-Building Plant emblem, showing a bird over the Ural mountains within a gear outline.",
+    "width": 304,
+    "height": 328,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Zlatoust_Machine-Building_Plant",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-zlatoust-machine-building-plant",
+      "type": "wikipedia",
+      "title": "Zlatoust Machine-Building Plant",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1361343754",
+      "lang": "en",
+      "revision": "1361343754",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

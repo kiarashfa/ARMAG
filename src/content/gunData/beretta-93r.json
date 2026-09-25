@@ -1,0 +1,112 @@
+{
+  "id": "beretta-93r",
+  "name": "Beretta 93R",
+  "kind": "model",
+  "wikidataId": "Q819135",
+  "makerRef": "beretta",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "italy",
+  "producedIn": ["italy"],
+  "introduced": 1979,
+  "productionYears": {
+    "start": 1979,
+    "end": 1993
+  },
+  "fireModes": ["semi", "burst"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["duty-sidearm"],
+  "massEmpty": {
+    "value": 1.17,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-beretta-93r",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365164594",
+    "sourceNote": "Empty, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 240,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-beretta-93r",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365164594",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 125,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-beretta-93r",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365164594",
+    "sourceNote": "Without the removable compensator, from the infobox, uncited there; the infobox separately gives 156 mm with the compensator fitted."
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-beretta-93r",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365164594",
+    "sourceNote": "In 3-round burst mode, from the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 50,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-beretta-93r",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365164594",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 15,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-beretta-93r",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1365164594",
+        "sourceNote": "Standard flush-fitting detachable box magazine, from the infobox. The infobox also lists a wide range of other capacities up to a 50-round drum, citing current Beretta 92-series magazine product pages rather than a source specific to the 93R; 15 rounds is recorded here as the pistol's original standard magazine."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/beretta-93r/hero.webp",
+      "alt": "A grayscale illustration of a Beretta 93R pistol's grip and trigger area, showing its folding front handgrip and extended trigger guard",
+      "caption": "An illustration of the Beretta 93R, showing its folding forward grip and skeletonised trigger guard.",
+      "width": 568,
+      "height": 381,
+      "credit": {
+        "author": "Atirador",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beretta_93R.png",
+        "title": "File:Beretta 93R.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-beretta-93r",
+      "type": "wikipedia",
+      "title": "Beretta 93R",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1365164594",
+      "lang": "en",
+      "revision": "1365164594",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

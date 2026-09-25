@@ -1,0 +1,230 @@
+{
+  "id": "50-action-express",
+  "name": ".50 Action Express",
+  "wikidataId": "Q158819",
+  "aliases": [
+    {
+      "name": ".50 AE",
+      "kind": "commercial",
+      "note": "Common abbreviation."
+    }
+  ],
+  "designedBy": "Evan Whildin, Action Arms",
+  "introduced": 1988,
+  "caseType": "rebated-rim",
+  "caseShape": "straight",
+  "standard": "cip",
+  "caseLength": {
+    "value": 32.64,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-50-ae",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page91.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 40.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-50-ae",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page91.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 12.71,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-50-ae",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page91.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 13.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-50-ae",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page91.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 13.79,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-50-ae",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page91.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 13.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-50-ae",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page91.pdf",
+    "sourceNote": "Dimension R1. The rim is rebated below the base diameter, which is why the case functions in pistols built around a smaller-diameter case head."
+  },
+  "maxPressure": {
+    "value": 230,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-50-ae",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page91.pdf",
+    "sourceNote": "Pmax 2300 bar, C.I.P. method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "300gr-gdhp",
+      "name": "300 gr GDHP",
+      "bulletType": "GDHP",
+      "bulletMass": {
+        "value": 19.44,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "300 gr bullet, from a Speer reloading supplemental data page, via the Wikipedia infobox. The published velocity on that page is a maximum-handload result tied to a specific powder charge, not a factory-ammunition figure, so it is not recorded."
+      }
+    },
+    {
+      "id": "325gr-uchp",
+      "name": "325 gr UCHP",
+      "bulletType": "UCHP",
+      "bulletMass": {
+        "value": 21.06,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "325 gr bullet, from the same Speer reloading supplemental data page, via the Wikipedia infobox. Velocity not recorded for the same reason."
+      }
+    },
+    {
+      "id": "400gr-tii-wfngc",
+      "name": "400 gr TII WFNGC",
+      "manufacturer": "TII Armory",
+      "bulletType": "WFNGC",
+      "bulletMass": {
+        "value": 25.92,
+        "unit": "g",
+        "status": "verified",
+        "source": "tii-50ae400",
+        "sourceUrl": "https://tiiarmory.com/50ae400",
+        "sourceNote": "As published on the manufacturer's own current product page."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 152.4,
+            "unit": "mm",
+            "status": "verified",
+            "source": "tii-50ae400",
+            "sourceUrl": "https://tiiarmory.com/50ae400",
+            "sourceNote": "6 in test barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 366,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "tii-50ae400",
+            "sourceUrl": "https://tiiarmory.com/50ae400",
+            "sourceNote": "1200 ft/s, as published on the manufacturer's own current product page."
+          }
+        }
+      ]
+    },
+    {
+      "id": "460gr-tii-wfngc-subsonic",
+      "name": "460 gr TII WFNGC subsonic",
+      "manufacturer": "TII Armory",
+      "bulletType": "WFNGC",
+      "bulletMass": {
+        "value": 29.81,
+        "unit": "g",
+        "status": "verified",
+        "source": "tii-50ae400",
+        "sourceUrl": "https://tiiarmory.com/50ae400",
+        "sourceNote": "As published on the manufacturer's own current product page."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 152.4,
+            "unit": "mm",
+            "status": "verified",
+            "source": "tii-50ae400",
+            "sourceUrl": "https://tiiarmory.com/50ae400",
+            "sourceNote": "6 in test barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 320,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "tii-50ae400",
+            "sourceUrl": "https://tiiarmory.com/50ae400",
+            "sourceNote": "1050 ft/s, as published on the manufacturer's own current product page."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/50-action-express/hero.webp",
+      "alt": "Three large-caliber pistol cartridges with brass cases and hollow-point bullets standing upright in a row",
+      "caption": ".50 Action Express (left), .440 Cor-Bon (center) and .44 Remington Magnum (right), for size comparison.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Drake00",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:50_AE,_440_Corbon,_44_Magnum.JPG",
+        "title": "File:50 AE, 440 Corbon, 44 Magnum.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/50-action-express/desert-eagle-pistol.webp",
+      "alt": "A large stainless-steel Desert Eagle semi-automatic pistol lying on a wooden table",
+      "caption": "A Desert Eagle pistol, the design the .50 Action Express cartridge was built for. The Desert Eagle is also offered in other calibers, and this example's chambering is not identified by the source.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Ank Kumar",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014-_Desert_Eagle_.50_Action_Express_Semi-Automatic_Pistol,_Prague,_Czech_Republic_(_Ank_Kumar_)_01.jpg",
+        "title": "File:2014- Desert Eagle .50 Action Express Semi-Automatic Pistol, Prague, Czech Republic ( Ank Kumar ) 01.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-50-action-express",
+      "type": "wikipedia",
+      "title": ".50 Action Express",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371997058",
+      "lang": "en",
+      "revision": "1371997058",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-50-ae",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 50 AE",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page91.pdf",
+      "revision": "2000-06-07",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "tii-50ae400",
+      "type": "manufacturer-spec",
+      "title": ".50 AE 400gr WFNGC",
+      "publisher": "TII Armory",
+      "url": "https://tiiarmory.com/50ae400",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

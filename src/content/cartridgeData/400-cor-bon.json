@@ -63,7 +63,7 @@
         "value": 8.75,
         "unit": "g",
         "status": "estimated",
-        "sourceNote": "135 gr JHP factory load, Cor-Bon, via the Wikipedia infobox. No test-barrel length is stated for the load's published velocity, so velocity is not recorded (PLAYBOOK.md §5.1)."
+        "sourceNote": "135 gr JHP factory load, Cor-Bon, via the Wikipedia infobox. No test-barrel length is stated for the load's published velocity, so velocity is not recorded."
       },
       "bulletType": "JHP"
     },
@@ -74,7 +74,7 @@
         "value": 9.72,
         "unit": "g",
         "status": "estimated",
-        "sourceNote": "150 gr JHP factory load, Cor-Bon, via the Wikipedia infobox. No test-barrel length is stated, so velocity is not recorded (PLAYBOOK.md §5.1)."
+        "sourceNote": "150 gr JHP factory load, Cor-Bon, via the Wikipedia infobox. No test-barrel length is stated, so velocity is not recorded."
       },
       "bulletType": "JHP"
     },
@@ -85,7 +85,7 @@
         "value": 10.69,
         "unit": "g",
         "status": "estimated",
-        "sourceNote": "165 gr JHP factory load, Cor-Bon, via the Wikipedia infobox. No test-barrel length is stated, so velocity is not recorded (PLAYBOOK.md §5.1)."
+        "sourceNote": "165 gr JHP factory load, Cor-Bon, via the Wikipedia infobox. No test-barrel length is stated, so velocity is not recorded."
       },
       "bulletType": "JHP"
     }

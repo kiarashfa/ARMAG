@@ -1,0 +1,126 @@
+{
+  "id": "41-action-express",
+  "name": ".41 Action Express",
+  "wikidataId": "Q2894884",
+  "aliases": [
+    {
+      "name": ".41 AE",
+      "kind": "commercial",
+      "note": "Common abbreviation."
+    }
+  ],
+  "designedBy": "Evan Whildin",
+  "introduced": 1986,
+  "caseType": "rebated-rim",
+  "caseShape": "straight",
+  "standard": "none",
+  "caseLength": {
+    "value": 22,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .866 in, Wikipedia infobox. No C.I.P. or SAAMI free dimensional standard was found for this discontinued round."
+  },
+  "overallLength": {
+    "value": 29.72,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from 1.17 in, Wikipedia infobox."
+  },
+  "bulletDiameter": {
+    "value": 10.41,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .410 in, Wikipedia infobox."
+  },
+  "neckDiameter": {
+    "value": 11.02,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .434 in, Wikipedia infobox."
+  },
+  "baseDiameter": {
+    "value": 11.05,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .435 in, Wikipedia infobox."
+  },
+  "rimDiameter": {
+    "value": 10.01,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "Converted from .394 in, Wikipedia infobox. The rim is rebated — narrower than the case base — which is why the case functions in pistols built around the 9×19mm Parabellum's rim diameter."
+  },
+  "maxPressure": {
+    "value": 241.3,
+    "unit": "MPa",
+    "status": "estimated",
+    "sourceNote": "Converted from a published 35,000 psi figure, Wikipedia infobox."
+  },
+  "pressureStandard": "saami",
+  "loads": [
+    {
+      "id": "170gr-jhc",
+      "name": "170 gr JHC",
+      "bulletType": "JHC",
+      "bulletMass": {
+        "value": 11.02,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "170 gr bullet, from a handloading data page (Hodgdon), via the Wikipedia infobox. The published velocity on that page is a maximum-handload result tied to a specific powder charge, not a factory-ammunition figure, so it is not recorded."
+      }
+    },
+    {
+      "id": "180gr-hp",
+      "name": "180 gr HP",
+      "bulletType": "HP",
+      "bulletMass": {
+        "value": 11.66,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "180 gr bullet, from the same handloading data page, via the Wikipedia infobox. Velocity not recorded for the same reason."
+      }
+    },
+    {
+      "id": "210gr-xtp",
+      "name": "210 gr XTP",
+      "bulletType": "XTP",
+      "bulletMass": {
+        "value": 13.61,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "210 gr bullet, from the same handloading data page, via the Wikipedia infobox. Velocity not recorded for the same reason."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/41-action-express/hero.webp",
+      "alt": "Two pistol cartridges side by side: a shorter, wider .41 Action Express round on the left with a rebated case, and a 9x19mm Parabellum round on the right",
+      "caption": "A .41 Action Express cartridge (left) next to a 9×19mm Parabellum cartridge (right) for size comparison.",
+      "width": 920,
+      "height": 1101,
+      "credit": {
+        "author": "Darkman IV (talk)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:41aeand9mm.png",
+        "title": "File:41aeand9mm.png",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-41-action-express",
+      "type": "wikipedia",
+      "title": ".41 Action Express",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1315042640",
+      "lang": "en",
+      "revision": "1315042640",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "460-sw-magnum",
+  "name": ".460 S&W Magnum",
+  "wikidataId": "Q158804",
+  "aliases": [
+    {
+      "name": "460 S&W Mag.",
+      "kind": "commercial"
+    },
+    {
+      "name": "11.5×46mmR",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Hornady and Smith & Wesson",
+  "introduced": 2005,
+  "standard": "cip",
+  "caseType": "rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 11.49,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page88.pdf",
+    "source": "cip-460-s-w-mag"
+  },
+  "caseLength": {
+    "value": 45.72,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page88.pdf",
+    "source": "cip-460-s-w-mag"
+  },
+  "overallLength": {
+    "value": 58.12,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page88.pdf",
+    "source": "cip-460-s-w-mag"
+  },
+  "rimDiameter": {
+    "value": 13.21,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page88.pdf",
+    "source": "cip-460-s-w-mag"
+  },
+  "neckDiameter": {
+    "value": 12.14,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page88.pdf",
+    "source": "cip-460-s-w-mag"
+  },
+  "baseDiameter": {
+    "value": 12.14,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page88.pdf",
+    "source": "cip-460-s-w-mag"
+  },
+  "maxPressure": {
+    "value": 395.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page88.pdf",
+    "source": "cip-460-s-w-mag"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornady-200gr-ftx",
+      "name": "200 gr FTX",
+      "manufacturer": "Hornady",
+      "bulletType": "FTX",
+      "bulletMass": {
+        "value": 12.96,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-460-200-ftx",
+        "sourceUrl": "https://www.hornady.com/ammunition/handgun/460-s-w-magnum-200-gr-ftx",
+        "sourceNote": "200 gr as published on the manufacturer's product page, converted to grams (1 gr = 0.06479891 g)."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 212.7,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-460-200-ftx",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/460-s-w-magnum-200-gr-ftx",
+            "sourceNote": "8.375-inch test barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 670.6,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-460-200-ftx",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/460-s-w-magnum-200-gr-ftx",
+            "sourceNote": "2,200 ft/s muzzle velocity as published on the manufacturer's product page."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/460-sw-magnum/hero.webp",
+      "alt": "Three cartridges standing side by side on a grey ground and labelled beneath: a small rimfire round on the left, a long straight brass case with a round-nosed jacketed bullet in the middle, and a shorter revolver cartridge with a lead bullet on the right.",
+      "caption": "A .460 S&W Magnum (centre) between a .22 Long Rifle and a .357 Magnum, for scale.",
+      "width": 1024,
+      "height": 1161,
+      "credit": {
+        "author": "Ainat00",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Munition_.460_S&W_Magnum.jpg",
+        "title": "File:Munition .460 S&W Magnum.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/460-sw-magnum/comparison.webp",
+      "alt": "Five brass cartridges standing in a row, decreasing in length from left to right; the tallest, on the left, has a red polymer-tipped bullet.",
+      "caption": "Left to right: .460 S&W Magnum, .454 Casull, .44 Magnum, .45 ACP and .22 Long Rifle. The .460 S&W Magnum is on the left.",
+      "width": 800,
+      "height": 716,
+      "credit": {
+        "author": "jarmoore",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_comparison1.jpg",
+        "title": "File:Cartridge comparison1.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-460-s-w-magnum",
+      "type": "wikipedia",
+      "title": ".460 S&W Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363403247",
+      "lang": "en",
+      "revision": "1363403247",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-460-s-w-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 460 S&W Mag.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page88.pdf",
+      "revision": "2008-04-15",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "hornady-460-200-ftx",
+      "type": "manufacturer-spec",
+      "title": "460 S&W Magnum 200 gr FTX",
+      "publisher": "Hornady Manufacturing, Inc.",
+      "url": "https://www.hornady.com/ammunition/handgun/460-s-w-magnum-200-gr-ftx",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

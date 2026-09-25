@@ -1,0 +1,94 @@
+{
+  "id": "grand-power-stribog",
+  "name": "Grand Power Stribog",
+  "kind": "model",
+  "wikidataId": "Q140075393",
+  "makerRef": "grand-power",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "SP9A1", "kind": "commercial" }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "slovakia",
+  "producedIn": ["slovakia"],
+  "introduced": 2016,
+  "fireModes": ["semi"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["concealed-carry"],
+  "massEmpty": {
+    "value": 1.952,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-grand-power-stribog",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363826091",
+    "sourceNote": "SP9A1 pistol configuration, from the infobox; no inline citation is given there. The infobox separately gives 2650 g for a longer, carbine-length configuration."
+  },
+  "length": {
+    "value": 316,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-grand-power-stribog",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363826091",
+    "sourceNote": "Shortest published configuration, from the infobox, uncited there; the infobox separately gives up to 915 mm for a longer, stocked configuration."
+  },
+  "barrelLength": {
+    "value": 205,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-grand-power-stribog",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363826091",
+    "sourceNote": "Shortest published barrel, from the infobox, uncited there; the infobox separately gives up to 410 mm for a longer configuration."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-grand-power-stribog",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363826091",
+        "sourceNote": "Published as 10-, 20-, 25-, 30- or 32-round detachable magazines across the Stribog family's various chamberings, from the infobox, uncited there; 30 rounds recorded here as the standard 9mm SP9A1 magazine capacity."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/grand-power-stribog/hero.webp",
+      "alt": "A black polymer-framed pistol with a Picatinny rail above the barrel, a slide-mounted rear sight and a straight magazine, photographed against a light background",
+      "caption": "A Grand Power Stribog SP9A1 pistol chambered in 9x19mm Parabellum.",
+      "width": 1600,
+      "height": 1060,
+      "credit": {
+        "author": "ImAnEngnineere",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stribog.png",
+        "title": "File:Stribog.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-grand-power-stribog",
+      "type": "wikipedia",
+      "title": "Grand Power Stribog",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363826091",
+      "lang": "en",
+      "revision": "1363826091",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

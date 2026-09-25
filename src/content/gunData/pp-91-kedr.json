@@ -1,0 +1,118 @@
+{
+  "id": "pp-91-kedr",
+  "name": "PP-91 Kedr",
+  "kind": "model",
+  "wikidataId": "Q2471712",
+  "makerRef": "zlatoust-machine-building-plant",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Kedr", "kind": "nickname", "note": "Russian for \"cedar\"." }
+  ],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "soviet-union",
+  "producedIn": ["russia"],
+  "introduced": 1994,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence", "law-enforcement"],
+  "massEmpty": {
+    "value": 1.57,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-pp-91-kedr",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372570527",
+    "sourceNote": "From the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 530,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pp-91-kedr",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372570527",
+    "sourceNote": "Stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 305,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pp-91-kedr",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372570527",
+    "sourceNote": "Stock folded, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 120,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pp-91-kedr",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372570527",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 1000,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-pp-91-kedr",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372570527",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 70,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-pp-91-kedr",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372570527",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x18mm-makarov",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-pp-91-kedr",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372570527",
+        "sourceNote": "Published as a 20- or 30-round detachable box magazine, from the infobox, uncited there; 30 rounds recorded here as the larger of the two published capacities."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/pp-91-kedr/hero.webp",
+      "alt": "A compact black submachine gun with a folded wire stock, a wide pistol grip and a curved magazine, lying on a tan surface with its sling",
+      "caption": "A PP-91 Kedr submachine gun with its stock folded.",
+      "width": 1600,
+      "height": 1067,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ПП-91_Кедр_-_ОСН_Сатурн_04.jpg",
+        "title": "File:ПП-91 Кедр - ОСН Сатурн 04.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-pp-91-kedr",
+      "type": "wikipedia",
+      "title": "PP-91 Kedr",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372570527",
+      "lang": "en",
+      "revision": "1372570527",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "id": "beretta-cx4-storm",
+  "name": "Beretta Cx4 Storm",
+  "kind": "model",
+  "wikidataId": "Q2661792",
+  "makerRef": "beretta",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "italy",
+  "producedIn": [
+    "italy"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence",
+    "law-enforcement",
+    "competition"
+  ],
+  "introduced": 2003,
+  "productionYears": {
+    "start": 2003,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 2.575,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "length": {
+    "value": 755,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "width": {
+    "value": 63,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "height": {
+    "value": 190,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 423,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there (422.5 mm)."
+  },
+  "sightRadius": {
+    "value": 327,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 200,
+    "unit": "m",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there, given as an approximate figure."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there: the Cx4 accepts adapted Beretta pistol magazines from 8 to 30 rounds depending on the pistol platform; 30 is the largest offered for this chambering."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "9x21mm",
+      "capacity": {
+        "value": null,
+        "unit": "",
+        "status": "placeholder"
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "40-sw",
+      "capacity": {
+        "value": null,
+        "unit": "",
+        "status": "placeholder"
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From Wikipedia's article body, uncited there: the .45 ACP model uses only Beretta 8000 'Cougar' magazines, which hold 8 rounds."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [
+    {
+      "id": "mx4-storm",
+      "name": "Mx4 Storm",
+      "summary": "The select-fire submachine-gun version, with a shorter barrel and automatic fire.",
+      "overrides": {
+        "fireModes": [
+          "semi",
+          "automatic"
+        ],
+        "massEmpty": {
+          "value": 2.48,
+          "unit": "kg",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there, where it is given for the Mx4 Storm."
+        },
+        "length": {
+          "value": 647,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there, where it is given for the Mx4 Storm."
+        },
+        "barrelLength": {
+          "value": 312,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there, where it is given for the Mx4 Storm. The article text gives it as a 12-inch barrel."
+        },
+        "cyclicRate": {
+          "value": 1000,
+          "unit": "rpm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there (\"~1,000 rounds/min\"); only the Mx4 fires automatically, so the figure can only be its."
+        },
+        "chamberings": [
+          {
+            "cartridgeRef": "9x19mm-parabellum",
+            "capacity": {
+              "value": 30,
+              "unit": "",
+              "status": "estimated",
+              "sourceNote": "The article text, uncited there: most commonly seen with a 30-round 9mm magazine compatible with Beretta 92 pistols."
+            },
+            "primary": true
+          }
+        ]
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [
+    {
+      "standard": "rail",
+      "value": "MIL-STD-1913"
+    }
+  ],
+  "images": [
+    {
+      "src": "images/guns/beretta-cx4-storm/hero.webp",
+      "alt": "A black polymer carbine with a straight stock and a Picatinny rail along the top of the receiver",
+      "caption": "A Beretta Cx4 Storm carbine.",
+      "width": 1600,
+      "height": 489,
+      "credit": {
+        "author": "Rama",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beretta-Cx4-Storm-p1030164.jpg",
+        "title": "File:Beretta-Cx4-Storm-p1030164.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+      }
+    },
+    {
+      "src": "images/guns/beretta-cx4-storm/with-scope.webp",
+      "alt": "A Cx4 Storm carbine fitted with a magnified scope on its top rail",
+      "caption": "A Cx4 Storm fitted with an optical scope on its Picatinny rail.",
+      "width": 650,
+      "height": 370,
+      "credit": {
+        "author": "No machine-readable author provided. Ajaka~commonswiki assumed (based on copyright claims).",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Storm_Complete.jpg",
+        "title": "File:Storm Complete.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-beretta-cx4-storm",
+      "type": "wikipedia",
+      "title": "Beretta Cx4 Storm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370412896",
+      "lang": "en",
+      "revision": "1370412896",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "id": "14-5-x-114-mm",
+  "name": "14.5×114mm",
+  "wikidataId": "Q186992",
+  "aliases": [
+    {
+      "name": ".57 calibre",
+      "kind": "nickname"
+    }
+  ],
+  "introduced": 1939,
+  "standard": "none",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 14.88,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "neckDiameter": {
+    "value": 16.5,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "baseDiameter": {
+    "value": 26.95,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "rimDiameter": {
+    "value": 26.95,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "caseLength": {
+    "value": 114,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "overallLength": {
+    "value": 155.8,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "loads": [
+    {
+      "id": "b-32-api",
+      "name": "B-32 API",
+      "bulletType": "B-32 API",
+      "bulletMass": {
+        "value": 64,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 1350,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 1000,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there."
+          }
+        }
+      ]
+    },
+    {
+      "id": "mdz-hei",
+      "name": "MDZ HEI",
+      "bulletType": "MDZ HEI",
+      "bulletMass": {
+        "value": 59.7,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 1350,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 1000,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there."
+          }
+        }
+      ]
+    },
+    {
+      "id": "zp-inc-t",
+      "name": "ZP Inc.-T",
+      "bulletType": "ZP Inc.-T",
+      "bulletMass": {
+        "value": 60,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 1350,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 1000,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there."
+          }
+        }
+      ]
+    },
+    {
+      "id": "bs-ap",
+      "name": "BS AP",
+      "bulletType": "BS AP",
+      "bulletMass": {
+        "value": 64.4,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 1350,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 1006,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kkv",
+      "name": "KKV",
+      "bulletType": "KKV",
+      "bulletMass": {
+        "value": 66.5,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 1350,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, stated for the whole ballistics table."
+          },
+          "velocity": {
+            "value": 1000,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/14-5-x-114-mm/hero.webp",
+      "alt": "A single large brass bottleneck cartridge with a dark pointed bullet, measured against a tape rule",
+      "caption": "A 14.5×114mm cartridge, shown against a tape measure for scale.",
+      "width": 800,
+      "height": 1100,
+      "credit": {
+        "author": "Esquilo",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:14.5x114mm.jpg",
+        "title": "File:14.5x114mm.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/14-5-x-114-mm/loading-variants.webp",
+      "alt": "Four 14.5×114mm cartridges with different coloured bullet tips displayed upright in a case, each labelled",
+      "caption": "Four 14.5×114mm loadings on museum display at TsNIITochMash, showing different bullet types by tip colour.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:14,5-мм_крупнокалиберные_патроны_-_ЦНИИТОЧМАШ_01.jpg",
+        "title": "File:14,5-мм крупнокалиберные патроны - ЦНИИТОЧМАШ 01.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/14-5-x-114-mm/weapons-cache.webp",
+      "alt": "A wooden crate holding belted 14.5mm armour-piercing incendiary cartridges",
+      "caption": "A case of Russian-made 14.5×114mm armour-piercing incendiary rounds, belted for machine-gun use, found in a weapons cache secured by U.S. Marines during Operation Iraqi Freedom.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "GYSGT MATTHEW M. SMITH",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:DM-SD-05-00258.JPEG",
+        "title": "File:DM-SD-05-00258.JPEG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-14-5x114mm",
+      "type": "wikipedia",
+      "title": "14.5×114mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1353965754",
+      "lang": "en",
+      "revision": "1353965754",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

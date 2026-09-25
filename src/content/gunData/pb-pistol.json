@@ -1,0 +1,102 @@
+{
+  "id": "pb-pistol",
+  "name": "PB (pistol)",
+  "kind": "model",
+  "wikidataId": "Q2062210",
+  "makerRef": "izhevsk-mechanical-plant",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Pistolet Besshumnyy", "kind": "military", "note": "Russian for \"silent pistol\"." }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "soviet-union",
+  "producedIn": ["soviet-union", "russia"],
+  "introduced": 1967,
+  "fireModes": ["semi"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 0.97,
+    "unit": "kg",
+    "status": "verified",
+    "source": "mf-pb-pistol",
+    "sourceUrl": "http://modernfirearms.net/en/handguns/handguns-en/russia-semi-automatic-pistols/pb-besshumnyj-eng/",
+    "sourceNote": "Complete with its integral suppressor, as published on Modern Firearms."
+  },
+  "length": {
+    "value": 310,
+    "unit": "mm",
+    "status": "verified",
+    "source": "mf-pb-pistol",
+    "sourceUrl": "http://modernfirearms.net/en/handguns/handguns-en/russia-semi-automatic-pistols/pb-besshumnyj-eng/",
+    "sourceNote": "Complete, as published on Modern Firearms; the same source gives 170 mm with the front part of the suppressor removed."
+  },
+  "barrelLength": {
+    "value": 105,
+    "unit": "mm",
+    "status": "verified",
+    "source": "mf-pb-pistol",
+    "sourceUrl": "http://modernfirearms.net/en/handguns/handguns-en/russia-semi-automatic-pistols/pb-besshumnyj-eng/",
+    "sourceNote": "As published on Modern Firearms."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x18mm-makarov",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "verified",
+        "source": "mf-pb-pistol",
+        "sourceUrl": "http://modernfirearms.net/en/handguns/handguns-en/russia-semi-automatic-pistols/pb-besshumnyj-eng/",
+        "sourceNote": "Standard Makarov pistol magazine, as published on Modern Firearms."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/pb-pistol/hero.webp",
+      "alt": "A blued semi-automatic pistol with a fixed cylindrical suppressor sleeve over its barrel and wooden grip panels, photographed against a canvas background",
+      "caption": "A PB (6P9) suppressed pistol, showing its permanently attached expansion-chamber suppressor.",
+      "width": 1600,
+      "height": 1067,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PB_silent_pistol_at_Tank_Biathlon_2014_01.jpg",
+        "title": "File:PB silent pistol at Tank Biathlon 2014 01.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-pb-pistol",
+      "type": "wikipedia",
+      "title": "PB (pistol)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1364624592",
+      "lang": "en",
+      "revision": "1364624592",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "mf-pb-pistol",
+      "type": "web",
+      "title": "PB (Besshumnyj) pistol",
+      "publisher": "Modern Firearms",
+      "url": "http://modernfirearms.net/en/handguns/handguns-en/russia-semi-automatic-pistols/pb-besshumnyj-eng/",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

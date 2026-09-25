@@ -1,0 +1,116 @@
+{
+  "id": "ak-104",
+  "name": "AK-104",
+  "kind": "model",
+  "wikidataId": "Q1024826",
+  "makerRef": "kalashnikov-concern",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "russia",
+  "producedIn": ["russia"],
+  "introduced": 1994,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["assault-rifle", "personal-defence"],
+  "massEmpty": {
+    "value": 3,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-ak-104",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373702734",
+    "sourceNote": "Empty, from the infobox; no inline citation is given there. The infobox also gives 3.2 kg with an empty magazine and 3.7 kg with a loaded magazine."
+  },
+  "length": {
+    "value": 824,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-104",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373702734",
+    "sourceNote": "Stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 586,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-104",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373702734",
+    "sourceNote": "Stock folded, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 314,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-104",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373702734",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 600,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-ak-104",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373702734",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 500,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-ak-104",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373702734",
+    "sourceNote": "From the infobox, which separately lists 300 m as a point-blank figure."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x39mm",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-ak-104",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373702734",
+        "sourceNote": "30-round detachable box magazine, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/ak-104/hero.webp",
+      "alt": "A black AK-104 carbine with a red dot sight mounted on a top rail and a suppressor attached to the barrel, displayed on a wire panel at an arms exhibition",
+      "caption": "An AK-104 carbine on exhibition, fitted with a red dot sight and a suppressor.",
+      "width": 1600,
+      "height": 1067,
+      "credit": {
+        "author": "Mike1979 Russia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AK-104_assault_rifle_at_Engineering_Technologies_2012.jpg",
+        "title": "File:AK-104 assault rifle at Engineering Technologies 2012.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-ak-104",
+      "type": "wikipedia",
+      "title": "AK-104",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373702734",
+      "lang": "en",
+      "revision": "1373702734",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

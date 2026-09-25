@@ -123,7 +123,7 @@ export function conditionAdjustedValue(
       { label: 'condition', of: given(NRA_CONDITION_MULTIPLIER[grade], '') },
     ],
     assumptions: [
-      'The base value is yours, not ours: ARMAG holds no market-value data (SPEC.md §16).',
+      'The base value is yours, not ours: ARMAG holds no market-value data.',
       'The NRA grade percentage is applied linearly. It describes condition, and real markets do not price condition linearly — treat this as a scale, not a valuation.',
     ],
     compute: ([base, multiplier]) => base! * multiplier!,

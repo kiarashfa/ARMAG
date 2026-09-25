@@ -1,0 +1,244 @@
+{
+  "id": "6mm-norma-br",
+  "name": "6mm BR Norma",
+  "wikidataId": "Q258942",
+  "aliases": [
+    {
+      "name": "6 mm BR Norma",
+      "kind": "commercial"
+    },
+    {
+      "name": "6mm BR",
+      "kind": "nickname"
+    },
+    {
+      "name": "6mm Norma BR",
+      "kind": "nickname"
+    }
+  ],
+  "designedBy": "Norma",
+  "introduced": 1996,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 6.18,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page12.pdf",
+    "source": "cip-6-mm-br-norma"
+  },
+  "caseLength": {
+    "value": 39.62,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page12.pdf",
+    "source": "cip-6-mm-br-norma"
+  },
+  "overallLength": {
+    "value": 62.0,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page12.pdf",
+    "source": "cip-6-mm-br-norma"
+  },
+  "rimDiameter": {
+    "value": 12.01,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page12.pdf",
+    "source": "cip-6-mm-br-norma"
+  },
+  "neckDiameter": {
+    "value": 6.87,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page12.pdf",
+    "source": "cip-6-mm-br-norma"
+  },
+  "baseDiameter": {
+    "value": 11.96,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page12.pdf",
+    "source": "cip-6-mm-br-norma"
+  },
+  "maxPressure": {
+    "value": 405.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page12.pdf",
+    "source": "cip-6-mm-br-norma"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "norma-105gr-diamond-line",
+      "name": "105 gr Diamond Line",
+      "manufacturer": "Norma",
+      "bulletType": "Moly-coated HPBT",
+      "bulletMass": {
+        "value": 6.8,
+        "unit": "g",
+        "status": "verified",
+        "source": "norma-6mmbr-105-diamond-line",
+        "sourceUrl": "https://www.norma-ammunition.com/products/shooting/norma-diamond-line/norma-diamond-line-6-mm-norma-br-105gr---10160162",
+        "sourceNote": "6.8 g (105 gr) as published on the product page."
+      },
+      "bcG1": {
+        "value": 0.517,
+        "unit": "",
+        "status": "verified",
+        "source": "norma-6mmbr-105-diamond-line",
+        "sourceUrl": "https://www.norma-ammunition.com/products/shooting/norma-diamond-line/norma-diamond-line-6-mm-norma-br-105gr---10160162",
+        "sourceNote": "Published as a single figure."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 660.0,
+            "unit": "mm",
+            "status": "verified",
+            "source": "norma-6mmbr-105-diamond-line",
+            "sourceUrl": "https://www.norma-ammunition.com/products/shooting/norma-diamond-line/norma-diamond-line-6-mm-norma-br-105gr---10160162",
+            "sourceNote": "660 mm (26 in) barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 850.0,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "norma-6mmbr-105-diamond-line",
+            "sourceUrl": "https://www.norma-ammunition.com/products/shooting/norma-diamond-line/norma-diamond-line-6-mm-norma-br-105gr---10160162",
+            "sourceNote": "850 m/s as published on the manufacturer's product page."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lapua-90gr-scenar-l",
+      "name": "90 gr Scenar-L",
+      "manufacturer": "Lapua",
+      "bulletType": "Scenar-L OTM",
+      "bulletMass": {
+        "value": 5.8,
+        "unit": "g",
+        "status": "verified",
+        "source": "lapua-6mmbr-90-scenar-l",
+        "sourceUrl": "https://www.lapua.com/product/6-mm-br-norma-target-cartridge-scenar-l-58g-90gr-4316044/",
+        "sourceNote": "5.8 g (90 gr) as published on the product page."
+      },
+      "bcG1": {
+        "value": 0.434,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-6mmbr-90-scenar-l",
+        "sourceUrl": "https://www.lapua.com/product/6-mm-br-norma-target-cartridge-scenar-l-58g-90gr-4316044/",
+        "sourceNote": "Published as a single figure."
+      },
+      "bcG7": {
+        "value": 0.216,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-6mmbr-90-scenar-l",
+        "sourceUrl": "https://www.lapua.com/product/6-mm-br-norma-target-cartridge-scenar-l-58g-90gr-4316044/",
+        "sourceNote": "Published as a single figure."
+      },
+      "velocityByBarrel": []
+    },
+    {
+      "id": "lapua-105gr-scenar-l",
+      "name": "105 gr Scenar-L",
+      "manufacturer": "Lapua",
+      "bulletType": "Scenar-L OTM",
+      "bulletMass": {
+        "value": 6.8,
+        "unit": "g",
+        "status": "verified",
+        "source": "lapua-6mmbr-105-scenar-l",
+        "sourceUrl": "https://www.lapua.com/product/6-mm-br-norma-target-cartridge-scenar-l-68g-105gr-4316047/",
+        "sourceNote": "6.8 g (105 gr) as published on the product page."
+      },
+      "bcG1": {
+        "value": 0.472,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-6mmbr-105-scenar-l",
+        "sourceUrl": "https://www.lapua.com/product/6-mm-br-norma-target-cartridge-scenar-l-68g-105gr-4316047/",
+        "sourceNote": "Published as a single figure."
+      },
+      "bcG7": {
+        "value": 0.236,
+        "unit": "",
+        "status": "verified",
+        "source": "lapua-6mmbr-105-scenar-l",
+        "sourceUrl": "https://www.lapua.com/product/6-mm-br-norma-target-cartridge-scenar-l-68g-105gr-4316047/",
+        "sourceNote": "Published as a single figure."
+      },
+      "velocityByBarrel": []
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/6mm-norma-br/hero.webp",
+      "alt": "Three bottlenecked rifle cartridges with long pointed bullets standing on a blue ground, labelled beneath \"6mm BR\", \"6mm Dasher\" and \".308 Win\".",
+      "caption": "Left to right: 6mm BR Norma, the 6mm Dasher wildcat formed from its case, and the .308 Winchester.",
+      "width": 925,
+      "height": 1109,
+      "credit": {
+        "author": "Normalicy",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:6mm_BR.jpg",
+        "title": "File:6mm BR.jpg",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-6mm-br",
+      "type": "wikipedia",
+      "title": "6mm BR",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373874567",
+      "lang": "en",
+      "revision": "1373874567",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-6-mm-br-norma",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 6 mm BR Norma",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page12.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "norma-6mmbr-105-diamond-line",
+      "type": "manufacturer-spec",
+      "title": "Norma Diamond Line 6 mm Norma BR 6.8 g",
+      "publisher": "Norma Precision",
+      "url": "https://www.norma-ammunition.com/products/shooting/norma-diamond-line/norma-diamond-line-6-mm-norma-br-105gr---10160162",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "lapua-6mmbr-90-scenar-l",
+      "type": "manufacturer-spec",
+      "title": "6 mm B.R. Norma / 5.8 g (90 gr) Scenar-L",
+      "publisher": "Nammo Lapua",
+      "url": "https://www.lapua.com/product/6-mm-br-norma-target-cartridge-scenar-l-58g-90gr-4316044/",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "lapua-6mmbr-105-scenar-l",
+      "type": "manufacturer-spec",
+      "title": "6 mm B.R. Norma / 6.8 g (105 gr) Scenar-L",
+      "publisher": "Nammo Lapua",
+      "url": "https://www.lapua.com/product/6-mm-br-norma-target-cartridge-scenar-l-68g-105gr-4316047/",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

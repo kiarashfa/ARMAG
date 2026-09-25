@@ -1,0 +1,206 @@
+{
+  "id": "fx-05-xiuhcoatl",
+  "name": "FX-05 Xiuhcoatl",
+  "kind": "model",
+  "wikidataId": "Q3270425",
+  "makerRef": "direccion-general-de-industria-militar",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Xiuhcoatl",
+      "kind": "nickname",
+      "note": "\"Fire Serpent\", from Classical Nahuatl."
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "mexico",
+  "producedIn": [
+    "mexico"
+  ],
+  "fireModes": [
+    "semi",
+    "burst",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "assault-rifle",
+    "service-rifle"
+  ],
+  "introduced": 2006,
+  "productionYears": {
+    "start": 2005,
+    "end": null
+  },
+  "massEmpty": {
+    "value": 4.05,
+    "unit": "kg",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Assault-rifle configuration; the carbine variant is lighter."
+  },
+  "length": {
+    "value": 1000,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Assault-rifle configuration, stock extended."
+  },
+  "lengthFolded": {
+    "value": 740,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Assault-rifle configuration, stock folded."
+  },
+  "width": {
+    "value": 56,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 460,
+    "unit": "mm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Assault-rifle configuration."
+  },
+  "cyclicRate": {
+    "value": 785,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "armas-es-fx05",
+    "sourceUrl": "http://www.armas.es/articulos/rifles-de-asalto/30181-fusil-fx-05-xiuhcoatl-el-brazo-armado-del-ejercito-mexicano.html",
+    "sourceNote": "Midpoint of a published 720–850 rounds/min range for the assault-rifle configuration; the carbine is stated separately at 760–900 rounds/min."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there: a 30-round detachable box magazine, NATO-standard or the rifle's own transparent pattern."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "carbine",
+      "name": "Carbine",
+      "summary": "The shorter-barrel configuration of the FX-05, issued alongside the full-length assault rifle.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.85,
+          "unit": "kg",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there."
+        },
+        "length": {
+          "value": 760,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there. Stock extended."
+        },
+        "lengthFolded": {
+          "value": 500,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there. Stock folded."
+        },
+        "barrelLength": {
+          "value": 273,
+          "unit": "mm",
+          "status": "estimated",
+          "sourceNote": "From the Wikipedia infobox, uncited there."
+        },
+        "cyclicRate": {
+          "value": 830,
+          "unit": "rpm",
+          "status": "estimated",
+          "source": "armas-es-fx05",
+          "sourceUrl": "http://www.armas.es/articulos/rifles-de-asalto/30181-fusil-fx-05-xiuhcoatl-el-brazo-armado-del-ejercito-mexicano.html",
+          "sourceNote": "Midpoint of a published 760–900 rounds/min range for the carbine configuration."
+        }
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/fx-05-xiuhcoatl/hero.webp",
+      "alt": "An FX-05 rifle with folding stock and Picatinny rail, laid on a display table at an arms exhibition",
+      "caption": "A Mexican Army FX-05 Xiuhcoatl on display at a military exhibition.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Brian Armstrong",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:FX-05_Xiuhcoatl_Fusil_de_asalto.JPG",
+        "title": "File:FX-05 Xiuhcoatl Fusil de asalto.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/fx-05-xiuhcoatl/parts-detail.webp",
+      "alt": "An FX-05 rifle's components laid out separately on a green display board",
+      "caption": "Components of an FX-05 Xiuhcoatl laid out at a Mexican Army public exhibition in Querétaro.",
+      "width": 1200,
+      "height": 946,
+      "credit": {
+        "author": "Mizael Contreras",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Despiece_de_un_fusil_FX-05_Xiuhcoatl.jpg",
+        "title": "File:Despiece de un fusil FX-05 Xiuhcoatl.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/fx-05-xiuhcoatl/exhibit.webp",
+      "alt": "Two second-generation FX-05 rifles, an assault rifle and a carbine, on stands at a public exhibition",
+      "caption": "Second-generation FX-05 assault rifle and carbine variants on display at a Mexican Army centenary exhibition in Mexico City.",
+      "width": 1200,
+      "height": 803,
+      "credit": {
+        "author": "ProtoplasmaKid",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Exposición_Centenario_del_Ejército_Mexicano_02.jpg",
+        "title": "File:Exposición Centenario del Ejército Mexicano 02.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-fx-05",
+      "type": "wikipedia",
+      "title": "FX-05 Xiuhcoatl",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1357985448",
+      "lang": "en",
+      "revision": "1357985448",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "armas-es-fx05",
+      "type": "web",
+      "title": "Fusil FX-05 Xiuhcoatl: el brazo armado del Ejército mexicano",
+      "publisher": "armas.es",
+      "url": "http://www.armas.es/articulos/rifles-de-asalto/30181-fusil-fx-05-xiuhcoatl-el-brazo-armado-del-ejercito-mexicano.html",
+      "lang": "es",
+      "year": 2008,
+      "accessed": "2026-09-24"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "id": "7x64mm",
+  "name": "7×64mm",
+  "wikidataId": "Q270071",
+  "aliases": [
+    {
+      "name": "7x64mm Brenneke",
+      "kind": "commercial",
+      "note": "After its designer, Wilhelm Brenneke."
+    }
+  ],
+  "designedBy": "Wilhelm Brenneke",
+  "introduced": 1917,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 7.25,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7x64",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page34.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "neckDiameter": {
+    "value": 7.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7x64",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page34.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7x64",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page34.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 11.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7x64",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page34.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "caseLength": {
+    "value": 64,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7x64",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page34.pdf",
+    "sourceNote": "Dimension L3."
+  },
+  "overallLength": {
+    "value": 84,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7x64",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page34.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "maxPressure": {
+    "value": 415,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7x64",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page34.pdf",
+    "sourceNote": "Pmax 4150 bar, C.I.P. method. SAAMI rates the same chambering at 379.2 MPa by its own separate method."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "rws-hit-9-1g",
+      "name": "9.1 g HIT",
+      "manufacturer": "RWS",
+      "bulletType": "HIT",
+      "bulletMass": {
+        "value": 9.1,
+        "unit": "g",
+        "status": "verified",
+        "source": "rws-7x64-hit",
+        "sourceUrl": "https://rws-ammunition.com/en/products/centerfire-rifle-cartridges/rws-7x64-hit-9-1g",
+        "sourceNote": "As published on the manufacturer's own current product page."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 600,
+            "unit": "mm",
+            "status": "verified",
+            "source": "rws-7x64-hit",
+            "sourceUrl": "https://rws-ammunition.com/en/products/centerfire-rifle-cartridges/rws-7x64-hit-9-1g",
+            "sourceNote": "As stated on the product page."
+          },
+          "velocity": {
+            "value": 900,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "rws-7x64-hit",
+            "sourceUrl": "https://rws-ammunition.com/en/products/centerfire-rifle-cartridges/rws-7x64-hit-9-1g",
+            "sourceNote": "V0 as published on the manufacturer's own current product page."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7x64mm/hero.webp",
+      "alt": "Four brass rifle cartridges of decreasing size standing beside a ruler",
+      "caption": "From left: 7×64mm, 7.92×57mm Mauser, .243 Winchester and .222 Remington, shown to scale.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Seha bs",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rifle_Cartridges_comparison_with_scale.JPG",
+        "title": "File:Rifle Cartridges comparison with scale.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-7x64mm",
+      "type": "wikipedia",
+      "title": "7×64mm",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372483549",
+      "lang": "en",
+      "revision": "1372483549",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-7x64",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7 x 64",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page34.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "rws-7x64-hit",
+      "type": "manufacturer-spec",
+      "title": "RWS 7x64 HIT 9,1g",
+      "publisher": "RWS Ammunition",
+      "url": "https://rws-ammunition.com/en/products/centerfire-rifle-cartridges/rws-7x64-hit-9-1g",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "grand-power",
+  "name": "Grand Power",
+  "wikidataId": "Q65084832",
+  "country": "slovakia",
+  "founded": 2002,
+  "dissolved": null,
+  "logo": {
+    "src": "images/makers/grand-power/logo.webp",
+    "alt": "A circular badge logo with the letters GP stylised in the center, surrounded by a ring reading GRAND POWER",
+    "caption": "The Grand Power company mark.",
+    "width": 185,
+    "height": 175,
+    "credit": {
+      "author": "Grand Power Ltd., Slovakia",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:GP_logo.jpg",
+      "title": "File:GP logo.jpg",
+      "licenseType": "trademark-nominative-use",
+      "licenseVersion": "1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0",
+      "licenseNote": "The source records the file as CC BY-SA 1.0. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-grand-power",
+      "type": "wikipedia",
+      "title": "Grand Power",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1365124936",
+      "lang": "en",
+      "revision": "1365124936",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

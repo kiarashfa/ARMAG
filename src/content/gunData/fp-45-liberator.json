@@ -1,0 +1,111 @@
+{
+  "id": "fp-45-liberator",
+  "name": "FP-45 Liberator",
+  "kind": "model",
+  "wikidataId": "Q935636",
+  "makerRef": "guide-lamp",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "M1942", "kind": "military" }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "break",
+  "operatingSystem": "manual",
+  "designedIn": "united-states",
+  "producedIn": ["united-states"],
+  "introduced": 1942,
+  "productionYears": {
+    "start": 1942,
+    "end": 1942
+  },
+  "fireModes": ["single-shot"],
+  "feedSystem": [],
+  "roles": ["general-purpose"],
+  "massEmpty": {
+    "value": 0.45,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-fp-45-liberator",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367556386",
+    "sourceNote": "Converted from a published 1 lb figure, Wikipedia infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 140.97,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-fp-45-liberator",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367556386",
+    "sourceNote": "Converted from a published 5.55 in figure, Wikipedia infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 101.6,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-fp-45-liberator",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367556386",
+    "sourceNote": "Converted from a published 4 in figure, Wikipedia infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "45-acp",
+      "capacity": {
+        "value": 1,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-fp-45-liberator",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1367556386",
+        "sourceNote": "Single-shot, break-open action, from the infobox, uncited there."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/fp-45-liberator/hero.webp",
+      "alt": "A crude, blocky pistol with a rectangular stamped-steel body, a bent-wire trigger guard and a short barrel, photographed against a plain white background",
+      "caption": "An FP-45 Liberator pistol, showing its stamped-steel construction.",
+      "width": 1598,
+      "height": 1600,
+      "credit": {
+        "author": "Rama",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:FP-45_Liberator.jpg",
+        "title": "File:FP-45 Liberator.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/fr/deed.en"
+      }
+    },
+    {
+      "src": "images/guns/fp-45-liberator/instructions.webp",
+      "alt": "A printed instruction sheet with eight numbered pictograms showing how to load, aim and fire the pistol without needing to read text",
+      "caption": "The wordless pictogram instructions distributed with each Liberator, designed to be usable by anyone regardless of literacy or language.",
+      "width": 550,
+      "height": 888,
+      "credit": {
+        "author": "Unknown, presumably a US government employee, given that the weapon was made by and for the U.S. Army",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:FP-45_operating_instructions.jpg",
+        "title": "File:FP-45 operating instructions.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-fp-45-liberator",
+      "type": "wikipedia",
+      "title": "FP-45 Liberator",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1367556386",
+      "lang": "en",
+      "revision": "1367556386",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

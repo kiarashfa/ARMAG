@@ -1,0 +1,159 @@
+{
+  "id": "s-t-daewoo-k11",
+  "name": "S&T Daewoo K11",
+  "kind": "model",
+  "wikidataId": "Q484676",
+  "makerRef": "snt-motiv",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "K11 DAW",
+      "kind": "commercial",
+      "note": "Dual-barrel Air-burst Weapon."
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "designedIn": "south-korea",
+  "producedIn": [
+    "south-korea"
+  ],
+  "fireModes": [
+    "semi",
+    "burst"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "assault-rifle"
+  ],
+  "introduced": 2010,
+  "productionYears": {
+    "start": 2010,
+    "end": 2019
+  },
+  "massEmpty": {
+    "value": 6.1,
+    "unit": "kg",
+    "status": "verified",
+    "source": "wilk2010-amr",
+    "sourceUrl": "https://web.archive.org/web/20110707174915/http://www.asianmilitaryreview.com/CurrentIssue/dl.php?filename=201003140001071.pdf",
+    "sourceNote": "Empty, for the complete rifle-and-launcher unit; this entry covers the rifle (KE) section only."
+  },
+  "length": {
+    "value": 860,
+    "unit": "mm",
+    "status": "verified",
+    "source": "wilk2010-amr",
+    "sourceUrl": "https://web.archive.org/web/20110707174915/http://www.asianmilitaryreview.com/CurrentIssue/dl.php?filename=201003140001071.pdf",
+    "sourceNote": "Overall length of the complete bullpup unit."
+  },
+  "barrelLength": {
+    "value": 310,
+    "unit": "mm",
+    "status": "verified",
+    "source": "popenker-modernfirearms",
+    "sourceUrl": "https://web.archive.org/web/20161203113456/http://world.guns.ru/assault/as98-e.htm/",
+    "sourceNote": "The 5.56×45mm (KE) barrel; the 20×30mm grenade-launcher barrel is stated separately at 405 mm."
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "sourceNote": "From the Wikipedia infobox, uncited there. Rifle (KE) section only."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "verified",
+        "source": "kookbang-k11",
+        "sourceUrl": "https://web.archive.org/web/20090630134227/http://kookbang.dema.mil.kr/kdd/HearTypeView.jsp?writeDate=id&writeDateChk=20080930&menuCd=3004&menuSeq=1&kindSeq=3&menuCnt=30911",
+        "sourceNote": "Standard STANAG-pattern 20- or 30-round 5.56×45mm NATO magazines; 30 is the larger of the two."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/s-t-daewoo-k11/hero.webp",
+      "alt": "A K11 bullpup rifle with a boxy sight unit on top and a curved magazine, photographed in profile",
+      "caption": "The S&T Daewoo K11, with its integrated sighting unit above the receiver and a 5.56mm box magazine fitted.",
+      "width": 900,
+      "height": 410,
+      "credit": {
+        "author": "https://commons.wikimedia.org/w/index.php?title=User:Cinnamontrees&action=edit&redlink=1",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daewoo_K11_Rifle_noBG.png",
+        "title": "File:Daewoo K11 Rifle noBG.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/s-t-daewoo-k11/range-test.webp",
+      "alt": "A soldier firing a K11 rifle from a prone position on an outdoor range, sandbags in front",
+      "caption": "A Republic of Korea Army soldier firing the K11 during a 2009 defence media demonstration.",
+      "width": 1200,
+      "height": 799,
+      "credit": {
+        "author": "대한민국 국군 Republic of Korea Armed Forces",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:K11차기복합소총_(7439016000).jpg",
+        "title": "File:K11차기복합소총 (7439016000).jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-s-t-daewoo-k11",
+      "type": "wikipedia",
+      "title": "S&T Daewoo K11",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1335801921",
+      "lang": "en",
+      "revision": "1335801921",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "wilk2010-amr",
+      "type": "periodical",
+      "title": "Infantry Weapons: The Future Beckons for Asia",
+      "author": "Remigiusz Wilk",
+      "publisher": "Asian Military Review",
+      "url": "https://web.archive.org/web/20110707174915/http://www.asianmilitaryreview.com/CurrentIssue/dl.php?filename=201003140001071.pdf",
+      "year": 2010,
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "popenker-modernfirearms",
+      "type": "web",
+      "title": "K11 / XK11 (South Korea)",
+      "author": "Max Popenker",
+      "publisher": "Modern Firearms (world.guns.ru)",
+      "url": "https://web.archive.org/web/20161203113456/http://world.guns.ru/assault/as98-e.htm/",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "kookbang-k11",
+      "type": "web",
+      "title": "K11 소총 관련 국방일보 기사",
+      "publisher": "Kookbang Ilbo (Republic of Korea Ministry of National Defense)",
+      "url": "https://web.archive.org/web/20090630134227/http://kookbang.dema.mil.kr/kdd/HearTypeView.jsp?writeDate=id&writeDateChk=20080930&menuCd=3004&menuSeq=1&kindSeq=3&menuCnt=30911",
+      "lang": "ko",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

@@ -58,7 +58,7 @@
         "value": 9.01,
         "unit": "g",
         "status": "estimated",
-        "sourceNote": "139 gr ball bullet, Cartridges of the World, via the Wikipedia infobox. No test-barrel length is stated for the load's published velocity, so velocity is not recorded (PLAYBOOK.md §5.1)."
+        "sourceNote": "139 gr ball bullet, Cartridges of the World, via the Wikipedia infobox. No test-barrel length is stated for the load's published velocity, so velocity is not recorded."
       },
       "bulletType": "Ball"
     },
@@ -69,7 +69,7 @@
         "value": 9.07,
         "unit": "g",
         "status": "estimated",
-        "sourceNote": "140 gr ball bullet, Mk 1Z loading, Cartridges of the World, via the Wikipedia infobox. No test-barrel length is stated, so velocity is not recorded (PLAYBOOK.md §5.1)."
+        "sourceNote": "140 gr ball bullet, Mk 1Z loading, Cartridges of the World, via the Wikipedia infobox. No test-barrel length is stated, so velocity is not recorded."
       },
       "bulletType": "Ball"
     }

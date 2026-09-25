@@ -1,0 +1,34 @@
+{
+  "id": "koishikawa-arsenal",
+  "name": "Koishikawa Arsenal",
+  "wikidataId": "Q6426349",
+  "country": "japan",
+  "founded": 1871,
+  "dissolved": 1935,
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-koishikawa-arsenal",
+      "type": "wikipedia",
+      "title": "Koishikawa Arsenal",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1370352072",
+      "lang": "en",
+      "revision": "1370352072",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "wp-type-38-rifle",
+      "type": "wikipedia",
+      "title": "Type 38 rifle",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1376325323",
+      "lang": "en",
+      "revision": "1376325323",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

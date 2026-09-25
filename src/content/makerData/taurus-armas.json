@@ -1,0 +1,35 @@
+{
+  "id": "taurus-armas",
+  "name": "Taurus Armas",
+  "wikidataId": "Q1187505",
+  "country": "brazil",
+  "founded": 1939,
+  "dissolved": null,
+  "logo": {
+    "src": "images/makers/taurus-armas/logo.webp",
+    "alt": "A stylised black bull's-head silhouette beside the word TAURUS in bold black type",
+    "caption": "Taurus's wordmark and bull's-head symbol.",
+    "width": 960,
+    "height": 274,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taurus_Logo.svg",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-taurus-armas",
+      "type": "wikipedia",
+      "title": "Taurus Armas",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1375772294",
+      "lang": "en",
+      "revision": "1375772294",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

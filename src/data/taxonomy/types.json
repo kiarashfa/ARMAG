@@ -8,7 +8,7 @@
     { "id": "revolver", "label": "Revolver", "accent": "handgun", "description": "A handgun feeding from a rotating cylinder of chambers." },
     { "id": "rifle", "label": "Rifle", "accent": "rifle", "description": "A shoulder-fired arm with a rifled barrel, full-length by the standards of its own pattern." },
     { "id": "carbine", "label": "Carbine", "accent": "rifle", "description": "A shortened rifle, usually of a pattern that also exists at full length." },
-    { "id": "shotgun", "label": "Shotgun", "accent": "shotgun", "description": "A shoulder-fired arm firing a shot charge or slug, exempt from the 20 mm bore rule (SPEC.md §15)." },
+    { "id": "shotgun", "label": "Shotgun", "accent": "shotgun", "description": "A shoulder-fired arm firing a shot charge or a single slug." },
     { "id": "submachine-gun", "label": "Submachine gun", "accent": "smg", "description": "A select-fire or automatic arm firing a pistol cartridge." },
     { "id": "machine-gun", "label": "Machine gun", "accent": "machinegun", "description": "An automatic arm firing a rifle or heavier cartridge, fed for sustained fire." },
     { "id": "pdw", "label": "Personal defence weapon", "accent": "smg", "description": "A compact automatic arm firing a purpose-designed intermediate cartridge." }

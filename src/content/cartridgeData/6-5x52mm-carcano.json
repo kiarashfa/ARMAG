@@ -1,0 +1,188 @@
+{
+  "id": "6-5x52mm-carcano",
+  "name": "6.5×52mm Carcano",
+  "wikidataId": "Q2713807",
+  "aliases": [
+    {
+      "name": "6.5×52mm Mannlicher-Carcano",
+      "kind": "commercial"
+    },
+    {
+      "name": "6,5 x 52 Carcano",
+      "kind": "metric",
+      "note": "The C.I.P. designation."
+    }
+  ],
+  "introduced": 1891,
+  "standard": "cip",
+  "caseType": "rimless",
+  "caseShape": "bottleneck",
+  "bulletDiameter": {
+    "value": 6.8,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-52-carcano",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-52-carcano-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension G1."
+  },
+  "neckDiameter": {
+    "value": 7.55,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-52-carcano",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-52-carcano-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 11.41,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-52-carcano",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-52-carcano-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 11.45,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-52-carcano",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-52-carcano-en.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "caseLength": {
+    "value": 52.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-52-carcano",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-52-carcano-en.pdf",
+    "sourceNote": "Dimension L3."
+  },
+  "overallLength": {
+    "value": 76.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-6-5-x-52-carcano",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-52-carcano-en.pdf",
+    "sourceNote": "Dimension L6."
+  },
+  "maxPressure": {
+    "value": 285,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-6-5-x-52-carcano",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-52-carcano-en.pdf",
+    "sourceNote": "Pmax 2850 bar."
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "10-5g-rn",
+      "name": "10.5 g RN",
+      "bulletType": "RN",
+      "bulletMass": {
+        "value": 10.5,
+        "unit": "g",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. The C.I.P. datasheet gives dimensions and pressure only, not a bullet mass."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 780,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, which gives the test barrel only as \"above 780 mm\"."
+          },
+          "velocity": {
+            "value": 700,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "700 m/s from the Wikipedia infobox, uncited there. The C.I.P. datasheet publishes no velocity."
+          }
+        },
+        {
+          "barrelLength": {
+            "value": 445,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "From the Wikipedia infobox, uncited there, which gives the test barrel only as \"below 445 mm\"."
+          },
+          "velocity": {
+            "value": 661,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "661 m/s from the Wikipedia infobox, uncited there. The C.I.P. datasheet publishes no velocity."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/6-5x52mm-carcano/hero.webp",
+      "alt": "A single brass bottleneck rifle cartridge with a round-nosed bullet, standing upright on a grid background",
+      "caption": "A 6.5×52mm Carcano cartridge.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Grasyl",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cartridge_6,5mm_Carcano_CC_BY-SA_4.0_by_Grasyl.jpg",
+        "title": "File:Cartridge 6,5mm Carcano CC BY-SA 4.0 by Grasyl.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/6-5x52mm-carcano/comparison.webp",
+      "alt": "Three brass rifle cartridges of decreasing size standing side by side",
+      "caption": "From left: 8mm Mauser, 7.35mm Carcano and 6.5mm Carcano, Italy's two Carcano-era service rounds shown beside a contemporary rival.",
+      "width": 900,
+      "height": 1200,
+      "credit": {
+        "author": "Derek280",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:8mm,_7.35mm,_6.5mm.JPG",
+        "title": "File:8mm, 7.35mm, 6.5mm.JPG",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/6-5x52mm-carcano/reenactment.webp",
+      "alt": "A military re-enactor in period dress demonstrating a Carcano rifle to a visitor outdoors",
+      "caption": "A re-enactor demonstrating a Carcano rifle, chambered for this cartridge, at a 2025 military history event in Missouri.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Spc. Kevin Norton",
+        "sourceUrl": "https://www.dvidshub.net/image/9407971/museum-missouri-military-historys-annual-military-appreciation-weekend",
+        "title": "Museum of Missouri Military History's Annual Military Appreciation Weekend",
+        "licenseType": "public-domain",
+        "licenseNote": "Work of the United States Government, uncopyrighted under 17 U.S.C. §105: photographed for the Army (70th Mobile Public Affairs Detachment), VIRIN 251101-A-MK636-6027. DVIDS states no separate licence per asset."
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-6-5x52mm-carcano",
+      "type": "wikipedia",
+      "title": "6.5×52mm Carcano",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1364147917",
+      "lang": "en",
+      "revision": "1364147917",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-6-5-x-52-carcano",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 6,5 x 52 Carcano",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/6-5-x-52-carcano-en.pdf",
+      "revision": "2014-05-20",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

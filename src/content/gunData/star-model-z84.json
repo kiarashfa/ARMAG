@@ -1,0 +1,150 @@
+{
+  "id": "star-model-z84",
+  "name": "Star Model Z84",
+  "kind": "model",
+  "wikidataId": "Q579546",
+  "makerRef": "star-bonifacio-echeverria",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    { "name": "Star Z-84", "kind": "commercial" }
+  ],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "spain",
+  "producedIn": ["spain"],
+  "introduced": 1984,
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence", "law-enforcement"],
+  "massEmpty": {
+    "value": 3.15,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-star-model-z84",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352702163",
+    "sourceNote": "Largo/standard barrel, from the infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 670,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-star-model-z84",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352702163",
+    "sourceNote": "Largo/standard barrel, stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 465,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-star-model-z84",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352702163",
+    "sourceNote": "Largo/standard barrel, stock retracted, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 270,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-star-model-z84",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352702163",
+    "sourceNote": "Largo/standard barrel, from the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 600,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-star-model-z84",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352702163",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-star-model-z84",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352702163",
+        "sourceNote": "Published as a 25- or 30-round detachable box magazine, from the infobox, uncited there; 30 rounds recorded here as the larger of the two published capacities."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "corto",
+      "name": "Corto",
+      "summary": "The short-barreled version of the Z-84, with a shorter barrel and correspondingly shorter overall length than the standard Largo.",
+      "overrides": {
+        "massEmpty": {
+          "value": 3.1,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-star-model-z84",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352702163",
+          "sourceNote": "From the infobox, uncited there."
+        },
+        "length": {
+          "value": 615,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-star-model-z84",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352702163",
+          "sourceNote": "Stock extended, from the infobox, uncited there."
+        },
+        "lengthFolded": {
+          "value": 410,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-star-model-z84",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352702163",
+          "sourceNote": "Stock retracted, from the infobox, uncited there."
+        },
+        "barrelLength": {
+          "value": 215,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-star-model-z84",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352702163",
+          "sourceNote": "From the infobox, uncited there."
+        }
+      }
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/star-model-z84/hero.webp",
+      "alt": "A black submachine gun with a folded stock and a straight box magazine, standing upright on a museum display stand",
+      "caption": "A Star Z-84 submachine gun on display at the Eibar armory museum, Spain.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Txo",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Museo_Eibar_Subfusil_Z-84_STAR.JPG",
+        "title": "File:Museo Eibar Subfusil Z-84 STAR.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-star-model-z84",
+      "type": "wikipedia",
+      "title": "Star Model Z84",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1352702163",
+      "lang": "en",
+      "revision": "1352702163",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

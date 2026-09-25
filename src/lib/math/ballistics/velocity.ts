@@ -118,7 +118,7 @@ export function velocityForBarrel(
       atBarrelLengthMm: nearestMm,
       caveat: `Measured with a ${nearestMm} mm barrel, not this arm's ${barrelLengthMm} mm. Velocity outside the sourced range is not projected.`,
       velocity: derive({
-        formula: 'nearest sourced barrel length — no extrapolation (SPEC.md §8.2)',
+        formula: 'nearest sourced barrel length — no extrapolation',
         unit: 'm/s',
         inputs: [{ label: `v at ${nearestMm} mm`, of: nearest.velocity, unit: 'm/s' }],
         assumptions: [

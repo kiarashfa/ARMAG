@@ -51,7 +51,7 @@
         "value": 31.1,
         "unit": "g",
         "status": "estimated",
-        "sourceNote": "480 gr lead-alloy bullet, Cartridges of the World, via the Wikipedia infobox. No test-barrel length is stated for the load's published velocity, so velocity is not recorded (PLAYBOOK.md §5.1)."
+        "sourceNote": "480 gr lead-alloy bullet, Cartridges of the World, via the Wikipedia infobox. No test-barrel length is stated for the load's published velocity, so velocity is not recorded."
       },
       "bulletType": "lead alloy"
     }

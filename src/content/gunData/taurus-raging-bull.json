@@ -1,0 +1,203 @@
+{
+  "id": "taurus-raging-bull",
+  "name": "Taurus Raging Bull",
+  "kind": "model",
+  "wikidataId": "Q2444856",
+  "makerRef": "taurus-armas",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "revolver",
+  "action": "revolver",
+  "operatingSystem": "manual",
+  "designedIn": "brazil",
+  "producedIn": [
+    "brazil"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "cylinder"
+  ],
+  "roles": [
+    "hunting"
+  ],
+  "introduced": 1997,
+  "productionYears": {
+    "start": 1997,
+    "end": null
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "44-magnum",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there."
+      },
+      "primary": true
+    },
+    {
+      "cartridgeRef": "357-magnum",
+      "capacity": {
+        "value": 7,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. Raging Hunter line only."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "45-colt",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. Discontinued."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "38-special",
+      "capacity": {
+        "value": 7,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From Wikipedia's article body, uncited there. Raging Hunter line only (+P rated)."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "218-bee",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. Discontinued."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "22-hornet",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. Discontinued."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "30-carbine",
+      "capacity": {
+        "value": 8,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there. Discontinued."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "41-remington-magnum",
+      "capacity": {
+        "value": 6,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there (six rounds for .41). The Model 416; discontinued."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "454-casull",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there (five rounds for .454). Offered in both the Raging Bull and Raging Hunter lines."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "480-ruger",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there (five rounds for .480). The Model 480; discontinued."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "500-sw-magnum",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "From the Wikipedia infobox, uncited there (five rounds for .500)."
+      },
+      "primary": false
+    },
+    {
+      "cartridgeRef": "460-sw-magnum",
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "Five rounds, per the article's description of the Raging Hunter 460, uncited there. Raging Hunter line only, from 2021."
+      },
+      "primary": false
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/taurus-raging-bull/hero.webp",
+      "alt": "A stainless steel revolver labelled RAGING HORNET, fitted with a scope on rails above the barrel",
+      "caption": "A Raging Hornet, the .22 Hornet chambering of the Raging Bull line, fitted with a scope.",
+      "width": 1600,
+      "height": 786,
+      "credit": {
+        "author": "Noahsachs",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Raging_Hornet.jpg",
+        "title": "File:Raging Hornet.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/taurus-raging-bull/two-chamberings.webp",
+      "alt": "Two stainless steel Raging Bull revolvers with red-accented rubber grips, one with a longer ported barrel",
+      "caption": "Two Raging Bull revolvers, in .44 Magnum and .454 Casull — the latter a chambering this site does not yet catalogue as a cartridge and so not represented in this entry's data.",
+      "width": 1200,
+      "height": 675,
+      "credit": {
+        "author": "Vrsooo",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taurus_Raging_Bull_revolvers_(.44_Mag_and_.454_Casull).jpg",
+        "title": "File:Taurus Raging Bull revolvers (.44 Mag and .454 Casull).jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-taurus-raging-bull",
+      "type": "wikipedia",
+      "title": "Taurus Raging Bull",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373787857",
+      "lang": "en",
+      "revision": "1373787857",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

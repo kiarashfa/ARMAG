@@ -1,0 +1,174 @@
+{
+  "id": "walther-mp",
+  "name": "Walther MP",
+  "kind": "model",
+  "wikidataId": "Q1425849",
+  "makerRef": "carl-walther",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "germany",
+  "producedIn": ["germany"],
+  "introduced": 1963,
+  "productionYears": {
+    "start": 1963,
+    "end": 1983
+  },
+  "fireModes": ["semi", "automatic"],
+  "feedSystem": ["detachable-box"],
+  "roles": ["personal-defence"],
+  "massEmpty": {
+    "value": 3,
+    "unit": "kg",
+    "status": "verified",
+    "source": "mf-walther-mpl",
+    "sourceUrl": "http://modernfirearms.net/en/en/?post_type=post&p=6493",
+    "sourceNote": "MPL, as published on Modern Firearms."
+  },
+  "length": {
+    "value": 746,
+    "unit": "mm",
+    "status": "verified",
+    "source": "mf-walther-mpl",
+    "sourceUrl": "http://modernfirearms.net/en/en/?post_type=post&p=6493",
+    "sourceNote": "MPL, stock extended, as published on Modern Firearms."
+  },
+  "lengthFolded": {
+    "value": 462,
+    "unit": "mm",
+    "status": "verified",
+    "source": "mf-walther-mpl",
+    "sourceUrl": "http://modernfirearms.net/en/en/?post_type=post&p=6493",
+    "sourceNote": "MPL, stock folded, as published on Modern Firearms."
+  },
+  "barrelLength": {
+    "value": 260,
+    "unit": "mm",
+    "status": "verified",
+    "source": "mf-walther-mpl",
+    "sourceUrl": "http://modernfirearms.net/en/en/?post_type=post&p=6493",
+    "sourceNote": "MPL, as published on Modern Firearms."
+  },
+  "cyclicRate": {
+    "value": 550,
+    "unit": "rpm",
+    "status": "verified",
+    "source": "mf-walther-mpl",
+    "sourceUrl": "http://modernfirearms.net/en/en/?post_type=post&p=6493",
+    "sourceNote": "As published on Modern Firearms, common to both MPK and MPL."
+  },
+  "effectiveRange": {
+    "value": 200,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-walther-mp",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359206070",
+    "sourceNote": "MPL, from the Wikipedia infobox; no inline citation is given there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "verified",
+        "source": "mf-walther-mpl",
+        "sourceUrl": "http://modernfirearms.net/en/en/?post_type=post&p=6493",
+        "sourceNote": "32-round detachable box magazine, as published on Modern Firearms."
+      },
+      "primary": true
+    }
+  ],
+  "variants": [
+    {
+      "id": "mpk",
+      "name": "MPK",
+      "summary": "The short-barreled version of the Walther MP, standing for Maschinenpistole Kurz (\"short\"), with a shorter barrel and stock than the MPL.",
+      "overrides": {
+        "massEmpty": {
+          "value": 2.83,
+          "unit": "kg",
+          "status": "verified",
+          "source": "mf-walther-mpl",
+          "sourceUrl": "http://modernfirearms.net/en/en/?post_type=post&p=6493",
+          "sourceNote": "As published on Modern Firearms."
+        },
+        "length": {
+          "value": 659,
+          "unit": "mm",
+          "status": "verified",
+          "source": "mf-walther-mpl",
+          "sourceUrl": "http://modernfirearms.net/en/en/?post_type=post&p=6493",
+          "sourceNote": "Stock extended, as published on Modern Firearms."
+        },
+        "lengthFolded": {
+          "value": 381,
+          "unit": "mm",
+          "status": "verified",
+          "source": "mf-walther-mpl",
+          "sourceUrl": "http://modernfirearms.net/en/en/?post_type=post&p=6493",
+          "sourceNote": "Stock folded, as published on Modern Firearms."
+        },
+        "barrelLength": {
+          "value": 173,
+          "unit": "mm",
+          "status": "verified",
+          "source": "mf-walther-mpl",
+          "sourceUrl": "http://modernfirearms.net/en/en/?post_type=post&p=6493",
+          "sourceNote": "As published on Modern Firearms."
+        },
+        "effectiveRange": {
+          "value": 100,
+          "unit": "m",
+          "status": "estimated",
+          "source": "wp-walther-mp",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1359206070",
+          "sourceNote": "From the Wikipedia infobox; no inline citation is given there."
+        }
+      }
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/walther-mp/hero.webp",
+      "alt": "A gray-green metal submachine gun with a folded wire stock, a curved magazine, and a museum inventory placard beneath it",
+      "caption": "A Walther MPL submachine gun in a museum collection, with its wire stock folded.",
+      "width": 639,
+      "height": 334,
+      "credit": {
+        "author": "Springfield Armory Museum",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MP-L_WALTHER_9MM.jpg",
+        "title": "File:MP-L WALTHER 9MM.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-walther-mp",
+      "type": "wikipedia",
+      "title": "Walther MP",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359206070",
+      "lang": "en",
+      "revision": "1359206070",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "mf-walther-mpl",
+      "type": "web",
+      "title": "Walther MPL / MPK submachine guns",
+      "publisher": "Modern Firearms",
+      "url": "http://modernfirearms.net/en/en/?post_type=post&p=6493",
+      "accessed": "2026-09-24"
+    }
+  ]
+}

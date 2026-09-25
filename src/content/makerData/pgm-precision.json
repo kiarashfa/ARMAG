@@ -1,0 +1,35 @@
+{
+  "id": "pgm-precision",
+  "name": "PGM Précision",
+  "wikidataId": "Q3359683",
+  "country": "france",
+  "founded": 1991,
+  "dissolved": null,
+  "logo": {
+    "src": "images/makers/pgm-precision/logo.webp",
+    "alt": "The letters PGM in bold black block type above the word PRECISION, with three black dots above the letters and blue and red bars flanking the wordmark",
+    "caption": "PGM Précision's wordmark.",
+    "width": 131,
+    "height": 122,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/PGM_Pr%C3%A9cision",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-pgm-precision",
+      "type": "wikipedia",
+      "title": "PGM Précision",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1344424099",
+      "lang": "en",
+      "revision": "1344424099",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

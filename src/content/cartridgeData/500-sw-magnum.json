@@ -1,0 +1,208 @@
+{
+  "id": "500-sw-magnum",
+  "name": ".500 S&W Magnum",
+  "wikidataId": "Q158812",
+  "aliases": [
+    {
+      "name": "500 S&W Mag.",
+      "kind": "commercial"
+    },
+    {
+      "name": "12.7×41mmSR",
+      "kind": "metric"
+    }
+  ],
+  "designedBy": "Cor-Bon and Smith & Wesson",
+  "introduced": 2003,
+  "standard": "cip",
+  "caseType": "semi-rimmed",
+  "caseShape": "straight",
+  "bulletDiameter": {
+    "value": 12.7,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/500-s-w-mag-en.pdf",
+    "source": "cip-500-s-w-mag"
+  },
+  "caseLength": {
+    "value": 41.28,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/500-s-w-mag-en.pdf",
+    "source": "cip-500-s-w-mag"
+  },
+  "overallLength": {
+    "value": 58.42,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/500-s-w-mag-en.pdf",
+    "source": "cip-500-s-w-mag"
+  },
+  "rimDiameter": {
+    "value": 14.22,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/500-s-w-mag-en.pdf",
+    "source": "cip-500-s-w-mag"
+  },
+  "neckDiameter": {
+    "value": 13.46,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/500-s-w-mag-en.pdf",
+    "source": "cip-500-s-w-mag"
+  },
+  "baseDiameter": {
+    "value": 13.46,
+    "unit": "mm",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/500-s-w-mag-en.pdf",
+    "source": "cip-500-s-w-mag"
+  },
+  "maxPressure": {
+    "value": 370.0,
+    "unit": "MPa",
+    "status": "verified",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/500-s-w-mag-en.pdf",
+    "source": "cip-500-s-w-mag"
+  },
+  "pressureStandard": "cip",
+  "loads": [
+    {
+      "id": "hornady-300gr-ftx",
+      "name": "300 gr FTX",
+      "manufacturer": "Hornady",
+      "bulletType": "FTX",
+      "bulletMass": {
+        "value": 19.44,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-500-300-ftx",
+        "sourceUrl": "https://www.hornady.com/ammunition/handgun/500-s-w-magnum-300-gr-ftx",
+        "sourceNote": "300 gr as published on the manufacturer's product page, converted to grams (1 gr = 0.06479891 g)."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 215.9,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-500-300-ftx",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/500-s-w-magnum-300-gr-ftx",
+            "sourceNote": "8.5-inch test barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 594.4,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-500-300-ftx",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/500-s-w-magnum-300-gr-ftx",
+            "sourceNote": "1,950 ft/s muzzle velocity as published on the manufacturer's product page."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hornady-500gr-interlock-fp-xtp",
+      "name": "500 gr InterLock FP-XTP",
+      "manufacturer": "Hornady",
+      "bulletType": "InterLock FP-XTP",
+      "bulletMass": {
+        "value": 32.399,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-500-500-fp-xtp",
+        "sourceUrl": "https://www.hornady.com/ammunition/handgun/500-s-w-magnum-500gr-interlock-flat-point-xtp",
+        "sourceNote": "500 gr as published on the manufacturer's product page, converted to grams (1 gr = 0.06479891 g)."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 215.9,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-500-500-fp-xtp",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/500-s-w-magnum-500gr-interlock-flat-point-xtp",
+            "sourceNote": "8.5-inch test barrel, as stated on the product page."
+          },
+          "velocity": {
+            "value": 396.2,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-500-500-fp-xtp",
+            "sourceUrl": "https://www.hornady.com/ammunition/handgun/500-s-w-magnum-500gr-interlock-flat-point-xtp",
+            "sourceNote": "1,300 ft/s muzzle velocity as published on the manufacturer's product page."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/500-sw-magnum/hero.webp",
+      "alt": "A single long, wide brass revolver cartridge with a soft-point bullet lying on its side above a transparent ruler marked in centimetres.",
+      "caption": "A .500 S&W Magnum cartridge with a soft-point bullet, lying beside a centimetre scale.",
+      "width": 1600,
+      "height": 808,
+      "credit": {
+        "author": "Malis",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:500_SW_Magnum_-_SP_-_3.jpg",
+        "title": "File:500 SW Magnum - SP - 3.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/500-sw-magnum/headstamp.webp",
+      "alt": "The base of a brass cartridge seen end-on, showing a central primer and the stamped lettering \"500 S&W MAG\" and \"CBC\" around it.",
+      "caption": "The head of a .500 S&W Magnum case, showing its headstamp and the small rim.",
+      "width": 1046,
+      "height": 1165,
+      "credit": {
+        "author": "Malis",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:500_SW_Magnum_-_SP_-_1.jpg",
+        "title": "File:500 SW Magnum - SP - 1.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-09-24",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-500-s-w-magnum",
+      "type": "wikipedia",
+      "title": ".500 S&W Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371858917",
+      "lang": "en",
+      "revision": "1371858917",
+      "accessed": "2026-09-24",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-500-s-w-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 500 S&W Mag.",
+      "publisher": "Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/500-s-w-mag-en.pdf",
+      "revision": "2014-05-20",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "hornady-500-300-ftx",
+      "type": "manufacturer-spec",
+      "title": "500 S&W Magnum 300 gr FTX",
+      "publisher": "Hornady Manufacturing, Inc.",
+      "url": "https://www.hornady.com/ammunition/handgun/500-s-w-magnum-300-gr-ftx",
+      "accessed": "2026-09-24"
+    },
+    {
+      "key": "hornady-500-500-fp-xtp",
+      "type": "manufacturer-spec",
+      "title": "500 S&W Magnum 500 gr InterLock Flat Point XTP",
+      "publisher": "Hornady Manufacturing, Inc.",
+      "url": "https://www.hornady.com/ammunition/handgun/500-s-w-magnum-500gr-interlock-flat-point-xtp",
+      "accessed": "2026-09-24"
+    }
+  ]
+}
