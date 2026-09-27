@@ -1,6 +1,6 @@
 # ARMAG
 
-**ARMAG** (from *arm* + *magazine*) is a free, non-profit reference for firearms — no ads, no accounts, no trackers, and nothing to subscribe to.
+**ARMAG** (from *arm* + *magazine*) is a free, non-profit reference for firearms, with no ads, no accounts, and nothing to subscribe to.
 
 The name works twice over: a magazine is what a firearm is fed from, and a magazine is what this is. One page per firearm, one per cartridge, one per manufacturer, joined by a lineage graph and laid out like a magazine rather than a database dump.
 
@@ -12,9 +12,11 @@ There is deliberately no damage, lethality or "stopping power" figure, in v1 or 
 
 Browse it by type, action, operating system, feed, role, country or era — every one of those a view computed over tagged entries, so nothing breaks when an entry is reclassified. Compare four arms side by side with real percentile bars carrying real units, work out recoil or trajectory for a load that interests you, or keep a private record of what you own and what you have put through it.
 
-Nothing you do here leaves your browser. A comparison, an armory, a shared layout — each lives in your own storage or travels in a link you choose to share, because there is no server to send it to.
+What you save stays in your browser. A comparison, an armory or a shared layout lives in your own storage or travels in a link you choose to share, because there is no server to send it to.
 
 ---
+
+**Live site:** <https://kiarashfa.github.io/ARMAG/> · **Sibling encyclopedias:** [Xefy](https://kiarashfa.github.io/Xefy/) · [eXir](https://kiarashfa.github.io/eXir/) · [Markey](https://kiarashfa.github.io/Markey/) · **ARMAG**
 
 © 2026 Kiarash Farajzadehahary.
 

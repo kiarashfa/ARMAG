@@ -124,8 +124,9 @@
 <button
   type="button"
   onclick={open}
-  class="type-data flex shrink-0 items-center gap-1.5 rounded border border-line-strong bg-surface-1 px-2 py-1 text-xs text-ink-secondary hover:text-ink"
+  class="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-line-strong text-ink-secondary transition-colors hover:bg-surface-2 hover:text-ink"
   aria-label="Search the site"
+  title="Search (press /)"
 >
   <!--
     The same 24×24 stroked shape as `blocks/Icon.astro`. It is repeated rather
@@ -145,8 +146,6 @@
   >
     <path d="M10.5 3a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15ZM21 21l-5.2-5.2" />
   </svg>
-  <span class="hidden sm:inline">Search</span>
-  <kbd class="rounded border border-line px-1 text-[0.65rem] text-ink-muted">/</kbd>
 </button>
 
 <dialog

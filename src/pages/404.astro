@@ -1,0 +1,66 @@
+---
+/**
+ * The 404.
+ *
+ * GitHub Pages serves `/404.html` for any path it cannot resolve, including
+ * under a project prefix, so this needs nothing beyond existing at the root of
+ * the build, and the host still answers with a real 404 status.
+ *
+ * `noindex`, and so out of the sitemap too: a soft 404 indexed under its own
+ * title is worse than none.
+ *
+ * The same shape as the sibling sites' 404s: the status, a plain headline, one
+ * line in the site's own voice, then the ways out. The voice here stays level:
+ * a reference on this subject does not make jokes about it.
+ */
+import BaseLayout from '../components/ui/BaseLayout.astro';
+import { href } from '../lib/content/href.ts';
+
+/*
+ * Chosen at build time rather than in the browser: a 404 is the page most
+ * likely to be reached by something that runs no JavaScript, so it has to be
+ * complete in its own HTML.
+ */
+const lines = [
+  'Nothing is catalogued at this address.',
+  'No entry is filed under this address.',
+  'This address does not match any entry in the reference.',
+];
+const quip = lines[Math.floor(Math.random() * lines.length)]!;
+
+const ways = [
+  { url: href(), label: 'Firearms' },
+  { url: href('cartridges'), label: 'Cartridges' },
+  { url: href('makers'), label: 'Manufacturers' },
+  { url: href('about'), label: 'About' },
+];
+---
+
+<BaseLayout title="Not found" description="No page lives at this address." noindex>
+  <div class="mx-auto grid max-w-[44rem] justify-items-center px-(--layout-gutter) pb-20 pt-16 text-center sm:pt-24">
+    <p class="type-data mb-4 text-[13px] tracking-[0.34em] text-ui-accent">404</p>
+    <h1 class="type-display text-5xl sm:text-6xl">Not found</h1>
+    <p class="type-body mt-4 max-w-[34rem] text-lg text-ink-secondary [text-wrap:balance]">{quip}</p>
+
+    <nav
+      class="mt-10 flex w-full flex-wrap justify-center gap-x-7 gap-y-2.5 border-t border-line pt-8"
+      aria-label="Ways out"
+    >
+      {
+        ways.map((w) => (
+          <a
+            href={w.url}
+            class="type-title border-b border-transparent pb-[3px] text-lg text-ink no-underline transition-colors hover:border-ui-accent"
+          >
+            {w.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <p class="type-data mt-7 max-w-[38rem] text-sm leading-relaxed text-ink-muted">
+      Or search: the button in the header matches alternative names and designations as
+      well as titles, which is very likely what brought you here.
+    </p>
+  </div>
+</BaseLayout>

@@ -1,96 +1,60 @@
 ---
 /**
- * Site footer, carrying the disclaimer required on **every page** by
- * SPEC.md §14. The full version lives on `/about/`; this is the short form,
- * and it is not optional or collapsible anywhere.
+ * The site footer: one quiet row of links and the copyright, with the sibling
+ * sites underneath. The same shape on all four sibling sites.
  *
- * ── Why it is a grid ──────────────────────────────────────────────────────
- * It used to be a blurb and a link list at the top of an otherwise empty
- * 88rem band, with the disclaimer under them capped at a reading measure it
- * had no use for — a 12px paragraph that stopped at 40% of a wide screen and
- * read as a broken layout. Three columns give each piece a real column to
- * fill, so the width is used by content rather than by whitespace, and each
- * column is naturally narrow enough to read.
+ * The disclaimer lives on the About page, which this row links to first.
  */
 import { href } from '../../lib/content/href.ts';
 
-const year = new Date().getUTCFullYear();
-
-const about = [
+const links = [
   { label: 'About', path: href('about') },
   { label: 'Methodology', path: href('methodology') },
   { label: 'Editorial policy', path: href('editorial-policy') },
   { label: 'Attributions', path: href('attributions') },
+  { label: 'Source code', path: 'https://github.com/kiarashfa/ARMAG' },
 ];
 
-const browse = [
-  { label: 'Firearms', path: href() },
-  { label: 'Cartridges', path: href('cartridges') },
-  { label: 'Manufacturers', path: href('makers') },
-  { label: 'Glossary', path: href('glossary') },
-  { label: 'Tools', path: href('tools') },
+/*
+ * The first year is fixed: it is when the project began. The current year is
+ * read when the site is built, so every deploy carries the right range without
+ * anyone editing it.
+ */
+const COPYRIGHT_START_YEAR = 2026;
+const buildYear = new Date().getFullYear();
+const years = buildYear > COPYRIGHT_START_YEAR ? `${COPYRIGHT_START_YEAR}–${buildYear}` : `${COPYRIGHT_START_YEAR}`;
+
+const siblings = [
+  { name: 'Xefy', subject: 'Recipes', url: 'https://kiarashfa.github.io/Xefy/' },
+  { name: 'eXir', subject: 'Drinks', url: 'https://kiarashfa.github.io/eXir/' },
+  { name: 'Markey', subject: 'Cars', url: 'https://kiarashfa.github.io/Markey/' },
+  { name: 'ARMAG', subject: 'Firearms', url: 'https://kiarashfa.github.io/ARMAG/' },
 ];
+
+const link = 'text-ink-secondary no-underline transition-colors hover:text-ui-accent';
 ---
 
-<footer class="mt-(--layout-section-gap) border-t border-line bg-surface-1" data-pagefind-ignore>
-  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-10">
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,2fr)]">
-      <div>
-        <p class="type-title text-base text-ink">ARMAG</p>
-        <p class="type-data mt-2 text-sm text-ink-secondary">
-          A free, non-profit reference for modern firearms. Every number is either sourced or
-          derived from sourced numbers by a formula you can open and check.
-        </p>
-      </div>
-
-      <nav aria-label="Browse">
-        <p class="type-heading text-xs uppercase tracking-widest text-ink-muted">Browse</p>
-        <ul class="type-data mt-3 flex flex-col gap-2 text-sm">
-          {
-            browse.map((item) => (
-              <li>
-                <a href={item.path} class="text-ink-secondary hover:text-ui-accent">
-                  {item.label}
-                </a>
-              </li>
-            ))
-          }
+<footer class="mt-(--layout-section-gap) border-t border-line" data-pagefind-ignore>
+  <div class="type-data mx-auto max-w-(--layout-max) px-(--layout-gutter) pb-8 pt-5 text-[13px]">
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
+      <nav class="flex flex-wrap items-center gap-x-5 gap-y-1.5" aria-label="Site">
+        <a class="type-title text-[15px] text-ink no-underline" href={href()}>ARMAG</a>
+        <ul class="flex flex-wrap gap-x-4 gap-y-1.5">
+          {links.map((l) => <li><a class={link} href={l.path}>{l.label}</a></li>)}
         </ul>
       </nav>
-
-      <nav aria-label="About this site">
-        <p class="type-heading text-xs uppercase tracking-widest text-ink-muted">This site</p>
-        <ul class="type-data mt-3 flex flex-col gap-2 text-sm">
-          {
-            about.map((item) => (
-              <li>
-                <a href={item.path} class="text-ink-secondary hover:text-ui-accent">
-                  {item.label}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-
-      <div>
-        <p class="type-heading text-xs uppercase tracking-widest text-ink-muted">
-          Reference information only
-        </p>
-        <p class="type-data mt-3 text-sm text-ink-secondary">
-          ARMAG is not legal advice, not safety instruction, and not a substitute for a
-          manufacturer's manual or qualified training. Figures are transcribed from published
-          sources and may contain errors; check anything that matters against the source we cite.{' '}
-          <a href={href('about')} class="text-ui-accent">Read the full disclaimer</a>.
-        </p>
-      </div>
+      <p class="text-ink-muted sm:ml-auto">© {years} Kiarash Farajzadehahary</p>
     </div>
-
-    <p
-      class="type-data mt-8 flex flex-wrap gap-x-4 gap-y-1 border-t border-line pt-4 text-xs text-ink-muted"
-    >
-      <span>© {year} Kiarash Farajzadehahary.</span>
-      <span>Content licences are recorded per image and per citation.</span>
-    </p>
+    <nav class="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink-muted" aria-label="Sibling sites">
+      {
+        siblings.map((s) =>
+          s.name === 'ARMAG' ? (
+            <span class="text-ink-secondary" aria-current="true" title={s.subject}>{s.name}</span>
+          ) : (
+            <a class="text-ink-muted no-underline hover:text-ink" href={s.url} title={s.subject}>{s.name}</a>
+          ),
+        )
+      }
+    </nav>
   </div>
 </footer>

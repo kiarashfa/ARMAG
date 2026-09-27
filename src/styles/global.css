@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
 /*
+ * Self-hosted type, bundled with the rest of the CSS: IBM Plex Sans, as one
+ * variable file carrying both a weight and a width axis. Plex was drawn for
+ * engineering documentation, which is the register of a spec sheet rather than
+ * of a gun catalogue, and its width axis gives display text the condensed,
+ * stamped proportion of a magazine cover from the same file the body reads in.
+ */
+@import "@fontsource-variable/ibm-plex-sans/wdth.css";
+
+/*
  * ARMAG design tokens — SPEC.md §11.
  *
  * Registered in `@theme` so Tailwind generates real utilities
@@ -9,11 +18,11 @@
  *
  * ── Three rules this file exists to enforce ─────────────────────────────────
  *
- * 1. DARK IS THE DEFAULT (SPEC.md §11). The values in `@theme` below are the
- *    dark set. Light is an override, applied only when a visitor asks for it
- *    by setting `data-theme="light"`. The system `prefers-color-scheme` is
- *    deliberately NOT consulted — "dark by default" is a product decision, not
- *    a fallback, and a light-set machine would otherwise never see it.
+ * 1. DARK IS THE BASE SET. The values in `@theme` below are the dark set, and
+ *    light is an override applied through `data-theme="light"`. The pre-paint
+ *    script in `BaseLayout.astro` always stamps the attribute: the visitor's
+ *    stored choice if there is one, otherwise the operating system's. With no
+ *    script and no stated preference, dark is what shows.
  *
  * 2. TWO SEPARATE COLOUR SYSTEMS. `--color-ui-accent` is one constant colour
  *    for links, focus rings and controls; it must never change with the
@@ -38,16 +47,14 @@
   --color-current: currentColor;
 
   /*
-   * Type registers. Both resolve to the platform's own face: the system font
-   * already ships optical sizing, tracking tables and legibility tuning, and
-   * overriding it needs a reason we do not yet have. The registers are
-   * distinguished by weight, size, tracking and leading instead — which is
-   * where the hierarchy actually lives. A bespoke display face changes these
-   * two lines and nothing else.
+   * Type registers, one family (see the import at the top of this file). The
+   * display register is the same face set condensed, through `font-stretch` on
+   * `.type-display`, `.type-title` and `.type-stat`. The system stack stays
+   * behind it as the fallback while the file loads.
    */
-  --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI Variable Display",
+  --font-display: "IBM Plex Sans Variable", ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI Variable Text",
+  --font-sans: "IBM Plex Sans Variable", ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono", Menlo,
     Consolas, monospace;
@@ -240,8 +247,9 @@
  * shell and the prose containers.
  */
 :root {
-  --layout-gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
-  --layout-max: 88rem;
+  /* The frame the sibling sites share: 75rem wide, a 20px-to-48px gutter. */
+  --layout-gutter: clamp(1.25rem, 4vw, 3rem);
+  --layout-max: 75rem;
   --layout-section-gap: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
 
   /*
@@ -275,7 +283,7 @@
    * `note` is the third measure and it exists because the other two were
    * being used for the wrong job. A caption, a standfirst or a one-line
    * disclaimer is not a reading column — nobody reads four paragraphs of it —
-   * but it still should not run the full 88rem of the layout. Given its own
+   * but it still should not run the full 75rem of the layout. Given its own
    * token, small supporting text has an explicit width instead of borrowing a
    * paragraph's and silently getting a different one at every type size.
    */
@@ -330,6 +338,7 @@
    */
   .type-display {
     font-family: var(--font-display);
+    font-stretch: 85%;
     font-weight: 700;
     font-optical-sizing: auto;
     text-wrap: balance;
@@ -337,6 +346,7 @@
 
   .type-title {
     font-family: var(--font-display);
+    font-stretch: 85%;
     font-weight: 650;
     line-height: 1.12;
     letter-spacing: -0.02em;
@@ -357,6 +367,7 @@
   /* The stat-strip readout: a big number that must not wrap or re-flow. */
   .type-stat {
     font-family: var(--font-display);
+    font-stretch: 85%;
     font-weight: 650;
     white-space: nowrap;
   }

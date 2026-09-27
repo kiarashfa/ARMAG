@@ -97,12 +97,21 @@ const display = (file) => path.relative(root, file).split(path.sep).join('/');
  */
 const MIN_SECRET_LENGTH = 12;
 
+/**
+ * Keys in `.env` that are public by design and are meant to reach the built
+ * pages. The analytics measurement ID is written into every page's head
+ * and is visible to anyone who opens the source; `.env` only hands it over.
+ * Listed by name, so a real secret added later is still caught.
+ */
+const PUBLIC_ENV_KEYS = new Set(['GA_MEASUREMENT_ID']);
+
 const secrets = [];
 if (existsSync(envFile)) {
   for (const line of (await readFile(envFile, 'utf8')).split(/\r?\n/)) {
     const match = /^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$/.exec(line);
     if (!match) continue;
     const name = match[1];
+    if (PUBLIC_ENV_KEYS.has(name)) continue;
     const value = match[2].trim().replace(/^["']|["']$/g, '');
     if (value.length >= MIN_SECRET_LENGTH) secrets.push({ name, value });
   }
