@@ -1,6 +1,6 @@
 ---
 /**
- * The gun page — SPEC.md §11, in the order that section specifies:
+ * The gun page — the design, in the order that section specifies:
  *
  *   hero → five-number stat strip → lede → **derived metrics** → variants →
  *   specifications → silhouette → lineage → gallery → related → references
@@ -62,7 +62,7 @@ interface Props {
   familyName?: string | null;
   /** Cartridge display names by id, for the chambering rows. */
   cartridgeNames: Record<string, string>;
-  /** Computed era id. Never authored (SPEC.md §7). */
+  /** Computed era id. Never authored. */
   era?: string | null;
   /** The five-number strip. Exactly five, in this order, or fewer if unknown. */
   statStrip: GunPageDerived[];
@@ -78,7 +78,7 @@ interface Props {
    * compare table cannot read the same field two different ways.
    */
   cells: Record<string, CompareCell>;
-  /** This entry and its family siblings, at true scale (SPEC.md §9.6). */
+  /** This entry and its family siblings, at true scale. */
   silhouettes?: SilhouetteSubject[];
 }
 
@@ -116,7 +116,7 @@ const stacked = gun.variants.length > 8;
 const tabGroup = `variants-${gun.id}`;
 
 /**
- * SPEC.md §12 — `TechArticle`, never `Product`. `json-ld.ts` throws on the
+ * `TechArticle`, never `Product`. `json-ld.ts` throws on the
  * commerce vocabulary, so the ban is kept by construction rather than by
  * remembering it here. `launchPrice` is rendered on the page as a sourced
  * historical figure and is deliberately absent from the structured data: a
@@ -280,7 +280,7 @@ const jsonLd = entryArticle({
                   <div class="tabpanel rounded-lg border border-line bg-surface-1 p-4">
                     {/*
                       Its own heading, in the static HTML — the condition on
-                      which variants-as-tabs was accepted at all (SPEC.md §12).
+                      which variants-as-tabs was accepted at all.
                     */}
                     <h3 class="type-heading text-base text-ink">{variant.name}</h3>
                     {variant.nativeName && (
@@ -318,7 +318,7 @@ const jsonLd = entryArticle({
 
             {/*
               The delta table: only what each variant CHANGES, which is the
-              whole delta-override pattern of SPEC.md §5.2 made visible.
+              whole delta-override pattern made visible.
             */}
             <div class="delta-table overflow-x-auto">
               <table class="type-data w-full min-w-[36rem] text-sm">

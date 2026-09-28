@@ -5,11 +5,11 @@
  *   node scripts/data/cpi.mjs
  *   node scripts/data/cpi.mjs --check     # compare the live series to the file
  *
- * SPEC.md Appendix A: **the built site makes no runtime API call.** A price
+ * **the built site makes no runtime API call.** A price
  * page that fetches the CPI at render time is a page that breaks when the BLS
  * changes an endpoint, and a static site has no server to do it on anyway. So
  * the table is baked, and `lib/math/economics.ts` takes it as a parameter
- * because `lib/math` does no I/O at all (Instruction.md Phase 3).
+ * because `lib/math` does no I/O at all.
  *
  * Series `CUUR0000SA0` — CPI for All Urban Consumers, US city average, all
  * items, not seasonally adjusted, base 1982-84 = 100. Period `M13` is the
@@ -65,7 +65,7 @@ function envelope(values) {
   return {
     note:
       'Annual-average CPI-U, baked at authoring time so the built site makes no runtime API call ' +
-      '(SPEC.md Appendix A). `lib/math/economics.ts` takes `annualAverage` as its `CpiTable` and ' +
+      '. `lib/math/economics.ts` takes `annualAverage` as its `CpiTable` and ' +
       'returns null — not an approximation — for a year that is absent. The current year has no ' +
       'annual average until the year is over, which is why the table normally stops one year back. ' +
       'Regenerate with `node scripts/data/cpi.mjs`.',

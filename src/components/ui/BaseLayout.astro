@@ -17,12 +17,12 @@ import '../../styles/global.css';
 interface Props {
   title: string;
   description: string;
-  /** Kept out of the index and out of the sitemap — SPEC.md §12. */
+  /** Kept out of the index and out of the sitemap. */
   noindex?: boolean;
   /** Canonical path, base included. Defaults to the current URL. */
   canonicalPath?: string;
   /**
-   * Structured data for whatever this page is *about* — SPEC.md §12. The
+   * Structured data for whatever this page is *about*. The
    * `BreadcrumbList` is not passed here: `Breadcrumbs.astro` emits its own from
    * the array it is already rendering, so the two cannot disagree.
    */
@@ -150,7 +150,7 @@ const themeColorSync = `(()=>{const m=document.querySelector('meta[name="theme-c
     <Footer />
 
     {/*
-      Site-wide, per SPEC.md §9.2, and `client:idle` because it must be
+      Site-wide,, and `client:idle` because it must be
       listening for a Compare press on any page — including a press that
       happens before the reader has ever opened the tray. It renders nothing
       until there is something in it.

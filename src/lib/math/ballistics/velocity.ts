@@ -1,5 +1,5 @@
 /**
- * Barrel-length velocity — SPEC.md §8.2, the honesty rule.
+ * Barrel-length velocity, the honesty rule.
  *
  * A gun's muzzle velocity for a given load is not a property of the gun and it
  * is not a property of the load. It is a property of the pair, and almost

@@ -10,7 +10,7 @@
 @import "@fontsource-variable/ibm-plex-sans/wdth.css";
 
 /*
- * ARMAG design tokens — SPEC.md §11.
+ * ARMAG design tokens.
  *
  * Registered in `@theme` so Tailwind generates real utilities
  * (`bg-surface-1`, `text-ink-muted`, `text-type-handgun`) rather than every
@@ -62,7 +62,7 @@
   /*
    * Two sizes beyond Tailwind's stock scale, because two things on this site
    * are deliberately louder than anything else: the entry name in the hero,
-   * and the five numbers in the stat strip (SPEC.md §11). Both are fluid, so
+   * and the five numbers in the stat strip. Both are fluid, so
    * neither needs a breakpoint override.
    */
   --text-display: clamp(2.75rem, 1.9rem + 4.2vw, 4.75rem);
@@ -131,7 +131,7 @@
   --color-ui-accent-hover: oklch(86% 0.10 215);
 
   /*
-   * Data-trust status colours — SPEC.md §5.8.
+   * Data-trust status colours.
    *
    * These are SIGNALS and are deliberately the most saturated colours on the
    * site (C >= 0.13). The content accents below are deliberately muted
@@ -148,7 +148,7 @@
   /*
    * Content accents, per firearm TYPE — never per manufacturer.
    *
-   * Six accents cover the eight taxonomy types (SPEC.md §7): pistol and
+   * Six accents cover the eight taxonomy types: pistol and
    * revolver share handgun; rifle and carbine share rifle; submachine-gun and
    * pdw share smg. `platform` is the neutral used by `kind: 'family'` entries,
    * which have no single type.
@@ -247,7 +247,7 @@
  * shell and the prose containers.
  */
 :root {
-  /* The frame the sibling sites share: 75rem wide, a 20px-to-48px gutter. */
+  /* The frame all four sites share: 75rem wide, a 20px-to-48px gutter. */
   --layout-gutter: clamp(1.25rem, 4vw, 3rem);
   --layout-max: 75rem;
   --layout-section-gap: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
@@ -318,7 +318,7 @@
 
   /*
    * Tabular numerals everywhere a number can be compared to the number above
-   * it — SPEC.md §11. A spec table set in proportional figures looks amateur
+   * it. A spec table set in proportional figures looks amateur
    * instantly, and the columns genuinely stop lining up.
    *
    * Applied structurally (every table, and anything in the data register)
@@ -405,7 +405,7 @@
    * Tailwind's preflight resets `margin: 0` on everything, which breaks the
    * user-agent rule that centres an open `[popover]` in the viewport — it
    * lands in the top-left corner instead. The Native Popover API is the single
-   * disclosure primitive on this site (SPEC.md §11), shared by image credits
+   * disclosure primitive on this site, shared by image credits
    * and the f formula panels, so this one line is load-bearing.
    */
   [popover] {
@@ -437,7 +437,7 @@
  * with JavaScript disabled, switches with no hydration and no layout shift, and
  * the two strings are the same function's output so they cannot disagree.
  *
- * The imperial half also carries `data-pagefind-ignore`, so SPEC.md §8.1 holds:
+ * The imperial half also carries `data-pagefind-ignore`, so the design holds:
  * imperial is computed, never stored, never indexed.
  */
 .u-imperial {
@@ -453,7 +453,7 @@
 /*
  * ── Variant tabs, without JavaScript ───────────────────────────────────────
  *
- * SPEC.md §12 accepted variants-as-tabs on one condition: **every panel is in
+ * the design accepted variants-as-tabs on one condition: **every panel is in
  * the static HTML with its own heading.** These are radio buttons, so the
  * panels are all rendered, all indexable, and the group is keyboard-navigable
  * with the arrow keys for free.
@@ -534,7 +534,7 @@
   /*
    * ── The disclosure primitive's skin ──────────────────────────────────────
    *
-   * Instruction.md Phase 4: the popover is built once and used by both image
+   * the design: the popover is built once and used by both image
    * credits and formula panels. A Svelte island cannot render an Astro
    * component, so the compare table would otherwise have carried a second copy
    * of the same Tailwind string. These two classes are the shared half —
@@ -570,7 +570,7 @@
   /*
    * ── The compare table ────────────────────────────────────────────────────
    *
-   * SPEC.md §9.2 wants a sticky label column and scroll-snap through the entry
+   * the design wants a sticky label column and scroll-snap through the entry
    * columns on mobile. Both are CSS: the label column is `position: sticky` on
    * the horizontal axis, and the entry columns are snap targets inside the
    * scroller. Neither needs the island to know the viewport width.
@@ -655,7 +655,7 @@
   }
 
   /*
-   * ── Crosslinks — SPEC.md §12 ─────────────────────────────────────────────
+   * ── Crosslinks — the design ─────────────────────────────────────────────
    *
    * Both kinds are underlined, not merely coloured: colour alone is not a
    * distinguishable link, and this prose is set in `ink-secondary` where an

@@ -7,7 +7,7 @@
  * per-entry commands are the same question asked sixty times. It downloads
  * nothing and decides nothing.
  *
- * An entry with **no** image sits below the publication floor (SPEC.md §5.9) —
+ * An entry with **no** image sits below the publication floor —
  * it is a catalogue row with no page — so zero is the number that costs
  * something, and it is what this reports first.
  *

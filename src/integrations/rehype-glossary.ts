@@ -1,5 +1,5 @@
 /**
- * Automatic glossary linking — SPEC.md §5.6.
+ * Automatic glossary linking.
  *
  * "Every glossary term is auto-crosslinked from every occurrence in any prose
  * on the site." A reader meeting "delayed blowback" in the middle of a

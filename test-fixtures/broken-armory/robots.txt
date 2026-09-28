@@ -1,4 +1,4 @@
-# A deliberately wrong robots.txt — the well-meaning mistake SPEC.md §12 exists
+# A deliberately wrong robots.txt — the well-meaning mistake the check exists
 # to prevent. Blocking a noindex page means the page is never fetched, so the
 # noindex is never read, and it can sit in the index as "fetched but not
 # indexed" indefinitely.

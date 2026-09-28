@@ -1,5 +1,5 @@
 /**
- * The storage wrapper's promises, asserted — SPEC.md §9.9.
+ * The storage wrapper's promises, asserted.
  *
  * The interesting cases are all failures: a browser that refuses, a blob from
  * an older schema version, and a damaged blob. Each must be discarded whole and
@@ -112,7 +112,7 @@ test('no storage at all is not an error', () => {
   });
 });
 
-test('the tray is capped at four, per SPEC.md §9.2', () => {
+test('the tray is capped at four', () => {
   const storage = new FakeStorage();
   withStorage(storage, () => {
     const many = Array.from({ length: 7 }, (_, i) => ({ id: `entry-${i}`, name: `Entry ${i}` }));

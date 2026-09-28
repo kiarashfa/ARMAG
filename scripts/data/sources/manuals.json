@@ -1,5 +1,5 @@
 {
-  "note": "Public-domain US military manuals — FRICTION-LOG A2 called these 'the best free firearm sources'. FM 3-22.9 Table 2-1 was the single densest source in the pilot batch. What is recorded per manual is its DESIGNATION, because that is what the citation needs: `referenceEntry` requires `revision` on a military-manual citation and the designation is what someone re-finds it by. A host is a convenience and goes stale — army.mil withdrew its own copies and the mirrors in the friction log now 403 or 404. `manuals.mjs check` re-probes every URL here; `manuals.mjs find` resolves a designation to a permanent Internet Archive identifier when they all die.",
+  "note": "Public-domain US military manuals — the design called these 'the best free firearm sources'. FM 3-22.9 Table 2-1 was the single densest source in the pilot batch. What is recorded per manual is its DESIGNATION, because that is what the citation needs: `referenceEntry` requires `revision` on a military-manual citation and the designation is what someone re-finds it by. A host is a convenience and goes stale — army.mil withdrew its own copies and the mirrors in the friction log now 403 or 404. `manuals.mjs check` re-probes every URL here; `manuals.mjs find` resolves a designation to a permanent Internet Archive identifier when they all die.",
   "checked": "2026-08-31",
   "manuals": [
     {
@@ -39,7 +39,7 @@
       "publisher": "Headquarters, Department of the Army",
       "year": 1994,
       "covers": ["5-56x45mm-nato", "7-62x51mm-nato", "9x19mm-parabellum"],
-      "contents": "Per-cartridge mass, length, chamber pressure and muzzle velocity for every US service round. WARNING — it also prints propellant type and charge weight for each; SPEC.md §14 puts that outside the line and there is no field for it. Do not transcribe it anywhere, including into a sourceNote (FRICTION-LOG A8).",
+      "contents": "Per-cartridge mass, length, chamber pressure and muzzle velocity for every US service round. WARNING — it also prints propellant type and charge weight for each; the design puts that outside the line and there is no field for it. Do not transcribe it anywhere, including into a sourceNote.",
       "urls": [
         {
           "url": "https://archive.org/details/tm-43-0001-27-small-caliber-ammunition",
@@ -67,11 +67,11 @@
   "deadHosts": [
     {
       "host": "www.bits.de/NRANEU/others/amd-us-archive/",
-      "note": "Recorded as working in FRICTION-LOG A2 on 2026-08-27. Returns 403 to every client on 2026-08-31."
+      "note": "Recorded as working on 2026-08-27. Returns 403 to every client on 2026-08-31."
     },
     {
       "host": "pdf.textfiles.com/manuals/MILITARY/",
-      "note": "Recorded as working in FRICTION-LOG A2. Does not resolve at all on 2026-08-31."
+      "note": "Recorded as working. Does not resolve at all on 2026-08-31."
     },
     {
       "host": "www.army.mil",

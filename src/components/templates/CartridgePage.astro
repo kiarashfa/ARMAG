@@ -1,6 +1,6 @@
 ---
 /**
- * The cartridge page — SPEC.md §5.4.
+ * The cartridge page.
  *
  * **This page is also the caliber taxonomy page.** It carries real authored
  * content *and* the computed list of every arm chambered in it, which is the
@@ -48,7 +48,7 @@ const identityOnly = cartridge.loads.length === 0;
 
 const description = `${cartridge.name}: dimensions, pressure and load data transcribed from the published standard, plus every firearm chambered in it.`;
 
-/** SPEC.md §12 — a cartridge entry is a `TechArticle`, not a listing. */
+/** a cartridge entry is a `TechArticle`, not a listing. */
 const jsonLd = entryArticle({
   type: 'TechArticle',
   name: cartridge.name,

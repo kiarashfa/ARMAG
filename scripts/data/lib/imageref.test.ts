@@ -1,5 +1,5 @@
 /**
- * Instruction.md Phase 9 states one definition of done as a negative: the image
+ * the design states one definition of done as a negative: the image
  * fetcher **cannot emit an `imageRef` missing licence data**. A negative is
  * exactly the kind of guarantee that rots quietly — nobody notices the day it
  * stops holding — so it is asserted here rather than trusted.
@@ -38,7 +38,7 @@ test('no metadata at all is refused', () => {
   assert.throws(() => buildImageRef({ src: 'images/x.webp', meta: null }), /without a licence/);
 });
 
-test('no source page URL is refused — SPEC.md §10 wants the file page', () => {
+test('no source page URL is refused — the design wants the file page', () => {
   assert.throws(
     // @ts-expect-error — the point of the test is a record with no page URL.
     () => buildImageRef({ src: 'images/x.webp', meta: { ...commonsCcBySa, pageUrl: undefined } }),
@@ -66,17 +66,14 @@ test('an attribution licence with no author is refused by the real schema', () =
   );
 });
 
-test('OGL and Licence Ouverte are named, not mapped to cc-by', () => {
-  // FRICTION-LOG D2. Both are attribution licences that resemble CC BY closely
-  // enough that "close enough" is the tempting mistake; the file would then
-  // carry a licence name it is not under.
-  for (const short of ['OGL v1.0', 'Licence Ouverte']) {
-    assert.equal(licenseTypeFor(short), null, `${short} must not map to an enum member`);
-    assert.throws(
-      () => buildImageRef({ src: 'images/x.webp', meta: { ...commonsCcBySa, licenseShortName: short } }),
-      /Do NOT map it to cc-by/,
-    );
-  }
+test('OGL and Licence Ouverte map to their own members, never to cc-by', () => {
+  // Both are attribution licences that resemble CC BY closely enough that
+  // "close enough" is the tempting mistake; the file would then carry a
+  // licence name it is not under. Each has its own enum member instead.
+  assert.equal(licenseTypeFor('OGL v1.0'), 'ogl');
+  assert.equal(licenseTypeFor('Open Government Licence 3.0'), 'ogl');
+  assert.equal(licenseTypeFor('Licence Ouverte'), 'licence-ouverte');
+  assert.equal(licenseTypeFor('Etalab Open Licence 2.0'), 'licence-ouverte');
 });
 
 test('share-alike is not flattened to CC BY', () => {
@@ -103,7 +100,7 @@ test('a public-domain file needs no author', () => {
 });
 
 test('alt and caption are emitted as TODO, never as the source description', () => {
-  // FRICTION-LOG D5: a Commons description describes the file, and is sometimes
+  // a Commons description describes the file, and is sometimes
   // about a different variant than the entry. Copying it into `alt` produces
   // text that passes the schema and misdescribes the photograph.
   const ref = buildImageRef({

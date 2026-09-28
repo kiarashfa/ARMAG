@@ -1,7 +1,7 @@
 /**
  * Wikimedia Commons access — file discovery and machine-readable licence.
  *
- * SPEC.md §10 names `extmetadata` as the thing that makes automated credit
+ * the design names `extmetadata` as the thing that makes automated credit
  * capture possible, and the Phase 8 friction log (D1) confirmed it: one
  * `prop=imageinfo&iiprop=url|size|extmetadata` call returns licence short name,
  * author, licence URL and description, and 25 titles batch per request. All 34
@@ -159,7 +159,7 @@ export async function fileMetadata(titles) {
         licenseUrl: meta.LicenseUrl?.value ?? null,
         author: stripHtml(meta.Artist?.value) || null,
         objectName: stripHtml(meta.ObjectName?.value) || null,
-        // FRICTION-LOG D5: this is the field that tells you the "Type 56"
+        // this is the field that tells you the "Type 56"
         // photograph is a Type 56-1. Two of thirty-four pilot captions had to
         // be rewritten after reading it.
         description: stripHtml(meta.ImageDescription?.value) || null,

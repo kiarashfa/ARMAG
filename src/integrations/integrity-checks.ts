@@ -1,5 +1,5 @@
 /**
- * Cross-file content integrity — SPEC.md §13.
+ * Cross-file content integrity.
  *
  * Zod validates one file at a time. Everything that spans files — narrative ↔
  * data pairing, `id` matching its filename, a `familyRef` resolving to a real
@@ -251,12 +251,12 @@ async function readJson(full: string, display: string, violations: Violation[]):
 }
 
 // ---------------------------------------------------------------------------
-// The near-duplicate prose gate — SPEC.md §13 gate 4
+// The near-duplicate prose gate — the design
 // ---------------------------------------------------------------------------
 
 /*
  * The prose helpers live in `lib/render/prose.ts` because the completeness
- * score imports them too (SPEC.md §5.9). Two definitions of "a word of prose"
+ * score imports them too. Two definitions of "a word of prose"
  * would let an entry clear the 60-word publication floor while this gate saw
  * too few words to compare, and both would look like they were working.
  */
@@ -293,7 +293,7 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
         violations.push({
           file: rel(displayRoot, path.join(narrativeDir, `${fileSlug}.mdx`)),
           rule: 'pairing/missing-data',
-          message: `no matching \`${pair.data}/${fileSlug}.json\` — every narrative file needs its structured-data sibling (SPEC.md §5.1)`,
+          message: `no matching \`${pair.data}/${fileSlug}.json\` — every narrative file needs its structured-data sibling`,
         });
       }
     }
@@ -302,7 +302,7 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
         violations.push({
           file: rel(displayRoot, path.join(dataDir, `${fileSlug}.json`)),
           rule: 'pairing/missing-narrative',
-          message: `no matching \`${pair.narrative}/${fileSlug}.mdx\` — every data file needs its narrative sibling (SPEC.md §5.1)`,
+          message: `no matching \`${pair.narrative}/${fileSlug}.mdx\` — every data file needs its narrative sibling`,
         });
       }
     }
@@ -426,7 +426,7 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
         violations.push({
           file,
           rule: 'family-ref/wrong-kind',
-          message: `family '${familyRef}' is a '${String(target.data.kind)}', not a 'family' — a family is a soft grouping entry of its own, never another model (SPEC.md §5.1)`,
+          message: `family '${familyRef}' is a '${String(target.data.kind)}', not a 'family' — a family is a soft grouping entry of its own, never another model`,
         });
       }
     }
@@ -468,14 +468,14 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
         violations.push({
           file,
           rule: 'cartridge-ref/unresolved',
-          message: `cartridgeRef '${ref}' at \`${at}\` does not resolve to any cartridge entry — every ballistic figure on this page is computed from it (SPEC.md §5.4)`,
+          message: `cartridgeRef '${ref}' at \`${at}\` does not resolve to any cartridge entry — every ballistic figure on this page is computed from it`,
         });
       }
     }
   }
 
   // A family page whose model list is computed from `familyRef` and comes back
-  // empty is a page about nothing. SPEC.md §5.1 makes the list computed; this
+  // empty is a page about nothing. the design makes the list computed; this
   // is what stops that computation returning nothing.
   for (const gun of datas.gun) {
     if (gun.data.kind !== 'family') continue;
@@ -485,7 +485,7 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
         file: gun.file,
         rule: 'family/no-members',
         message:
-          'no entry names this as its family, so the computed member list is empty — either add the members or remove the family entry (SPEC.md §5.1)',
+          'no entry names this as its family, so the computed member list is empty — either add the members or remove the family entry',
       });
     }
   }
@@ -497,8 +497,8 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
    * actually used silently removed `serbia` and left Yugoslavia pointing at
    * nothing. Nothing caught it: the pointer is inside a data file rather than a
    * content entry, and the renderer would simply have produced a link to a page
-   * that is not built. Historical states are first-class terms here (SPEC.md
-   * §7), so the succession links between them are content, not decoration.
+   * that is not built. Historical states are first-class terms here (the design
+   *), so the succession links between them are content, not decoration.
    */
   for (const [axis, vocabulary] of Object.entries(AUTHORED_VOCABULARIES)) {
     const termIds = new Set(vocabulary.terms.map((term) => term.id));
@@ -518,7 +518,7 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
    * --- An alias must not name another entry ------------------------------
    *
    * Aliases are first-class here: they are indexed for search and they mint
-   * static redirects (SPEC.md §6). So an alias that slugifies to a DIFFERENT
+   * static redirects. So an alias that slugifies to a DIFFERENT
    * entry's id is a factual error twice over — it claims one arm is known by
    * another arm's name, and it asks the redirect layer to shadow a real page.
    *
@@ -607,7 +607,7 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
           violations.push({
             file: entry.file,
             rule: 'citation/unresolved',
-            message: `\`${at}\` cites '${source}', which is not in this entry's references[] — SPEC.md §13 keeps bibliographies per entry so parallel authors never collide, which also means a key must resolve locally`,
+            message: `\`${at}\` cites '${source}', which is not in this entry's references[] — the design keeps bibliographies per entry so parallel authors never collide, which also means a key must resolve locally`,
           });
         }
 
@@ -616,7 +616,7 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
           violations.push({
             file: entry.file,
             rule: 'trust/verified-without-url',
-            message: `\`${at}\` is 'verified' with no \`sourceUrl\` (SPEC.md §13 gate 2)`,
+            message: `\`${at}\` is 'verified' with no \`sourceUrl\``,
           });
         }
 
@@ -630,7 +630,7 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
             violations.push({
               file: entry.file,
               rule: 'trust/assumed-but-verified',
-              message: `\`${at}\` is 'verified' but its note hedges (${hedges.join(', ')}) — that is an assumption wearing verification's badge. Use 'estimated' and say what it was estimated from (SPEC.md §13 gate 3)`,
+              message: `\`${at}\` is 'verified' but its note hedges (${hedges.join(', ')}) — that is an assumption wearing verification's badge. Use 'estimated' and say what it was estimated from`,
             });
           }
         }
@@ -642,7 +642,7 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
           violations.push({
             file: entry.file,
             rule: 'image/missing-license',
-            message: `image at \`${at}\` has no \`credit.licenseType\` — every image's legal basis must be auditable, never assumed (SPEC.md §10)`,
+            message: `image at \`${at}\` has no \`credit.licenseType\` — every image's legal basis must be auditable, never assumed`,
           });
         }
       }
@@ -666,12 +666,12 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
         violations.push({
           file: a.file,
           rule: 'prose/near-duplicate',
-          message: `${percent}% of ${prose.shingleWords}-word phrases are shared with ${b.file} — write about this arm, not about the category (SPEC.md §13 gate 4)`,
+          message: `${percent}% of ${prose.shingleWords}-word phrases are shared with ${b.file} — write about this arm, not about the category`,
         });
         violations.push({
           file: b.file,
           rule: 'prose/near-duplicate',
-          message: `${percent}% of ${prose.shingleWords}-word phrases are shared with ${a.file} — write about this arm, not about the category (SPEC.md §13 gate 4)`,
+          message: `${percent}% of ${prose.shingleWords}-word phrases are shared with ${a.file} — write about this arm, not about the category`,
         });
       }
     }
@@ -700,7 +700,7 @@ function collectCartridgeRefs(
   return found;
 }
 
-/** Human-readable report — the complete list, grouped by file (SPEC.md §13). */
+/** Human-readable report — the complete list, grouped by file. */
 export function formatViolations(violations: Violation[]): string {
   if (violations.length === 0) return 'No content-integrity violations.';
   const byFile = new Map<string, Violation[]>();

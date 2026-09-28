@@ -1,5 +1,5 @@
 /**
- * My Armory's promises — SPEC.md §9.4 and Instruction.md Phase 7's definition
+ * My Armory's promises, and the definition
  * of done.
  *
  * Four of the five conditions are asserted here: a save survives a reload, a
@@ -155,7 +155,7 @@ test('a blob that fails the schema is discarded, never repaired', () => {
 });
 
 // ---------------------------------------------------------------------------
-// The share / backup distinction — the heart of §9.4
+// The share / backup distinction — the heart of
 // ---------------------------------------------------------------------------
 
 test('the share link contains no ownership data at all', () => {
@@ -282,7 +282,7 @@ test('an entry lands in the first free bay unless a bay is asked for', () => {
   assert.equal(placed.entries.find((entry) => entry.uid === 'uid-d')?.slot, 7);
 });
 
-test('the same gun may be parked twice — SPEC.md §9.4', () => {
+test('the same gun may be parked twice', () => {
   const twice = addEntry(POPULATED, {
     uid: 'uid-again',
     gunRef: 'fixture-model-a',
@@ -307,7 +307,7 @@ test('removing and updating touch only the entry named', () => {
 });
 
 // ---------------------------------------------------------------------------
-// Capacity — SPEC.md §9.4: downsizing warns before eviction
+// Capacity — downsizing warns before eviction
 // ---------------------------------------------------------------------------
 
 test('downsizing can be asked what it would cost before it is done', () => {
@@ -395,7 +395,7 @@ test('a downsize that really does not fit drops exactly what it warned about', (
 // ---------------------------------------------------------------------------
 
 test('no serial number field exists anywhere in the source', () => {
-  // SPEC.md §9.4 and §16: not in the schema, not in the backup, not in the
+  // the design and: not in the schema, not in the backup, not in the
   // share link, not in a comment that someone might later take as a to-do. A
   // leaked save must never be a theft shopping list.
   const walk = (dir: string): string[] =>

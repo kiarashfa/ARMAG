@@ -1,11 +1,11 @@
 /**
  * `/compare/data/<slug>.json` — one entry's comparison payload.
  *
- * **One file per entry, not one file for the database.** SPEC.md §9.2 caps a
+ * **One file per entry, not one file for the database.** the design caps a
  * comparison at four entries, so the client never needs more than four of these
  * — and that stays true at three thousand entries, where a single bundle would
  * be megabytes downloaded to compare two arms. The catalogue's own lean bundle
- * (SPEC.md §9.1) answers "what exists"; this answers "everything about these
+ * answers "what exists"; this answers "everything about these
  * four", and the two are deliberately different shapes.
  *
  * The percentile in each numeric cell is computed here, against the whole

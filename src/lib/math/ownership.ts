@@ -1,11 +1,11 @@
 /**
- * Ownership arithmetic — SPEC.md §9.4.
+ * Ownership arithmetic.
  *
  * *"Owned entries additionally get service due/overdue computed from the user's
  * own intervals, a burn-rate projection from logged sessions, and a value
  * estimate = condition grade × user-supplied base."*
  *
- * A module SPEC.md §8.1's table does not name, added here because those three
+ * A module the table does not name, added here because those three
  * computations have to live somewhere pure and testable, and putting them in an
  * island would make the one part of the site that handles a visitor's own
  * records the one part with untested arithmetic in it.
@@ -230,7 +230,7 @@ export function monthsToNextService(
 /**
  * A condition-adjusted value, from a base the **owner** supplies.
  *
- * SPEC.md §16 rejects a market-value database outright, so the site supplies
+ * the design rejects a market-value database outright, so the site supplies
  * the published NRA multiplier and the owner supplies the number it multiplies.
  * The most recent value anchor they recorded is the base; failing that, the
  * price they paid. If they have given neither, there is no estimate — the site

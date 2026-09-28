@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * `npm run check:assets` — the image budget gate (SPEC.md §10, §13 gate 5).
+ * `npm run check:assets` — the image budget gate (the design, gate 5).
  *
  * Two jobs, and the second is the one that matters:
  *
@@ -10,7 +10,7 @@
  *  2. **A running total.** Per-file caps alone do not bound anything — a
  *     thousand individually compliant files still overrun a 1 GB Pages site.
  *     Usage is printed on every build, warns at 600 MB and fails at 750 MB, so
- *     the ceiling arrives as a trend rather than as a surprise. SPEC.md §10
+ *     the ceiling arrives as a trend rather than as a surprise. the design
  *     pre-plans the escape hatch: images move to a second `gun-assets`
  *     repository behind `assetUrl()`, which is a one-line change.
  *
@@ -107,7 +107,7 @@ for (const file of files) {
   total += size;
 
   if (path.extname(file).toLowerCase() !== `.${thresholds.format}`) {
-    failures.push(`${display}: not ${thresholds.format} — SPEC.md §10 is WebP only`);
+    failures.push(`${display}: not ${thresholds.format} — the design is WebP only`);
     continue;
   }
 
@@ -144,11 +144,11 @@ if (!quiet) {
 
 if (overFail) {
   failures.push(
-    `TOTAL ${mb(total)} exceeds the hard budget of ${mb(caps.totalFailBytes)} — move images to the second assets repository behind assetUrl() (SPEC.md §10)`,
+    `TOTAL ${mb(total)} exceeds the hard budget of ${mb(caps.totalFailBytes)} — move images to the second assets repository behind assetUrl()`,
   );
 } else if (overWarn) {
   console.warn(
-    `[check:assets] WARNING — ${mb(total)} is past the ${mb(caps.totalWarnBytes)} warn threshold. Instruction.md §5 says escalate at this point rather than at the hard limit.`,
+    `[check:assets] WARNING — ${mb(total)} is past the ${mb(caps.totalWarnBytes)} warn threshold. the design says escalate at this point rather than at the hard limit.`,
   );
 }
 

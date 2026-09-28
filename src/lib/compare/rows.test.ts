@@ -1,5 +1,5 @@
 /**
- * The registry's teeth — Instruction.md Phase 6's definition of done.
+ * The registry's teeth — the definition of done.
  *
  * *"Adding a field to `gun.ts` makes it appear in both the spec table and the
  * compare table without any other edit. Verify that by actually adding a
@@ -94,7 +94,7 @@ test('every declared derived figure is actually produced', () => {
     GUN_FIGURES.length,
     'figuresForGun produced a figure that GUN_FIGURES does not declare, so it would never reach the compare table',
   );
-  assert.equal(figures.statStrip.length, 5, 'SPEC.md §11 wants a five-number stat strip');
+  assert.equal(figures.statStrip.length, 5, 'the design wants a five-number stat strip');
 });
 
 test('every row reads a cell off the fixture, and none is undefined', () => {
@@ -154,7 +154,7 @@ test('a value with no figure carries no percentile', () => {
 test('grouping keeps the stated order and drops empty groups', () => {
   const grouped = groupRows(GUN_COMPARE_ROWS, GUN_GROUP_ORDER);
   const names = grouped.map((bucket) => bucket.group);
-  assert.equal(names[0], 'Derived figures', 'the computed layer leads, per SPEC.md §11');
+  assert.equal(names[0], 'Derived figures', 'the computed layer leads,');
   assert.ok(!names.includes('Other specifications'), 'no field is currently ungrouped');
   const ranks = names.map((name) => GUN_GROUP_ORDER.indexOf(name));
   assert.deepEqual(ranks, [...ranks].sort((a, b) => a - b));
@@ -187,7 +187,7 @@ test('the spec table and the compare table are driven by the same registry', () 
 });
 
 test('nothing in the compare layer ranks entries against each other', () => {
-  // SPEC.md §9.2: no "winner" badges. Lighter is better for carry and worse for
+  // no "winner" badges. Lighter is better for carry and worse for
   // recoil; the site does not know what the reader wants. The prose says so on
   // the page, and no identifier here computes one.
   const tool = read('src/components/islands/CompareTool.svelte');

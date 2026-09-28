@@ -2,7 +2,7 @@
  * Number and value formatting — the last step before a figure reaches a reader.
  *
  * ── How the unit toggle works, and why it is not an island ─────────────────
- * SPEC.md §11 wants a persistent imperial toggle. The obvious implementation is
+ * the design wants a persistent imperial toggle. The obvious implementation is
  * a Svelte island that recomputes every figure on the page; this site does
  * something cheaper and better instead: **both values are rendered into the
  * HTML, and CSS shows one of them.** The toggle sets `data-units` on `<html>`
@@ -13,7 +13,7 @@
  * default), it switches instantly with no hydration and no layout shift, the
  * server-rendered figure and the toggled one are the same string so they can
  * never disagree, and the imperial half carries `data-pagefind-ignore` so
- * imperial values are still never indexed — SPEC.md §8.1's rule that imperial
+ * imperial values are still never indexed's rule that imperial
  * is computed and never stored or indexed is kept exactly.
  */
 import { IMPERIAL_FOR, type UnitSystem } from '../math/units.ts';

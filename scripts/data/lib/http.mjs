@@ -11,14 +11,14 @@
  *    An anonymous one is throttled harder.
  *  - A failed fetch must be loud. A silent empty result becomes a missing
  *    figure, and a missing figure that should have been sourced is exactly the
- *    quiet wrongness Instruction.md §0 rule 2 exists to prevent.
+ *    quiet wrongness the design exists to prevent.
  *
  * ARMAG additions over Markey's copy, both from the Phase 8 friction log:
  *  - `bobp.cip-bobp.org` is a small volunteer-run site serving one-page PDFs.
  *    It gets a deliberately slow delay; we are transcribing a dozen numbers,
- *    not mirroring their database (SPEC.md Appendix A, governing rule).
+ *    not mirroring their database (the governing rule).
  *  - `getBuffer()` exists because every image now goes through a re-encoder
- *    rather than straight to disk (SPEC.md §10 is WebP only).
+ *    rather than straight to disk (the design is WebP only).
  */
 
 /** Contact details are part of the Wikimedia UA policy, not decoration. */

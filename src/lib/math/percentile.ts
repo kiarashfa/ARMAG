@@ -1,5 +1,5 @@
 /**
- * Percentile bars — SPEC.md §8.5.
+ * Percentile bars.
  *
  * Where a bar is drawn next to a number, **the bar's length is that value's
  * percentile within a stated comparison set**, and the label is the real value
@@ -72,7 +72,7 @@ export function percentileOf(value: number, set: ComparisonSet): PercentileResul
  *
  * Built here rather than in a component so every bar on the site says the same
  * thing the same way, including the part that names the comparison set. A bar
- * whose population is unstated is exactly the unitless score SPEC.md §8.5
+ * whose population is unstated is exactly the unitless score the design
  * rejects.
  */
 export function describePercentile(
@@ -108,7 +108,7 @@ export function ordinal(n: number): string {
 
 /**
  * The whole ladder, for a page that ranks a population rather than placing one
- * entry in it — the recoil ladder of SPEC.md §8.1, for instance.
+ * entry in it — the recoil ladder, for instance.
  *
  * Returns entries in ascending order of value, each with its own percentile,
  * so the caller renders a list and never re-derives a position.

@@ -1,5 +1,5 @@
 /**
- * The scale silhouette — SPEC.md §9.6.
+ * The scale silhouette.
  *
  * Up to four firearms overlaid at true scale. Where no photograph-derived
  * outline exists — which today is everywhere — the shape is a **parametric

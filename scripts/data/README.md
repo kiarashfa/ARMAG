@@ -71,5 +71,5 @@ node scripts/data/cip.mjs sheet "<name>"
 
 `.cache/` (C.I.P. index, scratch PDFs) and `plan/` are gitignored. Both are
 derived and regenerating them is one command. Neither is committed: they are
-copies of someone else's index, and SPEC.md Appendix A permits extraction per
+copies of someone else's index, and the source's terms permit extraction per
 entry, not bulk mirroring.

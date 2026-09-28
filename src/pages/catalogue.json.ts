@@ -1,11 +1,11 @@
 /**
  * `/catalogue.json` — the build artifact behind the catalogue island.
  *
- * Generated from the same content the pages render from (SPEC.md §9.1), so the
+ * Generated from the same content the pages render from, so the
  * catalogue and a gun page cannot give two answers to the same question.
  *
  * The payload is a versioned envelope rather than a bare array. That costs
- * nothing today and buys the one thing the loader will need later: SPEC.md §9.1
+ * nothing today and buys the one thing the loader will need later: the design
  * requires this be chunkable "without touching callers", and a caller that
  * destructures `{ rows }` keeps working when a `chunks` field appears beside it,
  * where a caller that indexes an array does not.

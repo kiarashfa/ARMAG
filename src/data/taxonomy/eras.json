@@ -2,7 +2,7 @@
   "axis": "era",
   "urlPrefix": "/era/",
   "authored": false,
-  "note": "COMPUTED from a firearm's introduction year — never authored (SPEC.md §7). The buckets are cut where small-arms design actually changed rather than at round decades: smokeless powder in 1886 and the intermediate cartridge in 1945 are the two real discontinuities, and a decade grid would hide both. The lower bound is the self-contained metallic cartridge (~1860s), which is the scope floor in SPEC.md §15.",
+  "note": "COMPUTED from a firearm's introduction year — never authored. The buckets are cut where small-arms design actually changed rather than at round decades: smokeless powder in 1886 and the intermediate cartridge in 1945 are the two real discontinuities, and a decade grid would hide both. The lower bound is the self-contained metallic cartridge (~1860s), which is the scope floor.",
   "terms": [
     { "id": "metallic-cartridge", "label": "Metallic cartridge", "start": 1860, "end": 1885, "description": "Self-contained cartridges and black powder. Cartridge conversions and the first practical repeaters." },
     { "id": "smokeless", "label": "Smokeless revolution", "start": 1886, "end": 1913, "description": "Smokeless powder, small-bore bolt actions, the first self-loaders." },

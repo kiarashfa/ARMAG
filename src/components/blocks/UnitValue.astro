@@ -4,12 +4,12 @@
  *
  * Both strings go into the HTML and CSS shows one of them (see
  * `lib/render/format.ts` for why this beats a hydrated converter). The imperial
- * half carries `data-pagefind-ignore`, so SPEC.md §8.1's rule — imperial is
+ * half carries `data-pagefind-ignore`, so the rule — imperial is
  * computed, never stored and **never indexed** — survives the fact that it is
  * present in the markup.
  *
  * A value of `null` renders the honest gap rather than a dash that could be
- * mistaken for a zero (SPEC.md §2 principle 6).
+ * mistaken for a zero.
  */
 import { formatValue } from '../../lib/render/format.ts';
 

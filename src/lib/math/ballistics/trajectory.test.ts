@@ -1,5 +1,5 @@
 /**
- * Solver validation — SPEC.md §8.3, and the reason the site can claim accuracy
+ * Solver validation, and the reason the site can claim accuracy
  * instead of asserting it.
  *
  * Four layers, weakest evidence last:

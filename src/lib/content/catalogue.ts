@@ -1,23 +1,24 @@
 /**
- * The catalogue row — SPEC.md §9.1.
+ * The catalogue row.
  *
  * One lean record per entry, built from **the same content the pages render
  * from**, so the catalogue and the page can never give two answers to "what is
  * the barrel length". It is emitted as `/catalogue.json` for the island and
  * rendered directly for the static first rows; both come through here.
  *
- * ── Why a row is wider than SPEC.md's "~12 fields" estimate ────────────────
+ * ── Why a row is wider than the design's "~12 fields" estimate ────────────────
  * Every axis the reader can filter on has to be *in* the row. Facets show only
- * terms with live matches, with counts (§9.1), and computing those counts from
+ * terms with live matches, with counts, and computing those counts from
  * anything but the loaded rows would mean a second fetch and a second source of
  * truth. The row is still lean in the way that matters: no prose, no images, no
  * references, no PropertyValue wrappers — just the bare number and its status.
  *
- * ── Entries below the publication floor are still rows ─────────────────────
- * SPEC.md §5.9 is explicit that a thin entry "exists as a catalogue row and in
- * cartridge/maker listings only". `hasPage` carries that, so the catalogue can
- * list an arm honestly without linking to a page that promises more than it
- * has.
+ * ── Every entry has its page ──────────────────────────────────────────────
+ * Every gun is built as a page, thin or not, and linked from the lineage,
+ * the maker and the cartridge it fires; a catalogue row that refused to link
+ * to a page the site had already published was the one place that disagreed.
+ * So every row links. How complete an entry is shows in its tier, which is
+ * what the publication floor still decides.
  */
 import thresholds from '../../data/thresholds.json' with { type: 'json' };
 import { eraForYear } from '../../schemas/taxonomy.ts';
@@ -28,7 +29,6 @@ import { worstStatus } from '../math/provenance.ts';
 import {
   completeness,
   countVerified,
-  meetsPublicationFloor,
   type CompletenessInput,
   type Tier,
 } from '../math/score.ts';
@@ -57,7 +57,7 @@ export interface CatalogueRow {
   year: number | null;
 
   /**
-   * The three derived figures the matchmaker filters on (SPEC.md §9.3), and the
+   * The three derived figures the matchmaker filters on, and the
    * worst status among their inputs.
    *
    * They live in the row rather than in a second artifact because the
@@ -165,18 +165,6 @@ export function buildCatalogue(
         thresholds.completeness.weights,
         thresholds.completeness.tierFloor,
       );
-      // SPEC.md §5.9's floor is written for models: six verified core specs,
-      // a maker and a cartridge. A `kind: 'family'` entry has none of the
-      // first and cannot have the second, because a platform spans
-      // manufacturers (SPEC.md §5.1) and has no mass, length or barrel of its
-      // own. Applying it unchanged made the AR-15 an unlinked row saying "no
-      // page yet" while its page existed and was linked from its own members.
-      // The family floor lives beside the model one in thresholds.json.
-      // Found in the Phase 8 pilot batch.
-      const floor = meetsPublicationFloor(
-        input,
-        data.kind === 'family' ? thresholds.familyPublicationFloor : thresholds.publicationFloor,
-      );
 
       // Through the same seam a gun page renders from, so the matchmaker and
       // the entry it links to can never quote two different recoil figures.
@@ -220,11 +208,11 @@ export function buildCatalogue(
         cartridgeName: primary ? (cartridgeNames.get(primary.cartridgeRef) ?? null) : null,
 
         tier: scored.tier,
-        hasPage: floor.ok,
+        hasPage: true,
       } satisfies CatalogueRow;
     })
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
-/** How many rows are server-rendered before the island takes over — SPEC.md §9.1. */
+/** How many rows are server-rendered before the island takes over. */
 export const STATIC_ROW_COUNT = 50;

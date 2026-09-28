@@ -1,6 +1,6 @@
 <script lang="ts">
   /**
-   * The recoil calculator — SPEC.md §9.5, over `lib/math/recoil.ts`.
+   * The recoil calculator, over `lib/math/recoil.ts`.
    *
    * Three figures, from one conservation law: whatever leaves the muzzle, the
    * arm takes going backwards. The same functions produce the "Free recoil"
@@ -9,7 +9,7 @@
    * ── The propellant term, and why it is optional here but never on an entry ─
    * A complete free-recoil figure includes the momentum of the propellant gas,
    * which needs a charge weight. ARMAG does not record charge weights — they
-   * are handloading data, and SPEC.md §14 puts fabrication instructions outside
+   * are handloading data, puts fabrication instructions outside
    * the line — so every entry's recoil figure is a stated **lower bound**. A
    * reader who has a charge weight of their own can supply it here; the tool
    * will not choose a gas velocity factor for them, because burying that choice

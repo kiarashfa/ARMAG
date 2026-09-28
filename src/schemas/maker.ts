@@ -1,9 +1,9 @@
 /**
- * The `makers` collection — SPEC.md §5.5.
+ * The `makers` collection.
  *
  * Maker pages are real content (narrative plus identity). The list of models
  * under a maker is **always computed** from `makerRef` on the gun entries and
- * is never hand-maintained here — SPEC.md §2 principle 1, so re-attributing an
+ * is never hand-maintained here — the design, so re-attributing an
  * arm never means editing two files.
  *
  * Two files per entry, joined by `id`:
@@ -54,12 +54,12 @@ export const makerDataSchema = z
     country: countryTag,
     /**
      * Optional, and the reason is the same one that made a cartridge's
-     * `introduced` optional (FRICTION-LOG B2). Sterling Armaments built the
+     * `introduced` optional. Sterling Armaments built the
      * British service submachine gun for thirty years and no free source
      * publishes the year the company was founded; the encyclopedia article
      * establishes only that it existed during the Second World War. A mandatory
      * field there offers exactly two options — invent a year, or drop an arm
-     * that is otherwise fully sourced — and Instruction.md §0 rule 2 rejects
+     * that is otherwise fully sourced — rejects
      * both: a missing figure is an honest gap, and if the schema will not let
      * you record one, the schema is wrong. Found in Phase 10.
      */
@@ -78,7 +78,7 @@ export const makerDataSchema = z
     website: z.url().optional(),
     /**
      * A wordmark is used under trademark nominative-use rather than a
-     * copyright licence — `imageCredit` carries that distinction (SPEC.md §10).
+     * copyright licence — `imageCredit` carries that distinction.
      */
     logo: imageRef.optional(),
 

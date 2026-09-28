@@ -1,5 +1,5 @@
 /**
- * Loaded mass — SPEC.md §8.1.
+ * Loaded mass.
  *
  * "Almost nobody publishes this", and that is exactly why it is worth
  * computing: every spec sheet in the world prints the empty weight, and nobody

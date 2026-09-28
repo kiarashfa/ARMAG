@@ -1,7 +1,7 @@
 /**
  * The licence gate: nothing becomes an `imageRef` without provable licence data.
  *
- * Instruction.md Phase 9 states the definition of done for this file directly —
+ * the design states the definition of done for this file directly —
  * **`image.mjs` cannot emit an `imageRef` missing licence data** — so the rule
  * is encoded structurally rather than documented:
  *
@@ -42,6 +42,9 @@ export function licenseTypeFor(shortName) {
   if (name.includes('cc by-nc') || name.includes('cc-by-nc')) return 'cc-by-nc';
   if (name.includes('cc by') || name.includes('cc-by')) return 'cc-by';
   if (name.includes('gfdl')) return 'gfdl';
+  // Both look like CC BY and are not CC BY; each is recorded under its own name.
+  if (name.includes('ogl') || name.includes('open government licence')) return 'ogl';
+  if (name.includes('licence ouverte') || name.includes('etalab')) return 'licence-ouverte';
   if (name.includes('public domain') || name.startsWith('pd') || name.includes('pd-')) {
     return 'public-domain';
   }
@@ -53,15 +56,9 @@ export function licenseTypeFor(shortName) {
  *
  * Named individually so the failure message can say *which* licence and what
  * the open decision about it is, rather than "unknown licence" — an author who
- * is told the name can escalate it (Instruction.md §5) instead of guessing.
+ * is told the name can escalate it instead of guessing.
  */
-const KNOWN_UNMAPPED = {
-  'ogl v1.0': 'UK Open Government Licence',
-  'ogl 3.0': 'UK Open Government Licence',
-  'open government licence': 'UK Open Government Licence',
-  'licence ouverte': 'French Licence Ouverte / Open Licence',
-  'etalab': 'French Licence Ouverte / Open Licence',
-};
+const KNOWN_UNMAPPED = {};
 
 /** The licence version, where the short name carries one: 'CC BY-SA 4.0' → '4.0'. */
 export function licenseVersionFrom(shortName) {
@@ -101,7 +98,7 @@ export function buildImageRef({ src, width, height, meta, alt, caption }) {
   if (!meta) throw new Error('no source metadata — refusing to emit an imageRef without a licence');
   if (!meta.pageUrl) {
     throw new Error(
-      'no source page URL — SPEC.md §10 requires the file page an image came from, not a raw image URL',
+      'no source page URL — the design requires the file page an image came from, not a raw image URL',
     );
   }
 
@@ -112,7 +109,7 @@ export function buildImageRef({ src, width, height, meta, alt, caption }) {
     if (known) {
       throw new Error(
         `licence "${meta.licenseShortName}" is ${known[1]}, which has no member in the licenseType enum. ` +
-          'Do NOT map it to cc-by — it is a different licence. Escalate (FRICTION-LOG D2 proposes adding it) or choose another file.',
+          'Do NOT map it to cc-by — it is a different licence. Escalate (the design proposes adding it) or choose another file.',
       );
     }
     throw new Error(

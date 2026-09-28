@@ -135,7 +135,7 @@ test('a query is not matched by a row whose name it merely contains', () => {
 });
 
 test('no match for a purely military cartridge is the correct answer, not a failure', () => {
-  // FRICTION-LOG A4. C.I.P. standardises the commercial round only.
+  // the design. C.I.P. standardises the commercial round only.
   const rows = parseIndex(INDEX, 4);
   assert.deepEqual(searchIndex(rows, '5.56×45mm NATO'), []);
   assert.equal(normaliseName('5.56×45mm NATO'), '5.56x45nato');

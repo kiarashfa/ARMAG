@@ -1,6 +1,6 @@
 ---
 /**
- * An editorial article — the magazine half of ARMAG (SPEC.md §5.6).
+ * An editorial article — the magazine half of ARMAG.
  *
  * Long-form, each one linking twenty or more entries. The prose column is
  * narrower than a reference page's because this is text somebody reads several
@@ -36,7 +36,7 @@ const { id, title, standfirst, published, updated, heroImage, headings = [] } = 
 /** Only the top level: an h3 list turns the rail into a second article. */
 const contents = headings.filter((heading) => heading.depth === 2);
 
-/** SPEC.md §12 — editorial is `Article`; the spec entries are `TechArticle`. */
+/** editorial is `Article`; the spec entries are `TechArticle`. */
 const jsonLd = entryArticle({
   type: 'Article',
   name: title,

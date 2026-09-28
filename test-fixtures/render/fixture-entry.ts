@@ -1,9 +1,9 @@
 /**
- * The render fixture — Instruction.md Phase 4's "hand-written fixture entry".
+ * The render fixture — the "hand-written fixture entry".
  *
  * ── Why this is not in `src/content/` ──────────────────────────────────────
  * A fictional firearm sitting in the real content collection would render as a
- * real page and would be fabricated data of exactly the kind SPEC.md exists to
+ * real page and would be fabricated data of exactly the kind the design exists to
  * prevent. This lives in `test-fixtures/`, is imported only by a dev-only route
  * that emits nothing in a production build, and is deleted by nobody because it
  * keeps earning its place: it is the only entry on the site that exercises

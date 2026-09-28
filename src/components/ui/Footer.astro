@@ -1,9 +1,10 @@
 ---
 /**
- * The site footer: one quiet row of links and the copyright, with the sibling
- * sites underneath. The same shape on all four sibling sites.
+ * The site footer: one quiet row of links and the copyright, with one line of
+ * small print underneath. The same shape on all four sites.
  *
- * The disclaimer lives on the About page, which this row links to first.
+ * The full disclaimer lives on the About page; the small print here is its
+ * one-line form.
  */
 import { href } from '../../lib/content/href.ts';
 
@@ -24,12 +25,6 @@ const COPYRIGHT_START_YEAR = 2026;
 const buildYear = new Date().getFullYear();
 const years = buildYear > COPYRIGHT_START_YEAR ? `${COPYRIGHT_START_YEAR}–${buildYear}` : `${COPYRIGHT_START_YEAR}`;
 
-const siblings = [
-  { name: 'Xefy', subject: 'Recipes', url: 'https://kiarashfa.github.io/Xefy/' },
-  { name: 'eXir', subject: 'Drinks', url: 'https://kiarashfa.github.io/eXir/' },
-  { name: 'Markey', subject: 'Cars', url: 'https://kiarashfa.github.io/Markey/' },
-  { name: 'ARMAG', subject: 'Firearms', url: 'https://kiarashfa.github.io/ARMAG/' },
-];
 
 const link = 'text-ink-secondary no-underline transition-colors hover:text-ui-accent';
 ---
@@ -45,16 +40,9 @@ const link = 'text-ink-secondary no-underline transition-colors hover:text-ui-ac
       </nav>
       <p class="text-ink-muted sm:ml-auto">© {years} Kiarash Farajzadehahary</p>
     </div>
-    <nav class="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink-muted" aria-label="Sibling sites">
-      {
-        siblings.map((s) =>
-          s.name === 'ARMAG' ? (
-            <span class="text-ink-secondary" aria-current="true" title={s.subject}>{s.name}</span>
-          ) : (
-            <a class="text-ink-muted no-underline hover:text-ink" href={s.url} title={s.subject}>{s.name}</a>
-          ),
-        )
-      }
-    </nav>
+    <p class="mt-3 text-xs leading-relaxed text-ink-muted">
+      Reference information only: not legal advice, safety instruction, or a substitute for a manufacturer’s manual or qualified training.{' '}
+      <a href={href('about')} class="text-ink-muted underline decoration-line underline-offset-2 hover:text-ink">Full disclaimer</a>.
+    </p>
   </div>
 </footer>

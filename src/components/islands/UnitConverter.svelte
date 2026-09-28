@@ -1,6 +1,6 @@
 <script lang="ts">
   /**
-   * The unit converter — SPEC.md §9.5, over `lib/math/units.ts`.
+   * The unit converter, over `lib/math/units.ts`.
    *
    * The quantity list is `IMPERIAL_FOR` itself, not a copy of it. That table is
    * what the site's own unit toggle reads, so this tool can never offer a

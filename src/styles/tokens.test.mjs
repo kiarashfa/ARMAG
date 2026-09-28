@@ -1,5 +1,5 @@
 /**
- * Design-token invariants — SPEC.md §11, Instruction.md Phase 1.
+ * Design-token invariants — the design, the design.
  *
  * Three things are asserted here, and all three are the kind of mistake that
  * is invisible until someone with low vision, or a bright room, finds it:
@@ -130,7 +130,7 @@ const TEXT_TOKENS = [
 const AA = 4.5;
 const NON_TEXT = 3;
 
-/** Collects every failure and reports them together — SPEC.md §2 principle 8. */
+/** Collects every failure and reports them together. */
 function reportAll(failures, what) {
   assert.equal(
     failures.length,
@@ -212,7 +212,7 @@ test('line-strong is perceivable (3:1) against every surface', () => {
 });
 
 test('the UI accent is not a content accent in disguise', () => {
-  // SPEC.md §11 keeps the two colour systems separate; if the UI accent drifts
+  // the design keeps the two colour systems separate; if the UI accent drifts
   // into a type accent's hue the reader loses the one colour that always means
   // "this is interactive".
   const failures = [];

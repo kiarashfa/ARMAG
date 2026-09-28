@@ -6,7 +6,7 @@
  *   node scripts/data/cip.mjs find "9x19"
  *   node scripts/data/cip.mjs sheet "9 mm Luger"
  *
- * FRICTION-LOG A3: this is the best free cartridge source there is, and its site
+ * this is the best free cartridge source there is, and its site
  * is undiscoverable. `bobp.cip-bobp.org/en/tdcc` is a 404; the real index is
  * `/en/tdcc_public?page=1&cartridge_type_id=N` for N in 1..12. The friction log
  * called caching that mapping "a half-day of work that pays for itself at entry
@@ -19,7 +19,7 @@
  *    which of the twelve a cartridge is in, and C.I.P.'s own name for it is
  *    rarely the one you looked it up under (`9 mm Luger`, not `9×19mm`).
  *
- * SPEC.md Appendix A: **transcribe the numbers, never republish the drawings.**
+ * **transcribe the numbers, never republish the drawings.**
  * The PDF is fetched, read for a dozen figures, and not kept.
  */
 import { spawn } from 'node:child_process';
@@ -65,7 +65,7 @@ async function cmdSync() {
     CACHE,
     `${JSON.stringify(
       {
-        note: 'Cached C.I.P. TDCC index. Regenerate with `cip.mjs sync`. Not committed — it is a copy of someone else\'s index and SPEC.md Appendix A forbids bulk mirroring.',
+        note: 'Cached C.I.P. TDCC index. Regenerate with `cip.mjs sync`. Not committed — it is a copy of someone else\'s index forbids bulk mirroring.',
         fetched: new Date().toISOString().slice(0, 10),
         source: `${BASE}/en/tdcc_public`,
         rows,
@@ -93,7 +93,7 @@ async function cmdFind(query) {
   }
   if (hits.length === 0) {
     console.log(
-      'Nothing. C.I.P. standardises the COMMERCIAL round, not the military one — FRICTION-LOG A4:\n' +
+      'Nothing. C.I.P. standardises the COMMERCIAL round, not the military one — \n' +
         'there is no free dimensional standard for 5.56×45mm NATO, 7.62×51mm NATO or 5.45×39mm.\n' +
         'Look up the commercial equivalent, record the figure as `estimated`, and say in the note\n' +
         'exactly which cartridge it was borrowed from. Do not present it as the military standard.',
@@ -189,7 +189,7 @@ async function cmdSheet(query) {
     ),
   );
   console.log(
-    '\nSPEC.md Appendix A: the numbers above are transcribed; the drawing is not republished.\n' +
+    '\nthe numbers above are transcribed; the drawing is not republished.\n' +
       'The PDF was read and not kept.',
   );
 }

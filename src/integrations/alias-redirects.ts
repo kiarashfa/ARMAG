@@ -1,5 +1,5 @@
 /**
- * Alias redirects — SPEC.md §6.
+ * Alias redirects.
  *
  * "Aliases (`/guns/m9/`) are Astro static redirects carrying a canonical tag —
  * they capture the search term without minting a duplicate page."

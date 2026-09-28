@@ -1,6 +1,6 @@
 ---
 /**
- * `/guns/<slug>/` — SPEC.md §6. The canonical URL of a firearm, and it never
+ * `/guns/<slug>/`. The canonical URL of a firearm, and it never
  * moves: the slug is flat and type-prefixed rather than mirroring any
  * classification, so re-tagging or re-grouping an entry cannot break a link.
  */
@@ -24,7 +24,7 @@ export async function getStaticPaths() {
   // Declared inside, not above: Astro hoists `getStaticPaths` to the top of the
   // module, so a module-level const referenced from it is in its temporal dead
   // zone at build time. It fails only during `astro build`, never in `check`.
-  /** This entry first, then up to three family siblings — SPEC.md §9.6's four. */
+  /** This entry first, then up to three family siblings's four. */
   const SILHOUETTE_LIMIT = 4;
 
   const [guns, cartridges, makers] = await Promise.all([getGuns(), getCartridges(), getMakers()]);
@@ -87,7 +87,7 @@ const era = gun.data.introduced ? eraForYear(gun.data.introduced) : null;
 
 /**
  * The spec table's values, read through the same function the compare endpoint
- * uses. No percentile populations here: SPEC.md §9.2 puts the bars in the
+ * uses. No percentile populations here: the design puts the bars in the
  * comparison, and twenty of them down a spec table would be noise rather than
  * information.
  */

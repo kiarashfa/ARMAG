@@ -1,17 +1,17 @@
 /**
- * My Armory — SPEC.md §9.4.
+ * My Armory.
  *
  * This is the only schema on the site that never validates a file in the repo.
  * It validates a blob read back out of the visitor's own `localStorage`, which
  * is a hostile input: it may have been written by an older version of the site,
  * hand-edited, truncated by a full disk, or restored from someone else's
- * backup. SPEC.md §2 principle 7 is that an unrecognised version is discarded
+ * backup. the design is that an unrecognised version is discarded
  * **whole** rather than partially parsed, and this schema is what "recognised"
  * means.
  *
  * ── There is no serial number field, and there never will be ───────────────
- * Not here, not in the backup file, not in the share link — SPEC.md §9.4 and
- * §16. A leaked save must never be a theft shopping list, and a nickname does
+ * Not here, not in the backup file, not in the share link.
+ * A leaked save must never be a theft shopping list, and a nickname does
  * the same job for the person using it. This is a permanent exclusion; an
  * integrity test asserts the field name appears nowhere in the codebase.
  */
@@ -36,7 +36,7 @@ export const ARMORY_SCHEMA_VERSION = 1;
 
 /**
  * The NRA condition scale, as published. Used with a base value the **user**
- * supplies: SPEC.md §16 rejects a market-value database outright, so the site
+ * supplies: the design rejects a market-value database outright, so the site
  * supplies the multiplier and the reader supplies the number it multiplies.
  */
 export const nraConditionGrade = z.enum([
@@ -133,7 +133,7 @@ export const armoryStateSchema = z
 export type ArmoryState = z.infer<typeof armoryStateSchema>;
 
 /**
- * The share link's payload — SPEC.md §9.4.
+ * The share link's payload.
  *
  * Slots and slugs only. No ownership data, no dates, no prices. The **full
  * backup** is a separate, explicitly labelled action that does include

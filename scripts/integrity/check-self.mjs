@@ -2,7 +2,7 @@
 /**
  * `npm run check:self` — gate 7. Proves the other six gates still bite.
  *
- * SPEC.md §13: CI runs the checks against a known-bad fixture set which must
+ * CI runs the checks against a known-bad fixture set which must
  * still fail, "proves the checks haven't silently stopped catching problems".
  * A check that has quietly stopped catching anything is worse than no check,
  * because the green build is then a claim nobody is testing.

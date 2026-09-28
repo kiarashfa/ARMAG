@@ -1,11 +1,11 @@
 <script lang="ts">
   /**
-   * Compare — SPEC.md §9.2.
+   * Compare.
    *
    * Up to four entries, side by side, URL-shareable. **Every row comes from the
    * registry**, passed in as a prop, which is the same ordered list the gun
    * page's spec table renders — so a field added to `gun.ts` appears here with
-   * no edit in this file (Instruction.md Phase 6).
+   * no edit in this file.
    *
    * ── No winner badges, deliberately ────────────────────────────────────────
    * Nothing here marks a column as better. Lighter is better for carry and
@@ -247,7 +247,7 @@
 {#snippet bar(percentile: { fraction: number; percentile: number; populationSize: number; setLabel: string } | undefined)}
   {#if percentile}
     <!--
-      SPEC.md §8.5: the length is a position in a stated population, and the
+      the length is a position in a stated population, and the
       population is named in the DOM rather than in a tooltip. A bar whose
       population is unstated is the unitless score that section rejects.
     -->

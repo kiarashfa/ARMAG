@@ -1,5 +1,5 @@
 /**
- * Shared schema primitives — SPEC.md §5.8 (data trust and attribution) and §10
+ * Shared schema primitives: data trust and attribution
  * (imagery licensing).
  *
  * These import `zod` directly rather than `astro:content`'s re-export, so the
@@ -8,7 +8,7 @@
  * copy, so `defineCollection` gets the instance it expects.
  *
  * The refinements in this file are the site's anti-fabrication mechanism.
- * Instruction.md §0 rule 2 says a missing figure is an honest gap and that "if
+ * the design says a missing figure is an honest gap and that "if
  * the schema would let a guess through, the schema is wrong" — so the rules
  * live here, where they fire at the exact field, rather than in a document
  * somebody has to remember.
@@ -16,7 +16,7 @@
 import { z } from 'zod';
 
 /**
- * Flat, globally-unique, lowercase-kebab slug (SPEC.md §5.1 and §6).
+ * Flat, globally-unique, lowercase-kebab slug (the design and).
  *
  * Model designations alone are not unique across the industry — `m4`, `p38`
  * and `type-56` each name several unrelated arms — so a slug always carries
@@ -33,7 +33,7 @@ export const slug = z
 export const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'must be an ISO date, YYYY-MM-DD');
 
 /**
- * A key into the entry's OWN `references[]` — SPEC.md §13.
+ * A key into the entry's OWN `references[]`.
  *
  * There is deliberately no site-wide bibliography file. Markey used one and it
  * is a merge-conflict machine the moment more than one author runs at once,
@@ -49,7 +49,7 @@ export const citationKey = slug;
 
 /**
  * Any year this site records. The floor is deliberately far below the scope
- * floor of SPEC.md §15 (~1860s), because maker founding dates are not bounded
+ * floor (~1860s), because maker founding dates are not bounded
  * by it: Beretta was founded in 1526.
  */
 export const year = z.number().int().min(1500).max(2100);
@@ -58,7 +58,7 @@ export const year = z.number().int().min(1500).max(2100);
 export const introducedYear = z
   .number()
   .int()
-  .min(1830, 'earlier than the self-contained metallic cartridge — out of scope (SPEC.md §15)')
+  .min(1830, 'earlier than the self-contained metallic cartridge — out of scope')
   .max(2100);
 
 export const yearRange = z
@@ -71,13 +71,13 @@ export const yearRange = z
     message: 'productionYears.end must not be earlier than .start',
   });
 
-/** Wikidata Q-id — the permanent join key of SPEC.md Appendix A. */
+/** Wikidata Q-id — the permanent join key. */
 export const wikidataId = z
   .string()
   .regex(/^Q[1-9]\d*$/, 'must be a Wikidata Q-id, e.g. Q37116');
 
 /**
- * A name in its original script — SPEC.md §5.1.
+ * A name in its original script.
  *
  * Deliberately not constrained beyond being non-empty: the whole point is that
  * `Автомат Калашникова` and `九五式自動步槍` are stored as written rather than
@@ -86,14 +86,14 @@ export const wikidataId = z
 export const nativeName = z.string().min(1);
 
 // ---------------------------------------------------------------------------
-// PropertyValue — SPEC.md §5.8
+// PropertyValue
 // ---------------------------------------------------------------------------
 
 export const valueStatus = z.enum(['verified', 'estimated', 'placeholder', 'conflicting-sources']);
 export type ValueStatus = z.infer<typeof valueStatus>;
 
 /**
- * The SI units this site stores. SPEC.md §2 principle: **SI is what is stored;
+ * The SI units this site stores. the design principle: **SI is what is stored;
  * imperial is always computed on demand, client-side, never stored and never
  * indexed.**
  *
@@ -127,7 +127,7 @@ interface PropertyValueShape {
 }
 
 /**
- * Hedge language that disqualifies a `verified` claim — SPEC.md §13 gate 3.
+ * Hedge language that disqualifies a `verified` claim.
  *
  * This is the highest-value check on the site. In Markey's own model benchmark
  * four of five models finished a car entry and *all four passed content checks
@@ -163,7 +163,7 @@ export function hedgeWordsIn(note: string | undefined): string[] {
 }
 
 /**
- * The refinements that encode SPEC.md §5.8, in the order they matter:
+ * The refinements that encode the design, in the order they matter:
  *
  *  - `verified` requires **both** a `source` and a `sourceUrl`. An uncited
  *    number is not verified, and a citation that cannot be clicked cannot be
@@ -195,7 +195,7 @@ function propertyValueRules<T extends z.ZodType<PropertyValueShape>>(schema: T) 
           code: 'custom',
           path: ['sourceUrl'],
           message:
-            "status 'verified' requires a `sourceUrl` — a citation that cannot be clicked cannot be spot-checked (SPEC.md §13 gate 2)",
+            "status 'verified' requires a `sourceUrl` — a citation that cannot be clicked cannot be spot-checked",
         });
       }
       const hedges = hedgeWordsIn(v.sourceNote);
@@ -203,7 +203,7 @@ function propertyValueRules<T extends z.ZodType<PropertyValueShape>>(schema: T) 
         ctx.addIssue({
           code: 'custom',
           path: ['sourceNote'],
-          message: `status 'verified' with a hedging note (${hedges.join(', ')}) — this is an assumption, not a verified figure. Use 'estimated' and say what it was estimated from (SPEC.md §13 gate 3)`,
+          message: `status 'verified' with a hedging note (${hedges.join(', ')}) — this is an assumption, not a verified figure. Use 'estimated' and say what it was estimated from`,
         });
       }
     }
@@ -212,7 +212,7 @@ function propertyValueRules<T extends z.ZodType<PropertyValueShape>>(schema: T) 
         code: 'custom',
         path: ['value'],
         message:
-          "status 'placeholder' requires `value: null` — a placeholder must never carry a plausible-looking invented number (SPEC.md §5.8)",
+          "status 'placeholder' requires `value: null` — a placeholder must never carry a plausible-looking invented number",
       });
     }
     if (v.status === 'estimated' && !v.sourceNote) {
@@ -281,8 +281,8 @@ export type PropertyValue = z.infer<typeof anyPropertyValue>;
  * A launch price carries a currency, a market and the year it was current, and
  * none of those fit a unit enum — so rather than smuggling `USD` into `siUnit`
  * and corrupting it, price gets its own primitive with the same trust fields.
- * `economics.ts` (SPEC.md §8.1) adjusts it for inflation from the baked CPI
- * table. SPEC.md §16 is explicit that there is no market-value database: this
+ * `economics.ts` adjusts it for inflation from the baked CPI
+ * table. the design is explicit that there is no market-value database: this
  * is the launch price as published, and nothing else.
  */
 export const monetaryValue = z
@@ -317,7 +317,7 @@ export const monetaryValue = z
 export type MonetaryValue = z.infer<typeof monetaryValue>;
 
 // ---------------------------------------------------------------------------
-// Imagery — SPEC.md §10
+// Imagery
 // ---------------------------------------------------------------------------
 
 /**
@@ -337,19 +337,25 @@ export const licenseType = z.enum([
   'cc-by-nc',
   'cc-by-nd',
   'gfdl',
+  /** UK Open Government Licence: attribution, with the government as the licensor. */
+  'ogl',
+  /** French Licence Ouverte / Open Licence (Etalab): attribution. */
+  'licence-ouverte',
   'manufacturer-press-grant',
   'fair-use-editorial',
   'trademark-nominative-use',
 ]);
 export type LicenseType = z.infer<typeof licenseType>;
 
-/** Licences that require naming the author — SPEC.md §10. */
+/** Licences that require naming the author. */
 export const ATTRIBUTION_REQUIRED: ReadonlySet<string> = new Set([
   'cc-by',
   'cc-by-sa',
   'cc-by-nc',
   'cc-by-nd',
   'gfdl',
+  'ogl',
+  'licence-ouverte',
   'manufacturer-press-grant',
 ]);
 
@@ -381,7 +387,7 @@ export const imageCredit = z
         code: 'custom',
         path: ['licenseNote'],
         message:
-          'fair-use-editorial requires a `licenseNote` — fair use is a contestable defence, not a licence, and SPEC.md §10 requires it be justified per file',
+          'fair-use-editorial requires a `licenseNote` — fair use is a contestable defence, not a licence, requires it be justified per file',
       });
     }
     if (c.licenseType === 'manufacturer-press-grant' && !c.licenseNote) {
@@ -408,7 +414,7 @@ export const imageRef = z.object({
 export type ImageRef = z.infer<typeof imageRef>;
 
 // ---------------------------------------------------------------------------
-// The v2 shooting range — SPEC.md §9.8, reserved in v1
+// The v2 shooting range, reserved in v1
 // ---------------------------------------------------------------------------
 
 /**
@@ -418,7 +424,7 @@ export type ImageRef = z.infer<typeof imageRef>;
  * touching every file. `fidelity` is the honesty field: `representative` means
  * one of the eight generic per-type viewmodels scaled to this entry's real
  * dimensions, and the UI must say so — the same discipline as the silhouette
- * in SPEC.md §9.6.
+ *.
  */
 export const model3d = z.object({
   /** Path under `public/models/`. */
@@ -432,7 +438,7 @@ export const model3d = z.object({
 export type Model3d = z.infer<typeof model3d>;
 
 // ---------------------------------------------------------------------------
-// Per-entry bibliography — SPEC.md §13
+// Per-entry bibliography
 // ---------------------------------------------------------------------------
 
 export const referenceType = z.enum([
@@ -522,7 +528,7 @@ export const referenceEntry = z
         code: 'custom',
         path: ['revision'],
         message:
-          'a SAAMI / C.I.P. / NATO citation must name the edition or datasheet date — these documents are revised (SPEC.md Appendix A)',
+          'a SAAMI / C.I.P. / NATO citation must name the edition or datasheet date — these documents are revised',
       });
     }
     if (ref.type === 'military-manual' && !ref.revision) {
@@ -536,7 +542,7 @@ export const referenceEntry = z
 export type ReferenceEntry = z.infer<typeof referenceEntry>;
 
 // ---------------------------------------------------------------------------
-// Entry-level trust fields — SPEC.md §5.8
+// Entry-level trust fields
 // ---------------------------------------------------------------------------
 
 export const reviewStatus = z.enum(['draft', 'agent-populated', 'spot-checked', 'verified']);

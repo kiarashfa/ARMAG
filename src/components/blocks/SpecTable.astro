@@ -1,15 +1,15 @@
 ---
 /**
- * The specification table, rendered from the row registry — SPEC.md §9.2.
+ * The specification table, rendered from the row registry.
  *
  * Every row on this page comes from `lib/compare/rows.ts`, which reads them out
  * of the Zod schema. Nothing here names a field. That is the whole point: the
  * compare table renders the same rows from the same registry, so a field added
- * to `gun.ts` appears in both without an edit in either (Instruction.md
+ * to `gun.ts` appears in both without an edit in either (the design
  * Phase 6), and neither can quietly fall behind the other.
  *
  * Groups are `<details open>` — collapsible at every breakpoint, open by
- * default, per SPEC.md §11. A reader who collapses a group is telling us
+ * default,. A reader who collapses a group is telling us
  * something; a group that cannot be collapsed on desktop is telling them the
  * page knows better.
  */
@@ -19,6 +19,8 @@ import UnitValue from './UnitValue.astro';
 
 import { AXIS_PREFIX, taxonomyHref, type TaxonomyAxisKey } from '../../lib/content/href.ts';
 import { formatYears } from '../../lib/render/format.ts';
+import { adjustForInflation } from '../../lib/math/economics.ts';
+import cpi from '../../data/cpi.json' with { type: 'json' };
 import type { CompareCell } from '../../lib/compare/entry.ts';
 import { groupRows, type CompareRow } from '../../lib/compare/rows.ts';
 
@@ -42,6 +44,24 @@ const money = (cell: Extract<CompareCell, { kind: 'money' }>): string =>
   cell.amount === null
     ? 'not recorded'
     : `${cell.currency} ${cell.amount.toLocaleString('en-GB')} · ${cell.year} · ${cell.market}`;
+
+/**
+ * A US-dollar price in the most recent year's money, from the baked CPI table.
+ * Only for USD in the US market, because that is the only series baked; and
+ * nothing rather than a guess where the table does not reach the year. It says
+ * what the money is worth, not what the market did, and the line says so.
+ */
+const inRecentMoney = (cell: Extract<CompareCell, { kind: 'money' }>): number | null => {
+  if (cell.amount === null || cell.currency !== 'USD' || cell.market !== 'US') return null;
+  if (cell.year >= cpi.lastYear) return null;
+  const adjusted = adjustForInflation(
+    { value: cell.amount, status: cell.status },
+    cell.year,
+    cpi.lastYear,
+    cpi.annualAverage as Record<string, number>,
+  );
+  return adjusted.value === null ? null : Math.round(adjusted.value);
+};
 ---
 
 <div class="grid gap-6 lg:grid-cols-2">
@@ -175,6 +195,11 @@ const money = (cell: Extract<CompareCell, { kind: 'money' }>): string =>
                         {money(cell)}
                       </span>
                       {cell.amount !== null && <StatusBadge status={cell.status} />}
+                      {inRecentMoney(cell) !== null && (
+                        <span class="type-data basis-full text-xs text-ink-muted" title={cpi.caveat}>
+                          about USD {inRecentMoney(cell)!.toLocaleString('en-GB')} in {cpi.lastYear} money, by US consumer prices
+                        </span>
+                      )}
                     </div>
                   )}
                 </dd>

@@ -1,5 +1,5 @@
 {
-  "note": "Annual-average CPI-U, baked at authoring time so the built site makes no runtime API call (SPEC.md Appendix A). `lib/math/economics.ts` takes `annualAverage` as its `CpiTable` and returns null — not an approximation — for a year that is absent. The current year has no annual average until the year is over, which is why the table normally stops one year back. Regenerate with `node scripts/data/cpi.mjs`.",
+  "note": "Annual-average CPI-U, baked at authoring time so the built site makes no runtime API call. `lib/math/economics.ts` takes `annualAverage` as its `CpiTable` and returns null — not an approximation — for a year that is absent. The current year has no annual average until the year is over, which is why the table normally stops one year back. Regenerate with `node scripts/data/cpi.mjs`.",
   "series": "CUUR0000SA0",
   "seriesTitle": "Consumer Price Index for All Urban Consumers (CPI-U), US city average, all items, not seasonally adjusted",
   "period": "M13 — annual average",

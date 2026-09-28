@@ -20,10 +20,10 @@
  * entry's own cited Wikipedia article to its `wikibase_item` and compares;
  * `--fix` writes the resolved value. Where an entry cites an article broader
  * than itself (the Winchester Model 1873 cites "Winchester rifle", which is the
- * whole series), the honest answer is no id at all — FRICTION-LOG A7 — and the
+ * whole series), the honest answer is no id at all — and the
  * mismatch is reported for a person to resolve rather than auto-written.
  *
- * SPEC.md Appendix A settles what this is for, and the wording is deliberate:
+ * the design settles what this is for, and the wording is deliberate:
  * **join key, not master list.** Verified 2026-08-26 by SPARQL — `firearm
  * model` (Q22704163) holds ~668 items and the `firearm` (Q12796) subclass tree
  * returns ~402 dominated by museum-artefact properties. The coverage plan comes
@@ -36,7 +36,7 @@
  *  - aliases, which drive a large share of real search traffic (Pagefind found
  *    the pilot entries by `P80`, `SS109`, `Pulemyot` and `Wingmaster`).
  *
- * FRICTION-LOG A7 is the standing warning, printed by `show`: **Wikidata is one
+ * the design is the standing warning, printed by `show`: **Wikidata is one
  * item per family, not per model.** The PKM has no item of its own (Q159495 is
  * "PK"); Izhmash and Kalashnikov Concern share Q7427495; 12 gauge has no
  * cartridge item at all. Leaving `wikidataId` absent is correct in those cases.
@@ -154,7 +154,7 @@ async function labelsFor(ids) {
 async function cmdId(title) {
   const { qid, resolvedTitle } = await qidForTitle(title);
   console.log(`${title} → ${resolvedTitle}`);
-  console.log(`wikidataId: ${qid ?? '(none — leave the field absent, FRICTION-LOG A7)'}`);
+  console.log(`wikidataId: ${qid ?? '(none — leave the field absent)'}`);
 }
 
 async function cmdShow(qid) {
@@ -187,7 +187,7 @@ async function cmdShow(qid) {
   if (aliases.length) console.log(`\nEnglish aliases: ${aliases.join(' · ')}`);
 
   console.log(
-    '\nFRICTION-LOG A7 — CHECK THIS ITEM IS THE MODEL, NOT THE FAMILY. Wikidata has one item\n' +
+    '\nCHECK THIS ITEM IS THE MODEL, NOT THE FAMILY. Wikidata has one item\n' +
       'per family far more often than per model: Q159495 is "PK", not the PKM, and Izhmash\n' +
       'shares Q7427495 with Kalashnikov Concern. If this item is the family, leave\n' +
       '`wikidataId` absent on the model rather than recording a wrong join.',

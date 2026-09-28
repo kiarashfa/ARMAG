@@ -5,10 +5,10 @@
  *   node scripts/data/new-entry.mjs gun       type-63 "Type 63 assault rifle"
  *   node scripts/data/new-entry.mjs cartridge 30-06-springfield ".30-06 Springfield"
  *
- * Instruction.md Phase 9's definition of done is that **a second author can
+ * the definition of done is that **a second author can
  * produce an entry meaningfully faster than Phase 8 did**. Phase 8 measured
  * itself at ~25 minutes of sourcing plus ~10 of writing per entry
- * (FRICTION-LOG E1), and the writing half is what this removes: the shape of
+ * and the writing half is what this removes: the shape of
  * the two files, the identity fields, the Wikipedia permalink citation, and the
  * checklist of what still has to be found.
  *
@@ -70,7 +70,7 @@ function wikipediaReference(found) {
     type: 'wikipedia',
     title: found.title,
     publisher: 'Wikipedia',
-    // FRICTION-LOG A6: the permalink. A revid typed later is a fabrication, so
+    // the permalink. A revid typed later is a fabrication, so
     // it is taken from the same call that resolved the title.
     url: `https://en.wikipedia.org/w/index.php?oldid=${found.revid}`,
     lang: 'en',
@@ -85,7 +85,7 @@ function gunData(slug, found) {
     id: slug,
     name: found.title,
     kind: 'model',
-    // FRICTION-LOG A7: Wikidata is one item per family far more often than per
+    // Wikidata is one item per family far more often than per
     // model. If this id turns out to be the family's, delete the field — a
     // wrong join is worse than a missing one.
     ...(found.wikidataId ? { wikidataId: found.wikidataId } : {}),
@@ -138,7 +138,7 @@ function cartridgeData(slug, found) {
     // usually a person (Georg Luger) rather than a country.
     caseType: 'TODO',
     standard: 'TODO',
-    // `introduced` is omitted on purpose — FRICTION-LOG B2: 12 gauge has no
+    // `introduced` is omitted on purpose — 12 gauge has no
     // publishable introduction year, and a required field guaranteed an invented
     // one on exactly the entries nobody could check.
     caseLength: placeholder('mm'),
@@ -164,7 +164,7 @@ TODO — the narrative. Not a spec table in prose: the table is next to it and r
 the reader's attention. Say what the design does that the numbers do not, what it was answering,
 and where it sits against what came before.
 
-TODO — FRICTION-LOG E4: end with a paragraph naming this entry's own gaps. No published twist
+TODO — end with a paragraph naming this entry's own gaps. No published twist
 rate, no free dimensional standard, no photograph of this exact variant. That paragraph is what
 makes the amber badges legible to a reader who does not know what a status field is, and it
 reads far better than a page of unexplained warnings.
@@ -178,7 +178,7 @@ name: ${JSON.stringify(found.title)}
 TODO — the narrative. What problem this cartridge was designed against, what it displaced, and
 what its dimensions imply for the arms built around it.
 
-TODO — FRICTION-LOG E4: end with a paragraph naming this entry's own gaps.
+TODO — end with a paragraph naming this entry's own gaps.
 `;
 
 const CHECKLIST = {

@@ -1,12 +1,12 @@
 /**
- * Handling figures — SPEC.md §8.1.
+ * Handling figures.
  *
- * ── One thing SPEC.md asks for that is not here ────────────────────────────
- * §8.1 lists "sight radius from dimensions". Sight radius cannot be derived
+ * ── One thing the design asks for that is not here ────────────────────────────
+ * lists "sight radius from dimensions". Sight radius cannot be derived
  * from overall length: where the sights sit on a barrel is a design choice, not
  * a proportion, and a slide-mounted rear sight and a receiver-mounted one on
  * the same pistol differ by inches. Deriving it would produce a number that
- * looked measured and was not — the exact failure mode Instruction.md §0 rule 2
+ * looked measured and was not — the exact failure mode the design
  * exists to stop. Sight radius is a **stored, sourced field** on the gun schema
  * instead, and what this module supplies is the geometry that uses it: how much
  * a given sight misalignment costs downrange.

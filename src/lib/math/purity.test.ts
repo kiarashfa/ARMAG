@@ -1,18 +1,18 @@
 /**
- * Structural guarantees about `lib/math` — Instruction.md Phase 3's definition
- * of done, and two of SPEC.md's red lines made mechanical.
+ * Structural guarantees about `lib/math` — the definition
+ * of done, and two's red lines made mechanical.
  *
  * These assertions do not test behaviour. They test that the code cannot drift
  * into shapes the architecture forbids, which is the kind of rule that is
  * obeyed for six months and then quietly broken by someone in a hurry:
  *
  *  1. **Purity.** No DOM, no I/O, no Astro or Svelte import anywhere under
- *     `lib/math`. The whole point of SPEC.md §2 principle 5 is that a
+ *     `lib/math`. The whole point is that a
  *     build-time figure and a client-recomputed one are the same function's
  *     output — which stops being true the moment one of these functions can
  *     read something the other cannot.
- *  2. **No fps-per-inch constant, anywhere in the codebase.** SPEC.md §8.2.
- *  3. **No damage, lethality or stopping-power metric, anywhere.** SPEC.md §14.
+ *  2. **No fps-per-inch constant, anywhere in the codebase.** the design.
+ *  3. **No damage, lethality or stopping-power metric, anywhere.** the design.
  *
  * Only the CODE in each file is scanned — comments are stripped, and an
  * `.astro` file contributes its frontmatter and scripts but not its markup. That
@@ -134,7 +134,7 @@ test('lib/math imports nothing outside lib/math except its own siblings', () => 
 });
 
 test('no fps-per-inch constant exists anywhere in the codebase', () => {
-  // SPEC.md §8.2. "About 25 fps per inch of barrel" is the most repeated number
+  // the design. "About 25 fps per inch of barrel" is the most repeated number
   // in the subject and it is a fabrication with a lab coat on: the real figure
   // depends on cartridge, powder and where on the curve you are, and can go
   // negative. Velocity comes from sourced points and interpolation between
@@ -160,15 +160,15 @@ test('no fps-per-inch constant exists anywhere in the codebase', () => {
   assert.equal(
     failures.length,
     0,
-    `a barrel-length velocity constant has appeared. Extrapolation is forbidden by SPEC.md §8.2:\n  ${failures.join('\n  ')}`,
+    `a barrel-length velocity constant has appeared. Extrapolation is forbidden by \n  ${failures.join('\n  ')}`,
   );
 });
 
 test('no damage, lethality or stopping-power metric exists anywhere', () => {
-  // SPEC.md §14, a permanent exclusion rather than a v1 deferral. Muzzle and
+  // the design, a permanent exclusion rather than a v1 deferral. Muzzle and
   // retained energy are physics and appear prominently; "stopping power" is
   // discredited pseudoscience and would be the most-attacked claim on the site.
-  // Taylor's Knock-Out factor is listed in SPEC.md §8.1 and is deliberately not
+  // Taylor's Knock-Out factor is listed and is deliberately not
   // implemented, because it is one of these — see `ballistics/energy.ts`.
   const patterns = [
     /\bstoppingPower\b/i,
@@ -192,6 +192,6 @@ test('no damage, lethality or stopping-power metric exists anywhere', () => {
   assert.equal(
     failures.length,
     0,
-    `SPEC.md §14 forbids any damage, lethality or stopping-power metric:\n  ${failures.join('\n  ')}`,
+    `the design forbids any damage, lethality or stopping-power metric:\n  ${failures.join('\n  ')}`,
   );
 });

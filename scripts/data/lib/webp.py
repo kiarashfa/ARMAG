@@ -3,9 +3,9 @@
 Called by `lib/webp.mjs`. Kept in Python because Phase 8 encoded all 34 pilot
 images with Pillow and the alternative is a ~30 MB native npm dependency for a
 step that only ever runs at authoring time — `scripts/data/` is never run by CI
-or by the build (Instruction.md Phase 9, SPEC.md §13).
+or by the build.
 
-The rule this file exists to enforce is FRICTION-LOG D3: **never pick a fixed
+The rule this file exists to enforce is **never pick a fixed
 quality.** The cap is on bytes, so a busy photograph at a fixed quality misses
 it while a plain one wastes half the budget. Quality is searched downward, and
 only when quality alone cannot reach the cap is the image resized — in that
@@ -28,7 +28,7 @@ try:
 except ImportError:  # pragma: no cover - environment problem, not a code path
     print(
         "Pillow is not installed. `pip install Pillow` — the image pipeline "
-        "needs it to produce WebP (SPEC.md §10).",
+        "needs it to produce WebP.",
         file=sys.stderr,
     )
     raise SystemExit(2)

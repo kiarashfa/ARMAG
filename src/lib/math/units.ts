@@ -1,5 +1,5 @@
 /**
- * Unit conversion — SPEC.md §8.1.
+ * Unit conversion.
  *
  * **SI is what is stored. Imperial is computed on demand, client-side, and is
  * never stored and never indexed.** That rule is why this module exists at all
@@ -116,7 +116,7 @@ export function angleSubtendedBy(offsetM: number, rangeM: number): number {
 }
 
 // ---------------------------------------------------------------------------
-// The imperial unit set, for the persistent toggle (SPEC.md §11)
+// The imperial unit set, for the persistent toggle
 // ---------------------------------------------------------------------------
 
 export type UnitSystem = 'metric' | 'imperial';

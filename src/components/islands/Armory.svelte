@@ -1,6 +1,6 @@
 <script lang="ts">
   /**
-   * My Armory — SPEC.md §9.4.
+   * My Armory.
    *
    * Numbered bays in a grid, with the empty ones visible: an armory is a
    * shelf, and a shelf you can see the gaps in is the point of having one.
@@ -222,7 +222,7 @@
       persist(setCapacity(state, capacity));
       return;
     }
-    // SPEC.md §9.4: downsizing warns before eviction.
+    // downsizing warns before eviction.
     pendingCapacity = capacity;
   }
 
@@ -396,7 +396,7 @@
 
 <div class="mt-8">
   {#if notice}
-    <!-- SPEC.md §9.9: an honest one-line notice, never a silent failure. -->
+    <!-- an honest one-line notice, never a silent failure. -->
     <p class="type-data mb-4 rounded-lg border border-line-strong bg-surface-1 p-3 text-sm text-status-estimated">
       {notice}
     </p>
@@ -996,7 +996,7 @@
     </div>
   {/if}
 
-  <!-- ── Share and backup — SPEC.md §9.4 ───────────────────────────── -->
+  <!-- ── Share and backup ───────────────────────────── -->
   <section class="mt-(--layout-section-gap)">
     <h2 class="type-title text-xl text-ink">Taking it with you</h2>
     <div class="mt-4 grid gap-4 lg:grid-cols-2">

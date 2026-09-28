@@ -1,6 +1,6 @@
 <script lang="ts">
   /**
-   * The catalogue — SPEC.md §9.1.
+   * The catalogue.
    *
    * **One filtered, sorted list drives both renderings.** The dense table and
    * the card grid read the same `$derived` array, so "what matches" has exactly
@@ -15,6 +15,7 @@
    * helps and one that collapses to a single option the moment you use it.
    */
   import type { CatalogueRow } from '../../lib/content/catalogue.ts';
+  import FacetMenu from './FacetMenu.svelte';
 
   interface VocabTerm {
     id: string;
@@ -78,33 +79,25 @@
   let limit = $state(PAGE);
 
   /**
-   * The seven facet lists are a drawer, closed by default.
+   * The seven facets are menus in a row under the toolbar, one button each.
    *
-   * Open, they are 80-odd chips across seven labelled rows — most of a screen
-   * of controls above a catalogue nobody has looked at yet, which is what made
-   * the homepage read as busy. Closed, the toolbar is one row, and what a
-   * reader still sees at all times is what is currently FILTERING the list,
-   * because that is the state that changes what they are looking at. A filter
-   * arriving from the URL opens the drawer, so a shared link explains itself.
+   * They used to be a drawer of chip rows: eighty-odd chips across seven
+   * labelled rows, which made the page read as busy and grew with every new
+   * country or role. A menu keeps each axis to one button however many terms it
+   * holds; what is actively filtering is always visible as the chip row.
    */
-  let filtersOpen = $state(false);
 
   /* ── URL round-trip ─────────────────────────────────────────────────── */
 
   function readUrl() {
     const params = new URLSearchParams(location.search);
     query = params.get('q') ?? '';
-    // `anyFilter` is accumulated from the PARAMS, never read back off
-    // `selected`. `readUrl` runs inside an $effect, and an effect that reads
-    // the state it also writes hangs the page hard enough that the renderer
-    // stops answering — the same defect as CLAUDE.md item 113, two call frames
-    // away from the write again.
-    let anyFilter = false;
+    // Everything here is read from the PARAMS, never back off `selected`:
+    // `readUrl` runs inside an $effect, and an effect that reads the state it
+    // also writes hangs the page hard enough that the renderer stops answering.
     for (const axis of AXES) {
       const raw = params.get(axis.param);
-      const values = raw ? raw.split(',').filter(Boolean) : [];
-      selected[axis.key] = values;
-      if (values.length > 0) anyFilter = true;
+      selected[axis.key] = raw ? raw.split(',').filter(Boolean) : [];
     }
     const sortParam = params.get('sort');
     if (SORTS.some((s) => s.key === sortParam)) sort = sortParam as SortKey;
@@ -112,9 +105,6 @@
     if (dirParam === 'asc' || dirParam === 'desc') direction = dirParam;
     const viewParam = params.get('view');
     if (viewParam === 'table' || viewParam === 'cards') view = viewParam;
-    // A shared link arriving pre-filtered opens the drawer, so the reader can
-    // see what was applied rather than wondering why the list is short.
-    if (anyFilter) filtersOpen = true;
   }
 
   function writeUrl() {
@@ -291,10 +281,8 @@
 <div class="mt-6">
   <!--
     ── Toolbar ─────────────────────────────────────────────────────────────
-    One row: search, sort, direction, view, and the filter drawer's handle.
-    Everything that changes what the list SHOWS is here; everything that
-    changes what it CONTAINS is behind the handle, with its count on the
-    button so the drawer never hides state without saying so.
+    One row: search, sort, direction and view. The facet menus follow on the
+    next row, each carrying its own count, so no state is ever hidden.
   -->
   <div class="flex flex-wrap items-center gap-2">
     <label class="min-w-56 flex-1">
@@ -308,23 +296,6 @@
       />
     </label>
 
-    <button
-      type="button"
-      onclick={() => (filtersOpen = !filtersOpen)}
-      aria-expanded={filtersOpen}
-      aria-controls="catalogue-filters"
-      class={`type-data flex shrink-0 items-center gap-2 rounded border px-3 py-2 text-sm ${
-        activeCount > 0 || filtersOpen
-          ? 'border-line-strong bg-surface-2 text-ink'
-          : 'border-line-strong bg-surface-1 text-ink-secondary hover:text-ink'
-      }`}
-    >
-      Filters
-      {#if activeCount > 0}
-        <span class="rounded-full bg-ui-accent px-1.5 text-xs text-surface-0">{activeCount}</span>
-      {/if}
-      <span aria-hidden="true" class="text-ink-muted">{filtersOpen ? '▴' : '▾'}</span>
-    </button>
 
     <label class="shrink-0">
       <span class="sr-only">Sort by</span>
@@ -338,7 +309,7 @@
       </select>
     </label>
 
-    <!-- Field and direction are separate controls, per SPEC.md §9.1. -->
+    <!-- Field and direction are separate controls,. -->
     <button
       type="button"
       onclick={() => (direction = direction === 'asc' ? 'desc' : 'asc')}
@@ -364,9 +335,27 @@
     </div>
   </div>
 
+  <!-- ── The facet menus ─────────────────────────────────────────────── -->
+  <div class="mt-3 flex flex-wrap items-center gap-2 max-sm:relative">
+    {#each AXES as axis (axis.key)}
+      {#if facets[axis.key].length > 1 || selected[axis.key].length > 0}
+        <FacetMenu
+          label={axis.label}
+          terms={facets[axis.key]}
+          selected={selected[axis.key]}
+          multi={axis.multi}
+          onchange={(next) => {
+            selected[axis.key] = next;
+            limit = PAGE;
+          }}
+        />
+      {/if}
+    {/each}
+  </div>
+
   <!--
     ── Applied filters ─────────────────────────────────────────────────────
-    Always visible, drawer open or shut. Each chip removes its own filter, so
+    Always visible under the menus. Each chip removes its own filter, so
     undoing one is one click and does not require finding it again among
     eighty.
   -->
@@ -386,39 +375,6 @@
       <button type="button" onclick={clearAll} class="type-data text-xs text-ui-accent">
         Clear all
       </button>
-    </div>
-  {/if}
-
-  <!-- ── The drawer ───────────────────────────────────────────────────── -->
-  {#if filtersOpen}
-    <div
-      id="catalogue-filters"
-      class="mt-3 grid gap-x-6 gap-y-4 rounded-lg border border-line bg-surface-1 p-4 sm:grid-cols-2 xl:grid-cols-3"
-    >
-      {#each AXES as axis (axis.key)}
-        {#if facets[axis.key].length > 0}
-          <div>
-            <p class="type-data text-xs uppercase tracking-widest text-ink-muted">{axis.label}</p>
-            <div class="mt-2 flex flex-wrap gap-1.5">
-              {#each facets[axis.key] as term (term.id)}
-                <button
-                  type="button"
-                  onclick={() => toggle(axis.key, term.id, axis.multi)}
-                  aria-pressed={selected[axis.key].includes(term.id)}
-                  class={`type-data rounded-full border px-2.5 py-0.5 text-xs ${
-                    selected[axis.key].includes(term.id)
-                      ? 'border-line-strong bg-surface-2 text-ink'
-                      : 'border-line text-ink-secondary hover:text-ink'
-                  }`}
-                >
-                  {term.label}
-                  <span class="text-ink-muted">{term.count}</span>
-                </button>
-              {/each}
-            </div>
-          </div>
-        {/if}
-      {/each}
     </div>
   {/if}
 
@@ -469,7 +425,7 @@
                     <a href={`${gunPrefix}${row.id}/`} class="text-ui-accent">{row.name}</a>
                   {:else}
                     <!-- Below the publication floor: a row, but no URL that
-                         promises more than the entry has (SPEC.md §5.9). -->
+                         promises more than the entry has. -->
                     <span class="text-ink">{row.name}</span>
                     <span class="ml-1 text-xs text-ink-muted">(no page yet)</span>
                   {/if}

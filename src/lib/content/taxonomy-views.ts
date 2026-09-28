@@ -1,5 +1,5 @@
 /**
- * The computed views behind every taxonomy URL — SPEC.md §7.
+ * The computed views behind every taxonomy URL.
  *
  * One function per axis would be seven near-identical functions, so the axis is
  * a parameter and the seven route files are three lines each. That matters
@@ -62,7 +62,7 @@ export const AXES: Record<TaxonomyAxisKey, AxisDefinition> = {
   country: {
     label: 'Country',
     terms: countries.terms,
-    // Designed in AND produced in: SPEC.md §7 keeps them separate fields
+    // Designed in AND produced in: the design keeps them separate fields
     // because they differ constantly, and a reader browsing by country wants
     // both answers on the same page.
     termsOf: (gun) => [
@@ -100,7 +100,7 @@ export interface TaxonomyPathProps {
 /**
  * Every page on one axis.
  *
- * A term with no entries still gets a page. That is deliberate: SPEC.md's
+ * A term with no entries still gets a page. That is deliberate: the design's
  * sequencing says an axis with no examples is an untested code path, and a
  * browse page that 404s the moment its last entry is re-tagged is worse than an
  * honest empty one.

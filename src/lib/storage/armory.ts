@@ -1,11 +1,11 @@
 /**
  * My Armory's state, its store, and the two ways it leaves the browser —
- * SPEC.md §9.4.
+ * the design.
  *
  * Everything in this file is pure except the store itself, which goes through
  * `defineStore` in `index.ts` and inherits its whole contract: namespaced key,
  * versioned envelope, schema-checked on read, unrecognised version discarded
- * **whole** with a visible notice (SPEC.md §9.9).
+ * **whole** with a visible notice.
  *
  * ── The two exports, and why they are not the same function ────────────────
  * A **share link** carries slots and slugs. A **backup file** carries
@@ -19,7 +19,7 @@
  * containing none of its ownership data.
  *
  * ── There is no serial number, here or anywhere ────────────────────────────
- * SPEC.md §9.4. A leaked save must never be a theft shopping list. The schema
+ * the design. A leaked save must never be a theft shopping list. The schema
  * has no such field and `armory.test.ts` asserts the identifier appears nowhere
  * in `src/`.
  */
@@ -140,7 +140,7 @@ export function moveEntry(state: ArmoryState, uid: string, toSlot: number): Armo
 }
 
 /**
- * Which entries a downsize would actually lose — SPEC.md §9.4: *"downsizing
+ * Which entries a downsize would actually lose — *"downsizing
  * warns before eviction."*
  *
  * Separated from `setCapacity` on purpose. The UI has to be able to ask the

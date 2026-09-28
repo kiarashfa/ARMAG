@@ -1,5 +1,5 @@
 /**
- * The `guns` collection — SPEC.md §5.1, §5.2, §5.3.
+ * The `guns` collection.
  *
  * One flat collection discriminated by `kind`, with two files per entry joined
  * by `id` and never merged:
@@ -17,7 +17,7 @@
  * owns the other, and re-grouping never breaks a URL.
  *
  * ── The promotion rule, encoded structurally ───────────────────────────────
- * SPEC.md §5.2 promotes a variant to its own entry if it changes receiver size
+ * the design promotes a variant to its own entry if it changes receiver size
  * class, primary cartridge family, action, or operating system — so
  * `variantOverrides` below deliberately **does not offer those fields**. A
  * variant that needs to change one of them cannot express it here, which is
@@ -77,7 +77,7 @@ export type GunNarrative = z.infer<typeof gunNarrativeSchema>;
 // ---------------------------------------------------------------------------
 
 /**
- * An alias — SPEC.md §5.3. Feeds the search index, the "also known as" block,
+ * An alias. Feeds the search index, the "also known as" block,
  * and the alias redirect pages, so "M9" finds the Beretta 92 without minting a
  * duplicate URL.
  */
@@ -98,7 +98,7 @@ export const gunAlias = z.object({
 export type GunAlias = z.infer<typeof gunAlias>;
 
 /**
- * The lineage graph — SPEC.md §5.3.
+ * The lineage graph.
  *
  * Renders the family tree and is the single largest source of internal-link
  * density on the site. The four edges are distinct claims and are not
@@ -114,7 +114,7 @@ export const lineage = z.object({
 export type Lineage = z.infer<typeof lineage>;
 
 /**
- * Gun ↔ cartridge is many-to-many — SPEC.md §5.4.
+ * Gun ↔ cartridge is many-to-many.
  *
  * `capacity` is dimensionless and lives here rather than on the gun, because a
  * Glock 17 in 9×19 and the same frame in another chambering do not hold the
@@ -130,7 +130,7 @@ export const chambering = z.object({
 export type Chambering = z.infer<typeof chambering>;
 
 /**
- * Accessory compatibility edges — SPEC.md §5.7.
+ * Accessory compatibility edges.
  *
  * The accessories collection is v2; these edges are v1 infrastructure, so that
  * when it lands the compatibility data already exists rather than needing a
@@ -154,17 +154,17 @@ export type FitsEdge = z.infer<typeof fitsEdge>;
  * Every measurable number about one configuration of an arm.
  *
  * All optional, all `PropertyValue`: a missing figure is an honest gap
- * (SPEC.md §2 principle 6) and a present one carries its status and source.
+ * and a present one carries its status and source.
  * This shape is what `variants[].overrides` is a partial of, which is why it is
  * defined once rather than inlined.
  *
- * The last block is reserved for the v2 shooting range (SPEC.md §9.8) and is
+ * The last block is reserved for the v2 shooting range and is
  * ballistics-relevant today: `sightHeightOverBore` and `riflingTwist` are
  * inputs the trajectory solver needs, not decoration.
  */
 export const gunSpec = z.object({
   massEmpty: propertyValue('kg').optional(),
-  /** Needed for loaded mass = empty + magazine + n × cartridge (SPEC.md §8.1). */
+  /** Needed for loaded mass = empty + magazine + n × cartridge. */
   massMagazineEmpty: propertyValue('kg').optional(),
 
   length: propertyValue('mm').optional(),
@@ -197,7 +197,7 @@ export type GunSpec = z.infer<typeof gunSpec>;
  * The spec numbers, plus the three taxonomy fields that genuinely vary within
  * one entry: chambering within the same cartridge family, fire modes, and feed.
  * Action, operating system and type are absent on purpose — changing any of
- * them promotes the variant to its own entry (SPEC.md §5.2).
+ * them promotes the variant to its own entry.
  */
 export const variantOverrides = gunSpec.partial().extend({
   chamberings: z.array(chambering).optional(),
@@ -211,7 +211,7 @@ export type VariantOverrides = z.infer<typeof variantOverrides>;
  *
  * Exists **only where it changes a measurable spec**. Cosmetic SKUs, finishes
  * and commemorative markings are not modelled, and an author who reaches for
- * one here has misread §5.2.
+ * one here has misread.
  */
 export const gunConfiguration = z.object({
   id: slug,
@@ -228,12 +228,12 @@ export const gunVariant = z
     productionYears: yearRange.optional(),
     /** One or two sentences on what this variant actually is. */
     summary: z.string().optional(),
-    /** ONLY what changed — the delta-override pattern of SPEC.md §5.2. */
+    /** ONLY what changed — the delta-override pattern. */
     overrides: variantOverrides,
     configurations: z.array(gunConfiguration).default([]),
     /**
      * Set when this variant has outgrown the tab and become its own entry.
-     * SPEC.md §5.2: a promoted variant leaves a stub anchor linking to its new
+     * a promoted variant leaves a stub anchor linking to its new
      * home, because promotion must never break an existing in-page link.
      */
     promotedTo: slug.optional(),
@@ -281,7 +281,7 @@ export const gunDataSchema = gunSpec
     feedSystem: z.array(feedSystemTag).default([]),
     roles: z.array(roleTag).default([]),
 
-    /** SPEC.md §7 — where it was designed and where it was made differ constantly. */
+    /** where it was designed and where it was made differ constantly. */
     designedIn: countryTag.optional(),
     producedIn: z.array(countryTag).default([]),
 
@@ -296,7 +296,7 @@ export const gunDataSchema = gunSpec
     /** Units produced, where a body such as ATF AFMER or SIPRI publishes it. */
     productionTotal: propertyValue('').optional(),
     /**
-     * Launch price as published. SPEC.md §16 rejects a market-value database
+     * Launch price as published. the design rejects a market-value database
      * outright; this is the number `economics.ts` adjusts for inflation, and
      * the condition calculator works from a base the *user* supplies.
      */
@@ -328,7 +328,7 @@ export const gunDataSchema = gunSpec
         code: 'custom',
         path: ['familyRef'],
         message:
-          'a family must not belong to another family — `family` is a soft grouping, not a parent, and nesting them makes the computed member list ambiguous (SPEC.md §5.1)',
+          'a family must not belong to another family — `family` is a soft grouping, not a parent, and nesting them makes the computed member list ambiguous',
       });
     }
 

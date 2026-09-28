@@ -2,7 +2,7 @@
   "axis": "role",
   "urlPrefix": "/role/",
   "authored": true,
-  "note": "What an arm was designed or adopted for — multi-valued, because most arms have more than one. A role is a design intent recorded from sources, never a recommendation: SPEC.md §14 forbids ranking any arm on effectiveness for any use.",
+  "note": "What an arm was designed or adopted for — multi-valued, because most arms have more than one. A role is a design intent recorded from sources, never a recommendation: the design forbids ranking any arm on effectiveness for any use.",
   "terms": [
     {
       "id": "service-rifle",
@@ -53,7 +53,7 @@
     {
       "id": "general-purpose",
       "label": "General-purpose automatic",
-      "description": "The general-purpose machine gun role: sustained automatic fire from a bipod or a tripod, in a full-power rifle cartridge. Added in the Phase 8 pilot batch, where the PKM had no role term that fitted."
+      "description": "The general-purpose machine gun role: sustained automatic fire from a bipod or a tripod, in a full-power rifle cartridge."
     },
     {
       "id": "law-enforcement",

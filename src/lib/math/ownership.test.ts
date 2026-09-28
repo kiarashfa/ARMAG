@@ -1,5 +1,5 @@
 /**
- * Ownership arithmetic — SPEC.md §9.4.
+ * Ownership arithmetic.
  *
  * The rule under test throughout is that the site computes from the owner's own
  * figures and refuses to compute without them. A service interval nobody set is
@@ -231,7 +231,7 @@ test('the value estimate says the base is the owner̕s, not ours', () => {
   const estimate = ownedValue(facts({ condition: 'good-60', acquiredPrice: 500 }))!;
   assert.ok(
     estimate.assumptions.some((line) => line.includes('yours, not ours')),
-    'SPEC.md §16: the site holds no market-value data and must say so here',
+    'the site holds no market-value data and must say so here',
   );
 });
 

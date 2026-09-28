@@ -1,14 +1,14 @@
 /**
  * Muzzle and retained energy, momentum, and the competition indices —
- * SPEC.md §8.1.
+ * the design.
  *
  * ── What is NOT here, and will not be ──────────────────────────────────────
- * Taylor's Knock-Out factor is listed in SPEC.md §8.1 and is deliberately
- * omitted, because SPEC.md §14 forbids "damage, lethality, 'stopping power' or
+ * Taylor's Knock-Out factor is listed and is deliberately
+ * omitted, because the design forbids "damage, lethality, 'stopping power' or
  * wounding metric, ever" and TKO is exactly one: John Taylor devised it in the
  * 1940s to rank dangerous-game rifles by their stunning effect, it has no
  * physical meaning (its dimensions are momentum × length), and it is the kind
- * of number this project exists not to publish. The two sections of SPEC.md
+ * of number this project exists not to publish. The two sections
  * contradict each other; the red line wins over the feature list, and Kiarash
  * has been told so rather than the omission being made quietly.
  *

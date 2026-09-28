@@ -2,8 +2,8 @@
  * Reducing MDX prose to the words a reader would actually see.
  *
  * One definition, two callers that must agree: the near-duplicate gate
- * (`integrity-checks.ts`, SPEC.md §13 gate 4) and the completeness score
- * (`catalogue.ts`, SPEC.md §5.9). If they counted differently, an entry could
+ * (`integrity-checks.ts`) and the completeness score
+ * (`catalogue.ts`). If they counted differently, an entry could
  * clear the 60-word publication floor while the duplicate gate saw too few
  * words to compare — and nobody would ever notice, because both would be
  * "working".

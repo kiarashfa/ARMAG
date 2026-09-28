@@ -1,5 +1,5 @@
 {
-  "note": "Reference trajectories from an INDEPENDENT open-source implementation, used as the validation corpus for ARMAG's own solver (SPEC.md \u00a78.3). We write our own solver and do not take a dependency; this file is what lets the site claim accuracy instead of asserting it. Regenerate with scripts noted in `generator` below if a case is ever added. Distances are metres and velocities m/s \u2014 the fixture is converted to SI on the way out, because SI is what ARMAG stores (SPEC.md \u00a78.1).",
+  "note": "Reference trajectories from an INDEPENDENT open-source implementation, used as the validation corpus for ARMAG's own solver (the design \u00a78.3). We write our own solver and do not take a dependency; this file is what lets the site claim accuracy instead of asserting it. Regenerate with scripts noted in `generator` below if a case is ever added. Distances are metres and velocities m/s \u2014 the fixture is converted to SI on the way out, because SI is what ARMAG stores (the design \u00a78.1).",
   "generator": {
     "library": "py-ballisticcalc",
     "version": "2.2.0",

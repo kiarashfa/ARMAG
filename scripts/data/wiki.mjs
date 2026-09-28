@@ -16,7 +16,7 @@
  *    typed later is a fabrication. `redirects=1` is always on: "Glock 17"
  *    redirects to "Glock" and "Mauser 98" to "Gewehr 98", and without it the
  *    API hands back the *redirect page's* revid, which is years stale.
- *  - **The infobox is a first pass (SPEC.md Appendix A), so show what backs
+ *  - **The infobox is a first pass, so show what backs
  *    it.** `refs` prints the `<ref>` tags attached to a field. Those refs are
  *    usually the manual or manufacturer sheet the figure actually came from —
  *    i.e. a source that can carry `verified`, where Wikipedia alone is a lead.
@@ -80,7 +80,7 @@ const MAPS_TO = {
   part_length: 'barrelLength',
   width: 'width',
   height: 'height',
-  velocity: 'a cartridgeLoad velocity point — USELESS without a barrel length (FRICTION-LOG A5)',
+  velocity: 'a cartridgeLoad velocity point — USELESS without a barrel length',
   rate: 'cyclicRate — almost always a published RANGE, which PropertyValue cannot hold (B3)',
   sights: 'sightRadius, if it states one',
   cartridge: 'chamberings[].cartridgeRef',
@@ -95,7 +95,7 @@ const MAPS_TO = {
   neck: 'neckDiameter',
   length_cartridge: 'overallLength',
   max_pressure: 'maxPressure — check the unit, psi/bar/MPa all appear',
-  test_barrel_length: 'THE field that makes a velocity usable at all (FRICTION-LOG A5)',
+  test_barrel_length: 'THE field that makes a velocity usable at all',
 };
 
 function describe(entry) {
@@ -105,7 +105,7 @@ function describe(entry) {
   const converted = si && si.factor !== 1 ? `  →  ${Number(si.value.toFixed(4))} ${si.unit}` : '';
   const qualifier = entry.qualifier ? `  [${entry.qualifier.replace(/\n/g, ' / ')}]` : '';
   const flags =
-    (entry.values.length > 1 ? '  ⚠ RANGE — PropertyValue holds one number (FRICTION-LOG B3)' : '') +
+    (entry.values.length > 1 ? '  ⚠ RANGE — PropertyValue holds one number' : '') +
     (entry.bare ? '  ⚠ bare number, no {{convert}} — re-read the article text' : '');
   return `${range} ${entry.unit ?? ''}${converted}${qualifier}${flags}`;
 }
@@ -165,7 +165,7 @@ async function cmdInfobox(title, lang) {
   }
 
   console.log(
-    '\nSPEC.md Appendix A: an infobox is a FIRST PASS. Every "cited:" line above is a lead to\n' +
+    '\nan infobox is a FIRST PASS. Every "cited:" line above is a lead to\n' +
       'the source that can actually carry `verified`. Run `wiki.mjs refs "<title>" <field>` for the rest.',
   );
 }
@@ -181,7 +181,7 @@ async function cmdInfobox(title, lang) {
  *
  * Reading `bullet = 0.355` as millimetres instead of inches gives a projectile
  * a third of a millimetre across — absurd to a person and perfectly acceptable
- * to the schema, which is the failure class SPEC.md §5.8 exists to prevent. So
+ * to the schema, which is the failure class the design exists to prevent. So
  * the regime is printed as a banner rather than assumed.
  */
 function unitRegime(fields) {
@@ -208,7 +208,7 @@ function unitRegime(fields) {
  * `en1`, …) and printing them as twenty unrelated lines hides two things:
  *
  *  - **The whole table is governed by one `test_barrel_length`, and without it
- *    none of it is usable** (FRICTION-LOG A5, SPEC.md §8.2).
+ *    none of it is usable** (the design).
  *  - **`vel` and `en` have no unit parameter at all.** The 9×19mm article sets
  *    `bwunit = gram` and then writes velocity in ft/s and energy in ft·lbf on
  *    the same rows. Nothing in the template says so.
@@ -238,7 +238,7 @@ async function cmdLoads(title, lang) {
   } else {
     console.log(
       'test barrel : NOT STATED.\n' +
-        '  Every velocity below is therefore unusable as a cartridgeLoad point. FRICTION-LOG A5:\n' +
+        '  Every velocity below is therefore unusable as a cartridgeLoad point. \n' +
         '  a velocity point requires a barrel length stated by a source; where none is stated,\n' +
         '  there is no point. Record the bullet mass and the ballistic coefficient, and leave\n' +
         '  velocity absent — that is an honest load, not an incomplete one.',
@@ -312,7 +312,7 @@ async function cmdLoads(title, lang) {
       );
     }
     if (Number.isFinite(energy)) {
-      console.log(`   energy   ${energy} — DERIVED, do not store it (SPEC.md §8.1)`);
+      console.log(`   energy   ${energy} — DERIVED, do not store it`);
     }
   }
   console.log(
@@ -358,7 +358,7 @@ async function cmdCite(title, lang) {
     type: 'wikipedia',
     title: article.title,
     publisher: 'Wikipedia',
-    // FRICTION-LOG A6: the permalink, not the article URL. `?oldid=` is what
+    // the permalink, not the article URL. `?oldid=` is what
     // makes `revision` mean anything at all.
     url: `https://${article.lang}.wikipedia.org/w/index.php?oldid=${article.revid}`,
     lang: article.lang,

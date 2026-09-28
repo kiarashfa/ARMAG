@@ -1,12 +1,12 @@
 <script lang="ts">
   /**
-   * Full-text search — SPEC.md §9.1.
+   * Full-text search.
    *
    * Pagefind indexes `dist/` after the build, so its runtime does not exist
    * until then. It is loaded **lazily, on first open**, through a dynamic
    * import: the index is the largest asset on the site and almost every visit
    * never opens search, so paying for it on load would be the single worst line
-   * in the §11 JavaScript budget.
+   * in the JavaScript budget.
    *
    * We drive Pagefind's JS API and render results ourselves rather than
    * dropping in its bundled UI, so the overlay uses the site's own tokens

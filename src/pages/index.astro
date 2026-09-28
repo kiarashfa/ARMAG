@@ -1,77 +1,55 @@
 ---
 /**
- * Homepage — SPEC.md §11.1 and §16: spotlight plus catalogue for v1, with a
- * bespoke design later.
+ * Homepage: what ARMAG is, and the ways into it.
  *
- * The catalogue is rendered twice on purpose. `CatalogueStatic` is the real,
- * crawlable, JavaScript-free list; the island replaces it once hydrated and
- * adds the filters, the sort and the card view. Neither is a fallback for the
- * other in the usual sense — with JavaScript off, the static one *is* the
- * catalogue.
+ * It holds a fixed amount however large the database grows: the types to
+ * browse by, a featured handful that changes weekly, and the doors to the full
+ * catalogue at `/guns/`, the cartridges, the manufacturers and the glossary. It
+ * used to carry the whole catalogue itself, which would have made it the
+ * heaviest page on the site at a few thousand entries.
  */
 import BaseLayout from '../components/ui/BaseLayout.astro';
-import CatalogueStatic from '../components/blocks/CatalogueStatic.astro';
-import Catalogue from '../components/islands/Catalogue.svelte';
 import TypeBadge from '../components/blocks/TypeBadge.astro';
-
-import { buildCatalogue, STATIC_ROW_COUNT } from '../lib/content/catalogue.ts';
+import { buildCatalogue } from '../lib/content/catalogue.ts';
 import { getCartridges, getGuns, getMakers } from '../lib/content/entries.ts';
-import { absoluteUrl, fileHref, gunHref, href, taxonomyHref } from '../lib/content/href.ts';
-import { itemList } from '../lib/render/json-ld.ts';
-import {
-  actions,
-  countries,
-  eras,
-  feedSystems,
-  operatingSystems,
-  roles,
-  types,
-} from '../schemas/taxonomy.ts';
+import { assetUrl, gunHref, href, taxonomyHref } from '../lib/content/href.ts';
+import { weeklyPick } from '../lib/showcase.ts';
+import { types } from '../schemas/taxonomy.ts';
 
 const [guns, cartridges, makers] = await Promise.all([getGuns(), getCartridges(), getMakers()]);
 const rows = buildCatalogue(guns, cartridges, makers);
+const rowsById = new Map(rows.map((row) => [row.id, row]));
+const typeLabel = new Map(types.terms.map((t) => [t.id, t.label]));
 
-/**
- * Vocabulary labels are passed *into* the island rather than imported by it.
- * That keeps the eight taxonomy JSON files out of the client bundle — they are
- * build-time data, and shipping them would be shipping the whole vocabulary to
- * render a dozen chips.
- */
-const terms = (list: { terms: { id: string; label: string }[] }) =>
-  list.terms.map((term) => ({ id: term.id, label: term.label }));
+/* Only entries with their own page and a photograph: a featured card that led
+   to a thin row, or showed an empty frame, would be the first thing a visitor
+   sees. */
+const featured = weeklyPick(
+  guns.filter((gun) => gun.data.images.length > 0 && rowsById.get(gun.id)?.hasPage),
+  6,
+).map((gun) => {
+  const row = rowsById.get(gun.id)!;
+  return {
+    id: gun.id,
+    name: gun.data.name,
+    image: gun.data.images[0]!,
+    type: row.type ? typeLabel.get(row.type) ?? row.type : null,
+    maker: row.makerName,
+    year: row.year,
+  };
+});
 
-const vocab = {
-  type: terms(types),
-  action: terms(actions),
-  operatingSystem: terms(operatingSystems),
-  feed: terms(feedSystems),
-  role: terms(roles),
-  country: terms(countries),
-  era: terms(eras),
-};
-
-/**
- * SPEC.md §12 — `ItemList` on the catalogue view. This page IS the catalogue
- * (SPEC.md §16), so the list is the whole row set rather than the first
- * screenful: a crawler that reads the structured data should see what a reader
- * who scrolls sees.
- *
- * A row below the publication floor carries no `url` (SPEC.md §5.9), which is
- * exactly what `itemList` does with a missing one — it is named, not linked.
- */
-const catalogueJsonLd = itemList(
-  'Firearms on ARMAG',
-  rows.map((row) => ({
-    name: row.name,
-    url: row.hasPage ? absoluteUrl(Astro.site, gunHref(row.id)) : undefined,
-  })),
-);
+const doors = [
+  { label: 'Firearms', path: href('guns'), note: `All ${rows.length} entries, filterable and sortable.` },
+  { label: 'Cartridges', path: href('cartridges'), note: 'Each entry is also its caliber view.' },
+  { label: 'Manufacturers', path: href('makers'), note: 'Model lists are computed, never typed.' },
+  { label: 'Glossary', path: href('glossary'), note: 'Technical definitions, linked from every page.' },
+];
 ---
 
 <BaseLayout
   title="ARMAG"
   description="A free reference for modern firearms. Every number is either sourced or derived from sourced numbers by a formula you can open and check."
-  jsonLd={catalogueJsonLd}
 >
   <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-10">
     <h1 class="type-display text-display text-ink">ARMAG</h1>
@@ -99,48 +77,73 @@ const catalogueJsonLd = itemList(
       </ul>
     </nav>
 
-    <div class="mt-8 grid gap-4 sm:grid-cols-3">
-      {
-        [
-          { label: 'Cartridges', path: href('cartridges'), note: 'Each entry is also its caliber view.' },
-          { label: 'Manufacturers', path: href('makers'), note: 'Model lists are computed, never typed.' },
-          { label: 'Glossary', path: href('glossary'), note: 'Technical definitions, linked from every page.' },
-        ].map((card) => (
-          <a
-            href={card.path}
-            class="rounded-lg border border-line bg-surface-1 p-4 no-underline hover:border-line-strong"
-          >
-            <span class="type-heading text-base text-ui-accent">{card.label}</span>
-            <span class="type-data mt-1 block text-sm text-ink-muted">{card.note}</span>
-          </a>
-        ))
-      }
-    </div>
+    {
+      featured.length > 0 && (
+        <section class="mt-(--layout-section-gap)" aria-labelledby="featured-title">
+          <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-line pb-3">
+            <h2 id="featured-title" class="type-title text-xl">
+              Featured this week
+            </h2>
+            <a href={href('guns')} class="type-data text-sm text-ink-secondary no-underline hover:text-ui-accent">
+              All {rows.length} entries &rarr;
+            </a>
+          </div>
+          <ul class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {featured.map((entry) => (
+              <li>
+                <a
+                  href={gunHref(entry.id)}
+                  class="group flex h-full flex-col overflow-hidden rounded-lg border border-line bg-surface-1 no-underline transition-colors hover:border-line-strong"
+                >
+                  <span class="block aspect-[3/2] overflow-hidden bg-surface-2">
+                    <img
+                      src={assetUrl(entry.image.src)}
+                      alt={entry.image.alt}
+                      width={entry.image.width}
+                      height={entry.image.height}
+                      loading="lazy"
+                      decoding="async"
+                      class="size-full object-cover"
+                    />
+                  </span>
+                  <span class="flex flex-1 flex-col p-4">
+                    <span class="type-data text-xs uppercase tracking-widest text-ink-muted">
+                      {[entry.type, entry.year].filter(Boolean).join(' · ')}
+                    </span>
+                    <span class="type-title mt-1 text-lg text-ink group-hover:text-ui-accent">{entry.name}</span>
+                    {entry.maker && <span class="type-data mt-1 text-sm text-ink-secondary">{entry.maker}</span>}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
 
-    <section id="catalogue" class="mt-(--layout-section-gap) scroll-mt-16">
-      <h2 class="type-title text-xl">
-        <a href="#catalogue" class="text-ink no-underline hover:text-ui-accent">Catalogue</a>
-      </h2>
-      <p class="type-body mt-1 max-w-note text-sm text-ink-secondary">
-        Every entry in the database, including the ones too thin to have earned a page yet. Filters
-        and sort order are kept in the address bar, so any view here is a link you can share.
-      </p>
-
-      <CatalogueStatic rows={rows.slice(0, STATIC_ROW_COUNT)} total={rows.length} />
-
-      {/*
-        `client:load`, not `client:visible`: the catalogue sits below the fold,
-        and the island is what reads the filter state out of the URL. Waiting
-        for it to scroll into view would mean a shared link showed the unfiltered
-        list until the reader happened to scroll to it.
-      */}
-      <Catalogue
-        client:load
-        src={fileHref('catalogue.json')}
-        gunPrefix={href('guns')}
-        vocab={vocab}
-        staticCount={Math.min(rows.length, STATIC_ROW_COUNT)}
-      />
+    <section class="mt-(--layout-section-gap)" aria-label="Ways in">
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          doors.map((door) => (
+            <a
+              href={door.path}
+              class="rounded-lg border border-line bg-surface-1 p-4 no-underline hover:border-line-strong"
+            >
+              <span class="type-heading text-base text-ui-accent">{door.label}</span>
+              <span class="type-data mt-1 block text-sm text-ink-muted">{door.note}</span>
+            </a>
+          ))
+        }
+      </div>
     </section>
+
+    <div class="mt-10 flex justify-center">
+      <a
+        href={href('guns')}
+        class="type-data inline-flex items-center gap-2 rounded-full border border-line-strong px-5 py-2.5 text-sm text-ink no-underline hover:bg-surface-2"
+      >
+        Open the catalogue <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
   </div>
 </BaseLayout>

@@ -5,7 +5,7 @@
  *   node scripts/data/spec.mjs read "https://us.glock.com/en/products/…/g17-gen5"
  *   node scripts/data/spec.mjs pdf  "https://.../M&P15-Sport-III-spec.pdf"
  *
- * FRICTION-LOG A1: **manufacturer spec pages are half dead and half
+ * **manufacturer spec pages are half dead and half
  * JavaScript.** Of the five makers the pilot batch needed, Glock and RemArms
  * served a readable HTML table; Colt published calibre and barrel length and
  * nothing else; Ruger's whole AR-556 line 404s from every indexed URL; and
@@ -24,7 +24,7 @@
  * It extracts label/value pairs and does not interpret them. Deciding that
  * "Weight" means `massEmpty` rather than `massLoaded` is a judgement about what
  * the maker measured, and a script that guesses it produces a figure that is
- * wrong in the way SPEC.md §5.8 exists to prevent.
+ * wrong in the way the design exists to prevent.
  */
 import { spawn } from 'node:child_process';
 import { mkdir, writeFile } from 'node:fs/promises';
@@ -214,7 +214,7 @@ async function cmdRead(url) {
     console.log(`\n--- 5. linked PDFs (${sheets.length}) ---`);
     for (const sheet of sheets.slice(0, 12)) console.log(`  ${sheet.text}\n    ${sheet.url}`);
     console.log(
-      '\n  Read these. FRICTION-LOG A1: the S&W spec-sheet PDF carried eleven figures the\n' +
+      '\n  Read these. the S&W spec-sheet PDF carried eleven figures the\n' +
         '  HTML page did not.  spec.mjs pdf "<url>"',
     );
   }

@@ -22,7 +22,7 @@
  * A thin gallery usually means only the first of the three was searched.
  *
  * `add` is the whole phase in one command: fetch → licence capture → WebP →
- * cap enforcement → measure → emit. Instruction.md Phase 9's definition of done
+ * cap enforcement → measure → emit. the definition of done
  * is that it **cannot emit an `imageRef` missing licence data**, and that is
  * enforced in `lib/imageref.mjs` by parsing through the same Zod schema the
  * content build uses — not by a check in this file that could be skipped.
@@ -63,7 +63,7 @@ function report(file, meta) {
   console.log(`  ${licence.padEnd(16)} ${size.padEnd(12)} ${file}`);
   if (meta?.onCommons) {
     console.log(`      author : ${meta.author || '(none recorded)'}`);
-    // FRICTION-LOG D5 — read this before writing the caption. It is what says
+    // read this before writing the caption. It is what says
     // the photograph is a Type 56-1 rather than a Type 56.
     if (meta.description) console.log(`      shows  : ${meta.description.slice(0, 220)}`);
     if (meta.restrictions) console.log(`      ⚠ RESTRICTIONS: ${meta.restrictions}`);
@@ -93,7 +93,7 @@ async function cmdFind(title) {
     }
   }
   console.log(
-    '\nFRICTION-LOG D4: the long tail has no photographs. If nothing here shows this exact\n' +
+    '\nthe long tail has no photographs. If nothing here shows this exact\n' +
       'model, use the nearest one and SAY SO IN THE CAPTION — do not caption it as the model.',
   );
 }
@@ -165,7 +165,7 @@ async function cmdSmithsonian(query) {
  *
  * One function so `add` does not care which source it is talking to: every
  * adapter returns the same `SourceMeta` shape, and every one of them resolves
- * the licence BEFORE anything is downloaded (Instruction.md Phase 9).
+ * the licence BEFORE anything is downloaded.
  */
 /**
  * SVG is refused, with the way out named.
@@ -238,7 +238,7 @@ async function resolveSource(handle, { from = null } = {}) {
 /**
  * `sheet <name> <handle> [handle …]` — one numbered contact sheet for triage.
  *
- * §6 asks for three searches per subject, which routinely leaves more
+ * asks for three searches per subject, which routinely leaves more
  * candidates than are worth opening. Opening three to five at full size in
  * order to reject most of them is what makes an image pass expensive: the
  * sibling recipe site measured 321 k tokens for 70 subjects before it worked
@@ -247,7 +247,7 @@ async function resolveSource(handle, { from = null } = {}) {
  * Takes handles from any of the three sources — `File:X.jpg`,
  * `dvids:image:N`, `si:ID` — because `resolveSource` already normalises them,
  * so one sheet can compare a Commons specimen against a DVIDS in-service shot
- * side by side, which is exactly the judgement §6 asks for.
+ * side by side, which is exactly the judgement asks for.
  *
  * Writes to `.cache/sheets/`, which is gitignored: a sheet is scratch for
  * choosing, never an asset. **Triage only** — the tiles cannot show a
@@ -291,7 +291,7 @@ async function cmdSheet(name, handles) {
  * `add <file> <collection/slug> <basename>`
  *
  * `collection/slug` is `guns/ak-47` or `cartridges/9x19mm-parabellum`, matching
- * `public/images/<collection>/<slug>/` exactly as SPEC.md §4 lays it out. It is
+ * `public/images/<collection>/<slug>/` exactly as the design lays it out. It is
  * taken as one argument rather than two because the two-argument form invites
  * `image.mjs add file ak-47 hero`, which silently writes to the wrong tree.
  */
@@ -388,7 +388,7 @@ async function cmdLogo(slug, rawFile, { replace = false, from = null } = {}) {
 /**
  * The bibliography rows for the images already in an entry.
  *
- * `references[]` is per entry (SPEC.md §13) and a Commons file is a citable
+ * `references[]` is per entry and a Commons file is a citable
  * source, so an entry whose photographs came from Commons should say so. This
  * reads what is already authored rather than what is on Commons, so it can be
  * run after the fact and cannot invent a file that was never used.

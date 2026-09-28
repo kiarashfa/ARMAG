@@ -1,5 +1,5 @@
 /**
- * JSON-LD — SPEC.md §12.
+ * JSON-LD.
  *
  * `Article`/`TechArticle` plus `BreadcrumbList` on content pages, `ItemList` on
  * catalogue and taxonomy views, `DefinedTerm` on glossary entries.
@@ -101,7 +101,7 @@ export function serialize(node: JsonLdNode | JsonLdNode[]): string {
   const violations = commerceViolations(node);
   if (violations.length > 0) {
     throw new Error(
-      `JSON-LD carries commerce markup, which SPEC.md §12 forbids outright:\n  ${violations.join(
+      `JSON-LD carries commerce markup, which the design forbids outright:\n  ${violations.join(
         '\n  ',
       )}\nARMAG entries are encyclopedia articles, not listings.`,
     );
@@ -211,7 +211,7 @@ export interface ItemListEntry {
  * `ItemList` for a browse view — the catalogue, a taxonomy term, a maker's
  * model list.
  *
- * An entry below the publication floor (SPEC.md §5.9) has no page, so it is
+ * An entry below the publication floor has no page, so it is
  * listed by name with no `url` rather than pointed at a 404.
  */
 export function itemList(name: string, entries: ItemListEntry[]): JsonLdNode {
@@ -242,7 +242,7 @@ export interface DefinedTermInput {
   setUrl: string;
 }
 
-/** `DefinedTerm` — SPEC.md §12, one per glossary entry. */
+/** `DefinedTerm` — the design, one per glossary entry. */
 export function definedTerm(input: DefinedTermInput): JsonLdNode {
   return compact({
     '@context': CONTEXT,

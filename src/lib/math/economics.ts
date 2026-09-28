@@ -1,8 +1,8 @@
 /**
- * Money — SPEC.md §8.1 and §9.4.
+ * Money.
  *
  * ── What this module is allowed to know ────────────────────────────────────
- * SPEC.md §16 rejects a market-value database outright: it is unobtainable
+ * the design rejects a market-value database outright: it is unobtainable
  * freely, stale immediately, and pretending otherwise would put a wrong number
  * in front of someone about to spend real money. What the site has instead is
  * two honest things — a **launch price as published**, adjusted for inflation
@@ -11,7 +11,7 @@
  * like an appraisal.
  *
  * The CPI table is passed in, never read from disk: `lib/math` does no I/O
- * (Instruction.md Phase 3), and the table itself is baked into
+ * and the table itself is baked into
  * `src/data/cpi.json` in Phase 9 so the built site makes no runtime API call.
  *
  * Pure. No DOM, no I/O, no framework import.
@@ -90,7 +90,7 @@ export function costPerMagazine(costPerRoundValue: ValueLike, capacity: ValueLik
 }
 
 /**
- * The NRA condition scale — SPEC.md §9.4.
+ * The NRA condition scale.
  *
  * The grade names carry their own percentages, and those percentages are the
  * multiplier: "Excellent (95%)" is a published description of remaining

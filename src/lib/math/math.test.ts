@@ -195,7 +195,7 @@ test('no barrel length at all is no answer, not an interpolation', () => {
   assert.equal(result.atBarrelLengthMm, null);
 });
 
-test('outside the sourced range nothing is projected — SPEC.md §8.2', () => {
+test('outside the sourced range nothing is projected', () => {
   const short = velocityForBarrel(POINTS, 76);
   assert.equal(short.basis, 'nearest-sourced');
   assert.equal(short.velocity.value, 340, 'the nearest sourced figure, not a projection');
@@ -441,7 +441,7 @@ test('tier is computed from the score, and a full page of estimates is Tier 3', 
   );
   assert.ok(
     estimatedThroughout.score < sourced.score,
-    'inventing figures must never raise a tier — SPEC.md §8.4',
+    'inventing figures must never raise a tier',
   );
   assert.notEqual(estimatedThroughout.tier, 1);
 });
@@ -541,7 +541,7 @@ test('with no criteria everything matches equally and nothing is ranked', () => 
 });
 
 test('the matchmaker has no budget, price or legality input at all', () => {
-  // SPEC.md §9.3 and §14. Asserted structurally so a future field cannot be
+  // the design and. Asserted structurally so a future field cannot be
   // added without this failing: we have launch MSRP, not market value, so a
   // budget question would be a lie, and the site never says what a reader may do.
   const criteria = {
@@ -557,5 +557,5 @@ test('the matchmaker has no budget, price or legality input at all', () => {
   for (const forbidden of ['budget', 'price', 'cost', 'legal', 'jurisdiction', 'effective']) {
     assert.ok(!keys.some((k) => k.includes(forbidden)), `MatchCriteria must not carry '${forbidden}'`);
   }
-  assert.equal(keys.length, 7, 'SPEC.md §9.3 specifies seven inputs');
+  assert.equal(keys.length, 7, 'the design specifies seven inputs');
 });

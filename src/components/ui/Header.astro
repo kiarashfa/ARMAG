@@ -12,7 +12,7 @@
  *
  * The toggles are plain buttons with a few lines of inline script rather than
  * hydrated islands. A theme switch that needs 12 kB of framework to change one
- * attribute is a bad trade against SPEC.md §11's budget, and neither toggle has
+ * attribute is a bad trade against the budget, and neither toggle has
  * state worth a component.
  *
  * The wordmark's mark is `public/favicon.svg` referenced as an image, not an
@@ -24,6 +24,7 @@ import SiteSearch from '../islands/SiteSearch.svelte';
 import { compareHref, fileHref, href } from '../../lib/content/href.ts';
 
 const browse = [
+  { label: 'Firearms', path: href('guns') },
   { label: 'Cartridges', path: href('cartridges') },
   { label: 'Manufacturers', path: href('makers') },
   { label: 'Glossary', path: href('glossary') },
@@ -39,7 +40,7 @@ const current = Astro.url.pathname;
 const isCurrent = (path: string) => path !== href() && current.startsWith(path);
 
 /*
- * Two control shapes, shared with the sibling sites: a 36px circle for a
+ * Two control shapes, shared by all four sites: a 36px circle for a
  * control that is only an icon, and a pill of the same height for one that
  * also carries a word. On a phone the pill drops its word and becomes the
  * circle, so the row never changes height.
@@ -82,11 +83,12 @@ const pillControl =
     </nav>
 
     {/*
-      The controls, in the order every sibling site uses: this site's own
+      The controls, in the order all four sites use: this site's own
       (compare, units), then search, theme, about.
     */}
     <div class="ml-auto flex items-center gap-1.5 sm:gap-2">
-      <a href={compareHref([])} class={pillControl} aria-label="Compare firearms side by side">
+      {/* On the narrowest phones Compare steps aside so the row stays one line; the compare tray and every entry page still reach it. */}
+      <a href={compareHref([])} class={`${pillControl} max-[25rem]:hidden`} aria-label="Compare firearms side by side">
         <Icon name="compare" />
         <span class="hidden sm:inline">Compare</span>
       </a>

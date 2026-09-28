@@ -1,5 +1,5 @@
 /**
- * Matchmaker — SPEC.md §9.3.
+ * Matchmaker.
  *
  * Dealbreaker filters first, then weighted preference scoring, producing a
  * ranked list framed as **"matches your stated criteria"**, with the criteria
@@ -10,10 +10,10 @@
  *     never on effectiveness, for any use tag. The site does not know what the
  *     reader wants and pretending otherwise is the editorial failure this
  *     project exists to avoid.
- *  2. **A budget filter.** SPEC.md §9.3 is explicit: we have launch MSRP and
+ *  2. **A budget filter.** the design is explicit: we have launch MSRP and
  *     inflation adjustment, not current market value, so a budget question
  *     would be a lie. There is no price input here at all.
- *  3. **A legality filter.** SPEC.md §14 — no jurisdiction data, no "legal for
+ *  3. **A legality filter.** no jurisdiction data, no "legal for
  *     you". The site states what a firearm *is*, never what a reader *may do*.
  *
  * Every score component below is a distance from something the reader asked
@@ -22,7 +22,7 @@
  * Pure. No DOM, no I/O, no framework import.
  */
 
-/** The seven inputs of SPEC.md §9.3. All optional: nothing is a required taste. */
+/** The seven inputs. All optional: nothing is a required taste. */
 export interface MatchCriteria {
   /** Role tags the reader is interested in. */
   useTags?: string[];

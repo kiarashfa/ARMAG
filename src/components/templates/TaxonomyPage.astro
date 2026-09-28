@@ -1,6 +1,6 @@
 ---
 /**
- * A browse axis — SPEC.md §7.
+ * A browse axis.
  *
  * **Taxonomy pages own no content.** Every one of them is a computed view over
  * tagged entries, built at build time, which is what makes re-tagging an entry
@@ -43,7 +43,7 @@ const description = `${plural(entries.length, 'firearm')} tagged ${term.label} o
   term.description ? ` ${term.description}` : ''
 }`;
 
-/** SPEC.md §12 — a computed browse view is an `ItemList`, never an article. */
+/** a computed browse view is an `ItemList`, never an article. */
 const jsonLd = itemList(
   `${term.label} — ${axisLabel}`,
   sorted.map((entry) => ({ name: entry.name, url: absoluteUrl(Astro.site, gunHref(entry.id)) })),
@@ -70,7 +70,7 @@ const jsonLd = itemList(
     </header>
 
     {/*
-      The type tab strip, borrowed from weapon-select UI (SPEC.md §11). Plain
+      The type tab strip, borrowed from weapon-select UI. Plain
       links, not a widget: each one is a real crawlable page.
     */}
     <nav aria-label={`Other ${axisLabel.toLowerCase()} terms`} class="mt-6 flex flex-wrap gap-2">

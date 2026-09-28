@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * `npm run check:content` — the content-integrity gate (SPEC.md §13).
+ * `npm run check:content` — the content-integrity gate.
  *
  * Runs the same checks `astro build` runs, but standalone and ahead of it, so
  * a content error costs a second rather than a full build. Reports every

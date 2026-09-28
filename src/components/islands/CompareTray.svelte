@@ -1,6 +1,6 @@
 <script lang="ts">
   /**
-   * The site-wide compare tray — SPEC.md §9.2.
+   * The site-wide compare tray.
    *
    * One island, in the shell, on every page. It owns two things:
    *
@@ -168,7 +168,7 @@
       {/if}
 
       {#if notice}
-        <!-- SPEC.md §9.9: an honest one-line notice, never a silent failure. -->
+        <!-- an honest one-line notice, never a silent failure. -->
         <p class="type-data w-full text-xs text-status-estimated">{notice}</p>
       {/if}
     </div>

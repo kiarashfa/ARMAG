@@ -1,5 +1,5 @@
 /**
- * Automatic internal cross-linking — SPEC.md §12.
+ * Automatic internal cross-linking.
  *
  * Where one entry's prose names another entry, that name becomes a link. The
  * point is internal link density nobody has to maintain: an author writes "the

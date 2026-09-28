@@ -1,7 +1,7 @@
 /**
- * `/robots.txt` — SPEC.md §12.
+ * `/robots.txt`.
  *
- * Written in Phase 7 rather than Phase 11 because Instruction.md Phase 7
+ * Written in Phase 7 rather than Phase 11 because the design
  * requires the `/armory/` triple to be **asserted together**, and the third leg
  * of it is a fact about this file. A check that passes because the file it
  * checks does not exist is the green build nobody is testing.

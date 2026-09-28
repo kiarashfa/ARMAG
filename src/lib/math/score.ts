@@ -1,5 +1,5 @@
 /**
- * Completeness and tier — SPEC.md §5.9.
+ * Completeness and tier.
  *
  * **Tier is computed, never asserted by an author.** That single decision is
  * what makes the anti-fabrication rules bite: the score counts only `verified`
@@ -118,7 +118,7 @@ export interface PublicationFloor {
 }
 
 /**
- * Whether an entry has enough substance to own a page — SPEC.md §5.9.
+ * Whether an entry has enough substance to own a page.
  *
  * Below the floor it is not deleted and it is not hidden: it stays a catalogue
  * row and appears in cartridge and maker listings. It just does not get a URL

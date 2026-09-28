@@ -2,7 +2,7 @@
   "axis": "type",
   "urlPrefix": "/type/",
   "authored": true,
-  "note": "SPEC.md §7. `accent` names the content-accent token pair from SPEC.md §11 — six accents cover eight types, because pistol/revolver, rifle/carbine and submachine-gun/pdw each read as one visual family. It lives here so the mapping is data, not a switch statement in a component.",
+  "note": "the design. `accent` names the content-accent token pair from six accents cover eight types, because pistol/revolver, rifle/carbine and submachine-gun/pdw each read as one visual family. It lives here so the mapping is data, not a switch statement in a component.",
   "terms": [
     { "id": "pistol", "label": "Pistol", "accent": "handgun", "description": "A handgun whose chamber is integral to the barrel." },
     { "id": "revolver", "label": "Revolver", "accent": "handgun", "description": "A handgun feeding from a rotating cylinder of chambers." },

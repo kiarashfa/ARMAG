@@ -1,7 +1,7 @@
 """Extract the text layer of a PDF, page by page.
 
 Used by `cip.mjs` and `spec.mjs`. PyMuPDF is authoring-time only — nothing in
-the build or in CI reads a PDF (Instruction.md Phase 9).
+the build or in CI reads a PDF.
 """
 
 import sys

@@ -1,5 +1,5 @@
 /**
- * The silhouette's honesty rules — SPEC.md §9.6.
+ * The silhouette's honesty rules.
  *
  * The drawing is allowed to be generic. What it is not allowed to do is imply a
  * measurement nobody took, so these tests are about which parts of the outline

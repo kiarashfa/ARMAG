@@ -7,7 +7,7 @@
  * the unit table, the glossary, the infobox selector, and one addition.
  *
  * **The addition is `fieldReferences()`, and it is the point of this file.**
- * SPEC.md Appendix A says a Wikipedia infobox is "a first pass only — never the
+ * the design says a Wikipedia infobox is "a first pass only — never the
  * last word", and the Phase 8 friction log (A2) found that the actually
  * authoritative sources — `FM 3-22.9`, `TM 43-0001-27` — are usually already
  * cited in the infobox line you are reading. Stripping the `<ref>` tags before

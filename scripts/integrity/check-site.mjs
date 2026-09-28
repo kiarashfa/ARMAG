@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * `npm run check:site` — assertions against the built output (SPEC.md §13).
+ * `npm run check:site` — assertions against the built output.
  *
  * Runs after `astro build` and after Pagefind, because it checks the artefact
  * rather than the source. What is asserted here cannot be asserted anywhere
@@ -13,7 +13,7 @@
  *    any value from `.env` appears anywhere in the output. The variable NAME is
  *    reported and the value never is, because a leak report that quotes the
  *    secret is a second leak.
- *  - **The noindex triple, all three legs at once** (SPEC.md §12). Every path
+ *  - **The noindex triple, all three legs at once**. Every path
  *    in `NOINDEX_PATHS` must carry `noindex` in its own head, must be absent
  *    from the sitemap, and must **not** be disallowed in `robots.txt`. The
  *    third leg is the counter-intuitive one and the reason the other two are
@@ -22,17 +22,17 @@
  *    indefinitely. Asserting them separately would let a well-meaning
  *    `Disallow:` pass review.
  *
- *  - **The JSON-LD rules** (SPEC.md §12). Every `application/ld+json` block
+ *  - **The JSON-LD rules**. Every `application/ld+json` block
  *    must parse, and none may carry `Product`, `Offer`, `price` or
  *    `availability`. The same walk runs inside `json-ld.ts` and throws while
  *    the page is being built; this one catches a node that reached `dist/` by
  *    any other route, including hand-written markup in an `.mdx`.
- *  - **The Three.js fence** (SPEC.md §3, §11). The v2 shooting range is the
+ *  - **The Three.js fence** (the design,). The v2 shooting range is the
  *    one thing on this site allowed to ship a 3D engine, and it is allowed to
  *    ship it only under `/guns/<slug>/range/`. No such page exists in v1, so
  *    the fence is currently absolute: a WebGL renderer anywhere in `dist/`
  *    fails the build.
- *  - **The per-page JS budget** (SPEC.md §11, "stated so they are
+ *  - **The per-page JS budget** (the design, "stated so they are
  *    checkable"). The module graph is followed transitively from each page,
  *    because a page's cost is what it loads, not what it names.
  *  - **Internal links resolve.** Every `href` into the site must land on a
@@ -135,7 +135,7 @@ if (secrets.length > 0) {
 }
 
 // ---------------------------------------------------------------------------
-// The sitemap must not invite a crawler to a noindex page — SPEC.md §12
+// The sitemap must not invite a crawler to a noindex page
 // ---------------------------------------------------------------------------
 
 const sitemaps = files.filter((f) => path.basename(f).startsWith('sitemap-'));
@@ -144,14 +144,14 @@ for (const sitemap of sitemaps) {
   for (const noindexPath of NOINDEX_PATHS) {
     if (xml.includes(`${BASE}${noindexPath}<`)) {
       failures.push(
-        `${display(sitemap)} lists ${BASE}${noindexPath}, which is in NOINDEX_PATHS. A page carrying noindex must not also be advertised in the sitemap (SPEC.md §12)`,
+        `${display(sitemap)} lists ${BASE}${noindexPath}, which is in NOINDEX_PATHS. A page carrying noindex must not also be advertised in the sitemap`,
       );
     }
   }
 }
 
 // ---------------------------------------------------------------------------
-// The noindex triple — SPEC.md §12, Instruction.md Phase 7
+// The noindex triple — the design, the design
 // ---------------------------------------------------------------------------
 
 const robotsFile = path.join(distDir, 'robots.txt');
@@ -159,7 +159,7 @@ const robots = existsSync(robotsFile) ? await readFile(robotsFile, 'utf8') : nul
 
 if (robots === null) {
   failures.push(
-    'dist/robots.txt is missing. The noindex triple cannot be asserted without it, and a check that passes because its subject does not exist is not a check (SPEC.md §12)',
+    'dist/robots.txt is missing. The noindex triple cannot be asserted without it, and a check that passes because its subject does not exist is not a check',
   );
 }
 
@@ -181,7 +181,7 @@ for (const noindexPath of NOINDEX_PATHS) {
   } else {
     const html = await readFile(page, 'utf8');
     if (!/<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html)) {
-      failures.push(`${display(page)} does not carry a noindex robots meta tag (SPEC.md §12)`);
+      failures.push(`${display(page)} does not carry a noindex robots meta tag`);
     }
   }
 
@@ -192,14 +192,14 @@ for (const noindexPath of NOINDEX_PATHS) {
   for (const rule of disallowed) {
     if (rule !== '' && (url.startsWith(rule) || rule.startsWith(url))) {
       failures.push(
-        `robots.txt disallows ${rule}, which covers ${url}. A blocked page is never fetched, so its noindex is never read and it can stay indexed as "fetched but not indexed" forever. Exclude it from the sitemap instead — it already is (SPEC.md §12)`,
+        `robots.txt disallows ${rule}, which covers ${url}. A blocked page is never fetched, so its noindex is never read and it can stay indexed as "fetched but not indexed" forever. Exclude it from the sitemap instead — it already is`,
       );
     }
   }
 }
 
 // ---------------------------------------------------------------------------
-// JSON-LD — SPEC.md §12
+// JSON-LD
 // ---------------------------------------------------------------------------
 
 const htmlFiles = files.filter((file) => file.endsWith('.html'));
@@ -223,14 +223,14 @@ for (const [file, html] of htmlSource) {
     }
     for (const violation of commerceViolations(node)) {
       failures.push(
-        `${display(file)} JSON-LD ${violation}. SPEC.md §12 forbids Product, Offer, price and availability outright — these are encyclopedia entries, not listings`,
+        `${display(file)} JSON-LD ${violation}. the design forbids Product, Offer, price and availability outright — these are encyclopedia entries, not listings`,
       );
     }
   }
 }
 
 // ---------------------------------------------------------------------------
-// The Three.js fence — SPEC.md §3 and §11
+// The Three.js fence — the design and
 // ---------------------------------------------------------------------------
 
 /**
@@ -241,7 +241,7 @@ for (const [file, html] of htmlSource) {
  */
 const THREE_MARKERS = ['WebGLRenderer', 'THREE.Scene', 'PerspectiveCamera', 'three.module.js'];
 
-/** The one place a 3D engine is allowed to land — SPEC.md §9.8. v2. */
+/** The one place a 3D engine is allowed to land. v2. */
 const RANGE_PATH = /\/guns\/[^/]+\/range\//;
 
 for (const file of files) {
@@ -257,14 +257,14 @@ for (const file of files) {
   for (const marker of THREE_MARKERS) {
     if (content.includes(marker)) {
       failures.push(
-        `${display(file)} contains "${marker}", i.e. a 3D engine outside /guns/<slug>/range/. SPEC.md §11 fences Three.js to the v2 shooting range so it can never become part of a spec page's JS budget`,
+        `${display(file)} contains "${marker}", i.e. a 3D engine outside /guns/<slug>/range/. the design fences Three.js to the v2 shooting range so it can never become part of a spec page's JS budget`,
       );
     }
   }
 }
 
 // ---------------------------------------------------------------------------
-// The per-page JS budget — SPEC.md §11
+// The per-page JS budget
 // ---------------------------------------------------------------------------
 
 const ASSET_REF = /["'`(]([^"'`()\s]*\/_astro\/[A-Za-z0-9_.-]+\.js)["'`)]/g;
@@ -327,7 +327,7 @@ for (const [file, html] of htmlSource) {
     failures.push(
       `${display(file)} loads ${(bytes / 1024).toFixed(1)} kB of JavaScript, over the ${(
         jsBudgetBytes / 1024
-      ).toFixed(0)} kB per-page budget in SPEC.md §11`,
+      ).toFixed(0)} kB per-page budget`,
     );
   }
 }
@@ -392,7 +392,7 @@ if (jsWeights.length > 0) {
   console.log(
     `[check:site] heaviest page by JavaScript: ${heaviest.url} at ${(heaviest.bytes / 1024).toFixed(
       1,
-    )} kB (budget ${(jsBudgetBytes / 1024).toFixed(0)} kB, SPEC.md §11).`,
+    )} kB (budget ${(jsBudgetBytes / 1024).toFixed(0)} kB).`,
   );
 }
 

@@ -1,12 +1,12 @@
 /**
- * Content Layer API collection definitions — SPEC.md §5.
+ * Content Layer API collection definitions.
  *
  * Three narrative/data pairs (guns, cartridges, makers) plus two single-file
- * collections (glossary, articles) and one reserved slot (accessories, §5.7).
+ * collections (glossary, articles) and one reserved slot (accessories,).
  *
  * The pairing itself — every `.mdx` having exactly one `.json` sibling and vice
  * versa — is a cross-file property Zod cannot see, so it is enforced by
- * `src/integrations/integrity.ts` at `astro:build:start` (SPEC.md §13).
+ * `src/integrations/integrity.ts` at `astro:build:start`.
  */
 import { existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
@@ -83,7 +83,7 @@ const makerData = defineCollection({
 });
 
 /**
- * Glossary terms — single-file MDX, no data twin (SPEC.md §5.6).
+ * Glossary terms — single-file MDX, no data twin.
  *
  * Every term is auto-crosslinked from every occurrence in any prose on the
  * site by a rehype plugin (Phase 11), so link density needs no manual upkeep.
@@ -118,7 +118,7 @@ const articles = defineCollection({
 });
 
 /**
- * Accessories — v2 (SPEC.md §5.7). The slot exists in v1 so the collection can
+ * Accessories — v2. The slot exists in v1 so the collection can
  * be authored without a config change, and so the `fits[]` edges already on the
  * gun schema have a declared destination.
  */

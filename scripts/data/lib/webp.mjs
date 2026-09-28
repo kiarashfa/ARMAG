@@ -40,10 +40,10 @@ export function capsForBasename(basename) {
 function runPython(args, stdin = null) {
   return new Promise((resolve, reject) => {
     // `python` rather than `python3`: this is a Windows-first repo
-    // (Instruction.md §1) and `python3` is not on PATH there.
+    // and `python3` is not on PATH there.
     const child = spawn('python', args, {
       // Console code page is 1256 on this machine and a Commons filename will
-      // contain characters it cannot represent (Instruction.md §1).
+      // contain characters it cannot represent.
       env: { ...process.env, PYTHONIOENCODING: 'utf-8' },
     });
     if (stdin !== null) {
@@ -72,7 +72,7 @@ function runPython(args, stdin = null) {
 /**
  * Tiles candidate images into one numbered contact sheet, for triage.
  *
- * `PLAYBOOK.md` §6 requires three searches per subject, so the agent routinely
+ * `the design` requires three searches per subject, so the agent routinely
  * has more candidates than it can afford to open. This writes one small sheet
  * instead; only the finalist is fetched at full size. Triage only — the tiles
  * cannot show a watermark or which variant a receiver is.
@@ -112,7 +112,7 @@ export async function encodeToWebp(bytes, destination, { overwrite = false } = {
     throw new Error(
       `${destination} already exists (${Math.round(existing.size / 1024)} kB). ` +
         'The last argument is a filename, not a folder — use hero, or a descriptive name per image. ' +
-        'SPEC.md §10: never re-encode in place; a changed image is a new filename.',
+        'never re-encode in place; a changed image is a new filename.',
     );
   }
 

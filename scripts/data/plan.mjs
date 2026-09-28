@@ -12,7 +12,7 @@
  * The order below is derived from the sources and is reproducible; nobody picks
  * the next batch.
  *
- * Where the candidates come from, and why not from Wikidata: SPEC.md Appendix A
+ * Where the candidates come from, and why not from Wikidata: the design
  * records the 2026-08-26 SPARQL result — `firearm model` holds ~668 items and
  * the `firearm` subclass tree ~402, dominated by museum artefacts. English
  * Wikipedia's list articles hold thousands. Wikidata stays the join key.
@@ -24,7 +24,7 @@
  * and cheap: `prop=templates&tltemplates=…` answers it 50 titles at a time.
  *
  * **Scope is not decided here.** `{{Infobox weapon}}` also covers swords,
- * missiles and tanks, and deciding that a 20 mm autocannon is out (SPEC.md §15,
+ * missiles and tanks, and deciding that a 20 mm autocannon is out (the design,
  * CLAUDE.md item 16) is a judgement about the arm, not about its infobox. The
  * plan is a candidate list; an author rejects out-of-scope entries and records
  * the rejection with `plan.mjs` untouched.
@@ -192,7 +192,7 @@ async function classify(titles) {
   return out;
 }
 
-/** A stable slug proposal. The author owns the final one — SPEC.md §5.1. */
+/** A stable slug proposal. The author owns the final one. */
 function proposeSlug(title) {
   return title
     .toLowerCase()
@@ -255,7 +255,7 @@ async function cmdBuild(options) {
    * title, that produced thirty-six identical rows — and the same thing for 424
    * other slugs. Merged, one row carries all thirty-six names, which is more
    * useful than the deduplication: it is the list of models this one article
-   * has to serve, i.e. exactly the variants-as-tabs question of SPEC.md §5.2.
+   * has to serve, i.e. exactly the variants-as-tabs question.
    */
   const merged = new Map();
   for (const [title, from] of sources) {
@@ -304,7 +304,7 @@ async function cmdBuild(options) {
    *     rather than of anyone's interest;
    *  2. article size — a proxy for how much sourced material exists, which is
    *     what actually determines whether an entry can clear the publication
-   *     floor (SPEC.md §5.9) rather than sit as a thin catalogue row;
+   *     floor rather than sit as a thin catalogue row;
    *  3. title, so the order is stable across rebuilds.
    */
   rows.sort(
@@ -454,7 +454,7 @@ async function cmdNext(count, filters) {
     console.log(`         found on ${row.sources.join(', ')}`);
     if (row.linkedAs.length) {
       console.log(`         also linked as ${row.linkedAs.slice(0, 8).join(', ')}${row.linkedAs.length > 8 ? `, +${row.linkedAs.length - 8} more` : ''}`);
-      console.log('         → one article, several models. Decide tabs vs promotion (SPEC.md §5.2).');
+      console.log('         → one article, several models. Decide tabs vs promotion.');
     }
     if (row.authoredAs.length) {
       console.log(`         ⚠ this article already backs ${row.authoredAs.join(', ')}`);

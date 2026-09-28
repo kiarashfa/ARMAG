@@ -1,11 +1,11 @@
 /**
- * Free recoil — SPEC.md §8.1, and the input to the Matchmaker's recoil
- * tolerance (§9.3), which is the one filter nobody else offers.
+ * Free recoil, and the input to the Matchmaker's recoil
+ * tolerance, which is the one filter nobody else offers.
  *
  * ── The honest gap, stated up front ────────────────────────────────────────
  * The textbook free-recoil formula has three ejecta terms: the bullet, the
  * propellant gas, and the wad in a shotshell. **ARMAG does not record powder
- * charge weights** — they are handloading data and SPEC.md §14 puts fabrication
+ * charge weights** — they are handloading data puts fabrication
  * instructions outside the editorial line — so the gas term cannot be computed
  * from stored data.
  *

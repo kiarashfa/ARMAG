@@ -1,6 +1,6 @@
 ---
 /**
- * A glossary term — SPEC.md §5.6.
+ * A glossary term.
  *
  * Single-file MDX, no data twin. Every term here is auto-crosslinked from every
  * occurrence in any prose on the site by a rehype plugin (Phase 11), so link
@@ -27,7 +27,7 @@ interface Props {
 
 const { id, term, short, aka, seeAlso } = Astro.props;
 
-/** SPEC.md §12 — a glossary entry is a `DefinedTerm` in a `DefinedTermSet`. */
+/** a glossary entry is a `DefinedTerm` in a `DefinedTermSet`. */
 const jsonLd = definedTerm({
   term,
   description: short,

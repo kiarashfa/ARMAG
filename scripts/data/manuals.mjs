@@ -6,7 +6,7 @@
  *   node scripts/data/manuals.mjs check
  *   node scripts/data/manuals.mjs find "TM 9-1005-313-10"
  *
- * FRICTION-LOG A2 asked for "a small mirror table of known-good manual URLs
+ * the design asked for "a small mirror table of known-good manual URLs
  * rather than searching for them each time". Building it found the reason a
  * bare table is not enough: **two of the three mirrors the friction log
  * recorded as working on 2026-08-27 were dead four days later** — `bits.de`
@@ -113,8 +113,8 @@ async function cmdFind(designation) {
     ),
   );
   console.log(
-    '\nFRICTION-LOG A8: an ammunition data sheet prints propellant type and charge weight.\n' +
-      'SPEC.md §14 puts that outside the line, the schema has no field for it, and it must not\n' +
+    '\nan ammunition data sheet prints propellant type and charge weight.\n' +
+      'the design puts that outside the line, the schema has no field for it, and it must not\n' +
       'reach a sourceNote either.',
   );
 }

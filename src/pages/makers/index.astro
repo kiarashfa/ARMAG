@@ -11,7 +11,7 @@ import { humanise } from '../../lib/render/format.ts';
 
 const makers = (await getMakers()).sort((a, b) => a.data.name.localeCompare(b.data.name));
 
-/** SPEC.md §12 — a browse view is an `ItemList`. */
+/** a browse view is an `ItemList`. */
 const jsonLd = itemList(
   'Manufacturers on ARMAG',
   makers.map((maker) => ({

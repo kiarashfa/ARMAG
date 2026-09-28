@@ -1,5 +1,5 @@
 /**
- * The G1 and G7 standard drag functions - SPEC.md SS8.1 and Appendix A.
+ * The G1 and G7 standard drag functions - the design SS8.1 and Appendix A.
  *
  * -- Provenance, because this is the physics core -------------------------
  * These tables are the US Army Ballistic Research Laboratory standard drag

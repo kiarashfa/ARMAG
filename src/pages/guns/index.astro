@@ -1,0 +1,89 @@
+---
+/**
+ * `/guns/` — the full catalogue, where Firearms in the nav leads.
+ *
+ * The catalogue is rendered twice on purpose. `CatalogueStatic` is the real,
+ * crawlable, JavaScript-free list of the first rows; the island replaces it
+ * once hydrated, fetches the whole light `catalogue.json`, and adds the
+ * filters, the sort and the card view. With JavaScript off, the static one
+ * *is* the catalogue, and every entry is still reachable through the type,
+ * country, era and maker pages.
+ */
+import BaseLayout from '../../components/ui/BaseLayout.astro';
+import CatalogueStatic from '../../components/blocks/CatalogueStatic.astro';
+import Catalogue from '../../components/islands/Catalogue.svelte';
+import { buildCatalogue, STATIC_ROW_COUNT } from '../../lib/content/catalogue.ts';
+import { getCartridges, getGuns, getMakers } from '../../lib/content/entries.ts';
+import { absoluteUrl, fileHref, gunHref, href } from '../../lib/content/href.ts';
+import { itemList } from '../../lib/render/json-ld.ts';
+import {
+  actions,
+  countries,
+  eras,
+  feedSystems,
+  operatingSystems,
+  roles,
+  types,
+} from '../../schemas/taxonomy.ts';
+
+const [guns, cartridges, makers] = await Promise.all([getGuns(), getCartridges(), getMakers()]);
+const rows = buildCatalogue(guns, cartridges, makers);
+
+/**
+ * Vocabulary labels are passed *into* the island rather than imported by it,
+ * which keeps the taxonomy files out of the client bundle. Named vocabularies
+ * are alphabetical; era keeps its chronological order.
+ */
+const terms = (list: { terms: { id: string; label: string }[] }) =>
+  list.terms.map((term) => ({ id: term.id, label: term.label }));
+const alphabetical = (list: { terms: { id: string; label: string }[] }) =>
+  terms(list).sort((a, b) => a.label.localeCompare(b.label));
+const vocab = {
+  type: alphabetical(types),
+  action: alphabetical(actions),
+  operatingSystem: alphabetical(operatingSystems),
+  feed: alphabetical(feedSystems),
+  role: alphabetical(roles),
+  country: alphabetical(countries),
+  era: terms(eras),
+};
+
+/**
+ * `ItemList` on the catalogue view: the whole row set rather than the first
+ * screenful, so a crawler reading the structured data sees what a reader who
+ * scrolls sees. A row below the publication floor carries no `url`.
+ */
+const catalogueJsonLd = itemList(
+  'Firearms on ARMAG',
+  rows.map((row) => ({
+    name: row.name,
+    url: row.hasPage ? absoluteUrl(Astro.site, gunHref(row.id)) : undefined,
+  })),
+);
+---
+
+<BaseLayout
+  title="Firearms"
+  description="Every firearm in ARMAG, filterable by type, action, operating system, feed, role, country and era, with every figure sourced or derived."
+  jsonLd={catalogueJsonLd}
+>
+  <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-10">
+    <h1 class="type-display text-display text-ink">Firearms</h1>
+    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+      Every entry in the database, {rows.length} of them, including the ones too thin to have earned a
+      page yet. Filters and sort order are kept in the address bar, so any view here is a link you
+      can share.
+    </p>
+
+    <section id="catalogue" class="mt-8 scroll-mt-16">
+      <CatalogueStatic rows={rows.slice(0, STATIC_ROW_COUNT)} total={rows.length} />
+      <Catalogue
+        client:load
+        src={fileHref('catalogue.json')}
+        gunPrefix={href('guns')}
+        vocab={vocab}
+        staticCount={Math.min(rows.length, STATIC_ROW_COUNT)}
+      />
+    </section>
+  </div>
+</BaseLayout>

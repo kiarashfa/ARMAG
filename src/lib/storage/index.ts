@@ -1,5 +1,5 @@
 /**
- * The one client-storage wrapper — SPEC.md §9.9.
+ * The one client-storage wrapper.
  *
  * *"Namespaced and versioned keys, every blob schema-checked on read, an
  * unrecognised version discarded whole rather than partially parsed, every
@@ -8,7 +8,7 @@
  * failure."*
  *
  * Written in Phase 6 rather than Phase 7 because the compare tray is client
- * storage and SPEC.md §9.9 admits no exceptions: a tray that wrote a bare
+ * storage admits no exceptions: a tray that wrote a bare
  * `localStorage.setItem` would be the second storage mechanism on the site
  * before the first one existed. My Armory extends this in Phase 7; it does not
  * replace it.
@@ -150,10 +150,10 @@ export function defineStore<T>(name: string, version: number, check: (raw: unkno
 }
 
 // ---------------------------------------------------------------------------
-// The compare tray — SPEC.md §9.2
+// The compare tray
 // ---------------------------------------------------------------------------
 
-/** Up to four, per SPEC.md §9.2. Stored as slugs and display names, nothing else. */
+/** Up to four,. Stored as slugs and display names, nothing else. */
 export interface TrayItem {
   id: string;
   name: string;

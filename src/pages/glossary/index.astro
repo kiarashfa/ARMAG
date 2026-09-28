@@ -1,6 +1,6 @@
 ---
 /**
- * `/glossary/` — SPEC.md §5.6. Every term here is auto-crosslinked from every
+ * `/glossary/`. Every term here is auto-crosslinked from every
  * occurrence in any prose on the site by a rehype plugin (Phase 11), so link
  * density needs no manual upkeep and survives renames.
  */
@@ -14,7 +14,7 @@ const terms = (await getCollection('glossary')).sort((a, b) =>
   a.data.term.localeCompare(b.data.term),
 );
 
-/** SPEC.md §12 — a browse view is an `ItemList`. */
+/** a browse view is an `ItemList`. */
 const jsonLd = itemList(
   'ARMAG glossary',
   terms.map((entry) => ({

@@ -1,6 +1,6 @@
 /**
  * The standard drag functions and the atmosphere they are referenced to —
- * SPEC.md §8.1.
+ * the design.
  *
  * The tables themselves live in `drag-tables.ts` with their provenance; this
  * module is the interpolation and the air.

@@ -39,7 +39,7 @@ test('an array-valued @type is checked element by element', () => {
 test('serialize refuses to emit commerce markup at all', () => {
   assert.throws(
     () => serialize({ '@type': 'Product', name: 'Glock 17' }),
-    /SPEC\.md §12 forbids/,
+    /SPEC\.md forbids/,
   );
 });
 

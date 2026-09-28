@@ -1,10 +1,10 @@
 <script lang="ts">
   /**
-   * Matchmaker — SPEC.md §9.3, over `lib/math/matchmaker.ts`.
+   * Matchmaker, over `lib/math/matchmaker.ts`.
    *
    * Dealbreaker filters first, then weighted preference scoring, producing a
    * ranked list framed as **"matches your stated criteria"**, with the criteria
-   * restated above it. The seven inputs are the seven §9.3 names, and the
+   * restated above it. The seven inputs are the seven names, and the
    * scoring itself lives in `lib/math` — this island collects answers and
    * renders the result.
    *

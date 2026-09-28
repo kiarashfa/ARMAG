@@ -16,10 +16,10 @@ What you save stays in your browser. A comparison, an armory or a shared layout 
 
 ---
 
-**Live site:** <https://kiarashfa.github.io/ARMAG/> · **Sibling encyclopedias:** [Xefy](https://kiarashfa.github.io/Xefy/) · [eXir](https://kiarashfa.github.io/eXir/) · [Markey](https://kiarashfa.github.io/Markey/) · **ARMAG**
+**Live site:** <https://kiarashfa.github.io/ARMAG/>
 
 © 2026 Kiarash Farajzadehahary.
 
 ⚖ Licensed under the [KFA Source-Available License 1.0](LICENSE).
 
-Made with ❤️ and `½ · m · v²`
+Made with ❤️ for those who respect every round.

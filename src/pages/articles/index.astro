@@ -10,7 +10,7 @@ const articles = (await getCollection('articles')).sort((a, b) =>
   b.data.published.localeCompare(a.data.published),
 );
 
-/** SPEC.md §12 — a browse view is an `ItemList`. */
+/** a browse view is an `ItemList`. */
 const jsonLd = itemList(
   'Articles on ARMAG',
   articles.map((article) => ({

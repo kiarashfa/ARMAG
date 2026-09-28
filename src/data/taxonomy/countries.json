@@ -2,7 +2,7 @@
   "axis": "country",
   "urlPrefix": "/country/",
   "authored": true,
-  "note": "SPEC.md §7 — origin is two fields: `designedIn` (one) and `producedIn[]` (many), because they differ constantly. Historical states are first-class terms, not aliases of their successors: an arm designed in the Soviet Union in 1947 was not designed in Russia, and collapsing the two would silently rewrite history inside a filter. `succeededBy` links them for anyone browsing forward. Seed list — extend it as entries need it; an unlisted country fails the build naming this file. Pruned in Phase 10 to the terms the seed content actually uses: an unused term is an empty browse page in the sitemap, and this file's own instruction is to extend it as entries need it. Re-adding one is a single line, and an unlisted country fails the build naming this file, so nothing can be authored against a term that is missing.",
+  "note": "origin is two fields: `designedIn` (one) and `producedIn[]` (many), because they differ constantly. Historical states are first-class terms, not aliases of their successors: an arm designed in the Soviet Union in 1947 was not designed in Russia, and collapsing the two would silently rewrite history inside a filter. `succeededBy` links them for anyone browsing forward. Seed list — extend it as entries need it; an unlisted country fails the build naming this file. Pruned in Phase 10 to the terms the seed content actually uses: an unused term is an empty browse page in the sitemap, and this file's own instruction is to extend it as entries need it. Re-adding one is a single line, and an unlisted country fails the build naming this file, so nothing can be authored against a term that is missing.",
   "terms": [
     {
       "id": "argentina",

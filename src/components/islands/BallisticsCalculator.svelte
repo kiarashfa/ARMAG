@@ -1,12 +1,12 @@
 <script lang="ts">
   /**
-   * The trajectory calculator — SPEC.md §9.5, over `lib/math/ballistics`.
+   * The trajectory calculator, over `lib/math/ballistics`.
    *
    * **This island contains no ballistics.** It collects six numbers, calls
    * `solveZeroAngle` and `solveTrajectory` — the same RK4 solver that renders
    * the figures on every cartridge page — and draws the result. A
    * server-rendered curve and one recomputed here cannot disagree, because they
-   * are the same function (SPEC.md §2 principle 5).
+   * are the same function.
    *
    * Inputs are the reader's own, so they carry no status badge and claim no
    * source. What the *model* does not include is stated on the page rather than

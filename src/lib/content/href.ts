@@ -1,12 +1,12 @@
 /**
- * Base-path-safe URL construction — SPEC.md §6.
+ * Base-path-safe URL construction.
  *
  * The site lives at `/ARMAG/` on github.io today and may live at `/` on a
  * custom domain later. **Every internal link goes through here**, so that
  * migration is a config change and nothing else, and so no link can be written
  * that silently drops the base path and 404s only in production.
  *
- * `assetUrl()` is separate and exists for a second reason: SPEC.md §10
+ * `assetUrl()` is separate and exists for a second reason: the design
  * pre-plans an escape hatch where images move to a second `gun-assets`
  * repository if the Pages budget is ever approached. With every image URL
  * already going through one helper, that migration is one line rather than
@@ -70,7 +70,7 @@ export function absoluteUrl(site: URL | undefined, path: string): string {
 }
 
 // ---------------------------------------------------------------------------
-// The canonical URL of each entity — SPEC.md §6
+// The canonical URL of each entity — the design
 // ---------------------------------------------------------------------------
 
 export const gunHref = (id: string): string => href('guns', id);
@@ -85,7 +85,7 @@ export const articleHref = (id: string): string => href('articles', id);
  *
  * Kept here rather than read from the vocabulary files so a template cannot
  * accidentally mint a URL for an axis that has no route. `caliber` is absent on
- * purpose: the cartridge page *is* the caliber view (SPEC.md §5.4).
+ * purpose: the cartridge page *is* the caliber view.
  */
 export const AXIS_PREFIX = {
   type: 'type',

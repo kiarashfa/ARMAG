@@ -8,7 +8,7 @@ import { absoluteUrl, cartridgeHref } from '../../lib/content/href.ts';
 
 const cartridges = (await getCartridges()).sort((a, b) => a.data.name.localeCompare(b.data.name));
 
-/** SPEC.md §12 — a browse view is an `ItemList`. */
+/** a browse view is an `ItemList`. */
 const jsonLd = itemList(
   'Cartridges on ARMAG',
   cartridges.map((cartridge) => ({

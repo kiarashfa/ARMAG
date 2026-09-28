@@ -1,6 +1,6 @@
 <script lang="ts">
   /**
-   * Scale comparison — SPEC.md §9.6, the interactive half of the silhouette.
+   * Scale comparison, the interactive half of the silhouette.
    *
    * The gun page draws an entry against its family siblings at build time; this
    * lets a reader draw any four against each other. Both call `buildScene` in

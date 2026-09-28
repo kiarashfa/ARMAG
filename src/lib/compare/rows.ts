@@ -1,5 +1,5 @@
 /**
- * The row registry — SPEC.md §9.2, and Instruction.md Phase 6's definition of
+ * The row registry, and the definition of
  * done: *"adding a field to `gun.ts` makes it appear in both the spec table and
  * the compare table without any other edit."*
  *
@@ -32,7 +32,7 @@ import { GUN_FIGURES } from '../content/derived.ts';
 // ---------------------------------------------------------------------------
 
 /**
- * SPEC.md §9.2 names four row types — scalar, enum, list, derived. The other
+ * the design names four row types — scalar, enum, list, derived. The other
  * four exist because the schema has four shapes that are none of those and are
  * still worth comparing: a bare year, a production range, a price, and free
  * text such as a cartridge's designer.
@@ -357,7 +357,7 @@ export const GUN_DERIVED_ROWS: CompareRow[] = GUN_FIGURES.map((figure) => ({
  * Every row a gun comparison shows, derived figures first.
  *
  * They lead for the same reason the ƒ panel sits above the spec table on a gun
- * page (SPEC.md §11): the spec sheet is table stakes, the computed layer is the
+ * page: the spec sheet is table stakes, the computed layer is the
  * product.
  */
 export const GUN_COMPARE_ROWS: CompareRow[] = [...GUN_DERIVED_ROWS, ...GUN_REGISTRY.rows];

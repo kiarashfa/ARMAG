@@ -1,5 +1,5 @@
 /**
- * Vocabulary invariants — SPEC.md §7.
+ * Vocabulary invariants.
  *
  * The taxonomy files are plain JSON, so nothing but this stops a term being
  * added with a capitalised id, a duplicate of an existing one, or an accent

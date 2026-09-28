@@ -10,15 +10,15 @@
  *
  * Both come through `buildCompareEntry`, so a figure cannot read one way in the
  * spec table and another way in the comparison — the failure that made a shared
- * registry worth building in the first place (SPEC.md §9.2).
+ * registry worth building in the first place.
  *
  * ── Why the percentile is baked in ─────────────────────────────────────────
- * SPEC.md §8.5 requires a bar's length to be a percentile **within a stated
+ * the design requires a bar's length to be a percentile **within a stated
  * comparison set**. The set is the whole database, which the client does not
  * have and must not have to download. So the position is computed at build time
  * from every entry and travels with the cell, along with the size and name of
  * the population it was measured against — a bar whose population is unstated
- * is exactly the unitless score §8.5 rejects.
+ * is exactly the unitless score rejects.
  */
 import { assetUrl } from '../content/href.ts';
 import type { CartridgeData } from '../../schemas/cartridge.ts';
@@ -79,7 +79,7 @@ export interface CompareEntry {
   makerId: string | null;
   makerName: string | null;
   cartridgeName: string | null;
-  /** False below the publication floor — a column, but no link (SPEC.md §5.9). */
+  /** False below the publication floor — a column, but no link. */
   hasPage: boolean;
   /**
    * The entry's hero photograph, for the thumbnail row at the top of the
@@ -87,7 +87,7 @@ export interface CompareEntry {
    * and the column simply says so rather than reserving a broken frame.
    *
    * The URL is resolved here, at build time, through the same `assetUrl()`
-   * every other image on the site goes through: SPEC.md §10's second-repository
+   * every other image on the site goes through: the second-repository
    * escape hatch has to hold for this payload too, and a client that prefixed
    * the path itself would be the one place it did not.
    */

@@ -1,5 +1,5 @@
 /**
- * Status propagation and the input chain — SPEC.md §8.4.
+ * Status propagation and the input chain.
  *
  * This module is the reason the derived layer is trustworthy rather than
  * decorative. Every function in `lib/math` that produces a number for a reader
@@ -17,7 +17,7 @@
  *     a fact rather than a claim.
  *
  * The anti-fabrication incentive lives elsewhere, in the completeness score
- * (SPEC.md §5.9): only `verified` values count toward it, so estimating your
+ *: only `verified` values count toward it, so estimating your
  * way to a full page produces a Tier 3 entry covered in amber badges.
  * Inventing numbers buys nothing.
  *
@@ -88,7 +88,7 @@ export interface Derived<T = number> {
   /**
    * Set when the value is `null` because an input had no number. Names the
    * input, so the page can say *which* missing figure is why this is blank —
-   * SPEC.md §2 principle 6: a missing figure says so.
+   * a missing figure says so.
    */
   blockedBy?: string;
 }

@@ -1,5 +1,5 @@
 /**
- * Controlled vocabularies — SPEC.md §7.
+ * Controlled vocabularies.
  *
  * The JSON files under `src/data/taxonomy/` are the single source of truth. The
  * Zod enums are built *from* them at load time rather than restated here, so
@@ -8,7 +8,7 @@
  *
  * Seven authored axes plus two computed ones. **Era is computed** from the
  * introduction year and must never be authored. **Caliber is not an axis at
- * all** — the cartridge page *is* the caliber view (SPEC.md §5.4), which is the
+ * all** — the cartridge page *is* the caliber view, which is the
  * one deliberate exception to "taxonomy pages own no content".
  *
  * The split between `action` and `fireModes` is the one to protect: conflating
@@ -41,7 +41,7 @@ export interface Vocabulary {
   terms: VocabTerm[];
 }
 
-/** A type term also names the content accent it renders in (SPEC.md §11). */
+/** A type term also names the content accent it renders in. */
 export interface TypeTerm extends VocabTerm {
   accent: 'handgun' | 'rifle' | 'shotgun' | 'smg' | 'machinegun' | 'platform';
 }
@@ -74,7 +74,7 @@ export interface EraVocabulary extends Omit<Vocabulary, 'terms'> {
   terms: EraTerm[];
 }
 
-/** The browse axes of SPEC.md §6, in the order they appear in the URL table. */
+/** The browse axes, in the order they appear in the URL table. */
 export const TAXONOMY_AXES = [
   'type',
   'action',
@@ -155,7 +155,7 @@ export function labelFor(axis: string, id: string): string | undefined {
 }
 
 /**
- * The content accent a firearm type renders in — SPEC.md §11.
+ * The content accent a firearm type renders in.
  *
  * Six accents cover eight types. A `kind: 'family'` entry has no single type
  * and uses `platform`, which is why that is the fallback rather than an error.
@@ -166,13 +166,13 @@ export function accentForType(type: string | null | undefined): TypeTerm['accent
 }
 
 // ---------------------------------------------------------------------------
-// Era — computed, never authored (SPEC.md §7)
+// Era — computed, never authored
 // ---------------------------------------------------------------------------
 
 /**
  * The era bucket an introduction year falls in.
  *
- * One bucket, not a range: SPEC.md §7 says era is computed *from the
+ * One bucket, not a range: the design says era is computed *from the
  * introduction year*, and an arm produced from 1959 to the present belongs to
  * the early Cold War that produced it, not to every decade it outlived.
  */

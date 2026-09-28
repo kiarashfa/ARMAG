@@ -6,7 +6,7 @@
  * Three things can only be tested against the REAL pipeline: that the
  * catalogue artifact is generated from content, that the server-rendered rows
  * appear with JavaScript disabled, and that Pagefind finds an entry by an
- * ALIAS rather than its title (Instruction.md Phase 5). All three need at
+ * ALIAS rather than its title. All three need at
  * least one entry to exist, and until Phase 8 authors the pilot batch there
  * is none.
  *
@@ -16,7 +16,7 @@
  *
  * ── NEVER COMMIT WHAT THIS WRITES ──────────────────────────────────────────
  * The fixture is a fictional firearm. In `src/content/` it renders as a real
- * page, which is fabricated data of exactly the kind SPEC.md exists to
+ * page, which is fabricated data of exactly the kind the design exists to
  * prevent. Run `npm run fixture:clear` before committing. `npm run
  * check:content` will happily pass on it — it is valid content, it is just not
  * true — so the guard here is discipline, not a gate.

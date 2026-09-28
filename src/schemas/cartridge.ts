@@ -1,5 +1,5 @@
 /**
- * The `cartridges` collection — SPEC.md §5.4.
+ * The `cartridges` collection.
  *
  * First-class entities, not tags. A cartridge is **the input to every ballistic
  * calculation on the site**, so it is sourced once here rather than re-typed on
@@ -7,11 +7,11 @@
  * more expensive than a wrong figure anywhere else.
  *
  * The cartridge page is also the caliber taxonomy page: the deliberate
- * exception to "taxonomy pages own no content" (SPEC.md §2 principle 2).
+ * exception to "taxonomy pages own no content".
  *
  * ── What is deliberately NOT here ──────────────────────────────────────────
  * There is no powder-charge field, and there never will be. Charge weights are
- * handloading data, and SPEC.md §14 puts fabrication instructions of any kind
+ * handloading data, puts fabrication instructions of any kind
  * outside the editorial line. Published velocity per barrel length is a
  * measurement; a charge weight is a recipe.
  */
@@ -40,7 +40,7 @@ export const caseType = z.enum([
 export type CaseType = z.infer<typeof caseType>;
 
 /**
- * Body profile. Not in the SPEC.md §5.4 field list; added because bottleneck
+ * Body profile. Not in the original field list; added because bottleneck
  * versus straight-wall is a real, filterable, sourceable fact that readers
  * search on, and because it is one enum rather than a new subsystem.
  */
@@ -52,9 +52,9 @@ export const standardsBody = z.enum(['saami', 'cip', 'nato', 'none']);
 export type StandardsBody = z.infer<typeof standardsBody>;
 
 /**
- * A cartridge alias — SPEC.md §9.1.
+ * A cartridge alias.
  *
- * Not in the §5.4 field list, and added deliberately: `.308 Winchester` and
+ * Not in the original field list, and added deliberately: `.308 Winchester` and
  * `7.62×51mm NATO` are the same cartridge under two names, `9×19mm` answers to
  * four, and "9mm vs .45" is the site's highest-traffic query class. Without
  * aliases in the index, the most-searched terms on the site find nothing.
@@ -69,7 +69,7 @@ export type CartridgeAlias = z.infer<typeof cartridgeAlias>;
 /**
  * One sourced velocity measurement: this load, out of this barrel length.
  *
- * The pair is the whole point of SPEC.md §8.2. A gun's velocity is
+ * The pair is the whole point. A gun's velocity is
  * **interpolated between two sourced points** and rendered labelled as
  * interpolated; extrapolation beyond the sourced range is forbidden, and the
  * "≈25 fps per inch" rule of thumb never appears in this codebase. It is a
@@ -92,7 +92,7 @@ export const cartridgeLoad = z
      * Mass of the COMPLETE loaded round, not the bullet.
      *
      * Added in Phase 3 because `lib/math/mass.ts` needs it: loaded mass is
-     * empty + magazine + n x cartridge (SPEC.md §8.1), and using the bullet
+     * empty + magazine + n x cartridge, and using the bullet
      * mass there would understate a full magazine by more than the magazine
      * itself weighs. Rarely published, so usually absent — which is an honest
      * gap, not a licence to derive one.
@@ -190,7 +190,7 @@ export const cartridgeDataSchema = z
     /**
      * Loads are rows, not a collection: they are not independently interesting
      * enough for URLs, and as entities they would multiply into thousands of
-     * orphans (SPEC.md §5.4). An identity-only cartridge simply has none.
+     * orphans. An identity-only cartridge simply has none.
      */
     loads: z.array(cartridgeLoad).default([]),
 
@@ -215,7 +215,7 @@ export const cartridgeDataSchema = z
           code: 'custom',
           path: ['bulletDiameter'],
           message:
-            'a shotshell has no single projectile diameter — record `boreDiameter` instead (SPEC.md §5.4)',
+            'a shotshell has no single projectile diameter — record `boreDiameter` instead',
         });
       }
       if (!cartridge.boreDiameter) {

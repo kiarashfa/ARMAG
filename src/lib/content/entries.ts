@@ -1,5 +1,5 @@
 /**
- * Loading and joining content — SPEC.md §5.1.
+ * Loading and joining content.
  *
  * Two files per entry, joined by `id`, **never merged**: the narrative file
  * carries prose and identity, the data file carries the spec. This module is
@@ -57,7 +57,7 @@ export const getMakers = async (): Promise<JoinedMaker[]> =>
   (await join('makers', 'makerData')) as unknown as JoinedMaker[];
 
 // ---------------------------------------------------------------------------
-// The computed views — SPEC.md §2 principle 2
+// The computed views
 // ---------------------------------------------------------------------------
 
 /**

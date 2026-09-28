@@ -2,7 +2,7 @@
   "axis": "action",
   "urlPrefix": "/action/",
   "authored": true,
-  "note": "How the breech is cycled. SPEC.md §7 splits this from `fireModes` deliberately: conflating how the breech cycles with what the trigger does is the single most common error in firearm databases, and it makes correct filtering impossible.",
+  "note": "How the breech is cycled. the design splits this from `fireModes` deliberately: conflating how the breech cycles with what the trigger does is the single most common error in firearm databases, and it makes correct filtering impossible.",
   "terms": [
     {
       "id": "bolt",

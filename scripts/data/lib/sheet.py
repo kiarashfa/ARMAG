@@ -2,7 +2,7 @@
 
 Why this exists
 ---------------
-`PLAYBOOK.md` §6 requires three searches per subject — Commons, Smithsonian and
+`the design` requires three searches per subject — Commons, Smithsonian and
 DVIDS — and the agent then has to look at what came back. Opening three to five
 full-size candidates per subject in order to reject most of them is how a
 photograph pass becomes the most expensive thing in a round: the sibling recipe

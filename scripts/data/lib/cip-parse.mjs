@@ -15,7 +15,7 @@
  *     index pages so is the pressure column. Parsed as English, `2.350` is not
  *     2350 bar.
  *
- * SPEC.md Appendix A governs what may be taken: **the numbers are transcribed,
+ * the design governs what may be taken: **the numbers are transcribed,
  * the drawings are never republished.** These datasheets carry an explicit
  * reproduction notice covering the document; facts are not copyrightable and a
  * dozen dimensions per cartridge is extraction per entry, not bulk mirroring.
@@ -152,7 +152,7 @@ export function normaliseName(name) {
  * as `308 Win.`, `.380 ACP` as `9 mm Browning court`. Without this table the
  * commonest cartridges on the site return no result, and "no result" reads as
  * "C.I.P. does not standardise it" — which is a real and different answer
- * (FRICTION-LOG A4) that must not be counterfeited by a lookup failure.
+ * that must not be counterfeited by a lookup failure.
  *
  * Kept deliberately short: it covers the cases where the two names share no
  * digits. Anything whose numeric designation matches already works.
