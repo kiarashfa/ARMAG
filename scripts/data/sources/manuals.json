@@ -1,5 +1,5 @@
 {
-  "note": "Public-domain US military manuals — the design called these 'the best free firearm sources'. FM 3-22.9 Table 2-1 was the single densest source in the pilot batch. What is recorded per manual is its DESIGNATION, because that is what the citation needs: `referenceEntry` requires `revision` on a military-manual citation and the designation is what someone re-finds it by. A host is a convenience and goes stale — army.mil withdrew its own copies and the mirrors in the friction log now 403 or 404. `manuals.mjs check` re-probes every URL here; `manuals.mjs find` resolves a designation to a permanent Internet Archive identifier when they all die.",
+  "note": "Public-domain US military manuals — the design called these 'the best free firearm sources'. FM 3-22.9 Table 2-1 was the single densest source in the first entries. What is recorded per manual is its DESIGNATION, because that is what the citation needs: `referenceEntry` requires `revision` on a military-manual citation and the designation is what someone re-finds it by. A host is a convenience and goes stale — army.mil withdrew its own copies and the mirrors in the friction log now 403 or 404. `manuals.mjs check` re-probes every URL here; `manuals.mjs find` resolves a designation to a permanent Internet Archive identifier when they all die.",
   "checked": "2026-08-31",
   "manuals": [
     {
@@ -8,7 +8,7 @@
       "publisher": "Headquarters, Department of the Army",
       "year": 2008,
       "covers": ["colt-m4-carbine", "ar-15", "5-56x45mm-nato"],
-      "contents": "Table 2-1 gives weight, overall length, barrel length, rifling twist, muzzle velocity, cyclic rate and maximum effective range for five weapons in one table. Verified against by the pilot batch.",
+      "contents": "Table 2-1 gives weight, overall length, barrel length, rifling twist, muzzle velocity, cyclic rate and maximum effective range for five weapons in one table. Verified against by the first entries.",
       "urls": [
         {
           "url": "https://archive.org/details/fm-3-22.9-rifle-marksmanship-m-16-m-4-series-weapons",
@@ -54,7 +54,7 @@
       "publisher": "Headquarters, Department of the Army",
       "year": 2010,
       "covers": ["colt-m4-carbine"],
-      "contents": "Operator-level data. Its cyclic rate for the M4 is 700–970 rpm where FM 3-22.9 says 700–900 — the pilot batch recorded that disagreement as `conflicting-sources` rather than picking one.",
+      "contents": "Operator-level data. Its cyclic rate for the M4 is 700–970 rpm where FM 3-22.9 says 700–900 — the first entries recorded that disagreement as `conflicting-sources` rather than picking one.",
       "urls": [
         {
           "url": "https://archive.org/details/manuallib-id-2671392",

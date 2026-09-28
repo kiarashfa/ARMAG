@@ -15,6 +15,7 @@
  */
 import Disclosure from './Disclosure.astro';
 import { assetUrl } from '../../lib/content/href.ts';
+import { srcsetFor } from '../../lib/content/srcset.ts';
 import { ATTRIBUTION_REQUIRED, type ImageRef } from '../../schemas/primitives.ts';
 
 interface Props {
@@ -27,7 +28,7 @@ interface Props {
   sizes?: string;
 }
 
-const { image, id, priority = false, class: className = '', sizes } = Astro.props;
+const { image, id, priority = false, class: className = '', sizes = '(min-width: 64rem) 28rem, 100vw' } = Astro.props;
 
 const LICENSE_LABEL: Record<string, string> = {
   cc0: 'CC0 — public domain dedication',
@@ -54,6 +55,7 @@ const needsAttribution = ATTRIBUTION_REQUIRED.has(credit.licenseType);
 <figure class={`relative ${className}`}>
   <img
     src={assetUrl(image.src)}
+    srcset={srcsetFor(assetUrl(image.src), image.width)}
     alt={image.alt}
     width={image.width}
     height={image.height}
@@ -68,7 +70,7 @@ const needsAttribution = ATTRIBUTION_REQUIRED.has(credit.licenseType);
     <Disclosure id={id} label={`Image credit and licence for: ${image.alt}`} title="Image credit">
       <span slot="trigger" aria-hidden="true">i</span>
 
-      <dl class="type-data grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-xs">
+      <dl class="type-data grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1 text-xs">
         {
           credit.title && (
             <>

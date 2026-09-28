@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { srcsetFor } from '../../lib/content/srcset.ts';
   /**
    * Compare.
    *
@@ -510,6 +511,8 @@
                 {#if entry.thumb}
                   <img
                     src={entry.thumb.src}
+                    srcset={srcsetFor(entry.thumb.src, entry.thumb.width)}
+                    sizes="12rem"
                     alt={entry.thumb.alt}
                     width={entry.thumb.width}
                     height={entry.thumb.height}
@@ -557,7 +560,7 @@
       </table>
     </div>
 
-    <p class="type-data mt-4 max-w-note text-xs text-ink-muted">
+    <p class="type-data mt-4 text-xs text-ink-muted">
       No column is marked as the winner, and none ever will be. Lighter is better for carry and
       worse for recoil; the site does not know which you are choosing for. Bar lengths are
       percentile positions within the population named beneath each one, never a score.

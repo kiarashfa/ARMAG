@@ -132,7 +132,7 @@
   <span class="type-data text-[0.65rem] text-ink-muted">{hint}</span>
 {/snippet}
 
-<div class="mt-8 grid gap-6 lg:grid-cols-[minmax(0,20rem)_1fr]">
+<div class="mt-8 grid gap-6 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
   <form class="flex min-w-0 flex-col gap-4 rounded-lg border border-line bg-surface-1 p-4">
     <label class="flex flex-col gap-1">
       {@render field('Drag model', 'G7 for a boat-tail rifle bullet, G1 for most published data')}
@@ -324,7 +324,7 @@
         </table>
       </div>
 
-      <p class="type-data mt-3 max-w-note text-xs text-ink-muted">
+      <p class="type-data mt-3 text-xs text-ink-muted">
         These are your numbers, not ours: nothing here is sourced, so nothing carries a status
         badge. For figures that are,
         <a href={cartridgePrefix} class="text-ui-accent">open a cartridge</a> — its loads carry

@@ -83,7 +83,7 @@
   the whole page container instead, which is why the symptom showed up as the
   fixed tray being 13px too wide rather than as anything near the select.
 -->
-<div class="mt-8 grid gap-6 lg:grid-cols-[minmax(0,18rem)_1fr]">
+<div class="mt-8 grid gap-6 lg:grid-cols-[minmax(0,18rem)_minmax(0,1fr)]">
   <div class="min-w-0 rounded-lg border border-line bg-surface-1 p-4">
     <!--
       `min-w-0` on the label and `w-full` on the select, both load-bearing at

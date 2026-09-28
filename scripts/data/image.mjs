@@ -240,9 +240,7 @@ async function resolveSource(handle, { from = null } = {}) {
  *
  * asks for three searches per subject, which routinely leaves more
  * candidates than are worth opening. Opening three to five at full size in
- * order to reject most of them is what makes an image pass expensive: the
- * sibling recipe site measured 321 k tokens for 70 subjects before it worked
- * this way.
+ * order to reject most of them is what makes an image pass expensive.
  *
  * Takes handles from any of the three sources — `File:X.jpg`,
  * `dvids:image:N`, `si:ID` — because `resolveSource` already normalises them,

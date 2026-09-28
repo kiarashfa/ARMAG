@@ -18,14 +18,14 @@ import thresholds from '../data/thresholds.json';
   <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Methodology' }]} />
     <h1 class="type-display mt-4 text-display text-ink">Methodology</h1>
-    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+    <p class="type-body mt-4 text-lg text-ink-secondary">
       Every derived figure on the site is produced by one set of pure functions, imported by both
       the page build and the interactive tools. A figure rendered into the HTML and one recomputed
       in your browser cannot disagree, because they are the same function.
     </p>
 
     <Section id="status" title="Status propagation">
-      <div class="prose type-body max-w-readable text-ink-secondary">
+      <div class="prose type-body text-ink-secondary">
         <p>
           A derived value inherits the <strong class="text-ink">worst status among its inputs</strong>.
           Verified times verified is verified; any estimated input makes the output estimated; if the
@@ -45,7 +45,7 @@ import thresholds from '../data/thresholds.json';
     </Section>
 
     <Section id="ballistics" title="Ballistics">
-      <div class="prose type-body max-w-readable text-ink-secondary">
+      <div class="prose type-body text-ink-secondary">
         <p>
           Trajectories are integrated with a fourth-order Runge–Kutta scheme in three dimensions, so
           wind drift comes out of the same solver as drop. Drag uses the G1 and G7 standard drag
@@ -68,7 +68,7 @@ import thresholds from '../data/thresholds.json';
     </Section>
 
     <Section id="velocity" title="Velocity and barrel length">
-      <div class="prose type-body max-w-readable text-ink-secondary">
+      <div class="prose type-body text-ink-secondary">
         <p>
           Muzzle velocity belongs to a cartridge <em>and</em> a barrel length together, and almost
           nobody publishes it for the pairing you want. Between two sourced barrel lengths we
@@ -85,7 +85,7 @@ import thresholds from '../data/thresholds.json';
     </Section>
 
     <Section id="recoil" title="Recoil">
-      <div class="prose type-body max-w-readable text-ink-secondary">
+      <div class="prose type-body text-ink-secondary">
         <p>
           Free recoil is computed from the momentum leaving the muzzle and the mass of the arm as
           carried. Because ARMAG does not record powder-charge weights, the propellant gas term is
@@ -101,13 +101,13 @@ import thresholds from '../data/thresholds.json';
     </Section>
 
     <Section id="tier" title="Completeness and tier">
-      <div class="prose type-body max-w-readable text-ink-secondary">
+      <div class="prose type-body text-ink-secondary">
         <p>
           Tier is computed from a completeness score, never asserted by whoever wrote the entry. The
           weights are below and are open to revision as the database grows.
         </p>
       </div>
-      <table class="type-data mt-4 w-full max-w-note text-sm">
+      <table class="type-data mt-4 w-full text-sm">
         <thead>
           <tr class="border-b border-line-strong text-left text-ink-muted">
             <th scope="col" class="p-2">Contribution</th>
@@ -127,14 +127,14 @@ import thresholds from '../data/thresholds.json';
           }
         </tbody>
       </table>
-      <p class="type-data mt-3 max-w-note text-sm text-ink-muted">
+      <p class="type-data mt-3 text-sm text-ink-muted">
         Tier 1 at {thresholds.completeness.tierFloor.tier1} points, Tier 2 at{' '}
         {thresholds.completeness.tierFloor.tier2}. Only verified values count toward any of it.
       </p>
     </Section>
 
     <Section id="units" title="Units">
-      <div class="prose type-body max-w-readable text-ink-secondary">
+      <div class="prose type-body text-ink-secondary">
         <p>
           SI is what is stored. Imperial is computed and shown by the toggle in the header; it is
           never stored in the database and never indexed by the site search. Cartridge names are

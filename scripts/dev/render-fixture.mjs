@@ -7,7 +7,7 @@
  * catalogue artifact is generated from content, that the server-rendered rows
  * appear with JavaScript disabled, and that Pagefind finds an entry by an
  * ALIAS rather than its title. All three need at
- * least one entry to exist, and until Phase 8 authors the pilot batch there
+ * least one entry to exist, and until the first entries exist there
  * is none.
  *
  * So the check is: lay the fixture, build, assert, clear. This script is the

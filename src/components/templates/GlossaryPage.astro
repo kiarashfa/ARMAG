@@ -43,7 +43,7 @@ const jsonLd = definedTerm({
 
     <article class="mt-4">
       <h1 class="type-display text-display text-ink">{term}</h1>
-      <p class="type-body mt-3 max-w-lede text-lg text-ink-secondary">{short}</p>
+      <p class="type-body mt-3 text-lg text-ink-secondary">{short}</p>
       {
         aka.length > 0 && (
           <p class="type-data mt-2 text-sm text-ink-muted">Also called {aka.join(', ')}</p>
@@ -58,7 +58,7 @@ const jsonLd = definedTerm({
         space beside it.
       */}
       <div
-        class="mt-8 grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,var(--measure-readable))_minmax(0,1fr)] lg:items-start"
+        class="mt-8 grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,1fr)_minmax(0,16rem)] lg:items-start"
       >
         <div class="prose type-body text-ink-secondary">
           <slot />

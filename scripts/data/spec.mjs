@@ -6,7 +6,7 @@
  *   node scripts/data/spec.mjs pdf  "https://.../M&P15-Sport-III-spec.pdf"
  *
  * **manufacturer spec pages are half dead and half
- * JavaScript.** Of the five makers the pilot batch needed, Glock and RemArms
+ * JavaScript.** Of the five makers the first entries needed, Glock and RemArms
  * served a readable HTML table; Colt published calibre and barrel length and
  * nothing else; Ruger's whole AR-556 line 404s from every indexed URL; and
  * Smith & Wesson's page is a BigCommerce SPA whose specifications live in an
@@ -222,7 +222,7 @@ async function cmdRead(url) {
   if (!any && sheets.length === 0) {
     console.log(
       '\nNothing extractable. That is a real finding, not a tool failure — a third of the\n' +
-        'makers in the pilot batch publish nothing machine-readable. Fall back to a US military\n' +
+        'makers in the first entries publish nothing machine-readable. Fall back to a US military\n' +
         'manual (see scripts/data/sources/manuals.json) or record the gap honestly.',
     );
   }

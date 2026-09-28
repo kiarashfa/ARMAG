@@ -19,14 +19,14 @@ import Section from '../components/blocks/Section.astro';
   <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Attributions' }]} />
     <h1 class="type-display mt-4 text-display text-ink">Attributions</h1>
-    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+    <p class="type-body mt-4 text-lg text-ink-secondary">
       Image credits live on the images. Click the <span class="type-data">i</span> on any photograph
       for its author, licence and source page. What follows is everything that has nowhere else to
       go.
     </p>
 
     <Section id="data" title="Data sources">
-      <dl class="prose type-body max-w-readable text-ink-secondary">
+      <dl class="prose type-body text-ink-secondary">
         <dt class="type-heading text-base text-ink">Wikidata</dt>
         <dd class="mt-1">
           Identifiers, native-script labels and aliases. Wikidata content is released under CC0.
@@ -54,7 +54,7 @@ import Section from '../components/blocks/Section.astro';
     </Section>
 
     <Section id="software" title="Software">
-      <div class="prose type-body max-w-readable text-ink-secondary">
+      <div class="prose type-body text-ink-secondary">
         <p>
           Built with Astro, Svelte and Tailwind CSS. Site search by Pagefind. The ballistics solver
           is our own; open-source implementations are used as a validation corpus in the test suite

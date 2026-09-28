@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 
-# SPEC.md §13 — three jobs, in order:
+# Three jobs, in order:
 #   verify  → the integrity checks must still catch known-bad content, + type check
 #   build   → withastro/action, which runs the gated `npm run build`
 #   deploy  → actions/deploy-pages
@@ -15,7 +15,7 @@ name: Deploy to GitHub Pages
 # `BASE = '/ARMAG'` in astro.config.ts must match the repository name character
 # for character: Pages serves a project site at https://<user>.github.io/<repo>/
 # and that path is case-sensitive. Renaming the repo without changing `BASE`
-# produces a site where every page 404s and CI is green (SPEC.md §6).
+# produces a site where every page 404s and CI is green.
 
 on:
   push:
@@ -84,7 +84,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      # Runs `npm run build` — the full gated pipeline from SPEC.md §13
+      # Runs `npm run build`, the full gated pipeline
       # (test → check:content → astro build → postbuild:index → check:site →
       # check:assets) — and uploads dist/ as the Pages artifact. `npm run build`
       # is this action's default command for npm, so the gate is not bypassed.

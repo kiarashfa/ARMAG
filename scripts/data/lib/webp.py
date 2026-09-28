@@ -33,9 +33,10 @@ except ImportError:  # pragma: no cover - environment problem, not a code path
     )
     raise SystemExit(2)
 
-# Searched in this order. 86 first because it cleared the gallery cap for 30 of
-# the 34 pilot images; the tail exists because the other four needed 78 and 45.
-QUALITIES = (92, 86, 80, 74, 68, 62, 56, 50, 45, 40, 35, 30)
+# Searched in this order, from 80: above it WebP spends bytes on detail no one
+# sees at display size (sampled heroes were 30 to 40% larger at 86 to 92 with
+# no visible gain). The tail is for busy photographs that miss the cap.
+QUALITIES = (80, 76, 72, 68, 62, 56, 50, 45, 40, 35, 30)
 
 # Applied only after every quality has failed. Each step is a fresh resize from
 # the ORIGINAL, never a resize of an already-resized copy: repeated resampling

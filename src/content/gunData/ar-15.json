@@ -67,17 +67,17 @@
   "images": [
     {
       "src": "images/guns/ar-15/hero.webp",
-      "alt": "An AR-15 type rifle held in a vertical wall mount",
-      "caption": "An AR-15 type rifle in a wall mount at a Nevada Highway Patrol building.",
-      "width": 1067,
-      "height": 1600,
+      "alt": "A black Colt AR-15 rifle in profile against a plain grey backdrop, with its carry handle, slim triangular handguard and fixed stock",
+      "caption": "A Colt AR-15 SP1, the first civilian model, in the collection of the Swedish Army Museum.",
+      "width": 1051,
+      "height": 322,
       "credit": {
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AR-15_Type_Rifle_in_Wall_Mount.jpg",
-        "licenseType": "cc-by-sa",
-        "author": "Noah Wulf",
-        "title": "AR-15 Type Rifle in Wall Mount",
+        "author": "Armémuseum (Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colt_AR-15_SP1_Swedish_Army_Museum_001-2.jpg",
+        "title": "File:Colt AR-15 SP1 Swedish Army Museum 001-2.jpg",
+        "licenseType": "cc-by",
         "licenseVersion": "4.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
       }
     },
     {

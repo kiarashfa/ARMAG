@@ -65,7 +65,7 @@
   <span class="type-data text-[0.65rem] text-ink-muted">{hint}</span>
 {/snippet}
 
-<div class="mt-8 grid gap-6 lg:grid-cols-[minmax(0,20rem)_1fr]">
+<div class="mt-8 grid gap-6 lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)]">
   <form class="flex min-w-0 flex-col gap-4 rounded-lg border border-line bg-surface-1 p-4">
     <label class="flex flex-col gap-1">
       {@render numberField('Firearm mass', 'kilograms, as fired — loaded, not empty')}

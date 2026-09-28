@@ -152,7 +152,7 @@ export const cartridgeDataSchema = z
      * modern 12/70 shell has no single introduction date anybody publishes.
      * Requiring the field would have guaranteed an invented year on exactly
      * the entries where nobody could check it. Found authoring the shotshells
-     * in the Phase 8 pilot batch.
+     * in the first entries.
      */
     introduced: introducedYear.optional(),
     productionYears: yearRange.optional(),
@@ -167,7 +167,7 @@ export const cartridgeDataSchema = z
      * to call "the bullet" would be inventing a fact. A shotshell records
      * `boreDiameter` instead, and the refinement below enforces the choice
      * rather than leaving it to an author's memory. Discovered authoring the
-     * Remington 870 in the Phase 8 pilot batch.
+     * Remington 870 in the first entries.
      */
     bulletDiameter: propertyValue('mm').optional(),
     /** Bore diameter — the meaningful calibre figure for a shotshell. */

@@ -35,9 +35,8 @@
  * 6. **An ambiguous name links to nothing at all.** If two entries would both
  *    claim the same string, neither gets it. A wrong link is worse than a
  *    missing one: the reader who follows it lands somewhere the sentence did
- *    not promise, and nothing on the page tells them so. This rule is the one
- *    Markey's version does not have, and ARMAG needs it because aliases are
- *    first-class here — "M4" and "Model 11" are exactly the strings two
+ *    not promise, and nothing on the page tells them so. This site needs the
+ *    rule because aliases are first-class here — "M4" and "Model 11" are exactly the strings two
  *    entries can plausibly share.
  *
  * ── Where the index comes from ─────────────────────────────────────────────

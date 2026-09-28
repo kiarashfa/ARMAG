@@ -157,7 +157,7 @@
   </label>
 {/snippet}
 
-<div class="mt-8 grid gap-6 lg:grid-cols-[minmax(0,22rem)_1fr]">
+<div class="mt-8 grid gap-6 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)]">
   <form class="flex min-w-0 flex-col gap-5 rounded-lg border border-line bg-surface-1 p-4">
     {@render chips('Intended use', vocab.role, useTags, (id) => (useTags = toggle(useTags, id)))}
     {@render chips('Action', vocab.action, actions, (id) => (actions = toggle(actions, id)))}
@@ -280,7 +280,7 @@
         </div>
       {/if}
 
-      <p class="type-data mt-6 max-w-note text-xs text-ink-muted">
+      <p class="type-data mt-6 text-xs text-ink-muted">
         Ranking is on physical and technical fit only, never on effectiveness — for any use tag. An
         entry whose figure is missing is kept rather than excluded: a gap in our data is not a fact
         about the arm.

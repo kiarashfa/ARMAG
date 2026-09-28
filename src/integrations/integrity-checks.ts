@@ -621,9 +621,9 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
         }
 
         // Gate 3 — the assumed-but-verified detector. The highest-value check
-        // on the site: in the Markey model benchmark, four of five models
-        // passed content checks while inventing at least one figure, and the
-        // tell was always a hedging note behind a 'verified' badge.
+        // on the site: a figure that passes every other check while being
+        // invented usually gives itself away as a hedging note behind a
+        // 'verified' badge.
         if (status === 'verified') {
           const hedges = hedgeWordsIn(sourceNote);
           if (hedges.length > 0) {

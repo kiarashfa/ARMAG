@@ -31,7 +31,7 @@ const { id, title, standfirst, class: className = '', flush = false } = Astro.pr
   <h2 class="type-title text-xl">
     <a href={`#${id}`} class="text-ink no-underline hover:text-ui-accent">{title}</a>
   </h2>
-  {standfirst && <p class="type-body mt-1 max-w-note text-sm text-ink-secondary">{standfirst}</p>}
+  {standfirst && <p class="type-body mt-1 text-sm text-ink-secondary">{standfirst}</p>}
   <div class="mt-4">
     <slot />
   </div>

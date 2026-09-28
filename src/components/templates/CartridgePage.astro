@@ -89,7 +89,7 @@ const jsonLd = entryArticle({
       </p>
       {
         cartridge.aliases.length > 0 && (
-          <p class="type-data mt-2 max-w-note text-sm text-ink-muted">
+          <p class="type-data mt-2 text-sm text-ink-muted">
             Also known as {cartridge.aliases.map((a) => a.name).join(', ')} — the same cartridge
             under different names, all of which find this page.
           </p>
@@ -97,7 +97,7 @@ const jsonLd = entryArticle({
       }
     </header>
 
-    <div class="prose type-body mt-6 max-w-lede text-lg text-ink-secondary">
+    <div class="prose type-body mt-6 text-lg text-ink-secondary">
       <slot name="lede" />
     </div>
 
@@ -112,7 +112,7 @@ const jsonLd = entryArticle({
         groupOrder={CARTRIDGE_GROUP_ORDER}
         idPrefix={`spec-${cartridge.id}`}
       />
-      <p class="type-data mt-3 max-w-note text-xs text-ink-muted">
+      <p class="type-data mt-3 text-xs text-ink-muted">
         SAAMI and C.I.P. measure pressure differently and their figures are not interchangeable,
         which is why the body is always named beside the figure.
       </p>
@@ -224,20 +224,15 @@ const jsonLd = entryArticle({
     }
 
     {/*
-      Narrative and bibliography share one row on a wide screen. The layout is
-      75rem and a reading column is 41rem of it; stretching the prose to fill
-      the rest would put 180 characters on a line, and leaving the rest empty
-      is what made the page look broken. So the prose column IS the measure,
-      and the references take every remaining pixel — they are the thing a
-      reader most often wants next while reading a sourced claim, and long
-      titles and publishers genuinely use the width. Below 1024px the two
-      stack in the order they always had.
+      The prose and what belongs with it (references, the record) stack at
+      full width. Side by side, whichever was shorter left an empty column
+      beside the other, and the prose wrapped at half the page.
     */}
     <div
-      class="mt-(--layout-section-gap) grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,var(--measure-readable))_minmax(0,1fr)] lg:items-start"
+      class="mt-(--layout-section-gap) flex flex-col gap-(--layout-section-gap)"
     >
     <Section id="detail" title="Detail" flush>
-      <div class="prose type-body max-w-readable text-ink-secondary">
+      <div class="prose type-body text-ink-secondary">
         <slot />
       </div>
     </Section>

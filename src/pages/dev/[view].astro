@@ -186,12 +186,12 @@ const HEADING = 'type-heading mt-10 text-xs uppercase tracking-[0.2em] text-ink-
               <p class="type-stat text-stat">715 m/s</p>
               <p class="type-title text-2xl">Type 56 — licensed production</p>
               <p class="type-heading text-lg">Specifications</p>
-              <p class="type-body max-w-readable text-base text-ink-secondary">
+              <p class="type-body text-base text-ink-secondary">
                 Body register at the readable measure (76ch). The line length is capped so the
                 paragraph stays in the comfortable band rather than running the full width of a
                 reference layout.
               </p>
-              <p class="type-body max-w-lede text-lg text-ink-secondary">
+              <p class="type-body text-lg text-ink-secondary">
                 Lede register at the wider measure (92ch), for the paragraph directly under a page
                 title — read once, at a glance.
               </p>
@@ -236,7 +236,7 @@ const HEADING = 'type-heading mt-10 text-xs uppercase tracking-[0.2em] text-ink-
                 class="rounded border border-line-strong bg-surface-1 p-4 text-ink shadow-lg"
               >
                 <p class="type-heading text-sm">Centred, with zero JavaScript.</p>
-                <p class="type-data mt-1 max-w-note text-xs text-ink-muted">
+                <p class="type-data mt-1 text-xs text-ink-muted">
                   Tailwind preflight resets margin to 0, which parks an open popover in the
                   top-left corner. The base layer restates margin: auto.
                 </p>
@@ -244,12 +244,10 @@ const HEADING = 'type-heading mt-10 text-xs uppercase tracking-[0.2em] text-ink-
             </div>
 
             <h2 class={HEADING}>Layout tokens</h2>
-            <dl class="type-data mt-3 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-xs text-ink-secondary">
+            <dl class="type-data mt-3 grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 gap-y-1 text-xs text-ink-secondary">
               <dt>--layout-gutter</dt><dd data-value="--layout-gutter" class="text-ink-muted" />
               <dt>--layout-max</dt><dd data-value="--layout-max" class="text-ink-muted" />
               <dt>--layout-section-gap</dt><dd data-value="--layout-section-gap" class="text-ink-muted" />
-              <dt>--measure-readable</dt><dd data-value="--measure-readable" class="text-ink-muted" />
-              <dt>--measure-lede</dt><dd data-value="--measure-lede" class="text-ink-muted" />
               <dt>--spacing</dt><dd data-value="--spacing" class="text-ink-muted" />
               <dt>--ease-out-strong</dt><dd data-value="--ease-out-strong" class="text-ink-muted" />
               <dt>--ease-in-out-strong</dt><dd data-value="--ease-in-out-strong" class="text-ink-muted" />

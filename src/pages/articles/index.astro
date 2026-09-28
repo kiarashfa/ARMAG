@@ -33,7 +33,7 @@ const jsonLd = itemList(
       articles.length === 0 ? (
         <p class="type-data mt-8 text-sm text-ink-muted">No articles published yet.</p>
       ) : (
-        <ul class="mt-8 flex max-w-readable flex-col gap-6">
+        <ul class="mt-8 flex flex-col gap-6">
           {articles.map((article) => (
             <li>
               <h2 class="type-title text-lg">

@@ -157,7 +157,7 @@ const jsonLd = entryArticle({
     />
 
     {/* ── Hero ─────────────────────────────────────────────────────────── */}
-    <header class="mt-4 grid gap-6 lg:grid-cols-[1fr_minmax(0,28rem)] lg:items-end">
+    <header class="mt-4 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-end">
       <div>
         <TypeBadge type={gun.type ?? null} />
         <h1 class="type-display mt-3 text-display text-ink">{gun.name}</h1>
@@ -234,7 +234,7 @@ const jsonLd = entryArticle({
     }
 
     {/* ── Lede ─────────────────────────────────────────────────────────── */}
-    <div class="prose type-body mt-8 max-w-lede text-lg text-ink-secondary">
+    <div class="prose type-body mt-8 text-lg text-ink-secondary">
       <slot name="lede" />
     </div>
 
@@ -292,7 +292,7 @@ const jsonLd = entryArticle({
                       </p>
                     )}
                     {variant.summary && (
-                      <p class="type-body mt-2 max-w-note text-sm text-ink-secondary">
+                      <p class="type-body mt-2 text-sm text-ink-secondary">
                         {variant.summary}
                       </p>
                     )}
@@ -483,20 +483,15 @@ const jsonLd = entryArticle({
     }
 
     {/*
-      ── Narrative body and bibliography, one row on a wide screen ─────────
-      The layout is 75rem and a reading column is 41rem of it. Stretching the
-      prose to fill the rest would put 180 characters on a line; leaving the
-      rest empty is what made the page look broken. So the prose column IS the
-      measure and the references take every remaining pixel — the thing a
-      reader most often wants next while reading a sourced claim, and long
-      titles and publishers genuinely use the width. Below 1024px the two
-      stack in the order they always had.
+      The prose and what belongs with it (references, the record) stack at
+      full width. Side by side, whichever was shorter left an empty column
+      beside the other, and the prose wrapped at half the page.
     */}
     <div
-      class="mt-(--layout-section-gap) grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,var(--measure-readable))_minmax(0,1fr)] lg:items-start"
+      class="mt-(--layout-section-gap) flex flex-col gap-(--layout-section-gap)"
     >
     <Section id="detail" title="Detail" flush>
-      <div class="prose type-body max-w-readable text-ink-secondary">
+      <div class="prose type-body text-ink-secondary">
         <slot />
       </div>
     </Section>

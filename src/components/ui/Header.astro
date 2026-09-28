@@ -40,7 +40,7 @@ const current = Astro.url.pathname;
 const isCurrent = (path: string) => path !== href() && current.startsWith(path);
 
 /*
- * Two control shapes, shared by all four sites: a 36px circle for a
+ * Two control shapes: a 36px circle for a
  * control that is only an icon, and a pill of the same height for one that
  * also carries a word. On a phone the pill drops its word and becomes the
  * circle, so the row never changes height.
@@ -83,7 +83,7 @@ const pillControl =
     </nav>
 
     {/*
-      The controls, in the order all four sites use: this site's own
+      The controls, always in this order: this site's own
       (compare, units), then search, theme, about.
     */}
     <div class="ml-auto flex items-center gap-1.5 sm:gap-2">

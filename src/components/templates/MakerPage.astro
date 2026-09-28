@@ -73,7 +73,7 @@ const jsonLd = [
   <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Makers', path: href('makers') }, { label: maker.name }]} />
 
-    <header class="mt-4 grid gap-6 lg:grid-cols-[1fr_minmax(0,18rem)] lg:items-start">
+    <header class="mt-4 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,18rem)] lg:items-start">
       <div>
         {/*
           The wordmark sits beside the name rather than in a card off to the
@@ -112,14 +112,14 @@ const jsonLd = [
 
     </header>
 
-    <div class="prose type-body mt-6 max-w-lede text-lg text-ink-secondary">
+    <div class="prose type-body mt-6 text-lg text-ink-secondary">
       <slot name="lede" />
     </div>
 
     {
       (maker.parentCompany || maker.successorOf || maker.predecessorOf) && (
         <Section id="corporate" title="Corporate lineage">
-          <dl class="max-w-readable rounded-lg border border-line bg-surface-1 p-4">
+          <dl class="rounded-lg border border-line bg-surface-1 p-4">
             {(
               [
                 ['Parent company', maker.parentCompany],
@@ -128,7 +128,7 @@ const jsonLd = [
               ] as const
             ).map(([label, id]) =>
               id ? (
-                <div class="grid grid-cols-[minmax(0,11rem)_1fr] gap-x-4 border-b border-line py-2 last:border-b-0">
+                <div class="grid grid-cols-[minmax(0,min(11rem,42%))_minmax(0,1fr)] gap-x-4 border-b border-line py-2 last:border-b-0">
                   <dt class="type-data text-sm text-ink-secondary">{label}</dt>
                   <dd class="type-data text-sm">
                     <a href={makerHref(id)} class="text-ui-accent">
@@ -139,7 +139,7 @@ const jsonLd = [
               ) : null,
             )}
           </dl>
-          <p class="type-data mt-2 max-w-note text-xs text-ink-muted">
+          <p class="type-data mt-2 text-xs text-ink-muted">
             A rename is not a new company, and an arm made in 1974 was made by whoever existed in
             1974. Both names get a page, and the link runs between them.
           </p>
@@ -174,26 +174,21 @@ const jsonLd = [
     </Section>
 
     {/*
-      Narrative and bibliography share one row on a wide screen. The layout is
-      75rem and a reading column is 41rem of it; stretching the prose to fill
-      the rest would put 180 characters on a line, and leaving the rest empty
-      is what made the page look broken. So the prose column IS the measure,
-      and the references take every remaining pixel — they are the thing a
-      reader most often wants next while reading a sourced claim, and long
-      titles and publishers genuinely use the width. Below 1024px the two
-      stack in the order they always had.
+      The prose and what belongs with it (references, the record) stack at
+      full width. Side by side, whichever was shorter left an empty column
+      beside the other, and the prose wrapped at half the page.
     */}
     <div
-      class="mt-(--layout-section-gap) grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,var(--measure-readable))_minmax(0,1fr)] lg:items-start"
+      class="mt-(--layout-section-gap) flex flex-col gap-(--layout-section-gap)"
     >
     <Section id="detail" title="Detail" flush>
-      <div class="prose type-body max-w-readable text-ink-secondary">
+      <div class="prose type-body text-ink-secondary">
         <slot />
       </div>
     </Section>
 
     <Section id="facts" title="Record" flush>
-      <dl class="max-w-readable rounded-lg border border-line bg-surface-1 p-4">
+      <dl class="rounded-lg border border-line bg-surface-1 p-4">
         <SpecRow label="Country" text={countryLabel} />
         <SpecRow label="Founded" text={maker.founded ? String(maker.founded) : 'not recorded'} />
         <SpecRow label="Dissolved" text={maker.dissolved ? String(maker.dissolved) : 'still trading'} />

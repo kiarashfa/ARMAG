@@ -32,7 +32,7 @@ const jsonLd = itemList(
   <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
     <Breadcrumbs crumbs={[{ label: 'Glossary' }]} />
     <h1 class="type-display mt-4 text-display text-ink">Glossary</h1>
-    <p class="type-body mt-3 max-w-lede text-lg text-ink-secondary">
+    <p class="type-body mt-3 text-lg text-ink-secondary">
       Definitions here are technical rather than colloquial. Where a term is argued over, the entry
       states the definition it uses and why, instead of picking a side quietly.
     </p>
@@ -41,7 +41,7 @@ const jsonLd = itemList(
       terms.length === 0 ? (
         <p class="type-data mt-8 text-sm text-ink-muted">No terms authored yet.</p>
       ) : (
-        <dl class="mt-8 max-w-readable">
+        <dl class="mt-8">
           {terms.map((entry) => (
             <div class="border-b border-line py-3">
               <dt class="type-heading text-base">

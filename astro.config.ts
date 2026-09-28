@@ -9,12 +9,13 @@ import svelte from '@astrojs/svelte';
 import tailwindcss from '@tailwindcss/vite';
 
 import integrity from './src/integrations/integrity.ts';
+import responsiveImages from './src/integrations/responsive-images.ts';
 import { aliasRedirects } from './src/integrations/alias-redirects.ts';
 import rehypeCrosslink from './src/integrations/rehype-crosslink.ts';
 import rehypeGlossary from './src/integrations/rehype-glossary.ts';
 
 /**
- * SPEC.md §6 — while the site lives on the github.io subdomain, `site` is the
+ * While the site lives on the github.io subdomain, `site` is the
  * user domain and `base` is the repository name.
  *
  * `BASE` must match the repository name character for character: GitHub Pages
@@ -29,7 +30,7 @@ export const SITE = 'https://kiarashfa.github.io';
 export const BASE = '/ARMAG';
 
 /**
- * Paths kept out of the sitemap — SPEC.md §12.
+ * Paths kept out of the sitemap.
  *
  * `/armory/` carries the visitor's own state. It is `noindex` in the document
  * head and it is **not** disallowed in `robots.txt`, which is the whole point:
@@ -45,7 +46,7 @@ export const NOINDEX_PATHS = ['/armory/'];
 const CONTENT_ROOT = fileURLToPath(new URL('./src/content', import.meta.url));
 
 /**
- * SPEC.md §6 — every alias an entry declares becomes a static redirect to the
+ * Every alias an entry declares becomes a static redirect to the
  * canonical URL, so a guessed or linked "/guns/m9/" lands somewhere instead of
  * 404ing, and no second page claims to be the entry. See
  * `alias-redirects.ts` for the three rules that decide which aliases qualify.
@@ -56,24 +57,25 @@ const ALIAS_REDIRECTS = aliasRedirects(CONTENT_ROOT, BASE);
 export default defineConfig({
   site: SITE,
   base: BASE,
-  // SPEC.md §6/§12 — canonical URLs always end in a slash.
+  // Canonical URLs always end in a slash.
   trailingSlash: 'always',
   redirects: ALIAS_REDIRECTS,
   // GitHub Pages cannot run a server; static is the only valid output.
   output: 'static',
   integrations: [
-    // `integrity` first: SPEC.md §13 wants the build to stop on bad content
-    // before anything else has spent time on it.
+    // `integrity` first: the build must stop on bad content before anything
+    // else has spent time on it.
     integrity(),
     mdx(),
     svelte(),
     sitemap({
       filter: (page) => !NOINDEX_PATHS.some((path) => new URL(page).pathname === `${BASE}${path}`),
     }),
+    responsiveImages(),
   ],
   markdown: {
     /**
-     * SPEC.md §12 and §5.6 — internal link density with no manual upkeep.
+     * Internal link density with no manual upkeep.
      * Both plugins derive their vocabulary from the content files rather than
      * from anything typed, so the links survive a rename.
      *
@@ -95,7 +97,7 @@ export default defineConfig({
     }),
   },
   vite: {
-    // Tailwind v4 is a Vite plugin, not an Astro integration (SPEC.md §3).
+    // Tailwind v4 is a Vite plugin, not an Astro integration.
     plugins: [tailwindcss()],
   },
 });

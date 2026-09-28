@@ -51,7 +51,7 @@ test('the two sections are kept apart — the same letter means two things', () 
   assert.equal(sheet.chamber.P1.value, 9.96);
 });
 
-test('the cartridge block reproduces the hand transcription of the pilot batch', () => {
+test('the cartridge block reproduces the hand transcription of the first entries', () => {
   const sheet = parseDatasheet(SHEET);
   const expected: Record<string, number> = {
     caseLength: 19.15,

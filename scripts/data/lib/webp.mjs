@@ -98,9 +98,9 @@ export async function writeSheet(tiles, destination) {
  * Encodes `bytes` to WebP at `destination`, under that filename's caps.
  *
  * Returns the **measured** width, height and byte size of the file actually
- * written. Never the requested ones: Markey's whole first batch of image
- * dimensions was wrong because they were computed from the request rather than
- * read back from the file, and a `width` nobody measured is not a measurement
+ * written. Never the requested ones: dimensions computed from the request rather than
+ * read back from the file are wrong whenever the encoder resizes, and a `width`
+ * nobody measured is not a measurement
  * (the same sentence is in `check:assets`).
  */
 export async function encodeToWebp(bytes, destination, { overwrite = false } = {}) {

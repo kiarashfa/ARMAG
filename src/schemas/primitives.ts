@@ -35,11 +35,11 @@ export const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'must be an ISO d
 /**
  * A key into the entry's OWN `references[]`.
  *
- * There is deliberately no site-wide bibliography file. Markey used one and it
- * is a merge-conflict machine the moment more than one author runs at once,
- * with the author who loses the race losing their citations silently. Per-entry
- * bibliographies are what make parallel authoring possible at all, and the
- * standing rule follows from it: an agent touches only files named after its
+ * There is deliberately no site-wide bibliography file. A shared one is a
+ * merge-conflict machine the moment two entries are written at once, and the
+ * write that loses the race loses its citations silently. Per-entry
+ * bibliographies avoid that, and the standing rule follows from it: an entry's
+ * edits touch only files named after its
  * own slug.
  *
  * Resolution is a cross-field concern Zod cannot see from inside one
@@ -129,11 +129,9 @@ interface PropertyValueShape {
 /**
  * Hedge language that disqualifies a `verified` claim.
  *
- * This is the highest-value check on the site. In Markey's own model benchmark
- * four of five models finished a car entry and *all four passed content checks
- * while inventing at least one figure* — and the tell was always the same: a
- * `verified` status with a note quietly admitting the number came from
- * somewhere else. "Verified, same as the 9mm version" is not verification, it
+ * This is the highest-value check on the site. An invented figure can pass
+ * every other content check, and the tell is usually the same: a `verified`
+ * status with a note quietly admitting the number came from somewhere else. "Verified, same as the 9mm version" is not verification, it
  * is an assumption wearing verification's badge.
  *
  * Enforced here as well as in the integrity walker so it fires in the editor,

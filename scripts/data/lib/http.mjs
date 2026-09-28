@@ -1,8 +1,7 @@
 /**
  * The one place the authoring pipeline talks to the network.
  *
- * Ported from Markey's `scripts/data/lib/http.mjs`, which learned all three of
- * these the hard way:
+ * Three things it must get right:
  *
  *  - **Wikimedia rate-limits.** Consecutive image downloads return HTTP 429
  *    even with a proper User-Agent. A per-host delay and a backoff are not
@@ -13,7 +12,7 @@
  *    figure, and a missing figure that should have been sourced is exactly the
  *    quiet wrongness the design exists to prevent.
  *
- * ARMAG additions over Markey's copy, both from the Phase 8 friction log:
+ * Two site-specific additions:
  *  - `bobp.cip-bobp.org` is a small volunteer-run site serving one-page PDFs.
  *    It gets a deliberately slow delay; we are transcribing a dozen numbers,
  *    not mirroring their database (the governing rule).

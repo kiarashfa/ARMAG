@@ -20,7 +20,7 @@
   },
 
   "completeness": {
-    "note": "tier is COMPUTED from this score, never asserted by an author. Only `verified` values count: an estimated figure contributes nothing, so estimating your way to a full page produces a Tier 3 entry covered in amber badges. Inventing numbers buys nothing. Weights are provisional until the pilot batch.",
+    "note": "tier is COMPUTED from this score, never asserted by an author. Only `verified` values count: an estimated figure contributes nothing, so estimating your way to a full page produces a Tier 3 entry covered in amber badges. Inventing numbers buys nothing. Weights are provisional until the first entries.",
     "weights": {
       "verifiedCoreSpec": 6,
       "verifiedExtendedSpec": 2,

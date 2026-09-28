@@ -1,23 +1,12 @@
 /**
- * The reading-measure invariants.
+ * The reading-measure invariant.
  *
- * ── The bug this file exists to stop coming back ──────────────────────────
- * The measures were authored in `ch`. `ch` is the width of the "0" glyph in
- * the ELEMENT'S OWN font, so one class produced three different widths on the
- * same page: `max-w-readable` measured 655px on a 16px paragraph, 574px on a
- * 14px one, and 492px on a 12px caption. The footer disclaimer is set at 12px,
- * so its "92ch" lede resolved to 570px and stopped at 40% of a 1440px page,
- * which looked exactly like a broken layout because it was one.
- *
- * Two rules follow, and both are checked here rather than left to review:
- *
- *  1. **The measures are font-size independent.** Anchored to the root font
- *     size, so a measure is a statement about the reading column rather than
- *     about whatever type size happens to sit in it.
- *  2. **A measure only goes on body-size prose.** A caption at `text-xs` does
- *     not need a reading measure — it needs to fit its container — and pairing
- *     the two is what made the bug visible in the first place. The pairing is
- *     banned outright so the question never has to be argued case by case.
+ * **Text is never capped more tightly than its column.** Prose used to carry
+ *     width classes (`max-w-readable`, `max-w-lede`, `max-w-note`) that stopped
+ *     paragraphs at 34 to 50rem inside a 75rem frame, so page after page showed
+ *     text wrapping at half width beside empty space. The frame and the layout's
+ *     columns bound a line; nothing else may. This test fails if a prose cap
+ *     comes back.
  */
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync, statSync } from 'node:fs';
@@ -26,12 +15,9 @@ import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 const SRC = fileURLToPath(new URL('..', import.meta.url));
-const CSS = readFileSync(new URL('./global.css', import.meta.url), 'utf8');
 
-const MEASURE_CLASSES = ['max-w-readable', 'max-w-lede'];
-
-/** Type sizes smaller than the body register. */
-const SMALL_TEXT = ['text-xs', 'text-sm'];
+/** Width caps on prose, in any spelling: the named classes or an arbitrary rem/ch width. */
+const PROSE_CAP = /\bmax-w-(?:readable|lede|note|prose|\[\d+(?:\.\d+)?(?:rem|ch)\])(?![\w-])/;
 
 function walk(dir) {
   const out = [];
@@ -43,43 +29,22 @@ function walk(dir) {
   return out;
 }
 
-test('the measures are anchored to the root font size, never to the element', () => {
-  for (const token of ['--measure-readable', '--measure-lede']) {
-    const match = new RegExp(`${token}:\\s*([^;]+);`).exec(CSS);
-    assert.ok(match, `${token} is not defined in global.css`);
-    const value = match[1].trim();
-    assert.match(
-      value,
-      /^\d+(\.\d+)?rem$/,
-      `${token} is "${value}". A measure in ch, em or % re-resolves against the element's own font size, ` +
-        'which is how one class came to mean three different widths on one page.',
-    );
-  }
-});
-
-test('no element carries a reading measure and a small type size at once', () => {
+test('no paragraph is capped narrower than the column it sits in', () => {
   const offenders = [];
-
   for (const file of walk(SRC)) {
+    const rel = path.relative(SRC, file).split(path.sep).join('/');
+    if (rel.startsWith('pages/dev/')) continue;
     const source = readFileSync(file, 'utf8');
-    // Every class list in the file, however it is written: class="...",
-    // class={`...`} and Svelte's class={...} all put the names in quotes or
-    // backticks, so the attribute value is what gets scanned.
+    // The 404 is centred: a centred block has no one-sided empty space.
+    if (rel === 'pages/404.astro') continue;
     for (const [, list] of source.matchAll(/class[:=]\s*\{?["'`]([^"'`]*)["'`]/g)) {
-      const classes = list.split(/\s+/);
-      const measure = MEASURE_CLASSES.find((name) => classes.includes(name));
-      const small = SMALL_TEXT.find((name) => classes.includes(name));
-      if (measure && small) {
-        offenders.push(`${path.relative(SRC, file).split(path.sep).join('/')}: ${measure} + ${small}`);
-      }
+      const hit = list.match(PROSE_CAP);
+      if (hit) offenders.push(`${rel}: ${hit[0]}`);
     }
   }
-
   assert.deepEqual(
     offenders,
     [],
-    'A reading measure belongs on body-size prose only. Small text should be bounded by its ' +
-      'container or by an explicit width, not by a measure meant for paragraphs:\n  ' +
-      offenders.join('\n  '),
+    'Text fills its column; a width cap on prose left paragraphs at half the page:\n  ' + offenders.join('\n  '),
   );
 });

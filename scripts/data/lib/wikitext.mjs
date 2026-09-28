@@ -1,9 +1,8 @@
 /**
  * Wikitext parsing for the authoring pipeline.
  *
- * Ported from Markey's `lib/wikitext.mjs`. The template machinery
- * (`splitTopLevel`, `parseConvert`, `fieldValues`, `parseLocalisedNumber`) is
- * domain-neutral and shipped, so it is kept verbatim; what changed for ARMAG is
+ * The template machinery (`splitTopLevel`, `parseConvert`, `fieldValues`,
+ * `parseLocalisedNumber`) is domain-neutral; what is specific to this site is
  * the unit table, the glossary, the infobox selector, and one addition.
  *
  * **The addition is `fieldReferences()`, and it is the point of this file.**
@@ -294,7 +293,7 @@ export function plain(text) {
  * Splits a field into the separate values it actually holds.
  *
  * `{{ubl}}`, `{{unbulleted list}}`, `{{plainlist}}` and bare `<br />` all mean
- * "this field has several values". Every arm in the pilot batch used at least
+ * "this field has several values". Every arm in the first entries used at least
  * one of them; the AK-47 uses `<br />` for four different overall lengths.
  */
 export function fieldValues(raw) {

@@ -38,14 +38,16 @@
   const { src, gunPrefix, vocab, staticCount }: Props = $props();
 
   const AXES: { key: AxisKey; label: string; param: string; multi: boolean }[] = [
-    { key: 'type', label: 'Type', param: 'type', multi: false },
+    // Multiple choice where comparing makes sense ("pistols or revolvers");
+    // one mechanism at a time for action and operating system.
+    { key: 'type', label: 'Type', param: 'type', multi: true },
     { key: 'action', label: 'Action', param: 'action', multi: false },
     { key: 'operatingSystem', label: 'Operating system', param: 'os', multi: false },
     { key: 'feed', label: 'Feed', param: 'feed', multi: true },
     { key: 'role', label: 'Role', param: 'role', multi: true },
-    { key: 'country', label: 'Country', param: 'country', multi: false },
-    { key: 'era', label: 'Era', param: 'era', multi: false },
-  ];
+    { key: 'country', label: 'Country', param: 'country', multi: true },
+    { key: 'era', label: 'Era', param: 'era', multi: true },
+  ].sort((a, b) => a.label.localeCompare(b.label)); // menus in alphabetical order, like their options
 
   const SORTS = [
     { key: 'name', label: 'Name' },
@@ -105,6 +107,9 @@
     if (dirParam === 'asc' || dirParam === 'desc') direction = dirParam;
     const viewParam = params.get('view');
     if (viewParam === 'table' || viewParam === 'cards') view = viewParam;
+    // With no view in the address, a phone opens on cards: the table's eight
+    // columns only fit a phone by scrolling sideways.
+    else if (window.matchMedia('(max-width: 40rem)').matches) view = 'cards';
   }
 
   function writeUrl() {
@@ -284,15 +289,15 @@
     One row: search, sort, direction and view. The facet menus follow on the
     next row, each carrying its own count, so no state is ever hidden.
   -->
-  <div class="flex flex-wrap items-center gap-2">
-    <label class="min-w-56 flex-1">
+  <div class="relative z-20 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 sm:flex sm:flex-wrap">
+    <label class="col-span-2 min-w-0 sm:min-w-56 sm:flex-1">
       <span class="sr-only">Filter by name or alias</span>
       <input
         type="search"
         bind:value={query}
         oninput={() => (limit = PAGE)}
         placeholder="Search names and aliases…"
-        class="type-data w-full rounded border border-line-strong bg-surface-1 px-3 py-2 text-sm text-ink"
+        class="type-data h-10 w-full rounded border border-line-strong bg-surface-1 px-3 text-sm text-ink"
       />
     </label>
 
@@ -301,7 +306,7 @@
       <span class="sr-only">Sort by</span>
       <select
         bind:value={sort}
-        class="type-data rounded border border-line-strong bg-surface-1 px-3 py-2 text-sm text-ink"
+        class="type-data h-10 w-full rounded border border-line-strong bg-surface-1 px-3 text-sm text-ink"
       >
         {#each SORTS as option (option.key)}
           <option value={option.key}>Sort: {option.label}</option>
@@ -313,19 +318,19 @@
     <button
       type="button"
       onclick={() => (direction = direction === 'asc' ? 'desc' : 'asc')}
-      class="type-data shrink-0 rounded border border-line-strong bg-surface-1 px-3 py-2 text-sm text-ink"
+      class="type-data h-10 shrink-0 rounded border border-line-strong bg-surface-1 px-4 text-sm text-ink"
       aria-label={`Sort direction: ${direction === 'asc' ? 'ascending' : 'descending'}`}
     >
       {direction === 'asc' ? '↑' : '↓'}
     </button>
 
-    <div class="flex shrink-0 overflow-hidden rounded border border-line-strong">
+    <div class="col-span-2 flex h-10 shrink-0 overflow-hidden rounded border border-line-strong sm:col-span-1">
       {#each ['table', 'cards'] as const as option (option)}
         <button
           type="button"
           onclick={() => (view = option)}
           aria-pressed={view === option}
-          class={`type-data px-3 py-2 text-sm ${
+          class={`type-data flex-1 px-3 text-sm ${
             view === option ? 'bg-surface-2 text-ink' : 'bg-surface-1 text-ink-secondary'
           }`}
         >
@@ -336,10 +341,11 @@
   </div>
 
   <!-- ── The facet menus ─────────────────────────────────────────────── -->
-  <div class="mt-3 flex flex-wrap items-center gap-2 max-sm:relative">
+  <div class="relative z-10 mt-2 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center max-sm:[&>*:last-child:nth-child(odd)]:col-span-2">
     {#each AXES as axis (axis.key)}
       {#if facets[axis.key].length > 1 || selected[axis.key].length > 0}
         <FacetMenu
+          fill
           label={axis.label}
           terms={facets[axis.key]}
           selected={selected[axis.key]}
@@ -456,8 +462,8 @@
               {[row.makerName, row.year].filter(Boolean).join(' · ') || '—'}
             </p>
             <dl class="type-data mt-2 grid grid-cols-3 gap-1 text-xs text-ink-secondary">
-              <div><dt class="text-ink-muted">Mass</dt><dd>{fmt(row.massKg, 3)}</dd></div>
-              <div><dt class="text-ink-muted">Barrel</dt><dd>{fmt(row.barrelMm, 0)}</dd></div>
+              <div><dt class="text-ink-muted">Mass</dt><dd>{fmt(row.massKg, 3, " kg")}</dd></div>
+              <div><dt class="text-ink-muted">Barrel</dt><dd>{fmt(row.barrelMm, 0, " mm")}</dd></div>
               <div><dt class="text-ink-muted">Rounds</dt><dd>{fmt(row.capacity, 0)}</dd></div>
             </dl>
           </li>

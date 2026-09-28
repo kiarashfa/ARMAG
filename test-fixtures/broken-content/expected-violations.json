@@ -99,7 +99,7 @@
       "rules": [
         "trust/assumed-but-verified"
       ],
-      "why": "the design, the highest-value check on the site. In the Markey model benchmark four of five models passed content checks while inventing at least one figure, and the tell was always a hedging note behind a 'verified' badge"
+      "why": "the highest-value check on the site: an invented figure that passes every other check usually gives itself away as a hedging note behind a 'verified' badge"
     },
     {
       "file": "test-fixtures/broken-content/content/gunData/assumed-but-verified.json",

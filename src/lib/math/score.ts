@@ -9,7 +9,7 @@
  * is precisely the outcome that makes it not worth doing.
  *
  * The formula is public on `/methodology/`, and the weights live in
- * `src/data/thresholds.json` so tuning them after the pilot batch is a
+ * `src/data/thresholds.json` so tuning them after the first entries is a
  * one-line change with no code to edit.
  *
  * Pure. No DOM, no I/O, no framework import.

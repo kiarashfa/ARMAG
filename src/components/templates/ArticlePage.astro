@@ -2,10 +2,7 @@
 /**
  * An editorial article — the magazine half of ARMAG.
  *
- * Long-form, each one linking twenty or more entries. The prose column is
- * narrower than a reference page's because this is text somebody reads several
- * paragraphs of rather than scans — `max-w-readable` is 76ch for exactly that
- * reason.
+ * Long-form, each one linking twenty or more entries.
  */
 import BaseLayout from '../ui/BaseLayout.astro';
 import Breadcrumbs from '../blocks/Breadcrumbs.astro';
@@ -53,7 +50,7 @@ const jsonLd = entryArticle({
     <Breadcrumbs crumbs={[{ label: 'Articles', path: href('articles') }, { label: title }]} />
 
     <article class="mt-4">
-      <header class="max-w-lede">
+      <header class="">
         <h1 class="type-display text-display text-ink">{title}</h1>
         <p class="type-body mt-4 text-lg text-ink-secondary">{standfirst}</p>
         <p class="type-data mt-3 text-sm text-ink-muted">
@@ -78,7 +75,7 @@ const jsonLd = entryArticle({
         of being empty.
       */}
       <div
-        class="mt-8 grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,var(--measure-readable))_minmax(0,1fr)] lg:items-start"
+        class="mt-8 grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,1fr)_minmax(0,14rem)] lg:items-start"
       >
         <div class="prose type-body text-ink-secondary">
           <slot />

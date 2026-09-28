@@ -69,7 +69,7 @@
   --text-display--line-height: 1.02;
   --text-display--letter-spacing: -0.035em;
 
-  --text-stat: clamp(1.75rem, 1.25rem + 2.2vw, 2.75rem);
+  --text-stat: clamp(1.5rem, 0.9rem + 1.9vw, 2.75rem);
   --text-stat--line-height: 1.05;
   --text-stat--letter-spacing: -0.02em;
 
@@ -247,60 +247,13 @@
  * shell and the prose containers.
  */
 :root {
-  /* The frame all four sites share: 75rem wide, a 20px-to-48px gutter. */
+  /* The frame: 75rem wide, a 20px-to-48px gutter. */
   --layout-gutter: clamp(1.25rem, 4vw, 3rem);
   --layout-max: 75rem;
   --layout-section-gap: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
 
-  /*
-   * Measure — how wide a line of text is allowed to get. Two settings,
-   * because the two jobs are different:
-   *
-   *  - `readable` (41rem ≈ 76 characters of body text) is for text someone
-   *    reads several paragraphs of: the top of the comfortable 60–80
-   *    character band rather than the middle, which is the concession a wide
-   *    reference layout earns.
-   *  - `lede` (50rem) is for the one or two paragraphs directly under a page
-   *    title. They are read once, at a glance, and setting them wider is what
-   *    makes the top of a page look deliberate at 1440px and above.
-   *
-   * Both clamp to 100%, so neither can overflow a narrow screen.
-   *
-   * ── Why rem and not ch ────────────────────────────────────────────────
-   * `ch` is the width of "0" in the ELEMENT'S OWN font, so one class produced
-   * three different widths on the same page: `max-w-readable` measured 655px
-   * on a 16px paragraph, 574px on a 14px one and 492px on a 12px caption. The
-   * footer disclaimer is set at 12px, so its "92ch" lede came out at 570px —
-   * a line that stopped at 40% of a 1440px page and looked like a broken
-   * layout, because it was one. A measure is a statement about the reading
-   * column, not about whatever type size happens to sit in it, so it is
-   * anchored to the root font size. `tokens.test.mjs` asserts the unit.
-   */
-  --measure-readable: 41rem;
-  --measure-lede: 50rem;
-
-  /*
-   * `note` is the third measure and it exists because the other two were
-   * being used for the wrong job. A caption, a standfirst or a one-line
-   * disclaimer is not a reading column — nobody reads four paragraphs of it —
-   * but it still should not run the full 75rem of the layout. Given its own
-   * token, small supporting text has an explicit width instead of borrowing a
-   * paragraph's and silently getting a different one at every type size.
-   */
-  --measure-note: 34rem;
 }
 
-@utility max-w-readable {
-  max-width: min(var(--measure-readable), 100%);
-}
-
-@utility max-w-lede {
-  max-width: min(var(--measure-lede), 100%);
-}
-
-@utility max-w-note {
-  max-width: min(var(--measure-note), 100%);
-}
 
 @layer base {
   html {
@@ -308,6 +261,26 @@
     background-color: var(--color-surface-0);
     color: var(--color-ink);
     -webkit-text-size-adjust: 100%;
+  }
+
+  /* A long URL or unbroken word breaks rather than overflowing its box. */
+  body {
+    overflow-wrap: break-word;
+  }
+
+  /* Scrolling lists inside the page (menus, drawers, pickers) get a thin
+     thumb with no track, instead of the boxed system scrollbar. */
+  :where(body *) {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-line-strong) transparent;
+  }
+
+  /*
+   * A fieldset's minimum width is its min-content width by default, so a long
+   * option list inside one refuses to shrink and pushes a phone page sideways.
+   */
+  fieldset {
+    min-inline-size: 0;
   }
 
   body {
@@ -558,7 +531,6 @@
   }
 
   .disclosure-panel {
-    max-width: min(var(--measure-readable), 100%);
     border-radius: 0.5rem;
     border: 1px solid var(--color-line-strong);
     background-color: var(--color-surface-1);
@@ -652,6 +624,29 @@
   .prose strong {
     color: var(--color-ink);
     font-weight: 600;
+  }
+
+  /* Section headings inside long prose (articles). Preflight resets headings to
+     body text, so without this an article's sections read as plain paragraphs. */
+  .prose > :where(h2, h3) {
+    font-family: var(--font-display);
+    font-stretch: 85%;
+    font-weight: 650;
+    color: var(--color-ink);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin-top: 2em;
+    scroll-margin-top: 5rem;
+  }
+  .prose > h2 {
+    font-size: 1.4rem;
+  }
+  .prose > h3 {
+    font-size: 1.15rem;
+  }
+  .prose > :where(h2, h3) + * {
+    margin-top: 0.6em;
   }
 
   /*

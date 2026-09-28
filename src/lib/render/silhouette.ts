@@ -5,8 +5,7 @@
  * outline exists — which today is everywhere — the shape is a **parametric
  * family per firearm type, fitted to that entry's real dimensions**, and it is
  * labelled *"representative outline — the dimensions are sourced, the shape is
- * not"*. Same discipline as Markey's wind-tunnel body: draw the thing, and say
- * exactly which parts of the drawing are claims.
+ * not"*. Draw the thing, and say exactly which parts of the drawing are claims.
  *
  * ── What is sourced and what is not, precisely ─────────────────────────────
  *  - **Overall length** is sourced, or there is no silhouette. It is the axis

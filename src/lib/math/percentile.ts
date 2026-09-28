@@ -88,7 +88,7 @@ export function describePercentile(
 /**
  * Exported because three places render a percentile and all three must spell
  * it the same way. The compare island printed `61th of all entries` until the
- * pilot batch put a real 61 on the page — a hard-coded suffix, and a label
+ * first entries put a real 61 on the page — a hard-coded suffix, and a label
  * that read as a rank rather than a percentile.
  */
 export function ordinal(n: number): string {

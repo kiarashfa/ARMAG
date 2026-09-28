@@ -13,6 +13,7 @@ import TypeBadge from '../components/blocks/TypeBadge.astro';
 import { buildCatalogue } from '../lib/content/catalogue.ts';
 import { getCartridges, getGuns, getMakers } from '../lib/content/entries.ts';
 import { assetUrl, gunHref, href, taxonomyHref } from '../lib/content/href.ts';
+import { srcsetFor } from '../lib/content/srcset.ts';
 import { weeklyPick } from '../lib/showcase.ts';
 import { types } from '../schemas/taxonomy.ts';
 
@@ -53,7 +54,7 @@ const doors = [
 >
   <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-10">
     <h1 class="type-display text-display text-ink">ARMAG</h1>
-    <p class="type-body mt-4 max-w-lede text-lg text-ink-secondary">
+    <p class="type-body mt-4 text-lg text-ink-secondary">
       A reference and magazine for firearms: one page per firearm, one per cartridge, one per
       manufacturer, joined by a lineage graph and driven by a real physics engine.{' '}
       <strong class="text-ink">
@@ -98,12 +99,18 @@ const doors = [
                   <span class="block aspect-[3/2] overflow-hidden bg-surface-2">
                     <img
                       src={assetUrl(entry.image.src)}
+                      srcset={srcsetFor(assetUrl(entry.image.src), entry.image.width)}
+                      sizes="(min-width: 64rem) 22rem, (min-width: 40rem) 45vw, 100vw"
                       alt={entry.image.alt}
                       width={entry.image.width}
                       height={entry.image.height}
                       loading="lazy"
                       decoding="async"
-                      class="size-full object-cover"
+                      class={
+                        (entry.image.width ?? 0) / (entry.image.height ?? 1) > 1.9
+                          ? 'size-full object-contain p-3'
+                          : 'size-full object-cover'
+                      }
                     />
                   </span>
                   <span class="flex flex-1 flex-col p-4">

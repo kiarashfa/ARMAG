@@ -24,9 +24,11 @@
     selected: string[];
     multi: boolean;
     onchange: (next: string[]) => void;
+    /** Stretch to fill the slot the toolbar gives it. */
+    fill?: boolean;
   }
 
-  const { label, terms, selected, multi, onchange }: Props = $props();
+  const { label, terms, selected, multi, onchange, fill = false }: Props = $props();
 
   const SEARCH_FROM = 10;
 
@@ -69,20 +71,20 @@
   });
 </script>
 
-<div class="relative max-sm:static" bind:this={root}>
+<div class={`relative max-sm:static ${fill ? 'min-w-0 sm:flex-1' : ''}`} bind:this={root}>
   <button
     type="button"
     bind:this={button}
     aria-expanded={open}
     aria-haspopup="true"
     onclick={() => (open ? close() : (open = true))}
-    class={`type-data inline-flex h-9 items-center gap-1.5 rounded-full border px-3.5 text-sm transition-colors ${
+    class={`type-data inline-flex h-10 items-center gap-1.5 rounded border px-3 text-sm transition-colors ${fill ? 'w-full justify-between' : ''} ${
       selected.length > 0
         ? 'border-ui-accent bg-surface-2 text-ink'
         : 'border-line-strong text-ink-secondary hover:bg-surface-2 hover:text-ink'
     }`}
   >
-    {label}
+    <span class="truncate">{label}</span>
     {#if selected.length > 0}
       <span class="rounded-full bg-ui-accent px-1.5 text-xs leading-[1.4] text-surface-0 tabular-nums">{selected.length}</span>
     {/if}

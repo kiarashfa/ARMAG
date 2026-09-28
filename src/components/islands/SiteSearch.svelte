@@ -154,7 +154,7 @@
     query = '';
     results = [];
   }}
-  class="w-full max-w-readable rounded-lg border border-line-strong bg-surface-1 p-0 text-ink backdrop:bg-black/60"
+  class="w-full rounded-lg border border-line-strong bg-surface-1 p-0 text-ink backdrop:bg-black/60"
 >
   <div class="flex items-center gap-2 border-b border-line p-3">
     <input
