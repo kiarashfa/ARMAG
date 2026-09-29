@@ -115,7 +115,7 @@
 {#snippet units(value: number | null, unit: string)}
   {@const formatted = fmt(value, unit)}
   {#if formatted === null}
-    <span class="text-ink-muted">—</span>
+    <span class="text-ink-muted">·</span>
   {:else if formatted.identical}
     <span class="tabular-nums">{formatted.metric}</span>
   {:else}
@@ -230,7 +230,7 @@
     {:else if solution?.launchAngleMrad === null}
       <p class="type-data rounded-lg border border-line bg-surface-1 p-6 text-sm text-status-conflicting">
         No barrel elevation puts this bullet on the line of sight at {zeroRangeM} m. That is a real
-        answer, not an error — the solver returns nothing rather than a projection.
+        answer, not an error: the solver returns nothing rather than a projection.
       </p>
     {:else}
       <div class="grid gap-4 rounded-lg border border-line bg-surface-1 p-4 sm:grid-cols-3">
@@ -327,7 +327,7 @@
       <p class="type-data mt-3 text-xs text-ink-muted">
         These are your numbers, not ours: nothing here is sourced, so nothing carries a status
         badge. For figures that are,
-        <a href={cartridgePrefix} class="text-ui-accent">open a cartridge</a> — its loads carry
+        <a href={cartridgePrefix} class="text-ui-accent">open a cartridge</a>: its loads carry
         sourced velocities per barrel length, which is where a real muzzle velocity comes from.
       </p>
     {/if}

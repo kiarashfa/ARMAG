@@ -2,7 +2,7 @@
 /**
  * The site's icon set — one file, one viewBox, one stroke weight.
  *
- * Inline SVG rather than an icon font or a sprite sheet: five icons is a few
+ * Inline SVG rather than an icon font or a sprite sheet: a handful of icons is a few
  * hundred bytes of markup, and a sprite would be a second request for
  * something that has to paint with the header. Every path is stroked in
  * `currentColor`, so an icon takes the colour of the control it sits in and
@@ -13,7 +13,7 @@
  * icon that announces itself beside a label reads the same thing twice.
  */
 interface Props {
-  name: 'search' | 'compare' | 'ruler' | 'sun' | 'moon' | 'info' | 'armory';
+  name: 'search' | 'close' | 'compare' | 'ruler' | 'sun' | 'moon' | 'info' | 'armory';
   class?: string;
 }
 
@@ -22,6 +22,7 @@ const { name, class: className = 'h-4 w-4' } = Astro.props;
 /** 24×24, stroked, round caps. Drawn to read at 16px. */
 const PATHS: Record<Props['name'], string> = {
   search: 'M10.5 3a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15ZM21 21l-5.2-5.2',
+  close: 'M6 6l12 12M18 6 6 18',
   // Two panels side by side with a divider: the shape of the compare table.
   compare: 'M4 5h6v14H4zM14 5h6v14h-6zM12 3v18',
   // A rule with its graduations — metric and imperial in one object.

@@ -12,6 +12,7 @@
 import { gunHref } from '../../lib/content/href.ts';
 import UnitValue from './UnitValue.astro';
 import type { CatalogueRow } from '../../lib/content/catalogue.ts';
+import { types } from '../../schemas/taxonomy.ts';
 
 interface Props {
   rows: CatalogueRow[];
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const { rows, total } = Astro.props;
+const typeLabel = (id: string | null) => types.terms.find((t) => t.id === id)?.label ?? id ?? '';
 ---
 
 <div class="catalogue-static mt-4">
@@ -31,21 +33,22 @@ const { rows, total } = Astro.props;
     ) : (
       <>
         <div class="overflow-x-auto">
-          <table class="type-data w-full min-w-[44rem] text-sm">
+          <table class="type-data w-full min-w-[52rem] text-sm">
             <caption class="type-data pb-2 text-left text-xs text-ink-muted">
               {rows.length === total
                 ? `All ${total} entries`
-                : `First ${rows.length} of ${total} entries — the rest load with the filters`}
+                : `First ${rows.length} of ${total} entries; the rest load with the filters`}
             </caption>
             <thead>
               <tr class="border-b border-line-strong text-left text-ink-muted">
                 <th scope="col" class="p-2">Name</th>
+                <th scope="col" class="p-2">Type</th>
                 <th scope="col" class="p-2">Maker</th>
                 <th scope="col" class="p-2">Cartridge</th>
-                <th scope="col" class="p-2 text-right">Introduced</th>
-                <th scope="col" class="p-2 text-right">Mass</th>
-                <th scope="col" class="p-2 text-right">Barrel</th>
-                <th scope="col" class="p-2 text-right">Capacity</th>
+                <th scope="col" class="whitespace-nowrap p-2 text-right">Introduced</th>
+                <th scope="col" class="whitespace-nowrap p-2 text-right">Mass</th>
+                <th scope="col" class="whitespace-nowrap p-2 text-right">Barrel</th>
+                <th scope="col" class="whitespace-nowrap p-2 text-right">Capacity</th>
               </tr>
             </thead>
             <tbody>
@@ -63,17 +66,18 @@ const { rows, total } = Astro.props;
                       </>
                     )}
                   </th>
-                  <td class="p-2 text-ink-secondary">{row.makerName ?? '—'}</td>
-                  <td class="p-2 text-ink-secondary">{row.cartridgeName ?? '—'}</td>
-                  <td class="p-2 text-right text-ink-secondary">{row.year ?? '—'}</td>
-                  <td class="p-2 text-right text-ink-secondary">
-                    <UnitValue value={row.massKg} unit="kg" emptyLabel="—" />
+                  <td class="p-2 text-ink-secondary">{typeLabel(row.type)}</td>
+                  <td class="p-2 text-ink-secondary">{row.makerName ?? '·'}</td>
+                  <td class="p-2 text-ink-secondary">{row.cartridgeName ?? '·'}</td>
+                  <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{row.year ?? '·'}</td>
+                  <td class="whitespace-nowrap p-2 text-right text-ink-secondary">
+                    <UnitValue value={row.massKg} unit="kg" emptyLabel="·" />
                   </td>
-                  <td class="p-2 text-right text-ink-secondary">
-                    <UnitValue value={row.barrelMm} unit="mm" emptyLabel="—" />
+                  <td class="whitespace-nowrap p-2 text-right text-ink-secondary">
+                    <UnitValue value={row.barrelMm} unit="mm" emptyLabel="·" />
                   </td>
-                  <td class="p-2 text-right text-ink-secondary">
-                    <UnitValue value={row.capacity} unit="" emptyLabel="—" />
+                  <td class="whitespace-nowrap p-2 text-right text-ink-secondary">
+                    <UnitValue value={row.capacity} unit="" emptyLabel="·" />
                   </td>
                 </tr>
               ))}

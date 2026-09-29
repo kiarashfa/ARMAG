@@ -10,6 +10,10 @@
  * on a long page, and the per-entry actions moved into the entry itself
  * (`EntryActions.astro`), where the thing they act on is visible.
  *
+ * Search is the same: the search button grows into a field in the header
+ * itself, the section links making way for it, and the results drop below it,
+ * driven by one small module rather than an island.
+ *
  * The toggles are plain buttons with a few lines of inline script rather than
  * hydrated islands. A theme switch that needs 12 kB of framework to change one
  * attribute is a bad trade against the budget, and neither toggle has
@@ -20,16 +24,21 @@
  * pasted into the markup is the one that gets left behind when it changes.
  */
 import Icon from '../blocks/Icon.astro';
-import SiteSearch from '../islands/SiteSearch.svelte';
 import { compareHref, fileHref, href } from '../../lib/content/href.ts';
 
+/** What the site holds. */
 const browse = [
   { label: 'Firearms', path: href('guns') },
   { label: 'Cartridges', path: href('cartridges') },
   { label: 'Manufacturers', path: href('makers') },
-  { label: 'Glossary', path: href('glossary') },
+];
+
+/** What you can do with it, after a divider. */
+const tools = [
+  { label: 'Compare', path: compareHref([]) },
   { label: 'Tools', path: href('tools') },
   { label: 'Armory', path: href('armory') },
+  { label: 'Glossary', path: href('glossary') },
 ];
 
 /**
@@ -39,16 +48,26 @@ const browse = [
 const current = Astro.url.pathname;
 const isCurrent = (path: string) => path !== href() && current.startsWith(path);
 
-/*
- * Two control shapes: a 36px circle for a
- * control that is only an icon, and a pill of the same height for one that
- * also carries a word. On a phone the pill drops its word and becomes the
- * circle, so the row never changes height.
- */
+/** What each first path segment holds, for the label beside a search result. */
+const kinds = {
+  guns: 'Firearm',
+  cartridges: 'Cartridge',
+  makers: 'Manufacturer',
+  glossary: 'Glossary',
+  articles: 'Article',
+  tools: 'Tool',
+  type: 'Type',
+  action: 'Action',
+  country: 'Country',
+  era: 'Era',
+  feed: 'Feed',
+  role: 'Role',
+  'operating-system': 'Operating system',
+};
+
+/* The page controls: 32px icon-only circles, no taller than the links. */
 const iconControl =
-  'inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-line-strong text-ink-secondary no-underline transition-colors hover:bg-surface-2 hover:text-ink';
-const pillControl =
-  'type-data inline-flex h-9 shrink-0 items-center justify-center gap-1.5 rounded-full border border-line-strong text-sm text-ink-secondary no-underline transition-colors hover:bg-surface-2 hover:text-ink max-sm:w-9 sm:px-3';
+  'inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-line-strong text-ink-secondary no-underline transition-colors hover:bg-surface-2 hover:text-ink';
 ---
 
 <header
@@ -58,7 +77,7 @@ const pillControl =
   <div
     class="mx-auto flex max-w-(--layout-max) flex-wrap items-center gap-x-4 gap-y-2 px-(--layout-gutter) py-3.5 sm:gap-x-6"
   >
-    <a href={href()} class="flex shrink-0 items-center gap-2.5 text-ink no-underline">
+    <a href={href()} class="flex shrink-0 items-center gap-2.5 text-ink no-underline" data-hs-logo>
       <img src={fileHref('favicon.svg')} alt="" width="26" height="26" class="size-[26px] rounded" />
       <span class="type-title text-[1.4rem] leading-none tracking-tight">ARMAG</span>
     </a>
@@ -66,6 +85,7 @@ const pillControl =
     <nav
       aria-label="Browse"
       class="type-data order-3 flex basis-full items-center gap-x-5 overflow-x-auto text-sm [scrollbar-width:none] sm:order-none sm:basis-auto sm:flex-wrap sm:gap-y-1 sm:overflow-visible"
+      data-hs-fade
     >
       {
         browse.map((item) => (
@@ -80,39 +100,76 @@ const pillControl =
           </a>
         ))
       }
+      {/* A divider between what the site holds and what you can do with it. */}
+      <span aria-hidden="true" class="h-4 w-px shrink-0 bg-line"></span>
+      {
+        tools.map((item) => (
+          <a
+            href={item.path}
+            aria-current={isCurrent(item.path) ? 'page' : undefined}
+            class="group whitespace-nowrap py-1 text-ink-secondary no-underline transition-colors hover:text-ink aria-[current=page]:text-ink"
+          >
+            <span class="border-b border-transparent pb-[3px] transition-colors group-hover:border-ui-accent group-aria-[current=page]:border-ui-accent">
+              {item.label}
+            </span>
+          </a>
+        ))
+      }
     </nav>
 
     {/*
-      The controls, always in this order: this site's own
-      (compare, units), then search, theme, about.
+      The controls, always in this order: search, then units, theme, about.
     */}
     <div class="ml-auto flex items-center gap-1.5 sm:gap-2">
-      {/* On the narrowest phones Compare steps aside so the row stays one line; the compare tray and every entry page still reach it. */}
-      <a href={compareHref([])} class={`${pillControl} max-[25rem]:hidden`} aria-label="Compare firearms side by side">
-        <Icon name="compare" />
-        <span class="hidden sm:inline">Compare</span>
-      </a>
+      <div
+        class="hs"
+        data-hs
+        data-hs-base={import.meta.env.BASE_URL}
+        data-hs-bundle={fileHref('pagefind/pagefind.js')}
+        data-hs-kinds={JSON.stringify(kinds)}
+      >
+        <div class="hs-field" data-hs-field>
+          <Icon name="search" />
+          <input type="search" placeholder="Search firearms, cartridges, makers" aria-label="Search ARMAG" autocomplete="off" class="type-data" />
+          <button class="hs-close" type="button" data-hs-close aria-label="Close search">
+            <Icon name="close" />
+          </button>
+        </div>
+        <button
+          type="button"
+          class={iconControl}
+          data-hs-button
+          aria-label="Search"
+          aria-expanded="false"
+          aria-controls="site-search"
+          title="Search (press /)"
+        >
+          <Icon name="search" />
+        </button>
+        <div class="hs-panel type-data" id="site-search" data-hs-panel>
+          <div class="hs-results" data-hs-results aria-live="polite">
+            <p class="hs-status">
+              Names, aliases and the text of every page, so an arm is found by its service designation
+              as well as its title.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <button
         type="button"
         data-unit-toggle
-        class={pillControl}
+        class={iconControl}
         aria-label="Switch between metric and imperial units"
+        title="Units: metric or imperial"
       >
         <Icon name="ruler" />
-        <span class="hidden sm:inline">
-          <span class="u-metric">Metric</span><span class="u-imperial" data-pagefind-ignore
-            >Imperial</span
+        <span class="sr-only">
+          <span class="u-metric">Showing metric</span><span class="u-imperial" data-pagefind-ignore
+            >Showing imperial</span
           >
         </span>
       </button>
-
-      {/*
-        `client:idle`, not `client:visible`: the overlay owns the `/` and Ctrl-K
-        shortcuts, so it has to be listening even while its own button is
-        off-screen. The Pagefind runtime itself still waits for the first open.
-      */}
-      <SiteSearch client:idle bundle={fileHref('pagefind/pagefind.js')} />
 
       {/*
         The icon shows what the button DOES, not what the page currently is:
@@ -131,6 +188,11 @@ const pillControl =
     </div>
   </div>
 </header>
+
+<script>
+  import { initHeaderSearch } from '../../lib/header-search.ts';
+  initHeaderSearch();
+</script>
 
 <script is:inline>
   (() => {

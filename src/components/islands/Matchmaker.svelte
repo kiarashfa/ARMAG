@@ -168,7 +168,7 @@
 
     {@render ceiling(
       'Loaded mass at most',
-      'kilograms, loaded — not the empty figure a spec sheet quotes',
+      'kilograms, loaded, not the empty figure a spec sheet quotes',
       maxLoadedMassKg,
       (next) => (maxLoadedMassKg = next),
       '0.1',
@@ -176,7 +176,7 @@
     {@render ceiling('Capacity at least', 'rounds, primary chambering', minCapacity, (next) => (minCapacity = next), '1')}
     {@render ceiling(
       'Free recoil at most',
-      'joules — a .22 rifle is near 1 J, a service rifle near 10, a magnum rifle past 40',
+      'joules: a .22 rifle is near 1 J, a service rifle near 10, a magnum rifle past 40',
       maxFreeRecoilJ,
       (next) => (maxFreeRecoilJ = next),
       '1',
@@ -188,7 +188,7 @@
 
     <p class="type-data text-xs text-ink-muted">
       There is no price question here and there never will be: ARMAG holds launch prices, not market
-      values, so a budget filter would be a lie. There is no legality question either — the site
+      values, so a budget filter would be a lie. There is no legality question either: the site
       states what a firearm is, not what you may do with one.
     </p>
   </form>
@@ -272,7 +272,7 @@
               {#each outcome.excluded.slice(0, 60) as exclusion (exclusion.candidate.id)}
                 <li>
                   <span class="text-ink">{exclusion.candidate.name}</span>
-                  <span class="text-ink-muted"> — {exclusion.because}</span>
+                  <span class="text-ink-muted">: {exclusion.because}</span>
                 </li>
               {/each}
             </ul>
@@ -281,7 +281,7 @@
       {/if}
 
       <p class="type-data mt-6 text-xs text-ink-muted">
-        Ranking is on physical and technical fit only, never on effectiveness — for any use tag. An
+        Ranking is on physical and technical fit only, never on effectiveness, for any use tag. An
         entry whose figure is missing is kept rather than excluded: a gap in our data is not a fact
         about the arm.
       </p>

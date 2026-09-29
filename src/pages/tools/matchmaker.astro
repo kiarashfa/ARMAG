@@ -24,7 +24,7 @@ const terms = (list: { terms: { id: string; label: string }[] }) =>
 const assumptions = [
   'This is not a recommendation. Every component of the ranking is a distance from something you stated, in your own terms; nothing here is a judgement about an arm, and no result is scored for effectiveness at any use.',
   'Recoil tolerance filters on computed free recoil, which excludes the propellant gas term and is therefore a lower bound. It is consistent between entries, which is what makes it usable as a comparison.',
-  'Loaded mass is computed — empty mass, plus the magazine, plus capacity times cartridge mass — so it exists for entries a spec sheet would leave you to work out, and is missing wherever one of those inputs is.',
+  'Loaded mass is computed (empty mass, plus the magazine, plus capacity times cartridge mass), so it exists for entries a spec sheet would leave you to work out, and is missing wherever one of those inputs is.',
   'An entry whose figure is missing is never excluded by a dealbreaker. A gap in our data is not a fact about the arm, and hiding it would present absence as evidence.',
   'There is no budget filter and no legality filter, deliberately. ARMAG holds launch prices rather than market values, and it holds no jurisdiction data at all.',
 ];
@@ -32,8 +32,8 @@ const assumptions = [
 
 <ToolPage
   title="Matchmaker"
-  description="Rank ARMAG's entries against criteria you state — intended use, cartridge, weight ceiling, capacity floor, action, recoil tolerance and era. Physical and technical fit only."
-  standfirst="State what you are looking for and see which entries match it. Dealbreakers are applied first, then the rest is ranked by how closely it fits what you said — never by how good anything is."
+  description="Rank ARMAG's entries against criteria you state: intended use, cartridge, weight ceiling, capacity floor, action, recoil tolerance and era. Physical and technical fit only."
+  standfirst="State what you are looking for and see which entries match it. Dealbreakers are applied first, then the rest is ranked by how closely it fits what you said, never by how good anything is."
   assumptions={assumptions}
 >
   <Matchmaker

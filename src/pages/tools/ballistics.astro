@@ -18,7 +18,7 @@ import { href } from '../../lib/content/href.ts';
   assumptions={[
     'Standard atmosphere at sea level: 15 °C, 101,325 Pa. Real air density changes the answer, and altitude changes it a great deal.',
     'The ballistic coefficient is constant across the whole flight. Real coefficients vary with speed, most sharply through the transonic band.',
-    'Spin drift, the Coriolis effect and aerodynamic jump are not modelled. Each needs an input this site does not record — twist-derived stability, latitude, and the crosswind history at the muzzle.',
+    'Spin drift, the Coriolis effect and aerodynamic jump are not modelled. Each needs an input this site does not record: twist-derived stability, latitude, and the crosswind history at the muzzle.',
     'The solver integrates in 20 mm steps and lands exactly on each requested range with one fractional step, so every reported point is a solution of the same equations rather than an interpolation between two of them.',
     'A requested range the projectile never reaches is absent from the table rather than filled with a projection.',
   ]}

@@ -336,7 +336,7 @@ const jsonLd = entryArticle({
                         {variant.name}
                       </th>
                       <td class="p-2 text-ink-secondary">
-                        {formatYears(variant.productionYears) ?? '—'}
+                        {formatYears(variant.productionYears) ?? '·'}
                       </td>
                       <td class="p-2 text-ink-secondary">
                         {Object.keys(variant.overrides).map(rowLabel).join(', ') || 'no spec change'}
@@ -355,7 +355,7 @@ const jsonLd = entryArticle({
     <Section
       id="specifications"
       title="Specifications"
-      standfirst="Every row here is generated from the schema, so a figure recorded on this entry cannot be missing from the table — and the same rows, read the same way, are what the comparison shows."
+      standfirst="Every row here is generated from the schema, so a figure recorded on this entry cannot be missing from the table, and the same rows, read the same way, are what the comparison shows."
     >
       <SpecTable
         rows={GUN_REGISTRY.rows}

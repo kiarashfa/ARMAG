@@ -45,7 +45,7 @@ const description = `${plural(entries.length, 'firearm')} tagged ${term.label} o
 
 /** a computed browse view is an `ItemList`, never an article. */
 const jsonLd = itemList(
-  `${term.label} — ${axisLabel}`,
+  `${term.label} · ${axisLabel}`,
   sorted.map((entry) => ({ name: entry.name, url: absoluteUrl(Astro.site, gunHref(entry.id)) })),
 );
 ---
@@ -95,7 +95,7 @@ const jsonLd = itemList(
       {
         sorted.length === 0 ? (
           <p class="type-data text-sm text-ink-muted">
-            Nothing is tagged {term.label} yet. The page exists because the term does — an axis with
+            Nothing is tagged {term.label} yet. The page exists because the term does: an axis with
             no examples is an untested code path, not a missing page.
           </p>
         ) : (

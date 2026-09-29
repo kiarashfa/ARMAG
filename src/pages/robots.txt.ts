@@ -25,7 +25,7 @@ export const GET: APIRoute = ({ site }) => {
   const sitemap = site ? new URL(`${BASE}/sitemap-index.xml`.replace(/\/{2,}/g, '/'), site).href : '';
 
   const body = [
-    '# ARMAG — a free reference for modern firearms.',
+    '# ARMAG · a free reference for modern firearms.',
     '#',
     '# Nothing is disallowed. /armory/ carries a noindex in its head and is kept',
     '# out of the sitemap; it is deliberately NOT blocked here, because a blocked',

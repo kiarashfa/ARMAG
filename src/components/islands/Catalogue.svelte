@@ -38,19 +38,24 @@
   const { src, gunPrefix, vocab, staticCount }: Props = $props();
 
   const AXES: { key: AxisKey; label: string; param: string; multi: boolean }[] = [
-    // Multiple choice where comparing makes sense ("pistols or revolvers");
-    // one mechanism at a time for action and operating system.
+    // In the table's order where it has a column (Type, the maker's Country,
+    // the Era of introduction); the filters with no column follow. Multiple
+    // choice where comparing makes sense ("pistols or revolvers"); one
+    // mechanism at a time for action and operating system.
     { key: 'type', label: 'Type', param: 'type', multi: true },
+    { key: 'country', label: 'Country', param: 'country', multi: true },
+    { key: 'era', label: 'Era', param: 'era', multi: true },
     { key: 'action', label: 'Action', param: 'action', multi: false },
     { key: 'operatingSystem', label: 'Operating system', param: 'os', multi: false },
     { key: 'feed', label: 'Feed', param: 'feed', multi: true },
     { key: 'role', label: 'Role', param: 'role', multi: true },
-    { key: 'country', label: 'Country', param: 'country', multi: true },
-    { key: 'era', label: 'Era', param: 'era', multi: true },
-  ].sort((a, b) => a.label.localeCompare(b.label)); // menus in alphabetical order, like their options
+  ];
 
   const SORTS = [
     { key: 'name', label: 'Name' },
+    { key: 'type', label: 'Type' },
+    { key: 'makerName', label: 'Maker' },
+    { key: 'cartridgeName', label: 'Cartridge' },
     { key: 'year', label: 'Introduced' },
     { key: 'massKg', label: 'Mass' },
     { key: 'barrelMm', label: 'Barrel length' },
@@ -184,8 +189,37 @@
     ),
   );
 
+  const typeLabel = (id: string | null): string => (vocab.type ?? []).find((t) => t.id === id)?.label ?? id ?? '';
+  const TEXT_SORTS = ['type', 'makerName', 'cartridgeName'];
+
+  /** The table's columns; each header sorts by its column, a second click reverses. */
+  const COLUMNS: { key: SortKey; label: string; right?: boolean }[] = [
+    { key: 'name', label: 'Name' },
+    { key: 'type', label: 'Type' },
+    { key: 'makerName', label: 'Maker' },
+    { key: 'cartridgeName', label: 'Cartridge' },
+    { key: 'year', label: 'Introduced', right: true },
+    { key: 'massKg', label: 'Mass', right: true },
+    { key: 'barrelMm', label: 'Barrel', right: true },
+    { key: 'capacity', label: 'Capacity', right: true },
+  ];
+  function sortBy(key: SortKey) {
+    direction = sort === key && direction === 'asc' ? 'desc' : 'asc';
+    sort = key;
+    limit = PAGE;
+  }
+
   function compare(a: CatalogueRow, b: CatalogueRow): number {
     if (sort === 'name') return a.name.localeCompare(b.name);
+    if (TEXT_SORTS.includes(sort)) {
+      const text = (r: CatalogueRow) => (sort === 'type' ? typeLabel(r.type) : ((r as any)[sort] ?? ''));
+      const [l, r] = [text(a), text(b)];
+      // An unknown maker or cartridge sorts last in both directions, like a missing figure.
+      if (!l && !r) return a.name.localeCompare(b.name);
+      if (!l) return 1;
+      if (!r) return -1;
+      return l.localeCompare(r) || a.name.localeCompare(b.name);
+    }
     const left = a[sort];
     const right = b[sort];
     // A missing figure sorts last in BOTH directions. Treating it as zero would
@@ -200,7 +234,7 @@
   const sorted = $derived(
     [...filtered].sort((a, b) => {
       const result = compare(a, b);
-      if (sort !== 'name' && (a[sort] === null || b[sort] === null)) return result;
+      if (sort !== 'name' && ((a as any)[sort] == null || (a as any)[sort] === '' || (b as any)[sort] == null || (b as any)[sort] === '')) return result;
       return direction === 'asc' ? result : -result;
     }),
   );
@@ -274,7 +308,7 @@
   );
 
   const fmt = (value: number | null, digits = 0, suffix = '') =>
-    value === null ? '—' : `${value.toFixed(digits)}${suffix}`;
+    value === null ? '·' : `${value.toFixed(digits)}${suffix}`;
 
   /* Hides the server-rendered rows once this island is live. */
   $effect(() => {
@@ -285,142 +319,157 @@
 
 <div class="mt-6">
   <!--
-    ── Toolbar ─────────────────────────────────────────────────────────────
-    One row: search, sort, direction and view. The facet menus follow on the
-    next row, each carrying its own count, so no state is ever hidden.
+    ── The console ─────────────────────────────────────────────────────────
+    A header line saying what is shown and what is filtering it, each chip
+    removing its own filter, so undoing one is one click and does not require
+    finding it again among eighty. Then one row of search, sort, direction and
+    view, and the facet menus on the next, each carrying its own count, so no
+    state is ever hidden.
   -->
-  <div class="relative z-20 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 sm:flex sm:flex-wrap">
-    <label class="col-span-2 min-w-0 sm:min-w-56 sm:flex-1">
-      <span class="sr-only">Filter by name or alias</span>
-      <input
-        type="search"
-        bind:value={query}
-        oninput={() => (limit = PAGE)}
-        placeholder="Search names and aliases…"
-        class="type-data h-10 w-full rounded border border-line-strong bg-surface-1 px-3 text-sm text-ink"
-      />
-    </label>
-
-
-    <label class="shrink-0">
-      <span class="sr-only">Sort by</span>
-      <select
-        bind:value={sort}
-        class="type-data h-10 w-full rounded border border-line-strong bg-surface-1 px-3 text-sm text-ink"
-      >
-        {#each SORTS as option (option.key)}
-          <option value={option.key}>Sort: {option.label}</option>
-        {/each}
-      </select>
-    </label>
-
-    <!-- Field and direction are separate controls,. -->
-    <button
-      type="button"
-      onclick={() => (direction = direction === 'asc' ? 'desc' : 'asc')}
-      class="type-data h-10 shrink-0 rounded border border-line-strong bg-surface-1 px-4 text-sm text-ink"
-      aria-label={`Sort direction: ${direction === 'asc' ? 'ascending' : 'descending'}`}
-    >
-      {direction === 'asc' ? '↑' : '↓'}
-    </button>
-
-    <div class="col-span-2 flex h-10 shrink-0 overflow-hidden rounded border border-line-strong sm:col-span-1">
-      {#each ['table', 'cards'] as const as option (option)}
-        <button
-          type="button"
-          onclick={() => (view = option)}
-          aria-pressed={view === option}
-          class={`type-data flex-1 px-3 text-sm ${
-            view === option ? 'bg-surface-2 text-ink' : 'bg-surface-1 text-ink-secondary'
-          }`}
-        >
-          {option === 'table' ? 'Table' : 'Cards'}
-        </button>
-      {/each}
-    </div>
-  </div>
-
-  <!-- ── The facet menus ─────────────────────────────────────────────── -->
-  <div class="relative z-10 mt-2 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center max-sm:[&>*:last-child:nth-child(odd)]:col-span-2">
-    {#each AXES as axis (axis.key)}
-      {#if facets[axis.key].length > 1 || selected[axis.key].length > 0}
-        <FacetMenu
-          fill
-          label={axis.label}
-          terms={facets[axis.key]}
-          selected={selected[axis.key]}
-          multi={axis.multi}
-          onchange={(next) => {
-            selected[axis.key] = next;
-            limit = PAGE;
-          }}
-        />
+  <section
+    aria-label="Filter the catalogue"
+    class="relative z-20 rounded-lg border border-line border-t-[3px] border-t-ui-accent bg-surface-0 shadow-[0_18px_40px_-30px_rgb(0_0_0/0.5)]"
+  >
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-t-[5px] border-b border-line bg-surface-1 px-4 py-2.5">
+      <span class="type-title text-[17px] text-ink">Filter</span>
+      <p class="type-data flex flex-wrap items-center gap-3 text-sm text-ink-secondary" aria-live="polite">
+        {#if loadState === 'loading'}
+          Loading the catalogue…
+        {:else if loadState === 'failed'}
+          <span class="text-status-conflicting">
+            The catalogue could not be loaded. The {staticCount} entries below are the server-rendered
+            list.
+          </span>
+        {:else}
+          <span>
+            {sorted.length}
+            {sorted.length === 1 ? 'entry' : 'entries'}{rows.length !== sorted.length
+              ? ` of ${rows.length}`
+              : ''}
+          </span>
+        {/if}
+      </p>
+      {#if activeFilters.length > 0}
+        <div class="flex flex-wrap items-center gap-2 sm:ml-auto">
+          {#each activeFilters as filter (filter.axis + filter.id)}
+            <button
+              type="button"
+              onclick={() => toggle(filter.axis, filter.id, filter.multi)}
+              class="type-data flex items-center gap-1.5 rounded-full border border-line-strong bg-surface-2 px-2.5 py-0.5 text-xs text-ink"
+              aria-label={`Remove filter: ${filter.label}`}
+            >
+              {filter.label}
+              <span aria-hidden="true" class="text-ink-muted">×</span>
+            </button>
+          {/each}
+          <button type="button" onclick={clearAll} class="type-data text-xs text-ui-accent">
+            Clear all
+          </button>
+        </div>
       {/if}
-    {/each}
-  </div>
+    </div>
 
-  <!--
-    ── Applied filters ─────────────────────────────────────────────────────
-    Always visible under the menus. Each chip removes its own filter, so
-    undoing one is one click and does not require finding it again among
-    eighty.
-  -->
-  {#if activeFilters.length > 0}
-    <div class="mt-3 flex flex-wrap items-center gap-2">
-      {#each activeFilters as filter (filter.axis + filter.id)}
+    <div class="flex flex-col gap-2 p-4">
+      <div class="relative z-20 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 sm:flex sm:flex-wrap">
+        <label class="col-span-2 min-w-0 sm:min-w-56 sm:flex-1">
+          <span class="sr-only">Filter by name or alias</span>
+          <input
+            type="search"
+            bind:value={query}
+            oninput={() => (limit = PAGE)}
+            placeholder="Search names and aliases…"
+            class="type-data h-10 w-full rounded border border-line-strong bg-surface-1 px-3 text-sm text-ink"
+          />
+        </label>
+
+        <label class="shrink-0">
+          <span class="sr-only">Sort by</span>
+          <select
+            bind:value={sort}
+            class="type-data h-10 w-full rounded border border-line-strong bg-surface-1 px-3 text-sm text-ink"
+          >
+            {#each SORTS as option (option.key)}
+              <option value={option.key}>Sort: {option.label}</option>
+            {/each}
+          </select>
+        </label>
+
+        <!-- Field and direction are separate controls. -->
         <button
           type="button"
-          onclick={() => toggle(filter.axis, filter.id, filter.multi)}
-          class="type-data flex items-center gap-1.5 rounded-full border border-line-strong bg-surface-2 px-2.5 py-0.5 text-xs text-ink"
-          aria-label={`Remove filter: ${filter.label}`}
+          onclick={() => (direction = direction === 'asc' ? 'desc' : 'asc')}
+          class="type-data h-10 shrink-0 rounded border border-line-strong bg-surface-1 px-4 text-sm text-ink"
+          aria-label={`Sort direction: ${direction === 'asc' ? 'ascending' : 'descending'}`}
         >
-          {filter.label}
-          <span aria-hidden="true" class="text-ink-muted">×</span>
+          {direction === 'asc' ? '↑' : '↓'}
         </button>
-      {/each}
-      <button type="button" onclick={clearAll} class="type-data text-xs text-ui-accent">
-        Clear all
-      </button>
-    </div>
-  {/if}
 
-  <!-- Result count -->
-  <p class="type-data mt-4 flex flex-wrap items-center gap-3 text-sm text-ink-secondary">
-    {#if loadState === 'loading'}
-      Loading the catalogue…
-    {:else if loadState === 'failed'}
-      <span class="text-status-conflicting">
-        The catalogue could not be loaded. The {staticCount} entries below are the server-rendered
-        list.
-      </span>
-    {:else}
-      <span>
-        {sorted.length}
-        {sorted.length === 1 ? 'entry' : 'entries'}{rows.length !== sorted.length
-          ? ` of ${rows.length}`
-          : ''}
-      </span>
-    {/if}
-  </p>
+        <div class="col-span-2 flex h-10 shrink-0 overflow-hidden rounded border border-line-strong sm:col-span-1">
+          {#each ['table', 'cards'] as const as option (option)}
+            <button
+              type="button"
+              onclick={() => (view = option)}
+              aria-pressed={view === option}
+              class={`type-data flex-1 px-3 text-sm ${
+                view === option ? 'bg-surface-2 text-ink' : 'bg-surface-1 text-ink-secondary'
+              }`}
+            >
+              {option === 'table' ? 'Table' : 'Cards'}
+            </button>
+          {/each}
+        </div>
+      </div>
+
+      <!-- ── The facet menus ─────────────────────────────────────────────── -->
+      <div class="relative z-10 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center max-sm:[&>*:last-child:nth-child(odd)]:col-span-2">
+        {#each AXES as axis (axis.key)}
+          {#if facets[axis.key].length > 1 || selected[axis.key].length > 0}
+            <FacetMenu
+              fill
+              label={axis.label}
+              terms={facets[axis.key]}
+              selected={selected[axis.key]}
+              multi={axis.multi}
+              onchange={(next) => {
+                selected[axis.key] = next;
+                limit = PAGE;
+              }}
+            />
+          {/if}
+        {/each}
+      </div>
+    </div>
+  </section>
 
   {#if loadState === 'ready'}
     {#if sorted.length === 0}
       <p class="type-data mt-6 rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted">
-        Nothing matches those filters. That is a real answer about the database, not an error —
-        clear one and try again.
+        Nothing matches those filters. That is a real answer about the database, not an error.
+        Clear one and try again.
       </p>
     {:else if view === 'table'}
-      <div class="mt-4 overflow-x-auto">
-        <table class="type-data w-full min-w-[44rem] text-sm">
+      <div class="mt-6 overflow-x-auto">
+        <table class="type-data w-full min-w-[52rem] text-sm">
           <thead>
             <tr class="border-b border-line-strong text-left text-ink-muted">
-              <th scope="col" class="p-2">Name</th>
-              <th scope="col" class="p-2">Maker</th>
-              <th scope="col" class="p-2">Cartridge</th>
-              <th scope="col" class="p-2 text-right">Introduced</th>
-              <th scope="col" class="p-2 text-right">Mass</th>
-              <th scope="col" class="p-2 text-right">Barrel</th>
-              <th scope="col" class="p-2 text-right">Capacity</th>
+              {#each COLUMNS as c (c.key)}
+                <th
+                  scope="col"
+                  class={`p-2 ${c.right ? 'whitespace-nowrap text-right' : ''}`}
+                  aria-sort={sort === c.key ? (direction === 'asc' ? 'ascending' : 'descending') : 'none'}
+                >
+                  <button
+                    type="button"
+                    class={`inline-flex items-center gap-1 hover:text-ink ${c.right ? 'flex-row-reverse' : ''} ${sort === c.key ? 'text-ink' : ''}`}
+                    onclick={() => sortBy(c.key)}
+                  >
+                    {c.label}
+                    <span aria-hidden="true" class={sort === c.key ? 'text-ui-accent' : 'opacity-35'}
+                      >{sort === c.key ? (direction === 'asc' ? '↑' : '↓') : '↕'}</span
+                    >
+                  </button>
+                </th>
+              {/each}
             </tr>
           </thead>
           <tbody>
@@ -436,19 +485,20 @@
                     <span class="ml-1 text-xs text-ink-muted">(no page yet)</span>
                   {/if}
                 </th>
-                <td class="p-2 text-ink-secondary">{row.makerName ?? '—'}</td>
-                <td class="p-2 text-ink-secondary">{row.cartridgeName ?? '—'}</td>
-                <td class="p-2 text-right text-ink-secondary">{row.year ?? '—'}</td>
-                <td class="p-2 text-right text-ink-secondary">{fmt(row.massKg, 3, ' kg')}</td>
-                <td class="p-2 text-right text-ink-secondary">{fmt(row.barrelMm, 0, ' mm')}</td>
-                <td class="p-2 text-right text-ink-secondary">{fmt(row.capacity, 0)}</td>
+                <td class="p-2 text-ink-secondary">{typeLabel(row.type)}</td>
+                <td class="p-2 text-ink-secondary">{row.makerName ?? '·'}</td>
+                <td class="p-2 text-ink-secondary">{row.cartridgeName ?? '·'}</td>
+                <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{row.year ?? '·'}</td>
+                <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{fmt(row.massKg, 3, ' kg')}</td>
+                <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{fmt(row.barrelMm, 0, ' mm')}</td>
+                <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{fmt(row.capacity, 0)}</td>
               </tr>
             {/each}
           </tbody>
         </table>
       </div>
     {:else}
-      <ul class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <ul class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {#each windowed as row (row.id)}
           <li class="rounded-lg border border-line bg-surface-1 p-3">
             {#if row.hasPage}
@@ -459,7 +509,7 @@
               <span class="type-data text-sm text-ink">{row.name}</span>
             {/if}
             <p class="type-data mt-1 text-xs text-ink-muted">
-              {[row.makerName, row.year].filter(Boolean).join(' · ') || '—'}
+              {[row.makerName, row.year].filter(Boolean).join(' · ') || '·'}
             </p>
             <dl class="type-data mt-2 grid grid-cols-3 gap-1 text-xs text-ink-secondary">
               <div><dt class="text-ink-muted">Mass</dt><dd>{fmt(row.massKg, 3, " kg")}</dd></div>

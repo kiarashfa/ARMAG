@@ -102,7 +102,7 @@ const inferredHeights = scene.silhouettes.filter((s) => !s.heightSourced);
     </ul>
 
     <p class="type-data mt-3 text-xs text-ink-muted">
-      Representative outline — <strong class="text-ink-secondary">the dimensions are sourced, the
+      Representative outline: <strong class="text-ink-secondary">the dimensions are sourced, the
       shape is not.</strong> Overall length, and barrel length where recorded, are drawn from this
       entry's own figures; the profile is a generic one for the firearm type and says nothing about
       this arm's actual contours.
@@ -113,7 +113,7 @@ const inferredHeights = scene.silhouettes.filter((s) => !s.heightSourced);
             {inferredHeights.map((s) => s.name).join(', ')}{' '}
             {inferredHeights.length === 1 ? 'records' : 'record'} no height, so
             {inferredHeights.length === 1 ? ' its' : ' their'} outline is drawn at the type's
-            proportion — that height is part of the shape, not a measurement.
+            proportion. That height is part of the shape, not a measurement.
           </>
         )
       }

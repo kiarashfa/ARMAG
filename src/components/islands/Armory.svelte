@@ -283,7 +283,7 @@
       copied = true;
     } catch {
       copied = false;
-      notice = 'The clipboard is not available here. The link is in the box — select it and copy.';
+      notice = 'The clipboard is not available here. The link is in the box; select it and copy.';
     }
   }
 
@@ -306,14 +306,14 @@
     if (!incomingShare) return;
     persist(incomingShare);
     incomingShare = null;
-    notice = 'Shared layout loaded. It carried no ownership data — share links never do.';
+    notice = 'Shared layout loaded. It carried no ownership data, because share links never do.';
     history.replaceState(null, '', location.pathname);
   }
 
   /* ── Number formatting, shared with the rest of the site ─────────────── */
 
   const money = (value: number | null): string =>
-    value === null ? '—' : value.toLocaleString('en-GB', { maximumFractionDigits: 2 });
+    value === null ? '·' : value.toLocaleString('en-GB', { maximumFractionDigits: 2 });
 
   const launchPrice = (gunRef: string): Extract<CompareCell, { kind: 'money' }> | null => {
     const cell = details[gunRef]?.cells.launchPrice;
@@ -407,7 +407,7 @@
       <h2 class="type-heading text-sm text-ink">A shared armory is in this link</h2>
       <p class="type-body mt-2 text-sm text-ink-secondary">
         {incomingShare.entries.length} bays, laid out by whoever sent it. It carries no ownership
-        data — share links never do. Loading it <strong class="text-ink">replaces</strong> what is on
+        data, because share links never do. Loading it <strong class="text-ink">replaces</strong> what is on
         this page now, so take a backup first if you want to keep it.
       </p>
       <div class="mt-3 flex flex-wrap gap-3">
@@ -724,7 +724,7 @@
           </label>
 
           <label class="flex min-w-0 flex-col gap-1">
-            {@render field('Service every', 'rounds — yours to set')}
+            {@render field('Service every', 'rounds, yours to set')}
             <input
               type="number"
               min="1"
@@ -739,7 +739,7 @@
           </label>
 
           <label class="flex min-w-0 flex-col gap-1">
-            {@render field('Service every', 'months — yours to set')}
+            {@render field('Service every', 'months, yours to set')}
             <input
               type="number"
               min="1"
@@ -805,7 +805,7 @@
               <span class="type-data text-xs uppercase tracking-wider text-ink-muted">Burn rate</span>
               <span class="type-stat text-xl text-ink">
                 {rate?.value === null || rate === null
-                  ? '—'
+                  ? '·'
                   : `${rate.value.toFixed(0)} rds/mo`}
               </span>
               <span class="type-data text-xs text-ink-secondary">
@@ -819,7 +819,7 @@
               </span>
               <span class="type-stat text-xl text-ink">
                 {projection?.value === null || projection === null || !Number.isFinite(projection.value)
-                  ? '—'
+                  ? '·'
                   : `${projection.value.toFixed(1)} mo`}
               </span>
               <span class="type-data text-xs text-ink-secondary">
@@ -851,7 +851,7 @@
             {/if}
             {#if price}
               Launched at {price.currency}
-              {price.amount?.toLocaleString('en-GB')} in {price.year} ({price.market}) — context, not
+              {price.amount?.toLocaleString('en-GB')} in {price.year} ({price.market}). Context, not
               a valuation. ARMAG holds no market-value data.
             {/if}
           </p>
@@ -953,7 +953,7 @@
           </h3>
           <p class="type-data mt-1 text-xs text-ink-muted">
             The base the condition grade multiplies. ARMAG has no market-value data and will not
-            supply one — this number is yours.
+            supply one: this number is yours.
           </p>
           {#if entry.ownership.valueAnchors.length > 0}
             <ul class="type-data mt-2 flex flex-wrap gap-3 text-sm">
@@ -1033,7 +1033,7 @@
       <div class="min-w-0 rounded-lg border border-line bg-surface-1 p-4">
         <h3 class="type-heading text-sm text-ink">Full backup</h3>
         <p class="type-body mt-1 text-sm text-ink-secondary">
-          Carries <strong class="text-ink">everything, ownership included</strong> — what you paid,
+          Carries <strong class="text-ink">everything, ownership included</strong>: what you paid,
           when you bought it, how many rounds you have fired, every service you logged. It is a
           personal file. Keep it as you would keep any other.
         </p>
@@ -1047,7 +1047,7 @@
           </a>
         </div>
         <label class="mt-4 flex min-w-0 flex-col gap-1">
-          {@render field('Restore', 'paste a backup file here — it replaces what is on this page')}
+          {@render field('Restore', 'paste a backup file here; it replaces what is on this page')}
           <textarea
             bind:value={importText}
             rows="3"

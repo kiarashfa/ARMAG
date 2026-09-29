@@ -728,3 +728,221 @@
     display: none;
   }
 }
+
+/*
+ * Search in the header. The search button grows leftwards into a field while
+ * the section links make way, and the results drop below it; closing runs the
+ * same motion backwards. Every piece is always in the DOM and moved by
+ * transitions, so the close animates as well as the open.
+ */
+@layer components {
+  .hs {
+    position: relative;
+    display: flex;
+  }
+  .hs-field {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 32px;
+    height: 36px;
+    padding: 0 5px 0 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid var(--color-line-strong);
+    border-radius: 999px;
+    background: var(--color-surface-1);
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      width 0.26s cubic-bezier(0.2, 0.8, 0.2, 1),
+      opacity 0.14s ease 0.12s,
+      visibility 0s linear 0.26s;
+  }
+  [data-hs-open] .hs-field {
+    width: var(--hs-w);
+    opacity: 1;
+    visibility: visible;
+    transition:
+      width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+      opacity 0.12s ease,
+      visibility 0s;
+  }
+  .hs-field > svg {
+    width: 15px;
+    height: 15px;
+    flex: none;
+    color: var(--color-ink-muted);
+  }
+  .hs-field input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    font: inherit;
+    font-size: 14px;
+    color: var(--color-ink);
+    outline: none;
+  }
+  .hs-field input::placeholder {
+    color: var(--color-ink-muted);
+  }
+  .hs-field input::-webkit-search-cancel-button {
+    display: none;
+  }
+  .hs-close {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 26px;
+    height: 26px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-ink-muted);
+    cursor: pointer;
+  }
+  .hs-close:hover {
+    background: var(--color-surface-2);
+    color: var(--color-ink);
+  }
+  .hs-close svg {
+    width: 14px;
+    height: 14px;
+  }
+  .hs-panel {
+    position: absolute;
+    z-index: 60;
+    top: calc(100% + 15px);
+    right: var(--hs-pr, 0px);
+    width: var(--hs-pw, var(--hs-w));
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-line);
+    border-radius: 0.5rem;
+    background: var(--color-surface-1);
+    box-shadow: 0 24px 60px -24px rgb(0 0 0 / 0.5);
+    opacity: 0;
+    transform: translateY(-6px);
+    visibility: hidden;
+    transition:
+      opacity 0.16s ease,
+      transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+      visibility 0s linear 0.2s;
+  }
+  [data-hs-open] .hs-panel {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition:
+      opacity 0.18s ease 0.1s,
+      transform 0.24s cubic-bezier(0.2, 0.8, 0.2, 1) 0.1s,
+      visibility 0s;
+  }
+  .hs-results {
+    max-height: min(26rem, 65vh);
+    overflow-y: auto;
+  }
+  .hs-status {
+    margin: 0;
+    padding: 12px 10px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--color-ink-muted);
+  }
+  .hs-hits {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .hs-hit {
+    display: block;
+    padding: 8px 10px;
+    border-radius: 0.375rem;
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+  .hs-hit[data-active],
+  .hs-hit:focus-visible {
+    background: color-mix(in oklab, var(--color-ui-accent) 14%, var(--color-surface-2));
+  }
+  .hs-hit-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .hs-kind {
+    flex: none;
+    align-self: center;
+    font-size: 10.5px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+  }
+  .hs-hit-excerpt {
+    display: -webkit-box;
+    margin-top: 2px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    line-height: 1.45;
+    color: var(--color-ink-secondary);
+  }
+  .hs-hit-excerpt mark {
+    background: transparent;
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+  .hs-foot {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 6px;
+    padding: 8px 10px 4px;
+    border-top: 1px solid var(--color-line);
+    font-size: 11.5px;
+    color: var(--color-ink-muted);
+  }
+  .hs-all {
+    color: var(--color-ui-accent);
+    text-decoration: none;
+  }
+  .hs-all:hover {
+    text-decoration: underline;
+  }
+  /* What makes way for the field: out to the left, and back in once the field
+     has gone. */
+  [data-hs-fade] {
+    transition:
+      opacity 0.2s ease 0.12s,
+      transform 0.26s ease 0.12s,
+      visibility 0s;
+  }
+  [data-hs-open] [data-hs-fade] {
+    opacity: 0;
+    transform: translateX(-8px);
+    visibility: hidden;
+    transition:
+      opacity 0.14s ease,
+      transform 0.22s ease,
+      visibility 0s linear 0.22s;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hs-field,
+    .hs-panel,
+    [data-hs-fade] {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+  }
+}
