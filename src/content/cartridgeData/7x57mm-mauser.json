@@ -100,7 +100,7 @@
             "status": "verified",
             "source": "rws-7x57-ballistics",
             "sourceUrl": "https://web.archive.org/web/20090831085149/http://www.rws-munition.de/en/rifle_cartridges/ballistic_data.htm?navid=10",
-            "sourceNote": "RWS's own published test barrel length for this bullet — 600 mm, not the 735 mm the Wikipedia infobox states generically for the article's RWS loads"
+            "sourceNote": "RWS's own published test barrel length for this bullet: 600 mm, not the 735 mm the Wikipedia infobox states generically for the article's RWS loads"
           },
           "velocity": {
             "value": 900,

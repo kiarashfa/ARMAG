@@ -51,7 +51,7 @@
     "value": 182.7,
     "unit": "MPa",
     "status": "estimated",
-    "sourceNote": "Wikipedia's infobox figure (26,500 psi), no inline citation of its own. Unlike the case and bullet dimensions, this pressure is genuinely lower than the .38 Super's — the .38 Super is a higher-pressure loading of the same case, not an identical cartridge."
+    "sourceNote": "Wikipedia's infobox figure (26,500 psi), no inline citation of its own. Unlike the case and bullet dimensions, this pressure is genuinely lower than the .38 Super's: the .38 Super is a higher-pressure loading of the same case, not an identical cartridge."
   },
   "pressureStandard": "saami",
   "loads": [
@@ -111,7 +111,7 @@
     {
       "src": "images/cartridges/38-acp/colt1902.webp",
       "alt": "A worn nickel-finish semi-automatic pistol with chequered wooden grips bearing a Colt medallion, its slide marked 'AUTOMATIC COLT CALIBRE 38 RIMLESS SMOKELESS'.",
-      "caption": "A Colt Model 1902 Sportsman, manufactured in 1905 and chambered for .38 ACP — the round's original commercial pistol.",
+      "caption": "A Colt Model 1902 Sportsman, manufactured in 1905 and chambered for .38 ACP. This is the round's original commercial pistol.",
       "width": 1200,
       "height": 795,
       "credit": {

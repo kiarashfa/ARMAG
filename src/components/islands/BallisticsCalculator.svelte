@@ -115,7 +115,7 @@
 {#snippet units(value: number | null, unit: string)}
   {@const formatted = fmt(value, unit)}
   {#if formatted === null}
-    <span class="text-ink-muted">·</span>
+    <span class="text-ink-muted">—</span>
   {:else if formatted.identical}
     <span class="tabular-nums">{formatted.metric}</span>
   {:else}

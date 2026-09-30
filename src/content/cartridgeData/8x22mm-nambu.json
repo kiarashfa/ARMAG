@@ -59,7 +59,7 @@
       "bulletType": "FMJ",
       "velocityByBarrel": [
         {
-          "barrelLength": { "value": 117, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox figure, no inline citation of its own — the Nambu-pattern pistols' barrel length." },
+          "barrelLength": { "value": 117, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox figure, no inline citation of its own. This is the Nambu-pattern pistols' barrel length." },
           "velocity": { "value": 315, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure, no inline citation of its own; ½mv² reproduces the published 328 J energy figure to within 0.2%." }
         }
       ]

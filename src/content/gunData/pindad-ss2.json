@@ -25,7 +25,7 @@
     "value": 3.40,
     "unit": "kg",
     "status": "estimated",
-    "sourceNote": "Military Factory's SS2 spec listing gives 7.50 lb (3.40 kg) empty for the base SS2-V1; recorded as estimated rather than verified because the same listing's barrel-length figure is internally inconsistent with Wikipedia's own sourcing, which lowers confidence in the page generally. No Pindad-published figure for the base V1 was found — the manufacturer's own cited figures cover only the V2, V4, V5, SS3 and SPM-1 variants"
+    "sourceNote": "Military Factory's SS2 spec listing gives 7.50 lb (3.40 kg) empty for the base SS2-V1; recorded as estimated rather than verified because the same listing's barrel-length figure is internally inconsistent with Wikipedia's own sourcing, which lowers confidence in the page generally. No Pindad-published figure for the base V1 was found: the manufacturer's own cited figures cover only the V2, V4, V5, SS3 and SPM-1 variants"
   },
   "length": {
     "value": 990,
@@ -158,7 +158,7 @@
           "status": "conflicting-sources",
           "source": "shephard-indo-defence-2016",
           "sourceUrl": "https://web.archive.org/web/20161028140957/https://www.shephardmedia.com/news/landwarfareintl/indo-defence-2016-small-arms-revolution/",
-          "sourceNote": "Wikipedia's infobox states 770 mm extended / 520 mm folded (uncited on Wikipedia itself); Shephard Media's own reporting instead states the rifle is 725 mm long, without specifying a stock position — the two published figures disagree and neither is preferred here"
+          "sourceNote": "Wikipedia's infobox states 770 mm extended / 520 mm folded (uncited on Wikipedia itself); Shephard Media's own reporting instead states the rifle is 725 mm long, without specifying a stock position; the two published figures disagree and neither is preferred here"
         }
       },
       "configurations": []

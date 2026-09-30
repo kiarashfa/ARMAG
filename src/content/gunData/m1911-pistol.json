@@ -53,7 +53,7 @@
     {
       "src": "images/guns/m1911-pistol/hero.webp",
       "alt": "An M1911A1 pistol fieldstripped on a white background: slide, frame with wooden grips, barrel with its swinging link, recoil spring and guide, bushing, slide stop, magazine and three cartridges",
-      "caption": "A Springfield-made M1911A1 fieldstripped. The barrel at lower left carries the swinging link that unlocks it from the slide — the whole of the short-recoil mechanism, in one part.",
+      "caption": "A Springfield-made M1911A1 fieldstripped. The barrel at lower left carries the swinging link that unlocks it from the slide: the whole of the short-recoil mechanism, in one part.",
       "width": 1600,
       "height": 940,
       "credit": {
@@ -118,7 +118,7 @@
     "status": "verified",
     "source": "wp-m1911-pistol",
     "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371262262",
-    "sourceNote": "US government contract price, 1938 — not a retail price and not the 1911 launch price."
+    "sourceNote": "US government contract price, 1938, not a retail price and not the 1911 launch price."
   },
   "references": [
     {

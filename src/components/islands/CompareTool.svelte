@@ -269,7 +269,7 @@
 {#snippet cellView(row: CompareRow, entry: CompareEntry)}
   {@const cell = entry.cells[row.key]}
   {#if !cell}
-    <span class="text-ink-muted">·</span>
+    <span class="text-ink-muted">—</span>
   {:else if cell.kind === 'scalar'}
     <div class="flex flex-wrap items-baseline gap-1.5">
       {@render units(cell.value, row.unit ?? '')}
@@ -334,10 +334,10 @@
       >
     </div>
   {:else if cell.kind === 'enum'}
-    <span class="text-ink">{cell.label ?? '·'}</span>
+    <span class="text-ink">{cell.label ?? '—'}</span>
   {:else if cell.kind === 'list'}
     {#if cell.terms.length === 0}
-      <span class="text-ink-muted">·</span>
+      <span class="text-ink-muted">—</span>
     {:else}
       <ul class="flex flex-wrap gap-1">
         {#each cell.terms as term (term.id)}
@@ -350,9 +350,9 @@
   {:else if cell.kind === 'number'}
     <!-- No thousands separator: these rows are years and counts, and 1902 is
          not "1,902". See the same note in `SpecTable.astro`. -->
-    <span class="tabular-nums text-ink">{cell.value === null ? '·' : String(cell.value)}</span>
+    <span class="tabular-nums text-ink">{cell.value === null ? '—' : String(cell.value)}</span>
   {:else if cell.kind === 'text'}
-    <span class="text-ink">{cell.text ?? '·'}</span>
+    <span class="text-ink">{cell.text ?? '—'}</span>
   {:else if cell.kind === 'years'}
     <span class="tabular-nums text-ink">{years(cell)}</span>
   {:else if cell.kind === 'money'}

@@ -313,7 +313,7 @@
   /* ── Number formatting, shared with the rest of the site ─────────────── */
 
   const money = (value: number | null): string =>
-    value === null ? '·' : value.toLocaleString('en-GB', { maximumFractionDigits: 2 });
+    value === null ? '—' : value.toLocaleString('en-GB', { maximumFractionDigits: 2 });
 
   const launchPrice = (gunRef: string): Extract<CompareCell, { kind: 'money' }> | null => {
     const cell = details[gunRef]?.cells.launchPrice;
@@ -805,7 +805,7 @@
               <span class="type-data text-xs uppercase tracking-wider text-ink-muted">Burn rate</span>
               <span class="type-stat text-xl text-ink">
                 {rate?.value === null || rate === null
-                  ? '·'
+                  ? '—'
                   : `${rate.value.toFixed(0)} rds/mo`}
               </span>
               <span class="type-data text-xs text-ink-secondary">
@@ -819,7 +819,7 @@
               </span>
               <span class="type-stat text-xl text-ink">
                 {projection?.value === null || projection === null || !Number.isFinite(projection.value)
-                  ? '·'
+                  ? '—'
                   : `${projection.value.toFixed(1)} mo`}
               </span>
               <span class="type-data text-xs text-ink-secondary">

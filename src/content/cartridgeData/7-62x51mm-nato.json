@@ -70,7 +70,7 @@
     "status": "estimated",
     "source": "wp-7-62-51mm-nato",
     "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372335181",
-    "sourceNote": "The cited article gives 60,191 psi by NATO EPVAT, which is 415.0 MPa — exactly the C.I.P. figure for the .308 Winchester, so the number appears to be a conversion of it rather than an independent measurement. STANAG 2310 is not free."
+    "sourceNote": "The cited article gives 60,191 psi by NATO EPVAT, which is 415.0 MPa, exactly the C.I.P. figure for the .308 Winchester, so the number appears to be a conversion of it rather than an independent measurement. STANAG 2310 is not free."
   },
   "pressureStandard": "nato",
   "loads": [

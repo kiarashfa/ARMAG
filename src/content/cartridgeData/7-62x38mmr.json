@@ -34,7 +34,7 @@
     "status": "verified",
     "source": "cip-7-62-nagant",
     "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page10.pdf",
-    "sourceNote": "C.I.P. TDCC table 4 datasheet, field L6 — shorter than the case length itself, because the bullet is seated flush inside the case mouth"
+    "sourceNote": "C.I.P. TDCC table 4 datasheet, field L6, shorter than the case length itself, because the bullet is seated flush inside the case mouth"
   },
   "rimDiameter": {
     "value": 10.3,
@@ -129,7 +129,7 @@
     {
       "src": "images/cartridges/7-62x38mmr/hero.webp",
       "alt": "Three revolver cartridges standing upright and lying flat: .32 S&W Long and .32 H&R Magnum with visible lead or jacketed bullet noses, and a 7.62x38R Nagant whose case mouth is crimped shut over a bullet seated entirely inside the case",
-      "caption": "A commercial 7.62×38mmR round beside .32 S&W Long and .32 H&R Magnum for scale — the Nagant case shows no exposed bullet at all, because the bullet is seated flush with (and crimped inside) the case mouth.",
+      "caption": "A commercial 7.62×38mmR round beside .32 S&W Long and .32 H&R Magnum for scale. The Nagant case shows no exposed bullet at all, because the bullet is seated flush with (and crimped inside) the case mouth.",
       "width": 627,
       "height": 575,
       "credit": {

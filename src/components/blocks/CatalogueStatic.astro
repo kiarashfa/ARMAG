@@ -67,17 +67,17 @@ const typeLabel = (id: string | null) => types.terms.find((t) => t.id === id)?.l
                     )}
                   </th>
                   <td class="p-2 text-ink-secondary">{typeLabel(row.type)}</td>
-                  <td class="p-2 text-ink-secondary">{row.makerName ?? '·'}</td>
-                  <td class="p-2 text-ink-secondary">{row.cartridgeName ?? '·'}</td>
-                  <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{row.year ?? '·'}</td>
+                  <td class="p-2 text-ink-secondary">{row.makerName ?? '—'}</td>
+                  <td class="p-2 text-ink-secondary">{row.cartridgeName ?? '—'}</td>
+                  <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{row.year ?? '—'}</td>
                   <td class="whitespace-nowrap p-2 text-right text-ink-secondary">
-                    <UnitValue value={row.massKg} unit="kg" emptyLabel="·" />
+                    <UnitValue value={row.massKg} unit="kg" emptyLabel="—" />
                   </td>
                   <td class="whitespace-nowrap p-2 text-right text-ink-secondary">
-                    <UnitValue value={row.barrelMm} unit="mm" emptyLabel="·" />
+                    <UnitValue value={row.barrelMm} unit="mm" emptyLabel="—" />
                   </td>
                   <td class="whitespace-nowrap p-2 text-right text-ink-secondary">
-                    <UnitValue value={row.capacity} unit="" emptyLabel="·" />
+                    <UnitValue value={row.capacity} unit="" emptyLabel="—" />
                   </td>
                 </tr>
               ))}

@@ -308,7 +308,7 @@
   );
 
   const fmt = (value: number | null, digits = 0, suffix = '') =>
-    value === null ? '·' : `${value.toFixed(digits)}${suffix}`;
+    value === null ? '—' : `${value.toFixed(digits)}${suffix}`;
 
   /* Hides the server-rendered rows once this island is live. */
   $effect(() => {
@@ -486,9 +486,9 @@
                   {/if}
                 </th>
                 <td class="p-2 text-ink-secondary">{typeLabel(row.type)}</td>
-                <td class="p-2 text-ink-secondary">{row.makerName ?? '·'}</td>
-                <td class="p-2 text-ink-secondary">{row.cartridgeName ?? '·'}</td>
-                <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{row.year ?? '·'}</td>
+                <td class="p-2 text-ink-secondary">{row.makerName ?? '—'}</td>
+                <td class="p-2 text-ink-secondary">{row.cartridgeName ?? '—'}</td>
+                <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{row.year ?? '—'}</td>
                 <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{fmt(row.massKg, 3, ' kg')}</td>
                 <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{fmt(row.barrelMm, 0, ' mm')}</td>
                 <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{fmt(row.capacity, 0)}</td>
@@ -509,7 +509,7 @@
               <span class="type-data text-sm text-ink">{row.name}</span>
             {/if}
             <p class="type-data mt-1 text-xs text-ink-muted">
-              {[row.makerName, row.year].filter(Boolean).join(' · ') || '·'}
+              {[row.makerName, row.year].filter(Boolean).join(' · ') || '—'}
             </p>
             <dl class="type-data mt-2 grid grid-cols-3 gap-1 text-xs text-ink-secondary">
               <div><dt class="text-ink-muted">Mass</dt><dd>{fmt(row.massKg, 3, " kg")}</dd></div>

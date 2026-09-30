@@ -336,7 +336,7 @@ const jsonLd = entryArticle({
                         {variant.name}
                       </th>
                       <td class="p-2 text-ink-secondary">
-                        {formatYears(variant.productionYears) ?? '·'}
+                        {formatYears(variant.productionYears) ?? '—'}
                       </td>
                       <td class="p-2 text-ink-secondary">
                         {Object.keys(variant.overrides).map(rowLabel).join(', ') || 'no spec change'}

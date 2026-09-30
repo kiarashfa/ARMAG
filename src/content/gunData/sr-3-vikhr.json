@@ -8,7 +8,7 @@
   "familyRef": null,
   "alsoInFamilies": [],
   "aliases": [
-    { "name": "AM Vikhr", "kind": "military", "note": "Avtomat Malogabaritnyj 'Vikhr' — 'small-sized automatic rifle', the original designation." },
+    { "name": "AM Vikhr", "kind": "military", "note": "Avtomat Malogabaritnyj 'Vikhr' ('small-sized automatic rifle', the original designation)." },
     { "name": "Special Development-3", "kind": "military" }
   ],
   "lineage": { "derivedFrom": "as-val" },
@@ -26,7 +26,7 @@
     "unit": "kg",
     "status": "verified",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:SR-3_right_view.jpg",
-    "sourceNote": "TsNIITochMash's own exhibition placard, legible in this entry's hero photograph: 'Масса с магазином без патронов, кг: 2,1' — mass with an empty magazine fitted, 2.1 kg.",
+    "sourceNote": "TsNIITochMash's own exhibition placard, legible in this entry's hero photograph: 'Масса с магазином без патронов, кг: 2,1' (mass with an empty magazine fitted, 2.1 kg).",
     "source": "cniitochmash-placard"
   },
   "length": {
@@ -34,7 +34,7 @@
     "unit": "mm",
     "status": "verified",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:SR-3_right_view.jpg",
-    "sourceNote": "TsNIITochMash's own exhibition placard, legible in this entry's hero photograph: 'Габаритные размеры, мм: 640/395' — 640 mm with the stock extended, 395 mm folded.",
+    "sourceNote": "TsNIITochMash's own exhibition placard, legible in this entry's hero photograph: 'Габаритные размеры, мм: 640/395' (640 mm with the stock extended, 395 mm folded).",
     "source": "cniitochmash-placard"
   },
   "barrelLength": {
@@ -57,7 +57,7 @@
         "unit": "",
         "status": "verified",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:SR-3_right_view.jpg",
-        "sourceNote": "TsNIITochMash's own exhibition placard, legible in this entry's hero photograph: 'Емкость магазина, патронов: 20, 10' — 20- and 10-round magazines, shared with the AS Val and VSS Vintorez.",
+        "sourceNote": "TsNIITochMash's own exhibition placard, legible in this entry's hero photograph: 'Емкость магазина, патронов: 20, 10' (20- and 10-round magazines, shared with the AS Val and VSS Vintorez).",
         "source": "cniitochmash-placard"
       },
       "primary": true

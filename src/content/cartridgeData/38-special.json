@@ -90,7 +90,7 @@
             "status": "verified",
             "source": "wp-38-special",
             "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371269158",
-            "sourceNote": "Test barrel stated as 4 inches, vented — a vented barrel models a revolver’s cylinder gap and reads slower than a sealed one."
+            "sourceNote": "Test barrel stated as 4 inches, vented: a vented barrel models a revolver’s cylinder gap and reads slower than a sealed one."
           },
           "velocity": {
             "value": 230.1,

@@ -73,7 +73,7 @@
         "value": 58.32,
         "unit": "g",
         "status": "estimated",
-        "sourceNote": "From Frank Barnes' Cartridges of the World and John Taylor's African Rifles and Cartridges, as cited on Wikipedia (900 gr) — books, so recorded as estimated rather than verified."
+        "sourceNote": "From Frank Barnes' Cartridges of the World and John Taylor's African Rifles and Cartridges, as cited on Wikipedia (900 gr). Both are books, so the figure is recorded as estimated rather than verified."
       },
       "velocityByBarrel": [
         {
@@ -87,7 +87,7 @@
             "value": 563.9,
             "unit": "m/s",
             "status": "estimated",
-            "sourceNote": "The lightest of three standard factory loadings for this bullet weight, per Barnes and Taylor as cited on Wikipedia — books, so recorded as estimated rather than verified (1850 ft/s)."
+            "sourceNote": "The lightest of three standard factory loadings for this bullet weight (1850 ft/s), per Barnes and Taylor as cited on Wikipedia. Both are books, so the figure is recorded as estimated rather than verified."
           }
         }
       ]
@@ -99,7 +99,7 @@
         "value": 58.32,
         "unit": "g",
         "status": "estimated",
-        "sourceNote": "From Frank Barnes' Cartridges of the World and John Taylor's African Rifles and Cartridges, as cited on Wikipedia (900 gr) — books, so recorded as estimated rather than verified."
+        "sourceNote": "From Frank Barnes' Cartridges of the World and John Taylor's African Rifles and Cartridges, as cited on Wikipedia (900 gr). Both are books, so the figure is recorded as estimated rather than verified."
       },
       "velocityByBarrel": [
         {
@@ -113,7 +113,7 @@
             "value": 594.4,
             "unit": "m/s",
             "status": "estimated",
-            "sourceNote": "The middle of three standard factory loadings for this bullet weight, per Barnes and Taylor as cited on Wikipedia — books, so recorded as estimated rather than verified (1950 ft/s)."
+            "sourceNote": "The middle of three standard factory loadings for this bullet weight (1950 ft/s), per Barnes and Taylor as cited on Wikipedia. Both are books, so the figure is recorded as estimated rather than verified."
           }
         }
       ]
@@ -125,7 +125,7 @@
         "value": 58.32,
         "unit": "g",
         "status": "estimated",
-        "sourceNote": "From Frank Barnes' Cartridges of the World and John Taylor's African Rifles and Cartridges, as cited on Wikipedia (900 gr) — books, so recorded as estimated rather than verified."
+        "sourceNote": "From Frank Barnes' Cartridges of the World and John Taylor's African Rifles and Cartridges, as cited on Wikipedia (900 gr). Both are books, so the figure is recorded as estimated rather than verified."
       },
       "velocityByBarrel": [
         {
@@ -139,7 +139,7 @@
             "value": 624.8,
             "unit": "m/s",
             "status": "estimated",
-            "sourceNote": "The heaviest of three standard factory loadings for this bullet weight, per Barnes and Taylor as cited on Wikipedia — books, so recorded as estimated rather than verified (2050 ft/s)."
+            "sourceNote": "The heaviest of three standard factory loadings for this bullet weight (2050 ft/s), per Barnes and Taylor as cited on Wikipedia. Both are books, so the figure is recorded as estimated rather than verified."
           }
         }
       ]

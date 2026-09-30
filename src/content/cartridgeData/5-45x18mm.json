@@ -69,7 +69,7 @@
         "value": 3.0,
         "unit": "g",
         "status": "estimated",
-        "sourceNote": "Wikipedia's infobox figure, attributed only to 'C.I.P.' with no clickable datasheet page located for this ballistics figure specifically. ½mv² from the stated 320 m/s reproduces 153.6 J, not the infobox's own published 128 J — an internal inconsistency in the source, noted rather than resolved by guessing which figure is correct."
+        "sourceNote": "Wikipedia's infobox figure, attributed only to 'C.I.P.' with no clickable datasheet page located for this ballistics figure specifically. ½mv² from the stated 320 m/s reproduces 153.6 J, not the infobox's own published 128 J. This is an internal inconsistency in the source, noted rather than resolved by guessing which figure is correct."
       },
       "bulletType": "FMJ",
       "velocityByBarrel": [
@@ -98,7 +98,7 @@
     },
     {
       "src": "images/cartridges/5-45x18mm/psm.webp",
-      "alt": "A small field-stripped pistol laid out in three parts — frame, slide and magazine — on a green cloth.",
+      "alt": "A small field-stripped pistol laid out in three parts (frame, slide and magazine) on a green cloth.",
       "caption": "A field-stripped PSM, the compact Soviet pistol the 5.45×18mm cartridge was designed for.",
       "width": 1200,
       "height": 800,

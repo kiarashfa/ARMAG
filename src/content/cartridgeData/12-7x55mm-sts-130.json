@@ -15,7 +15,7 @@
     "value": 13.01,
     "unit": "mm",
     "status": "estimated",
-    "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; no free dimensional standard exists for this modern Russian military round — C.I.P.'s index has no matching entry"
+    "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; no free dimensional standard exists for this modern Russian military round: C.I.P.'s index has no matching entry"
   },
   "caseLength": {
     "value": 54.91,
@@ -27,7 +27,7 @@
     "value": 97.3,
     "unit": "mm",
     "status": "estimated",
-    "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; this is the STs-130 (VKS rifle) loading specifically — the shorter PS-12 loading for the ShAK-12/RSh-12 is 73 mm overall and cannot share a magazine or chamber with it despite the shared case"
+    "sourceNote": "Wikipedia infobox, uncited on Wikipedia itself; this is the STs-130 (VKS rifle) loading specifically: the shorter PS-12 loading for the ShAK-12/RSh-12 is 73 mm overall and cannot share a magazine or chamber with it despite the shared case"
   },
   "baseDiameter": {
     "value": 14.86,

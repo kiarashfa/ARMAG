@@ -38,7 +38,7 @@
     "value": 3.74,
     "unit": "kg",
     "status": "estimated",
-    "sourceNote": "From Philip Peterson, Standard Catalog of Military Firearms (2011), p. 220 — a book, so recorded as estimated rather than verified per this site's sourcing rule. Given unloaded."
+    "sourceNote": "From Philip Peterson, Standard Catalog of Military Firearms (2011), p. 220. The source is a book, so the figure is recorded as estimated rather than verified per this site's sourcing rule. Given unloaded."
   },
   "length": {
     "value": 902,
@@ -50,7 +50,7 @@
     "value": 210,
     "unit": "mm",
     "status": "estimated",
-    "sourceNote": "From Philip Peterson, Standard Catalog of Military Firearms (2011) — a book, so recorded as estimated rather than verified."
+    "sourceNote": "From Philip Peterson, Standard Catalog of Military Firearms (2011). The source is a book, so the figure is recorded as estimated rather than verified."
   },
   "effectiveRange": {
     "value": 185,
