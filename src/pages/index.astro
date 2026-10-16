@@ -3,18 +3,18 @@
  * Homepage: what ARMAG is, and the ways into it.
  *
  * It holds a fixed amount however large the database grows: the types to
- * browse by, a featured handful that changes weekly, and the doors to the full
+ * browse by, a featured handful that changes daily, and the doors to the full
  * catalogue at `/guns/`, the cartridges, the manufacturers and the glossary. It
  * used to carry the whole catalogue itself, which would have made it the
  * heaviest page on the site at a few thousand entries.
  */
 import BaseLayout from '../components/ui/BaseLayout.astro';
+import FeaturedCard from '../components/blocks/FeaturedCard.astro';
 import TypeBadge from '../components/blocks/TypeBadge.astro';
 import { buildCatalogue } from '../lib/content/catalogue.ts';
 import { getCartridges, getGuns, getMakers } from '../lib/content/entries.ts';
-import { assetUrl, gunHref, href, taxonomyHref } from '../lib/content/href.ts';
-import { srcsetFor } from '../lib/content/srcset.ts';
-import { weeklyPick } from '../lib/showcase.ts';
+import { href, taxonomyHref } from '../lib/content/href.ts';
+import { FEATURED_SCRIPT, featured, featuredAttributes, featuredSlice } from '../lib/showcase.ts';
 import { types } from '../schemas/taxonomy.ts';
 
 const [guns, cartridges, makers] = await Promise.all([getGuns(), getCartridges(), getMakers()]);
@@ -24,21 +24,24 @@ const typeLabel = new Map(types.terms.map((t) => [t.id, t.label]));
 
 /* Only entries with their own page and a photograph: a featured card that led
    to a thin row, or showed an empty frame, would be the first thing a visitor
-   sees. */
-const featured = weeklyPick(
-  guns.filter((gun) => gun.data.images.length > 0 && rowsById.get(gun.id)?.hasPage),
-  6,
-).map((gun) => {
-  const row = rowsById.get(gun.id)!;
-  return {
-    id: gun.id,
-    name: gun.data.name,
-    image: gun.data.images[0]!,
-    type: row.type ? typeLabel.get(row.type) ?? row.type : null,
-    maker: row.makerName,
-    year: row.year,
-  };
-});
+   sees. Spread by type, so a day's row is not three rifles side by side. */
+const picks = featured(
+  guns
+    .filter((gun) => gun.data.images.length > 0 && rowsById.get(gun.id)?.hasPage)
+    .map((gun) => {
+      const row = rowsById.get(gun.id)!;
+      return {
+        id: gun.id,
+        name: gun.data.name,
+        image: gun.data.images[0]!,
+        group: row.type ?? '',
+        type: row.type ? typeLabel.get(row.type) ?? row.type : null,
+        maker: row.makerName,
+        year: row.year,
+      };
+    }),
+  { count: 6, id: (entry) => entry.id, group: (entry) => entry.group },
+);
 
 const doors = [
   { label: 'Firearms', path: href('guns'), note: `All ${rows.length} entries, filterable and sortable.` },
@@ -79,51 +82,24 @@ const doors = [
     </nav>
 
     {
-      featured.length > 0 && (
-        <section class="mt-(--layout-section-gap)" aria-labelledby="featured-title">
+      picks.count > 0 && (
+        <section class="mt-(--layout-section-gap)" aria-labelledby="featured-title" {...featuredAttributes(picks)}>
           <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-line pb-3">
             <h2 id="featured-title" class="type-title text-xl">
-              Featured this week
+              Featured today
             </h2>
             <a href={href('guns')} class="type-data text-sm text-ink-secondary no-underline hover:text-ui-accent">
               All {rows.length} entries &rarr;
             </a>
           </div>
-          <ul class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map((entry) => (
-              <li>
-                <a
-                  href={gunHref(entry.id)}
-                  class="group flex h-full flex-col overflow-hidden rounded-lg border border-line bg-surface-1 no-underline transition-colors hover:border-line-strong"
-                >
-                  <span class="block aspect-[3/2] overflow-hidden bg-surface-2">
-                    <img
-                      src={assetUrl(entry.image.src)}
-                      srcset={srcsetFor(assetUrl(entry.image.src), entry.image.width)}
-                      sizes="(min-width: 64rem) 22rem, (min-width: 40rem) 45vw, 100vw"
-                      alt={entry.image.alt}
-                      width={entry.image.width}
-                      height={entry.image.height}
-                      loading="lazy"
-                      decoding="async"
-                      class={
-                        (entry.image.width ?? 0) / (entry.image.height ?? 1) > 1.9
-                          ? 'size-full object-contain p-3'
-                          : 'size-full object-cover'
-                      }
-                    />
-                  </span>
-                  <span class="flex flex-1 flex-col p-4">
-                    <span class="type-data text-xs uppercase tracking-widest text-ink-muted">
-                      {[entry.type, entry.year].filter(Boolean).join(' · ')}
-                    </span>
-                    <span class="type-title mt-1 text-lg text-ink group-hover:text-ui-accent">{entry.name}</span>
-                    {entry.maker && <span class="type-data mt-1 text-sm text-ink-secondary">{entry.maker}</span>}
-                  </span>
-                </a>
-              </li>
-            ))}
+          {/* Every candidate, inert until the script below clones the reader's day. */}
+          <template data-featured-pool data-pagefind-ignore>
+            {picks.pool.map((entry) => <FeaturedCard entry={entry} />)}
+          </template>
+          <ul class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-featured-list>
+            {featuredSlice(picks.pool, picks.count, picks.start).map((entry) => <FeaturedCard entry={entry} />)}
           </ul>
+          <script is:inline set:html={FEATURED_SCRIPT} />
         </section>
       )
     }

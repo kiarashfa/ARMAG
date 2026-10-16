@@ -1,0 +1,56 @@
+---
+/**
+ * One entry as a homepage card: its photograph, then type and year, name and
+ * maker. The homepage renders the day's cards and every other candidate with
+ * this one component, so a card swapped in by the browser is the same markup
+ * as one rendered by the build.
+ */
+import type { ImageRef } from '../../schemas/primitives.ts';
+import { assetUrl, gunHref } from '../../lib/content/href.ts';
+import { srcsetFor } from '../../lib/content/srcset.ts';
+
+interface Props {
+  entry: {
+    id: string;
+    name: string;
+    image: ImageRef;
+    type: string | null;
+    maker: string | null;
+    year: number | null;
+  };
+}
+
+const { entry } = Astro.props;
+---
+
+<li>
+  <a
+    href={gunHref(entry.id)}
+    class="group flex h-full flex-col overflow-hidden rounded-lg border border-line bg-surface-1 no-underline transition-colors hover:border-line-strong"
+  >
+    <span class="block aspect-[3/2] overflow-hidden bg-surface-2">
+      <img
+        src={assetUrl(entry.image.src)}
+        srcset={srcsetFor(assetUrl(entry.image.src), entry.image.width)}
+        sizes="(min-width: 64rem) 22rem, (min-width: 40rem) 45vw, 100vw"
+        alt={entry.image.alt}
+        width={entry.image.width}
+        height={entry.image.height}
+        loading="lazy"
+        decoding="async"
+        class={
+          (entry.image.width ?? 0) / (entry.image.height ?? 1) > 1.9
+            ? 'size-full object-contain p-3'
+            : 'size-full object-cover'
+        }
+      />
+    </span>
+    <span class="flex flex-1 flex-col p-4">
+      <span class="type-data text-xs uppercase tracking-widest text-ink-muted">
+        {[entry.type, entry.year].filter(Boolean).join(' · ')}
+      </span>
+      <span class="type-title mt-1 text-lg text-ink group-hover:text-ui-accent">{entry.name}</span>
+      {entry.maker && <span class="type-data mt-1 text-sm text-ink-secondary">{entry.maker}</span>}
+    </span>
+  </a>
+</li>
