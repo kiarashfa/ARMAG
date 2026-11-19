@@ -1,0 +1,131 @@
+{
+  "id": "bechowiec-1",
+  "name": "Bechowiec-1",
+  "kind": "model",
+  "wikidataId": "Q3352927",
+  "makerRef": null,
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Bechowiec",
+      "kind": "nickname",
+      "note": "From bechowiec, an informal name for members of the Bataliony Chłopskie (Peasants' Battalions)."
+    }
+  ],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "poland",
+  "producedIn": [
+    "poland"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "primary": true,
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-bechowiec-1",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362908582",
+        "sourceNote": "A 32-round box magazine, from the infobox, uncited there."
+      }
+    },
+    {
+      "cartridgeRef": "7-62x25mm-tokarev",
+      "primary": false,
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-bechowiec-1",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362908582",
+        "sourceNote": "A 32-round box magazine from the infobox; the article says the last three or four guns used this cartridge."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/bechowiec-1/hero.webp",
+      "alt": "A short submachine gun with a long slide-type receiver and a box magazine hanging below, displayed on a stand in a museum case, with a wooden-handled item behind it",
+      "caption": "The surviving Bechowiec-1 on display at the Polish Army Museum in Warsaw.",
+      "width": 800,
+      "height": 600,
+      "credit": {
+        "author": "Halibutt",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MWP_Bechowiec.JPG",
+        "title": "File:MWP Bechowiec.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    },
+    {
+      "src": "images/guns/bechowiec-1/sling-and-magazine.webp",
+      "alt": "Crop of a pale photograph showing the long receiver of a submachine gun with a rectangular box magazine below it and a thin sling hanging at left",
+      "caption": "A cropped photograph of a Bechowiec-1 showing the magazine and sling.",
+      "width": 739,
+      "height": 476,
+      "credit": {
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Submachine_gun_Bechowiec.jpg",
+        "title": "File:Submachine gun Bechowiec.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-bechowiec-1",
+      "type": "wikipedia",
+      "title": "Bechowiec-1",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362908582",
+      "lang": "en",
+      "revision": "1362908582",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "introduced": 1943,
+  "massEmpty": {
+    "value": 2.43,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-bechowiec-1",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362908582",
+    "sourceNote": "The infobox gives 2.43 kg and 2.82 kg, labelled without and with magazine, uncited there."
+  },
+  "length": {
+    "value": 445,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-bechowiec-1",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362908582",
+    "sourceNote": "From the infobox, uncited there. The gun had no stock."
+  },
+  "barrelLength": {
+    "value": 240,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-bechowiec-1",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362908582",
+    "sourceNote": "From the infobox, uncited there."
+  }
+}

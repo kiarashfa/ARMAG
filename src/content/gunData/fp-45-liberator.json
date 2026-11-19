@@ -22,7 +22,7 @@
   },
   "fireModes": ["single-shot"],
   "feedSystem": [],
-  "roles": ["general-purpose"],
+  "roles": [],
   "massEmpty": {
     "value": 0.45,
     "unit": "kg",

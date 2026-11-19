@@ -1,0 +1,23 @@
+{
+  "id": "astra-unceta-y-cia",
+  "name": "Astra-Unceta y Cia",
+  "wikidataId": "Q750329",
+  "country": "spain",
+  "founded": 1908,
+  "dissolved": 1997,
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-astra-unceta-y-cia-sa",
+      "type": "wikipedia",
+      "title": "Astra-Unceta y Cia SA",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1356889142",
+      "lang": "en",
+      "revision": "1356889142",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

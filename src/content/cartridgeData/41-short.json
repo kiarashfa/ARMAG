@@ -1,0 +1,159 @@
+{
+  "id": "41-short",
+  "name": ".41 Short",
+  "wikidataId": "Q4545343",
+  "aliases": [
+    {
+      "name": ".41 Short Rimfire",
+      "kind": "commercial"
+    },
+    {
+      "name": ".41 Rimfire",
+      "kind": "commercial"
+    }
+  ],
+  "caseType": "rimmed",
+  "standard": "none",
+  "loads": [
+    {
+      "id": "130gr-lead",
+      "name": "130 gr lead",
+      "bulletType": "lead",
+      "bulletMass": {
+        "value": 8.42,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-41-short",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379558752",
+        "sourceNote": "130 grains from the article, which cites Cartridges of the World, a book with no link, so estimated."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 76.2,
+            "unit": "mm",
+            "status": "estimated",
+            "source": "wp-41-short",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379558752",
+            "sourceNote": "The 3-inch test barrel the infobox states, converted."
+          },
+          "velocity": {
+            "value": 129.5,
+            "unit": "m/s",
+            "status": "estimated",
+            "source": "wp-41-short",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379558752",
+            "sourceNote": "425 ft/s from the article, citing Cartridges of the World; the article notes that a later test by Holt Bodinson measured 621 ft/s, so the figure is disputed and recorded as estimated."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/41-short/hero.webp",
+      "alt": "A copper-cased cartridge with a rounded grey lead bullet standing upright beside a second cartridge lying on its side to show the rimmed base, on a wooden surface",
+      "caption": "A .41 rimfire cartridge, with a second shown from its rimmed head.",
+      "width": 739,
+      "height": 490,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.41_Rimfire_cartridge.JPG",
+        "title": "File:.41 Rimfire cartridge.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/41-short/ammunition-box.webp",
+      "alt": "An open box of rimfire cartridges in rows beside a lid printed .41 Short Rimfire, Navy Arms Company, with a drawing of an over-under derringer",
+      "caption": "A Navy Arms Company box of .41 Short Rimfire ammunition, with a derringer pictured on the lid.",
+      "width": 1200,
+      "height": 1003,
+      "credit": {
+        "author": "AntiqueGunRoom.Net",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.41_Short_Rimfire_ammunition_box.jpg",
+        "title": "File:.41 Short Rimfire ammunition box.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-41-short",
+      "type": "wikipedia",
+      "title": ".41 Short",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1379558752",
+      "lang": "en",
+      "revision": "1379558752",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "caseLength": {
+    "value": 11.86,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-41-short",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379558752",
+    "sourceNote": "0.467 inch from the infobox, converted; no C.I.P. sheet was found."
+  },
+  "overallLength": {
+    "value": 23.19,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-41-short",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379558752",
+    "sourceNote": "0.913 inch from the infobox, converted."
+  },
+  "bulletDiameter": {
+    "value": 10.29,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-41-short",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379558752",
+    "sourceNote": "0.405 inch from the infobox, converted."
+  },
+  "neckDiameter": {
+    "value": 10.31,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-41-short",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379558752",
+    "sourceNote": "0.406 inch from the infobox, converted."
+  },
+  "baseDiameter": {
+    "value": 10.31,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-41-short",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379558752",
+    "sourceNote": "0.406 inch from the infobox, converted."
+  },
+  "rimDiameter": {
+    "value": 11.89,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-41-short",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379558752",
+    "sourceNote": "0.468 inch from the infobox, converted."
+  },
+  "maxPressure": {
+    "value": 89.6,
+    "unit": "MPa",
+    "status": "estimated",
+    "source": "wp-41-short",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1379558752",
+    "sourceNote": "13,000 psi from the infobox, converted, which labels the method C.I.P. but cites no sheet."
+  },
+  "pressureStandard": "cip",
+  "caseShape": "straight",
+  "introduced": 1863,
+  "designedBy": "National Arms Company"
+}

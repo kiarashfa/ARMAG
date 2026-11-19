@@ -1,0 +1,163 @@
+{
+  "id": "38-55-winchester",
+  "name": ".38-55 Winchester",
+  "wikidataId": "Q2806383",
+  "aliases": [
+    {
+      "name": ".38-55 Ballard",
+      "kind": "commercial",
+      "note": "The original name, before Winchester renamed the cartridge."
+    },
+    {
+      "name": "9.6×53mmR",
+      "kind": "commercial",
+      "note": "The metric designation the article gives."
+    },
+    {
+      "name": "38-55 Win.",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    }
+  ],
+  "caseType": "rimmed",
+  "standard": "cip",
+  "loads": [
+    {
+      "id": "255gr-standard",
+      "name": "255 gr, standard pressure",
+      "bulletMass": {
+        "value": 16.52,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-38-55-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378629648",
+        "sourceNote": "255 grains from the infobox ballistics table, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    },
+    {
+      "id": "255gr-high-velocity",
+      "name": "255 gr, high velocity",
+      "bulletMass": {
+        "value": 16.52,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-38-55-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378629648",
+        "sourceNote": "255 grains from the infobox ballistics table, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    },
+    {
+      "id": "buffalo-bore-255gr-jfn",
+      "name": "Buffalo Bore 255 gr JFN bonded core +P",
+      "manufacturer": "Buffalo Bore",
+      "bulletType": "JFN",
+      "bulletMass": {
+        "value": 16.52,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-38-55-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378629648",
+        "sourceNote": "255 grains from the infobox ballistics table, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/38-55-winchester/hero.webp",
+      "alt": "Two nickel-plated cartridges against a white ground: a long one standing upright with a copper-coloured bullet tip, and a shorter round lying in front of it with its head facing the camera",
+      "caption": "A nickel-plated .38-55 Winchester cartridge; the file does not identify the second round beside it.",
+      "width": 994,
+      "height": 1408,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:38-55_Win.JPG",
+        "title": "File:38-55 Win.JPG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-38-55-winchester",
+      "type": "wikipedia",
+      "title": ".38-55 Winchester",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1378629648",
+      "lang": "en",
+      "revision": "1378629648",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-38-55-win",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 38-55 Win.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page99.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "caseLength": {
+    "value": 52.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-55-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page99.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 63.75,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-55-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page99.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 9.58,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-55-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page99.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 9.96,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-55-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page99.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 10.69,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-55-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page99.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 12.85,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-38-55-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page99.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 240,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-38-55-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page99.pdf",
+    "sourceNote": "Pmax 2400 bar, transducer method."
+  },
+  "pressureStandard": "cip",
+  "caseShape": "straight",
+  "introduced": 1884,
+  "designedBy": "Ballard Rifle & Cartridge Company"
+}

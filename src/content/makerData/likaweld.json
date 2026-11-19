@@ -1,0 +1,20 @@
+{
+  "id": "likaweld",
+  "name": "Likaweld",
+  "country": "croatia",
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-zagi-m-91",
+      "type": "wikipedia",
+      "title": "Zagi M-91",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373097237",
+      "lang": "en",
+      "revision": "1373097237",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

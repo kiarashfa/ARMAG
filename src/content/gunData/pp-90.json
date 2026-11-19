@@ -1,0 +1,138 @@
+{
+  "id": "pp-90",
+  "name": "PP-90",
+  "kind": "model",
+  "wikidataId": "Q1066761",
+  "makerRef": "kbp-instrument-design-bureau",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "soviet-union",
+  "producedIn": [
+    "russia"
+  ],
+  "fireModes": [
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "law-enforcement"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x18mm-makarov",
+      "primary": true,
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-pp-90",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1386500127",
+        "sourceNote": "From the infobox and article text: a 30-round detachable box magazine housed in the hollowed pistol grip, uncited there."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/pp-90/hero.webp",
+      "alt": "A black angular submachine gun mounted on a wall inside a glass display case, its folded body and magazine laid out as a compact block",
+      "caption": "A PP-90 submachine gun on display at the Tula State Arms Museum.",
+      "width": 1600,
+      "height": 1067,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ПП-90_-_Тульский_Государственный_Музея_Оружия_01.jpg",
+        "title": "File:ПП-90 - Тульский Государственный Музея Оружия 01.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/pp-90/profile.webp",
+      "alt": "Left-side view of a black submachine gun with a long box magazine in a pistol-grip position, flip-up rear sight and a cocking area at the rear, on a black ground",
+      "caption": "A PP-90 shown in its deployed, ready-to-fire arrangement.",
+      "width": 672,
+      "height": 371,
+      "credit": {
+        "author": "Eldramaturgobohemio",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:PP90_PNG.png",
+        "title": "File:PP90 PNG.png",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-pp-90",
+      "type": "wikipedia",
+      "title": "PP-90",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1386500127",
+      "lang": "en",
+      "revision": "1386500127",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "massEmpty": {
+    "value": 1.83,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-pp-90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1386500127",
+    "sourceNote": "Empty, from the infobox, uncited there; the loaded figure there is 2.23 kg."
+  },
+  "length": {
+    "value": 490,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pp-90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1386500127",
+    "sourceNote": "Unfolded, from the infobox, uncited there. The article gives the folded block as 270 × 90 × 32 mm."
+  },
+  "lengthFolded": {
+    "value": 270,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pp-90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1386500127",
+    "sourceNote": "Folded length of the stowed block, from the article text, uncited there."
+  },
+  "barrelLength": {
+    "value": 200,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pp-90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1386500127",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 650,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-pp-90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1386500127",
+    "sourceNote": "Midpoint of the infobox range of 600–700 rounds per minute, uncited there."
+  },
+  "effectiveRange": {
+    "value": 100,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-pp-90",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1386500127",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "introduced": 1990
+}

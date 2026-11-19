@@ -1,0 +1,183 @@
+{
+  "id": "walther-gsp",
+  "name": "Walther GSP",
+  "kind": "model",
+  "wikidataId": "Q1404035",
+  "makerRef": "carl-walther",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Gebrauchs Sportpistole",
+      "kind": "commercial",
+      "note": "German for sport pistol for standard use."
+    }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "germany",
+  "producedIn": [
+    "germany"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "target",
+    "competition"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "22-long-rifle",
+      "primary": true,
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-walther-gsp",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1291328434",
+        "sourceNote": "A 5-shot magazine, from the infobox, uncited there."
+      }
+    },
+    {
+      "cartridgeRef": "32-s-w-long",
+      "primary": false,
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-walther-gsp",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1291328434",
+        "sourceNote": "A 5-shot magazine, from the infobox, uncited there."
+      }
+    }
+  ],
+  "variants": [
+    {
+      "id": "gsp-c",
+      "name": "GSP-C",
+      "summary": "The GSP chambered for .32 S&W Long wadcutter, intended for competitions that allowed only centrefire cartridges.",
+      "overrides": {
+        "massEmpty": {
+          "value": 1.28,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-walther-gsp",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1291328434",
+          "sourceNote": "45.15 oz in the infobox, converted, for the .32 S&W Long version."
+        },
+        "chamberings": [
+          {
+            "cartridgeRef": "32-s-w-long",
+            "primary": true,
+            "capacity": {
+              "value": 5,
+              "unit": "",
+              "status": "estimated",
+              "source": "wp-walther-gsp",
+              "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1291328434",
+              "sourceNote": "A 5-shot magazine, from the infobox, uncited there."
+            }
+          }
+        ]
+      },
+      "configurations": []
+    },
+    {
+      "id": "gsp-expert",
+      "name": "GSP Expert",
+      "summary": "A later, more accurate version with a vibration-absorbing aluminium sleeve around the barrel holding inertial dampers.",
+      "overrides": {},
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/walther-gsp/hero.webp",
+      "alt": "A target pistol with a walnut orthopaedic grip, a rail-topped slide and a trigger guard, with a second barrel assembly and a detached magazine laid out above and beside it on a white ground",
+      "caption": "A Walther GSP with a spare barrel-and-slide conversion unit and magazine.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "User:Wiki-Chris~commonswiki",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Walther_GSP_1_noBG.jpg",
+        "title": "File:Walther GSP 1 noBG.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/walther-gsp/right-side.webp",
+      "alt": "Right side of a target pistol frame with a black slide, a trigger and guard and an anatomical walnut grip with a thumb rest, on white",
+      "caption": "The right side of a Walther GSP, cropped at the grip.",
+      "width": 1000,
+      "height": 587,
+      "credit": {
+        "author": "Michael Sullivan",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Walther_GSP_-_right.jpg",
+        "title": "File:Walther GSP - right.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/walther-gsp/gsp-expert.webp",
+      "alt": "Close view of a blue-black barrel sleeve with transverse slots and the engraved words GSP EXPERT, lying on a wooden surface",
+      "caption": "The barrel sleeve of a Walther GSP Expert in .22 Long Rifle.",
+      "width": 800,
+      "height": 600,
+      "credit": {
+        "author": "Spectrums",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Walther_GSP-Expert_22LR_001.jpg",
+        "title": "File:Walther GSP-Expert 22LR 001.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-walther-gsp",
+      "type": "wikipedia",
+      "title": "Walther GSP",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1291328434",
+      "lang": "en",
+      "revision": "1291328434",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "massEmpty": {
+    "value": 1.2,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-walther-gsp",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1291328434",
+    "sourceNote": "42.33 oz in the infobox, converted, listed for the .22 Long Rifle; the .32 S&W Long version is 45.15 oz. Whether a magazine is included is not stated."
+  },
+  "length": {
+    "value": 437,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-walther-gsp",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1291328434",
+    "sourceNote": "17.19 in from the infobox, converted."
+  },
+  "barrelLength": {
+    "value": 115,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-walther-gsp",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1291328434",
+    "sourceNote": "4.5276 in from the infobox, converted."
+  },
+  "introduced": 1968
+}

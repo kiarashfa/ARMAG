@@ -1,0 +1,20 @@
+{
+  "id": "pfeifer-waffen",
+  "name": "Pfeifer Waffen",
+  "country": "austria",
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-pfeifer-zeliska-600-nitro-express-revolver",
+      "type": "wikipedia",
+      "title": "Pfeifer Zeliska .600 Nitro Express revolver",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1380603045",
+      "lang": "en",
+      "revision": "1380603045",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

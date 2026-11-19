@@ -1,0 +1,88 @@
+{
+  "id": "7-62x37mm-musang",
+  "name": "7.62×37mm Musang",
+  "wikidataId": "Q16911093",
+  "aliases": [
+    {
+      "name": "7.62×37mm Musang",
+      "kind": "military"
+    }
+  ],
+  "caseType": "rimless",
+  "standard": "none",
+  "loads": [],
+  "images": [
+    {
+      "src": "images/cartridges/7-62x37mm-musang/hero.webp",
+      "alt": "Three brass cartridges with copper-jacketed pointed bullets standing in a wooden display stand with a brass plate reading 7.62 x 37 Musang, beside a Government Arsenal ammunition box",
+      "caption": "7.62×37mm Musang cartridges on a display stand beside a Government Arsenal box.",
+      "width": 1600,
+      "height": 900,
+      "credit": {
+        "author": "Rhk111",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7.62_x_37_mm_Musang_Ammunition.jpg",
+        "title": "File:7.62 x 37 mm Musang Ammunition.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/7-62x37mm-musang/box-and-display.webp",
+      "alt": "A cardboard ammunition box printed Republic of the Philippines, Department of National Defense, Government Arsenal, 7.62 x 37mm Musang, next to a wooden stand holding cartridges, seen through glass",
+      "caption": "A Government Arsenal box of 7.62×37mm Musang ammunition on display.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Girder2139",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7.62×37mm_Musang_cartridges_on_display.jpg",
+        "title": "File:7.62×37mm Musang cartridges on display.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-7-62-37mm-musang",
+      "type": "wikipedia",
+      "title": "7.62×37mm Musang",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1380371782",
+      "lang": "en",
+      "revision": "1380371782",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "caseLength": {
+    "value": 37,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-62-37mm-musang",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380371782",
+    "sourceNote": "The nominal length in the designation; no source publishes a measured case length."
+  },
+  "overallLength": {
+    "value": 57.4,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-62-37mm-musang",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380371782",
+    "sourceNote": "The article says the overall length is equivalent to that of the 5.56×45mm NATO; 57.4 mm is the length of the M855 round, borrowed from that cartridge."
+  },
+  "bulletDiameter": {
+    "value": 7.62,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-62-37mm-musang",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380371782",
+    "sourceNote": "The nominal calibre in the designation; no source publishes a measured bullet diameter."
+  },
+  "caseShape": "bottleneck",
+  "introduced": 2012,
+  "designedBy": "Government Arsenal"
+}

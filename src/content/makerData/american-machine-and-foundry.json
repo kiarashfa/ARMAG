@@ -1,0 +1,36 @@
+{
+  "id": "american-machine-and-foundry",
+  "name": "American Machine and Foundry",
+  "wikidataId": "Q4744378",
+  "country": "united-states",
+  "founded": 1900,
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-american-machine-and-foundry",
+      "type": "wikipedia",
+      "title": "American Machine and Foundry",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1371402298",
+      "lang": "en",
+      "revision": "1371402298",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "logo": {
+    "src": "images/makers/american-machine-and-foundry/logo.webp",
+    "alt": "The AMF wordmark in heavy black capital letters, with a red downward-pointing triangle set above the M.",
+    "caption": "The AMF mark used from 1970, when the company became AMF, Inc.",
+    "width": 1200,
+    "height": 252,
+    "credit": {
+      "author": "American Machine and Foundry",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:AMF_Logo_1970.svg",
+      "title": "File:AMF Logo 1970.svg",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The source records the file as Public domain. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  }
+}

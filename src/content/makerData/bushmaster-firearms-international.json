@@ -1,0 +1,34 @@
+{
+  "id": "bushmaster-firearms-international",
+  "name": "Bushmaster Firearms International",
+  "wikidataId": "Q2510641",
+  "country": "united-states",
+  "logo": {
+    "src": "images/makers/bushmaster-firearms-international/logo.webp",
+    "alt": "The word BUSHMASTER in bold yellow italic capitals with a black outline, above the word FIREARMS in smaller spaced black capitals",
+    "caption": "The Bushmaster Firearms text mark.",
+    "width": 310,
+    "height": 84,
+    "credit": {
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bushmaster_Firearms_text_only_logo.png",
+      "title": "File:Bushmaster Firearms text only logo.png",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The source records the file as Public domain. The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-bushmaster-firearms-international",
+      "type": "wikipedia",
+      "title": "Bushmaster Firearms International",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1359349902",
+      "lang": "en",
+      "revision": "1359349902",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

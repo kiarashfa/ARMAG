@@ -1,0 +1,163 @@
+{
+  "id": "9mm-browning-long",
+  "name": "9mm Browning Long",
+  "wikidataId": "Q4646472",
+  "aliases": [
+    {
+      "name": "9×20mmSR",
+      "kind": "commercial"
+    },
+    {
+      "name": "9 mm Browning long",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    }
+  ],
+  "caseType": "semi-rimmed",
+  "standard": "cip",
+  "loads": [
+    {
+      "id": "prvi-partizan-108gr-fmj",
+      "name": "Prvi Partizan 108 gr FMJ",
+      "manufacturer": "Prvi Partizan",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 7,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-9mm-browning-long",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1319290089",
+        "sourceNote": "Published in the article as a 7 gram (108 grain) bullet; the article's velocity of 350 m/s has no stated barrel length, so none is recorded."
+      }
+    },
+    {
+      "id": "110gr-fmj",
+      "name": "110 gr FMJ",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 7.13,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-9mm-browning-long",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1319290089",
+        "sourceNote": "110 grains from the infobox, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/9mm-browning-long/hero.webp",
+      "alt": "A single brass cartridge with a flat-nosed grey metal-jacketed bullet standing upright against a pale grey background",
+      "caption": "A 9mm Browning Long cartridge.",
+      "width": 858,
+      "height": 800,
+      "credit": {
+        "author": "KEN",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:9mm_long_cartridge.jpg",
+        "title": "File:9mm long cartridge.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/9mm-browning-long/swedish-box.webp",
+      "alt": "An open cardboard box printed in Swedish, with a label reading 9 mm sk pistolpatroner m/07, above rows of brass cartridges with rimmed bases",
+      "caption": "A box of Swedish-pattern 9 mm pistol cartridges (m/07) made by FN, in the 9mm Browning Long.",
+      "width": 809,
+      "height": 1000,
+      "credit": {
+        "author": "KEN",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:9mm_long_in_a_box.jpg",
+        "title": "File:9mm long in a box.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-9mm-browning-long",
+      "type": "wikipedia",
+      "title": "9mm Browning Long",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1319290089",
+      "lang": "en",
+      "revision": "1319290089",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-9mm-browning-long",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 9 mm Browning long",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page25.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "caseLength": {
+    "value": 20.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm-browning-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page25.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 28,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm-browning-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page25.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 9.09,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm-browning-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page25.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 9.68,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm-browning-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page25.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 9.72,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm-browning-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page25.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 10.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-9mm-browning-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page25.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 165,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-9mm-browning-long",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iv/tabivcal-en-page25.pdf",
+    "sourceNote": "Pmax 1650 bar, transducer method."
+  },
+  "pressureStandard": "cip",
+  "caseShape": "straight",
+  "introduced": 1903,
+  "designedBy": "John Moses Browning"
+}

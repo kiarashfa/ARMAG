@@ -1,0 +1,98 @@
+{
+  "id": "bushmaster-arm-pistol",
+  "name": "Bushmaster Arm Pistol",
+  "kind": "model",
+  "wikidataId": "Q5001537",
+  "makerRef": "bushmaster-firearms-international",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "united-states",
+  "producedIn": [
+    "united-states"
+  ],
+  "fireModes": [],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "personal-defence"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "primary": true,
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-bushmaster-arm-pistol",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1318493679",
+        "sourceNote": "A 30-round detachable STANAG magazine, from the infobox and article text, uncited there."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/bushmaster-arm-pistol/hero.webp",
+      "alt": "A grainy photograph of a museum wall hung with technical drawings, with a long pistol-grip firearm mounted above a second, longer firearm",
+      "caption": "The Bushmaster Arm Pistol in the National Firearms Museum, shown beneath a Colt M1911.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Amendola90",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gwinn_Arms_Bushmaster_pistol.jpg",
+        "title": "File:Gwinn Arms Bushmaster pistol.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-bushmaster-arm-pistol",
+      "type": "wikipedia",
+      "title": "Bushmaster Arm Pistol",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1318493679",
+      "lang": "en",
+      "revision": "1318493679",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "introduced": 1972,
+  "massEmpty": {
+    "value": 1.93,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-bushmaster-arm-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1318493679",
+    "sourceNote": "4.25 lb from the infobox, converted, uncited there; whether it includes a magazine is not stated."
+  },
+  "length": {
+    "value": 508,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-bushmaster-arm-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1318493679",
+    "sourceNote": "20 in from the infobox, converted, uncited there."
+  },
+  "barrelLength": {
+    "value": 292,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-bushmaster-arm-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1318493679",
+    "sourceNote": "11.5 in from the infobox, converted, uncited there."
+  }
+}

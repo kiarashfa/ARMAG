@@ -1,0 +1,125 @@
+{
+  "id": "2mm-kolibri",
+  "name": "2mm Kolibri",
+  "wikidataId": "Q222891",
+  "aliases": [
+    {
+      "name": "2.7mm Kolibri",
+      "kind": "commercial",
+      "note": "Also given as the 2.7mm Kolibri Car Pistol and 2.7×9mm Kolibri."
+    }
+  ],
+  "caseType": "rimless",
+  "standard": "none",
+  "loads": [
+    {
+      "id": "fmj",
+      "name": "FMJ",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 0.2,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-2mm-kolibri",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1361909683",
+        "sourceNote": "From the article text, which cites Wilson's Textbook of Automatic Pistols (1943), a book with no link; the article describes the velocity as an estimate and gives no test barrel, so none is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/2mm-kolibri/hero.webp",
+      "alt": "A line drawing of a small straight-walled cartridge with a rounded bullet, labelled with diameters of 2.7, 3.5, 3.6 and 3.6 mm and lengths of 9.4 and 11.0 mm",
+      "caption": "A dimension drawing of the 2mm Kolibri cartridge, in millimetres.",
+      "width": 410,
+      "height": 500,
+      "credit": {
+        "author": "Undefined",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2mm_Kolibri_dimensions.jpg",
+        "title": "File:2mm Kolibri dimensions.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/2mm-kolibri/kolibri-pistol.webp",
+      "alt": "A very small dark pistol with a checkered grip and a short barrel mounted behind glass in a museum display, casting a shadow on the backing",
+      "caption": "A Kolibri pistol on display in a museum.",
+      "width": 1200,
+      "height": 797,
+      "credit": {
+        "author": "Staffan Vilcans",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pistol_Kolibri_(19890833309).jpg",
+        "title": "File:Pistol Kolibri (19890833309).jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-2mm-kolibri",
+      "type": "wikipedia",
+      "title": "2mm Kolibri",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1361909683",
+      "lang": "en",
+      "revision": "1361909683",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "caseLength": {
+    "value": 9.4,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-2mm-kolibri",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1361909683",
+    "sourceNote": "From the infobox, uncited there; no C.I.P. sheet exists for the cartridge."
+  },
+  "overallLength": {
+    "value": 11,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-2mm-kolibri",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1361909683",
+    "sourceNote": "From the infobox and article text, uncited there."
+  },
+  "bulletDiameter": {
+    "value": 2.7,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-2mm-kolibri",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1361909683",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "neckDiameter": {
+    "value": 3.5,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-2mm-kolibri",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1361909683",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "baseDiameter": {
+    "value": 3.6,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-2mm-kolibri",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1361909683",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "rimDiameter": {
+    "value": 3.6,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-2mm-kolibri",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1361909683",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "caseShape": "straight",
+  "introduced": 1914,
+  "designedBy": "Franz Pfannl"
+}

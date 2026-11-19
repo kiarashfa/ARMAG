@@ -1,0 +1,163 @@
+{
+  "id": "7mm-winchester-short-magnum",
+  "name": "7mm Winchester Short Magnum",
+  "wikidataId": "Q4643936",
+  "aliases": [
+    {
+      "name": "7mm WSM",
+      "kind": "commercial"
+    },
+    {
+      "name": "7 mm Win. Short Mag.",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    }
+  ],
+  "caseType": "rebated-rim",
+  "standard": "cip",
+  "loads": [
+    {
+      "id": "hornady-162gr-eld-x",
+      "name": "Hornady Precision Hunter 162 gr ELD-X",
+      "manufacturer": "Hornady",
+      "bulletType": "ELD-X",
+      "bulletMass": {
+        "value": 10.5,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-7mm-wsm-162-eld-x",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/7mm-wsm-162-gr-eld-x-precision-hunter",
+        "sourceNote": "Published as 162 grains in the product name, converted."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-7mm-wsm-162-eld-x",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/7mm-wsm-162-gr-eld-x-precision-hunter",
+            "sourceNote": "The 24-inch test barrel the page states, converted."
+          },
+          "velocity": {
+            "value": 914.4,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-7mm-wsm-162-eld-x",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/7mm-wsm-162-gr-eld-x-precision-hunter",
+            "sourceNote": "3,000 ft/s as published, converted."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7mm-winchester-short-magnum/hero.webp",
+      "alt": "Four rifle cartridges standing in a row against a pale background, the third one nickel-plated, each with a pointed bullet and a rebated rim",
+      "caption": "The Winchester Short Magnum family; the file does not label which cartridge is which.",
+      "width": 1273,
+      "height": 1600,
+      "credit": {
+        "author": "Dt3ft",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:WSM_family_only.png",
+        "title": "File:WSM family only.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-7mm-winchester-short-magnum",
+      "type": "wikipedia",
+      "title": "7mm Winchester Short Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1380000686",
+      "lang": "en",
+      "revision": "1380000686",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-7mm-win-short-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 7 mm Win. Short Mag.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-mm-win-short-mag-en.pdf",
+      "revision": "2011-05-25",
+      "accessed": "2026-11-19"
+    },
+    {
+      "key": "hornady-7mm-wsm-162-eld-x",
+      "type": "manufacturer-spec",
+      "title": "7mm WSM 162 gr ELD-X Precision Hunter",
+      "publisher": "Hornady",
+      "url": "https://www.hornady.com/ammunition/rifle/7mm-wsm-162-gr-eld-x-precision-hunter",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "caseLength": {
+    "value": 53.34,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-mm-win-short-mag-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 72.64,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-mm-win-short-mag-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 7.23,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-mm-win-short-mag-en.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 8.15,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-mm-win-short-mag-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 14.12,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-mm-win-short-mag-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 13.59,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-7mm-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-mm-win-short-mag-en.pdf",
+    "sourceNote": "Dimension R1; narrower than the base, which is what rebated means."
+  },
+  "maxPressure": {
+    "value": 440,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-7mm-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/7-mm-win-short-mag-en.pdf",
+    "sourceNote": "Pmax 4400 bar, transducer method."
+  },
+  "pressureStandard": "cip",
+  "caseShape": "bottleneck",
+  "introduced": 2001,
+  "designedBy": "Winchester, with Browning"
+}

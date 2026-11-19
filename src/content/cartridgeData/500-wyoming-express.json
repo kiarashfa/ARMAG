@@ -1,0 +1,182 @@
+{
+  "id": "500-wyoming-express",
+  "name": ".500 Wyoming Express",
+  "wikidataId": "Q158811",
+  "aliases": [
+    {
+      "name": ".500 WE",
+      "kind": "commercial"
+    }
+  ],
+  "caseType": "belted",
+  "standard": "none",
+  "loads": [
+    {
+      "id": "325gr-x-treme",
+      "name": "325 gr X-Treme",
+      "bulletType": "X-Treme",
+      "bulletMass": {
+        "value": 21.06,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-500-wyoming-express",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+        "sourceNote": "325 grains from the infobox ballistics table, converted; the table cites a TII Armory ammunition page that could not be read."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 190.5,
+            "unit": "mm",
+            "status": "estimated",
+            "source": "wp-500-wyoming-express",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+            "sourceNote": "The infobox gives a test barrel of 7.5 with no unit; 7.5 inches is assumed from the template's inch units, converted."
+          },
+          "velocity": {
+            "value": 381,
+            "unit": "m/s",
+            "status": "estimated",
+            "source": "wp-500-wyoming-express",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+            "sourceNote": "1,250 ft/s from the infobox, converted."
+          }
+        }
+      ]
+    },
+    {
+      "id": "410gr-bengal-wfngc",
+      "name": "410 gr Bengal WFNGC",
+      "bulletType": "WFNGC",
+      "bulletMass": {
+        "value": 26.57,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-500-wyoming-express",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+        "sourceNote": "410 grains from the infobox ballistics table, converted."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 190.5,
+            "unit": "mm",
+            "status": "estimated",
+            "source": "wp-500-wyoming-express",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+            "sourceNote": "The infobox gives a test barrel of 7.5 with no unit; 7.5 inches is assumed from the template's inch units, converted."
+          },
+          "velocity": {
+            "value": 457.2,
+            "unit": "m/s",
+            "status": "estimated",
+            "source": "wp-500-wyoming-express",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+            "sourceNote": "1,500 ft/s from the infobox, converted."
+          }
+        }
+      ]
+    },
+    {
+      "id": "520gr-bengal-wfngc",
+      "name": "520 gr Bengal WFNGC",
+      "bulletType": "WFNGC",
+      "bulletMass": {
+        "value": 33.7,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-500-wyoming-express",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+        "sourceNote": "520 grains from the infobox ballistics table, converted."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 190.5,
+            "unit": "mm",
+            "status": "estimated",
+            "source": "wp-500-wyoming-express",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+            "sourceNote": "The infobox gives a test barrel of 7.5 with no unit; 7.5 inches is assumed from the template's inch units, converted."
+          },
+          "velocity": {
+            "value": 365.8,
+            "unit": "m/s",
+            "status": "estimated",
+            "source": "wp-500-wyoming-express",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+            "sourceNote": "1,200 ft/s from the infobox, converted."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-500-wyoming-express",
+      "type": "wikipedia",
+      "title": ".500 Wyoming Express",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+      "lang": "en",
+      "revision": "1327988083",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "caseLength": {
+    "value": 34.8,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-500-wyoming-express",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+    "sourceNote": "1.37 inch from the infobox, converted; there is no C.I.P. sheet."
+  },
+  "overallLength": {
+    "value": 44.83,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-500-wyoming-express",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+    "sourceNote": "1.765 inch from the infobox, converted."
+  },
+  "bulletDiameter": {
+    "value": 12.7,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-500-wyoming-express",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+    "sourceNote": "0.500 inch from the infobox, converted."
+  },
+  "baseDiameter": {
+    "value": 13.34,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-500-wyoming-express",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+    "sourceNote": "0.525 inch from the infobox, converted."
+  },
+  "rimDiameter": {
+    "value": 13.79,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-500-wyoming-express",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+    "sourceNote": "0.543 inch from the infobox, converted."
+  },
+  "maxPressure": {
+    "value": 344.7,
+    "unit": "MPa",
+    "status": "estimated",
+    "source": "wp-500-wyoming-express",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1327988083",
+    "sourceNote": "50,000 psi from the infobox, converted, uncited there."
+  },
+  "pressureStandard": "cip",
+  "caseShape": "straight",
+  "introduced": 2005,
+  "designedBy": "Freedom Arms"
+}

@@ -1,0 +1,157 @@
+{
+  "id": "8x56mmr",
+  "name": "8×56mmR",
+  "wikidataId": "Q430184",
+  "aliases": [
+    {
+      "name": "8×56mmR M30S",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    },
+    {
+      "name": "8×56R Mannlicher",
+      "kind": "military"
+    }
+  ],
+  "caseType": "rimmed",
+  "standard": "cip",
+  "loads": [
+    {
+      "id": "206gr-m30",
+      "name": "206 gr M30",
+      "bulletType": "ball",
+      "bulletMass": {
+        "value": 13.35,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-8-56mmr",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364002947",
+        "sourceNote": "206 grains from the infobox ballistics table, converted; the table cites a C.I.P. page that carries dimensions only, so this is the encyclopedia's figure. No test barrel is stated, so no velocity is recorded."
+      }
+    },
+    {
+      "id": "200gr-jacketed",
+      "name": "200 gr jacketed",
+      "bulletType": "jacketed",
+      "bulletMass": {
+        "value": 12.96,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-8-56mmr",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364002947",
+        "sourceNote": "200 grains from the infobox ballistics table, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/8x56mmr/hero.webp",
+      "alt": "Five brass rimmed rifle cartridges with pointed bullets held upright in a steel en-bloc clip",
+      "caption": "Rounds of 8×56mmR in a Mannlicher en-bloc clip.",
+      "width": 1000,
+      "height": 888,
+      "credit": {
+        "author": "CARMONA",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mannlicher_8x56R_en-bloc_clip.jpg",
+        "title": "File:Mannlicher 8x56R en-bloc clip.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/8x56mmr/soft-point.webp",
+      "alt": "Close-up of the shoulder, neck and copper-coloured soft-point bullet of a brass rifle cartridge on a pale ground",
+      "caption": "An 8×56mmR cartridge with a soft-point bullet.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Malis",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:8x56R_-_SP_-_4.jpg",
+        "title": "File:8x56R - SP - 4.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-8-56mmr",
+      "type": "wikipedia",
+      "title": "8×56mmR",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1364002947",
+      "lang": "en",
+      "revision": "1364002947",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-8-x-56-r-m30s",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 8 x 56 R M30S",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page31.pdf",
+      "revision": "2006-08-02",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "caseLength": {
+    "value": 55.75,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8-x-56-r-m30s",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page31.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 76.5,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8-x-56-r-m30s",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page31.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 8.4,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8-x-56-r-m30s",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page31.pdf",
+    "sourceNote": "Dimension G1 as the standard prints it, which is wider than the 8.22 mm of the earlier 8×50mmR; the barrels it was built for are groove-sized to match."
+  },
+  "neckDiameter": {
+    "value": 9.1,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8-x-56-r-m30s",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page31.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 12.55,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8-x-56-r-m30s",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page31.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 14.2,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-8-x-56-r-m30s",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page31.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 355,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-8-x-56-r-m30s",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page31.pdf",
+    "sourceNote": "Pmax 3550 bar, transducer method."
+  },
+  "pressureStandard": "cip",
+  "caseShape": "bottleneck",
+  "introduced": 1930
+}

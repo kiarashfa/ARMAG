@@ -1,0 +1,129 @@
+{
+  "id": "ots-33-pernach",
+  "name": "OTs-33 Pernach",
+  "kind": "model",
+  "wikidataId": "Q1977927",
+  "makerRef": "kbp-instrument-design-bureau",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "SBZ-2",
+      "kind": "military",
+      "note": "From the surnames of the KBP team: Stechkin, Baltser and Zinchenko."
+    },
+    {
+      "name": "ОЦ-33 Пернач",
+      "kind": "nickname",
+      "note": "Pernach is the Russian word for a flanged mace."
+    }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "russia",
+  "producedIn": [
+    "russia"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "duty-sidearm",
+    "law-enforcement"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x18mm-makarov",
+      "primary": true,
+      "capacity": {
+        "value": 18,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-ots-33-pernach",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378880101",
+        "sourceNote": "The standard double-column magazine, from the infobox and article text, uncited there; a 27-round magazine is optional."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/ots-33-pernach/hero.webp",
+      "alt": "Left side of a black pistol with a squared slide, an exposed hammer, a trigger guard with a forward lever and a checkered grip, against a white ground",
+      "caption": "An OTs-33 Pernach, left side, cropped at the slide and grip.",
+      "width": 825,
+      "height": 523,
+      "credit": {
+        "author": "Warinhari",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pernach_OTs-33.jpg",
+        "title": "File:Pernach OTs-33.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-ots-33-pernach",
+      "type": "wikipedia",
+      "title": "OTs-33 Pernach",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1378880101",
+      "lang": "en",
+      "revision": "1378880101",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "massEmpty": {
+    "value": 1.15,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-ots-33-pernach",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378880101",
+    "sourceNote": "From the infobox (1,150 g), uncited there; whether it includes a magazine is not stated."
+  },
+  "length": {
+    "value": 222,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ots-33-pernach",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378880101",
+    "sourceNote": "Without the shoulder stock, from the infobox, uncited there; 538 mm with the stock attached."
+  },
+  "barrelLength": {
+    "value": 135,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ots-33-pernach",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378880101",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 850,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-ots-33-pernach",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378880101",
+    "sourceNote": "Midpoint of the infobox range of 800–900 rounds per minute, uncited there."
+  },
+  "effectiveRange": {
+    "value": 50,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-ots-33-pernach",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378880101",
+    "sourceNote": "The infobox range figure, uncited there; it separately lists a maximum range of 100 m."
+  },
+  "introduced": 1996
+}

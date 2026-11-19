@@ -1,0 +1,172 @@
+{
+  "id": "50-gi",
+  "name": ".50 GI",
+  "wikidataId": "Q158815",
+  "aliases": [
+    {
+      "name": "12.7×23mmRB",
+      "kind": "commercial",
+      "note": "The metric designation the article gives."
+    }
+  ],
+  "caseType": "rebated-rim",
+  "standard": "none",
+  "loads": [
+    {
+      "id": "185gr-schp",
+      "name": "185 gr SCHP",
+      "bulletType": "SCHP",
+      "bulletMass": {
+        "value": 11.99,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-50-gi",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+        "sourceNote": "185 grains from the infobox ballistics table, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    },
+    {
+      "id": "230gr-schp",
+      "name": "230 gr SCHP",
+      "bulletType": "SCHP",
+      "bulletMass": {
+        "value": 14.9,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-50-gi",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+        "sourceNote": "230 grains from the infobox ballistics table, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    },
+    {
+      "id": "275gr-jhp",
+      "name": "275 gr JHP",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 17.82,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-50-gi",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+        "sourceNote": "275 grains from the infobox ballistics table, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    },
+    {
+      "id": "300gr-tmj",
+      "name": "300 gr TMJ",
+      "bulletType": "TMJ",
+      "bulletMass": {
+        "value": 19.44,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-50-gi",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+        "sourceNote": "300 grains from the infobox ballistics table, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/50-gi/hero.webp",
+      "alt": "Two cartridges standing side by side on a pale ground: a brass-cased .50 GI with a copper jacketed hollow-point bullet beside a nickel-plated .45 Auto with a similar bullet",
+      "caption": "A .50 GI cartridge (left) beside a .45 Auto.",
+      "width": 1157,
+      "height": 1235,
+      "credit": {
+        "author": "Darkman IV ( talk )",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:50giand45auto.png",
+        "title": "File:50giand45auto.png",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "src": "images/cartridges/50-gi/model-no-1.webp",
+      "alt": "A black 1911-pattern pistol with checkered grips and a rail-less slide, with a spare magazine and a single cartridge lying beside it",
+      "caption": "A Guncrafter Industries Model No. 1 pistol, the arm introduced alongside the cartridge in 2004, with a magazine and a round.",
+      "width": 307,
+      "height": 210,
+      "credit": {
+        "author": "Markfullur",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:GI_ModelNo1.png",
+        "title": "File:GI ModelNo1.png",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-50-gi",
+      "type": "wikipedia",
+      "title": ".50 GI",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+      "lang": "en",
+      "revision": "1368987388",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "pressureStandard": "cip",
+  "caseShape": "straight",
+  "introduced": 2004,
+  "designedBy": "Alex Zimmermann of Guncrafter Industries",
+  "caseLength": {
+    "value": 22.84,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-gi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+    "sourceNote": "0.899 inch from the infobox, converted; no C.I.P. or SAAMI sheet exists for the cartridge."
+  },
+  "overallLength": {
+    "value": 31.01,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-gi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+    "sourceNote": "1.221 inch from the infobox, converted."
+  },
+  "bulletDiameter": {
+    "value": 12.7,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-gi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+    "sourceNote": "0.500 inch from the infobox, converted."
+  },
+  "neckDiameter": {
+    "value": 13.36,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-gi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+    "sourceNote": "0.526 inch from the infobox, converted."
+  },
+  "baseDiameter": {
+    "value": 13.36,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-gi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+    "sourceNote": "0.526 inch from the infobox, converted; the same as the neck, as the case is straight."
+  },
+  "rimDiameter": {
+    "value": 12.19,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-50-gi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+    "sourceNote": "0.480 inch from the infobox, converted; the rim is narrower than the case body, which is what rebated means."
+  },
+  "maxPressure": {
+    "value": null,
+    "unit": "MPa",
+    "status": "conflicting-sources",
+    "source": "wp-50-gi",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1368987388",
+    "sourceNote": "The infobox gives 23,000 psi (160 MPa), while the article text says the cartridge operates at around 15,000 psi (100 MPa)."
+  }
+}

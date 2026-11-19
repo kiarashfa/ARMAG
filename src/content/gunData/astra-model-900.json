@@ -1,0 +1,256 @@
+{
+  "id": "astra-model-900",
+  "name": "Astra Model 900",
+  "kind": "model",
+  "wikidataId": "Q750301",
+  "makerRef": "astra-unceta-y-cia",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "spain",
+  "producedIn": [
+    "spain"
+  ],
+  "fireModes": [
+    "semi"
+  ],
+  "feedSystem": [
+    "fixed-box"
+  ],
+  "roles": [
+    "duty-sidearm"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "7-63x25mm-mauser",
+      "primary": true,
+      "capacity": {
+        "value": 10,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-astra-model-900",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1377417906",
+        "sourceNote": "The article gives the standard model the same magazine capacity as the Mauser C96; the infobox lists 10- and 20-round box magazines across the series, uncited there."
+      }
+    }
+  ],
+  "variants": [
+    {
+      "id": "astra-901",
+      "name": "Astra 901",
+      "productionYears": {
+        "start": 1928,
+        "end": 1928
+      },
+      "summary": "A compact machine pistol with a 10-round magazine; 1,655 were made in 1928, destined mainly for China.",
+      "overrides": {
+        "fireModes": [
+          "semi",
+          "automatic"
+        ],
+        "chamberings": [
+          {
+            "cartridgeRef": "7-63x25mm-mauser",
+            "primary": true,
+            "capacity": {
+              "value": 10,
+              "unit": "",
+              "status": "estimated",
+              "source": "wp-astra-model-900",
+              "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1377417906",
+              "sourceNote": "The article gives a magazine capacity of 10 cartridges for the 901."
+            }
+          }
+        ]
+      },
+      "configurations": []
+    },
+    {
+      "id": "astra-902",
+      "name": "Astra 902",
+      "productionYears": {
+        "start": 1928,
+        "end": 1933
+      },
+      "summary": "A machine pistol with a lengthened barrel and a fixed 20-round magazine; 7,075 were made.",
+      "overrides": {
+        "fireModes": [
+          "semi",
+          "automatic"
+        ],
+        "chamberings": [
+          {
+            "cartridgeRef": "7-63x25mm-mauser",
+            "primary": true,
+            "capacity": {
+              "value": 20,
+              "unit": "",
+              "status": "estimated",
+              "source": "wp-astra-model-900",
+              "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1377417906",
+              "sourceNote": "The article gives the 902 a fixed magazine of 20 cartridges."
+            }
+          }
+        ]
+      },
+      "configurations": []
+    },
+    {
+      "id": "astra-903",
+      "name": "Astra 903",
+      "productionYears": {
+        "start": 1932,
+        "end": 1934
+      },
+      "summary": "The 902 with a removable magazine in place of the fixed one; 3,082 were made. The infobox figures for the series are for this model.",
+      "overrides": {
+        "fireModes": [
+          "semi",
+          "automatic"
+        ],
+        "feedSystem": [
+          "detachable-box"
+        ],
+        "massEmpty": {
+          "value": 1.275,
+          "unit": "kg",
+          "status": "estimated",
+          "source": "wp-astra-model-900",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1377417906",
+          "sourceNote": "Infobox figure, labelled there as the Astra 903; whether it includes a magazine is not stated."
+        },
+        "length": {
+          "value": 308,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-astra-model-900",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1377417906",
+          "sourceNote": "Infobox figure, labelled there as the Astra 903, uncited there."
+        },
+        "barrelLength": {
+          "value": 160,
+          "unit": "mm",
+          "status": "estimated",
+          "source": "wp-astra-model-900",
+          "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1377417906",
+          "sourceNote": "Infobox figure, labelled there as the Astra 903, uncited there."
+        }
+      },
+      "configurations": []
+    },
+    {
+      "id": "astra-904",
+      "name": "Astra 904",
+      "productionYears": {
+        "start": 1934,
+        "end": 1934
+      },
+      "summary": "Adds a mechanism that slows the rate of fire, to make automatic fire more manageable; at least 90 were made. The 904E is the same gun in 9mm Largo.",
+      "overrides": {
+        "fireModes": [
+          "semi",
+          "automatic"
+        ],
+        "feedSystem": [
+          "detachable-box"
+        ]
+      },
+      "configurations": []
+    },
+    {
+      "id": "astra-904e",
+      "name": "Astra 904E",
+      "summary": "The Model 904 chambered for 9mm Largo, identical in all other respects.",
+      "overrides": {
+        "fireModes": [
+          "semi",
+          "automatic"
+        ],
+        "feedSystem": [
+          "detachable-box"
+        ],
+        "chamberings": [
+          {
+            "cartridgeRef": "9x23mm-largo",
+            "primary": true,
+            "capacity": {
+              "value": null,
+              "unit": "",
+              "status": "placeholder",
+              "sourceNote": "The article gives no magazine capacity for the 904E."
+            }
+          }
+        ]
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/astra-model-900/hero.webp",
+      "alt": "A Mauser C96-pattern pistol with its wooden shoulder-stock holster attached, lying on a sheet of paperwork beside a box and a row of cartridges",
+      "caption": "An Astra 900 pistol with its detachable shoulder stock, shown with ammunition.",
+      "width": 1152,
+      "height": 690,
+      "credit": {
+        "author": "Arma92",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Astra900.png",
+        "title": "File:Astra900.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/astra-model-900/model-903.webp",
+      "alt": "Left side of a dark steel Mauser-pattern pistol with a long barrel, box magazine ahead of the trigger guard and a checkered wooden grip, against a pale ground",
+      "caption": "An Astra 903, the variant with a removable magazine.",
+      "width": 758,
+      "height": 408,
+      "credit": {
+        "author": "Andrzejwojciechowski",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ASTRA_903.jpg",
+        "title": "File:ASTRA 903.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/guns/astra-model-900/museum-specimen.webp",
+      "alt": "Close view of the receiver of a Mauser-pattern pistol with a rear sight, trigger and wooden grip on a white cloth",
+      "caption": "An Astra pistol in 7.63 mm, from a Norwegian handgun collection; the exact model is not stated.",
+      "width": 1200,
+      "height": 797,
+      "credit": {
+        "author": "Askild Antonsen",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Astra_7,63_(6825677396).jpg",
+        "title": "File:Astra 7,63 (6825677396).jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-astra-model-900",
+      "type": "wikipedia",
+      "title": "Astra Model 900",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1377417906",
+      "lang": "en",
+      "revision": "1377417906",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "introduced": 1927
+}

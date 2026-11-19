@@ -1,0 +1,22 @@
+{
+  "id": "servicios-industriales-de-la-marina",
+  "name": "Servicios Industriales de la Marina",
+  "wikidataId": "Q7390381",
+  "country": "peru",
+  "founded": 1950,
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-servicios-industriales-de-la-marina",
+      "type": "wikipedia",
+      "title": "Servicios Industriales de la Marina",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1380518006",
+      "lang": "en",
+      "revision": "1380518006",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

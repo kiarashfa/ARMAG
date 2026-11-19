@@ -1,0 +1,178 @@
+{
+  "id": "25-20-winchester",
+  "name": ".25-20 Winchester",
+  "wikidataId": "Q158706",
+  "aliases": [
+    {
+      "name": ".25-20 WCF",
+      "kind": "commercial",
+      "note": "Winchester Center Fire."
+    },
+    {
+      "name": "6.6×33mmR",
+      "kind": "commercial",
+      "note": "The metric designation the article gives."
+    },
+    {
+      "name": "25-20 Win.",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    }
+  ],
+  "caseType": "rimmed",
+  "standard": "cip",
+  "loads": [
+    {
+      "id": "60gr-fp",
+      "name": "60 gr flat point",
+      "bulletType": "FP",
+      "bulletMass": {
+        "value": 3.89,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-25-20-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1328747818",
+        "sourceNote": "60 grains from the infobox, converted. The infobox velocities come from a handloading guide and are not recorded."
+      }
+    },
+    {
+      "id": "75gr-fp",
+      "name": "75 gr flat point",
+      "bulletType": "FP",
+      "bulletMass": {
+        "value": 4.86,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-25-20-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1328747818",
+        "sourceNote": "75 grains from the infobox, converted. The infobox velocities come from a handloading guide and are not recorded."
+      }
+    },
+    {
+      "id": "86gr-sp",
+      "name": "86 gr soft point",
+      "bulletType": "SP",
+      "bulletMass": {
+        "value": 5.57,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-25-20-winchester",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1328747818",
+        "sourceNote": "86 grains from the infobox, converted. The infobox velocities come from a handloading guide and are not recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/25-20-winchester/hero.webp",
+      "alt": "A bottlenecked brass cartridge standing upright with a blue-grey bullet, with a second cartridge lying beside it showing its rimmed head and primer",
+      "caption": "A .25-20 WCF cartridge standing and lying to show the head.",
+      "width": 788,
+      "height": 1150,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:25-20_WCF.JPG",
+        "title": "File:25-20 WCF.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/25-20-winchester/with-parent.webp",
+      "alt": "Two pairs of brass cartridges with blue-grey bullets, a larger standing round on the left with another showing its head, and a narrower bottlenecked round on the right with another showing its head",
+      "caption": "A .32-20 WCF on the left beside a .25-20 Winchester on the right, per the file title.",
+      "width": 1110,
+      "height": 963,
+      "credit": {
+        "author": "Hmaag",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:32-20_WCF_25-20_Winchester.JPG",
+        "title": "File:32-20 WCF 25-20 Winchester.JPG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-25-20-winchester",
+      "type": "wikipedia",
+      "title": ".25-20 Winchester",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1328747818",
+      "lang": "en",
+      "revision": "1328747818",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-25-20-win",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 25-20 Win.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page60.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "caseLength": {
+    "value": 33.78,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-25-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page60.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 40.44,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-25-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page60.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 6.55,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-25-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page60.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 6.95,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-25-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page60.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 8.87,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-25-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page60.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 10.36,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-25-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page60.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 270,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-25-20-win",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/tabiical-en-page60.pdf",
+    "sourceNote": "Pmax 2700 bar, transducer method."
+  },
+  "pressureStandard": "cip",
+  "caseShape": "bottleneck",
+  "introduced": 1895
+}

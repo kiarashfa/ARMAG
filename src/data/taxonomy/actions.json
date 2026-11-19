@@ -28,6 +28,11 @@
       "description": "Hinged barrels opened for loading; no reciprocating breech."
     },
     {
+      "id": "screw-barrel",
+      "label": "Screw-off barrel",
+      "description": "A single-shot arm loaded by unscrewing the barrel from the frame, placing a cartridge in the chamber and screwing the barrel back on. There is no hinge and no moving breech block."
+    },
+    {
       "id": "straight-pull",
       "label": "Straight-pull bolt",
       "description": "A bolt cycled without rotating the handle."

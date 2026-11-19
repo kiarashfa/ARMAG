@@ -1,0 +1,147 @@
+{
+  "id": "steyr-tmp",
+  "name": "Steyr TMP",
+  "kind": "model",
+  "wikidataId": "Q10568180",
+  "makerRef": "steyr-arms",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Taktische Maschinenpistole",
+      "kind": "military",
+      "note": "German for tactical machine pistol, the name the TMP abbreviates."
+    }
+  ],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "austria",
+  "producedIn": [
+    "austria"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "law-enforcement",
+    "personal-defence"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "primary": true,
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-steyr-tmp",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378195546",
+        "sourceNote": "The infobox gives 15- or 30-round detachable box magazines, uncited there; 30 rounds recorded as the larger."
+      }
+    }
+  ],
+  "variants": [
+    {
+      "id": "spp",
+      "name": "Steyr SPP",
+      "summary": "The Special Purpose Pistol, a semi-automatic version with a slightly longer barrel and barrel jacket and no forward grip, built mainly of Nylon 66.",
+      "overrides": {
+        "fireModes": [
+          "semi"
+        ]
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/steyr-tmp/hero.webp",
+      "alt": "Left side of a black polymer machine pistol with a forward vertical grip, a pistol grip with trigger guard and a long straight magazine, against a white ground",
+      "caption": "A Steyr TMP with its forward grip and a long magazine.",
+      "width": 1280,
+      "height": 960,
+      "credit": {
+        "author": "Spectrums",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steyr_TMP_9mmPara_001.jpg",
+        "title": "File:Steyr TMP 9mmPara 001.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/steyr-tmp/spp.webp",
+      "alt": "Left side of a black pistol-grip firearm with a long slide-like upper housing and a trigger guard, against a white ground",
+      "caption": "A Steyr SPP, the semi-automatic variant, which lacks the TMP's forward grip.",
+      "width": 1200,
+      "height": 900,
+      "credit": {
+        "author": "Spectrums",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steyr_SPP_9mmPara_008.jpg",
+        "title": "File:Steyr SPP 9mmPara 008.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-steyr-tmp",
+      "type": "wikipedia",
+      "title": "Steyr TMP",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1378195546",
+      "lang": "en",
+      "revision": "1378195546",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "massEmpty": {
+    "value": 1.3,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-steyr-tmp",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378195546",
+    "sourceNote": "Empty, from the infobox, uncited there."
+  },
+  "length": {
+    "value": 282,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-steyr-tmp",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378195546",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 130,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-steyr-tmp",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378195546",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 875,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-steyr-tmp",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378195546",
+    "sourceNote": "Midpoint of the infobox range of 850–900 rounds per minute, uncited there."
+  },
+  "effectiveRange": {
+    "value": 100,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-steyr-tmp",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1378195546",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "introduced": 1992
+}

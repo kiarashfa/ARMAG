@@ -1,0 +1,175 @@
+{
+  "id": "351-winchester-self-loading",
+  "name": ".351 Winchester Self-Loading",
+  "wikidataId": "Q4545290",
+  "aliases": [
+    {
+      "name": ".351 SL",
+      "kind": "commercial"
+    },
+    {
+      "name": ".351 WSL",
+      "kind": "commercial"
+    },
+    {
+      "name": "8.9×34mmSR",
+      "kind": "commercial",
+      "note": "The metric designation the article gives."
+    },
+    {
+      "name": "351 Win. SL",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    }
+  ],
+  "caseType": "semi-rimmed",
+  "standard": "cip",
+  "loads": [
+    {
+      "id": "180gr",
+      "name": "180 gr",
+      "bulletMass": {
+        "value": 11.66,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-351-winchester-self-loading",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1335364039",
+        "sourceNote": "180 grains from the infobox, converted. The article cites Townsend Whelen's The American Rifle (1918), a book, so the figure is recorded as estimated."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 508,
+            "unit": "mm",
+            "status": "estimated",
+            "source": "wp-351-winchester-self-loading",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1335364039",
+            "sourceNote": "The article's 20-inch test barrel, converted."
+          },
+          "velocity": {
+            "value": 570,
+            "unit": "m/s",
+            "status": "estimated",
+            "source": "wp-351-winchester-self-loading",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1335364039",
+            "sourceNote": "1,870 ft/s from the infobox, converted, sourced there to Whelen's The American Rifle (1918); a book with no link, so estimated."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/351-winchester-self-loading/hero.webp",
+      "alt": "Three brass cartridges standing on a base side by side: the shorter .35 Winchester Self-Loading with a copper-toned bullet, the longer .351 with a grey lead bullet, and a rounded .45 ACP",
+      "caption": "From left to right: .35 Winchester Self-Loading, .351 Winchester Self-Loading and .45 ACP.",
+      "width": 480,
+      "height": 640,
+      "credit": {
+        "author": "Marco Pividori",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.35_Winchester_Self-Loading,_.351_Winchester_Self-Loading,_.45_ACP.jpg",
+        "title": "File:.35 Winchester Self-Loading, .351 Winchester Self-Loading, .45 ACP.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/351-winchester-self-loading/dimensions.webp",
+      "alt": "Part of a dimensioned line drawing of the cartridge, headed .351 Winchester SLR, with case length 1.380 inches (35.05 mm) and overall length 1.900 inches (48.26 mm) marked",
+      "caption": "A cropped dimension drawing of the cartridge; its header reads .351 Winchester SLR.",
+      "width": 600,
+      "height": 220,
+      "credit": {
+        "author": "Undefined",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:351_Winchester_SL_dimensions.jpg",
+        "title": "File:351 Winchester SL dimensions.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-351-winchester-self-loading",
+      "type": "wikipedia",
+      "title": ".351 Winchester Self-Loading",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1335364039",
+      "lang": "en",
+      "revision": "1335364039",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-351-win-sl",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 351 Win. SL",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/351-win-sl-en.pdf",
+      "revision": "2011-05-25",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "caseLength": {
+    "value": 35.05,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-351-win-sl",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/351-win-sl-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 48.26,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-351-win-sl",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/351-win-sl-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 8.94,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-351-win-sl",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/351-win-sl-en.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 9.58,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-351-win-sl",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/351-win-sl-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 9.66,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-351-win-sl",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/351-win-sl-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 10.41,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-351-win-sl",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/351-win-sl-en.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 365,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-351-win-sl",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/351-win-sl-en.pdf",
+    "sourceNote": "Pmax 3650 bar, transducer method."
+  },
+  "pressureStandard": "cip",
+  "caseShape": "straight",
+  "introduced": 1906,
+  "designedBy": "Winchester Repeating Arms Company"
+}

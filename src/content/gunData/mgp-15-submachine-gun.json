@@ -1,0 +1,117 @@
+{
+  "id": "mgp-15-submachine-gun",
+  "name": "MGP-15 submachine gun",
+  "kind": "model",
+  "wikidataId": "Q3841303",
+  "makerRef": "servicios-industriales-de-la-marina",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "MGP-15",
+      "kind": "military"
+    }
+  ],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "peru",
+  "producedIn": [
+    "peru"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "law-enforcement"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "primary": true,
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-mgp-15-submachine-gun",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1264332724",
+        "sourceNote": "The infobox gives a 20- or 32-round magazine; 32 rounds recorded as the larger."
+      }
+    }
+  ],
+  "variants": [
+    {
+      "id": "mgp-84",
+      "name": "MGP-84",
+      "summary": "An upgraded version of the MGP-15, used in close protection duties.",
+      "overrides": {},
+      "configurations": []
+    },
+    {
+      "id": "mgp-14",
+      "name": "MGP-14",
+      "summary": "A semi-automatic version of the MGP-84 with a folding forward grip, also known as the MGP-14 Micro, the MGP-14 Pistol and, for a time, the MGP-84C.",
+      "overrides": {
+        "fireModes": [
+          "semi"
+        ]
+      },
+      "configurations": []
+    }
+  ],
+  "fits": [],
+  "images": [],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-mgp-15-submachine-gun",
+      "type": "wikipedia",
+      "title": "MGP-15 submachine gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1264332724",
+      "lang": "en",
+      "revision": "1264332724",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "massEmpty": {
+    "value": 2.31,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-mgp-15-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1264332724",
+    "sourceNote": "Empty, from the infobox, which cites a Bellum page for the figure; the infobox also gives 2.29 kg with a 32-round magazine, which does not agree."
+  },
+  "length": {
+    "value": 503,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-mgp-15-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1264332724",
+    "sourceNote": "Stock extended, from the infobox."
+  },
+  "lengthFolded": {
+    "value": 284,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-mgp-15-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1264332724",
+    "sourceNote": "Stock folded, from the infobox."
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-mgp-15-submachine-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1264332724",
+    "sourceNote": "Midpoint of the infobox range of 650–750 rounds per minute, uncited there."
+  },
+  "introduced": 1990
+}

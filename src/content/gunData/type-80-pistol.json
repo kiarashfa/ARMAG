@@ -1,0 +1,106 @@
+{
+  "id": "type-80-pistol",
+  "name": "Type 80 (pistol)",
+  "kind": "model",
+  "wikidataId": "Q276568",
+  "makerRef": "norinco",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "80式衝鋒手槍",
+      "kind": "native"
+    }
+  ],
+  "lineage": {},
+  "type": "pistol",
+  "action": "self-loading",
+  "operatingSystem": "short-recoil",
+  "designedIn": "china",
+  "producedIn": [
+    "china"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "duty-sidearm"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "7-62x25mm-tokarev",
+      "primary": true,
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-type-80-pistol",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1383533964",
+        "sourceNote": "The infobox and article give 10- or 20-round magazines, uncited there; 20 rounds recorded as the larger."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-type-80-pistol",
+      "type": "wikipedia",
+      "title": "Type 80 (pistol)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1383533964",
+      "lang": "en",
+      "revision": "1383533964",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "massEmpty": {
+    "value": 1.16,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-type-80-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1383533964",
+    "sourceNote": "Unloaded, from the infobox, uncited there."
+  },
+  "length": {
+    "value": 300,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-type-80-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1383533964",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 140,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-type-80-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1383533964",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 850,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-type-80-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1383533964",
+    "sourceNote": "From the infobox and article text, which says the rate is believed to be around 850 rounds per minute."
+  },
+  "effectiveRange": {
+    "value": 100,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-type-80-pistol",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1383533964",
+    "sourceNote": "The infobox range figure, uncited there; the article text gives 50 m as the maximum effective distance in bursts and the infobox a maximum range of 1,000 m."
+  },
+  "introduced": 1980
+}

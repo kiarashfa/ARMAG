@@ -1,0 +1,119 @@
+{
+  "id": "pfeifer-zeliska-600-nitro-express-revolver",
+  "name": "Pfeifer Zeliska .600 Nitro Express revolver",
+  "kind": "model",
+  "wikidataId": "Q7179784",
+  "makerRef": "pfeifer-waffen",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "Zeliska",
+      "kind": "commercial"
+    },
+    {
+      "name": "Pfeifer-Zeliska",
+      "kind": "commercial"
+    }
+  ],
+  "lineage": {},
+  "type": "revolver",
+  "action": "revolver",
+  "operatingSystem": "manual",
+  "designedIn": "austria",
+  "producedIn": [
+    "austria"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "cylinder"
+  ],
+  "roles": [],
+  "chamberings": [
+    {
+      "cartridgeRef": "600-nitro-express",
+      "primary": true,
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-pfeifer-zeliska-600-nitro-express-revolver",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380603045",
+        "sourceNote": "A five-round cylinder, from the infobox and article text, uncited there."
+      }
+    },
+    {
+      "cartridgeRef": "458-winchester-magnum",
+      "primary": false,
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-pfeifer-zeliska-600-nitro-express-revolver",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380603045",
+        "sourceNote": "The article says the capacity is five .600 Nitro Express or .458 Win Mag rounds."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/pfeifer-zeliska-600-nitro-express-revolver/hero.webp",
+      "alt": "A very large black single-action revolver with a long barrel and wooden grip lying on a green cloth beside a box and four huge brass cartridges",
+      "caption": "A Pfeifer-Zeliska .600 Nitro Express revolver beside .600 Nitro Express cartridges.",
+      "width": 1000,
+      "height": 672,
+      "credit": {
+        "author": "Cardboard007",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pfeifer_Zeliska.webp",
+        "title": "File:Pfeifer Zeliska.webp",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-pfeifer-zeliska-600-nitro-express-revolver",
+      "type": "wikipedia",
+      "title": "Pfeifer Zeliska .600 Nitro Express revolver",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1380603045",
+      "lang": "en",
+      "revision": "1380603045",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "massEmpty": {
+    "value": 6.001,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-pfeifer-zeliska-600-nitro-express-revolver",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380603045",
+    "sourceNote": "From the infobox, uncited there; the article text rounds this to 6 kg, of which the cylinder alone is 2 kg."
+  },
+  "length": {
+    "value": 550,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pfeifer-zeliska-600-nitro-express-revolver",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380603045",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 335,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-pfeifer-zeliska-600-nitro-express-revolver",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380603045",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "introduced": 2001
+}

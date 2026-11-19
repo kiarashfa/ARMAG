@@ -1,0 +1,35 @@
+{
+  "id": "zastava-arms",
+  "name": "Zastava Arms",
+  "nativeName": "Застава оружје",
+  "wikidataId": "Q148220",
+  "country": "serbia",
+  "founded": 1853,
+  "logo": {
+    "src": "images/makers/zastava-arms/logo.webp",
+    "alt": "The word Zastava in bold dark blue italic letters above the word arms in spaced lowercase, beside a blue circular sight-reticle symbol",
+    "caption": "The Zastava Arms mark, taken from Wikipedia's own upload.",
+    "width": 200,
+    "height": 67,
+    "credit": {
+      "sourceUrl": "https://en.wikipedia.org/wiki/Zastava_Arms",
+      "licenseType": "trademark-nominative-use",
+      "licenseNote": "The mark itself is its owner's trademark, reproduced here to identify the manufacturer whose entry it appears on, which is nominative use."
+    }
+  },
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "agent-populated",
+  "references": [
+    {
+      "key": "wp-zastava-arms",
+      "type": "wikipedia",
+      "title": "Zastava Arms",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1361273536",
+      "lang": "en",
+      "revision": "1361273536",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

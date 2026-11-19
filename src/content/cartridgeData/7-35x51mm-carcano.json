@@ -1,0 +1,117 @@
+{
+  "id": "7-35x51mm-carcano",
+  "name": "7.35×51mm Carcano",
+  "wikidataId": "Q3599676",
+  "aliases": [
+    {
+      "name": "7.35 Carcano",
+      "kind": "military"
+    }
+  ],
+  "caseType": "rimless",
+  "standard": "none",
+  "loads": [
+    {
+      "id": "128gr-fmj",
+      "name": "128 gr FMJ",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 8.29,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-7-35-51mm-carcano",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1320539532",
+        "sourceNote": "128 grains from the infobox and article text, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7-35x51mm-carcano/hero.webp",
+      "alt": "Three brass-cased rifle cartridges of different widths standing side by side against a wooden background, each with a pointed jacketed bullet",
+      "caption": "Three rifle rounds that the file title lists as 8mm, 7.35mm and 6.5mm; the file does not label which is which.",
+      "width": 1200,
+      "height": 1600,
+      "credit": {
+        "author": "Derek280",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:8mm,_7.35mm,_6.5mm.JPG",
+        "title": "File:8mm, 7.35mm, 6.5mm.JPG",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-7-35-51mm-carcano",
+      "type": "wikipedia",
+      "title": "7.35×51mm Carcano",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1320539532",
+      "lang": "en",
+      "revision": "1320539532",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "caseLength": {
+    "value": 51.5,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-35-51mm-carcano",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1320539532",
+    "sourceNote": "From the infobox, uncited there; no C.I.P. sheet exists for this military cartridge."
+  },
+  "overallLength": {
+    "value": 73.5,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-35-51mm-carcano",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1320539532",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "bulletDiameter": {
+    "value": 7.57,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-35-51mm-carcano",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1320539532",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "neckDiameter": {
+    "value": 8.32,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-35-51mm-carcano",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1320539532",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "baseDiameter": {
+    "value": 11.4,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-35-51mm-carcano",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1320539532",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "rimDiameter": {
+    "value": 11.4,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-35-51mm-carcano",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1320539532",
+    "sourceNote": "From the infobox, uncited there; the same as the base, as the case is rimless."
+  },
+  "maxPressure": {
+    "value": 350,
+    "unit": "MPa",
+    "status": "estimated",
+    "source": "wp-7-35-51mm-carcano",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1320539532",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "pressureStandard": "cip",
+  "caseShape": "bottleneck",
+  "introduced": 1938
+}

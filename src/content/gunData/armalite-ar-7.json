@@ -26,9 +26,7 @@
   "feedSystem": [
     "detachable-box"
   ],
-  "roles": [
-    "general-purpose"
-  ],
+  "roles": [],
   "introduced": 1959,
   "productionYears": {
     "start": 1959,

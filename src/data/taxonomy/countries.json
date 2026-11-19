@@ -49,6 +49,10 @@
       ]
     },
     {
+      "id": "croatia",
+      "label": "Croatia"
+    },
+    {
       "id": "czechia",
       "label": "Czechia",
       "aka": [
@@ -132,6 +136,10 @@
     {
       "id": "pakistan",
       "label": "Pakistan"
+    },
+    {
+      "id": "peru",
+      "label": "Peru"
     },
     {
       "id": "poland",

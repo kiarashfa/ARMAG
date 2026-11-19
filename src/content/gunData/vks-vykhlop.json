@@ -1,0 +1,150 @@
+{
+  "id": "vks-vykhlop",
+  "name": "VKS Vykhlop",
+  "kind": "model",
+  "wikidataId": "Q2597265",
+  "makerRef": "tskib-soo",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "VSSK",
+      "kind": "military",
+      "note": "ВССК, a second designation for the same rifle."
+    },
+    {
+      "name": "Vykhlop",
+      "kind": "nickname",
+      "note": "Russian for \"exhaust\", the name of the development programme."
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "straight-pull",
+  "operatingSystem": "manual",
+  "designedIn": "russia",
+  "producedIn": [
+    "russia"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "sniper"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "12-7x55mm-sts-130",
+      "primary": true,
+      "capacity": {
+        "value": 5,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-vks-vykhlop",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375926517",
+        "sourceNote": "A 5-round detachable box magazine, from the infobox, uncited there."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/vks-vykhlop/hero.webp",
+      "alt": "A dark bullpup rifle on a folding bipod on a display table, with an optical sight on top, a thick integral suppressor at the muzzle and a large box magazine behind the pistol grip",
+      "caption": "A VSSK Vykhlop on display at Interpolitex 2016.",
+      "width": 1600,
+      "height": 1067,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ВССК_Выхлоп_-_Интерполитех-2016_01.jpg",
+        "title": "File:ВССК Выхлоп - Интерполитех-2016 01.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/vks-vykhlop/exhibition-2012.webp",
+      "alt": "A long dark bullpup rifle with a scope, a thick suppressor and a bipod on a blue display stand, with ammunition cards and cartridges below it",
+      "caption": "A VKS on display at the Engineering Technologies 2012 exhibition, with its cartridges.",
+      "width": 1200,
+      "height": 773,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:12.7-мм_снайперская_винтовка_ВКС_-_Технологии_в_машиностроении-2012_01.jpg",
+        "title": "File:12.7-мм снайперская винтовка ВКС - Технологии в машиностроении-2012 01.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-vks-vykhlop",
+      "type": "wikipedia",
+      "title": "VKS Vykhlop",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1375926517",
+      "lang": "en",
+      "revision": "1375926517",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "massEmpty": {
+    "value": 7,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-vks-vykhlop",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375926517",
+    "sourceNote": "The infobox gives this as total weight, uncited there."
+  },
+  "length": {
+    "value": 1120,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vks-vykhlop",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375926517",
+    "sourceNote": "Overall length with the suppressor, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 450,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vks-vykhlop",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375926517",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "width": {
+    "value": 220,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vks-vykhlop",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375926517",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "height": {
+    "value": 220,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vks-vykhlop",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375926517",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 600,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-vks-vykhlop",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1375926517",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "introduced": 2004
+}

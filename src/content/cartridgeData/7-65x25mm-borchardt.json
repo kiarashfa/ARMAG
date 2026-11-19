@@ -1,0 +1,124 @@
+{
+  "id": "7-65x25mm-borchardt",
+  "name": "7.65×25mm Borchardt",
+  "wikidataId": "Q259234",
+  "aliases": [
+    {
+      "name": "7.65mm Borchardt",
+      "kind": "commercial"
+    }
+  ],
+  "caseType": "rimless",
+  "standard": "none",
+  "loads": [
+    {
+      "id": "fmj",
+      "name": "FMJ",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 5.5,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-7-65-25mm-borchardt",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363155994",
+        "sourceNote": "From the infobox ballistics table, uncited there. No test barrel is stated, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/7-65x25mm-borchardt/hero.webp",
+      "alt": "Two bottlenecked pistol cartridges with grey metal-jacketed round-nosed bullets standing side by side, the left one with a dull grey-brown case and the right one brass",
+      "caption": "A 7.65mm Borchardt cartridge beside a 7.63mm Mauser, as the file title orders them.",
+      "width": 1600,
+      "height": 1200,
+      "credit": {
+        "author": "Drake00",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:7.65mm_Borchardt_&_7.63mm_Mauser.JPG",
+        "title": "File:7.65mm Borchardt & 7.63mm Mauser.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/7-65x25mm-borchardt/borchardt-c93.webp",
+      "alt": "The right side of a long-barrelled self-loading pistol with a wooden grip, a forward-angled grip frame and a toggle mechanism behind the barrel, against a white cloth",
+      "caption": "A Borchardt C-93, the pistol the cartridge was designed for.",
+      "width": 1200,
+      "height": 795,
+      "credit": {
+        "author": "Self Loader",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Borchardt_C93_2119_R_DCS1062.jpg",
+        "title": "File:Borchardt C93 2119 R DCS1062.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-7-65-25mm-borchardt",
+      "type": "wikipedia",
+      "title": "7.65×25mm Borchardt",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1363155994",
+      "lang": "en",
+      "revision": "1363155994",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "caseLength": {
+    "value": 25.15,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-65-25mm-borchardt",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363155994",
+    "sourceNote": "From the infobox, uncited there; no C.I.P. sheet was found for this obsolete cartridge."
+  },
+  "overallLength": {
+    "value": null,
+    "unit": "mm",
+    "status": "placeholder",
+    "sourceNote": "No source gives an overall length."
+  },
+  "bulletDiameter": {
+    "value": 7.86,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-65-25mm-borchardt",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363155994",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "neckDiameter": {
+    "value": 8.46,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-65-25mm-borchardt",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363155994",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "baseDiameter": {
+    "value": 9.86,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-65-25mm-borchardt",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363155994",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "rimDiameter": {
+    "value": 9.98,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-7-65-25mm-borchardt",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1363155994",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "caseShape": "bottleneck",
+  "introduced": 1893,
+  "designedBy": "Georg Johann Luger"
+}

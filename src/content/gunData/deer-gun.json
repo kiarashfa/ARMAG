@@ -1,0 +1,122 @@
+{
+  "id": "deer-gun",
+  "name": "Deer gun",
+  "kind": "model",
+  "wikidataId": "Q2399918",
+  "makerRef": "american-machine-and-foundry",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "pistol",
+  "action": "screw-barrel",
+  "operatingSystem": "manual",
+  "designedIn": "united-states",
+  "producedIn": [
+    "united-states"
+  ],
+  "fireModes": [
+    "single-shot"
+  ],
+  "feedSystem": [],
+  "roles": [],
+  "massEmpty": {
+    "value": 0.34,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-deer-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1360524848",
+    "sourceNote": "Converted from a published 12 oz figure, Wikipedia infobox; no inline citation is given there."
+  },
+  "length": {
+    "value": 127,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-deer-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1360524848",
+    "sourceNote": "Converted from a published 5 in figure, Wikipedia infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 48,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-deer-gun",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1360524848",
+    "sourceNote": "A published 48 mm (1.875 in) figure, Wikipedia infobox, uncited there."
+  },
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "primary": true,
+      "capacity": {
+        "value": 1,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-deer-gun",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1360524848",
+        "sourceNote": "Single-shot, loaded by unscrewing the barrel, from the infobox and article text."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/deer-gun/hero.webp",
+      "alt": "A grey cast-aluminium pistol frame with a checkered hollow grip, a cylindrical receiver with a cocking knob protruding from the rear and a short dark barrel, on a plain white background",
+      "caption": "A Deer gun, showing its cast-aluminium frame, checkered grip and rear cocking knob.",
+      "width": 1500,
+      "height": 1300,
+      "credit": {
+        "author": "Phantomass",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:TYT1-T-F2-H.jpg",
+        "title": "File:TYT1-T-F2-H.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/guns/deer-gun/instructions.webp",
+      "alt": "A tall printed sheet of wordless pictograms with red arrows showing, step by step, how to handle and operate the pistol",
+      "caption": "The pictorial instruction sheet packed with each Deer gun, intended to be understood without text.",
+      "width": 502,
+      "height": 1055,
+      "credit": {
+        "author": "US Government",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deer_gun_instructions.jpg",
+        "title": "File:Deer gun instructions.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-deer-gun",
+      "type": "wikipedia",
+      "title": "Deer gun",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1360524848",
+      "lang": "en",
+      "revision": "1360524848",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "forgotten-weapons-deer-gun",
+      "type": "web",
+      "title": "The CIA's New Liberator: the 9mm Deer Gun",
+      "publisher": "Forgotten Weapons",
+      "url": "https://www.forgottenweapons.com/the-cias-new-liberator-the-9mm-deer-gun/",
+      "lang": "en",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "introduced": 1964,
+  "productionYears": {
+    "start": 1964,
+    "end": 1964
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "id": "ak-205",
+  "name": "AK-205",
+  "kind": "model",
+  "wikidataId": "Q107630154",
+  "makerRef": "kalashnikov-concern",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "AK-105M",
+      "kind": "military",
+      "note": "The designation before the 2018 renaming."
+    }
+  ],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "russia",
+  "producedIn": [
+    "russia"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "assault-rifle",
+    "personal-defence"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "5-45x39mm",
+      "primary": true,
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-ak-205",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364043986",
+        "sourceNote": "The infobox gives a 30-round detachable box magazine or a 60-round casket magazine, uncited there; 30 rounds recorded as the standard box."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/ak-205/hero.webp",
+      "alt": "The receiver and curved ribbed polymer magazine of a black Kalashnikov-pattern carbine with a rail on the receiver cover, hung on a stand against a pale wall",
+      "caption": "An AK-205 on display at the Army-2022 exhibition, cropped at the receiver and magazine.",
+      "width": 1600,
+      "height": 640,
+      "credit": {
+        "author": "Mike1979 Russia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:AK205_Assault_Rifle_Army-2022_2022-08-20_2381.jpg",
+        "title": "File:AK205 Assault Rifle Army-2022 2022-08-20 2381.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-ak-205",
+      "type": "wikipedia",
+      "title": "AK-205",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1364043986",
+      "lang": "en",
+      "revision": "1364043986",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "massEmpty": {
+    "value": 3.7,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-ak-205",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364043986",
+    "sourceNote": "From the infobox, which gives it with an empty magazine, uncited there."
+  },
+  "length": {
+    "value": 850,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-205",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364043986",
+    "sourceNote": "Stock extended, from the infobox, uncited there; 790 mm with the stock retracted."
+  },
+  "lengthFolded": {
+    "value": 605,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-205",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364043986",
+    "sourceNote": "Stock folded, from the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 314,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-ak-205",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364043986",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-ak-205",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364043986",
+    "sourceNote": "From the infobox and article text, uncited there."
+  },
+  "effectiveRange": {
+    "value": 500,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-ak-205",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1364043986",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "introduced": 2018
+}

@@ -1,0 +1,102 @@
+{
+  "id": "zastava-m85",
+  "name": "Zastava M85",
+  "kind": "model",
+  "wikidataId": "Q8067064",
+  "makerRef": "zastava-arms",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "carbine",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "yugoslavia",
+  "producedIn": [
+    "yugoslavia",
+    "serbia"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "assault-rifle"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "5-56x45mm-nato",
+      "primary": true,
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-zastava-m85",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1353718667",
+        "sourceNote": "A 30-round box magazine, from the infobox, uncited there."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/zastava-m85/hero.webp",
+      "alt": "A black-and-white line drawing of the receiver and forward end of an AK-pattern carbine, with a long wooden handguard with vents and a curved magazine hanging below",
+      "caption": "An illustration of a Zastava M85, cropped, without its stock.",
+      "width": 342,
+      "height": 152,
+      "credit": {
+        "author": "SimonKTemplar",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cz-m85nostock.jpg",
+        "title": "File:Cz-m85nostock.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-zastava-m85",
+      "type": "wikipedia",
+      "title": "Zastava M85",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1353718667",
+      "lang": "en",
+      "revision": "1353718667",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "massEmpty": {
+    "value": 3.5,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-zastava-m85",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1353718667",
+    "sourceNote": "From the infobox, uncited there; whether it includes a magazine is not stated."
+  },
+  "length": {
+    "value": 800,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-zastava-m85",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1353718667",
+    "sourceNote": "The infobox gives 800 mm with the folding stock and 540 mm without it, uncited there; 800 mm recorded with the stock extended."
+  },
+  "effectiveRange": {
+    "value": 400,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-zastava-m85",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1353718667",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "introduced": 1985
+}

@@ -1,0 +1,150 @@
+{
+  "id": "vsk-94",
+  "name": "VSK-94",
+  "kind": "model",
+  "wikidataId": "Q1079687",
+  "makerRef": "tula-arms-plant",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [
+    {
+      "name": "ВСК-94",
+      "kind": "military",
+      "note": "Voyskovoy Snayperskiy Kompleks, \"military sniper complex\"; GRAU index 6V8."
+    }
+  ],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "russia",
+  "producedIn": [
+    "russia"
+  ],
+  "fireModes": [],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "dmr",
+    "law-enforcement"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x39mm",
+      "primary": true,
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-vsk-94",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362458469",
+        "sourceNote": "A 20-round detachable box magazine, the one from the 9A-91, from the infobox and article text, uncited there."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/vsk-94/hero.webp",
+      "alt": "Two views of a black rifle with a skeletonised polymer stock, a long suppressor on the barrel, a box magazine and a silver PSO-1 optical sight, lying on grey paving",
+      "caption": "A VSK-94 with its PSO-1 optical sight and suppressor, shown in two views.",
+      "width": 600,
+      "height": 413,
+      "credit": {
+        "author": "Unknown author Unknown author",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:VSK-94.jpg",
+        "title": "File:VSK-94.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/guns/vsk-94/exhibition.webp",
+      "alt": "A black rifle with an optical sight and a long cylindrical suppressor hung on a wire grid wall beside information cards and a cartridge",
+      "caption": "A VSK-94 displayed at the MVSV-2008 exhibition.",
+      "width": 1200,
+      "height": 747,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:ВСК-94_-_МВСВ-2008_01.jpg",
+        "title": "File:ВСК-94 - МВСВ-2008 01.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-vsk-94",
+      "type": "wikipedia",
+      "title": "VSK-94",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1362458469",
+      "lang": "en",
+      "revision": "1362458469",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "introduced": 1994,
+  "massEmpty": {
+    "value": 2.8,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-vsk-94",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362458469",
+    "sourceNote": "From the infobox, uncited there; whether it includes a magazine is not stated."
+  },
+  "length": {
+    "value": 932,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vsk-94",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362458469",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "barrelLength": {
+    "value": 230,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vsk-94",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362458469",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "width": {
+    "value": 83,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vsk-94",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362458469",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "height": {
+    "value": 280,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-vsk-94",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362458469",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-vsk-94",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362458469",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "effectiveRange": {
+    "value": 400,
+    "unit": "m",
+    "status": "estimated",
+    "source": "wp-vsk-94",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1362458469",
+    "sourceNote": "From the infobox, uncited there; it separately lists a maximum range of 600 m."
+  }
+}

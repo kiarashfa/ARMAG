@@ -1,0 +1,124 @@
+{
+  "id": "9a-91",
+  "name": "9A-91",
+  "kind": "model",
+  "wikidataId": "Q367544",
+  "makerRef": "kbp-instrument-design-bureau",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "rifle",
+  "action": "self-loading",
+  "operatingSystem": "gas-long-stroke",
+  "designedIn": "russia",
+  "producedIn": [
+    "russia"
+  ],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [
+    "law-enforcement"
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x39mm",
+      "primary": true,
+      "capacity": {
+        "value": 20,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-9a-91",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1384351940",
+        "sourceNote": "A 20-round straight box magazine, from the infobox, uncited there."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/9a-91/hero.webp",
+      "alt": "A black compact rifle with a straight box magazine and an optical sight, displayed on a pegboard wall beside a card showing a 9x39 mm SP-6 cartridge",
+      "caption": "A 9A-91 on display with an optical sight and a card for the 9×39mm SP-6 cartridge.",
+      "width": 1200,
+      "height": 779,
+      "credit": {
+        "author": "Remigiusz Wilk ( REMOV )",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:9A-91.jpg",
+        "title": "File:9A-91.jpg",
+        "licenseType": "cc-by",
+        "licenseVersion": "2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      }
+    },
+    {
+      "src": "images/guns/9a-91/receiver.webp",
+      "alt": "Left side of the receiver of a black compact rifle, showing a polymer forend with a ribbed grip, the trigger guard and a straight box magazine, on an olive cloth",
+      "caption": "The receiver and magazine of a 9A-91.",
+      "width": 1200,
+      "height": 350,
+      "credit": {
+        "author": "Vitaly V. Kuzmin",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:9mm_KBP_9A-91_compact_assault_rifle_-_06.jpg",
+        "title": "File:9mm KBP 9A-91 compact assault rifle - 06.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-9a-91",
+      "type": "wikipedia",
+      "title": "9A-91",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1384351940",
+      "lang": "en",
+      "revision": "1384351940",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "introduced": 1993,
+  "massEmpty": {
+    "value": 1.8,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-9a-91",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1384351940",
+    "sourceNote": "Empty, from the infobox, uncited there; 2.5 kg loaded with a 20-round magazine."
+  },
+  "length": {
+    "value": 594,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-9a-91",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1384351940",
+    "sourceNote": "Stock extended, from the infobox, uncited there."
+  },
+  "lengthFolded": {
+    "value": 373,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-9a-91",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1384351940",
+    "sourceNote": "Stock folded, from the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-9a-91",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1384351940",
+    "sourceNote": "Midpoint of the infobox range of 600–800 rounds per minute, uncited there."
+  }
+}

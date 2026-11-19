@@ -1,0 +1,104 @@
+{
+  "id": "zagi-m-91",
+  "name": "Zagi M-91",
+  "kind": "model",
+  "wikidataId": "Q8064394",
+  "makerRef": "likaweld",
+  "familyRef": null,
+  "alsoInFamilies": [],
+  "aliases": [],
+  "lineage": {},
+  "type": "submachine-gun",
+  "action": "self-loading",
+  "operatingSystem": "blowback-simple",
+  "designedIn": "croatia",
+  "producedIn": [
+    "croatia"
+  ],
+  "fireModes": [],
+  "feedSystem": [
+    "detachable-box"
+  ],
+  "roles": [],
+  "chamberings": [
+    {
+      "cartridgeRef": "9x19mm-parabellum",
+      "primary": true,
+      "capacity": {
+        "value": 32,
+        "unit": "",
+        "status": "estimated",
+        "source": "wp-zagi-m-91",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373097237",
+        "sourceNote": "A 32-round box magazine, from the infobox, which cites a Croatian interior ministry page that was not read."
+      }
+    }
+  ],
+  "variants": [],
+  "fits": [],
+  "images": [
+    {
+      "src": "images/guns/zagi-m-91/hero.webp",
+      "alt": "A blurred close view of a dark submachine gun with a tubular receiver, a trigger and a long straight magazine, in front of a wooden panel with a small label",
+      "caption": "A Zagi M91 in a display case, cropped; the photograph is low in resolution.",
+      "width": 973,
+      "height": 532,
+      "credit": {
+        "author": "Toca",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zagi_M91_crop.JPG",
+        "title": "File:Zagi M91 crop.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-zagi-m-91",
+      "type": "wikipedia",
+      "title": "Zagi M-91",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1373097237",
+      "lang": "en",
+      "revision": "1373097237",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "introduced": 1991,
+  "massEmpty": {
+    "value": 3.41,
+    "unit": "kg",
+    "status": "estimated",
+    "source": "wp-zagi-m-91",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373097237",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "length": {
+    "value": 565,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-zagi-m-91",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373097237",
+    "sourceNote": "Stock retracted, from the infobox, uncited there; 850 mm with the stock extended."
+  },
+  "barrelLength": {
+    "value": 220,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-zagi-m-91",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373097237",
+    "sourceNote": "From the infobox, uncited there."
+  },
+  "cyclicRate": {
+    "value": 700,
+    "unit": "rpm",
+    "status": "estimated",
+    "source": "wp-zagi-m-91",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1373097237",
+    "sourceNote": "From the infobox, uncited there."
+  }
+}

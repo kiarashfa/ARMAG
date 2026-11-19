@@ -1,0 +1,201 @@
+{
+  "id": "256-winchester-magnum",
+  "name": ".256 Winchester Magnum",
+  "wikidataId": "Q4545213",
+  "aliases": [
+    {
+      "name": ".256 Win. Mag.",
+      "kind": "commercial"
+    },
+    {
+      "name": "256 Win. Mag.",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    }
+  ],
+  "caseType": "rimmed",
+  "standard": "cip",
+  "loads": [
+    {
+      "id": "60gr-fmj-pistol",
+      "name": "60 gr FMJ, pistol barrel",
+      "bulletType": "FMJ",
+      "bulletMass": {
+        "value": 3.89,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-256-winchester-magnum",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372654259",
+        "sourceNote": "60 grains from the infobox ballistics table, converted."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 215.9,
+            "unit": "mm",
+            "status": "estimated",
+            "source": "wp-256-winchester-magnum",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372654259",
+            "sourceNote": "The 8.5-inch pistol barrel the article names for this advertised factory load, converted."
+          },
+          "velocity": {
+            "value": 716,
+            "unit": "m/s",
+            "status": "estimated",
+            "source": "wp-256-winchester-magnum",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372654259",
+            "sourceNote": "2,350 ft/s as advertised for the Winchester factory load, from the infobox and article text, converted; the article cites a magazine note rather than a factory page, so estimated."
+          }
+        }
+      ]
+    },
+    {
+      "id": "60gr-open-point",
+      "name": "60 gr open-point expanding, rifle barrel",
+      "bulletType": "JHP",
+      "bulletMass": {
+        "value": 3.89,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-256-winchester-magnum",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372654259",
+        "sourceNote": "60 grains from the infobox ballistics table, converted."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "estimated",
+            "source": "wp-256-winchester-magnum",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372654259",
+            "sourceNote": "The 24-inch rifle barrel the article names for this factory load, converted."
+          },
+          "velocity": {
+            "value": 841,
+            "unit": "m/s",
+            "status": "estimated",
+            "source": "wp-256-winchester-magnum",
+            "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1372654259",
+            "sourceNote": "2,760 ft/s for the Winchester factory load from a 24-inch barrel, from the article text, converted; sourced there to a magazine note, so estimated."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/256-winchester-magnum/hero.webp",
+      "alt": "Two brass cartridge cases side by side: a bottlenecked .256 Winchester Magnum with a copper bullet, and a straight-walled .357 Magnum case beside it",
+      "caption": "A .256 Winchester Magnum (left) beside its parent, the .357 Magnum.",
+      "width": 967,
+      "height": 1465,
+      "credit": {
+        "author": "Darkman IV ( talk )",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:256magnumand357magnum.png",
+        "title": "File:256magnumand357magnum.png",
+        "licenseType": "cc0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "src": "images/cartridges/256-winchester-magnum/ruger-hawkeye.webp",
+      "alt": "A long-barrelled single-shot pistol with a wooden grip lying on a leaflet beside a red Ruger Hawkeye ammunition box",
+      "caption": "A Ruger Hawkeye single-shot pistol chambered for the .256 Winchester Magnum, the first arm to chamber the cartridge.",
+      "width": 1200,
+      "height": 800,
+      "credit": {
+        "author": "Stephen Z",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flickr_-_~Steve_Z~_-_Ruger_Hawkeye_.256_Winchester_Magnum.jpg",
+        "title": "File:Flickr - ~Steve Z~ - Ruger Hawkeye .256 Winchester Magnum.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-256-winchester-magnum",
+      "type": "wikipedia",
+      "title": ".256 Winchester Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1372654259",
+      "lang": "en",
+      "revision": "1372654259",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-256-win-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 256 Win. Mag.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/256-win-mag-en.pdf",
+      "revision": "2002-05-15",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "caseLength": {
+    "value": 32.54,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-256-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/256-win-mag-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 40.39,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-256-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/256-win-mag-en.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 6.53,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-256-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/256-win-mag-en.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 7.24,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-256-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/256-win-mag-en.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 9.68,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-256-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/256-win-mag-en.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 11.18,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-256-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/256-win-mag-en.pdf",
+    "sourceNote": "Dimension R1."
+  },
+  "maxPressure": {
+    "value": 350,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-256-win-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-ii/256-win-mag-en.pdf",
+    "sourceNote": "Pmax 3500 bar, transducer method."
+  },
+  "pressureStandard": "cip",
+  "caseShape": "bottleneck",
+  "introduced": 1960,
+  "designedBy": "Ruger and Winchester"
+}

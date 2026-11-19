@@ -1,0 +1,121 @@
+{
+  "id": "38-rimfire",
+  "name": ".38 rimfire",
+  "wikidataId": "Q4545320",
+  "aliases": [
+    {
+      "name": "9.5×22mmRF",
+      "kind": "commercial",
+      "note": "The metric designation the article gives."
+    }
+  ],
+  "caseType": "rimmed",
+  "standard": "none",
+  "loads": [
+    {
+      "id": "150gr-lrn",
+      "name": "150 gr LRN",
+      "bulletType": "LRN",
+      "bulletMass": {
+        "value": 9.72,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-38-rimfire",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374890316",
+        "sourceNote": "150 grains from the infobox ballistics table, converted. The table says only that it was fired from a rifle, with no barrel length and no statement of which case length it used, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/38-rimfire/hero.webp",
+      "alt": "Five copper-coloured rimfire cartridges with grey lead round-nose bullets, some standing and some lying on a pale surface",
+      "caption": "Rounds of .38 rimfire Long.",
+      "width": 1040,
+      "height": 816,
+      "credit": {
+        "author": "M-134",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:5_rounds_of_.38_Rimfire_long.JPG",
+        "title": "File:5 rounds of .38 Rimfire long.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/38-rimfire/short.webp",
+      "alt": "Six brass-coloured rimfire cartridges with grey lead round-nose bullets, two standing and four lying on a pale surface",
+      "caption": "Vintage rounds of .38 rimfire Short.",
+      "width": 1168,
+      "height": 896,
+      "credit": {
+        "author": "M-134",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:6_rounds_of_vintage_.38_Rimfire_short_ammo.JPG",
+        "title": "File:6 rounds of vintage .38 Rimfire short ammo.JPG",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-38-rimfire",
+      "type": "wikipedia",
+      "title": ".38 rimfire",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1374890316",
+      "lang": "en",
+      "revision": "1374890316",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "caseShape": "straight",
+  "caseLength": {
+    "value": null,
+    "unit": "mm",
+    "status": "placeholder",
+    "sourceNote": "Three lengths were made (Short, Long and Extra Long), so there is no single case length."
+  },
+  "overallLength": {
+    "value": null,
+    "unit": "mm",
+    "status": "placeholder",
+    "sourceNote": "Three lengths were made (Short, Long and Extra Long), so there is no single overall length."
+  },
+  "bulletDiameter": {
+    "value": 9.5,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-38-rimfire",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374890316",
+    "sourceNote": "0.374 inch from the infobox, converted; the same for all three lengths."
+  },
+  "neckDiameter": {
+    "value": 9.55,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-38-rimfire",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374890316",
+    "sourceNote": "0.376 inch from the infobox, converted; the same for all three lengths."
+  },
+  "baseDiameter": {
+    "value": 9.6,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-38-rimfire",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374890316",
+    "sourceNote": "0.378 inch from the infobox, converted; the same for all three lengths."
+  },
+  "rimDiameter": {
+    "value": 11,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-38-rimfire",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1374890316",
+    "sourceNote": "0.433 inch from the infobox, converted; the same for all three lengths."
+  }
+}

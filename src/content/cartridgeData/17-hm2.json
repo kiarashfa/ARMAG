@@ -1,0 +1,154 @@
+{
+  "id": "17-hm2",
+  "name": ".17 HM2",
+  "wikidataId": "Q2669878",
+  "aliases": [
+    {
+      "name": ".17 Hornady Mach 2",
+      "kind": "commercial"
+    },
+    {
+      "name": "17 Mach 2",
+      "kind": "commercial",
+      "note": "Hornady's product name."
+    }
+  ],
+  "caseType": "rimmed",
+  "standard": "none",
+  "loads": [
+    {
+      "id": "hornady-17gr-vmax",
+      "name": "Hornady Varmint Express 17 gr V-MAX",
+      "manufacturer": "Hornady",
+      "bulletType": "V-MAX",
+      "bulletMass": {
+        "value": 1.1,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-17-hm2-17-vmax",
+        "sourceUrl": "https://www.hornady.com/ammunition/rimfire/17-mach-2-17-gr-v-max-varmint-express-rimfire",
+        "sourceNote": "Published as 17 grains, converted."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-17-hm2-17-vmax",
+            "sourceUrl": "https://www.hornady.com/ammunition/rimfire/17-mach-2-17-gr-v-max-varmint-express-rimfire",
+            "sourceNote": "The 24-inch test barrel the page states, converted."
+          },
+          "velocity": {
+            "value": 640.1,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-17-hm2-17-vmax",
+            "sourceUrl": "https://www.hornady.com/ammunition/rimfire/17-mach-2-17-gr-v-max-varmint-express-rimfire",
+            "sourceNote": "2,100 ft/s as published, converted."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/17-hm2/hero.webp",
+      "alt": "Two rimfire cartridges standing side by side: a brass-cased one with a red-tipped bullet on the left and a wider brass-cased one with a copper hollow-point bullet on the right",
+      "caption": "A .17 HM2 (left, as the file title orders them) beside a .22 Long Rifle.",
+      "width": 226,
+      "height": 329,
+      "credit": {
+        "author": "Arthurrh",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rimfire_17HM2_22LR.jpg",
+        "title": "File:Rimfire 17HM2 22LR.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-17-hm2",
+      "type": "wikipedia",
+      "title": ".17 HM2",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1352777315",
+      "lang": "en",
+      "revision": "1352777315",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "hornady-17-hm2-17-vmax",
+      "type": "manufacturer-spec",
+      "title": "17 Mach 2 17 gr V-MAX Varmint Express Rimfire",
+      "publisher": "Hornady",
+      "url": "https://www.hornady.com/ammunition/rimfire/17-mach-2-17-gr-v-max-varmint-express-rimfire",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "caseLength": {
+    "value": 18.14,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-17-hm2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352777315",
+    "sourceNote": "0.714 inch from the infobox, converted; no C.I.P. sheet exists for the cartridge."
+  },
+  "overallLength": {
+    "value": 25.4,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-17-hm2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352777315",
+    "sourceNote": "1.00 inch from the infobox, converted."
+  },
+  "bulletDiameter": {
+    "value": 4.37,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-17-hm2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352777315",
+    "sourceNote": "0.172 inch from the infobox, converted."
+  },
+  "neckDiameter": {
+    "value": 4.57,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-17-hm2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352777315",
+    "sourceNote": "0.180 inch from the infobox, converted."
+  },
+  "baseDiameter": {
+    "value": 5.74,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-17-hm2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352777315",
+    "sourceNote": "0.226 inch from the infobox, converted."
+  },
+  "rimDiameter": {
+    "value": 6.99,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-17-hm2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352777315",
+    "sourceNote": "0.275 inch from the infobox, converted."
+  },
+  "maxPressure": {
+    "value": 165.5,
+    "unit": "MPa",
+    "status": "estimated",
+    "source": "wp-17-hm2",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1352777315",
+    "sourceNote": "24,000 psi from the infobox, converted, uncited there."
+  },
+  "pressureStandard": "cip",
+  "caseShape": "bottleneck",
+  "introduced": 2004,
+  "designedBy": "Hornady"
+}

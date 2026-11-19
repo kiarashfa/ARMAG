@@ -1,0 +1,158 @@
+{
+  "id": "8x58mmr-danish-krag",
+  "name": "8×58mmR Danish Krag",
+  "wikidataId": "Q15964373",
+  "aliases": [
+    {
+      "name": "8×58mmRD",
+      "kind": "commercial"
+    }
+  ],
+  "caseType": "rimmed",
+  "standard": "none",
+  "loads": [
+    {
+      "id": "237gr-round-nose",
+      "name": "237 gr round nose",
+      "bulletType": "RN",
+      "bulletMass": {
+        "value": 15.36,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-8-58mmr-danish-krag",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380510200",
+        "sourceNote": "237 grains from the infobox, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    },
+    {
+      "id": "196gr-spitzer",
+      "name": "196 gr spitzer",
+      "bulletType": "spitzer",
+      "bulletMass": {
+        "value": 12.7,
+        "unit": "g",
+        "status": "estimated",
+        "source": "wp-8-58mmr-danish-krag",
+        "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380510200",
+        "sourceNote": "196 grains from the infobox, converted. No test barrel is stated, so no velocity is recorded."
+      }
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/8x58mmr-danish-krag/hero.webp",
+      "alt": "Close view of the brass shoulder and neck of a rimmed bottleneck rifle cartridge, cropped at the case body",
+      "caption": "A close crop of an 8×58mmR cartridge case.",
+      "width": 1280,
+      "height": 252,
+      "credit": {
+        "author": "EDUARD at municion.org",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ordinari2G.jpg",
+        "title": "File:Ordinari2G.jpg",
+        "licenseType": "public-domain"
+      }
+    },
+    {
+      "src": "images/cartridges/8x58mmr-danish-krag/dimensions.webp",
+      "alt": "Part of a dimensioned drawing of the cartridge case, with labelled lengths including a 58.00 mm case length and a 78.00 mm overall length",
+      "caption": "A dimension drawing of the 8×58mmR Danish Krag, cropped; it comes from RWS, per the article.",
+      "width": 1124,
+      "height": 680,
+      "credit": {
+        "author": "Francis Flinch",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:8x58mmR_Danish_Krag.png",
+        "title": "File:8x58mmR Danish Krag.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "src": "images/cartridges/8x58mmr-danish-krag/swedish-rolling-block.webp",
+      "alt": "Two views of a long wooden-stocked single-shot rifle with a rolling-block action and a full-length barrel, laid out against a pale ground",
+      "caption": "A Swedish m/1867-89 Remington rolling-block rifle, rebuilt for the 8×58mmR, in the Army Museum collection.",
+      "width": 550,
+      "height": 300,
+      "credit": {
+        "author": "Armémuseum (The Swedish Army Museum)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gevär_m-1867-89_Sverige_(Remington_rolling_block)_8x58R_Carl_Gustafs_-_Armémuseum.jpg",
+        "title": "File:Gevär m-1867-89 Sverige (Remington rolling block) 8x58R Carl Gustafs - Armémuseum.jpg",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-8-58mmr-danish-krag",
+      "type": "wikipedia",
+      "title": "8×58mmR Danish Krag",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1380510200",
+      "lang": "en",
+      "revision": "1380510200",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    }
+  ],
+  "pressureStandard": "cip",
+  "caseShape": "bottleneck",
+  "introduced": 1889,
+  "caseLength": {
+    "value": 58,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-8-58mmr-danish-krag",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380510200",
+    "sourceNote": "From the infobox, which draws on the ammunition maker RWS; the article says sources differ somewhat. There is no C.I.P. sheet."
+  },
+  "overallLength": {
+    "value": 78,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-8-58mmr-danish-krag",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380510200",
+    "sourceNote": "From the infobox, drawn from the RWS dimensions."
+  },
+  "bulletDiameter": {
+    "value": 8.2,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-8-58mmr-danish-krag",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380510200",
+    "sourceNote": "The infobox bullet figure, equal to the groove diameter the article quotes."
+  },
+  "neckDiameter": {
+    "value": 8.98,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-8-58mmr-danish-krag",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380510200",
+    "sourceNote": "From the infobox."
+  },
+  "baseDiameter": {
+    "value": 12.75,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-8-58mmr-danish-krag",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380510200",
+    "sourceNote": "From the infobox."
+  },
+  "rimDiameter": {
+    "value": 14.65,
+    "unit": "mm",
+    "status": "estimated",
+    "source": "wp-8-58mmr-danish-krag",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380510200",
+    "sourceNote": "From the infobox."
+  },
+  "maxPressure": {
+    "value": null,
+    "unit": "MPa",
+    "status": "conflicting-sources",
+    "source": "wp-8-58mmr-danish-krag",
+    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1380510200",
+    "sourceNote": "The article quotes sources ranging from 180 MPa to 306 MPa and calls the spread extreme; there is no C.I.P. ruling."
+  }
+}

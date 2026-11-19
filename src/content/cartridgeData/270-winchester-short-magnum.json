@@ -1,0 +1,179 @@
+{
+  "id": "270-winchester-short-magnum",
+  "name": ".270 Winchester Short Magnum",
+  "wikidataId": "Q4545231",
+  "aliases": [
+    {
+      "name": "270 WSM",
+      "kind": "commercial",
+      "note": "The designation SAAMI lists, without a decimal point."
+    },
+    {
+      "name": "270 Win. Short Mag.",
+      "kind": "commercial",
+      "note": "The C.I.P. designation."
+    }
+  ],
+  "caseType": "rebated-rim",
+  "standard": "cip",
+  "loads": [
+    {
+      "id": "hornady-145gr-eld-x",
+      "name": "Hornady Precision Hunter 145 gr ELD-X",
+      "manufacturer": "Hornady",
+      "bulletType": "ELD-X",
+      "bulletMass": {
+        "value": 9.4,
+        "unit": "g",
+        "status": "verified",
+        "source": "hornady-270-wsm-145-eld-x",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/270-wsm-145-gr-eld-x-precision-hunter",
+        "sourceNote": "Published as 145 grains in the product name, converted."
+      },
+      "velocityByBarrel": [
+        {
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-270-wsm-145-eld-x",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/270-wsm-145-gr-eld-x-precision-hunter",
+            "sourceNote": "The 24-inch test barrel the page states, converted."
+          },
+          "velocity": {
+            "value": 944.9,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-270-wsm-145-eld-x",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/270-wsm-145-gr-eld-x-precision-hunter",
+            "sourceNote": "3,100 ft/s as published, converted."
+          }
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "src": "images/cartridges/270-winchester-short-magnum/hero.webp",
+      "alt": "Two brass-cased rifle cartridges with copper-tipped bullets side by side, the left one visibly shorter and wider in the body than the right",
+      "caption": "A .270 WSM beside a .270 Winchester, as the file title lists them.",
+      "width": 340,
+      "height": 716,
+      "credit": {
+        "author": "AliveFreeHappy",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:270_WSM_and_270_Win.jpg",
+        "title": "File:270 WSM and 270 Win.jpg",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    },
+    {
+      "src": "images/cartridges/270-winchester-short-magnum/wsm-family.webp",
+      "alt": "Four rifle cartridges standing in a row against a pale background, the third one nickel-plated, each with a pointed bullet and a rebated rim",
+      "caption": "The Winchester Short Magnum family; the file does not label which cartridge is which.",
+      "width": 955,
+      "height": 1200,
+      "credit": {
+        "author": "Dt3ft",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:WSM_family_only.png",
+        "title": "File:WSM family only.png",
+        "licenseType": "cc-by-sa",
+        "licenseVersion": "3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      }
+    }
+  ],
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "wp-270-winchester-short-magnum",
+      "type": "wikipedia",
+      "title": ".270 Winchester Short Magnum",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1239176976",
+      "lang": "en",
+      "revision": "1239176976",
+      "accessed": "2026-11-19",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "cip-270-win-short-mag",
+      "type": "standards-body",
+      "title": "C.I.P. TDCC datasheet — 270 Win. Short Mag.",
+      "publisher": "Commission Internationale Permanente pour l'Épreuve des Armes à Feu Portatives",
+      "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page100.pdf",
+      "revision": "2008-09-23",
+      "accessed": "2026-11-19"
+    },
+    {
+      "key": "hornady-270-wsm-145-eld-x",
+      "type": "manufacturer-spec",
+      "title": "270 WSM 145 gr ELD-X Precision Hunter",
+      "publisher": "Hornady",
+      "url": "https://www.hornady.com/ammunition/rifle/270-wsm-145-gr-eld-x-precision-hunter",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "pressureStandard": "cip",
+  "caseShape": "bottleneck",
+  "introduced": 2002,
+  "designedBy": "Winchester",
+  "caseLength": {
+    "value": 53.34,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page100.pdf",
+    "sourceNote": "Cartridge maximum, dimension L3."
+  },
+  "overallLength": {
+    "value": 72.64,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page100.pdf",
+    "sourceNote": "Cartridge maximum, dimension L6."
+  },
+  "bulletDiameter": {
+    "value": 7.06,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page100.pdf",
+    "sourceNote": "Dimension G1."
+  },
+  "neckDiameter": {
+    "value": 7.98,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page100.pdf",
+    "sourceNote": "Dimension H2."
+  },
+  "baseDiameter": {
+    "value": 14.12,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page100.pdf",
+    "sourceNote": "Dimension P1."
+  },
+  "rimDiameter": {
+    "value": 13.59,
+    "unit": "mm",
+    "status": "verified",
+    "source": "cip-270-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page100.pdf",
+    "sourceNote": "Dimension R1; narrower than the base, which is what rebated means."
+  },
+  "maxPressure": {
+    "value": 440,
+    "unit": "MPa",
+    "status": "verified",
+    "source": "cip-270-win-short-mag",
+    "sourceUrl": "https://bobp.cip-bobp.org/uploads/tdcc/tab-i/tabical-en-page100.pdf",
+    "sourceNote": "Pmax 4400 bar, transducer method."
+  }
+}
