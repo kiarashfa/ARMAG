@@ -21,7 +21,10 @@
   "producedIn": [
     "russia"
   ],
-  "fireModes": [],
+  "fireModes": [
+    "semi",
+    "automatic"
+  ],
   "feedSystem": [
     "detachable-box"
   ],
@@ -88,6 +91,15 @@
       "revision": "1362458469",
       "accessed": "2026-11-19",
       "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "mf-vsk-94",
+      "type": "web",
+      "title": "VSK-94 sniper rifle",
+      "publisher": "Modern Firearms",
+      "url": "https://web.archive.org/web/20080406131625/http://world.guns.ru/sniper/sn58-e.htm",
+      "lang": "en",
+      "accessed": "2026-11-19"
     }
   ],
   "introduced": 1994,

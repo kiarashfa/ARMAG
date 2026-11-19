@@ -11,8 +11,7 @@
  * piece of structured data on this site that could plausibly be read that way
  * by a machine that never sees the page.
  *
- * It is enforced **twice**, deliberately, the same way gates 2 and 3 are (see
- * CLAUDE.md item 56):
+ * It is enforced **twice**, deliberately, the same way gates 2 and 3 are:
  *
  *   1. Here, in `serialize()`, which throws during the build at the moment the
  *      offending node is created — so the error names the template.

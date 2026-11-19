@@ -90,7 +90,7 @@ const numberOf = (value: PropertyValue | undefined | null): number | null => val
 /**
  * The completeness inputs for one entry.
  *
- * Exported because `/methodology/` and the orchestrator's review both want to
+ * Exported because `/methodology/` and editorial review both want to
  * show the same breakdown, and re-deriving it at either call site is how the
  * two would drift.
  */

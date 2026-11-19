@@ -7,11 +7,10 @@
  * one-line notice when something could not be remembered — never a silent
  * failure."*
  *
- * Written in Phase 6 rather than Phase 7 because the compare tray is client
- * storage admits no exceptions: a tray that wrote a bare
+ * Written before My Armory because the compare tray is client storage, and
+ * client storage admits no exceptions: a tray that wrote a bare
  * `localStorage.setItem` would be the second storage mechanism on the site
- * before the first one existed. My Armory extends this in Phase 7; it does not
- * replace it.
+ * before the first one existed. My Armory extends this; it does not replace it.
  *
  * ── Why an unrecognised version is discarded whole ────────────────────────
  * Partial migration is where saved state goes wrong quietly. A blob half-read

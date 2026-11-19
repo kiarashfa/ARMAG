@@ -1,6 +1,6 @@
 /**
  * The awkward cases in real arms infoboxes, held to tests rather than to
- * anyone's memory. Every fixture below is copied from an article the pilot
+ * anyone's memory. Every fixture below is copied from an article the first
  * batch actually sourced from.
  */
 import assert from 'node:assert/strict';

@@ -188,7 +188,7 @@ test('no barrel length at all is no answer, not an interpolation', () => {
   // A `kind: 'family'` entry has no barrel, so the seam in `derived.ts` hands
   // this NaN. Before the guard it fell through to the bracket search and came
   // back labelled 'interpolated' with a null value — a confident description
-  // of arithmetic that never happened. Found on the AR-15 page, Phase 8.
+  // of arithmetic that never happened. Found on the AR-15 page.
   const result = velocityForBarrel(POINTS, Number.NaN);
   assert.equal(result.basis, 'none');
   assert.equal(result.velocity.value, null);

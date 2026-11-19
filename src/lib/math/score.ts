@@ -124,8 +124,8 @@ export interface PublicationFloor {
  * row and appears in cartridge and maker listings. It just does not get a URL
  * that promises more than it has.
  *
- * Returns the reasons, not a bare boolean, so the orchestrator reviewing agent
- * output is told what is missing rather than that something is.
+ * Returns the reasons, not a bare boolean, so a reviewer is told what is
+ * missing rather than that something is.
  */
 export function meetsPublicationFloor(
   input: CompletenessInput,

@@ -7,7 +7,7 @@
  *
  *  1. `licenseTypeFor()` returns `null` for a licence string it does not
  *     recognise, and the builder throws on `null`. It never falls back to a
- *     "close enough" enum member. The Phase 8 friction log (D2) is the reason:
+ *     "close enough" enum member, because
  *     UK `OGL v1.0` and French `Licence Ouverte` are both attribution licences
  *     that *look* like CC BY, and mapping them to `cc-by` would put a licence
  *     name on the page that the file is not actually under.
@@ -20,7 +20,7 @@
  *  3. `alt` and `caption` are emitted as `TODO` markers, never as the source's
  *     own description. An `alt` copied from `ImageDescription` reads as a
  *     description of the *file*, not of what a reader who cannot see it needs,
- *     and Phase 8 (friction D5) found two of thirty-four Commons descriptions
+ *     and two of the first thirty-four Commons descriptions
  *     were about a different variant than the photograph showed.
  *
  * Pure — no network, no disk. Held to tests in `imageref.test.ts`.
@@ -109,7 +109,7 @@ export function buildImageRef({ src, width, height, meta, alt, caption }) {
     if (known) {
       throw new Error(
         `licence "${meta.licenseShortName}" is ${known[1]}, which has no member in the licenseType enum. ` +
-          'Do NOT map it to cc-by — it is a different licence. Escalate (the design proposes adding it) or choose another file.',
+          'Do NOT map it to cc-by — it is a different licence. Escalate  or choose another file.',
       );
     }
     throw new Error(

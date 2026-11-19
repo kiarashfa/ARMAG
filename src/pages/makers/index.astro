@@ -44,7 +44,7 @@ const jsonLd = itemList(
                 </a>
                 <p class="type-data text-xs text-ink-muted">
                   {labelFor('country', maker.data.country) ?? humanise(maker.data.country)}
-                  {/* `founded` is optional (Phase 10, item 196) — Sterling has none published. */}
+                  {/* `founded` is optional: Sterling has none published. */}
                   {maker.data.founded && <span> · {maker.data.founded}</span>}
                 </p>
               </div>

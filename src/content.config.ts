@@ -86,7 +86,7 @@ const makerData = defineCollection({
  * Glossary terms — single-file MDX, no data twin.
  *
  * Every term is auto-crosslinked from every occurrence in any prose on the
- * site by a rehype plugin (Phase 11), so link density needs no manual upkeep.
+ * site by a rehype plugin, so link density needs no manual upkeep.
  */
 const glossary = defineCollection({
   loader: globWhenAuthored({ base: './src/content/glossary', pattern: '**/*.mdx' }),

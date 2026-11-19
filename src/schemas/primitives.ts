@@ -93,7 +93,7 @@ export const valueStatus = z.enum(['verified', 'estimated', 'placeholder', 'conf
 export type ValueStatus = z.infer<typeof valueStatus>;
 
 /**
- * The SI units this site stores. the design principle: **SI is what is stored;
+ * The SI units this site stores. The principle: **SI is what is stored;
  * imperial is always computed on demand, client-side, never stored and never
  * indexed.**
  *
@@ -280,7 +280,7 @@ export type PropertyValue = z.infer<typeof anyPropertyValue>;
  * none of those fit a unit enum — so rather than smuggling `USD` into `siUnit`
  * and corrupting it, price gets its own primitive with the same trust fields.
  * `economics.ts` adjusts it for inflation from the baked CPI
- * table. the design is explicit that there is no market-value database: this
+ * table. The design is explicit that there is no market-value database: this
  * is the launch price as published, and nothing else.
  */
 export const monetaryValue = z
@@ -543,8 +543,16 @@ export type ReferenceEntry = z.infer<typeof referenceEntry>;
 // Entry-level trust fields
 // ---------------------------------------------------------------------------
 
-export const reviewStatus = z.enum(['draft', 'agent-populated', 'spot-checked', 'verified']);
+export const reviewStatus = z.enum(['draft', 'compiled', 'spot-checked', 'verified']);
 export type ReviewStatus = z.infer<typeof reviewStatus>;
+
+/** How each review status reads on a page. The enum value itself never renders. */
+export const REVIEW_STATUS_LABEL: Record<ReviewStatus, string> = {
+  draft: 'compiled from the cited sources, not yet spot-checked',
+  compiled: 'compiled from the cited sources, not yet spot-checked',
+  'spot-checked': 'spot-checked against the cited sources',
+  verified: 'every figure checked against the cited sources',
+};
 
 /**
  * Carried by every data file in every collection.

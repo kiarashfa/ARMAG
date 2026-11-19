@@ -8,7 +8,7 @@
  *   node scripts/data/plan.mjs next 8
  *   node scripts/data/plan.mjs next 8 --kind cartridge --list "List of shotguns"
  *
- * CLAUDE.md item 20: **assignment must be systematic, not orchestrator taste.**
+ * **Assignment must be systematic, not taste.**
  * The order below is derived from the sources and is reproducible; nobody picks
  * the next batch.
  *
@@ -24,8 +24,8 @@
  * and cheap: `prop=templates&tltemplates=…` answers it 50 titles at a time.
  *
  * **Scope is not decided here.** `{{Infobox weapon}}` also covers swords,
- * missiles and tanks, and deciding that a 20 mm autocannon is out (the design,
- * CLAUDE.md item 16) is a judgement about the arm, not about its infobox. The
+ * missiles and tanks, and deciding that a 20 mm autocannon is out of scope
+ * is a judgement about the arm, not about its infobox. The
  * plan is a candidate list; an author rejects out-of-scope entries and records
  * the rejection with `plan.mjs` untouched.
  */
@@ -40,7 +40,7 @@ const PLAN = path.join(REPO_ROOT, 'plan', 'coverage.json');
 const SKIPS = path.join(REPO_ROOT, 'scripts', 'data', 'sources', 'plan-skips.json');
 const EN = 'https://en.wikipedia.org/w/api.php';
 
-/** Sizes verified 2026-08-26 (CLAUDE.md, research findings). */
+/** Sizes as measured when the plan was first built. */
 const LIST_ARTICLES = [
   { title: 'List of firearms', kind: 'gun' },
   { title: 'List of pistols', kind: 'gun' },
@@ -119,7 +119,7 @@ async function categoryMembers(category, type) {
 /**
  * Depth-limited category walk.
  *
- * CLAUDE.md's research finding is that firearm categories are deeply nested and
+ * Firearm categories are deeply nested and
  * direct membership counts are misleadingly small, so a walk is the only way to
  * see them — but the tree is also large, so it is bounded and opt-in. Every
  * visited category is recorded so a re-run covers the same ground.
@@ -363,7 +363,7 @@ const readPlan = async () => {
  *
  * `build` bakes a `done` flag, and `build` refetches thirteen Wikipedia lists —
  * so between one build and the next, every entry authored in the meantime is
- * still listed as work to do. Phase 10 authored 46 guns against a plan whose
+ * still listed as work to do. One round authored 46 guns against a plan whose
  * snapshot said 12, and `next 3` duly proposed three entries that already
  * existed. The freshness this needs costs one pass over local JSON, so it is
  * done on every read rather than trusted from the file.
@@ -373,9 +373,8 @@ const readPlan = async () => {
  *
  * `done` covers what has been authored; nothing covered what has been JUDGED —
  * so an out-of-scope row (a Gatling gun, a class article, an arm never series
- * produced) came back to the top of the queue every batch, and each fresh agent
- * spent calls rediscovering a decision already recorded in the build log it is
- * told not to read. Fourteen of the top fourteen rows were in that state.
+ * produced) came back to the top of the queue every batch, and each new author
+ * spent calls rediscovering a decision already made elsewhere. Fourteen of the top fourteen rows were in that state.
  *
  * Same shape as `wikidata-exceptions.json`: a judgement made once, recorded so
  * the machine stops asking. Removing a slug from the file requeues the row.

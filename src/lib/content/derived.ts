@@ -32,8 +32,7 @@ export interface DerivedFigure {
  *
  * Declared once, here, and read by `lib/compare/rows.ts` to build the derived
  * half of the row registry — so a figure added below appears in the compare
- * table with no second edit, exactly as a schema field does (the design
- * Phase 6). `figuresForGun` maps over this list rather than assembling its own,
+ * table with no second edit, exactly as a schema field does. `figuresForGun` maps over this list rather than assembling its own,
  * which is what makes "the registry and the page show the same figures" a
  * structural fact rather than a convention.
  *

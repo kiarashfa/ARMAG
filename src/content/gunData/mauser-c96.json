@@ -45,14 +45,6 @@
     "sourceUrl": "http://modernfirearms.net/en/handguns/handguns-en/germany-semi-automatic-pistols/mauser-c-96-eng/",
     "sourceNote": "standard length; 99 mm and other barrel lengths were also produced"
   },
-  "cyclicRate": {
-    "value": 120,
-    "unit": "rpm",
-    "status": "estimated",
-    "source": "wp-mauser-c96",
-    "sourceUrl": "https://en.wikipedia.org/w/index.php?oldid=1371853738",
-    "sourceNote": "semi-automatic practical rate of fire, from the infobox, uncited on Wikipedia"
-  },
   "effectiveRange": {
     "value": 175,
     "unit": "m",

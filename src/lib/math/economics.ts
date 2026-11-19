@@ -12,7 +12,7 @@
  *
  * The CPI table is passed in, never read from disk: `lib/math` does no I/O
  * and the table itself is baked into
- * `src/data/cpi.json` in Phase 9 so the built site makes no runtime API call.
+ * `src/data/cpi.json` so the built site makes no runtime API call.
  *
  * Pure. No DOM, no I/O, no framework import.
  */

@@ -8,8 +8,8 @@
  *   node scripts/data/wikidata.mjs cite   Q37116
  *   node scripts/data/wikidata.mjs verify [--fix]
  *
- * `verify` exists because of a Phase 10 failure that is worth stating plainly:
- * 54 of 80 entries in that batch carried a **wrong** `wikidataId`, because they
+ * `verify` exists because of a failure that is worth stating plainly:
+ * 54 of 80 entries in one batch carried a **wrong** `wikidataId`, because they
  * were typed from memory into a batch generator instead of being resolved.
  * Q800583 is a Brussels railway station, not the Barrett M82; Q179467 is the
  * Fourier series, not the M1 Garand. Nothing in the build could catch it — a
@@ -34,7 +34,7 @@
  *  - `nativeName` in the original script — the reason `Автомат Калашникова`
  *    can be on the AK-47 page at all;
  *  - aliases, which drive a large share of real search traffic (Pagefind found
- *    the pilot entries by `P80`, `SS109`, `Pulemyot` and `Wingmaster`).
+ *    the first entries by `P80`, `SS109`, `Pulemyot` and `Wingmaster`).
  *
  * the design is the standing warning, printed by `show`: **Wikidata is one
  * item per family, not per model.** The PKM has no item of its own (Q159495 is

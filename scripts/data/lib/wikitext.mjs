@@ -6,8 +6,8 @@
  * the unit table, the glossary, the infobox selector, and one addition.
  *
  * **The addition is `fieldReferences()`, and it is the point of this file.**
- * the design says a Wikipedia infobox is "a first pass only — never the
- * last word", and the Phase 8 friction log (A2) found that the actually
+ * A Wikipedia infobox is a first pass only, never the last word, and the
+ * actually
  * authoritative sources — `FM 3-22.9`, `TM 43-0001-27` — are usually already
  * cited in the infobox line you are reading. Stripping the `<ref>` tags before
  * showing the author the figure throws away the citation that would let them
@@ -480,7 +480,7 @@ export function parseLocalisedNumber(text, lang = 'en') {
  * Russian and German earn their place: the Kalashnikov and Mauser literature is
  * primary-source in those languages, and `Начальная скорость` (muzzle velocity)
  * against `Прицельная дальность` (sight-graduated range) is exactly the pair an
- * agent will conflate, producing a plausible number in the wrong field.
+ * author will conflate, producing a plausible number in the wrong field.
  */
 export const GLOSSARY = {
   ru: {

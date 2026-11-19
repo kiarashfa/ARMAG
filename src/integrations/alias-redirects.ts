@@ -6,7 +6,7 @@
  *
  * An arm is known by several names and people type the one they know. The
  * Beretta 92 is the M9, the Glock 17 was the P80, the Remington 870 is the
- * Wingmaster. Each of those is already indexed as a search alias (Phase 8), but
+ * Wingmaster. Each of those is already indexed as a search alias, but
  * a URL somebody guesses or a link somebody writes has to land somewhere, and
  * a redirect carrying a canonical is how that happens without a second page
  * claiming to be the entry.

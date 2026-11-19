@@ -143,8 +143,8 @@ function htmlPairs(html) {
  *
  * The commonest modern shape, and the one that has no table in it at all:
  * Glock's current page renders each figure as a card with `<h3>Barrel
- * Length</h3>` and `<p>114 mm | 4.49 inch</p>`. Phase 8 recorded this page as
- * "a readable HTML spec table"; by Phase 9 it is a Next.js card grid, which is
+ * Length</h3>` and `<p>114 mm | 4.49 inch</p>`. It was once a readable HTML spec
+ * table; it is now a Next.js card grid, which is
  * itself the finding — **a manufacturer URL cited today is a different document
  * in a year**, and `lastVerified` is not decoration.
  *

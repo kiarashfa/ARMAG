@@ -2,11 +2,10 @@
 
 Why this exists
 ---------------
-`the design` requires three searches per subject — Commons, Smithsonian and
-DVIDS — and the agent then has to look at what came back. Opening three to five
+A photograph pass searches three sources per subject (Commons, Smithsonian and
+DVIDS), and the author then has to look at what came back. Opening three to five
 full-size candidates per subject in order to reject most of them is how a
-photograph pass becomes the most expensive thing in a round: the sibling recipe
-site measured 321 k tokens for 70 subjects before it worked this way.
+photograph pass becomes the most expensive thing in a round.
 
 One small sheet is a single read, and comparing candidates side by side is a
 better comparison than looking at them one after another anyway.

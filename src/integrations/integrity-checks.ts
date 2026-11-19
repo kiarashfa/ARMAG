@@ -391,6 +391,7 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
   // --- Gate 1d — every reference resolves, to an entry of the right kind ---
   const gunsById = new Map(datas.gun.map((g) => [String(g.data.id ?? g.fileSlug), g]));
   const cartridgeIds = new Set(datas.cartridge.map((c) => String(c.data.id ?? c.fileSlug)));
+  const cartridgesById = new Map(datas.cartridge.map((c) => [String(c.data.id ?? c.fileSlug), c.data]));
   const makerIds = new Set(datas.maker.map((m) => String(m.data.id ?? m.fileSlug)));
 
   /** Family ids that at least one entry claims membership of. */
@@ -472,10 +473,50 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
         });
       }
     }
+
+    /*
+     * The variant-promotion rule. A variant inherits the parent's action and
+     * operating system, so a variant that moves to a different class of
+     * cartridge (a pistol round on a rifle, a shotshell on a metallic-cartridge
+     * arm) silently claims a mechanism it almost certainly does not have: a gas
+     * 5.56 rifle with a blowback .45 variant passed every other gate. Such a
+     * variant must be its own entry (`promotedTo`). The class test is coarse on
+     * purpose: shotshell against metallic, or a case length outside the band
+     * below, measured against the parent's primary chambering.
+     */
+    const primaryRef = Array.isArray(data.chamberings)
+      ? ((data.chamberings as AnyRecord[]).find((c) => c.primary === true)?.cartridgeRef as string | undefined)
+      : undefined;
+    const parentRound = primaryRef ? cartridgesById.get(primaryRef) : undefined;
+    if (parentRound && Array.isArray(data.variants)) {
+      for (const variant of data.variants as AnyRecord[]) {
+        if (typeof variant.promotedTo === 'string') continue;
+        const overrides: AnyRecord[] = [
+          (variant.overrides ?? {}) as AnyRecord,
+          ...((Array.isArray(variant.configurations) ? variant.configurations : []) as AnyRecord[]).map(
+            (c) => (c.overrides ?? {}) as AnyRecord,
+          ),
+        ];
+        for (const o of overrides) {
+          for (const ch of (Array.isArray(o.chamberings) ? o.chamberings : []) as AnyRecord[]) {
+            const round = cartridgesById.get(String(ch.cartridgeRef));
+            if (!round) continue;
+            const reason = cartridgeClassChange(parentRound, round);
+            if (reason) {
+              violations.push({
+                file,
+                rule: 'variant/needs-promotion',
+                message: `variant '${String(variant.id)}' moves from '${primaryRef}' to '${String(ch.cartridgeRef)}' (${reason}) but inherits the parent's action and operating system — author it as its own entry and set \`promotedTo\``,
+              });
+            }
+          }
+        }
+      }
+    }
   }
 
   // A family page whose model list is computed from `familyRef` and comes back
-  // empty is a page about nothing. the design makes the list computed; this
+  // empty is a page about nothing. The design makes the list computed; this
   // is what stops that computation returning nothing.
   for (const gun of datas.gun) {
     if (gun.data.kind !== 'family') continue;
@@ -493,7 +534,7 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
   /*
    * A vocabulary term's `succeededBy` must name a term that still exists.
    *
-   * Added in Phase 10, after pruning `countries.json` to the terms the content
+   * Added after pruning `countries.json` to the terms the content
    * actually used silently removed `serbia` and left Yugoslavia pointing at
    * nothing. Nothing caught it: the pointer is inside a data file rather than a
    * content entry, and the renderer would simply have produced a link to a page
@@ -681,6 +722,34 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
 }
 
 /** Every `cartridgeRef` in an entry, including inside variant overrides. */
+/** Case length of a cartridge, falling back to overall length; null if neither is known. */
+function caseLengthOf(round: AnyRecord): number | null {
+  for (const key of ['caseLength', 'overallLength']) {
+    const v = (round[key] as AnyRecord | undefined)?.value;
+    if (typeof v === 'number' && v > 0) return v;
+  }
+  return null;
+}
+
+/**
+ * Whether two cartridges belong to different classes for the variant rule:
+ * shotshell against metallic, or a case length outside VARIANT_CASE_BAND of
+ * the parent's. Returns the reason, or null when they are the same class.
+ */
+const VARIANT_CASE_BAND = { min: 0.66, max: 1.6 };
+function cartridgeClassChange(parent: AnyRecord, other: AnyRecord): string | null {
+  const shell = (r: AnyRecord) => r.caseType === 'shotshell';
+  if (shell(parent) !== shell(other)) return 'shotshell against metallic cartridge';
+  const a = caseLengthOf(parent);
+  const b = caseLengthOf(other);
+  if (a === null || b === null) return null;
+  const ratio = b / a;
+  if (ratio < VARIANT_CASE_BAND.min || ratio > VARIANT_CASE_BAND.max) {
+    return `case length ${b} mm against ${a} mm`;
+  }
+  return null;
+}
+
 function collectCartridgeRefs(
   value: unknown,
   trail = '',

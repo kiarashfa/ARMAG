@@ -5,7 +5,7 @@
  * and of the "a file called `hero.webp` is the hero" rule. The encoder and the
  * gate must not each carry their own copy: an encoder targeting 200 KB while
  * the gate fails at 120 KB produces files that pass locally and break the
- * build, which is precisely the drift Phase 2 wrote that file to prevent.
+ * build, which is precisely the drift that file exists to prevent.
  *
  * Encoding itself is `webp.py` — see its header for why it is Python.
  */
@@ -72,7 +72,7 @@ function runPython(args, stdin = null) {
 /**
  * Tiles candidate images into one numbered contact sheet, for triage.
  *
- * `the design` requires three searches per subject, so the agent routinely
+ * A photograph pass searches three sources per subject, so an author routinely
  * has more candidates than it can afford to open. This writes one small sheet
  * instead; only the finalist is fetched at full size. Triage only — the tiles
  * cannot show a watermark or which variant a receiver is.

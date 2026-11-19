@@ -175,6 +175,13 @@
         "alias/shadows-entry"
       ],
       "why": "aliases are indexed for search and mint static redirects, so an alias that slugifies to a DIFFERENT entry's id claims one arm is known by another arm's name. Found in production: the HK416 carried 'M27 IAR' correctly until the M27 became its own entry, at which point the claim quietly became wrong and nothing said so. An alias can go stale because of a file it does not mention."
+    },
+    {
+      "file": "test-fixtures/broken-content/content/gunData/unpromoted-variant.json",
+      "rules": [
+        "variant/needs-promotion"
+      ],
+      "why": "a variant inherits the parent's action and operating system, so one that moves to a pistol cartridge on a gas rifle claims a mechanism it does not have; it must be promoted to its own entry"
     }
   ],
   "expectedScriptFailures": [

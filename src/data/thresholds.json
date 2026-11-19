@@ -2,7 +2,7 @@
   "note": "Every tunable constant the build enforces, in one file. The completeness weights and the prose-similarity threshold are meant to be tuned against real entries; they live here so tuning them is a one-line change with no code to edit.",
 
   "publicationFloor": {
-    "note": "below this an entry gets no page of its own. It still exists as a catalogue row and in cartridge and maker listings. Enforced where pages are generated (Phase 4), NOT by the content gate: a thin entry is incomplete, not broken, and failing the build on it would push authors toward padding.",
+    "note": "below this an entry gets no page of its own. It still exists as a catalogue row and in cartridge and maker listings. Enforced where pages are generated, NOT by the content gate: a thin entry is incomplete, not broken, and failing the build on it would push authors toward padding.",
     "verifiedCoreSpecs": 6,
     "images": 1,
     "proseWords": 60,
@@ -47,7 +47,7 @@
   },
 
   "site": {
-    "note": "the design states the performance budgets \"so they are checkable\"; `check:site` is where they are checked. `jsBudgetBytes` is the uncompressed weight of every module a page loads, followed transitively, plus its inline scripts. `/armory/` is exempt and the reason is on the record (CLAUDE.md item 142): it validates a hostile input with the same Zod schema the rest of the site is built on, and about 60 kB of its weight is that schema — a smaller hand-written validator would drift from the real one.",
+    "note": "the design states the performance budgets \"so they are checkable\"; `check:site` is where they are checked. `jsBudgetBytes` is the uncompressed weight of every module a page loads, followed transitively, plus its inline scripts. `/armory/` is exempt because it validates a hostile input with the same Zod schema the rest of the site is built on, and about 60 kB of its weight is that schema — a smaller hand-written validator would drift from the real one.",
     "jsBudgetBytes": 102400,
     "jsBudgetExemptPaths": ["/armory/"]
   },

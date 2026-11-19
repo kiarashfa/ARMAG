@@ -6,10 +6,9 @@
  *   node scripts/data/manuals.mjs check
  *   node scripts/data/manuals.mjs find "TM 9-1005-313-10"
  *
- * the design asked for "a small mirror table of known-good manual URLs
- * rather than searching for them each time". Building it found the reason a
- * bare table is not enough: **two of the three mirrors the friction log
- * recorded as working on 2026-08-27 were dead four days later** — `bits.de`
+ * A small mirror table of known-good manual URLs saves searching for them
+ * each time, but a bare table is not enough: **two of the first three
+ * mirrors found working were dead four days later** — `bits.de`
  * 403s and `pdf.textfiles.com` does not resolve. A table of URLs rots faster
  * than the manuals do.
  *

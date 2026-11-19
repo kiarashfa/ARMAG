@@ -2,7 +2,7 @@
   "axis": "action",
   "urlPrefix": "/action/",
   "authored": true,
-  "note": "How the breech is cycled. the design splits this from `fireModes` deliberately: conflating how the breech cycles with what the trigger does is the single most common error in firearm databases, and it makes correct filtering impossible.",
+  "note": "How the breech is cycled. The vocabulary splits this from `fireModes` deliberately: conflating how the breech cycles with what the trigger does is the single most common error in firearm databases, and it makes correct filtering impossible.",
   "terms": [
     {
       "id": "bolt",
@@ -44,7 +44,7 @@
         "dropping block",
         "tilting block"
       ],
-      "description": "A single-shot breech block lowered clear of the chamber by an underlever. Unlike a lever action, it cycles no magazine."
+      "description": "A single-shot breech block that slides or tilts vertically in the frame to clear the chamber, usually worked by an underlever. Unlike a lever action, it cycles no magazine."
     },
     {
       "id": "self-loading",

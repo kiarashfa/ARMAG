@@ -13,6 +13,7 @@
  * and computes the derived figures; the dev render harness passes fixtures
  * through the same door. One implementation, two callers, no drift.
  */
+import { REVIEW_STATUS_LABEL } from '../../schemas/primitives.ts';
 import EntryActions from '../blocks/EntryActions.astro';
 import BaseLayout from '../ui/BaseLayout.astro';
 import Breadcrumbs from '../blocks/Breadcrumbs.astro';
@@ -388,7 +389,7 @@ const jsonLd = entryArticle({
       }
     </Section>
 
-    {/* ── Scale silhouette — the island lands in Phase 6 ───────────────── */}
+    {/* ── Scale silhouette ───────────────── */}
     {
       silhouettes.length > 0 && (
         <Section
@@ -524,7 +525,7 @@ const jsonLd = entryArticle({
       </ol>
 
       <p class="type-data mt-4 text-xs text-ink-muted">
-        Last verified {gun.lastVerified} · review status: {gun.reviewStatus}
+        Last verified {gun.lastVerified} · review status: {REVIEW_STATUS_LABEL[gun.reviewStatus]}
       </p>
     </Section>
     </div>

@@ -90,9 +90,23 @@
       "bulletType": "JHP"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/400-cor-bon/hero.webp",
+      "alt": "A line drawing of the .400 Cor-Bon case in profile, with its rim, body, 25-degree shoulder and bullet, and dimension arrows giving diameters and lengths in inches and millimetres.",
+      "caption": "A drawing rather than a photograph: the .400 Cor-Bon cartridge with its principal dimensions.",
+      "width": 700,
+      "height": 460,
+      "credit": {
+        "author": "www.accuratepowder.com",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:.400_Corbon_brass_tech_spec.png",
+        "title": "File:.400 Corbon brass tech spec.png",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
   "lastVerified": "2026-09-09",
-  "reviewStatus": "agent-populated",
+  "reviewStatus": "compiled",
   "references": [
     {
       "key": "wp-400-cor-bon",

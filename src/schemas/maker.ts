@@ -61,7 +61,7 @@ export const makerDataSchema = z
      * field there offers exactly two options — invent a year, or drop an arm
      * that is otherwise fully sourced — rejects
      * both: a missing figure is an honest gap, and if the schema will not let
-     * you record one, the schema is wrong. Found in Phase 10.
+     * you record one, the schema is wrong.
      */
     founded: year.optional(),
     dissolved: year.nullable().default(null),

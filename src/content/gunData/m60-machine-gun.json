@@ -19,7 +19,9 @@
   "productionYears": { "start": 1957, "end": null },
   "fireModes": ["automatic"],
   "feedSystem": ["belt"],
-  "roles": ["service-rifle"],
+  "roles": [
+    "general-purpose"
+  ],
   "massEmpty": {
     "value": 10.4,
     "unit": "kg",

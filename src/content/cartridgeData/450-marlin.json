@@ -3,7 +3,10 @@
   "name": ".450 Marlin",
   "wikidataId": "Q4027900",
   "aliases": [
-    { "name": "450 Marlin", "kind": "commercial" }
+    {
+      "name": "450 Marlin",
+      "kind": "commercial"
+    }
   ],
   "designedBy": "Hornady and Marlin Firearms",
   "introduced": 2000,
@@ -74,8 +77,18 @@
       "bulletType": "LBT-LFN (Lead Long Flat Nose)",
       "velocityByBarrel": [
         {
-          "barrelLength": { "value": 609.6, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox states a 24 in (SAAMI) test barrel for this cartridge's loads." },
-          "velocity": { "value": 579.1, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure (1900 ft/s); ½mv² reproduces the published 3446 ft·lbf almost exactly, but the source page could not be independently reconfirmed live." }
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "Wikipedia's infobox states a 24 in (SAAMI) test barrel for this cartridge's loads."
+          },
+          "velocity": {
+            "value": 579.1,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Wikipedia's infobox figure (1900 ft/s); ½mv² reproduces the published 3446 ft·lbf almost exactly, but the source page could not be independently reconfirmed live."
+          }
         }
       ]
     },
@@ -92,8 +105,18 @@
       "bulletType": "JFN (Copper Jacketed Flat Nose)",
       "velocityByBarrel": [
         {
-          "barrelLength": { "value": 609.6, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox states a 24 in (SAAMI) test barrel for this cartridge's loads." },
-          "velocity": { "value": 602.0, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure (1975 ft/s); ½mv² reproduces the published 3507 ft·lbf almost exactly, but the source page could not be independently reconfirmed live." }
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "Wikipedia's infobox states a 24 in (SAAMI) test barrel for this cartridge's loads."
+          },
+          "velocity": {
+            "value": 602.0,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Wikipedia's infobox figure (1975 ft/s); ½mv² reproduces the published 3507 ft·lbf almost exactly, but the source page could not be independently reconfirmed live."
+          }
         }
       ]
     },
@@ -109,8 +132,18 @@
       "bulletType": "JFN",
       "velocityByBarrel": [
         {
-          "barrelLength": { "value": 609.6, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox states a 24 in (SAAMI) test barrel for this cartridge's loads." },
-          "velocity": { "value": 640.1, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure (2100 ft/s); ½mv² reproduces the published 3427 ft·lbf almost exactly." }
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "estimated",
+            "sourceNote": "Wikipedia's infobox states a 24 in (SAAMI) test barrel for this cartridge's loads."
+          },
+          "velocity": {
+            "value": 640.1,
+            "unit": "m/s",
+            "status": "estimated",
+            "sourceNote": "Wikipedia's infobox figure (2100 ft/s); ½mv² reproduces the published 3427 ft·lbf almost exactly."
+          }
         }
       ]
     },
@@ -121,14 +154,38 @@
       "bulletMass": {
         "value": 21.06,
         "unit": "g",
-        "status": "estimated",
-        "sourceNote": "Wikipedia's infobox figure (325 gr); Hornady's cited product URL no longer resolves (404), so this is not independently reconfirmed against a live manufacturer page."
+        "status": "verified",
+        "source": "hornady-450marlin-325ftx",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/450-marlin-325-gr-ftx-leverevolution",
+        "sourceNote": "325 gr, per Hornady's own product page, converted to grams."
       },
       "bulletType": "FTX (Flex Tip Expanding)",
+      "bcG1": {
+        "value": 0.23,
+        "unit": "",
+        "status": "verified",
+        "source": "hornady-450marlin-325ftx",
+        "sourceUrl": "https://www.hornady.com/ammunition/rifle/450-marlin-325-gr-ftx-leverevolution",
+        "sourceNote": "G1 ballistic coefficient .230 as published."
+      },
       "velocityByBarrel": [
         {
-          "barrelLength": { "value": 609.6, "unit": "mm", "status": "estimated", "sourceNote": "Wikipedia's infobox states a 24 in (SAAMI) test barrel for this cartridge's loads." },
-          "velocity": { "value": 678.2, "unit": "m/s", "status": "estimated", "sourceNote": "Wikipedia's infobox figure (2225 ft/s); ½mv² reproduces the published 3572 ft·lbf almost exactly, but the source page could not be independently reconfirmed live." }
+          "barrelLength": {
+            "value": 609.6,
+            "unit": "mm",
+            "status": "verified",
+            "source": "hornady-450marlin-325ftx",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/450-marlin-325-gr-ftx-leverevolution",
+            "sourceNote": "24 in test barrel, stated on Hornady's own product page."
+          },
+          "velocity": {
+            "value": 678.2,
+            "unit": "m/s",
+            "status": "verified",
+            "source": "hornady-450marlin-325ftx",
+            "sourceUrl": "https://www.hornady.com/ammunition/rifle/450-marlin-325-gr-ftx-leverevolution",
+            "sourceNote": "Muzzle velocity 2225 ft/s from Hornady's own ballistics table."
+          }
         }
       ]
     }
@@ -150,8 +207,8 @@
       }
     }
   ],
-  "lastVerified": "2026-09-02",
-  "reviewStatus": "agent-populated",
+  "lastVerified": "2026-11-19",
+  "reviewStatus": "compiled",
   "references": [
     {
       "key": "wp-450-marlin",
@@ -172,6 +229,15 @@
       "url": "https://bobp.cip-bobp.org/uploads/tdcc/tab-iii/tabiiical-en-page34.pdf",
       "revision": "2009-05-05",
       "accessed": "2026-09-02"
+    },
+    {
+      "key": "hornady-450marlin-325ftx",
+      "type": "web",
+      "title": "450 Marlin 325 gr FTX LEVERevolution",
+      "publisher": "Hornady",
+      "url": "https://www.hornady.com/ammunition/rifle/450-marlin-325-gr-ftx-leverevolution",
+      "lang": "en",
+      "accessed": "2026-11-19"
     }
   ]
 }

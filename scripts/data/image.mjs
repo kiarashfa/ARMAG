@@ -321,7 +321,7 @@ async function cmdAdd(rawFile, target, basename, { replace = false, licence = nu
 
   const bytes = await getBuffer(resolved.download);
   // `--replace` exists because a file already on disk can be WRONG rather than
-  // done: the two Phase 8 heroes were converted before this pipeline existed
+  // done: two early heroes were converted before this pipeline existed
   // and had their alpha channel flattened onto black, which showed as blotches
   // on the AK and a black box on the M4 in the light theme. Re-encoding is the
   // fix, and refusing to overwrite would have meant deleting by hand first.

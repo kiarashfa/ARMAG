@@ -5,7 +5,7 @@
  * It validates a blob read back out of the visitor's own `localStorage`, which
  * is a hostile input: it may have been written by an older version of the site,
  * hand-edited, truncated by a full disk, or restored from someone else's
- * backup. the design is that an unrecognised version is discarded
+ * backup. The rule is that an unrecognised version is discarded
  * **whole** rather than partially parsed, and this schema is what "recognised"
  * means.
  *

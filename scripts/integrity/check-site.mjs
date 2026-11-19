@@ -27,12 +27,12 @@
  *    `availability`. The same walk runs inside `json-ld.ts` and throws while
  *    the page is being built; this one catches a node that reached `dist/` by
  *    any other route, including hand-written markup in an `.mdx`.
- *  - **The Three.js fence** (the design,). The v2 shooting range is the
+ *  - **The Three.js fence**. The v2 shooting range is the
  *    one thing on this site allowed to ship a 3D engine, and it is allowed to
  *    ship it only under `/guns/<slug>/range/`. No such page exists in v1, so
  *    the fence is currently absolute: a WebGL renderer anywhere in `dist/`
  *    fails the build.
- *  - **The per-page JS budget** (the design, "stated so they are
+ *  - **The per-page JS budget** ("stated so they are
  *    checkable"). The module graph is followed transitively from each page,
  *    because a page's cost is what it loads, not what it names.
  *  - **Internal links resolve.** Every `href` into the site must land on a
@@ -151,7 +151,7 @@ for (const sitemap of sitemaps) {
 }
 
 // ---------------------------------------------------------------------------
-// The noindex triple — the design, the design
+// The noindex triple
 // ---------------------------------------------------------------------------
 
 const robotsFile = path.join(distDir, 'robots.txt');
@@ -223,14 +223,14 @@ for (const [file, html] of htmlSource) {
     }
     for (const violation of commerceViolations(node)) {
       failures.push(
-        `${display(file)} JSON-LD ${violation}. the design forbids Product, Offer, price and availability outright — these are encyclopedia entries, not listings`,
+        `${display(file)} JSON-LD ${violation}. This site forbids Product, Offer, price and availability outright — these are encyclopedia entries, not listings`,
       );
     }
   }
 }
 
 // ---------------------------------------------------------------------------
-// The Three.js fence — the design and
+// The Three.js fence
 // ---------------------------------------------------------------------------
 
 /**
@@ -257,7 +257,7 @@ for (const file of files) {
   for (const marker of THREE_MARKERS) {
     if (content.includes(marker)) {
       failures.push(
-        `${display(file)} contains "${marker}", i.e. a 3D engine outside /guns/<slug>/range/. the design fences Three.js to the v2 shooting range so it can never become part of a spec page's JS budget`,
+        `${display(file)} contains "${marker}", i.e. a 3D engine outside /guns/<slug>/range/. The design fences Three.js to the v2 shooting range so it can never become part of a spec page's JS budget`,
       );
     }
   }
@@ -295,7 +295,7 @@ async function moduleGraph(entries) {
 }
 
 /**
- * `/armory/` is exempt, and the reason is on the record (CLAUDE.md item 142):
+ * `/armory/` is exempt, for a stated reason:
  * it validates a hostile input — a blob that may have been hand-edited or
  * restored from someone else's backup — with the *same* Zod schema the rest of
  * the site is built on, and about 60 kB of its weight is that schema. A

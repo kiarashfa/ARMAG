@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * `npm run check:assets` — the image budget gate (the design, gate 5).
+ * `npm run check:assets` — the image budget gate (gate 5).
  *
  * Two jobs, and the second is the one that matters:
  *
@@ -10,13 +10,13 @@
  *  2. **A running total.** Per-file caps alone do not bound anything — a
  *     thousand individually compliant files still overrun a 1 GB Pages site.
  *     Usage is printed on every build, warns at 600 MB and fails at 750 MB, so
- *     the ceiling arrives as a trend rather than as a surprise. the design
+ *     the ceiling arrives as a trend rather than as a surprise. The design
  *     pre-plans the escape hatch: images move to a second `gun-assets`
  *     repository behind `assetUrl()`, which is a one-line change.
  *
  * Hero and gallery are told apart by filename: `hero.webp` is the hero, every
- * other file is gallery. Stated in `src/data/thresholds.json` so the Phase 9
- * image fetcher and this gate cannot disagree about it.
+ * other file is gallery. Stated in `src/data/thresholds.json` so the image
+ * fetcher and this gate cannot disagree about it.
  *
  * Flags exist so `check:self` can point the gate at a fixture tree with caps
  * small enough that a few hundred bytes is an overrun — otherwise proving the
@@ -148,7 +148,7 @@ if (overFail) {
   );
 } else if (overWarn) {
   console.warn(
-    `[check:assets] WARNING — ${mb(total)} is past the ${mb(caps.totalWarnBytes)} warn threshold. the design says escalate at this point rather than at the hard limit.`,
+    `[check:assets] WARNING — ${mb(total)} is past the ${mb(caps.totalWarnBytes)} warn threshold. Escalate at this point rather than at the hard limit.`,
   );
 }
 

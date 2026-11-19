@@ -144,7 +144,7 @@
   /*
    * `untrack`: this effect writes `state` and reads nothing reactive. Without
    * it the fetches and the URL handling below would re-enter on every write —
-   * the failure that hung the compare tool (CLAUDE.md item 113).
+   * the failure that once hung the compare tool.
    */
   $effect(() => {
     untrack(() => {

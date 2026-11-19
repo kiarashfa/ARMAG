@@ -96,7 +96,21 @@
       "velocityByBarrel": []
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "images/cartridges/375-winchester/hero.webp",
+      "alt": "A single .375 Winchester cartridge lying on its side: a long, straight-walled brass case with a rim at the head and a copper-coloured bullet with a small exposed tip.",
+      "caption": "A loaded .375 Winchester cartridge.",
+      "width": 660,
+      "height": 320,
+      "credit": {
+        "author": "User:Keywerk",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:375_Winchester_cartridge_horizontal.png",
+        "title": "File:375 Winchester cartridge horizontal.png",
+        "licenseType": "public-domain"
+      }
+    }
+  ],
   "lastVerified": "2026-09-04",
   "reviewStatus": "draft",
   "references": [

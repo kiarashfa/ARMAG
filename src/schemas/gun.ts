@@ -84,7 +84,7 @@ export type GunNarrative = z.infer<typeof gunNarrativeSchema>;
 export const gunAlias = z.object({
   name: z.string().min(1),
   /**
-   * `commercial` was added in Phase 10: a maker's own trade designation —
+   * `commercial` exists because a maker's own trade designation —
    * Colt Government, Colt Model P — is not a military designation, not an
    * export name and not a nickname, and `cartridgeAlias` already had the
    * term. Without it an author must file a trade name under something
@@ -296,7 +296,7 @@ export const gunDataSchema = gunSpec
     /** Units produced, where a body such as ATF AFMER or SIPRI publishes it. */
     productionTotal: propertyValue('').optional(),
     /**
-     * Launch price as published. the design rejects a market-value database
+     * Launch price as published. The design rejects a market-value database
      * outright; this is the number `economics.ts` adjusts for inflation, and
      * the condition calculator works from a base the *user* supplies.
      */

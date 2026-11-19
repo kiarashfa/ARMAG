@@ -269,8 +269,7 @@ export const FIXTURE_GUN: GunData = {
 };
 
 /**
- * A second entry, added in Phase 6 because a comparison needs something to
- * compare and `src/content/` is empty until Phase 8.
+ * A second entry, because a comparison needs something to compare.
  *
  * Deliberately a **different type** from Model A, sharing one cartridge and one
  * maker. That is what exercises the parts of the compare tool a second pistol

@@ -161,7 +161,7 @@
     {
       "src": "images/guns/car-15/hero.webp",
       "alt": "A short black carbine with a fixed carrying handle over the receiver, a ribbed handguard and a curved box magazine, resting on a museum display stand.",
-      "caption": "A US XM177 Commando carbine, serial number 901635, from the Springfield Armory National Historic Site collection.",
+      "caption": "A US XM177 Commando carbine from the Springfield Armory National Historic Site collection.",
       "width": 640,
       "height": 305,
       "credit": {
@@ -186,7 +186,7 @@
     }
   ],
   "lastVerified": "2026-09-09",
-  "reviewStatus": "agent-populated",
+  "reviewStatus": "compiled",
   "references": [
     {
       "key": "wp-car-15",

@@ -154,7 +154,7 @@
     }
   ],
   "lastVerified": "2026-09-01",
-  "reviewStatus": "agent-populated",
+  "reviewStatus": "compiled",
   "references": [
     {
       "key": "cip-6-5-x-51-r-arisaka",

@@ -308,7 +308,7 @@
     }
   ],
   "lastVerified": "2026-08-31",
-  "reviewStatus": "agent-populated",
+  "reviewStatus": "compiled",
   "references": [
     {
       "key": "cip-6-5x55",

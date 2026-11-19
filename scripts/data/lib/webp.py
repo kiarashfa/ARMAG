@@ -1,7 +1,7 @@
 """Encode one image to WebP under a hard byte cap and a hard pixel cap.
 
-Called by `lib/webp.mjs`. Kept in Python because Phase 8 encoded all 34 pilot
-images with Pillow and the alternative is a ~30 MB native npm dependency for a
+Called by `lib/webp.mjs`. Kept in Python because the first images were encoded
+with Pillow and the alternative is a ~30 MB native npm dependency for a
 step that only ever runs at authoring time — `scripts/data/` is never run by CI
 or by the build.
 

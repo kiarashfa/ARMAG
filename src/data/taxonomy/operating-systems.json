@@ -2,7 +2,7 @@
   "axis": "operating-system",
   "urlPrefix": "/operating-system/",
   "authored": true,
-  "note": "The mechanism that unlocks and cycles the breech. Only meaningful for self-loading arms; `manual` covers everything cycled by hand. `externally-powered` was removed in Phase 10: every externally driven small arm (Gatling, Minigun) is crew-served or vehicle-mounted and therefore out of scope (CLAUDE.md item 16), so the term could only ever have produced an empty browse page.",
+  "note": "The mechanism that unlocks and cycles the breech. Only meaningful for self-loading arms; `manual` covers everything cycled by hand. There is no `externally-powered` term: every externally driven small arm (Gatling, Minigun) is crew-served or vehicle-mounted and therefore out of scope, so the term could only ever have produced an empty browse page.",
   "terms": [
     {
       "id": "gas-direct-impingement",

@@ -91,7 +91,7 @@ export const cartridgeLoad = z
     /**
      * Mass of the COMPLETE loaded round, not the bullet.
      *
-     * Added in Phase 3 because `lib/math/mass.ts` needs it: loaded mass is
+     * Needed by `lib/math/mass.ts`: loaded mass is
      * empty + magazine + n x cartridge, and using the bullet
      * mass there would understate a full magazine by more than the magazine
      * itself weighs. Rarely published, so usually absent — which is an honest

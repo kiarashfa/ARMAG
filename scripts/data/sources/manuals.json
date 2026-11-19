@@ -1,5 +1,5 @@
 {
-  "note": "Public-domain US military manuals — the design called these 'the best free firearm sources'. FM 3-22.9 Table 2-1 was the single densest source in the first entries. What is recorded per manual is its DESIGNATION, because that is what the citation needs: `referenceEntry` requires `revision` on a military-manual citation and the designation is what someone re-finds it by. A host is a convenience and goes stale — army.mil withdrew its own copies and the mirrors in the friction log now 403 or 404. `manuals.mjs check` re-probes every URL here; `manuals.mjs find` resolves a designation to a permanent Internet Archive identifier when they all die.",
+  "note": "Public-domain US military manuals, the best free firearm sources there are. FM 3-22.9 Table 2-1 was the single densest source in the first entries. What is recorded per manual is its DESIGNATION, because that is what the citation needs: `referenceEntry` requires `revision` on a military-manual citation and the designation is what someone re-finds it by. A host is a convenience and goes stale — army.mil withdrew its own copies and the early mirrors now 403 or 404. `manuals.mjs check` re-probes every URL here; `manuals.mjs find` resolves a designation to a permanent Internet Archive identifier when they all die.",
   "checked": "2026-08-31",
   "manuals": [
     {

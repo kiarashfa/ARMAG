@@ -208,7 +208,7 @@ export function searchIndex(rows, query) {
    * hit. Without this, ".22 Long Rifle" returned "22 Long Rifle Shot
    * Claybirding" first — it simply sits earlier in the table — and the sheet
    * command would have transcribed a shot cartridge's dimensions onto the
-   * rimfire round. Found in Phase 10 on the first cartridge of the batch.
+   * rimfire round.
    */
   const exact = (row) =>
     normaliseName(row.name) === needle || (aliasTarget !== null && normaliseName(row.name) === aliasTarget);

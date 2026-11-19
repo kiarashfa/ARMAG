@@ -7,6 +7,7 @@
  * an arm is therefore a one-file change, and this page can never fall out of
  * step with the entries it lists.
  */
+import { REVIEW_STATUS_LABEL } from '../../schemas/primitives.ts';
 import BaseLayout from '../ui/BaseLayout.astro';
 import Breadcrumbs from '../blocks/Breadcrumbs.astro';
 import MakerLogo from '../blocks/MakerLogo.astro';
@@ -154,7 +155,17 @@ const jsonLd = [
     >
       {
         sorted.length === 0 ? (
-          <p class="type-data text-sm text-ink-muted">No entries attributed here yet.</p>
+          maker.successorOf ? (
+            <p class="type-data text-sm text-ink-muted">
+              No entry is attributed to this name yet. Arms built under the earlier name are listed
+              under{' '}
+              <a href={makerHref(maker.successorOf)} class="text-ui-accent">
+                {relatedMakerNames[maker.successorOf] ?? maker.successorOf}
+              </a>.
+            </p>
+          ) : (
+            <p class="type-data text-sm text-ink-muted">No entries attributed here yet.</p>
+          )
         ) : (
           <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {sorted.map((model) => (
@@ -194,7 +205,7 @@ const jsonLd = [
         <SpecRow label="Dissolved" text={maker.dissolved ? String(maker.dissolved) : 'still trading'} />
       </dl>
       <p class="type-data mt-4 text-xs text-ink-muted">
-        Last verified {maker.lastVerified} · review status: {maker.reviewStatus}
+        Last verified {maker.lastVerified} · review status: {REVIEW_STATUS_LABEL[maker.reviewStatus]}
       </p>
     </Section>
     </div>

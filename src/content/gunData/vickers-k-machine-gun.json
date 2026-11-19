@@ -18,7 +18,7 @@
   "introduced": 1935,
   "fireModes": ["automatic"],
   "feedSystem": ["drum"],
-  "roles": ["general-purpose"],
+  "roles": [],
   "massEmpty": {
     "value": 13.4,
     "unit": "kg",

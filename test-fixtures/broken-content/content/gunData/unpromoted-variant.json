@@ -1,0 +1,55 @@
+{
+  "id": "unpromoted-variant",
+  "name": "Unpromoted Variant",
+  "kind": "model",
+  "makerRef": "fixturemaker",
+  "familyRef": "fixture-family",
+  "type": "rifle",
+  "action": "self-loading",
+  "introduced": 1990,
+  "designedIn": "austria",
+  "lastVerified": "2026-08-26",
+  "reviewStatus": "draft",
+  "references": [
+    {
+      "key": "fixture-ref",
+      "type": "web",
+      "title": "Fixture reference",
+      "url": "https://example.org/fixture"
+    }
+  ],
+  "chamberings": [
+    {
+      "cartridgeRef": "fixture-rifle-cartridge",
+      "capacity": {
+        "value": 30,
+        "unit": "",
+        "status": "estimated",
+        "sourceNote": "fixture value, not a real measurement"
+      },
+      "primary": true
+    }
+  ],
+  "operatingSystem": "gas-direct-impingement",
+  "variants": [
+    {
+      "id": "pistol-calibre",
+      "name": "Pistol-calibre variant",
+      "overrides": {
+        "chamberings": [
+          {
+            "cartridgeRef": "fixture-cartridge",
+            "capacity": {
+              "value": 32,
+              "unit": "",
+              "status": "estimated",
+              "sourceNote": "fixture value, not a real measurement"
+            },
+            "primary": true
+          }
+        ]
+      },
+      "configurations": []
+    }
+  ]
+}

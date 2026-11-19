@@ -11,7 +11,7 @@
   ],
   "lineage": {},
   "type": "pistol",
-  "action": "break",
+  "action": "falling-block",
   "operatingSystem": "manual",
   "designedIn": "united-states",
   "producedIn": ["united-states"],
@@ -106,6 +106,15 @@
       "revision": "1367556386",
       "accessed": "2026-09-24",
       "license": "CC BY-SA 4.0"
+    },
+    {
+      "key": "armorylife-fp-45",
+      "type": "web",
+      "title": "The FP-45 Liberator Pistol",
+      "publisher": "The Armory Life",
+      "url": "https://www.thearmorylife.com/the-fp-45-liberator-pistol/",
+      "lang": "en",
+      "accessed": "2026-11-19"
     }
   ]
 }

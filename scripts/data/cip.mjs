@@ -8,9 +8,8 @@
  *
  * this is the best free cartridge source there is, and its site
  * is undiscoverable. `bobp.cip-bobp.org/en/tdcc` is a 404; the real index is
- * `/en/tdcc_public?page=1&cartridge_type_id=N` for N in 1..12. The friction log
- * called caching that mapping "a half-day of work that pays for itself at entry
- * 15" — this is that half-day.
+ * `/en/tdcc_public?page=1&cartridge_type_id=N` for N in 1..12. Caching
+ * that mapping once is cheaper than rediscovering it for every cartridge.
  *
  * Two things the caching buys beyond speed:
  *  - the index rows carry **maximum average pressure directly**, so a cartridge

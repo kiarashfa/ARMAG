@@ -19,7 +19,7 @@
   "productionYears": { "start": 1912, "end": 1968 },
   "fireModes": ["automatic"],
   "feedSystem": ["belt"],
-  "roles": ["service-rifle"],
+  "roles": [],
   "massEmpty": {
     "value": 19.05,
     "unit": "kg",

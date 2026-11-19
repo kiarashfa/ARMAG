@@ -6,7 +6,8 @@
   "terms": [
     {
       "id": "service-rifle",
-      "label": "Service rifle"
+      "label": "Service rifle",
+      "description": "Issued as a standard arm to a national armed force."
     },
     {
       "id": "battle-rifle",
@@ -20,39 +21,47 @@
     },
     {
       "id": "dmr",
-      "label": "Designated marksman rifle"
+      "label": "Designated marksman rifle",
+      "description": "A rifle issued to extend a squad's accurate reach beyond its standard rifles, usually semi-automatic and fitted with an optic."
     },
     {
       "id": "sniper",
-      "label": "Sniper rifle"
+      "label": "Sniper rifle",
+      "description": "Built or selected for precise fire at long range by a trained marksman."
     },
     {
       "id": "hunting",
-      "label": "Hunting"
+      "label": "Hunting",
+      "description": "Made and sold for taking game."
     },
     {
       "id": "target",
-      "label": "Target shooting"
+      "label": "Target shooting",
+      "description": "Made for formal target shooting at fixed distances."
     },
     {
       "id": "competition",
-      "label": "Competition"
+      "label": "Competition",
+      "description": "Made or adopted for organised shooting sports."
     },
     {
       "id": "concealed-carry",
-      "label": "Concealed carry"
+      "label": "Concealed carry",
+      "description": "Small and light enough to be carried hidden on the person."
     },
     {
       "id": "duty-sidearm",
-      "label": "Duty sidearm"
+      "label": "Duty sidearm",
+      "description": "A handgun issued as the standard sidearm of a military or police force."
     },
     {
       "id": "personal-defence",
-      "label": "Personal defence"
+      "label": "Personal defence",
+      "description": "Carried to defend its user rather than as a primary combat or sporting arm: a civilian self-defence gun, or a compact automatic for officers, vehicle crews and second-line troops."
     },
     {
       "id": "general-purpose",
-      "label": "General-purpose automatic",
+      "label": "General-purpose machine gun",
       "description": "The general-purpose machine gun role: sustained automatic fire from a bipod or a tripod, in a full-power rifle cartridge."
     },
     {

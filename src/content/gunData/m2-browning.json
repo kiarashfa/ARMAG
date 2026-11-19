@@ -25,9 +25,7 @@
   "feedSystem": [
     "belt"
   ],
-  "roles": [
-    "general-purpose"
-  ],
+  "roles": [],
   "chamberings": [
     {
       "cartridgeRef": "50-bmg",
@@ -125,6 +123,6 @@
     }
   ],
   "lastVerified": "2026-08-31",
-  "reviewStatus": "agent-populated",
+  "reviewStatus": "compiled",
   "wikidataId": "Q218932"
 }

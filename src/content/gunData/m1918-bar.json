@@ -31,9 +31,7 @@
   "feedSystem": [
     "detachable-box"
   ],
-  "roles": [
-    "general-purpose"
-  ],
+  "roles": [],
   "chamberings": [
     {
       "cartridgeRef": "30-06-springfield",
@@ -122,6 +120,6 @@
     }
   ],
   "lastVerified": "2026-08-31",
-  "reviewStatus": "agent-populated",
+  "reviewStatus": "compiled",
   "wikidataId": "Q60642"
 }

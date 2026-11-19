@@ -9,7 +9,7 @@
  *   node scripts/data/wiki.mjs raw     "AK-47" > article.wikitext
  *   node scripts/data/wiki.mjs grep    "AK-47" "twist|rifling|chrome"
  *
- * Two rules from the Phase 8 friction log are built in rather than written down:
+ * Two rules are built in rather than written down:
  *
  *  - **A6: cite by permalink, never by title.** `cite` emits `?oldid=<revid>`
  *    with the revid fetched in the same call as the content, because a revid
@@ -208,7 +208,7 @@ function unitRegime(fields) {
  * `en1`, …) and printing them as twenty unrelated lines hides two things:
  *
  *  - **The whole table is governed by one `test_barrel_length`, and without it
- *    none of it is usable** (the design).
+ *    none of it is usable**.
  *  - **`vel` and `en` have no unit parameter at all.** The 9×19mm article sets
  *    `bwunit = gram` and then writes velocity in ft/s and energy in ft·lbf on
  *    the same rows. Nothing in the template says so.

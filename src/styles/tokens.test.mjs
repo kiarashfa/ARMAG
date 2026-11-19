@@ -1,5 +1,5 @@
 /**
- * Design-token invariants — the design, the design.
+ * Design-token invariants .
  *
  * Three things are asserted here, and all three are the kind of mistake that
  * is invisible until someone with low vision, or a bright room, finds it:

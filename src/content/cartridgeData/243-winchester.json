@@ -208,7 +208,7 @@
     }
   ],
   "lastVerified": "2026-09-01",
-  "reviewStatus": "agent-populated",
+  "reviewStatus": "compiled",
   "references": [
     {
       "key": "cip-243-win",

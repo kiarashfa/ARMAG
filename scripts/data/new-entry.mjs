@@ -5,10 +5,9 @@
  *   node scripts/data/new-entry.mjs gun       type-63 "Type 63 assault rifle"
  *   node scripts/data/new-entry.mjs cartridge 30-06-springfield ".30-06 Springfield"
  *
- * the definition of done is that **a second author can
- * produce an entry meaningfully faster than Phase 8 did**. Phase 8 measured
- * itself at ~25 minutes of sourcing plus ~10 of writing per entry
- * and the writing half is what this removes: the shape of
+ * the point is that **an author can produce an entry
+ * meaningfully faster than by hand**. By hand, an entry took ~25 minutes of
+ * sourcing plus ~10 of writing, and the writing half is what this removes: the shape of
  * the two files, the identity fields, the Wikipedia permalink citation, and the
  * checklist of what still has to be found.
  *

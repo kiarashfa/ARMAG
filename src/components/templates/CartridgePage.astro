@@ -12,6 +12,7 @@
  * that chambers it, which is why its dimensions are sourced once here rather
  * than re-typed forty times.
  */
+import { REVIEW_STATUS_LABEL } from '../../schemas/primitives.ts';
 import BaseLayout from '../ui/BaseLayout.astro';
 import Breadcrumbs from '../blocks/Breadcrumbs.astro';
 import ImageFigure from '../blocks/ImageFigure.astro';
@@ -256,7 +257,7 @@ const jsonLd = entryArticle({
         }
       </ol>
       <p class="type-data mt-4 text-xs text-ink-muted">
-        Last verified {cartridge.lastVerified} · review status: {cartridge.reviewStatus}
+        Last verified {cartridge.lastVerified} · review status: {REVIEW_STATUS_LABEL[cartridge.reviewStatus]}
       </p>
     </Section>
     </div>
