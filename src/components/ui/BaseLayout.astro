@@ -42,7 +42,7 @@ const GA_ID = 'G-PDB2XDG2CH';
  * type. One card for every page: entry photographs carry attribution terms a
  * preview on another platform would drop.
  */
-const ogImage = absoluteUrl(Astro.site, fileHref('og.png'));
+const ogImage = absoluteUrl(Astro.site, fileHref('og-image.jpg'));
 
 /*
  * `theme-color` follows the theme the page actually resolved to. The observer
@@ -69,8 +69,9 @@ const themeColorSync = `(()=>{const m=document.querySelector('meta[name="theme-c
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="640" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:alt" content="ARMAG, a firearms reference" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />

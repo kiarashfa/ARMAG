@@ -6,7 +6,7 @@ import type { APIRoute } from 'astro';
  * either local development or production for a site served from a subpath.
  *
  * The colours are the default theme's page ground. The icons are drawn by
- * `npm run brand`.
+ * `npm run brand:icons`.
  */
 export const GET: APIRoute = () => {
   const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');

@@ -22,7 +22,8 @@
     "fixture:clear": "node scripts/dev/render-fixture.mjs --remove",
     "postbuild:index": "pagefind --site dist",
     "astro": "astro",
-    "brand": "node scripts/brand/build.mjs",
+    "brand": "node scripts/brand/brand.ts",
+    "brand:icons": "node scripts/brand/icons.mjs",
     "check:layout": "node scripts/integrity/layout.mjs"
   },
   "dependencies": {
