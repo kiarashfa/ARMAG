@@ -169,13 +169,17 @@ Requests for permissions beyond this License — including commercial use,
 hosting, or distribution of Derivative Works — may be directed to Licensor
 at kiarashfa@gmail.com.
 
-Appendix — Project-Specific Notice
+Appendix: Project-Specific Terms
 
-This repository incorporates certain third-party material (photographs of
-firearms and cartridges, and manufacturers' logos) that is correctly and
-completely attributed under its own license within the content data files in
-src/content/, where each image carries an author, source URL, license type
-and license note; those credits are rendered beside every image on the site
-and summarised on its /attributions/ page. That material is governed solely
-by its original license; it is not covered by this License and this License
-does not apply to it.
+This Appendix forms part of this License as applied to ARMAG. It
+supplements and clarifies the numbered Sections above. It does not remove
+any restriction in them, except where it says so expressly. The text of the
+numbered Sections is Version 1.0 of this License, unchanged.
+
+A1. Third-Party Material
+
+Third-Party Material used by this project is identified in the file
+THIRD_PARTY.md at the root of this repository. Section 6 applies to
+everything listed in that file: it is governed solely by its original
+license, it is not covered by this License, and this License does not apply
+to it.
