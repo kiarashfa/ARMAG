@@ -61,9 +61,7 @@ async function imagesOn(title) {
     .filter((image) => image.url);
 }
 
-const titles = process.argv
-  .slice(2)
-  .filter((arg, i) => arg !== '--lang' && i !== langIndex - 1);
+const titles = process.argv.slice(2).filter((arg, i) => arg !== '--lang' && i !== langIndex - 1);
 
 for (const title of titles) {
   console.log(`\n=== ${title}`);
@@ -88,7 +86,9 @@ for (const title of titles) {
     // The PNG for an SVG, the file itself otherwise — either way, a URL that
     // `image.mjs logo` can take as-is.
     const usable = (/svg/i.test(mark.mime) ? mark.thumb : mark.url).split('?')[0];
-    console.log(`    ${where.padEnd(8)} ${String(mark.width).padStart(5)}×${String(mark.height).padEnd(5)} ${mark.title}`);
+    console.log(
+      `    ${where.padEnd(8)} ${String(mark.width).padStart(5)}×${String(mark.height).padEnd(5)} ${mark.title}`,
+    );
     console.log(`             ${usable}`);
   }
 }

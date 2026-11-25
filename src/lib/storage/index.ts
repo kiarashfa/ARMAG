@@ -83,7 +83,11 @@ const NOTICE = {
  * anything it does not fully recognise — returning a repaired object would
  * reintroduce exactly the partial-parse failure this module exists to prevent.
  */
-export function defineStore<T>(name: string, version: number, check: (raw: unknown) => T | null): Store<T> {
+export function defineStore<T>(
+  name: string,
+  version: number,
+  check: (raw: unknown) => T | null,
+): Store<T> {
   const key = `${NAMESPACE}:${name}`;
 
   const clear = (): void => {

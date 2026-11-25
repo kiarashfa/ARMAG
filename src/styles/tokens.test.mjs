@@ -105,7 +105,12 @@ const THEMES = { dark: DARK, light: LIGHT };
 
 /* ── What must hold ───────────────────────────────────────────────────────── */
 
-const SURFACES = ['--color-surface-0', '--color-surface-1', '--color-surface-2', '--color-surface-3'];
+const SURFACES = [
+  '--color-surface-0',
+  '--color-surface-1',
+  '--color-surface-2',
+  '--color-surface-3',
+];
 
 const TYPES = ['handgun', 'rifle', 'shotgun', 'smg', 'machinegun', 'platform'];
 
@@ -132,11 +137,7 @@ const NON_TEXT = 3;
 
 /** Collects every failure and reports them together. */
 function reportAll(failures, what) {
-  assert.equal(
-    failures.length,
-    0,
-    `${failures.length} ${what}:\n  ${failures.join('\n  ')}`,
-  );
+  assert.equal(failures.length, 0, `${failures.length} ${what}:\n  ${failures.join('\n  ')}`);
 }
 
 test('every colour token is defined in both themes', () => {
@@ -184,7 +185,9 @@ test('ink clears AA on every type tint, and each type accent on its own tint', (
 
       const inkRatio = contrast(tokens.get('--color-ink').oklch, tint);
       if (inkRatio < AA) {
-        failures.push(`${theme}: --color-ink on --color-type-${t}-surface = ${inkRatio.toFixed(2)}:1`);
+        failures.push(
+          `${theme}: --color-ink on --color-type-${t}-surface = ${inkRatio.toFixed(2)}:1`,
+        );
       }
 
       const accentRatio = contrast(tokens.get(`--color-type-${t}`).oklch, tint);
@@ -204,7 +207,9 @@ test('line-strong is perceivable (3:1) against every surface', () => {
     for (const bg of SURFACES) {
       const ratio = contrast(tokens.get('--color-line-strong').oklch, tokens.get(bg).oklch);
       if (ratio < NON_TEXT) {
-        failures.push(`${theme}: --color-line-strong on ${bg} = ${ratio.toFixed(2)}:1 (needs ${NON_TEXT})`);
+        failures.push(
+          `${theme}: --color-line-strong on ${bg} = ${ratio.toFixed(2)}:1 (needs ${NON_TEXT})`,
+        );
       }
     }
   }
@@ -223,7 +228,9 @@ test('the UI accent is not a content accent in disguise', () => {
       if (accent.C < 0.03) continue; // `platform` is neutral by design
       const dh = Math.abs(((ui.h - accent.h + 540) % 360) - 180);
       if (dh < 30) {
-        failures.push(`${theme}: --color-ui-accent (h ${ui.h}) is ${dh.toFixed(0)}° from --color-type-${t}`);
+        failures.push(
+          `${theme}: --color-ui-accent (h ${ui.h}) is ${dh.toFixed(0)}° from --color-type-${t}`,
+        );
       }
     }
   }

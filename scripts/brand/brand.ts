@@ -84,49 +84,100 @@ const dataUrl = (file: string, mime: string) => {
   if (!existsSync(at(file))) throw new Error(`brand: file not found: ${file}`);
   return `data:${mime};base64,${readFileSync(at(file)).toString('base64')}`;
 };
-const MIME: Record<string, string> = { '.woff2': 'font/woff2', '.woff': 'font/woff', '.png': 'image/png', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg' };
+const MIME: Record<string, string> = {
+  '.woff2': 'font/woff2',
+  '.woff': 'font/woff',
+  '.png': 'image/png',
+  '.svg': 'image/svg+xml',
+  '.jpg': 'image/jpeg',
+};
 
 const fontCss = cfg.fonts
-  .map((f) => `@font-face{font-family:'${f.family}';src:url('${dataUrl(f.file, MIME[extname(f.file)] ?? 'font/woff2')}');font-weight:${f.weight};font-style:${f.style ?? 'normal'}}`)
+  .map(
+    (f) =>
+      `@font-face{font-family:'${f.family}';src:url('${dataUrl(f.file, MIME[extname(f.file)] ?? 'font/woff2')}');font-weight:${f.weight};font-style:${f.style ?? 'normal'}}`,
+  )
   .join('\n');
 
-const svgWrap = (inner: string) => `<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0">${inner}</svg>`;
+const svgWrap = (inner: string) =>
+  `<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0">${inner}</svg>`;
 let gid = 0;
 const rule = (y: number, x0: number, x1: number, w = 1.4, hold = 0.25) => {
   const id = `rg${gid++}`;
   return `<defs><linearGradient id="${id}" gradientUnits="userSpaceOnUse" x1="${x0}" x2="${x1}" y1="0" y2="0"><stop offset="0" stop-color="${primary}" stop-opacity=".9"/><stop offset="${hold}" stop-color="${primary}" stop-opacity=".77"/><stop offset="1" stop-color="${primary}" stop-opacity="0"/></linearGradient></defs><rect x="${Math.min(x0, x1)}" y="${y}" width="${Math.abs(x1 - x0)}" height="${w}" fill="url(#${id})"/>`;
 };
-const rules = svgWrap(rule(YT - 4, 0, 700, 1.2, 0.2) + rule(YT + 2, 0, 504, 2.4, 0.2) + rule(YB, 0, 400, 1.6, 0.15));
+const rules = svgWrap(
+  rule(YT - 4, 0, 700, 1.2, 0.2) + rule(YT + 2, 0, 504, 2.4, 0.2) + rule(YB, 0, 400, 1.6, 0.15),
+);
 const diamonds = svgWrap(
   [160, 225, 290]
-    .map((d, i) => `<rect x="${CX - d}" y="${CY - d}" width="${d * 2}" height="${d * 2}" transform="rotate(45 ${CX} ${CY})" fill="none" stroke="${primary}" stroke-opacity="${(0.5 - i * 0.12).toFixed(2)}" stroke-width="${i === 0 ? 1.8 : 1.2}"/>`)
+    .map(
+      (d, i) =>
+        `<rect x="${CX - d}" y="${CY - d}" width="${d * 2}" height="${d * 2}" transform="rotate(45 ${CX} ${CY})" fill="none" stroke="${primary}" stroke-opacity="${(0.5 - i * 0.12).toFixed(2)}" stroke-width="${i === 0 ? 1.8 : 1.2}"/>`,
+    )
     .join(''),
 );
 
 const mix = (hex: string, to: string, t: number) => {
   const a = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));
   const b = [1, 3, 5].map((i) => parseInt(to.slice(i, i + 2), 16));
-  return '#' + a.map((v, i) => Math.round(v + (b[i] - v) * t).toString(16).padStart(2, '0')).join('');
+  return (
+    '#' +
+    a
+      .map((v, i) =>
+        Math.round(v + (b[i] - v) * t)
+          .toString(16)
+          .padStart(2, '0'),
+      )
+      .join('')
+  );
 };
 
 let state = 1;
 const rand = () => (state = (state * 16807) % 2147483647) / 2147483647;
 const lights = () => {
   const colours = [primary, primary, secondary, mix(primary, '#ffffff', 0.5)];
-  const mask = 'mask-image:linear-gradient(90deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.35) 42%,#000 68%);-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.35) 42%,#000 68%)';
+  const mask =
+    'mask-image:linear-gradient(90deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.35) 42%,#000 68%);-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.35) 42%,#000 68%)';
   const disc = (x: number, y: number, r: number, c: string, a: number, blur: number) =>
     `<div style="position:absolute;left:${(x - r).toFixed(0)}px;top:${(y - r).toFixed(0)}px;width:${(2 * r).toFixed(0)}px;height:${(2 * r).toFixed(0)}px;border-radius:50%;background:radial-gradient(closest-side,${c}d0 0%,${c}88 68%,${c}22 92%,transparent 100%);filter:blur(${blur.toFixed(1)}px);opacity:${a.toFixed(2)};mix-blend-mode:screen"></div>`;
-  const layer = (n: number, place: (i: number) => number[], r0: number, r1: number, a0: number, a1: number, b0: number, b1: number, skew: number, seed: number) => {
+  const layer = (
+    n: number,
+    place: (i: number) => number[],
+    r0: number,
+    r1: number,
+    a0: number,
+    a1: number,
+    b0: number,
+    b1: number,
+    skew: number,
+    seed: number,
+  ) => {
     state = seed;
     let out = '';
     for (let i = 0; i < n; i++) {
       const [x, y] = place(i);
       const r = r0 + Math.pow(rand(), skew) * (r1 - r0);
-      out += disc(x, y, r, colours[Math.floor(rand() * colours.length)], a0 + rand() * (a1 - a0), b0 + rand() * (b1 - b0));
+      out += disc(
+        x,
+        y,
+        r,
+        colours[Math.floor(rand() * colours.length)],
+        a0 + rand() * (a1 - a0),
+        b0 + rand() * (b1 - b0),
+      );
     }
     return out;
   };
-  const edges = [[60, 40], [640, -10], [1230, 60], [1250, 600], [640, 650], [40, 600], [-10, 330]];
+  const edges = [
+    [60, 40],
+    [640, -10],
+    [1230, 60],
+    [1250, 600],
+    [640, 650],
+    [40, 600],
+    [-10, 330],
+  ];
   const anywhere = (y0: number, y1: number) => () => [rand() * 1280, y0 + rand() * (y1 - y0)];
   return `<div style="position:absolute;inset:0;${mask}">${layer(7, (i) => edges[i], 120, 210, 0.22, 0.33, 26, 34, 1, 6)}${layer(26, anywhere(0, 640), 20, 52, 0.28, 0.55, 6, 9, 1.6, 8)}${layer(40, anywhere(20, 620), 3, 9, 0.6, 0.95, 0, 1, 1, 10)}</div>`;
 };
@@ -158,9 +209,13 @@ html,body{margin:0;background:${cfg.background}} .grain{position:absolute;inset:
 </div>
 <script>for(const e of document.querySelectorAll('[data-fit]')){const m=+e.dataset.fit;let f=parseFloat(e.style.fontSize);e.style.display='inline-block';while(e.getBoundingClientRect().width>m&&f>56){f-=2;e.style.fontSize=f+'px'}}</script>`;
 
-const browser = await chromium.launch(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : { channel: 'chrome' });
+const browser = await chromium.launch(
+  process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : { channel: 'chrome' },
+);
 try {
-  const page = await (await browser.newContext({ viewport: { width: 1280, height: 640 }, deviceScaleFactor: 1 })).newPage();
+  const page = await (
+    await browser.newContext({ viewport: { width: 1280, height: 640 }, deviceScaleFactor: 1 })
+  ).newPage();
   await page.setContent(html, { waitUntil: 'load' });
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(250);
@@ -168,7 +223,14 @@ try {
   // Safe zone: everything that must stay readable has to sit inside x 80..1200, y 112..528.
   const boxes: number[][] = await page.evaluate(() =>
     [...document.querySelectorAll('[data-keep]')].map((e) => {
-      const r = e.tagName === 'DIV' && e.querySelector('img') ? e.getBoundingClientRect() : (() => { const g = document.createRange(); g.selectNodeContents(e); return g.getBoundingClientRect(); })();
+      const r =
+        e.tagName === 'DIV' && e.querySelector('img')
+          ? e.getBoundingClientRect()
+          : (() => {
+              const g = document.createRange();
+              g.selectNodeContents(e);
+              return g.getBoundingClientRect();
+            })();
       return [r.left, r.top, r.right, r.bottom].map(Math.round);
     }),
   );
@@ -178,14 +240,18 @@ try {
   const bottom = Math.max(...boxes.map((b) => b[3]));
   const margin = 4;
   if (left < 80 - margin || top < 112 - margin || right > 1200 + margin || bottom > 528 + margin) {
-    throw new Error(`brand: content leaves the safe zone (x 80..1200, y 112..528): ${left},${top},${right},${bottom}. Shorten the line or lower wordmarkSize.`);
+    throw new Error(
+      `brand: content leaves the safe zone (x 80..1200, y 112..528): ${left},${top},${right},${bottom}. Shorten the line or lower wordmarkSize.`,
+    );
   }
 
   mkdirSync(dirname(at(output)), { recursive: true });
   const jpeg = await page.screenshot({ type: 'jpeg', quality: 92 });
   writeFileSync(at(output), jpeg);
   const kb = Math.round(statSync(at(output)).size / 1024);
-  console.log(`brand: wrote ${output} (${kb} kB), content ${left},${top},${right},${bottom} inside the safe zone`);
+  console.log(
+    `brand: wrote ${output} (${kb} kB), content ${left},${top},${right},${bottom} inside the safe zone`,
+  );
   if (kb > 900) console.warn('brand: file is over 900 kB; GitHub accepts at most 1 MB');
 } finally {
   await browser.close();

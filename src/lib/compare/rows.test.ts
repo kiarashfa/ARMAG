@@ -87,7 +87,11 @@ test('every declared derived figure is actually produced', () => {
       declared.key in figures.byKey,
       `GUN_FIGURES declares '${declared.key}' but figuresForGun does not produce it`,
     );
-    assert.equal(figures.byKey[declared.key]!.unit, declared.unit, `unit mismatch on ${declared.key}`);
+    assert.equal(
+      figures.byKey[declared.key]!.unit,
+      declared.unit,
+      `unit mismatch on ${declared.key}`,
+    );
   }
   assert.equal(
     Object.keys(figures.byKey).length,
@@ -157,7 +161,10 @@ test('grouping keeps the stated order and drops empty groups', () => {
   assert.equal(names[0], 'Derived figures', 'the computed layer leads,');
   assert.ok(!names.includes('Other specifications'), 'no field is currently ungrouped');
   const ranks = names.map((name) => GUN_GROUP_ORDER.indexOf(name));
-  assert.deepEqual(ranks, [...ranks].sort((a, b) => a - b));
+  assert.deepEqual(
+    ranks,
+    [...ranks].sort((a, b) => a - b),
+  );
 });
 
 test('labelFromKey turns a camelCase field into a sentence', () => {
@@ -171,7 +178,11 @@ test('the spec table and the compare table are driven by the same registry', () 
   // A hand-written `gun.massEmpty` in the template is exactly the regression
   // this asserts against, and it is invisible to `astro check`.
   const specTable = read('src/components/blocks/SpecTable.astro');
-  assert.match(specTable, /rows: readonly CompareRow\[\]/, 'the spec table must take rows, not fields');
+  assert.match(
+    specTable,
+    /rows: readonly CompareRow\[\]/,
+    'the spec table must take rows, not fields',
+  );
 
   const gunPage = read('src/components/templates/GunPage.astro');
   assert.match(gunPage, /rows=\{GUN_REGISTRY\.rows\}/);
@@ -198,7 +209,14 @@ test('nothing in the compare layer ranks entries against each other', () => {
     'src/lib/compare/entry.ts',
     'src/components/islands/CompareTool.svelte',
   ]) {
-    for (const banned of ['isWinner', 'winnerOf', 'isBest', 'bestOf', 'rankEntries', 'betterThan']) {
+    for (const banned of [
+      'isWinner',
+      'winnerOf',
+      'isBest',
+      'bestOf',
+      'rankEntries',
+      'betterThan',
+    ]) {
       assert.ok(!read(file).includes(banned), `${file} contains '${banned}'`);
     }
   }

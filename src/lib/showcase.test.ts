@@ -28,7 +28,10 @@ const id = (e: Entry) => e.id;
 const group = (e: Entry) => e.group;
 
 const entries = (n: number, groups: number): Entry[] =>
-  Array.from({ length: n }, (_, i) => ({ id: `e${String(i).padStart(4, '0')}`, group: `g${i % groups}` }));
+  Array.from({ length: n }, (_, i) => ({
+    id: `e${String(i).padStart(4, '0')}`,
+    group: `g${i % groups}`,
+  }));
 
 test('the order holds every entry once and ignores the input order', () => {
   const items = entries(120, 7);
@@ -47,10 +50,15 @@ test('equal groups never meet within a day', () => {
 });
 
 test('a dominant group is spread evenly rather than bunched', () => {
-  const items = [...entries(60, 12), ...Array.from({ length: 20 }, (_, i) => ({ id: `big${i}`, group: 'big' }))];
+  const items = [
+    ...entries(60, 12),
+    ...Array.from({ length: 20 }, (_, i) => ({ id: `big${i}`, group: 'big' })),
+  ];
   const order = featuredOrder(items, id, group);
   for (let i = 0; i < order.length; i++) {
-    const big = Array.from({ length: 8 }, (_, k) => order[(i + k) % order.length]!).filter((e) => e.group === 'big');
+    const big = Array.from({ length: 8 }, (_, k) => order[(i + k) % order.length]!).filter(
+      (e) => e.group === 'big',
+    );
     assert.ok(big.length <= 3, `window at ${i} holds ${big.length} of the large group`);
   }
 });
@@ -99,7 +107,11 @@ test('the pool is capped, and a small catalogue shows all of itself every day', 
 
 /* A stand-in for the section: a list of card nodes, an optional template of
    candidates, and the dataset the script reads and writes. */
-function run(f: ReturnType<typeof featured<Entry>>, local: [number, number, number], template = true) {
+function run(
+  f: ReturnType<typeof featured<Entry>>,
+  local: [number, number, number],
+  template = true,
+) {
   const node = (entry: Entry, list?: { children: unknown[] }) => {
     const n = {
       entry,

@@ -40,12 +40,10 @@ const classes = `type-data inline-block rounded-sm uppercase tracking-wider ${AC
 }`;
 ---
 
-{
-  link && type ? (
-    <a href={taxonomyHref('type', type)} class={`${classes} no-underline`}>
-      {label}
-    </a>
-  ) : (
-    <span class={classes}>{label}</span>
-  )
-}
+{link && type ? (
+  <a href={taxonomyHref('type', type)} class={`${classes} no-underline`}>
+    {label}
+  </a>
+) : (
+  <span class={classes}>{label}</span>
+)}

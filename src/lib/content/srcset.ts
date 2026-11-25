@@ -23,7 +23,10 @@ export function derivativeOf(url: string): string {
  * build, so in dev a `srcset` would point the browser at files that do not
  * exist and the photographs would not load.
  */
-export function srcsetFor(url: string | null | undefined, width: number | null | undefined): string | undefined {
+export function srcsetFor(
+  url: string | null | undefined,
+  width: number | null | undefined,
+): string | undefined {
   if (import.meta.env?.DEV) return undefined;
   if (!url || !width || width <= DERIVATIVE_FROM || !/\.webp$/i.test(url)) return undefined;
   return `${derivativeOf(url)} ${DERIVATIVE_WIDTH}w, ${url} ${width}w`;

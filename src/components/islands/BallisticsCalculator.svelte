@@ -224,18 +224,24 @@
 
   <div class="min-w-0">
     {#if !valid}
-      <p class="type-data rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted">
+      <p
+        class="type-data rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted"
+      >
         Every figure has to be positive, and the solve range cannot be shorter than the zero.
       </p>
     {:else if solution?.launchAngleMrad === null}
-      <p class="type-data rounded-lg border border-line bg-surface-1 p-6 text-sm text-status-conflicting">
-        No barrel elevation puts this bullet on the line of sight at {zeroRangeM} m. That is a real
-        answer, not an error: the solver returns nothing rather than a projection.
+      <p
+        class="type-data rounded-lg border border-line bg-surface-1 p-6 text-sm text-status-conflicting"
+      >
+        No barrel elevation puts this bullet on the line of sight at {zeroRangeM} m. That is a real answer,
+        not an error: the solver returns nothing rather than a projection.
       </p>
     {:else}
       <div class="grid gap-4 rounded-lg border border-line bg-surface-1 p-4 sm:grid-cols-3">
         <div class="flex flex-col">
-          <span class="type-data text-xs uppercase tracking-wider text-ink-muted">Muzzle energy</span>
+          <span class="type-data text-xs uppercase tracking-wider text-ink-muted"
+            >Muzzle energy</span
+          >
           <span class="type-stat text-2xl text-ink">{@render units(muzzleEnergyJ, 'J')}</span>
         </div>
         <div class="flex flex-col">

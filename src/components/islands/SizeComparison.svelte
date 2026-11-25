@@ -125,7 +125,9 @@
   const suggestions = $derived.by(() => {
     if (!catalogue || query.trim() === '') return [];
     const needle = query.trim().toLowerCase();
-    return catalogue.filter((row) => row.search.includes(needle) && !ids.includes(row.id)).slice(0, 8);
+    return catalogue
+      .filter((row) => row.search.includes(needle) && !ids.includes(row.id))
+      .slice(0, 8);
   });
 
   function add(id: string) {
@@ -182,7 +184,9 @@
     {#if chosen.length > 0}
       <ul class="mt-3 flex flex-wrap gap-2">
         {#each chosen as entry (entry.id)}
-          <li class="type-data flex items-center gap-1.5 rounded-full border border-line px-2 py-0.5 text-xs">
+          <li
+            class="type-data flex items-center gap-1.5 rounded-full border border-line px-2 py-0.5 text-xs"
+          >
             <a href={`${gunPrefix}${entry.id}/`} class="text-ink-secondary">{entry.name}</a>
             <button
               type="button"
@@ -205,10 +209,12 @@
   </div>
 
   {#if scene.silhouettes.length === 0}
-    <p class="type-data rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted">
-      Nothing selected yet. Add up to {limit} entries and they are drawn against each other at true
-      scale, aligned at the rear and at the bottom, so the only thing that changes between them is
-      the thing being compared.
+    <p
+      class="type-data rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted"
+    >
+      Nothing selected yet. Add up to {limit} entries and they are drawn against each other at true scale,
+      aligned at the rear and at the bottom, so the only thing that changes between them is the thing
+      being compared.
     </p>
   {:else}
     <figure class="rounded-lg border border-line bg-surface-1 p-4">
@@ -222,7 +228,8 @@
           .join('; ')}`}
       >
         {#each scene.silhouettes as silhouette, index (silhouette.id)}
-          {@const accent = ACCENT_FOR[chosen.find((e) => e.id === silhouette.id)?.type ?? ''] ?? 'platform'}
+          {@const accent =
+            ACCENT_FOR[chosen.find((e) => e.id === silhouette.id)?.type ?? ''] ?? 'platform'}
           <g transform={`translate(0 ${scene.heightMm - silhouette.heightMm})`}>
             <path
               d={silhouette.path}
@@ -257,15 +264,18 @@
         </ul>
 
         <p class="type-data mt-3 text-xs text-ink-muted">
-          Representative outline: <strong class="text-ink-secondary">the dimensions are sourced,
-          the shape is not.</strong> Overall length, and barrel length where recorded, come from each
-          entry's own figures. The profile is a generic one for the firearm type and says nothing
-          about any of these arms' actual contours.
+          Representative outline: <strong class="text-ink-secondary"
+            >the dimensions are sourced, the shape is not.</strong
+          > Overall length, and barrel length where recorded, come from each entry's own figures. The
+          profile is a generic one for the firearm type and says nothing about any of these arms' actual
+          contours.
         </p>
 
         {#if scene.omitted.length > 0}
           <p class="type-data mt-2 text-xs text-status-placeholder">
-            Not drawn: {scene.omitted.map((entry) => `${entry.name} (${entry.because})`).join(', ')}.
+            Not drawn: {scene.omitted
+              .map((entry) => `${entry.name} (${entry.because})`)
+              .join(', ')}.
           </p>
         {/if}
       </figcaption>

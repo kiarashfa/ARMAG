@@ -14,7 +14,8 @@ export const GET: APIRoute = () => {
   const manifest = {
     name: 'ARMAG · Firearms reference',
     short_name: 'ARMAG',
-    description: 'A free reference for firearms and cartridges where every number is sourced or derived, never guessed.',
+    description:
+      'A free reference for firearms and cartridges where every number is sourced or derived, never guessed.',
     start_url: base,
     scope: base,
     display: 'standalone',

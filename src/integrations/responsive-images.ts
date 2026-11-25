@@ -36,11 +36,16 @@ export default function responsiveImages(): AstroIntegration {
           const { width } = await sharp(file).metadata();
           if (!width || width <= DERIVATIVE_FROM) continue;
           const out = derivativeOf(file);
-          const info = await sharp(file).resize({ width: DERIVATIVE_WIDTH }).webp({ quality: 76, effort: 5 }).toFile(out);
+          const info = await sharp(file)
+            .resize({ width: DERIVATIVE_WIDTH })
+            .webp({ quality: 76, effort: 5 })
+            .toFile(out);
           written++;
           saved += (await stat(file)).size - info.size;
         }
-        logger.info(`${written} photographs got an ${DERIVATIVE_WIDTH}px copy (${Math.round(saved / 1024 / 1024)} MB less for pages that use it).`);
+        logger.info(
+          `${written} photographs got an ${DERIVATIVE_WIDTH}px copy (${Math.round(saved / 1024 / 1024)} MB less for pages that use it).`,
+        );
       },
     },
   };

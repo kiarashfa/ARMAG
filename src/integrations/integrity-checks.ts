@@ -148,7 +148,10 @@ function parseFrontmatter(
     }
     const match = /^([A-Za-z_][A-Za-z0-9_-]*):\s*(.*)$/.exec(line);
     if (!match) {
-      return { ok: false, error: `frontmatter line ${i + 1} is not a \`key: value\` pair: ${line}` };
+      return {
+        ok: false,
+        error: `frontmatter line ${i + 1} is not a \`key: value\` pair: ${line}`,
+      };
     }
     const key = match[1]!;
     const rawValue = match[2]!.trim();
@@ -208,7 +211,8 @@ function collectImages(
   }
   if (value && typeof value === 'object') {
     const obj = value as AnyRecord;
-    if (typeof obj.src === 'string' && 'alt' in obj) found.push({ at: trail || 'image', image: obj });
+    if (typeof obj.src === 'string' && 'alt' in obj)
+      found.push({ at: trail || 'image', image: obj });
     for (const [key, child] of Object.entries(obj)) {
       collectImages(child, trail ? `${trail}.${key}` : key, found);
     }
@@ -271,7 +275,11 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
   const prose = options.prose ?? (defaultThresholds.prose as unknown as ProseThresholds);
   const violations: Violation[] = [];
 
-  const narratives: Record<PairLabel, LoadedEntry<AnyRecord>[]> = { gun: [], cartridge: [], maker: [] };
+  const narratives: Record<PairLabel, LoadedEntry<AnyRecord>[]> = {
+    gun: [],
+    cartridge: [],
+    maker: [],
+  };
   const datas: Record<PairLabel, LoadedEntry<AnyRecord>[]> = { gun: [], cartridge: [], maker: [] };
   /** Narrative bodies, for the prose gate. */
   const bodies: { file: string; words: string[] }[] = [];
@@ -391,7 +399,9 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
   // --- Gate 1d — every reference resolves, to an entry of the right kind ---
   const gunsById = new Map(datas.gun.map((g) => [String(g.data.id ?? g.fileSlug), g]));
   const cartridgeIds = new Set(datas.cartridge.map((c) => String(c.data.id ?? c.fileSlug)));
-  const cartridgesById = new Map(datas.cartridge.map((c) => [String(c.data.id ?? c.fileSlug), c.data]));
+  const cartridgesById = new Map(
+    datas.cartridge.map((c) => [String(c.data.id ?? c.fileSlug), c.data]),
+  );
   const makerIds = new Set(datas.maker.map((m) => String(m.data.id ?? m.fileSlug)));
 
   /** Family ids that at least one entry claims membership of. */
@@ -485,7 +495,8 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
      * below, measured against the parent's primary chambering.
      */
     const primaryRef = Array.isArray(data.chamberings)
-      ? ((data.chamberings as AnyRecord[]).find((c) => c.primary === true)?.cartridgeRef as string | undefined)
+      ? ((data.chamberings as AnyRecord[]).find((c) => c.primary === true)?.cartridgeRef as
+          string | undefined)
       : undefined;
     const parentRound = primaryRef ? cartridgesById.get(primaryRef) : undefined;
     if (parentRound && Array.isArray(data.variants)) {
@@ -493,9 +504,9 @@ export async function runIntegrityChecks(options: IntegrityOptions): Promise<Vio
         if (typeof variant.promotedTo === 'string') continue;
         const overrides: AnyRecord[] = [
           (variant.overrides ?? {}) as AnyRecord,
-          ...((Array.isArray(variant.configurations) ? variant.configurations : []) as AnyRecord[]).map(
-            (c) => (c.overrides ?? {}) as AnyRecord,
-          ),
+          ...(
+            (Array.isArray(variant.configurations) ? variant.configurations : []) as AnyRecord[]
+          ).map((c) => (c.overrides ?? {}) as AnyRecord),
         ];
         for (const o of overrides) {
           for (const ch of (Array.isArray(o.chamberings) ? o.chamberings : []) as AnyRecord[]) {

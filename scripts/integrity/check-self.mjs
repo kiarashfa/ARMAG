@@ -128,7 +128,9 @@ console.log(
 // ---------------------------------------------------------------------------
 
 if (failures.length > 0) {
-  console.error(`\ncheck:self FAILED — ${failures.length} expected violation(s) were NOT caught:\n`);
+  console.error(
+    `\ncheck:self FAILED — ${failures.length} expected violation(s) were NOT caught:\n`,
+  );
   for (const failure of failures) {
     console.error(`  ${failure.what}`);
     console.error(`    fixture exists to prove: ${failure.why}\n`);

@@ -69,7 +69,9 @@ const jsBudgetBytes = Number(flag('js-budget-bytes', thresholds.site.jsBudgetByt
 const failures = [];
 
 if (!existsSync(distDir)) {
-  console.error(`check:site FAILED — ${path.relative(root, distDir)} does not exist. Run the build first.`);
+  console.error(
+    `check:site FAILED — ${path.relative(root, distDir)} does not exist. Run the build first.`,
+  );
   process.exit(1);
 }
 

@@ -26,12 +26,7 @@ import type { PropertyValue } from '../../schemas/primitives.ts';
 import type { ValueStatus } from '../math/provenance.ts';
 import { figuresForGun } from './derived.ts';
 import { worstStatus } from '../math/provenance.ts';
-import {
-  completeness,
-  countVerified,
-  type CompletenessInput,
-  type Tier,
-} from '../math/score.ts';
+import { completeness, countVerified, type CompletenessInput, type Tier } from '../math/score.ts';
 import { proseWordCount } from '../render/prose.ts';
 import type { JoinedCartridge, JoinedGun, JoinedMaker } from './entries.ts';
 
@@ -188,7 +183,9 @@ export function buildCatalogue(
         operatingSystem: data.operatingSystem ?? null,
         feed: data.feedSystem,
         roles: data.roles,
-        countries: [...new Set([...(data.designedIn ? [data.designedIn] : []), ...data.producedIn])],
+        countries: [
+          ...new Set([...(data.designedIn ? [data.designedIn] : []), ...data.producedIn]),
+        ],
         era: data.introduced ? eraForYear(data.introduced) : null,
 
         massKg: numberOf(data.massEmpty),

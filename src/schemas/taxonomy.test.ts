@@ -37,7 +37,8 @@ test('every vocabulary has unique, kebab-case, labelled terms', () => {
       if (!KEBAB.test(term.id)) failures.push(`${axis}: id '${term.id}' is not kebab-case`);
       if (seen.has(term.id)) failures.push(`${axis}: duplicate id '${term.id}'`);
       seen.add(term.id);
-      if (!term.label || term.label.trim() === '') failures.push(`${axis}: '${term.id}' has no label`);
+      if (!term.label || term.label.trim() === '')
+        failures.push(`${axis}: '${term.id}' has no label`);
     }
   }
   assert.equal(failures.length, 0, failures.join('\n  '));
@@ -51,7 +52,9 @@ test('every firearm type names a content accent that global.css defines', () => 
     used.add(term.accent);
     for (const token of [`--color-type-${term.accent}:`, `--color-type-${term.accent}-surface:`]) {
       if (!css.includes(token)) {
-        failures.push(`type '${term.id}' uses accent '${term.accent}', but ${token} is not in global.css`);
+        failures.push(
+          `type '${term.id}' uses accent '${term.accent}', but ${token} is not in global.css`,
+        );
       }
     }
   }

@@ -57,15 +57,48 @@ const EN = 'https://en.wikipedia.org/w/api.php';
  * written, not transliterated into something searchable-but-wrong.
  */
 const NATIVE_LANGS = {
-  argentina: ['es'], austria: ['de'], 'austria-hungary': ['de', 'hu'], belgium: ['fr', 'nl'],
-  brazil: ['pt'], china: ['zh'], croatia: ['hr'], czechia: ['cs'], czechoslovakia: ['cs', 'sk'],
-  denmark: ['da'], egypt: ['ar'], finland: ['fi'], france: ['fr'], 'german-empire': ['de'],
-  germany: ['de'], 'east-germany': ['de'], 'west-germany': ['de'], greece: ['el'],
-  hungary: ['hu'], india: ['hi'], iran: ['fa'], israel: ['he'], italy: ['it'], japan: ['ja'],
-  'north-korea': ['ko'], 'south-korea': ['ko'], mexico: ['es'], netherlands: ['nl'],
-  norway: ['no', 'nb'], pakistan: ['ur'], poland: ['pl'], portugal: ['pt'], romania: ['ro'],
-  russia: ['ru'], serbia: ['sr'], 'soviet-union': ['ru'], spain: ['es'], sweden: ['sv'],
-  switzerland: ['de', 'fr'], taiwan: ['zh'], turkey: ['tr'], ukraine: ['uk'],
+  argentina: ['es'],
+  austria: ['de'],
+  'austria-hungary': ['de', 'hu'],
+  belgium: ['fr', 'nl'],
+  brazil: ['pt'],
+  china: ['zh'],
+  croatia: ['hr'],
+  czechia: ['cs'],
+  czechoslovakia: ['cs', 'sk'],
+  denmark: ['da'],
+  egypt: ['ar'],
+  finland: ['fi'],
+  france: ['fr'],
+  'german-empire': ['de'],
+  germany: ['de'],
+  'east-germany': ['de'],
+  'west-germany': ['de'],
+  greece: ['el'],
+  hungary: ['hu'],
+  india: ['hi'],
+  iran: ['fa'],
+  israel: ['he'],
+  italy: ['it'],
+  japan: ['ja'],
+  'north-korea': ['ko'],
+  'south-korea': ['ko'],
+  mexico: ['es'],
+  netherlands: ['nl'],
+  norway: ['no', 'nb'],
+  pakistan: ['ur'],
+  poland: ['pl'],
+  portugal: ['pt'],
+  romania: ['ro'],
+  russia: ['ru'],
+  serbia: ['sr'],
+  'soviet-union': ['ru'],
+  spain: ['es'],
+  sweden: ['sv'],
+  switzerland: ['de', 'fr'],
+  taiwan: ['zh'],
+  turkey: ['tr'],
+  ukraine: ['uk'],
   yugoslavia: ['sr', 'hr'],
 };
 
@@ -179,7 +212,9 @@ async function cmdShow(qid) {
       const value = claimValue(claim.mainsnak);
       if (!value) continue;
       const rank = claim.rank === 'deprecated' ? '  [DEPRECATED — do not use]' : '';
-      console.log(`${property.padEnd(7)} ${labels.get(value) ?? value}${value.startsWith?.('Q') ? ` (${value})` : ''}${rank}`);
+      console.log(
+        `${property.padEnd(7)} ${labels.get(value) ?? value}${value.startsWith?.('Q') ? ` (${value})` : ''}${rank}`,
+      );
     }
   }
 
@@ -285,7 +320,12 @@ async function cmdVerify(fix) {
       const data = JSON.parse(await readFile(filePath, 'utf8'));
       const wikipedia = (data.references ?? []).find((r) => r.type === 'wikipedia');
       if (!wikipedia) continue;
-      rows.push({ filePath, id: data.id, declared: data.wikidataId ?? null, title: wikipedia.title });
+      rows.push({
+        filePath,
+        id: data.id,
+        declared: data.wikidataId ?? null,
+        title: wikipedia.title,
+      });
     }
   }
 
@@ -303,13 +343,19 @@ async function cmdVerify(fix) {
         formatversion: '2',
       }),
     );
-    const byTitle = new Map((data.query?.pages ?? []).map((p) => [p.title, p.pageprops?.wikibase_item ?? null]));
+    const byTitle = new Map(
+      (data.query?.pages ?? []).map((p) => [p.title, p.pageprops?.wikibase_item ?? null]),
+    );
     const redirects = new Map((data.query?.redirects ?? []).map((r) => [r.from, r.to]));
-    for (const row of chunk) resolved.set(row.id, byTitle.get(redirects.get(row.title) ?? row.title) ?? null);
+    for (const row of chunk)
+      resolved.set(row.id, byTitle.get(redirects.get(row.title) ?? row.title) ?? null);
   }
 
   const exceptions = JSON.parse(
-    await readFile(path.join(root, 'scripts', 'data', 'sources', 'wikidata-exceptions.json'), 'utf8'),
+    await readFile(
+      path.join(root, 'scripts', 'data', 'sources', 'wikidata-exceptions.json'),
+      'utf8',
+    ),
   ).exceptions;
 
   let mismatches = 0;
@@ -332,8 +378,12 @@ async function cmdVerify(fix) {
     if (fix && actual) {
       const data = JSON.parse(await readFile(row.filePath, 'utf8'));
       data.wikidataId = actual;
-      await writeFile(row.filePath, `${JSON.stringify(data, null, 2)}
-`, 'utf8');
+      await writeFile(
+        row.filePath,
+        `${JSON.stringify(data, null, 2)}
+`,
+        'utf8',
+      );
       written += 1;
       console.log('  → written');
     }
@@ -343,8 +393,12 @@ async function cmdVerify(fix) {
       `${reviewed} reviewed exception(s)${fix ? `, ${written} written` : ''}.`,
   );
   if (mismatches > 0) {
-    console.log('\nEither the id is wrong — re-run with --fix — or the article is broader than the entry,');
-    console.log('in which case add it to scripts/data/sources/wikidata-exceptions.json with the reason.');
+    console.log(
+      '\nEither the id is wrong — re-run with --fix — or the article is broader than the entry,',
+    );
+    console.log(
+      'in which case add it to scripts/data/sources/wikidata-exceptions.json with the reason.',
+    );
     process.exitCode = 1;
   }
 }

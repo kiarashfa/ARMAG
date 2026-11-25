@@ -73,7 +73,6 @@
       ? imperialRaw
       : show(parse(siRaw) === null ? null : parse(siRaw)! * perSi),
   );
-
 </script>
 
 <!--
@@ -108,7 +107,8 @@
     </label>
 
     <p class="type-data mt-4 text-xs text-ink-muted">
-      1 {quantity.si || 'unit'} = <span class="tabular-nums text-ink-secondary">{formatNumber(perSi, 6)}</span>
+      1 {quantity.si || 'unit'} =
+      <span class="tabular-nums text-ink-secondary">{formatNumber(perSi, 6)}</span>
       {quantity.imperial}
     </p>
   </div>

@@ -24,12 +24,11 @@ interface Props {
 const { id, title, standfirst, class: className = '', flush = false } = Astro.props;
 ---
 
-<section
-  id={id}
-  class={`${flush ? '' : 'mt-(--layout-section-gap)'} scroll-mt-16 ${className}`}
->
+<section id={id} class={`${flush ? '' : 'mt-(--layout-section-gap)'} scroll-mt-16 ${className}`}>
   <h2 class="type-title text-xl">
-    <a href={`#${id}`} class="text-ink no-underline hover:text-ui-accent">{title}</a>
+    <a href={`#${id}`} class="text-ink no-underline hover:text-ui-accent">
+      {title}
+    </a>
   </h2>
   {standfirst && <p class="type-body mt-1 text-sm text-ink-secondary">{standfirst}</p>}
   <div class="mt-4">

@@ -55,17 +55,20 @@ const jsonLd = entryArticle({
         <p class="type-body mt-4 text-lg text-ink-secondary">{standfirst}</p>
         <p class="type-data mt-3 text-sm text-ink-muted">
           <time datetime={published}>{published}</time>
-          {updated && <span> · updated <time datetime={updated}>{updated}</time></span>}
+          {updated && (
+            <span>
+              {' '}
+              · updated <time datetime={updated}>{updated}</time>
+            </span>
+          )}
         </p>
       </header>
 
-      {
-        heroImage && (
-          <div class="mt-8">
-            <ImageFigure image={heroImage} id={`img-hero-${id}`} priority />
-          </div>
-        )
-      }
+      {heroImage && (
+        <div class="mt-8">
+          <ImageFigure image={heroImage} id={`img-hero-${id}`} priority />
+        </div>
+      )}
 
       {/*
         Prose and contents share one row on a wide screen. The prose column IS
@@ -74,34 +77,30 @@ const jsonLd = entryArticle({
         the rest, sticky, so the space beside the text does something instead
         of being empty.
       */}
-      <div
-        class="mt-8 grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,1fr)_minmax(0,14rem)] lg:items-start"
-      >
+      <div class="mt-8 grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,1fr)_minmax(0,14rem)] lg:items-start">
         <div class="prose type-body text-ink-secondary">
           <slot />
         </div>
 
-        {
-          contents.length > 1 && (
-            <nav aria-label="In this article" class="lg:sticky lg:top-20">
-              <p class="type-heading text-xs uppercase tracking-widest text-ink-muted">
-                In this article
-              </p>
-              <ol class="mt-3 flex flex-col gap-2">
-                {contents.map((heading) => (
-                  <li>
-                    <a
-                      href={`#${heading.slug}`}
-                      class="type-data text-sm text-ink-secondary hover:text-ui-accent"
-                    >
-                      {heading.text}
-                    </a>
-                  </li>
-                ))}
-              </ol>
-            </nav>
-          )
-        }
+        {contents.length > 1 && (
+          <nav aria-label="In this article" class="lg:sticky lg:top-20">
+            <p class="type-heading text-xs uppercase tracking-widest text-ink-muted">
+              In this article
+            </p>
+            <ol class="mt-3 flex flex-col gap-2">
+              {contents.map((heading) => (
+                <li>
+                  <a
+                    href={`#${heading.slug}`}
+                    class="type-data text-sm text-ink-secondary hover:text-ui-accent"
+                  >
+                    {heading.text}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
       </div>
     </article>
   </div>

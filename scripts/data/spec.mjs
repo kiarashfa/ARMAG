@@ -157,7 +157,9 @@ function headingPairs(html) {
     const label = clean(match[1]);
     if (!label || !SPEC_WORDS.test(label)) continue;
     const window = html.slice(match.index + match[0].length, match.index + match[0].length + 600);
-    for (const candidate of window.matchAll(/<(?:p|span|div|li)[^>]*>([\s\S]{1,120}?)<\/(?:p|span|div|li)>/gi)) {
+    for (const candidate of window.matchAll(
+      /<(?:p|span|div|li)[^>]*>([\s\S]{1,120}?)<\/(?:p|span|div|li)>/gi,
+    )) {
       const value = clean(candidate[1]);
       if (value && /\d/.test(value)) {
         out.push({ label, value });
@@ -171,10 +173,14 @@ function headingPairs(html) {
 /** Links on the page that look like a downloadable specification sheet. */
 function specSheetLinks(html, base) {
   const links = [];
-  for (const [, href, text] of html.matchAll(/<a[^>]+href=["']([^"']+\.pdf)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+  for (const [, href, text] of html.matchAll(
+    /<a[^>]+href=["']([^"']+\.pdf)["'][^>]*>([\s\S]*?)<\/a>/gi,
+  )) {
     links.push({ url: new URL(href, base).href, text: clean(text) });
   }
-  for (const [, href] of html.matchAll(/href=["']([^"']*(?:spec|sheet|manual|data)[^"']*\.pdf)["']/gi)) {
+  for (const [, href] of html.matchAll(
+    /href=["']([^"']*(?:spec|sheet|manual|data)[^"']*\.pdf)["']/gi,
+  )) {
     const url = new URL(href, base).href;
     if (!links.some((l) => l.url === url)) links.push({ url, text: '(link text not captured)' });
   }
@@ -238,9 +244,13 @@ async function cmdPdf(url) {
   const temp = path.join(REPO_ROOT, '.cache', 'spec-sheet.pdf');
   await writeFile(temp, bytes);
   const text = await new Promise((resolve, reject) => {
-    const child = spawn('python', [path.join(REPO_ROOT, 'scripts', 'data', 'lib', 'pdftext.py'), temp], {
-      env: { ...process.env, PYTHONIOENCODING: 'utf-8' },
-    });
+    const child = spawn(
+      'python',
+      [path.join(REPO_ROOT, 'scripts', 'data', 'lib', 'pdftext.py'), temp],
+      {
+        env: { ...process.env, PYTHONIOENCODING: 'utf-8' },
+      },
+    );
     let out = '';
     let err = '';
     child.stdout.on('data', (d) => (out += d));
@@ -251,7 +261,7 @@ async function cmdPdf(url) {
   console.log(`# ${url}\n`);
   process.stdout.write(text);
   console.error(
-    '\nA maker\'s PDF is a manufacturer-spec citation and its URL is clickable, so a figure from\n' +
+    "\nA maker's PDF is a manufacturer-spec citation and its URL is clickable, so a figure from\n" +
       'it can reach `verified`. Record the PDF URL as `sourceUrl`, not the product page it was\n' +
       'linked from — the page will be redesigned; the file usually outlives it.',
   );

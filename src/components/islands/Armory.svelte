@@ -209,7 +209,9 @@
   function addFromCatalogue(gunRef: string) {
     const slot = addingToSlot ?? undefined;
     const uid = newUid();
-    persist(addEntry(state, { uid, gunRef, addedAt: today(), ...(slot !== undefined ? { slot } : {}) }));
+    persist(
+      addEntry(state, { uid, gunRef, addedAt: today(), ...(slot !== undefined ? { slot } : {}) }),
+    );
     addingToSlot = null;
     query = '';
     selectedUid = uid;
@@ -250,7 +252,14 @@
     persist(
       updateEntry(state, entry.uid, (existing) =>
         existing.ownership
-          ? { uid: existing.uid, gunRef: existing.gunRef, slot: existing.slot, addedAt: existing.addedAt, ...(existing.nickname ? { nickname: existing.nickname } : {}), ...(existing.variantRef ? { variantRef: existing.variantRef } : {}) }
+          ? {
+              uid: existing.uid,
+              gunRef: existing.gunRef,
+              slot: existing.slot,
+              addedAt: existing.addedAt,
+              ...(existing.nickname ? { nickname: existing.nickname } : {}),
+              ...(existing.variantRef ? { variantRef: existing.variantRef } : {}),
+            }
           : { ...existing, ownership: { serviceLog: [], valueAnchors: [] } },
       ),
     );
@@ -362,8 +371,12 @@
     logService(uid, {
       date,
       type: draftType,
-      ...(numberOrUndefined(draftRounds) !== undefined ? { rounds: numberOrUndefined(draftRounds)! } : {}),
-      ...(numberOrUndefined(draftCost) !== undefined ? { cost: numberOrUndefined(draftCost)! } : {}),
+      ...(numberOrUndefined(draftRounds) !== undefined
+        ? { rounds: numberOrUndefined(draftRounds)! }
+        : {}),
+      ...(numberOrUndefined(draftCost) !== undefined
+        ? { cost: numberOrUndefined(draftCost)! }
+        : {}),
       ...(draftNotes.trim() ? { notes: draftNotes.trim() } : {}),
     });
     draftDate = '';
@@ -397,7 +410,9 @@
 <div class="mt-8">
   {#if notice}
     <!-- an honest one-line notice, never a silent failure. -->
-    <p class="type-data mb-4 rounded-lg border border-line-strong bg-surface-1 p-3 text-sm text-status-estimated">
+    <p
+      class="type-data mb-4 rounded-lg border border-line-strong bg-surface-1 p-3 text-sm text-status-estimated"
+    >
       {notice}
     </p>
   {/if}
@@ -406,8 +421,8 @@
     <div class="mb-4 rounded-lg border border-line-strong bg-surface-1 p-4">
       <h2 class="type-heading text-sm text-ink">A shared armory is in this link</h2>
       <p class="type-body mt-2 text-sm text-ink-secondary">
-        {incomingShare.entries.length} bays, laid out by whoever sent it. It carries no ownership
-        data, because share links never do. Loading it <strong class="text-ink">replaces</strong> what is on
+        {incomingShare.entries.length} bays, laid out by whoever sent it. It carries no ownership data,
+        because share links never do. Loading it <strong class="text-ink">replaces</strong> what is on
         this page now, so take a backup first if you want to keep it.
       </p>
       <div class="mt-3 flex flex-wrap gap-3">
@@ -620,7 +635,10 @@
 
       <div class="mt-4 grid gap-4 sm:grid-cols-2">
         <label class="flex min-w-0 flex-col gap-1">
-          {@render field('Nickname', 'Yours. There is no serial number field on this site, and never will be')}
+          {@render field(
+            'Nickname',
+            'Yours. There is no serial number field on this site, and never will be',
+          )}
           <input
             type="text"
             maxlength="60"
@@ -697,7 +715,8 @@
               value={entry.ownership.condition ?? ''}
               onchange={(event) =>
                 patchOwnership(entry.uid, {
-                  condition: (event.currentTarget.value || undefined) as NraConditionGrade | undefined,
+                  condition: (event.currentTarget.value || undefined) as
+                    NraConditionGrade | undefined,
                 })}
               class="type-data w-full min-w-0 rounded border border-line-strong bg-surface-0 px-3 py-2 text-sm text-ink"
             >
@@ -762,7 +781,9 @@
         <!-- ── Statistics ────────────────────────────────────────── -->
         <section class="mt-6">
           <h3 class="type-heading text-xs uppercase tracking-widest text-ink-muted">Statistics</h3>
-          <div class="mt-3 grid gap-4 rounded-lg border border-line bg-surface-0 p-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="mt-3 grid gap-4 rounded-lg border border-line bg-surface-0 p-4 sm:grid-cols-2 lg:grid-cols-4"
+          >
             <div class="flex flex-col gap-1">
               <span class="type-data text-xs uppercase tracking-wider text-ink-muted">Service</span>
               {#if !status}
@@ -783,7 +804,9 @@
                     : `${status.daysRemaining} days`}
                 </span>
                 <span class="type-data text-xs text-ink-secondary">
-                  {status.governedBy === 'rounds' ? 'until your round interval' : `until ${status.nextDueDate}`}
+                  {status.governedBy === 'rounds'
+                    ? 'until your round interval'
+                    : `until ${status.nextDueDate}`}
                 </span>
               {/if}
               {#if status && status.roundsRemaining !== null && status.daysRemaining !== null}
@@ -802,11 +825,11 @@
             </div>
 
             <div class="flex flex-col gap-1">
-              <span class="type-data text-xs uppercase tracking-wider text-ink-muted">Burn rate</span>
+              <span class="type-data text-xs uppercase tracking-wider text-ink-muted"
+                >Burn rate</span
+              >
               <span class="type-stat text-xl text-ink">
-                {rate?.value === null || rate === null
-                  ? '—'
-                  : `${rate.value.toFixed(0)} rds/mo`}
+                {rate?.value === null || rate === null ? '—' : `${rate.value.toFixed(0)} rds/mo`}
               </span>
               <span class="type-data text-xs text-ink-secondary">
                 {rate?.value === null ? `needs ${rate.blockedBy}` : 'averaged over your ownership'}
@@ -818,12 +841,16 @@
                 Next service
               </span>
               <span class="type-stat text-xl text-ink">
-                {projection?.value === null || projection === null || !Number.isFinite(projection.value)
+                {projection?.value === null ||
+                projection === null ||
+                !Number.isFinite(projection.value)
                   ? '—'
                   : `${projection.value.toFixed(1)} mo`}
               </span>
               <span class="type-data text-xs text-ink-secondary">
-                {projection?.value === null ? `needs ${projection.blockedBy}` : 'at your current rate'}
+                {projection?.value === null
+                  ? `needs ${projection.blockedBy}`
+                  : 'at your current rate'}
               </span>
             </div>
 
@@ -863,7 +890,9 @@
           {#if entry.ownership.serviceLog.length > 0}
             <ul class="mt-2 flex flex-col gap-1">
               {#each entry.ownership.serviceLog as event, index (`${event.date}-${index}`)}
-                <li class="type-data flex flex-wrap items-baseline gap-x-3 border-b border-line py-1 text-sm">
+                <li
+                  class="type-data flex flex-wrap items-baseline gap-x-3 border-b border-line py-1 text-sm"
+                >
                   <span class="tabular-nums text-ink">{event.date}</span>
                   <span class="text-ink-secondary">{event.type.replace(/-/g, ' ')}</span>
                   {#if event.rounds !== undefined}
@@ -872,7 +901,8 @@
                   {#if event.cost !== undefined}
                     <span class="tabular-nums text-ink-muted">{money(event.cost)}</span>
                   {/if}
-                  {#if event.notes}<span class="w-full text-xs text-ink-muted">{event.notes}</span>{/if}
+                  {#if event.notes}<span class="w-full text-xs text-ink-muted">{event.notes}</span
+                    >{/if}
                   <button
                     type="button"
                     onclick={() =>

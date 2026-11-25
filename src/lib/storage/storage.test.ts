@@ -54,7 +54,10 @@ test('keys are namespaced, so nothing else on the origin is ours to read', () =>
 test('a value survives a write and a read', () => {
   const storage = new FakeStorage();
   withStorage(storage, () => {
-    assert.equal(compareTrayStore.write([{ id: 'fixture-model-a', name: 'Fixture Model A' }]), 'ok');
+    assert.equal(
+      compareTrayStore.write([{ id: 'fixture-model-a', name: 'Fixture Model A' }]),
+      'ok',
+    );
     const result = compareTrayStore.read();
     assert.deepEqual(result.value, [{ id: 'fixture-model-a', name: 'Fixture Model A' }]);
     assert.equal(result.outcome, 'ok');

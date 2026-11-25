@@ -40,11 +40,7 @@ const { id, label, title, triggerClass = '' } = Astro.props;
   <slot name="trigger" />
 </button>
 
-<div
-  id={id}
-  popover
-  class="disclosure-panel"
->
+<div id={id} popover class="disclosure-panel">
   <div class="flex items-start justify-between gap-4">
     <h2 class="type-heading text-sm">{title}</h2>
     <button

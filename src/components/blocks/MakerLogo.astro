@@ -49,24 +49,22 @@ const initials =
     : (words[0] ?? name).slice(0, 2).toUpperCase();
 ---
 
-{
-  logo ? (
-    <img
-      src={assetUrl(logo.src)}
-      alt=""
-      width={logo.width}
-      height={logo.height}
-      loading="lazy"
-      decoding="async"
-      class={`logo-plate shrink-0 ${box} ${className}`}
-    />
-  ) : (
-    <span
-      class={`type-data flex shrink-0 items-center justify-center rounded border border-dashed border-line-strong bg-surface-2 text-xs tracking-widest text-ink-muted ${box} ${className}`}
-      aria-hidden="true"
-      title={`No wordmark held for ${name} yet`}
-    >
-      {initials}
-    </span>
-  )
-}
+{logo ? (
+  <img
+    src={assetUrl(logo.src)}
+    alt=""
+    width={logo.width}
+    height={logo.height}
+    loading="lazy"
+    decoding="async"
+    class={`logo-plate shrink-0 ${box} ${className}`}
+  />
+) : (
+  <span
+    class={`type-data flex shrink-0 items-center justify-center rounded border border-dashed border-line-strong bg-surface-2 text-xs tracking-widest text-ink-muted ${box} ${className}`}
+    aria-hidden="true"
+    title={`No wordmark held for ${name} yet`}
+  >
+    {initials}
+  </span>
+)}

@@ -23,7 +23,12 @@
    * free recoil is computed for every entry from sourced inputs — so the answer
    * carries the status of those inputs rather than a claim of its own.
    */
-  import { describeCriteria, match, type Candidate, type MatchCriteria } from '../../lib/math/matchmaker.ts';
+  import {
+    describeCriteria,
+    match,
+    type Candidate,
+    type MatchCriteria,
+  } from '../../lib/math/matchmaker.ts';
   import type { CatalogueRow } from '../../lib/content/catalogue.ts';
 
   interface VocabTerm {
@@ -141,7 +146,13 @@
   </div>
 {/snippet}
 
-{#snippet ceiling(label: string, hint: string, value: number | null, set: (next: number | null) => void, step: string)}
+{#snippet ceiling(
+  label: string,
+  hint: string,
+  value: number | null,
+  set: (next: number | null) => void,
+  step: string,
+)}
   <label class="flex flex-col gap-1">
     <span class="type-data text-xs uppercase tracking-widest text-ink-muted">{label}</span>
     <span class="type-data text-[0.65rem] text-ink-muted">{hint}</span>
@@ -163,7 +174,12 @@
     {@render chips('Action', vocab.action, actions, (id) => (actions = toggle(actions, id)))}
     {@render chips('Era', vocab.era, eras, (id) => (eras = toggle(eras, id)))}
     {#if cartridges.length > 0}
-      {@render chips('Cartridge', cartridges, cartridgeRefs, (id) => (cartridgeRefs = toggle(cartridgeRefs, id)))}
+      {@render chips(
+        'Cartridge',
+        cartridges,
+        cartridgeRefs,
+        (id) => (cartridgeRefs = toggle(cartridgeRefs, id)),
+      )}
     {/if}
 
     {@render ceiling(
@@ -173,7 +189,13 @@
       (next) => (maxLoadedMassKg = next),
       '0.1',
     )}
-    {@render ceiling('Capacity at least', 'rounds, primary chambering', minCapacity, (next) => (minCapacity = next), '1')}
+    {@render ceiling(
+      'Capacity at least',
+      'rounds, primary chambering',
+      minCapacity,
+      (next) => (minCapacity = next),
+      '1',
+    )}
     {@render ceiling(
       'Free recoil at most',
       'joules: a .22 rifle is near 1 J, a service rifle near 10, a magnum rifle past 40',
@@ -225,7 +247,10 @@
           <li class="rounded-lg border border-line bg-surface-1 p-4">
             <div class="flex flex-wrap items-baseline justify-between gap-2">
               {#if hasPage(result.candidate.id)}
-                <a href={`${gunPrefix}${result.candidate.id}/`} class="type-title text-base text-ui-accent">
+                <a
+                  href={`${gunPrefix}${result.candidate.id}/`}
+                  class="type-title text-base text-ui-accent"
+                >
                   {result.candidate.name}
                 </a>
               {:else}

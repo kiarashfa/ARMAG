@@ -41,8 +41,7 @@ import {
  * Written out from the exact definitions rather than pasted in as a decimal,
  * so there is no constant here that someone would later have to take on trust.
  */
-const STANDARD_AREA_OVER_MASS =
-  (Math.PI / 4) * (MM_PER_INCH / 1000) ** 2 / KG_PER_POUND;
+const STANDARD_AREA_OVER_MASS = ((Math.PI / 4) * (MM_PER_INCH / 1000) ** 2) / KG_PER_POUND;
 
 export interface Projectile {
   /** Ballistic coefficient in the conventional lb/in², for `dragModel`. */
@@ -313,10 +312,14 @@ export function solveZeroAngle(
   toleranceM = 0.0001,
 ): number | null {
   const dropAt = (launchAngleMrad: number): number | null => {
-    const points = solveTrajectory(projectile, { ...setup, launchAngleMrad }, {
-      atRangesM: [zeroRangeM],
-      maxDropM: 1000,
-    });
+    const points = solveTrajectory(
+      projectile,
+      { ...setup, launchAngleMrad },
+      {
+        atRangesM: [zeroRangeM],
+        maxDropM: 1000,
+      },
+    );
     return points.length === 1 ? points[0]!.dropM : null;
   };
 
@@ -374,10 +377,14 @@ export function maxPointBlankRange(
 
     const ranges: number[] = [];
     for (let r = 0; r <= searchToM * 1.5; r += 5) ranges.push(r);
-    const points = solveTrajectory(projectile, { ...setup, launchAngleMrad: angle }, {
-      atRangesM: ranges,
-      maxDropM: targetRadiusM * 4,
-    });
+    const points = solveTrajectory(
+      projectile,
+      { ...setup, launchAngleMrad: angle },
+      {
+        atRangesM: ranges,
+        maxDropM: targetRadiusM * 4,
+      },
+    );
 
     let far = 0;
     let ok = true;

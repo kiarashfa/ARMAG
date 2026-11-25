@@ -31,24 +31,24 @@ const jsonLd = itemList(
       sourced once here rather than re-typed on each page. Each entry is also its caliber view.
     </p>
 
-    {
-      cartridges.length === 0 ? (
-        <p class="type-data mt-8 text-sm text-ink-muted">No cartridges authored yet.</p>
-      ) : (
-        <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {cartridges.map((cartridge) => (
-            <li class="rounded-lg border border-line bg-surface-1 p-3">
-              <a href={cartridgeHref(cartridge.id)} class="type-data text-sm text-ui-accent">
-                {cartridge.data.name}
-              </a>
-              <p class="type-data text-xs text-ink-muted">
-                {cartridge.data.introduced ? `Introduced ${cartridge.data.introduced}` : 'No single introduction date'}
-                {cartridge.data.loads.length === 0 ? ' · identity only' : ''}
-              </p>
-            </li>
-          ))}
-        </ul>
-      )
-    }
+    {cartridges.length === 0 ? (
+      <p class="type-data mt-8 text-sm text-ink-muted">No cartridges authored yet.</p>
+    ) : (
+      <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {cartridges.map((cartridge) => (
+          <li class="rounded-lg border border-line bg-surface-1 p-3">
+            <a href={cartridgeHref(cartridge.id)} class="type-data text-sm text-ui-accent">
+              {cartridge.data.name}
+            </a>
+            <p class="type-data text-xs text-ink-muted">
+              {cartridge.data.introduced
+                ? `Introduced ${cartridge.data.introduced}`
+                : 'No single introduction date'}
+              {cartridge.data.loads.length === 0 ? ' · identity only' : ''}
+            </p>
+          </li>
+        ))}
+      </ul>
+    )}
   </div>
 </BaseLayout>

@@ -118,19 +118,16 @@ const themeColorSync = `(()=>{const m=document.querySelector('meta[name="theme-c
     </script>
     <meta name="theme-color" content={THEME_COLOR.dark} />
     <script is:inline set:html={themeColorSync} />
-
-    {
-      import.meta.env.PROD && (
-        <>
-          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-          {/* The path only: a query string or hash can carry what a reader shared, and it stays theirs. */}
-          <script
-            is:inline
-            set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',${JSON.stringify(GA_ID)},{page_location:location.origin+location.pathname});`}
-          />
-        </>
-      )
-    }
+    {import.meta.env.PROD && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+        {/* The path only: a query string or hash can carry what a reader shared, and it stays theirs. */}
+        <script
+          is:inline
+          set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',${JSON.stringify(GA_ID)},{page_location:location.origin+location.pathname});`}
+        />
+      </>
+    )}
     <slot name="head" />
   </head>
 

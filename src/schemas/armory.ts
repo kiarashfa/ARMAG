@@ -76,9 +76,7 @@ export const ownership = z.object({
   serviceIntervalMonths: z.number().int().positive().optional(),
   serviceLog: z.array(serviceEvent).default([]),
   /** The owner's own value estimates over time, for the burn-rate chart. */
-  valueAnchors: z
-    .array(z.object({ date: isoDate, value: z.number().nonnegative() }))
-    .default([]),
+  valueAnchors: z.array(z.object({ date: isoDate, value: z.number().nonnegative() })).default([]),
 });
 export type Ownership = z.infer<typeof ownership>;
 

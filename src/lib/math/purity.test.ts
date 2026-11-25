@@ -130,7 +130,11 @@ test('lib/math imports nothing outside lib/math except its own siblings', () => 
       failures.push(`${rel(file)}: imports the package '${spec}'`);
     }
   }
-  assert.equal(failures.length, 0, `lib/math must not depend on packages:\n  ${failures.join('\n  ')}`);
+  assert.equal(
+    failures.length,
+    0,
+    `lib/math must not depend on packages:\n  ${failures.join('\n  ')}`,
+  );
 });
 
 test('no fps-per-inch constant exists anywhere in the codebase', () => {

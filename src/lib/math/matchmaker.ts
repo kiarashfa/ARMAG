@@ -200,11 +200,14 @@ function scoreCandidate(candidate: Candidate, criteria: MatchCriteria): MatchRea
 export function describeCriteria(criteria: MatchCriteria): string[] {
   const applied: string[] = [];
   if (criteria.useTags?.length) applied.push(`intended use: ${criteria.useTags.join(', ')}`);
-  if (criteria.cartridgeRefs?.length) applied.push(`cartridge: ${criteria.cartridgeRefs.join(', ')}`);
-  if (criteria.maxLoadedMassKg !== undefined) applied.push(`loaded mass at most ${criteria.maxLoadedMassKg} kg`);
+  if (criteria.cartridgeRefs?.length)
+    applied.push(`cartridge: ${criteria.cartridgeRefs.join(', ')}`);
+  if (criteria.maxLoadedMassKg !== undefined)
+    applied.push(`loaded mass at most ${criteria.maxLoadedMassKg} kg`);
   if (criteria.minCapacity !== undefined) applied.push(`capacity at least ${criteria.minCapacity}`);
   if (criteria.actions?.length) applied.push(`action: ${criteria.actions.join(', ')}`);
-  if (criteria.maxFreeRecoilJ !== undefined) applied.push(`free recoil at most ${criteria.maxFreeRecoilJ} J`);
+  if (criteria.maxFreeRecoilJ !== undefined)
+    applied.push(`free recoil at most ${criteria.maxFreeRecoilJ} J`);
   if (criteria.eras?.length) applied.push(`era: ${criteria.eras.join(', ')}`);
   return applied;
 }

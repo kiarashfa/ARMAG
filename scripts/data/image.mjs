@@ -142,7 +142,9 @@ async function cmdDvids(query) {
   const rows = await dvidsSearch(query, { max: 12 });
   console.log(`${rows.length} DVIDS image(s) matching "${query}"\n`);
   for (const row of rows) {
-    console.log(`  ${row.id}   ${row.branch.padEnd(12)} ${row.width ?? '?'}×${row.height ?? '?'}  ${row.date}`);
+    console.log(
+      `  ${row.id}   ${row.branch.padEnd(12)} ${row.width ?? '?'}×${row.height ?? '?'}  ${row.date}`,
+    );
     console.log(`      ${row.title}`);
     if (row.description) console.log(`      shows  : ${row.description.slice(0, 200)}`);
     if (row.unit) console.log(`      unit   : ${row.unit}`);
@@ -293,7 +295,12 @@ async function cmdSheet(name, handles) {
  * taken as one argument rather than two because the two-argument form invites
  * `image.mjs add file ak-47 hero`, which silently writes to the wrong tree.
  */
-async function cmdAdd(rawFile, target, basename, { replace = false, licence = null, from = null } = {}) {
+async function cmdAdd(
+  rawFile,
+  target,
+  basename,
+  { replace = false, licence = null, from = null } = {},
+) {
   if (!target || !/^(guns|cartridges|makers)\/[a-z0-9-]+$/.test(target)) {
     throw new Error(
       `target must be "<collection>/<slug>", e.g. guns/ak-47 — got "${target ?? '(nothing)'}"`,
@@ -368,7 +375,9 @@ async function cmdAdd(rawFile, target, basename, { replace = false, licence = nu
  */
 async function cmdLogo(slug, rawFile, { replace = false, from = null } = {}) {
   if (!slug || !/^[a-z0-9-]+$/.test(slug)) {
-    throw new Error(`maker slug must be lowercase-kebab, e.g. beretta — got "${slug ?? '(nothing)'}"`);
+    throw new Error(
+      `maker slug must be lowercase-kebab, e.g. beretta — got "${slug ?? '(nothing)'}"`,
+    );
   }
   await cmdAdd(rawFile, `makers/${slug}`, 'logo', {
     replace,
@@ -377,7 +386,7 @@ async function cmdLogo(slug, rawFile, { replace = false, from = null } = {}) {
       licenseType: 'trademark-nominative-use',
       licenseNote:
         `${meta.licenseShortName ? `The source records the file as ${meta.licenseShortName}. ` : ''}` +
-        'The mark itself is its owner\'s trademark, reproduced here to identify the ' +
+        "The mark itself is its owner's trademark, reproduced here to identify the " +
         'manufacturer whose entry it appears on, which is nominative use.',
     }),
   });
@@ -398,7 +407,9 @@ async function cmdCredit(slug) {
   );
   let data = null;
   for (const candidate of candidates) {
-    data = await readFile(candidate, 'utf8').then(JSON.parse).catch(() => null);
+    data = await readFile(candidate, 'utf8')
+      .then(JSON.parse)
+      .catch(() => null);
     if (data) break;
   }
   if (!data) throw new Error(`no data file for "${slug}" in gunData, cartridgeData or makerData`);

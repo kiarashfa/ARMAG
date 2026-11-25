@@ -64,97 +64,99 @@ const inRecentMoney = (cell: Extract<CompareCell, { kind: 'money' }>): number | 
 ---
 
 <div class="grid gap-6 lg:grid-cols-2">
-  {
-    grouped.map((bucket) => (
-      <details open class="rounded-lg border border-line bg-surface-1 p-4">
-        <summary class="type-heading cursor-pointer text-sm uppercase tracking-wider text-ink-muted">
-          {bucket.group}
-        </summary>
-        <dl class="mt-3">
-          {bucket.rows.map((row) => {
-            const cell = cells[row.key];
-            return (
-              <div class="grid grid-cols-[minmax(0,min(11rem,42%))_minmax(0,1fr)] gap-x-4 gap-y-1 border-b border-line py-2 last:border-b-0">
-                <dt class="type-data min-w-0 text-sm text-ink-secondary">{row.label}</dt>
-                <dd class="min-w-0">
-                  {(!cell || cell.kind === 'scalar') && (
-                    <>
-                      <div class="flex flex-wrap items-baseline gap-2">
-                        <UnitValue
-                          value={cell && cell.kind === 'scalar' ? cell.value : null}
-                          unit={row.unit ?? ''}
-                          class="text-sm text-ink"
-                        />
-                        {/*
+  {grouped.map((bucket) => (
+    <details open class="rounded-lg border border-line bg-surface-1 p-4">
+      <summary class="type-heading cursor-pointer text-sm uppercase tracking-wider text-ink-muted">
+        {bucket.group}
+      </summary>
+      <dl class="mt-3">
+        {bucket.rows.map((row) => {
+          const cell = cells[row.key];
+          return (
+            <div class="grid grid-cols-[minmax(0,min(11rem,42%))_minmax(0,1fr)] gap-x-4 gap-y-1 border-b border-line py-2 last:border-b-0">
+              <dt class="type-data min-w-0 text-sm text-ink-secondary">{row.label}</dt>
+              <dd class="min-w-0">
+                {(!cell || cell.kind === 'scalar') && (
+                  <>
+                    <div class="flex flex-wrap items-baseline gap-2">
+                      <UnitValue
+                        value={cell && cell.kind === 'scalar' ? cell.value : null}
+                        unit={row.unit ?? ''}
+                        class="text-sm text-ink"
+                      />
+                      {/*
                           No badge on a figure that simply is not there: the
                           value already reads "not recorded", and the
                           `placeholder` badge says the same words a second time.
                           A real placeholder — one an author wrote deliberately
                           — reads the same way to a reader either way.
                         */}
-                        {cell && cell.kind === 'scalar' && cell.value !== null && (
-                          <StatusBadge status={cell.status} />
-                        )}
-                        {cell && cell.kind === 'scalar' && cell.sourceUrl && (
-                          <a
-                            href={cell.sourceUrl}
-                            rel="nofollow noopener"
-                            class="type-data text-xs text-ui-accent"
-                          >
-                            source
-                          </a>
-                        )}
-                      </div>
-                      {cell && cell.kind === 'scalar' && cell.sourceNote && (
-                        <p class="type-data mt-0.5 text-xs text-ink-muted">{cell.sourceNote}</p>
+                      {cell && cell.kind === 'scalar' && cell.value !== null && (
+                        <StatusBadge status={cell.status} />
                       )}
-                    </>
-                  )}
+                      {cell && cell.kind === 'scalar' && cell.sourceUrl && (
+                        <a
+                          href={cell.sourceUrl}
+                          rel="nofollow noopener"
+                          class="type-data text-xs text-ui-accent"
+                        >
+                          source
+                        </a>
+                      )}
+                    </div>
+                    {cell && cell.kind === 'scalar' && cell.sourceNote && (
+                      <p class="type-data mt-0.5 text-xs text-ink-muted">{cell.sourceNote}</p>
+                    )}
+                  </>
+                )}
 
-                  {cell?.kind === 'derived' && (
-                    <FigureValue
-                      id={`${idPrefix}-${row.key}`}
-                      label={row.label}
-                      derived={cell.derived}
-                    />
-                  )}
+                {cell?.kind === 'derived' && (
+                  <FigureValue
+                    id={`${idPrefix}-${row.key}`}
+                    label={row.label}
+                    derived={cell.derived}
+                  />
+                )}
 
-                  {cell?.kind === 'enum' &&
-                    (cell.term === null ? (
-                      <span class="type-data text-sm text-ink-muted">not recorded</span>
-                    ) : linkFor(row.axis, cell.term) ? (
-                      <a href={linkFor(row.axis, cell.term)!} class="type-data text-sm text-ui-accent">
-                        {cell.label}
-                      </a>
-                    ) : (
-                      <span class="type-data text-sm text-ink">{cell.label}</span>
-                    ))}
+                {cell?.kind === 'enum' &&
+                  (cell.term === null ? (
+                    <span class="type-data text-sm text-ink-muted">not recorded</span>
+                  ) : linkFor(row.axis, cell.term) ? (
+                    <a
+                      href={linkFor(row.axis, cell.term)!}
+                      class="type-data text-sm text-ui-accent"
+                    >
+                      {cell.label}
+                    </a>
+                  ) : (
+                    <span class="type-data text-sm text-ink">{cell.label}</span>
+                  ))}
 
-                  {cell?.kind === 'list' &&
-                    (cell.terms.length === 0 ? (
-                      <span class="type-data text-sm text-ink-muted">not recorded</span>
-                    ) : (
-                      <ul class="flex flex-wrap gap-1.5">
-                        {cell.terms.map((term) => (
-                          <li>
-                            {linkFor(row.axis, term.id) ? (
-                              <a
-                                href={linkFor(row.axis, term.id)!}
-                                class="type-data rounded-full border border-line px-2 py-0.5 text-xs text-ink-secondary no-underline hover:text-ui-accent"
-                              >
-                                {term.label}
-                              </a>
-                            ) : (
-                              <span class="type-data rounded-full border border-line px-2 py-0.5 text-xs text-ink-secondary">
-                                {term.label}
-                              </span>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    ))}
+                {cell?.kind === 'list' &&
+                  (cell.terms.length === 0 ? (
+                    <span class="type-data text-sm text-ink-muted">not recorded</span>
+                  ) : (
+                    <ul class="flex flex-wrap gap-1.5">
+                      {cell.terms.map((term) => (
+                        <li>
+                          {linkFor(row.axis, term.id) ? (
+                            <a
+                              href={linkFor(row.axis, term.id)!}
+                              class="type-data rounded-full border border-line px-2 py-0.5 text-xs text-ink-secondary no-underline hover:text-ui-accent"
+                            >
+                              {term.label}
+                            </a>
+                          ) : (
+                            <span class="type-data rounded-full border border-line px-2 py-0.5 text-xs text-ink-secondary">
+                              {term.label}
+                            </span>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  ))}
 
-                  {/*
+                {/*
                     No thousands separator on a bare number. The only such rows
                     in either schema are a year and a groove count, and
                     `toLocaleString` rendered an introduction year of 1902 as
@@ -162,51 +164,51 @@ const inRecentMoney = (cell: Extract<CompareCell, { kind: 'money' }>): number | 
                     `propertyValue('')` — a measurement with a source — not
                     this.
                   */}
-                  {cell?.kind === 'number' && (
-                    <span class="type-data text-sm text-ink">
-                      {cell.value === null ? (
-                        <span class="text-ink-muted">not recorded</span>
-                      ) : (
-                        String(cell.value)
-                      )}
-                    </span>
-                  )}
+                {cell?.kind === 'number' && (
+                  <span class="type-data text-sm text-ink">
+                    {cell.value === null ? (
+                      <span class="text-ink-muted">not recorded</span>
+                    ) : (
+                      String(cell.value)
+                    )}
+                  </span>
+                )}
 
-                  {cell?.kind === 'text' && (
-                    <span class="type-data text-sm text-ink">
-                      {cell.text ?? <span class="text-ink-muted">not recorded</span>}
-                    </span>
-                  )}
+                {cell?.kind === 'text' && (
+                  <span class="type-data text-sm text-ink">
+                    {cell.text ?? <span class="text-ink-muted">not recorded</span>}
+                  </span>
+                )}
 
-                  {cell?.kind === 'years' && (
-                    <span class="type-data text-sm text-ink">
-                      {formatYears(cell.start === null ? null : { start: cell.start, end: cell.end }) ?? (
-                        <span class="text-ink-muted">not recorded</span>
-                      )}
-                    </span>
-                  )}
+                {cell?.kind === 'years' && (
+                  <span class="type-data text-sm text-ink">
+                    {formatYears(
+                      cell.start === null ? null : { start: cell.start, end: cell.end },
+                    ) ?? <span class="text-ink-muted">not recorded</span>}
+                  </span>
+                )}
 
-                  {cell?.kind === 'money' && (
-                    <div class="flex flex-wrap items-baseline gap-2">
-                      <span
-                        class={`type-data text-sm ${cell.amount === null ? 'text-ink-muted' : 'text-ink'}`}
-                      >
-                        {money(cell)}
+                {cell?.kind === 'money' && (
+                  <div class="flex flex-wrap items-baseline gap-2">
+                    <span
+                      class={`type-data text-sm ${cell.amount === null ? 'text-ink-muted' : 'text-ink'}`}
+                    >
+                      {money(cell)}
+                    </span>
+                    {cell.amount !== null && <StatusBadge status={cell.status} />}
+                    {inRecentMoney(cell) !== null && (
+                      <span class="type-data basis-full text-xs text-ink-muted" title={cpi.caveat}>
+                        about USD {inRecentMoney(cell)!.toLocaleString('en-GB')} in {cpi.lastYear}{' '}
+                        money, by US consumer prices
                       </span>
-                      {cell.amount !== null && <StatusBadge status={cell.status} />}
-                      {inRecentMoney(cell) !== null && (
-                        <span class="type-data basis-full text-xs text-ink-muted" title={cpi.caveat}>
-                          about USD {inRecentMoney(cell)!.toLocaleString('en-GB')} in {cpi.lastYear} money, by US consumer prices
-                        </span>
-                      )}
-                    </div>
-                  )}
-                </dd>
-              </div>
-            );
-          })}
-        </dl>
-      </details>
-    ))
-  }
+                    )}
+                  </div>
+                )}
+              </dd>
+            </div>
+          );
+        })}
+      </dl>
+    </details>
+  ))}
 </div>

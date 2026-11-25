@@ -66,36 +66,32 @@ const jsonLd = entryArticle({
 
 <BaseLayout title={cartridge.name} description={description} jsonLd={jsonLd}>
   <div data-pagefind-body class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-6">
-    <Breadcrumbs crumbs={[{ label: 'Cartridges', path: href('cartridges') }, { label: cartridge.name }]} />
+    <Breadcrumbs
+      crumbs={[{ label: 'Cartridges', path: href('cartridges') }, { label: cartridge.name }]}
+    />
 
     <header class="mt-4">
       <h1 class="type-display mt-2 text-display text-ink">{cartridge.name}</h1>
-      {
-        cartridge.nativeName && (
-          <p class="type-title mt-1 text-xl text-ink-secondary" lang="und">
-            {cartridge.nativeName}
-          </p>
-        )
-      }
+      {cartridge.nativeName && (
+        <p class="type-title mt-1 text-xl text-ink-secondary" lang="und">
+          {cartridge.nativeName}
+        </p>
+      )}
       <p class="type-data mt-3 flex flex-wrap gap-x-4 text-sm text-ink-secondary">
         {cartridge.introduced && <span>Introduced {cartridge.introduced}</span>}
         {cartridge.designedBy && <span>{cartridge.designedBy}</span>}
-        {
-          cartridge.standard !== 'none' && (
-            <span class="uppercase tracking-wide text-ink-muted">
-              {cartridge.standard.toUpperCase()} standard
-            </span>
-          )
-        }
+        {cartridge.standard !== 'none' && (
+          <span class="uppercase tracking-wide text-ink-muted">
+            {cartridge.standard.toUpperCase()} standard
+          </span>
+        )}
       </p>
-      {
-        cartridge.aliases.length > 0 && (
-          <p class="type-data mt-2 text-sm text-ink-muted">
-            Also known as {cartridge.aliases.map((a) => a.name).join(', ')}: the same cartridge
-            under different names, all of which find this page.
-          </p>
-        )
-      }
+      {cartridge.aliases.length > 0 && (
+        <p class="type-data mt-2 text-sm text-ink-muted">
+          Also known as {cartridge.aliases.map((a) => a.name).join(', ')}: the same cartridge under
+          different names, all of which find this page.
+        </p>
+      )}
     </header>
 
     <div class="prose type-body mt-6 text-lg text-ink-secondary">
@@ -129,61 +125,63 @@ const jsonLd = entryArticle({
           : 'Velocity is recorded per barrel length as published. A gun page interpolates between these points and never projects beyond them.'
       }
     >
-      {
-        identityOnly ? (
-          <p class="type-data rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted">
-            No load data recorded yet. Without a sourced bullet mass and velocity there is nothing
-            honest to compute, so the ballistic figures on pages that chamber this cartridge stay
-            blank rather than being estimated into existence.
-          </p>
-        ) : (
-          <div class="flex flex-col gap-4">
-            {cartridge.loads.map((load) => (
-              <div class="rounded-lg border border-line bg-surface-1 p-4">
-                <h3 class="type-heading text-base text-ink">{load.name}</h3>
-                {load.manufacturer && (
-                  <p class="type-data text-sm text-ink-muted">{load.manufacturer}</p>
-                )}
-                <dl class="mt-3 grid gap-x-6 sm:grid-cols-2">
-                  <SpecRow label="Bullet mass" value={load.bulletMass} />
-                  <SpecRow label="Cartridge mass" value={load.cartridgeMass} />
-                  <SpecRow label="Bullet type" text={load.bulletType ?? null} />
-                  <SpecRow label="G1 BC" value={load.bcG1} />
-                  <SpecRow label="G7 BC" value={load.bcG7} />
-                </dl>
+      {identityOnly ? (
+        <p class="type-data rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted">
+          No load data recorded yet. Without a sourced bullet mass and velocity there is nothing
+          honest to compute, so the ballistic figures on pages that chamber this cartridge stay
+          blank rather than being estimated into existence.
+        </p>
+      ) : (
+        <div class="flex flex-col gap-4">
+          {cartridge.loads.map((load) => (
+            <div class="rounded-lg border border-line bg-surface-1 p-4">
+              <h3 class="type-heading text-base text-ink">{load.name}</h3>
+              {load.manufacturer && (
+                <p class="type-data text-sm text-ink-muted">{load.manufacturer}</p>
+              )}
+              <dl class="mt-3 grid gap-x-6 sm:grid-cols-2">
+                <SpecRow label="Bullet mass" value={load.bulletMass} />
+                <SpecRow label="Cartridge mass" value={load.cartridgeMass} />
+                <SpecRow label="Bullet type" text={load.bulletType ?? null} />
+                <SpecRow label="G1 BC" value={load.bcG1} />
+                <SpecRow label="G7 BC" value={load.bcG7} />
+              </dl>
 
-                {load.velocityByBarrel.length > 0 && (
-                  <div class="mt-4 overflow-x-auto">
-                    <table class="type-data w-full min-w-[20rem] text-sm">
-                      <caption class="type-data pb-2 text-left text-xs text-ink-muted">
-                        Sourced velocity by barrel length
-                      </caption>
-                      <thead>
-                        <tr class="border-b border-line-strong text-left text-ink-muted">
-                          <th scope="col" class="p-2">Barrel</th>
-                          <th scope="col" class="p-2">Velocity</th>
+              {load.velocityByBarrel.length > 0 && (
+                <div class="mt-4 overflow-x-auto">
+                  <table class="type-data w-full min-w-[20rem] text-sm">
+                    <caption class="type-data pb-2 text-left text-xs text-ink-muted">
+                      Sourced velocity by barrel length
+                    </caption>
+                    <thead>
+                      <tr class="border-b border-line-strong text-left text-ink-muted">
+                        <th scope="col" class="p-2">
+                          Barrel
+                        </th>
+                        <th scope="col" class="p-2">
+                          Velocity
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {load.velocityByBarrel.map((point) => (
+                        <tr class="border-b border-line">
+                          <td class="p-2 text-ink-secondary">
+                            <UnitValue value={point.barrelLength.value} unit="mm" />
+                          </td>
+                          <td class="p-2 text-ink">
+                            <UnitValue value={point.velocity.value} unit="m/s" />
+                          </td>
                         </tr>
-                      </thead>
-                      <tbody>
-                        {load.velocityByBarrel.map((point) => (
-                          <tr class="border-b border-line">
-                            <td class="p-2 text-ink-secondary">
-                              <UnitValue value={point.barrelLength.value} unit="mm" />
-                            </td>
-                            <td class="p-2 text-ink">
-                              <UnitValue value={point.velocity.value} unit="m/s" />
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        )
-      }
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </Section>
 
     {/* ── The computed half: this IS the caliber taxonomy view ─────────── */}
@@ -192,56 +190,47 @@ const jsonLd = entryArticle({
       title="Chambered in"
       standfirst="Computed from every entry that lists this cartridge. Nothing here is hand-maintained."
     >
-      {
-        chamberedIn.length === 0 ? (
-          <p class="type-data text-sm text-ink-muted">No entry on the site is chambered in it yet.</p>
-        ) : (
-          <ul class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {chamberedIn.map((gun) => (
-              <li class="rounded border border-line bg-surface-1 p-3">
-                <a href={gunHref(gun.id)} class="type-data text-sm text-ui-accent">
-                  {gun.name}
-                </a>
-                {gun.makerName && (
-                  <p class="type-data text-xs text-ink-muted">{gun.makerName}</p>
-                )}
-              </li>
-            ))}
-          </ul>
-        )
-      }
+      {chamberedIn.length === 0 ? (
+        <p class="type-data text-sm text-ink-muted">No entry on the site is chambered in it yet.</p>
+      ) : (
+        <ul class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {chamberedIn.map((gun) => (
+            <li class="rounded border border-line bg-surface-1 p-3">
+              <a href={gunHref(gun.id)} class="type-data text-sm text-ui-accent">
+                {gun.name}
+              </a>
+              {gun.makerName && <p class="type-data text-xs text-ink-muted">{gun.makerName}</p>}
+            </li>
+          ))}
+        </ul>
+      )}
     </Section>
 
-    {
-      cartridge.images.length > 0 && (
-        <Section id="gallery" title="Gallery">
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {cartridge.images.map((image, i) => (
-              <ImageFigure image={image} id={`img-${cartridge.id}-${i}`} />
-            ))}
-          </div>
-        </Section>
-      )
-    }
+    {cartridge.images.length > 0 && (
+      <Section id="gallery" title="Gallery">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {cartridge.images.map((image, i) => (
+            <ImageFigure image={image} id={`img-${cartridge.id}-${i}`} />
+          ))}
+        </div>
+      </Section>
+    )}
 
     {/*
       The prose and what belongs with it (references, the record) stack at
       full width. Side by side, whichever was shorter left an empty column
       beside the other, and the prose wrapped at half the page.
     */}
-    <div
-      class="mt-(--layout-section-gap) flex flex-col gap-(--layout-section-gap)"
-    >
-    <Section id="detail" title="Detail" flush>
-      <div class="prose type-body text-ink-secondary">
-        <slot />
-      </div>
-    </Section>
+    <div class="mt-(--layout-section-gap) flex flex-col gap-(--layout-section-gap)">
+      <Section id="detail" title="Detail" flush>
+        <div class="prose type-body text-ink-secondary">
+          <slot />
+        </div>
+      </Section>
 
-    <Section id="references" title="References" flush>
-      <ol class="flex list-decimal flex-col gap-3 pl-5">
-        {
-          cartridge.references.map((reference) => (
+      <Section id="references" title="References" flush>
+        <ol class="flex list-decimal flex-col gap-3 pl-5">
+          {cartridge.references.map((reference) => (
             <li id={`ref-${reference.key}`} class="type-data text-sm text-ink-secondary">
               {reference.url ? (
                 <a href={reference.url} rel="nofollow noopener" class="text-ui-accent">
@@ -251,15 +240,17 @@ const jsonLd = entryArticle({
                 <span class="text-ink">{reference.title}</span>
               )}
               {reference.revision && <span> · {reference.revision}</span>}
-              {reference.accessed && <span class="text-ink-muted"> · read {reference.accessed}</span>}
+              {reference.accessed && (
+                <span class="text-ink-muted"> · read {reference.accessed}</span>
+              )}
             </li>
-          ))
-        }
-      </ol>
-      <p class="type-data mt-4 text-xs text-ink-muted">
-        Last verified {cartridge.lastVerified} · review status: {REVIEW_STATUS_LABEL[cartridge.reviewStatus]}
-      </p>
-    </Section>
+          ))}
+        </ol>
+        <p class="type-data mt-4 text-xs text-ink-muted">
+          Last verified {cartridge.lastVerified} · review status:{' '}
+          {REVIEW_STATUS_LABEL[cartridge.reviewStatus]}
+        </p>
+      </Section>
     </div>
   </div>
 </BaseLayout>

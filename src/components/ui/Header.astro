@@ -74,11 +74,15 @@ const iconControl =
   class="sticky top-0 z-40 border-b border-line bg-surface-0/95 backdrop-blur"
   data-pagefind-ignore
 >
-  <div
-    class="mx-auto flex max-w-(--layout-max) flex-wrap items-center gap-x-4 gap-y-2 px-(--layout-gutter) py-3.5 sm:gap-x-6"
-  >
+  <div class="mx-auto flex max-w-(--layout-max) flex-wrap items-center gap-x-4 gap-y-2 px-(--layout-gutter) py-3.5 sm:gap-x-6">
     <a href={href()} class="flex shrink-0 items-center gap-2.5 text-ink no-underline" data-hs-logo>
-      <img src={fileHref('favicon.svg')} alt="" width="26" height="26" class="size-[26px] rounded" />
+      <img
+        src={fileHref('favicon.svg')}
+        alt=""
+        width="26"
+        height="26"
+        class="size-[26px] rounded"
+      />
       <span class="type-title text-[1.4rem] leading-none tracking-tight">ARMAG</span>
     </a>
 
@@ -87,34 +91,30 @@ const iconControl =
       class="type-data order-3 flex basis-full items-center gap-x-5 overflow-x-auto text-sm [scrollbar-width:none] sm:order-none sm:basis-auto sm:flex-wrap sm:gap-y-1 sm:overflow-visible"
       data-hs-fade
     >
-      {
-        browse.map((item) => (
-          <a
-            href={item.path}
-            aria-current={isCurrent(item.path) ? 'page' : undefined}
-            class="group whitespace-nowrap py-1 text-ink-secondary no-underline transition-colors hover:text-ink aria-[current=page]:text-ink"
-          >
-            <span class="border-b border-transparent pb-[3px] transition-colors group-hover:border-ui-accent group-aria-[current=page]:border-ui-accent">
-              {item.label}
-            </span>
-          </a>
-        ))
-      }
+      {browse.map((item) => (
+        <a
+          href={item.path}
+          aria-current={isCurrent(item.path) ? 'page' : undefined}
+          class="group whitespace-nowrap py-1 text-ink-secondary no-underline transition-colors hover:text-ink aria-[current=page]:text-ink"
+        >
+          <span class="border-b border-transparent pb-[3px] transition-colors group-hover:border-ui-accent group-aria-[current=page]:border-ui-accent">
+            {item.label}
+          </span>
+        </a>
+      ))}
       {/* A divider between what the site holds and what you can do with it. */}
       <span aria-hidden="true" class="h-4 w-px shrink-0 bg-line"></span>
-      {
-        tools.map((item) => (
-          <a
-            href={item.path}
-            aria-current={isCurrent(item.path) ? 'page' : undefined}
-            class="group whitespace-nowrap py-1 text-ink-secondary no-underline transition-colors hover:text-ink aria-[current=page]:text-ink"
-          >
-            <span class="border-b border-transparent pb-[3px] transition-colors group-hover:border-ui-accent group-aria-[current=page]:border-ui-accent">
-              {item.label}
-            </span>
-          </a>
-        ))
-      }
+      {tools.map((item) => (
+        <a
+          href={item.path}
+          aria-current={isCurrent(item.path) ? 'page' : undefined}
+          class="group whitespace-nowrap py-1 text-ink-secondary no-underline transition-colors hover:text-ink aria-[current=page]:text-ink"
+        >
+          <span class="border-b border-transparent pb-[3px] transition-colors group-hover:border-ui-accent group-aria-[current=page]:border-ui-accent">
+            {item.label}
+          </span>
+        </a>
+      ))}
     </nav>
 
     {/*
@@ -130,7 +130,13 @@ const iconControl =
       >
         <div class="hs-field" data-hs-field>
           <Icon name="search" />
-          <input type="search" placeholder="Search firearms, cartridges, makers" aria-label="Search ARMAG" autocomplete="off" class="type-data" />
+          <input
+            type="search"
+            placeholder="Search firearms, cartridges, makers"
+            aria-label="Search ARMAG"
+            autocomplete="off"
+            class="type-data"
+          />
           <button class="hs-close" type="button" data-hs-close aria-label="Close search">
             <Icon name="close" />
           </button>
@@ -149,8 +155,8 @@ const iconControl =
         <div class="hs-panel type-data" id="site-search" data-hs-panel>
           <div class="hs-results" data-hs-results aria-live="polite">
             <p class="hs-status">
-              Names, aliases and the text of every page, so an arm is found by its service designation
-              as well as its title.
+              Names, aliases and the text of every page, so an arm is found by its service
+              designation as well as its title.
             </p>
           </div>
         </div>
@@ -165,9 +171,10 @@ const iconControl =
       >
         <Icon name="ruler" />
         <span class="sr-only">
-          <span class="u-metric">Showing metric</span><span class="u-imperial" data-pagefind-ignore
-            >Showing imperial</span
-          >
+          <span class="u-metric">Showing metric</span>
+          <span class="u-imperial" data-pagefind-ignore>
+            Showing imperial
+          </span>
         </span>
       </button>
 
@@ -177,9 +184,18 @@ const iconControl =
         `[data-theme='light']`, so no script touches the icon and there is no
         frame in which the wrong one is showing.
       */}
-      <button type="button" id="theme-toggle" class={iconControl} aria-label="Switch between the dark and light theme">
-        <span class="theme-sun"><Icon name="sun" /></span>
-        <span class="theme-moon"><Icon name="moon" /></span>
+      <button
+        type="button"
+        id="theme-toggle"
+        class={iconControl}
+        aria-label="Switch between the dark and light theme"
+      >
+        <span class="theme-sun">
+          <Icon name="sun" />
+        </span>
+        <span class="theme-moon">
+          <Icon name="moon" />
+        </span>
       </button>
 
       <a href={href('about')} class={iconControl} aria-label="About ARMAG">

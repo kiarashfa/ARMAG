@@ -111,10 +111,7 @@ export const NRA_CONDITION_MULTIPLIER = {
 
 export type NraConditionGrade = keyof typeof NRA_CONDITION_MULTIPLIER;
 
-export function conditionAdjustedValue(
-  baseValue: ValueLike,
-  grade: NraConditionGrade,
-): Derived {
+export function conditionAdjustedValue(baseValue: ValueLike, grade: NraConditionGrade): Derived {
   return derive({
     formula: `base value × ${NRA_CONDITION_MULTIPLIER[grade]} (NRA ${grade})`,
     unit: '',

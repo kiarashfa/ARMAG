@@ -30,28 +30,20 @@ const hasValue = value !== null && value !== undefined;
   <dt class="type-data min-w-0 text-sm text-ink-secondary">{label}</dt>
   <dd class="min-w-0">
     <div class="flex flex-wrap items-baseline gap-2">
-      {
-        hasValue ? (
-          <UnitValue value={value.value} unit={value.unit} class="text-sm text-ink" />
-        ) : (
-          <span class="type-data text-sm text-ink">{text ?? 'not recorded'}</span>
-        )
-      }
+      {hasValue ? (
+        <UnitValue value={value.value} unit={value.unit} class="text-sm text-ink" />
+      ) : (
+        <span class="type-data text-sm text-ink">{text ?? 'not recorded'}</span>
+      )}
       {hasValue && <StatusBadge status={value.status} />}
-      {
-        hasValue && value.sourceUrl && (
-          <a href={value.sourceUrl} rel="nofollow noopener" class="type-data text-xs text-ui-accent">
-            source
-          </a>
-        )
-      }
+      {hasValue && value.sourceUrl && (
+        <a href={value.sourceUrl} rel="nofollow noopener" class="type-data text-xs text-ui-accent">
+          source
+        </a>
+      )}
     </div>
-    {
-      (note ?? (hasValue ? value.sourceNote : null)) && (
-        <p class="type-data mt-0.5 text-xs text-ink-muted">
-          {note ?? value!.sourceNote}
-        </p>
-      )
-    }
+    {(note ?? (hasValue ? value.sourceNote : null)) && (
+      <p class="type-data mt-0.5 text-xs text-ink-muted">{note ?? value!.sourceNote}</p>
+    )}
   </dd>
 </div>

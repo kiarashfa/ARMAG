@@ -15,7 +15,14 @@ import Section from '../blocks/Section.astro';
 import SpecRow from '../blocks/SpecRow.astro';
 import TypeBadge from '../blocks/TypeBadge.astro';
 
-import { absoluteUrl, assetUrl, gunHref, href, makerHref, taxonomyHref } from '../../lib/content/href.ts';
+import {
+  absoluteUrl,
+  assetUrl,
+  gunHref,
+  href,
+  makerHref,
+  taxonomyHref,
+} from '../../lib/content/href.ts';
 import { entryArticle, itemList } from '../../lib/render/json-ld.ts';
 import { humanise } from '../../lib/render/format.ts';
 import { labelFor } from '../../schemas/taxonomy.ts';
@@ -87,101 +94,99 @@ const jsonLd = [
           <MakerLogo name={maker.name} logo={maker.logo} size="md" />
           <h1 class="type-display text-display text-ink">{maker.name}</h1>
         </div>
-        {
-          maker.nativeName && (
-            <p class="type-title mt-1 text-xl text-ink-secondary" lang="und">
-              {maker.nativeName}
-            </p>
-          )
-        }
+        {maker.nativeName && (
+          <p class="type-title mt-1 text-xl text-ink-secondary" lang="und">
+            {maker.nativeName}
+          </p>
+        )}
         <p class="type-data mt-3 flex flex-wrap gap-x-4 text-sm text-ink-secondary">
-          <a href={taxonomyHref('country', maker.country)} class="text-ui-accent">{countryLabel}</a>
+          <a href={taxonomyHref('country', maker.country)} class="text-ui-accent">
+            {countryLabel}
+          </a>
           <span>
             {/* `founded` is optional: no free source publishes one for every maker. */}
             {maker.founded ?? 'founding year not recorded'}
-            {maker.dissolved ? `–${maker.dissolved}` : maker.founded ? '–present' : ' · still trading'}
+            {maker.dissolved
+              ? `–${maker.dissolved}`
+              : maker.founded
+                ? '–present'
+                : ' · still trading'}
           </span>
-          {
-            maker.website && (
-              <a href={maker.website} rel="nofollow noopener" class="text-ui-accent">
-                Official site
-              </a>
-            )
-          }
+          {maker.website && (
+            <a href={maker.website} rel="nofollow noopener" class="text-ui-accent">
+              Official site
+            </a>
+          )}
         </p>
       </div>
-
     </header>
 
     <div class="prose type-body mt-6 text-lg text-ink-secondary">
       <slot name="lede" />
     </div>
 
-    {
-      (maker.parentCompany || maker.successorOf || maker.predecessorOf) && (
-        <Section id="corporate" title="Corporate lineage">
-          <dl class="rounded-lg border border-line bg-surface-1 p-4">
-            {(
-              [
-                ['Parent company', maker.parentCompany],
-                ['Successor to', maker.successorOf],
-                ['Predecessor of', maker.predecessorOf],
-              ] as const
-            ).map(([label, id]) =>
-              id ? (
-                <div class="grid grid-cols-[minmax(0,min(11rem,42%))_minmax(0,1fr)] gap-x-4 border-b border-line py-2 last:border-b-0">
-                  <dt class="type-data text-sm text-ink-secondary">{label}</dt>
-                  <dd class="type-data text-sm">
-                    <a href={makerHref(id)} class="text-ui-accent">
-                      {relatedMakerNames[id] ?? id}
-                    </a>
-                  </dd>
-                </div>
-              ) : null,
-            )}
-          </dl>
-          <p class="type-data mt-2 text-xs text-ink-muted">
-            A rename is not a new company, and an arm made in 1974 was made by whoever existed in
-            1974. Both names get a page, and the link runs between them.
-          </p>
-        </Section>
-      )
-    }
+    {(maker.parentCompany || maker.successorOf || maker.predecessorOf) && (
+      <Section id="corporate" title="Corporate lineage">
+        <dl class="rounded-lg border border-line bg-surface-1 p-4">
+          {(
+            [
+              ['Parent company', maker.parentCompany],
+              ['Successor to', maker.successorOf],
+              ['Predecessor of', maker.predecessorOf],
+            ] as const
+          ).map(([label, id]) =>
+            id ? (
+              <div class="grid grid-cols-[minmax(0,min(11rem,42%))_minmax(0,1fr)] gap-x-4 border-b border-line py-2 last:border-b-0">
+                <dt class="type-data text-sm text-ink-secondary">{label}</dt>
+                <dd class="type-data text-sm">
+                  <a href={makerHref(id)} class="text-ui-accent">
+                    {relatedMakerNames[id] ?? id}
+                  </a>
+                </dd>
+              </div>
+            ) : null,
+          )}
+        </dl>
+        <p class="type-data mt-2 text-xs text-ink-muted">
+          A rename is not a new company, and an arm made in 1974 was made by whoever existed in
+          1974. Both names get a page, and the link runs between them.
+        </p>
+      </Section>
+    )}
 
     <Section
       id="models"
       title="Entries"
       standfirst="Computed from every entry attributed to this manufacturer. Nothing here is hand-maintained."
     >
-      {
-        sorted.length === 0 ? (
-          maker.successorOf ? (
-            <p class="type-data text-sm text-ink-muted">
-              No entry is attributed to this name yet. Arms built under the earlier name are listed
-              under{' '}
-              <a href={makerHref(maker.successorOf)} class="text-ui-accent">
-                {relatedMakerNames[maker.successorOf] ?? maker.successorOf}
-              </a>.
-            </p>
-          ) : (
-            <p class="type-data text-sm text-ink-muted">No entries attributed here yet.</p>
-          )
+      {sorted.length === 0 ? (
+        maker.successorOf ? (
+          <p class="type-data text-sm text-ink-muted">
+            No entry is attributed to this name yet. Arms built under the earlier name are listed
+            under{' '}
+            <a href={makerHref(maker.successorOf)} class="text-ui-accent">
+              {relatedMakerNames[maker.successorOf] ?? maker.successorOf}
+            </a>
+            .
+          </p>
         ) : (
-          <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {sorted.map((model) => (
-              <li class="rounded-lg border border-line bg-surface-1 p-3">
-                <TypeBadge type={model.type ?? null} link={false} size="sm" />
-                <a href={gunHref(model.id)} class="type-data mt-2 block text-sm text-ui-accent">
-                  {model.name}
-                </a>
-                {model.introduced && (
-                  <p class="type-data text-xs text-ink-muted">{model.introduced}</p>
-                )}
-              </li>
-            ))}
-          </ul>
+          <p class="type-data text-sm text-ink-muted">No entries attributed here yet.</p>
         )
-      }
+      ) : (
+        <ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {sorted.map((model) => (
+            <li class="rounded-lg border border-line bg-surface-1 p-3">
+              <TypeBadge type={model.type ?? null} link={false} size="sm" />
+              <a href={gunHref(model.id)} class="type-data mt-2 block text-sm text-ui-accent">
+                {model.name}
+              </a>
+              {model.introduced && (
+                <p class="type-data text-xs text-ink-muted">{model.introduced}</p>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
     </Section>
 
     {/*
@@ -189,25 +194,27 @@ const jsonLd = [
       full width. Side by side, whichever was shorter left an empty column
       beside the other, and the prose wrapped at half the page.
     */}
-    <div
-      class="mt-(--layout-section-gap) flex flex-col gap-(--layout-section-gap)"
-    >
-    <Section id="detail" title="Detail" flush>
-      <div class="prose type-body text-ink-secondary">
-        <slot />
-      </div>
-    </Section>
+    <div class="mt-(--layout-section-gap) flex flex-col gap-(--layout-section-gap)">
+      <Section id="detail" title="Detail" flush>
+        <div class="prose type-body text-ink-secondary">
+          <slot />
+        </div>
+      </Section>
 
-    <Section id="facts" title="Record" flush>
-      <dl class="rounded-lg border border-line bg-surface-1 p-4">
-        <SpecRow label="Country" text={countryLabel} />
-        <SpecRow label="Founded" text={maker.founded ? String(maker.founded) : 'not recorded'} />
-        <SpecRow label="Dissolved" text={maker.dissolved ? String(maker.dissolved) : 'still trading'} />
-      </dl>
-      <p class="type-data mt-4 text-xs text-ink-muted">
-        Last verified {maker.lastVerified} · review status: {REVIEW_STATUS_LABEL[maker.reviewStatus]}
-      </p>
-    </Section>
+      <Section id="facts" title="Record" flush>
+        <dl class="rounded-lg border border-line bg-surface-1 p-4">
+          <SpecRow label="Country" text={countryLabel} />
+          <SpecRow label="Founded" text={maker.founded ? String(maker.founded) : 'not recorded'} />
+          <SpecRow
+            label="Dissolved"
+            text={maker.dissolved ? String(maker.dissolved) : 'still trading'}
+          />
+        </dl>
+        <p class="type-data mt-4 text-xs text-ink-muted">
+          Last verified {maker.lastVerified} · review status:{' '}
+          {REVIEW_STATUS_LABEL[maker.reviewStatus]}
+        </p>
+      </Section>
     </div>
   </div>
 </BaseLayout>

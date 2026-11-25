@@ -20,7 +20,11 @@ export default {
   icon: 'public/icon-512.png',
   bodyFont: 'Plex',
   fonts: [
-    { family: 'PlexCond', file: 'scripts/brand/fonts/ibm-plex-sans-condensed-700-normal.woff', weight: 700 },
+    {
+      family: 'PlexCond',
+      file: 'scripts/brand/fonts/ibm-plex-sans-condensed-700-normal.woff',
+      weight: 700,
+    },
     { family: 'Plex', file: 'scripts/brand/fonts/ibm-plex-sans-400-normal.woff', weight: 400 },
   ],
   output: 'public/og-image.jpg',

@@ -49,7 +49,7 @@ export const MPA_PER_PSI = N_PER_POUND_FORCE / (MM_PER_INCH * MM_PER_INCH);
  * ratio is exact rather than the "1 MOA ≈ 1 inch at 100 yards" approximation —
  * that shorthand is off by about 4.7%, which is a whole minute at 1000 yards.
  */
-export const MOA_PER_MRAD = (180 / Math.PI) * 60 / 1000;
+export const MOA_PER_MRAD = ((180 / Math.PI) * 60) / 1000;
 
 // ---------------------------------------------------------------------------
 // Length
@@ -93,7 +93,7 @@ export const psiToMpa = (psi: number): number => psi * MPA_PER_PSI;
 export const mradToMoa = (mrad: number): number => mrad * MOA_PER_MRAD;
 export const moaToMrad = (moa: number): number => moa / MOA_PER_MRAD;
 export const mradToDegrees = (mrad: number): number => (mrad / 1000) * (180 / Math.PI);
-export const degreesToMrad = (deg: number): number => (deg * (Math.PI / 180)) * 1000;
+export const degreesToMrad = (deg: number): number => deg * (Math.PI / 180) * 1000;
 export const mradToRadians = (mrad: number): number => mrad / 1000;
 export const radiansToMrad = (rad: number): number => rad * 1000;
 

@@ -32,10 +32,10 @@ export interface JoinedMaker {
   narrative: CollectionEntry<'makers'>;
 }
 
-async function join<N extends 'guns' | 'cartridges' | 'makers', D extends 'gunData' | 'cartridgeData' | 'makerData'>(
-  narrativeName: N,
-  dataName: D,
-) {
+async function join<
+  N extends 'guns' | 'cartridges' | 'makers',
+  D extends 'gunData' | 'cartridgeData' | 'makerData',
+>(narrativeName: N, dataName: D) {
   const [narratives, datas] = await Promise.all([
     getCollection(narrativeName),
     getCollection(dataName),

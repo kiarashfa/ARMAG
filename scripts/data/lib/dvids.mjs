@@ -63,7 +63,8 @@ const US_BRANCHES = new Set([
 const key = () => requireKey('DVIDS_API_KEY', 'the DVIDS image search');
 
 /** `image:6219032` → the id DVIDS wants; accepts a bare number too. */
-export const asAssetId = (raw) => (/^image:/.test(raw) ? raw : `image:${String(raw).replace(/\D/g, '')}`);
+export const asAssetId = (raw) =>
+  /^image:/.test(raw) ? raw : `image:${String(raw).replace(/\D/g, '')}`;
 
 /**
  * Search photographs. Returns lean rows — enough to choose from, not enough to

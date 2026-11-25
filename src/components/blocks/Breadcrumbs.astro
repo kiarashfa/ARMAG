@@ -30,21 +30,19 @@ const node = breadcrumbList(all, (path) => absoluteUrl(Astro.site, path));
 
 <nav aria-label="Breadcrumb" class="type-data text-xs text-ink-muted">
   <ol class="flex flex-wrap items-center gap-1">
-    {
-      all.map((crumb, index) => (
-        <li class="flex items-center gap-1">
-          {index > 0 && <span aria-hidden="true">/</span>}
-          {crumb.path ? (
-            <a href={crumb.path} class="hover:text-ui-accent">
-              {crumb.label}
-            </a>
-          ) : (
-            <span aria-current="page" class="text-ink-secondary">
-              {crumb.label}
-            </span>
-          )}
-        </li>
-      ))
-    }
+    {all.map((crumb, index) => (
+      <li class="flex items-center gap-1">
+        {index > 0 && <span aria-hidden="true">/</span>}
+        {crumb.path ? (
+          <a href={crumb.path} class="hover:text-ui-accent">
+            {crumb.label}
+          </a>
+        ) : (
+          <span aria-current="page" class="text-ink-secondary">
+            {crumb.label}
+          </span>
+        )}
+      </li>
+    ))}
   </ol>
 </nav>

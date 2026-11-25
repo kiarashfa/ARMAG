@@ -44,40 +44,66 @@ const TEXT_TOKENS = [
   { name: 'ui-accent-hover', token: '--color-ui-accent-hover', fg: 'text-ui-accent-hover' },
   { name: 'status-verified', token: '--color-status-verified', fg: 'text-status-verified' },
   { name: 'status-estimated', token: '--color-status-estimated', fg: 'text-status-estimated' },
-  { name: 'status-placeholder', token: '--color-status-placeholder', fg: 'text-status-placeholder' },
-  { name: 'status-conflicting', token: '--color-status-conflicting', fg: 'text-status-conflicting' },
+  {
+    name: 'status-placeholder',
+    token: '--color-status-placeholder',
+    fg: 'text-status-placeholder',
+  },
+  {
+    name: 'status-conflicting',
+    token: '--color-status-conflicting',
+    fg: 'text-status-conflicting',
+  },
 ];
 
 const TYPES = [
   {
-    label: 'Handgun', covers: 'pistol · revolver',
-    fg: 'text-type-handgun', bg: 'bg-type-handgun-surface',
-    fgToken: '--color-type-handgun', bgToken: '--color-type-handgun-surface',
+    label: 'Handgun',
+    covers: 'pistol · revolver',
+    fg: 'text-type-handgun',
+    bg: 'bg-type-handgun-surface',
+    fgToken: '--color-type-handgun',
+    bgToken: '--color-type-handgun-surface',
   },
   {
-    label: 'Rifle', covers: 'rifle · carbine',
-    fg: 'text-type-rifle', bg: 'bg-type-rifle-surface',
-    fgToken: '--color-type-rifle', bgToken: '--color-type-rifle-surface',
+    label: 'Rifle',
+    covers: 'rifle · carbine',
+    fg: 'text-type-rifle',
+    bg: 'bg-type-rifle-surface',
+    fgToken: '--color-type-rifle',
+    bgToken: '--color-type-rifle-surface',
   },
   {
-    label: 'Shotgun', covers: 'shotgun',
-    fg: 'text-type-shotgun', bg: 'bg-type-shotgun-surface',
-    fgToken: '--color-type-shotgun', bgToken: '--color-type-shotgun-surface',
+    label: 'Shotgun',
+    covers: 'shotgun',
+    fg: 'text-type-shotgun',
+    bg: 'bg-type-shotgun-surface',
+    fgToken: '--color-type-shotgun',
+    bgToken: '--color-type-shotgun-surface',
   },
   {
-    label: 'SMG / PDW', covers: 'submachine-gun · pdw',
-    fg: 'text-type-smg', bg: 'bg-type-smg-surface',
-    fgToken: '--color-type-smg', bgToken: '--color-type-smg-surface',
+    label: 'SMG / PDW',
+    covers: 'submachine-gun · pdw',
+    fg: 'text-type-smg',
+    bg: 'bg-type-smg-surface',
+    fgToken: '--color-type-smg',
+    bgToken: '--color-type-smg-surface',
   },
   {
-    label: 'Machine gun', covers: 'machine-gun',
-    fg: 'text-type-machinegun', bg: 'bg-type-machinegun-surface',
-    fgToken: '--color-type-machinegun', bgToken: '--color-type-machinegun-surface',
+    label: 'Machine gun',
+    covers: 'machine-gun',
+    fg: 'text-type-machinegun',
+    bg: 'bg-type-machinegun-surface',
+    fgToken: '--color-type-machinegun',
+    bgToken: '--color-type-machinegun-surface',
   },
   {
-    label: 'Platform', covers: "kind: 'family'",
-    fg: 'text-type-platform', bg: 'bg-type-platform-surface',
-    fgToken: '--color-type-platform', bgToken: '--color-type-platform-surface',
+    label: 'Platform',
+    covers: "kind: 'family'",
+    fg: 'text-type-platform',
+    bg: 'bg-type-platform-surface',
+    fgToken: '--color-type-platform',
+    bgToken: '--color-type-platform-surface',
   },
 ];
 
@@ -98,163 +124,167 @@ const HEADING = 'type-heading mt-10 text-xs uppercase tracking-[0.2em] text-ink-
   </head>
   <body class="type-body bg-surface-0 text-ink">
     <div class="grid gap-px bg-line lg:grid-cols-2">
-      {
-        THEMES.map((theme) => (
-          <section data-theme={theme.attr} class="bg-surface-0 px-5 py-8">
-            <h1 class="type-title text-2xl">{theme.label}</h1>
-            <p class="type-data mt-1 text-sm text-ink-muted">
-              Ratios measured in-browser. Text needs 4.5:1, borders 3:1.
+      {THEMES.map((theme) => (
+        <section data-theme={theme.attr} class="bg-surface-0 px-5 py-8">
+          <h1 class="type-title text-2xl">{theme.label}</h1>
+          <p class="type-data mt-1 text-sm text-ink-muted">
+            Ratios measured in-browser. Text needs 4.5:1, borders 3:1.
+          </p>
+
+          <h2 class={HEADING}>Surfaces</h2>
+          <div class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+            {SURFACES.map((s) => (
+              <div class={`${s.bg} rounded border border-line p-3`}>
+                <div class="type-data text-xs text-ink-secondary">{s.name}</div>
+                <div class="type-data mt-8 text-[0.65rem] text-ink-muted" data-swatch={s.token} />
+              </div>
+            ))}
+          </div>
+
+          <h2 class={HEADING}>Every text token, on every surface</h2>
+          <div class="mt-3 grid gap-2 sm:grid-cols-2">
+            {SURFACES.map((s) => (
+              <div class={`${s.bg} rounded border border-line p-3`}>
+                <div class="type-data mb-2 text-[0.65rem] uppercase tracking-widest text-ink-muted">
+                  on {s.name}
+                </div>
+                {TEXT_TOKENS.map((t) => (
+                  <div class="flex items-baseline justify-between gap-3">
+                    <span class={`type-data ${t.fg} text-sm`}>{t.name} 1,247.5</span>
+                    <span
+                      class="type-data text-[0.65rem] text-ink-muted"
+                      data-fg={t.token}
+                      data-bg={s.token}
+                      data-min="4.5"
+                    />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          <h2 class={HEADING}>Content accents — per firearm type</h2>
+          <div class="mt-3 grid gap-2 sm:grid-cols-2">
+            {TYPES.map((t) => (
+              <div class={`${t.bg} rounded border border-line p-3`}>
+                <div class="flex items-baseline justify-between gap-2">
+                  <span class={`type-heading ${t.fg} text-sm`}>{t.label}</span>
+                  <span
+                    class={`type-data ${t.fg} text-[0.65rem]`}
+                    data-fg={t.fgToken}
+                    data-bg={t.bgToken}
+                    data-min="4.5"
+                  />
+                </div>
+                <div class="flex items-baseline justify-between gap-2">
+                  <span class="type-data text-xs text-ink">{t.covers}</span>
+                  <span
+                    class="type-data text-[0.65rem] text-ink"
+                    data-fg="--color-ink"
+                    data-bg={t.bgToken}
+                    data-min="4.5"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h2 class={HEADING}>Lines</h2>
+          <div class="mt-3 space-y-3 rounded bg-surface-1 p-3">
+            <div class="type-data flex items-center justify-between gap-3 border-b border-line pb-2 text-xs text-ink-secondary">
+              <span>line — decorative divider, no contrast promise</span>
+            </div>
+            <div class="type-data flex items-center justify-between gap-3 rounded border-2 border-line-strong p-2 text-xs text-ink-secondary">
+              <span>line-strong — perceivable border</span>
+              <span
+                class="type-data text-[0.65rem] text-ink-muted"
+                data-fg="--color-line-strong"
+                data-bg="--color-surface-1"
+                data-min="3"
+              />
+            </div>
+          </div>
+
+          <h2 class={HEADING}>Type registers</h2>
+          <div class="mt-3 space-y-4 rounded bg-surface-1 p-4">
+            <p class="type-display text-display">Kalashnikov</p>
+            <p class="type-stat text-stat">715 m/s</p>
+            <p class="type-title text-2xl">Type 56 — licensed production</p>
+            <p class="type-heading text-lg">Specifications</p>
+            <p class="type-body text-base text-ink-secondary">
+              Body register at the readable measure (76ch). The line length is capped so the
+              paragraph stays in the comfortable band rather than running the full width of a
+              reference layout.
             </p>
+            <p class="type-body text-lg text-ink-secondary">
+              Lede register at the wider measure (92ch), for the paragraph directly under a page
+              title — read once, at a glance.
+            </p>
+          </div>
 
-            <h2 class={HEADING}>Surfaces</h2>
-            <div class="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
-              {SURFACES.map((s) => (
-                <div class={`${s.bg} rounded border border-line p-3`}>
-                  <div class="type-data text-xs text-ink-secondary">{s.name}</div>
-                  <div class="type-data mt-8 text-[0.65rem] text-ink-muted" data-swatch={s.token} />
-                </div>
-              ))}
-            </div>
+          <h2 class={HEADING}>Tabular numerals — every column must line up</h2>
+          <table class="type-data mt-3 w-full rounded bg-surface-1 text-sm">
+            <tbody>
+              <tr class="border-b border-line">
+                <td class="p-2 text-ink-secondary">Muzzle velocity</td>
+                <td class="p-2 text-right text-ink">715.0 m/s</td>
+              </tr>
+              <tr class="border-b border-line">
+                <td class="p-2 text-ink-secondary">Muzzle energy</td>
+                <td class="p-2 text-right text-ink">1,991.4 J</td>
+              </tr>
+              <tr>
+                <td class="p-2 text-ink-secondary">Mass, empty</td>
+                <td class="p-2 text-right text-ink">3,470.0 g</td>
+              </tr>
+            </tbody>
+          </table>
 
-            <h2 class={HEADING}>Every text token, on every surface</h2>
-            <div class="mt-3 grid gap-2 sm:grid-cols-2">
-              {SURFACES.map((s) => (
-                <div class={`${s.bg} rounded border border-line p-3`}>
-                  <div class="type-data mb-2 text-[0.65rem] uppercase tracking-widest text-ink-muted">
-                    on {s.name}
-                  </div>
-                  {TEXT_TOKENS.map((t) => (
-                    <div class="flex items-baseline justify-between gap-3">
-                      <span class={`type-data ${t.fg} text-sm`}>{t.name} 1,247.5</span>
-                      <span
-                        class="type-data text-[0.65rem] text-ink-muted"
-                        data-fg={t.token}
-                        data-bg={s.token}
-                        data-min="4.5"
-                      />
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-
-            <h2 class={HEADING}>Content accents — per firearm type</h2>
-            <div class="mt-3 grid gap-2 sm:grid-cols-2">
-              {TYPES.map((t) => (
-                <div class={`${t.bg} rounded border border-line p-3`}>
-                  <div class="flex items-baseline justify-between gap-2">
-                    <span class={`type-heading ${t.fg} text-sm`}>{t.label}</span>
-                    <span
-                      class={`type-data ${t.fg} text-[0.65rem]`}
-                      data-fg={t.fgToken}
-                      data-bg={t.bgToken}
-                      data-min="4.5"
-                    />
-                  </div>
-                  <div class="flex items-baseline justify-between gap-2">
-                    <span class="type-data text-xs text-ink">{t.covers}</span>
-                    <span
-                      class="type-data text-[0.65rem] text-ink"
-                      data-fg="--color-ink"
-                      data-bg={t.bgToken}
-                      data-min="4.5"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <h2 class={HEADING}>Lines</h2>
-            <div class="mt-3 space-y-3 rounded bg-surface-1 p-3">
-              <div class="type-data flex items-center justify-between gap-3 border-b border-line pb-2 text-xs text-ink-secondary">
-                <span>line — decorative divider, no contrast promise</span>
-              </div>
-              <div class="type-data flex items-center justify-between gap-3 rounded border-2 border-line-strong p-2 text-xs text-ink-secondary">
-                <span>line-strong — perceivable border</span>
-                <span
-                  class="type-data text-[0.65rem] text-ink-muted"
-                  data-fg="--color-line-strong"
-                  data-bg="--color-surface-1"
-                  data-min="3"
-                />
-              </div>
-            </div>
-
-            <h2 class={HEADING}>Type registers</h2>
-            <div class="mt-3 space-y-4 rounded bg-surface-1 p-4">
-              <p class="type-display text-display">Kalashnikov</p>
-              <p class="type-stat text-stat">715 m/s</p>
-              <p class="type-title text-2xl">Type 56 — licensed production</p>
-              <p class="type-heading text-lg">Specifications</p>
-              <p class="type-body text-base text-ink-secondary">
-                Body register at the readable measure (76ch). The line length is capped so the
-                paragraph stays in the comfortable band rather than running the full width of a
-                reference layout.
-              </p>
-              <p class="type-body text-lg text-ink-secondary">
-                Lede register at the wider measure (92ch), for the paragraph directly under a page
-                title — read once, at a glance.
+          <h2 class={HEADING}>Focus ring, press target, popover</h2>
+          <div class="mt-3 flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              class="type-data rounded border border-line-strong bg-surface-2 px-3 py-2 text-sm text-ink"
+            >
+              Tab to me — focus ring is the UI accent
+            </button>
+            <button
+              type="button"
+              popovertarget="popover-demo"
+              class="type-data rounded border border-line-strong bg-surface-2 px-3 py-2 text-sm text-ui-accent"
+            >
+              Open popover
+            </button>
+            <div
+              id="popover-demo"
+              popover
+              class="rounded border border-line-strong bg-surface-1 p-4 text-ink shadow-lg"
+            >
+              <p class="type-heading text-sm">Centred, with zero JavaScript.</p>
+              <p class="type-data mt-1 text-xs text-ink-muted">
+                Tailwind preflight resets margin to 0, which parks an open popover in the top-left
+                corner. The base layer restates margin: auto.
               </p>
             </div>
+          </div>
 
-            <h2 class={HEADING}>Tabular numerals — every column must line up</h2>
-            <table class="type-data mt-3 w-full rounded bg-surface-1 text-sm">
-              <tbody>
-                <tr class="border-b border-line">
-                  <td class="p-2 text-ink-secondary">Muzzle velocity</td>
-                  <td class="p-2 text-right text-ink">715.0 m/s</td>
-                </tr>
-                <tr class="border-b border-line">
-                  <td class="p-2 text-ink-secondary">Muzzle energy</td>
-                  <td class="p-2 text-right text-ink">1,991.4 J</td>
-                </tr>
-                <tr>
-                  <td class="p-2 text-ink-secondary">Mass, empty</td>
-                  <td class="p-2 text-right text-ink">3,470.0 g</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <h2 class={HEADING}>Focus ring, press target, popover</h2>
-            <div class="mt-3 flex flex-wrap items-center gap-3">
-              <button
-                type="button"
-                class="type-data rounded border border-line-strong bg-surface-2 px-3 py-2 text-sm text-ink"
-              >
-                Tab to me — focus ring is the UI accent
-              </button>
-              <button
-                type="button"
-                popovertarget="popover-demo"
-                class="type-data rounded border border-line-strong bg-surface-2 px-3 py-2 text-sm text-ui-accent"
-              >
-                Open popover
-              </button>
-              <div
-                id="popover-demo"
-                popover
-                class="rounded border border-line-strong bg-surface-1 p-4 text-ink shadow-lg"
-              >
-                <p class="type-heading text-sm">Centred, with zero JavaScript.</p>
-                <p class="type-data mt-1 text-xs text-ink-muted">
-                  Tailwind preflight resets margin to 0, which parks an open popover in the
-                  top-left corner. The base layer restates margin: auto.
-                </p>
-              </div>
-            </div>
-
-            <h2 class={HEADING}>Layout tokens</h2>
-            <dl class="type-data mt-3 grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 gap-y-1 text-xs text-ink-secondary">
-              <dt>--layout-gutter</dt><dd data-value="--layout-gutter" class="text-ink-muted" />
-              <dt>--layout-max</dt><dd data-value="--layout-max" class="text-ink-muted" />
-              <dt>--layout-section-gap</dt><dd data-value="--layout-section-gap" class="text-ink-muted" />
-              <dt>--spacing</dt><dd data-value="--spacing" class="text-ink-muted" />
-              <dt>--ease-out-strong</dt><dd data-value="--ease-out-strong" class="text-ink-muted" />
-              <dt>--ease-in-out-strong</dt><dd data-value="--ease-in-out-strong" class="text-ink-muted" />
-            </dl>
-          </section>
-        ))
-      }
+          <h2 class={HEADING}>Layout tokens</h2>
+          <dl class="type-data mt-3 grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 gap-y-1 text-xs text-ink-secondary">
+            <dt>--layout-gutter</dt>
+            <dd data-value="--layout-gutter" class="text-ink-muted" />
+            <dt>--layout-max</dt>
+            <dd data-value="--layout-max" class="text-ink-muted" />
+            <dt>--layout-section-gap</dt>
+            <dd data-value="--layout-section-gap" class="text-ink-muted" />
+            <dt>--spacing</dt>
+            <dd data-value="--spacing" class="text-ink-muted" />
+            <dt>--ease-out-strong</dt>
+            <dd data-value="--ease-out-strong" class="text-ink-muted" />
+            <dt>--ease-in-out-strong</dt>
+            <dd data-value="--ease-in-out-strong" class="text-ink-muted" />
+          </dl>
+        </section>
+      ))}
     </div>
 
     <script is:inline>

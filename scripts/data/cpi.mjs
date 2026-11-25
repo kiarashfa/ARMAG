@@ -55,13 +55,17 @@ async function fetchAnnualAverages() {
       const value = Number(row.value);
       if (Number.isFinite(value)) values[row.year] = value;
     }
-    console.error(`${start}–${end}: ${rows.filter((r) => r.period === 'M13').length} annual average(s)`);
+    console.error(
+      `${start}–${end}: ${rows.filter((r) => r.period === 'M13').length} annual average(s)`,
+    );
   }
   return values;
 }
 
 function envelope(values) {
-  const years = Object.keys(values).map(Number).sort((a, b) => a - b);
+  const years = Object.keys(values)
+    .map(Number)
+    .sort((a, b) => a - b);
   return {
     note:
       'Annual-average CPI-U, baked at authoring time so the built site makes no runtime API call ' +
@@ -117,7 +121,8 @@ async function cmdCheck() {
   for (const [year, value] of Object.entries(values)) {
     const was = existing.annualAverage[year];
     if (was === undefined) differences.push(`${year}: absent locally, ${value} live`);
-    else if (Math.abs(was - value) > 1e-9) differences.push(`${year}: ${was} local vs ${value} live`);
+    else if (Math.abs(was - value) > 1e-9)
+      differences.push(`${year}: ${was} local vs ${value} live`);
   }
   if (differences.length === 0) {
     console.log(`[cpi] up to date — ${Object.keys(values).length} years match.`);

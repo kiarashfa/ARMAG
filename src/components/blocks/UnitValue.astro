@@ -25,17 +25,15 @@ const { value, unit, emptyLabel = 'not recorded', class: className = '' } = Astr
 const formatted = formatValue(value, unit);
 ---
 
-{
-  formatted === null ? (
-    <span class={`type-data text-ink-muted ${className}`}>{emptyLabel}</span>
-  ) : formatted.identical ? (
-    <span class={`type-data tabular-nums ${className}`}>{formatted.metric}</span>
-  ) : (
-    <span class={`type-data tabular-nums ${className}`}>
-      <span class="u-metric">{formatted.metric}</span>
-      <span class="u-imperial" data-pagefind-ignore>
-        {formatted.imperial}
-      </span>
+{formatted === null ? (
+  <span class={`type-data text-ink-muted ${className}`}>{emptyLabel}</span>
+) : formatted.identical ? (
+  <span class={`type-data tabular-nums ${className}`}>{formatted.metric}</span>
+) : (
+  <span class={`type-data tabular-nums ${className}`}>
+    <span class="u-metric">{formatted.metric}</span>
+    <span class="u-imperial" data-pagefind-ignore>
+      {formatted.imperial}
     </span>
-  )
-}
+  </span>
+)}

@@ -72,9 +72,7 @@ export const yearRange = z
   });
 
 /** Wikidata Q-id — the permanent join key. */
-export const wikidataId = z
-  .string()
-  .regex(/^Q[1-9]\d*$/, 'must be a Wikidata Q-id, e.g. Q37116');
+export const wikidataId = z.string().regex(/^Q[1-9]\d*$/, 'must be a Wikidata Q-id, e.g. Q37116');
 
 /**
  * A name in its original script.
@@ -185,7 +183,8 @@ function propertyValueRules<T extends z.ZodType<PropertyValueShape>>(schema: T) 
         ctx.addIssue({
           code: 'custom',
           path: ['source'],
-          message: "status 'verified' requires a `source` citation key into this entry's references[]",
+          message:
+            "status 'verified' requires a `source` citation key into this entry's references[]",
         });
       }
       if (!v.sourceUrl) {

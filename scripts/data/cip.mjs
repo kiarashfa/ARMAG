@@ -56,7 +56,9 @@ async function cmdSync() {
   for (const [id, label] of Object.entries(TDCC_TABLES)) {
     const html = await getText(`${BASE}/en/tdcc_public?page=1&cartridge_type_id=${id}`);
     const parsed = parseIndex(html, Number(id));
-    console.error(`table ${String(id).padStart(2)}  ${parsed.length.toString().padStart(4)} row(s)  ${label}`);
+    console.error(
+      `table ${String(id).padStart(2)}  ${parsed.length.toString().padStart(4)} row(s)  ${label}`,
+    );
     rows.push(...parsed);
   }
   await mkdir(path.dirname(CACHE), { recursive: true });
@@ -64,7 +66,7 @@ async function cmdSync() {
     CACHE,
     `${JSON.stringify(
       {
-        note: 'Cached C.I.P. TDCC index. Regenerate with `cip.mjs sync`. Not committed — it is a copy of someone else\'s index forbids bulk mirroring.',
+        note: "Cached C.I.P. TDCC index. Regenerate with `cip.mjs sync`. Not committed — it is a copy of someone else's index forbids bulk mirroring.",
         fetched: new Date().toISOString().slice(0, 10),
         source: `${BASE}/en/tdcc_public`,
         rows,
@@ -86,7 +88,9 @@ async function cmdFind(query) {
       ? `Pmax ${hit.pmaxBar} bar = ${(hit.pmaxBar / 10).toFixed(1)} MPa`
       : 'Pmax not listed';
     console.log(`  ${hit.name}`);
-    console.log(`    table ${hit.table} · ${hit.country ?? '?'} · adopted ${hit.adopted ?? '?'} · revised ${hit.revised ?? '—'}`);
+    console.log(
+      `    table ${hit.table} · ${hit.country ?? '?'} · adopted ${hit.adopted ?? '?'} · revised ${hit.revised ?? '—'}`,
+    );
     console.log(`    ${pressure}`);
     console.log(`    ${hit.datasheetUrl ?? '(no English datasheet)'}`);
   }
@@ -110,16 +114,23 @@ function runPython(script, args) {
     child.stdout.on('data', (d) => (out += d));
     child.stderr.on('data', (d) => (err += d));
     child.on('error', (error) =>
-      reject(new Error(`could not run python (${error.message}); PyMuPDF is needed to read the datasheet`)),
+      reject(
+        new Error(
+          `could not run python (${error.message}); PyMuPDF is needed to read the datasheet`,
+        ),
+      ),
     );
-    child.on('close', (code) => (code === 0 ? resolve(out) : reject(new Error(err || `python exited ${code}`))));
+    child.on('close', (code) =>
+      code === 0 ? resolve(out) : reject(new Error(err || `python exited ${code}`)),
+    );
   });
 }
 
 async function cmdSheet(query) {
   const { rows } = await loadIndex();
   const hits = searchIndex(rows, query).filter((h) => h.datasheetUrl);
-  if (hits.length === 0) throw new Error(`no datasheet found for "${query}" — try \`cip.mjs find\` first`);
+  if (hits.length === 0)
+    throw new Error(`no datasheet found for "${query}" — try \`cip.mjs find\` first`);
   if (hits.length > 1) {
     console.error(`${hits.length} matches; using "${hits[0].name}". The others:`);
     for (const hit of hits.slice(1)) console.error(`  ${hit.name}`);
@@ -130,7 +141,9 @@ async function cmdSheet(query) {
   await mkdir(path.join(REPO_ROOT, '.cache'), { recursive: true });
   const temp = path.join(REPO_ROOT, '.cache', 'cip-sheet.pdf');
   await writeFile(temp, pdf);
-  const text = await runPython(path.join(REPO_ROOT, 'scripts', 'data', 'lib', 'pdftext.py'), [temp]);
+  const text = await runPython(path.join(REPO_ROOT, 'scripts', 'data', 'lib', 'pdftext.py'), [
+    temp,
+  ]);
   const sheet = parseDatasheet(text);
 
   console.log(`# ${row.name}  (C.I.P. TDCC table ${row.table})`);
@@ -153,7 +166,9 @@ async function cmdSheet(query) {
     );
   }
 
-  console.log('\nCHAMBER MINI — dimensions of the BARREL. Not cartridge fields. Do not record them as such.');
+  console.log(
+    '\nCHAMBER MINI — dimensions of the BARREL. Not cartridge fields. Do not record them as such.',
+  );
   for (const [letter, found] of Object.entries(sheet.chamber)) {
     if (!found.value) continue;
     const meaning = OTHER_LETTERS[letter] ?? '';
@@ -173,7 +188,10 @@ async function cmdSheet(query) {
   console.log(
     JSON.stringify(
       {
-        key: `cip-${row.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`,
+        key: `cip-${row.name
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-|-$/g, '')}`,
         type: 'standards-body',
         title: `C.I.P. TDCC datasheet — ${row.name}`,
         publisher: 'Commission Internationale Permanente pour l’Épreuve des Armes à Feu Portatives',

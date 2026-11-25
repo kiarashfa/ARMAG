@@ -57,19 +57,17 @@ const tools = [
     </p>
 
     <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {
-        tools.map((tool) => (
-          <li>
-            <a
-              href={tool.path}
-              class="flex h-full flex-col rounded-lg border border-line bg-surface-1 p-4 no-underline hover:border-line-strong"
-            >
-              <span class="type-heading text-base text-ui-accent">{tool.name}</span>
-              <span class="type-data mt-1 text-sm text-ink-muted">{tool.note}</span>
-            </a>
-          </li>
-        ))
-      }
+      {tools.map((tool) => (
+        <li>
+          <a
+            href={tool.path}
+            class="flex h-full flex-col rounded-lg border border-line bg-surface-1 p-4 no-underline hover:border-line-strong"
+          >
+            <span class="type-heading text-base text-ui-accent">{tool.name}</span>
+            <span class="type-data mt-1 text-sm text-ink-muted">{tool.note}</span>
+          </a>
+        </li>
+      ))}
     </ul>
 
     <p class="type-body mt-8 text-sm text-ink-secondary">
@@ -77,7 +75,10 @@ const tools = [
       badge, and nothing you enter here is stored or sent anywhere. Figures on an entry page are a
       different thing entirely: each is either sourced or derived from sourced numbers by a formula
       you can open.{' '}
-      <a href={href('methodology')} class="text-ui-accent">The methodology page has all of them</a>.
+      <a href={href('methodology')} class="text-ui-accent">
+        The methodology page has all of them
+      </a>
+      .
     </p>
   </div>
 </BaseLayout>

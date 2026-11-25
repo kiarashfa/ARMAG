@@ -333,7 +333,11 @@ export const gunDataSchema = gunSpec
     }
 
     if (gun.familyRef === gun.id) {
-      ctx.addIssue({ code: 'custom', path: ['familyRef'], message: 'an entry cannot be its own family' });
+      ctx.addIssue({
+        code: 'custom',
+        path: ['familyRef'],
+        message: 'an entry cannot be its own family',
+      });
     }
 
     for (const [edge, target] of Object.entries(gun.lineage)) {
@@ -356,7 +360,9 @@ export const gunDataSchema = gunSpec
     }
 
     const cartridgeRefs = gun.chamberings.map((c) => c.cartridgeRef);
-    const dupeCartridges = [...new Set(cartridgeRefs.filter((r, i) => cartridgeRefs.indexOf(r) !== i))];
+    const dupeCartridges = [
+      ...new Set(cartridgeRefs.filter((r, i) => cartridgeRefs.indexOf(r) !== i)),
+    ];
     if (dupeCartridges.length > 0) {
       ctx.addIssue({
         code: 'custom',

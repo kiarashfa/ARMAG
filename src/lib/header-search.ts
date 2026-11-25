@@ -36,7 +36,10 @@ const WIDEST = 480;
 const NARROWEST = 260;
 
 const escapeHtml = (s: string): string =>
-  s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] ?? c);
+  s.replace(
+    /[&<>"']/g,
+    (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] ?? c,
+  );
 
 export function initHeaderSearch(): void {
   const root = document.querySelector<HTMLElement>('[data-hs]');
@@ -151,7 +154,9 @@ export function initHeaderSearch(): void {
   /* ── Results ────────────────────────────────────────────────────────── */
 
   let active = -1;
-  const hits = (): HTMLAnchorElement[] => [...output.querySelectorAll<HTMLAnchorElement>('.hs-hit')];
+  const hits = (): HTMLAnchorElement[] => [
+    ...output.querySelectorAll<HTMLAnchorElement>('.hs-hit'),
+  ];
   const paint = (): void => {
     hits().forEach((a, i) => a.toggleAttribute('data-active', i === active));
     hits()[active]?.scrollIntoView({ block: 'nearest' });

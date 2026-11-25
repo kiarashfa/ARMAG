@@ -89,10 +89,7 @@ export interface ServiceStatus {
  * a problem to be solved by inventing one. The UI says the owner has not set an
  * interval, and offers to let them.
  */
-export function serviceStatus(
-  ownership: OwnershipFacts,
-  today: string,
-): ServiceStatus | null {
+export function serviceStatus(ownership: OwnershipFacts, today: string): ServiceStatus | null {
   const hasRounds = ownership.serviceIntervalRounds !== undefined;
   const hasMonths = ownership.serviceIntervalMonths !== undefined;
   if (!hasRounds && !hasMonths) return null;
@@ -153,7 +150,9 @@ export function serviceStatus(
     roundsRemaining,
     daysRemaining,
     nextDueDate,
-    overdue: (roundsRemaining !== null && roundsRemaining <= 0) || (daysRemaining !== null && daysRemaining < 0),
+    overdue:
+      (roundsRemaining !== null && roundsRemaining <= 0) ||
+      (daysRemaining !== null && daysRemaining < 0),
     governedBy,
     basis,
   };
@@ -197,10 +196,7 @@ export function burnRate(ownership: OwnershipFacts, today: string): Derived {
  * likely to be wrong — so it carries the burn rate's own assumption forward
  * rather than presenting itself as a date.
  */
-export function monthsToNextService(
-  ownership: OwnershipFacts,
-  today: string,
-): Derived {
+export function monthsToNextService(ownership: OwnershipFacts, today: string): Derived {
   const status = serviceStatus(ownership, today);
   const rate = burnRate(ownership, today);
   const remaining: ValueLike =
@@ -219,7 +215,8 @@ export function monthsToNextService(
       ...rate.assumptions,
       'A projection from your own past, not a prediction. Shoot more and it arrives sooner.',
     ],
-    compute: ([rounds, perMonth]) => (perMonth! <= 0 ? Number.POSITIVE_INFINITY : rounds! / perMonth!),
+    compute: ([rounds, perMonth]) =>
+      perMonth! <= 0 ? Number.POSITIVE_INFINITY : rounds! / perMonth!,
   });
 }
 
@@ -258,7 +255,9 @@ export function ownedValue(ownership: OwnershipFacts): Derived | null {
 
 /** Total spent on services, where the owner recorded costs. */
 export function serviceSpend(ownership: OwnershipFacts): Derived {
-  const costs = ownership.serviceLog.map((event) => event.cost).filter((c): c is number => c !== undefined);
+  const costs = ownership.serviceLog
+    .map((event) => event.cost)
+    .filter((c): c is number => c !== undefined);
   return derive({
     formula: 'sum of the service costs you logged',
     unit: '',

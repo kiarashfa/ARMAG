@@ -83,13 +83,37 @@ export function completeness(
   floor: TierFloor,
 ): CompletenessResult {
   const breakdown = [
-    { label: 'Verified core specifications', count: input.verifiedCoreSpecs, weight: weights.verifiedCoreSpec },
-    { label: 'Verified further specifications', count: input.verifiedExtendedSpecs, weight: weights.verifiedExtendedSpec },
+    {
+      label: 'Verified core specifications',
+      count: input.verifiedCoreSpecs,
+      weight: weights.verifiedCoreSpec,
+    },
+    {
+      label: 'Verified further specifications',
+      count: input.verifiedExtendedSpecs,
+      weight: weights.verifiedExtendedSpec,
+    },
     { label: 'Licensed images', count: input.images, weight: weights.image },
-    { label: 'Original prose (per 100 words)', count: input.proseWords / 100, weight: weights.proseWordsPer100 },
-    { label: 'Maker resolves', count: input.hasResolvedMakerRef ? 1 : 0, weight: weights.resolvedMakerRef },
-    { label: 'Family resolves', count: input.hasResolvedFamilyRef ? 1 : 0, weight: weights.resolvedFamilyRef },
-    { label: 'Cartridges resolve', count: input.resolvedCartridgeRefs, weight: weights.resolvedCartridgeRef },
+    {
+      label: 'Original prose (per 100 words)',
+      count: input.proseWords / 100,
+      weight: weights.proseWordsPer100,
+    },
+    {
+      label: 'Maker resolves',
+      count: input.hasResolvedMakerRef ? 1 : 0,
+      weight: weights.resolvedMakerRef,
+    },
+    {
+      label: 'Family resolves',
+      count: input.hasResolvedFamilyRef ? 1 : 0,
+      weight: weights.resolvedFamilyRef,
+    },
+    {
+      label: 'Cartridges resolve',
+      count: input.resolvedCartridgeRefs,
+      weight: weights.resolvedCartridgeRef,
+    },
     { label: 'Variants documented', count: input.variants, weight: weights.variant },
     { label: 'Lineage edges', count: input.lineageEdges, weight: weights.lineageEdge },
   ].map((row) => ({ ...row, points: row.count * row.weight }));

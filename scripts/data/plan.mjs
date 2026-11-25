@@ -279,7 +279,9 @@ async function cmdBuild(options) {
     // An article already backing an authored entry under one of its redirect
     // names is reported, not hidden: `Glock` backs `glock-17`, and `Glock 19`
     // redirects to the same article without being authored.
-    const authoredAs = names.map(proposeSlug).filter((n) => existing.ids.has(n) || existing.names.has(n));
+    const authoredAs = names
+      .map(proposeSlug)
+      .filter((n) => existing.ids.has(n) || existing.names.has(n));
     rows.push({
       title: info.title,
       slug,
@@ -452,7 +454,9 @@ async function cmdNext(count, filters) {
     console.log(`         wikidata ${row.wikidataId ?? '(none — leave the field absent)'}`);
     console.log(`         found on ${row.sources.join(', ')}`);
     if (row.linkedAs.length) {
-      console.log(`         also linked as ${row.linkedAs.slice(0, 8).join(', ')}${row.linkedAs.length > 8 ? `, +${row.linkedAs.length - 8} more` : ''}`);
+      console.log(
+        `         also linked as ${row.linkedAs.slice(0, 8).join(', ')}${row.linkedAs.length > 8 ? `, +${row.linkedAs.length - 8} more` : ''}`,
+      );
       console.log('         → one article, several models. Decide tabs vs promotion.');
     }
     if (row.authoredAs.length) {

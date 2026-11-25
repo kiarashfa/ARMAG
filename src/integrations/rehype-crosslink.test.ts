@@ -138,7 +138,18 @@ test('the self id comes from the content path, not the collection name', () => {
 
 test('glossary frontmatter yields the term, its definition and its aka list', () => {
   const parsed = readGlossaryFrontmatter(
-    ['---', 'id: open-bolt', 'term: "Open bolt"', 'short: "Fires from the rear."', 'aka:', '  - open-bolt firing', '  - "advanced primer ignition"', '---', '', 'Body text.'].join('\n'),
+    [
+      '---',
+      'id: open-bolt',
+      'term: "Open bolt"',
+      'short: "Fires from the rear."',
+      'aka:',
+      '  - open-bolt firing',
+      '  - "advanced primer ignition"',
+      '---',
+      '',
+      'Body text.',
+    ].join('\n'),
   );
   assert.equal(parsed?.term, 'Open bolt');
   assert.equal(parsed?.id, 'open-bolt');

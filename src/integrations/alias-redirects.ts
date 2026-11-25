@@ -79,7 +79,10 @@ export function redirectsFor(
     // and the canonical exactly as given, so a value without the base sends
     // every alias to a 404 and points the canonical at a URL that does not
     // exist. Found by reading the first redirect page this emitted.
-    out[`/${segment}/${slug}/`] = `${base}/${segment}/${[...claimants][0]}/`.replace(/\/{2,}/g, '/');
+    out[`/${segment}/${slug}/`] = `${base}/${segment}/${[...claimants][0]}/`.replace(
+      /\/{2,}/g,
+      '/',
+    );
   }
   return out;
 }

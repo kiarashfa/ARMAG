@@ -62,7 +62,9 @@
   let query = $state('');
   let catalogue = $state<CatalogueRowLite[] | null>(null);
 
-  const loaded = $derived(ids.map((id) => entries[id]).filter((entry): entry is CompareEntry => !!entry));
+  const loaded = $derived(
+    ids.map((id) => entries[id]).filter((entry): entry is CompareEntry => !!entry),
+  );
 
   /* ── URL round trip ─────────────────────────────────────────────────── */
 
@@ -212,7 +214,11 @@
       : `${cell.currency} ${cell.amount.toLocaleString('en-GB')} · ${cell.year} · ${cell.market}`;
 
   const years = (cell: Extract<CompareCell, { kind: 'years' }>): string =>
-    cell.start === null ? 'not recorded' : cell.end === null ? `${cell.start}–present` : `${cell.start}–${cell.end}`;
+    cell.start === null
+      ? 'not recorded'
+      : cell.end === null
+        ? `${cell.start}–present`
+        : `${cell.start}–${cell.end}`;
 </script>
 
 {#snippet statusBadge(status: string)}
@@ -245,7 +251,10 @@
   {/if}
 {/snippet}
 
-{#snippet bar(percentile: { fraction: number; percentile: number; populationSize: number; setLabel: string } | undefined)}
+{#snippet bar(
+  percentile:
+    { fraction: number; percentile: number; populationSize: number; setLabel: string } | undefined,
+)}
   {#if percentile}
     <!--
       the length is a position in a stated population, and the
@@ -275,7 +284,9 @@
       {@render units(cell.value, row.unit ?? '')}
       {@render statusBadge(cell.status)}
       {#if cell.sourceUrl}
-        <a href={cell.sourceUrl} rel="nofollow noopener" class="text-[0.65rem] text-ui-accent">source</a>
+        <a href={cell.sourceUrl} rel="nofollow noopener" class="text-[0.65rem] text-ui-accent"
+          >source</a
+        >
       {/if}
     </div>
     {@render bar(cell.percentile)}
@@ -300,8 +311,8 @@
       </p>
       {#if cell.derived.value === null}
         <p class="type-data mt-3 text-sm text-status-placeholder">
-          Not calculated: <strong>{cell.derived.blockedBy}</strong> has no sourced figure yet.
-          Nothing is substituted for a missing input.
+          Not calculated: <strong>{cell.derived.blockedBy}</strong> has no sourced figure yet. Nothing
+          is substituted for a missing input.
         </p>
       {:else}
         <ul class="mt-3 flex flex-col gap-2">
@@ -341,7 +352,9 @@
     {:else}
       <ul class="flex flex-wrap gap-1">
         {#each cell.terms as term (term.id)}
-          <li class="rounded-full border border-line px-1.5 py-0.5 text-[0.65rem] text-ink-secondary">
+          <li
+            class="rounded-full border border-line px-1.5 py-0.5 text-[0.65rem] text-ink-secondary"
+          >
             {term.label}
           </li>
         {/each}
@@ -425,7 +438,9 @@
   {/if}
 
   {#if failed.length > 0}
-    <p class="type-data mt-4 rounded border border-line bg-surface-1 p-3 text-sm text-status-conflicting">
+    <p
+      class="type-data mt-4 rounded border border-line bg-surface-1 p-3 text-sm text-status-conflicting"
+    >
       No entry found for {failed.join(', ')}. The rest of the comparison is below.
     </p>
   {/if}
@@ -467,7 +482,10 @@
                     </span>
                   {/if}
                   {#if entry.hasPage}
-                    <a href={`${gunPrefix}${entry.id}/`} class="type-title text-base text-ui-accent">
+                    <a
+                      href={`${gunPrefix}${entry.id}/`}
+                      class="type-title text-base text-ui-accent"
+                    >
                       {entry.name}
                     </a>
                   {:else}
@@ -521,7 +539,9 @@
                     class="h-20 w-full rounded border border-line bg-surface-1 object-contain p-1"
                   />
                 {:else}
-                  <span class="type-data flex h-20 items-center justify-center rounded border border-dashed border-line-strong text-xs text-ink-muted">
+                  <span
+                    class="type-data flex h-20 items-center justify-center rounded border border-dashed border-line-strong text-xs text-ink-muted"
+                  >
                     no photograph
                   </span>
                 {/if}
@@ -542,10 +562,11 @@
               </th>
             </tr>
             {#each bucket.rows as row (row.key)}
-              <tr
-                class={highlight && differing.has(row.key) ? 'bg-surface-1' : ''}
-              >
-                <th scope="row" class="compare-label p-2 text-left align-top font-normal text-ink-secondary">
+              <tr class={highlight && differing.has(row.key) ? 'bg-surface-1' : ''}>
+                <th
+                  scope="row"
+                  class="compare-label p-2 text-left align-top font-normal text-ink-secondary"
+                >
                   {row.label}
                 </th>
                 {#each loaded as entry (entry.id)}

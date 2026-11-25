@@ -56,75 +56,68 @@ const inferredHeights = scene.silhouettes.filter((s) => !s.heightSourced);
 ---
 
 <figure class="rounded-lg border border-line bg-surface-1 p-4">
-  {
-    scene.silhouettes.length > 0 && (
-      <svg
-        viewBox={`0 0 ${scene.widthMm} ${scene.heightMm}`}
-        preserveAspectRatio="xMinYMax meet"
-        class="silhouette-svg"
-        role="img"
-        aria-label={`Representative outlines at true scale: ${scene.silhouettes
-          .map((s) => `${s.name}, ${Math.round(s.lengthMm)} millimetres long`)
-          .join('; ')}`}
-      >
-        {scene.silhouettes.map((silhouette) => {
-          const accent = accentForType(typeOf.get(silhouette.id) ?? null);
-          const highlighted = silhouette.id === highlightId;
-          return (
-            <g transform={`translate(0 ${scene.heightMm - silhouette.heightMm})`}>
-              <path
-                d={silhouette.path}
-                class={`${STROKE[accent]} ${highlighted ? FILL[accent] : 'fill-none'}`}
-                stroke-width={strokeWidth}
-                stroke-linejoin="round"
-                opacity={highlighted ? 1 : 0.75}
-              />
-            </g>
-          );
-        })}
-      </svg>
-    )
-  }
+  {scene.silhouettes.length > 0 && (
+    <svg
+      viewBox={`0 0 ${scene.widthMm} ${scene.heightMm}`}
+      preserveAspectRatio="xMinYMax meet"
+      class="silhouette-svg"
+      role="img"
+      aria-label={`Representative outlines at true scale: ${scene.silhouettes
+        .map((s) => `${s.name}, ${Math.round(s.lengthMm)} millimetres long`)
+        .join('; ')}`}
+    >
+      {scene.silhouettes.map((silhouette) => {
+        const accent = accentForType(typeOf.get(silhouette.id) ?? null);
+        const highlighted = silhouette.id === highlightId;
+        return (
+          <g transform={`translate(0 ${scene.heightMm - silhouette.heightMm})`}>
+            <path
+              d={silhouette.path}
+              class={`${STROKE[accent]} ${highlighted ? FILL[accent] : 'fill-none'}`}
+              stroke-width={strokeWidth}
+              stroke-linejoin="round"
+              opacity={highlighted ? 1 : 0.75}
+            />
+          </g>
+        );
+      })}
+    </svg>
+  )}
 
   <figcaption class="mt-3">
     <ul class="type-data flex flex-wrap gap-x-5 gap-y-1 text-xs">
-      {
-        scene.silhouettes.map((silhouette) => (
-          <li class="flex items-baseline gap-2">
-            <span class="text-ink">{silhouette.name}</span>
-            <UnitValue value={silhouette.lengthMm} unit="mm" class="text-xs text-ink-secondary" />
-            {!silhouette.heightSourced && (
-              <span class="text-status-estimated">height not recorded</span>
-            )}
-          </li>
-        ))
-      }
+      {scene.silhouettes.map((silhouette) => (
+        <li class="flex items-baseline gap-2">
+          <span class="text-ink">{silhouette.name}</span>
+          <UnitValue value={silhouette.lengthMm} unit="mm" class="text-xs text-ink-secondary" />
+          {!silhouette.heightSourced && (
+            <span class="text-status-estimated">height not recorded</span>
+          )}
+        </li>
+      ))}
     </ul>
 
     <p class="type-data mt-3 text-xs text-ink-muted">
-      Representative outline: <strong class="text-ink-secondary">the dimensions are sourced, the
-      shape is not.</strong> Overall length, and barrel length where recorded, are drawn from this
-      entry's own figures; the profile is a generic one for the firearm type and says nothing about
-      this arm's actual contours.
-      {
-        inferredHeights.length > 0 && (
-          <>
-            {' '}
-            {inferredHeights.map((s) => s.name).join(', ')}{' '}
-            {inferredHeights.length === 1 ? 'records' : 'record'} no height, so
-            {inferredHeights.length === 1 ? ' its' : ' their'} outline is drawn at the type's
-            proportion. That height is part of the shape, not a measurement.
-          </>
-        )
-      }
+      Representative outline:{' '}
+      <strong class="text-ink-secondary">the dimensions are sourced, the shape is not.</strong>{' '}
+      Overall length, and barrel length where recorded, are drawn from this entry's own figures; the
+      profile is a generic one for the firearm type and says nothing about this arm's actual
+      contours.
+      {inferredHeights.length > 0 && (
+        <>
+          {' '}
+          {inferredHeights.map((s) => s.name).join(', ')}{' '}
+          {inferredHeights.length === 1 ? 'records' : 'record'} no height, so
+          {inferredHeights.length === 1 ? ' its' : ' their'} outline is drawn at the type's
+          proportion. That height is part of the shape, not a measurement.
+        </>
+      )}
     </p>
 
-    {
-      scene.omitted.length > 0 && (
-        <p class="type-data mt-2 text-xs text-status-placeholder">
-          Not drawn: {scene.omitted.map((entry) => `${entry.name} (${entry.because})`).join(', ')}.
-        </p>
-      )
-    }
+    {scene.omitted.length > 0 && (
+      <p class="type-data mt-2 text-xs text-status-placeholder">
+        Not drawn: {scene.omitted.map((entry) => `${entry.name} (${entry.because})`).join(', ')}.
+      </p>
+    )}
   </figcaption>
 </figure>

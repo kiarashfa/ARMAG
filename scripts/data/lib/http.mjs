@@ -21,8 +21,7 @@
  */
 
 /** Contact details are part of the Wikimedia UA policy, not decoration. */
-export const USER_AGENT =
-  'ARMAG/0.1 (https://kiarashfa.github.io/ARMAG/; kiarashfa@gmail.com)';
+export const USER_AGENT = 'ARMAG/0.1 (https://kiarashfa.github.io/ARMAG/; kiarashfa@gmail.com)';
 
 /** Minimum gap between requests to the same host, milliseconds. */
 const HOST_DELAY_MS = {

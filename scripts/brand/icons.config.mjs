@@ -28,7 +28,15 @@ export default {
       family: 'IBM Plex Sans Condensed',
       weight: 700,
       tracking: -1,
-      files: [{ path: fontsource('ibm-plex-sans-condensed', 'ibm-plex-sans-condensed-latin-700-normal.woff'), weight: 700 }],
+      files: [
+        {
+          path: fontsource(
+            'ibm-plex-sans-condensed',
+            'ibm-plex-sans-condensed-latin-700-normal.woff',
+          ),
+          weight: 700,
+        },
+      ],
     },
     body: {
       family: 'IBM Plex Sans',

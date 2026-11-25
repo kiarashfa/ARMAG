@@ -33,7 +33,11 @@ import {
 
 export function getStaticPaths() {
   if (!import.meta.env.DEV) return [];
-  return [{ params: { entry: 'gun' } }, { params: { entry: 'cartridge' } }, { params: { entry: 'maker' } }];
+  return [
+    { params: { entry: 'gun' } },
+    { params: { entry: 'cartridge' } },
+    { params: { entry: 'maker' } },
+  ];
 }
 
 const { entry } = Astro.params;
@@ -50,73 +54,64 @@ const cartridgeCells = buildCells(
 );
 ---
 
-{
-  entry === 'gun' && (
-    <GunPage
-      gun={FIXTURE_GUN}
-      makerName={FIXTURE_MAKER.name}
-      cartridgeNames={{ [FIXTURE_CARTRIDGE.id]: FIXTURE_CARTRIDGE.name }}
-      era={era}
-      statStrip={figures.statStrip}
-      derivedMetrics={figures.metrics}
-      lineageOut={[]}
-      lineageIn={[]}
-      cells={cells}
-      silhouettes={silhouettes}
-    >
-      <p slot="lede">
-        A render fixture, not a real firearm. It exists to exercise every template path at once:
-        a verified figure with a live source link, an estimated one with its basis, a figure whose
-        sources disagree, and a missing one that blocks two derived calculations downstream.
-      </p>
+{entry === 'gun' && (
+  <GunPage
+    gun={FIXTURE_GUN}
+    makerName={FIXTURE_MAKER.name}
+    cartridgeNames={{ [FIXTURE_CARTRIDGE.id]: FIXTURE_CARTRIDGE.name }}
+    era={era}
+    statStrip={figures.statStrip}
+    derivedMetrics={figures.metrics}
+    lineageOut={[]}
+    lineageIn={[]}
+    cells={cells}
+    silhouettes={silhouettes}
+  >
+    <p slot="lede">
+      A render fixture, not a real firearm. It exists to exercise every template path at once: a
+      verified figure with a live source link, an estimated one with its basis, a figure whose
+      sources disagree, and a missing one that blocks two derived calculations downstream.
+    </p>
 
-      <p>
-        The body of the entry renders here, through the same prose column a real narrative would
-        use. Everything above it — the stat strip, the derived panel, the variant tabs and the
-        grouped specifications — is driven by the fixture data rather than written out.
-      </p>
-      <p>
-        The cyclic rate is deliberately absent, so the magazine-dump figure above reports which
-        input is missing instead of estimating one. That is the behaviour worth looking at on this
-        page.
-      </p>
-    </GunPage>
-  )
-}
+    <p>
+      The body of the entry renders here, through the same prose column a real narrative would use.
+      Everything above it — the stat strip, the derived panel, the variant tabs and the grouped
+      specifications — is driven by the fixture data rather than written out.
+    </p>
+    <p>
+      The cyclic rate is deliberately absent, so the magazine-dump figure above reports which input
+      is missing instead of estimating one. That is the behaviour worth looking at on this page.
+    </p>
+  </GunPage>
+)}
 
-{
-  entry === 'cartridge' && (
-    <CartridgePage
-      cartridge={FIXTURE_CARTRIDGE}
-      chamberedIn={[{ id: FIXTURE_GUN.id, name: FIXTURE_GUN.name, makerName: FIXTURE_MAKER.name }]}
-      cells={cartridgeCells}
-    >
-      <p slot="lede">
-        A render fixture cartridge. The load table below carries three sourced velocity points, which
-        is what lets a gun page interpolate honestly between them.
-      </p>
-      <p>
-        The narrative body of a cartridge entry renders here.
-      </p>
-    </CartridgePage>
-  )
-}
+{entry === 'cartridge' && (
+  <CartridgePage
+    cartridge={FIXTURE_CARTRIDGE}
+    chamberedIn={[{ id: FIXTURE_GUN.id, name: FIXTURE_GUN.name, makerName: FIXTURE_MAKER.name }]}
+    cells={cartridgeCells}
+  >
+    <p slot="lede">
+      A render fixture cartridge. The load table below carries three sourced velocity points, which
+      is what lets a gun page interpolate honestly between them.
+    </p>
+    <p>The narrative body of a cartridge entry renders here.</p>
+  </CartridgePage>
+)}
 
-{
-  entry === 'maker' && (
-    <MakerPage
-      maker={FIXTURE_MAKER}
-      models={[
-        {
-          id: FIXTURE_GUN.id,
-          name: FIXTURE_GUN.name,
-          type: FIXTURE_GUN.type ?? null,
-          introduced: FIXTURE_GUN.introduced,
-        },
-      ]}
-    >
-      <p slot="lede">A render fixture manufacturer, with one computed entry attributed to it.</p>
-      <p>The narrative body of a maker entry renders here.</p>
-    </MakerPage>
-  )
-}
+{entry === 'maker' && (
+  <MakerPage
+    maker={FIXTURE_MAKER}
+    models={[
+      {
+        id: FIXTURE_GUN.id,
+        name: FIXTURE_GUN.name,
+        type: FIXTURE_GUN.type ?? null,
+        introduced: FIXTURE_GUN.introduced,
+      },
+    ]}
+  >
+    <p slot="lede">A render fixture manufacturer, with one computed entry attributed to it.</p>
+    <p>The narrative body of a maker entry renders here.</p>
+  </MakerPage>
+)}

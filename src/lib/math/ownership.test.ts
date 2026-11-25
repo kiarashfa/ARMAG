@@ -164,7 +164,10 @@ test('the last service is found regardless of the order it was logged in', () =>
 test('burn rate is rounds over months owned, and blocks without either', () => {
   const rate = burnRate(facts({ acquiredDate: '2025-08-27', roundCount: 1200 }), TODAY);
   assert.ok(rate.value !== null);
-  assert.ok(Math.abs(rate.value! - 100) < 1, `expected about 100 rounds a month, got ${rate.value}`);
+  assert.ok(
+    Math.abs(rate.value! - 100) < 1,
+    `expected about 100 rounds a month, got ${rate.value}`,
+  );
   assert.ok(rate.assumptions.some((line) => line.includes('average')));
 
   assert.equal(burnRate(facts({ roundCount: 1200 }), TODAY).value, null);
@@ -187,7 +190,10 @@ test('the projection to the next service names what blocked it', () => {
     TODAY,
   );
   assert.ok(projected.value !== null);
-  assert.ok(Math.abs(projected.value! - 8) < 0.5, `expected about 8 months, got ${projected.value}`);
+  assert.ok(
+    Math.abs(projected.value! - 8) < 0.5,
+    `expected about 8 months, got ${projected.value}`,
+  );
   assert.ok(projected.assumptions.some((line) => line.includes('not a prediction')));
 
   // No interval at all: nothing to project towards.

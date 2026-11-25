@@ -277,7 +277,13 @@ export function readCell(
     }
     case 'money': {
       const money = raw as
-        | { amount: number | null; currency: string; market: string; year: number; status: ValueStatus }
+        | {
+            amount: number | null;
+            currency: string;
+            market: string;
+            year: number;
+            status: ValueStatus;
+          }
         | undefined;
       return money
         ? {
@@ -343,7 +349,10 @@ export function buildCompareEntry(
         gun.type ?? null,
         numberIn(cell),
       );
-      if (position && (cell.kind === 'scalar' || cell.kind === 'derived' || cell.kind === 'number')) {
+      if (
+        position &&
+        (cell.kind === 'scalar' || cell.kind === 'derived' || cell.kind === 'number')
+      ) {
         cell.percentile = position;
       }
     }
@@ -354,7 +363,7 @@ export function buildCompareEntry(
     name: gun.name,
     nativeName: gun.nativeName,
     type: gun.type ?? null,
-    typeLabel: gun.type ? ((labelFor('type', gun.type) ?? humanise(gun.type))) : null,
+    typeLabel: gun.type ? (labelFor('type', gun.type) ?? humanise(gun.type)) : null,
     makerId: gun.makerRef,
     makerName: context.makerName ?? null,
     cartridgeName: context.cartridgeName ?? null,

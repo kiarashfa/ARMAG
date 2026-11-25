@@ -28,7 +28,13 @@ interface Props {
   sizes?: string;
 }
 
-const { image, id, priority = false, class: className = '', sizes = '(min-width: 64rem) 28rem, 100vw' } = Astro.props;
+const {
+  image,
+  id,
+  priority = false,
+  class: className = '',
+  sizes = '(min-width: 64rem) 28rem, 100vw',
+} = Astro.props;
 
 const LICENSE_LABEL: Record<string, string> = {
   cc0: 'CC0, public domain dedication',
@@ -68,41 +74,35 @@ const needsAttribution = ATTRIBUTION_REQUIRED.has(credit.licenseType);
 
   <div class="absolute right-2 top-2">
     <Disclosure id={id} label={`Image credit and licence for: ${image.alt}`} title="Image credit">
-      <span slot="trigger" aria-hidden="true">i</span>
+      <span slot="trigger" aria-hidden="true">
+        i
+      </span>
 
       <dl class="type-data grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1 text-xs">
-        {
-          credit.title && (
-            <>
-              <dt class="text-ink-muted">Title</dt>
-              <dd class="text-ink">{credit.title}</dd>
-            </>
-          )
-        }
-        {
-          credit.author && (
-            <>
-              <dt class="text-ink-muted">Author</dt>
-              <dd class="text-ink">
-                {credit.author}
-                {needsAttribution && (
-                  <span class="ml-1 text-ink-muted">(attribution required)</span>
-                )}
-              </dd>
-            </>
-          )
-        }
+        {credit.title && (
+          <>
+            <dt class="text-ink-muted">Title</dt>
+            <dd class="text-ink">{credit.title}</dd>
+          </>
+        )}
+        {credit.author && (
+          <>
+            <dt class="text-ink-muted">Author</dt>
+            <dd class="text-ink">
+              {credit.author}
+              {needsAttribution && <span class="ml-1 text-ink-muted">(attribution required)</span>}
+            </dd>
+          </>
+        )}
         <dt class="text-ink-muted">Licence</dt>
         <dd class="text-ink">
-          {
-            credit.licenseUrl ? (
-              <a href={credit.licenseUrl} rel="nofollow noopener" class="text-ui-accent">
-                {licenseLabel}
-              </a>
-            ) : (
-              licenseLabel
-            )
-          }
+          {credit.licenseUrl ? (
+            <a href={credit.licenseUrl} rel="nofollow noopener" class="text-ui-accent">
+              {licenseLabel}
+            </a>
+          ) : (
+            licenseLabel
+          )}
         </dd>
         <dt class="text-ink-muted">Source</dt>
         <dd class="min-w-0 break-words text-ink">
@@ -110,21 +110,17 @@ const needsAttribution = ATTRIBUTION_REQUIRED.has(credit.licenseType);
             {credit.sourceUrl}
           </a>
         </dd>
-        {
-          credit.licenseNote && (
-            <>
-              <dt class="text-ink-muted">Note</dt>
-              <dd class="text-ink">{credit.licenseNote}</dd>
-            </>
-          )
-        }
+        {credit.licenseNote && (
+          <>
+            <dt class="text-ink-muted">Note</dt>
+            <dd class="text-ink">{credit.licenseNote}</dd>
+          </>
+        )}
       </dl>
     </Disclosure>
   </div>
 
-  {
-    image.caption && (
-      <figcaption class="type-data mt-2 text-xs text-ink-muted">{image.caption}</figcaption>
-    )
-  }
+  {image.caption && (
+    <figcaption class="type-data mt-2 text-xs text-ink-muted">{image.caption}</figcaption>
+  )}
 </figure>

@@ -39,9 +39,7 @@ export async function getStaticPaths() {
     const lineage = lineageOf(guns, gun.id);
 
     const siblings = gun.data.familyRef
-      ? guns.filter(
-          (other) => other.id !== gun.id && other.data.familyRef === gun.data.familyRef,
-        )
+      ? guns.filter((other) => other.id !== gun.id && other.data.familyRef === gun.data.familyRef)
       : membersOfFamily(guns, gun.id);
 
     return {
@@ -50,7 +48,9 @@ export async function getStaticPaths() {
         gun,
         cartridge,
         makerName: gun.data.makerRef ? (makerById.get(gun.data.makerRef)?.data.name ?? null) : null,
-        familyName: gun.data.familyRef ? (gunById.get(gun.data.familyRef)?.data.name ?? null) : null,
+        familyName: gun.data.familyRef
+          ? (gunById.get(gun.data.familyRef)?.data.name ?? null)
+          : null,
         cartridgeNames: Object.fromEntries(cartridges.map((c) => [c.id, c.data.name])),
         familyMembers: membersOfFamily(guns, gun.id).map((m) => ({ id: m.id, name: m.data.name })),
         lineageOut: lineage.outgoing.map((edge) => ({

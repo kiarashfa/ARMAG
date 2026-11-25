@@ -37,7 +37,9 @@
   const inTray = (id: string): boolean => items.some((item) => item.id === id);
 
   const compareUrl = $derived(
-    items.length > 0 ? `${comparePath}?guns=${items.map((item) => item.id).join(',')}` : comparePath,
+    items.length > 0
+      ? `${comparePath}?guns=${items.map((item) => item.id).join(',')}`
+      : comparePath,
   );
 
   function persist() {
@@ -75,7 +77,9 @@
     ready = true;
 
     const onClick = (event: MouseEvent) => {
-      const target = (event.target as HTMLElement | null)?.closest<HTMLElement>('[data-compare-add]');
+      const target = (event.target as HTMLElement | null)?.closest<HTMLElement>(
+        '[data-compare-add]',
+      );
       if (!target) return;
       const id = target.dataset.compareAdd;
       const name = target.dataset.compareName ?? id;

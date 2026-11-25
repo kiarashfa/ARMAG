@@ -58,7 +58,9 @@ async function cmdCheck() {
       }
       const ok = String(status) === '200';
       if (!ok) failures += 1;
-      console.log(`${ok ? 'ok  ' : 'DEAD'} ${String(status).padEnd(12)} ${manual.designation}  ${entry.url}`);
+      console.log(
+        `${ok ? 'ok  ' : 'DEAD'} ${String(status).padEnd(12)} ${manual.designation}  ${entry.url}`,
+      );
     }
   }
   if (failures) {
@@ -95,7 +97,10 @@ async function cmdFind(designation) {
   console.log(
     JSON.stringify(
       {
-        key: designation.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+        key: designation
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-|-$/g, ''),
         type: 'military-manual',
         title: 'TITLE AS PRINTED ON THE COVER',
         publisher: 'Headquarters, Department of the Army',

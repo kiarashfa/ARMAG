@@ -133,7 +133,10 @@ test('a comma decimal is read correctly, and a genuinely ambiguous one is flagge
 });
 
 test('plain() removes markup without eating the text', () => {
-  assert.equal(plain("[[Gas-operated reloading|Gas-operated]], '''closed''' bolt"), 'Gas-operated, closed bolt');
+  assert.equal(
+    plain("[[Gas-operated reloading|Gas-operated]], '''closed''' bolt"),
+    'Gas-operated, closed bolt',
+  );
 });
 
 test('extractConvert keeps the prose that says which figure it is', () => {

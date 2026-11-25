@@ -73,9 +73,7 @@ const cardTitle = 'type-heading text-xs uppercase tracking-widest text-ink-muted
       your browser.
     </p>
 
-    <div
-      class="mt-10 grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:items-start"
-    >
+    <div class="mt-10 grid gap-(--layout-gutter) lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:items-start">
       {/* ── The rail ───────────────────────────────────────────────────── */}
       <aside class="flex flex-col gap-4">
         <div class={card}>
@@ -106,29 +104,28 @@ const cardTitle = 'type-heading text-xs uppercase tracking-widest text-ink-muted
         <div class={card}>
           <h2 class={cardTitle}>Contact</h2>
           <ul class="mt-3 flex flex-col gap-2">
-            {
-              contact.map((item) => (
-                <li class="type-data flex flex-wrap items-baseline gap-x-2 text-sm">
-                  <a
-                    href={item.url}
-                    rel="noopener"
-                    target={item.url.startsWith('mailto:') ? undefined : '_blank'}
-                    class="text-ui-accent"
-                  >
-                    {item.label}
-                  </a>
-                  <span class="text-xs text-ink-muted">{item.note}</span>
-                </li>
-              ))
-            }
+            {contact.map((item) => (
+              <li class="type-data flex flex-wrap items-baseline gap-x-2 text-sm">
+                <a
+                  href={item.url}
+                  rel="noopener"
+                  target={item.url.startsWith('mailto:') ? undefined : '_blank'}
+                  class="text-ui-accent"
+                >
+                  {item.label}
+                </a>
+                <span class="text-xs text-ink-muted">{item.note}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div class={card}>
           <h2 class={cardTitle}>Support</h2>
           <p class="type-body mt-3 text-sm text-ink-secondary">
-            ARMAG is free, ad-free and login-free, and stays that way. If it saved you an argument or
-            an afternoon of cross-checking, you can put something toward the next hundred entries.
+            ARMAG is free, ad-free and login-free, and stays that way. If it saved you an argument
+            or an afternoon of cross-checking, you can put something toward the next hundred
+            entries.
           </p>
           <div class="mt-4 flex flex-col gap-2">
             <a
@@ -155,14 +152,12 @@ const cardTitle = 'type-heading text-xs uppercase tracking-widest text-ink-muted
         <div class={card}>
           <h2 class={cardTitle}>Where it stands</h2>
           <dl class="mt-3 grid grid-cols-2 gap-x-4 gap-y-2">
-            {
-              counts.map((count) => (
-                <div class="flex items-baseline justify-between gap-2 border-b border-line pb-1">
-                  <dt class="type-data text-xs text-ink-muted">{count.label}</dt>
-                  <dd class="type-stat text-base text-ink">{count.value}</dd>
-                </div>
-              ))
-            }
+            {counts.map((count) => (
+              <div class="flex items-baseline justify-between gap-2 border-b border-line pb-1">
+                <dt class="type-data text-xs text-ink-muted">{count.label}</dt>
+                <dd class="type-stat text-base text-ink">{count.value}</dd>
+              </div>
+            ))}
           </dl>
           <p class="type-data mt-3 text-xs text-ink-muted">
             Counted from the published content at build time. The catalogue is being written; every
@@ -176,7 +171,10 @@ const cardTitle = 'type-heading text-xs uppercase tracking-widest text-ink-muted
             The site's code and text are published under the KFA Source-Available License 1.0.
             Photographs and manufacturers' marks are third-party material under their own licences,
             recorded on each image and summarised on the{' '}
-            <a href={href('attributions')} class="text-ui-accent">attributions</a> page.
+            <a href={href('attributions')} class="text-ui-accent">
+              attributions
+            </a>{' '}
+            page.
           </p>
         </div>
       </aside>
@@ -187,17 +185,19 @@ const cardTitle = 'type-heading text-xs uppercase tracking-widest text-ink-muted
           What makes it different
         </h2>
         <p>
-          Anyone has a spec sheet. The difference here is that <strong class="text-ink">
+          Anyone has a spec sheet. The difference here is that{' '}
+          <strong class="text-ink">
             every number is either sourced or derived from sourced numbers by a formula you can open
-            and check</strong
-          >. There is no third category.
+            and check
+          </strong>
+          . There is no third category.
         </p>
         <p>
           Each figure carries a status. <em>Verified</em> means a cited source states it, and the
           citation is a link you can click. <em>Estimated</em> means we worked it out, and the panel
-          tells you from what. <em>Sources disagree</em> means the published record itself conflicts,
-          and the note says how. <em>Not recorded</em> means we do not know: an honest gap, never a
-          plausible-looking guess.
+          tells you from what. <em>Sources disagree</em> means the published record itself
+          conflicts, and the note says how. <em>Not recorded</em> means we do not know: an honest
+          gap, never a plausible-looking guess.
         </p>
         <p>
           Derived figures inherit the worst status of their inputs. Feed an estimate into a
@@ -208,12 +208,16 @@ const cardTitle = 'type-heading text-xs uppercase tracking-widest text-ink-muted
           None of that is a promise about how carefully the entries were written. It is enforced by
           the build: a figure marked verified with no link fails it, a source note hedging with
           "approximately" or "same as" fails it, and two entries whose prose reads too much alike
-          fail it naming both files. The <a href={href('methodology')} class="text-ui-accent">
+          fail it naming both files. The{' '}
+          <a href={href('methodology')} class="text-ui-accent">
             methodology
-          </a> page has the whole list.
+          </a>{' '}
+          page has the whole list.
         </p>
 
-        <h2 id="disclaimer" class="type-title mt-10 scroll-mt-16 text-xl text-ink">Disclaimer</h2>
+        <h2 id="disclaimer" class="type-title mt-10 scroll-mt-16 text-xl text-ink">
+          Disclaimer
+        </h2>
         <div class="mt-4 rounded-lg border border-line-strong bg-surface-1 p-5">
           <p>
             <strong class="text-ink">ARMAG is reference information only.</strong> It is not legal
@@ -229,12 +233,16 @@ const cardTitle = 'type-heading text-xs uppercase tracking-widest text-ink-muted
           <p>
             Nothing here tells you what you may lawfully do. ARMAG carries no jurisdiction data and
             no legality flags, by deliberate decision; see the{' '}
-            <a href={href('editorial-policy')} class="text-ui-accent">editorial policy</a>. The site
-            states what a firearm <em>is</em>, never what a reader <em>may do</em>.
+            <a href={href('editorial-policy')} class="text-ui-accent">
+              editorial policy
+            </a>
+            . The site states what a firearm <em>is</em>, never what a reader <em>may do</em>.
           </p>
         </div>
 
-        <h2 id="tone" class="type-title mt-10 scroll-mt-16 text-xl text-ink">Tone</h2>
+        <h2 id="tone" class="type-title mt-10 scroll-mt-16 text-xl text-ink">
+          Tone
+        </h2>
         <p>
           Encyclopedic throughout, including on arms associated with atrocity or crime. Facts,
           sourced, without celebration and without editorialising. An arm's history is part of what
@@ -251,10 +259,14 @@ const cardTitle = 'type-heading text-xs uppercase tracking-widest text-ink-muted
         </h2>
         <p>
           There is no backend, no account and nothing to sign in to. Whatever the site remembers
-          (your <a href={href('armory')} class="text-ui-accent">armory</a>, your comparison, your
-          units, your theme) stays in your own browser and never leaves it. That also means it
-          lives in one browser on one device, and the site cannot move it for you; the armory can
-          hand you a backup file or a share link, and those are the only ways it travels.
+          (your{' '}
+          <a href={href('armory')} class="text-ui-accent">
+            armory
+          </a>
+          , your comparison, your units, your theme) stays in your own browser and never leaves it.
+          That also means it lives in one browser on one device, and the site cannot move it for
+          you; the armory can hand you a backup file or a share link, and those are the only ways it
+          travels.
         </p>
         <p>
           No serial number field exists anywhere in the schema, in local storage, or in a share

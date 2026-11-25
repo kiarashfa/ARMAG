@@ -58,19 +58,60 @@ export async function fetchArticle(title, lang = 'en') {
 
 /** `{{Infobox weapon}}` fields, in the order a gun entry wants them. */
 const WEAPON_FIELDS = [
-  'name', 'origin', 'type', 'designer', 'design_date', 'manufacturer', 'production_date',
-  'number', 'service', 'used_by', 'variants', 'spec_label',
-  'weight', 'length', 'part_length', 'width', 'height',
-  'cartridge', 'caliber', 'action', 'rate', 'velocity', 'range', 'max_range',
-  'feed', 'sights',
+  'name',
+  'origin',
+  'type',
+  'designer',
+  'design_date',
+  'manufacturer',
+  'production_date',
+  'number',
+  'service',
+  'used_by',
+  'variants',
+  'spec_label',
+  'weight',
+  'length',
+  'part_length',
+  'width',
+  'height',
+  'cartridge',
+  'caliber',
+  'action',
+  'rate',
+  'velocity',
+  'range',
+  'max_range',
+  'feed',
+  'sights',
 ];
 
 /** `{{Infobox firearm cartridge}}` fields, in the order a cartridge entry wants them. */
 const CARTRIDGE_FIELDS = [
-  'name', 'origin', 'type', 'designer', 'design_date', 'manufacturer', 'production_date',
-  'service', 'parent', 'case_type', 'bullet', 'neck', 'shoulder', 'base', 'rim_dia',
-  'rim_thick', 'case_length', 'length', 'rifling', 'primer', 'max_pressure', 'max_cup',
-  'test_barrel_length', 'balsrc',
+  'name',
+  'origin',
+  'type',
+  'designer',
+  'design_date',
+  'manufacturer',
+  'production_date',
+  'service',
+  'parent',
+  'case_type',
+  'bullet',
+  'neck',
+  'shoulder',
+  'base',
+  'rim_dia',
+  'rim_thick',
+  'case_length',
+  'length',
+  'rifling',
+  'primer',
+  'max_pressure',
+  'max_cup',
+  'test_barrel_length',
+  'balsrc',
 ];
 
 /** The schema field a Wikipedia infobox field is a lead for. Blank where there is none. */
@@ -101,7 +142,8 @@ const MAPS_TO = {
 function describe(entry) {
   if (entry.values === null) return entry.text;
   const si = toSi(entry.values[0], entry.unit ?? '');
-  const range = entry.values.length > 1 ? `${entry.values[0]}–${entry.values[1]}` : `${entry.values[0]}`;
+  const range =
+    entry.values.length > 1 ? `${entry.values[0]}–${entry.values[1]}` : `${entry.values[0]}`;
   const converted = si && si.factor !== 1 ? `  →  ${Number(si.value.toFixed(4))} ${si.unit}` : '';
   const qualifier = entry.qualifier ? `  [${entry.qualifier.replace(/\n/g, ' / ')}]` : '';
   const flags =

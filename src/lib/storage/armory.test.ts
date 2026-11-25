@@ -177,10 +177,9 @@ test('the share link contains no ownership data at all', () => {
 
 test('the encoded share link is likewise clean', () => {
   const token = encodeShare(POPULATED);
-  const decodedText = Buffer.from(
-    token.replace(/-/g, '+').replace(/_/g, '/'),
-    'base64',
-  ).toString('utf8');
+  const decodedText = Buffer.from(token.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString(
+    'utf8',
+  );
   assert.ok(!decodedText.includes('ownership'));
   assert.ok(!decodedText.includes('4200'));
 
@@ -338,17 +337,26 @@ test('downsizing can be asked what it would cost before it is done', () => {
       { uid: 'high', gunRef: 'fixture-model-b', slot: 17, addedAt: '2026-01-01' },
     ],
   };
-  assert.deepEqual(evictedBy(packed, 10).map((entry) => entry.uid), ['high']);
+  assert.deepEqual(
+    evictedBy(packed, 10).map((entry) => entry.uid),
+    ['high'],
+  );
 });
 
 test('an entry whose bay still exists is not moved', () => {
   // Re-picking the size you already have must not shuffle your grid.
   const same = setCapacity(POPULATED, 10);
-  assert.deepEqual(same.entries.map((entry) => entry.slot), [0, 3]);
+  assert.deepEqual(
+    same.entries.map((entry) => entry.slot),
+    [0, 3],
+  );
 
   const smaller = setCapacity({ ...POPULATED, capacity: 20 }, 10);
   assert.equal(smaller.capacity, 10);
-  assert.deepEqual(smaller.entries.map((entry) => entry.slot), [0, 3]);
+  assert.deepEqual(
+    smaller.entries.map((entry) => entry.slot),
+    [0, 3],
+  );
   assert.equal(armoryStateSchema.safeParse(smaller).success, true);
 });
 
@@ -363,8 +371,16 @@ test('an entry whose bay has gone is rehomed into the lowest free one', () => {
     ],
   };
   const after = setCapacity(scattered, 10);
-  assert.equal(after.entries.find((entry) => entry.uid === 'low')?.slot, 2, 'it still fits, so it stays');
-  assert.equal(after.entries.find((entry) => entry.uid === 'high')?.slot, 0, 'its bay is gone, so it moves');
+  assert.equal(
+    after.entries.find((entry) => entry.uid === 'low')?.slot,
+    2,
+    'it still fits, so it stays',
+  );
+  assert.equal(
+    after.entries.find((entry) => entry.uid === 'high')?.slot,
+    0,
+    'its bay is gone, so it moves',
+  );
   assert.equal(armoryStateSchema.safeParse(after).success, true);
 });
 

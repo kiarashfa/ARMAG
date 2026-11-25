@@ -40,27 +40,27 @@ const ways = [
   <div class="mx-auto grid max-w-[44rem] justify-items-center px-(--layout-gutter) pb-20 pt-16 text-center sm:pt-24">
     <p class="type-data mb-4 text-[13px] tracking-[0.34em] text-ui-accent">404</p>
     <h1 class="type-display text-5xl sm:text-6xl">Not found</h1>
-    <p class="type-body mt-4 max-w-[34rem] text-lg text-ink-secondary [text-wrap:balance]">{quip}</p>
+    <p class="type-body mt-4 max-w-[34rem] text-lg text-ink-secondary [text-wrap:balance]">
+      {quip}
+    </p>
 
     <nav
       class="mt-10 flex w-full flex-wrap justify-center gap-x-7 gap-y-2.5 border-t border-line pt-8"
       aria-label="Ways out"
     >
-      {
-        ways.map((w) => (
-          <a
-            href={w.url}
-            class="type-title border-b border-transparent pb-[3px] text-lg text-ink no-underline transition-colors hover:border-ui-accent"
-          >
-            {w.label}
-          </a>
-        ))
-      }
+      {ways.map((w) => (
+        <a
+          href={w.url}
+          class="type-title border-b border-transparent pb-[3px] text-lg text-ink no-underline transition-colors hover:border-ui-accent"
+        >
+          {w.label}
+        </a>
+      ))}
     </nav>
 
     <p class="type-data mt-7 max-w-[38rem] text-sm leading-relaxed text-ink-muted">
-      Or search: the button in the header matches alternative names and designations as
-      well as titles, which is very likely what brought you here.
+      Or search: the button in the header matches alternative names and designations as well as
+      titles, which is very likely what brought you here.
     </p>
   </div>
 </BaseLayout>

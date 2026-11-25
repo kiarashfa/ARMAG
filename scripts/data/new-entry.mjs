@@ -65,7 +65,12 @@ async function article(title) {
 
 function wikipediaReference(found) {
   return {
-    key: `wp-${found.title.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`,
+    key: `wp-${found.title
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '')}`,
     type: 'wikipedia',
     title: found.title,
     publisher: 'Wikipedia',
@@ -219,16 +224,13 @@ async function main() {
     // Never overwrite. An author re-running this on a half-finished entry would
     // otherwise lose an afternoon of sourcing to a command that looked harmless.
     const exists = await readFile(file, 'utf8').catch(() => null);
-    if (exists !== null) throw new Error(`${path.relative(REPO_ROOT, file)} already exists — refusing to overwrite`);
+    if (exists !== null)
+      throw new Error(`${path.relative(REPO_ROOT, file)} already exists — refusing to overwrite`);
   }
 
   await mkdir(narrativeDir, { recursive: true });
   await mkdir(dataDir, { recursive: true });
-  await writeFile(
-    narrativePath,
-    isGun ? GUN_MDX(slug, found) : CARTRIDGE_MDX(slug, found),
-    'utf8',
-  );
+  await writeFile(narrativePath, isGun ? GUN_MDX(slug, found) : CARTRIDGE_MDX(slug, found), 'utf8');
   await writeFile(
     dataPath,
     `${JSON.stringify(isGun ? gunData(slug, found) : cartridgeData(slug, found), null, 2)}\n`,
@@ -237,8 +239,11 @@ async function main() {
 
   console.log(`wrote ${path.relative(REPO_ROOT, narrativePath).replace(/\\/g, '/')}`);
   console.log(`wrote ${path.relative(REPO_ROOT, dataPath).replace(/\\/g, '/')}`);
-  if (found.redirected) console.log(`\nnote: "${title}" redirected to "${found.title}" — cite the latter.`);
-  console.log(`\nwikidataId: ${found.wikidataId ?? '(none — the field was left out, which is correct)'}`);
+  if (found.redirected)
+    console.log(`\nnote: "${title}" redirected to "${found.title}" — cite the latter.`);
+  console.log(
+    `\nwikidataId: ${found.wikidataId ?? '(none — the field was left out, which is correct)'}`,
+  );
   console.log(`Wikipedia permalink cited at revision ${found.revid}.`);
 
   console.log('\nnext:');

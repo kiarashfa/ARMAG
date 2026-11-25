@@ -1,0 +1,24 @@
+# build output and caches
+dist
+.astro
+coverage
+playwright-report
+test-results
+
+# not code: content, data, docs, legal text
+*.md
+*.mdx
+*.json
+*.jsonc
+*.webmanifest
+*.yml
+*.yaml
+*.txt
+LICENSE
+
+# vendored or minified
+*.min.*
+public/vendor
+
+# deliberately broken inputs for the integrity tests
+test-fixtures

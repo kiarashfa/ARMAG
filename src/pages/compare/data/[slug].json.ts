@@ -14,7 +14,11 @@
  */
 import type { APIRoute } from 'astro';
 
-import { buildCompareEntry, buildPopulations, type CompareEntry } from '../../../lib/compare/entry.ts';
+import {
+  buildCompareEntry,
+  buildPopulations,
+  type CompareEntry,
+} from '../../../lib/compare/entry.ts';
 import { GUN_COMPARE_ROWS } from '../../../lib/compare/rows.ts';
 import { buildCatalogue } from '../../../lib/content/catalogue.ts';
 import { getCartridges, getGuns, getMakers } from '../../../lib/content/entries.ts';

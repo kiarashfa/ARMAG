@@ -149,7 +149,12 @@ function longArmProfile(barrel: number, magazine: boolean): Point[] {
   ];
 
   if (magazine) {
-    points.push([breech - 0.06, 0.62], [breech - 0.08, 1.0], [breech - 0.2, 1.0], [breech - 0.22, 0.62]);
+    points.push(
+      [breech - 0.06, 0.62],
+      [breech - 0.08, 1.0],
+      [breech - 0.2, 1.0],
+      [breech - 0.22, 0.62],
+    );
   }
 
   points.push(
@@ -167,7 +172,11 @@ function longArmProfile(barrel: number, magazine: boolean): Point[] {
 const HANDGUN_TYPES = new Set(['pistol', 'revolver']);
 
 /** The generic profile for a type, in normalised 0–1 coordinates. */
-export function profileFor(type: string | null, barrelFraction: number, magazine: boolean): Point[] {
+export function profileFor(
+  type: string | null,
+  barrelFraction: number,
+  magazine: boolean,
+): Point[] {
   if (type === 'revolver') return handgunProfile(barrelFraction, true);
   if (type === 'pistol') return handgunProfile(barrelFraction, false);
   return longArmProfile(barrelFraction, magazine);

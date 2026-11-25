@@ -184,12 +184,11 @@
     query.trim() === '' || row.search.includes(query.trim().toLowerCase());
 
   const filtered = $derived(
-    rows.filter(
-      (row) => matchesQuery(row) && AXES.every((axis) => matchesAxis(row, axis.key)),
-    ),
+    rows.filter((row) => matchesQuery(row) && AXES.every((axis) => matchesAxis(row, axis.key))),
   );
 
-  const typeLabel = (id: string | null): string => (vocab.type ?? []).find((t) => t.id === id)?.label ?? id ?? '';
+  const typeLabel = (id: string | null): string =>
+    (vocab.type ?? []).find((t) => t.id === id)?.label ?? id ?? '';
   const TEXT_SORTS = ['type', 'makerName', 'cartridgeName'];
 
   /** The table's columns; each header sorts by its column, a second click reverses. */
@@ -212,7 +211,8 @@
   function compare(a: CatalogueRow, b: CatalogueRow): number {
     if (sort === 'name') return a.name.localeCompare(b.name);
     if (TEXT_SORTS.includes(sort)) {
-      const text = (r: CatalogueRow) => (sort === 'type' ? typeLabel(r.type) : ((r as any)[sort] ?? ''));
+      const text = (r: CatalogueRow) =>
+        sort === 'type' ? typeLabel(r.type) : ((r as any)[sort] ?? '');
       const [l, r] = [text(a), text(b)];
       // An unknown maker or cartridge sorts last in both directions, like a missing figure.
       if (!l && !r) return a.name.localeCompare(b.name);
@@ -234,7 +234,14 @@
   const sorted = $derived(
     [...filtered].sort((a, b) => {
       const result = compare(a, b);
-      if (sort !== 'name' && ((a as any)[sort] == null || (a as any)[sort] === '' || (b as any)[sort] == null || (b as any)[sort] === '')) return result;
+      if (
+        sort !== 'name' &&
+        ((a as any)[sort] == null ||
+          (a as any)[sort] === '' ||
+          (b as any)[sort] == null ||
+          (b as any)[sort] === '')
+      )
+        return result;
       return direction === 'asc' ? result : -result;
     }),
   );
@@ -330,9 +337,14 @@
     aria-label="Filter the catalogue"
     class="relative z-20 rounded-lg border border-line border-t-[3px] border-t-ui-accent bg-surface-0 shadow-[0_18px_40px_-30px_rgb(0_0_0/0.5)]"
   >
-    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-t-[5px] border-b border-line bg-surface-1 px-4 py-2.5">
+    <div
+      class="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-t-[5px] border-b border-line bg-surface-1 px-4 py-2.5"
+    >
       <span class="type-title text-[17px] text-ink">Filter</span>
-      <p class="type-data flex flex-wrap items-center gap-3 text-sm text-ink-secondary" aria-live="polite">
+      <p
+        class="type-data flex flex-wrap items-center gap-3 text-sm text-ink-secondary"
+        aria-live="polite"
+      >
         {#if loadState === 'loading'}
           Loading the catalogue…
         {:else if loadState === 'failed'}
@@ -370,7 +382,9 @@
     </div>
 
     <div class="flex flex-col gap-2 p-4">
-      <div class="relative z-20 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 sm:flex sm:flex-wrap">
+      <div
+        class="relative z-20 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 sm:flex sm:flex-wrap"
+      >
         <label class="col-span-2 min-w-0 sm:min-w-56 sm:flex-1">
           <span class="sr-only">Filter by name or alias</span>
           <input
@@ -404,7 +418,9 @@
           {direction === 'asc' ? '↑' : '↓'}
         </button>
 
-        <div class="col-span-2 flex h-10 shrink-0 overflow-hidden rounded border border-line-strong sm:col-span-1">
+        <div
+          class="col-span-2 flex h-10 shrink-0 overflow-hidden rounded border border-line-strong sm:col-span-1"
+        >
           {#each ['table', 'cards'] as const as option (option)}
             <button
               type="button"
@@ -421,7 +437,9 @@
       </div>
 
       <!-- ── The facet menus ─────────────────────────────────────────────── -->
-      <div class="relative z-10 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center max-sm:[&>*:last-child:nth-child(odd)]:col-span-2">
+      <div
+        class="relative z-10 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center max-sm:[&>*:last-child:nth-child(odd)]:col-span-2"
+      >
         {#each AXES as axis (axis.key)}
           {#if facets[axis.key].length > 1 || selected[axis.key].length > 0}
             <FacetMenu
@@ -443,9 +461,11 @@
 
   {#if loadState === 'ready'}
     {#if sorted.length === 0}
-      <p class="type-data mt-6 rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted">
-        Nothing matches those filters. That is a real answer about the database, not an error.
-        Clear one and try again.
+      <p
+        class="type-data mt-6 rounded-lg border border-dashed border-line-strong bg-surface-1 p-6 text-sm text-ink-muted"
+      >
+        Nothing matches those filters. That is a real answer about the database, not an error. Clear
+        one and try again.
       </p>
     {:else if view === 'table'}
       <div class="mt-6 overflow-x-auto">
@@ -456,7 +476,11 @@
                 <th
                   scope="col"
                   class={`p-2 ${c.right ? 'whitespace-nowrap text-right' : ''}`}
-                  aria-sort={sort === c.key ? (direction === 'asc' ? 'ascending' : 'descending') : 'none'}
+                  aria-sort={sort === c.key
+                    ? direction === 'asc'
+                      ? 'ascending'
+                      : 'descending'
+                    : 'none'}
                 >
                   <button
                     type="button"
@@ -464,7 +488,9 @@
                     onclick={() => sortBy(c.key)}
                   >
                     {c.label}
-                    <span aria-hidden="true" class={sort === c.key ? 'text-ui-accent' : 'opacity-35'}
+                    <span
+                      aria-hidden="true"
+                      class={sort === c.key ? 'text-ui-accent' : 'opacity-35'}
                       >{sort === c.key ? (direction === 'asc' ? '↑' : '↓') : '↕'}</span
                     >
                   </button>
@@ -488,10 +514,18 @@
                 <td class="p-2 text-ink-secondary">{typeLabel(row.type)}</td>
                 <td class="p-2 text-ink-secondary">{row.makerName ?? '—'}</td>
                 <td class="p-2 text-ink-secondary">{row.cartridgeName ?? '—'}</td>
-                <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{row.year ?? '—'}</td>
-                <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{fmt(row.massKg, 3, ' kg')}</td>
-                <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{fmt(row.barrelMm, 0, ' mm')}</td>
-                <td class="whitespace-nowrap p-2 text-right text-ink-secondary">{fmt(row.capacity, 0)}</td>
+                <td class="whitespace-nowrap p-2 text-right text-ink-secondary"
+                  >{row.year ?? '—'}</td
+                >
+                <td class="whitespace-nowrap p-2 text-right text-ink-secondary"
+                  >{fmt(row.massKg, 3, ' kg')}</td
+                >
+                <td class="whitespace-nowrap p-2 text-right text-ink-secondary"
+                  >{fmt(row.barrelMm, 0, ' mm')}</td
+                >
+                <td class="whitespace-nowrap p-2 text-right text-ink-secondary"
+                  >{fmt(row.capacity, 0)}</td
+                >
               </tr>
             {/each}
           </tbody>
@@ -512,8 +546,11 @@
               {[row.makerName, row.year].filter(Boolean).join(' · ') || '—'}
             </p>
             <dl class="type-data mt-2 grid grid-cols-3 gap-1 text-xs text-ink-secondary">
+              <!-- prettier-ignore -->
               <div><dt class="text-ink-muted">Mass</dt><dd>{fmt(row.massKg, 3, " kg")}</dd></div>
+              <!-- prettier-ignore -->
               <div><dt class="text-ink-muted">Barrel</dt><dd>{fmt(row.barrelMm, 0, " mm")}</dd></div>
+              <!-- prettier-ignore -->
               <div><dt class="text-ink-muted">Rounds</dt><dd>{fmt(row.capacity, 0)}</dd></div>
             </dl>
           </li>

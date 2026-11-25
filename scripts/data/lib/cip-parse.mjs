@@ -134,14 +134,16 @@ export function parseIndex(html, tableId) {
  */
 /** @param {string} name @returns {string} */
 export function normaliseName(name) {
-  return String(name)
-    .toLowerCase()
-    .replace(/[×✕]/g, 'x')
-    .replace(/,/g, '.')
-    .replace(/[^a-z0-9x.]/g, '')
-    // `mm` is written attached to the digits ("9x19mm"), so a word-boundary
-    // strip leaves it in place and the alias table never matches.
-    .replace(/mm/g, '');
+  return (
+    String(name)
+      .toLowerCase()
+      .replace(/[×✕]/g, 'x')
+      .replace(/,/g, '.')
+      .replace(/[^a-z0-9x.]/g, '')
+      // `mm` is written attached to the digits ("9x19mm"), so a word-boundary
+      // strip leaves it in place and the alias table never matches.
+      .replace(/mm/g, '')
+  );
 }
 
 /**
@@ -168,7 +170,7 @@ export const NAME_ALIASES = {
   '7.62x51': '308 Win.',
   '223remington': '223 Rem.',
   '7.62x63': '30-06 Springfield',
-  '3006': '30-06 Springfield',
+  3006: '30-06 Springfield',
   '7.92x57': '8 x 57 IS',
   '8x57is': '8 x 57 IS',
   '12gauge': '12/70',
@@ -211,14 +213,24 @@ export function searchIndex(rows, query) {
    * rimfire round.
    */
   const exact = (row) =>
-    normaliseName(row.name) === needle || (aliasTarget !== null && normaliseName(row.name) === aliasTarget);
+    normaliseName(row.name) === needle ||
+    (aliasTarget !== null && normaliseName(row.name) === aliasTarget);
   return [...hits.filter(exact), ...hits.filter((row) => !exact(row))];
 }
 
 const SECTIONS = ['CARTRIDGE MAXI', 'CHAMBER MINI'];
 const SUBSECTIONS = [
-  'Lengths', 'Case Head', 'Breech', 'Powder Chamber', 'Junction Cone', 'Collar',
-  'Projectile', 'Commencement of Rifling', 'Barrel', 'Grooves', 'Pressures (Energies)',
+  'Lengths',
+  'Case Head',
+  'Breech',
+  'Powder Chamber',
+  'Junction Cone',
+  'Collar',
+  'Projectile',
+  'Commencement of Rifling',
+  'Barrel',
+  'Grooves',
+  'Pressures (Energies)',
   'Miscellaneous Dimensions',
 ];
 
@@ -273,7 +285,10 @@ export function parseDatasheet(text) {
     }
     if (lines[i + 1] !== '=') continue;
 
-    const key = line.replace(/\s*\d+\)/g, '').replace(/\*/g, '').trim();
+    const key = line
+      .replace(/\s*\d+\)/g, '')
+      .replace(/\*/g, '')
+      .trim();
     const raw = lines[i + 2];
     /*
      * A key with nothing after it means the dimension is simply not specified

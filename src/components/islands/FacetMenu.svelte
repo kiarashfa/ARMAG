@@ -86,7 +86,10 @@
   >
     <span class="truncate">{label}</span>
     {#if selected.length > 0}
-      <span class="rounded-full bg-ui-accent px-1.5 text-xs leading-[1.4] text-surface-0 tabular-nums">{selected.length}</span>
+      <span
+        class="rounded-full bg-ui-accent px-1.5 text-xs leading-[1.4] text-surface-0 tabular-nums"
+        >{selected.length}</span
+      >
     {/if}
     <span aria-hidden="true" class="text-[9px] text-ink-muted">▾</span>
   </button>

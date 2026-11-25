@@ -12,7 +12,7 @@
     "build": "npm run test && npm run check:content && astro build && npm run postbuild:index && npm run check:site && npm run check:assets",
     "build:fast": "astro build",
     "preview": "astro preview",
-    "check": "astro check",
+    "check": "astro check && npm run format:check",
     "test": "node --test",
     "check:content": "node scripts/integrity/check-content.mjs",
     "check:self": "node scripts/integrity/check-self.mjs",
@@ -24,7 +24,9 @@
     "astro": "astro",
     "brand": "node scripts/brand/brand.ts",
     "brand:icons": "node scripts/brand/icons.mjs",
-    "check:layout": "node scripts/integrity/layout.mjs"
+    "check:layout": "node scripts/integrity/layout.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.5",
@@ -44,6 +46,9 @@
     "@tailwindcss/vite": "^4.3.3",
     "pagefind": "^1.5.2",
     "playwright-core": "^1.64.1",
+    "prettier": "3.9.10",
+    "prettier-plugin-astro": "1.1.2",
+    "prettier-plugin-svelte": "4.1.1",
     "satori": "^0.33.5",
     "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3",

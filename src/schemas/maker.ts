@@ -12,14 +12,7 @@
  */
 import { z } from 'zod';
 
-import {
-  imageRef,
-  nativeName,
-  slug,
-  trustFields,
-  wikidataId,
-  year,
-} from './primitives.ts';
+import { imageRef, nativeName, slug, trustFields, wikidataId, year } from './primitives.ts';
 import { countryTag } from './taxonomy.ts';
 
 // ---------------------------------------------------------------------------
@@ -86,7 +79,11 @@ export const makerDataSchema = z
   })
   .strict()
   .superRefine((maker, ctx) => {
-    if (maker.dissolved !== null && maker.founded !== undefined && maker.dissolved < maker.founded) {
+    if (
+      maker.dissolved !== null &&
+      maker.founded !== undefined &&
+      maker.dissolved < maker.founded
+    ) {
       ctx.addIssue({
         code: 'custom',
         path: ['dissolved'],

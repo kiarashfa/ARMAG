@@ -84,7 +84,9 @@ export async function objectMeta(idsId) {
   });
   const payload = await getJson(url);
 
-  const row = (payload.response?.rows ?? []).find((candidate) => mediaOf(candidate)?.idsId === idsId);
+  const row = (payload.response?.rows ?? []).find(
+    (candidate) => mediaOf(candidate)?.idsId === idsId,
+  );
   if (!row) throw new Error(`no Smithsonian record carries image id ${idsId}`);
 
   const media = mediaOf(row);

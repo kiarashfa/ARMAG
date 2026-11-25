@@ -47,13 +47,11 @@ const meta = STATUS[status];
 const hidden = status === 'verified' && !always;
 ---
 
-{
-  !hidden && (
-    <span
-      class={`type-data whitespace-nowrap rounded-sm border border-current/30 px-1 text-[0.65rem] uppercase tracking-wide ${meta.className}`}
-      title={meta.title}
-    >
-      {meta.label}
-    </span>
-  )
-}
+{!hidden && (
+  <span
+    class={`type-data whitespace-nowrap rounded-sm border border-current/30 px-1 text-[0.65rem] uppercase tracking-wide ${meta.className}`}
+    title={meta.title}
+  >
+    {meta.label}
+  </span>
+)}

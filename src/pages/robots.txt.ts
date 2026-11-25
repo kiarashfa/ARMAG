@@ -22,7 +22,9 @@ import type { APIRoute } from 'astro';
 import { BASE } from '../../astro.config.ts';
 
 export const GET: APIRoute = ({ site }) => {
-  const sitemap = site ? new URL(`${BASE}/sitemap-index.xml`.replace(/\/{2,}/g, '/'), site).href : '';
+  const sitemap = site
+    ? new URL(`${BASE}/sitemap-index.xml`.replace(/\/{2,}/g, '/'), site).href
+    : '';
 
   const body = [
     '# ARMAG · a free reference for modern firearms.',

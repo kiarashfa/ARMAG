@@ -26,13 +26,23 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 
-import { STANDARD_GRAVITY_MS2, joulesToFootPounds, grainsToG, fpsToMs, yardsToM, mToYards, mmToInches } from '../units.ts';
+import {
+  STANDARD_GRAVITY_MS2,
+  joulesToFootPounds,
+  grainsToG,
+  fpsToMs,
+  yardsToM,
+  mToYards,
+  mmToInches,
+} from '../units.ts';
 import { solveTrajectory, solveZeroAngle, maxPointBlankRange } from './trajectory.ts';
 import { dragCoefficient, standardAtmosphere, STANDARD_ATMOSPHERE } from './drag.ts';
 import { G1, G7 } from './drag-tables.ts';
 
 const readFixture = (name: string) =>
-  JSON.parse(readFileSync(new URL(`../../../../test-fixtures/ballistics/${name}`, import.meta.url), 'utf8'));
+  JSON.parse(
+    readFileSync(new URL(`../../../../test-fixtures/ballistics/${name}`, import.meta.url), 'utf8'),
+  );
 
 // ---------------------------------------------------------------------------
 // 1. Analytic — the integrator against a closed form
@@ -54,8 +64,7 @@ test('with drag removed the solver reproduces the vacuum parabola exactly', () =
   for (const point of points) {
     const x = point.rangeM;
     const expectedDrop =
-      x * Math.tan(theta) -
-      (STANDARD_GRAVITY_MS2 * x * x) / (2 * (v0 * Math.cos(theta)) ** 2);
+      x * Math.tan(theta) - (STANDARD_GRAVITY_MS2 * x * x) / (2 * (v0 * Math.cos(theta)) ** 2);
     const expectedTime = x / (v0 * Math.cos(theta));
 
     assert.ok(
@@ -197,7 +206,11 @@ test('reproduces the drop column of two published Hornady tables', () => {
     const velocityAt = (bc: number, rangeM: number) => {
       const points = solveTrajectory(
         { ballisticCoefficient: bc, dragModel: 'G1', massG },
-        { muzzleVelocityMs: muzzleMs, launchAngleMrad: 0, sightHeightMm: table.sightHeightInches * 25.4 },
+        {
+          muzzleVelocityMs: muzzleMs,
+          launchAngleMrad: 0,
+          sightHeightMm: table.sightHeightInches * 25.4,
+        },
         { atRangesM: [rangeM], maxDropM: 1000 },
       );
       return points[0]!.velocityMs;
@@ -215,7 +228,10 @@ test('reproduces the drop column of two published Hornady tables', () => {
 
     // Sanity: a .308 match bullet's G1 BC lives in this band. If the fit lands
     // outside it, the solver — not the fit — is what is wrong.
-    assert.ok(bc > 0.35 && bc < 0.75, `${table.id}: fitted G1 BC ${bc.toFixed(3)} is not plausible`);
+    assert.ok(
+      bc > 0.35 && bc < 0.75,
+      `${table.id}: fitted G1 BC ${bc.toFixed(3)} is not plausible`,
+    );
 
     const projectile = { ballisticCoefficient: bc, dragModel: 'G1' as const, massG };
     const setup = {
@@ -258,10 +274,14 @@ test('a solved zero puts the bullet on the line of sight at the zero range', () 
   for (const zeroRange of [25, 100, 200, 300, 600]) {
     const angle = solveZeroAngle(projectile, setup, zeroRange);
     assert.ok(angle !== null, `no zero at ${zeroRange} m`);
-    const [point] = solveTrajectory(projectile, { ...setup, launchAngleMrad: angle! }, {
-      atRangesM: [zeroRange],
-      maxDropM: 100,
-    });
+    const [point] = solveTrajectory(
+      projectile,
+      { ...setup, launchAngleMrad: angle! },
+      {
+        atRangesM: [zeroRange],
+        maxDropM: 100,
+      },
+    );
     assert.ok(
       Math.abs(point!.dropM) < 0.001,
       `zeroed at ${zeroRange} m but drop is ${point!.dropM} m`,
@@ -301,7 +321,10 @@ test('wind moves the bullet the way the wind blows, and only then', () => {
   )[0]!;
 
   assert.ok(Math.abs(still.windageM) < 1e-9, 'no wind, no drift');
-  assert.ok(fromLeft.windageM > 0.5, `a 10 mph left wind should push right, got ${fromLeft.windageM} m`);
+  assert.ok(
+    fromLeft.windageM > 0.5,
+    `a 10 mph left wind should push right, got ${fromLeft.windageM} m`,
+  );
   assert.ok(
     Math.abs(fromLeft.windageM + fromRight.windageM) < 1e-6,
     'drift must be symmetric about zero wind',
@@ -342,7 +365,10 @@ test('a point-blank solution stays inside its own radius', () => {
 // ---------------------------------------------------------------------------
 
 test('the drag tables are ascending, positive and physically shaped', () => {
-  for (const [name, table] of [['G1', G1], ['G7', G7]] as const) {
+  for (const [name, table] of [
+    ['G1', G1],
+    ['G7', G7],
+  ] as const) {
     for (let i = 1; i < table.length; i += 1) {
       assert.ok(table[i]![0] > table[i - 1]![0], `${name}: Mach must ascend at row ${i}`);
       assert.ok(table[i]![1] > 0, `${name}: drag coefficient must be positive at row ${i}`);
@@ -384,7 +410,10 @@ test('the drag curve is held, never extrapolated, outside the tabulated range', 
 
 test('the standard atmosphere matches the ISA values every table is quoted at', () => {
   assert.ok(Math.abs(STANDARD_ATMOSPHERE.density - 1.225) < 0.0005, 'sea-level density');
-  assert.ok(Math.abs(STANDARD_ATMOSPHERE.speedOfSound - 340.294) < 0.01, 'sea-level speed of sound');
+  assert.ok(
+    Math.abs(STANDARD_ATMOSPHERE.speedOfSound - 340.294) < 0.01,
+    'sea-level speed of sound',
+  );
   // Thinner and colder with height, in that order of obviousness.
   const high = standardAtmosphere(3000);
   assert.ok(high.density < STANDARD_ATMOSPHERE.density);

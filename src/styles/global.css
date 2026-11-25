@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /*
  * Self-hosted type, bundled with the rest of the CSS: IBM Plex Sans, as one
@@ -7,7 +7,7 @@
  * of a gun catalogue, and its width axis gives display text the condensed,
  * stamped proportion of a magazine cover from the same file the body reads in.
  */
-@import "@fontsource-variable/ibm-plex-sans/wdth.css";
+@import '@fontsource-variable/ibm-plex-sans/wdth.css';
 
 /*
  * ARMAG design tokens.
@@ -52,12 +52,14 @@
    * `.type-display`, `.type-title` and `.type-stat`. The system stack stays
    * behind it as the fallback while the file loads.
    */
-  --font-display: "IBM Plex Sans Variable", ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-sans: "IBM Plex Sans Variable", ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono", Menlo,
-    Consolas, monospace;
+  --font-display:
+    'IBM Plex Sans Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-sans:
+    'IBM Plex Sans Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-mono:
+    ui-monospace, 'SF Mono', 'Cascadia Mono', 'Segoe UI Mono', Menlo, Consolas, monospace;
 
   /*
    * Two sizes beyond Tailwind's stock scale, because two things on this site
@@ -128,7 +130,7 @@
    * machine-gun steel blue (h 250) it will sit beside in a catalogue row.
    */
   --color-ui-accent: oklch(76% 0.13 215);
-  --color-ui-accent-hover: oklch(86% 0.10 215);
+  --color-ui-accent-hover: oklch(86% 0.1 215);
 
   /*
    * Data-trust status colours.
@@ -158,18 +160,18 @@
    * `--color-type-X-surface` is the tint (hero band, badge fill) and carries
    * `--color-ink` at AA.
    */
-  --color-type-handgun: oklch(78% 0.10 72);
+  --color-type-handgun: oklch(78% 0.1 72);
   --color-type-handgun-surface: oklch(27% 0.045 72);
   --color-type-rifle: oklch(78% 0.07 135);
   --color-type-rifle-surface: oklch(27% 0.035 135);
   --color-type-shotgun: oklch(76% 0.09 38);
-  --color-type-shotgun-surface: oklch(27% 0.040 38);
+  --color-type-shotgun-surface: oklch(27% 0.04 38);
   --color-type-smg: oklch(78% 0.09 300);
   --color-type-smg-surface: oklch(27% 0.045 300);
   --color-type-machinegun: oklch(78% 0.06 250);
   --color-type-machinegun-surface: oklch(27% 0.035 250);
-  --color-type-platform: oklch(78% 0.010 255);
-  --color-type-platform-surface: oklch(27% 0.010 255);
+  --color-type-platform: oklch(78% 0.01 255);
+  --color-type-platform-surface: oklch(27% 0.01 255);
 }
 
 /*
@@ -201,27 +203,27 @@
   --color-ink-muted: oklch(48% 0.011 255);
 
   --color-line: oklch(86% 0.006 255);
-  --color-line-strong: oklch(57% 0.010 255);
+  --color-line-strong: oklch(57% 0.01 255);
 
   --color-ui-accent: oklch(44% 0.15 215);
   --color-ui-accent-hover: oklch(38% 0.13 215);
 
   --color-status-verified: oklch(46% 0.14 155);
   --color-status-estimated: oklch(46% 0.13 88);
-  --color-status-placeholder: oklch(48% 0.010 255);
+  --color-status-placeholder: oklch(48% 0.01 255);
   --color-status-conflicting: oklch(46% 0.17 22);
 
-  --color-type-handgun: oklch(46% 0.10 72);
+  --color-type-handgun: oklch(46% 0.1 72);
   --color-type-handgun-surface: oklch(93% 0.045 72);
   --color-type-rifle: oklch(45% 0.07 135);
   --color-type-rifle-surface: oklch(93% 0.035 135);
-  --color-type-shotgun: oklch(46% 0.10 38);
-  --color-type-shotgun-surface: oklch(93% 0.040 38);
+  --color-type-shotgun: oklch(46% 0.1 38);
+  --color-type-shotgun-surface: oklch(93% 0.04 38);
   --color-type-smg: oklch(46% 0.11 300);
-  --color-type-smg-surface: oklch(93% 0.040 300);
+  --color-type-smg-surface: oklch(93% 0.04 300);
   --color-type-machinegun: oklch(46% 0.07 250);
-  --color-type-machinegun-surface: oklch(93% 0.030 250);
-  --color-type-platform: oklch(46% 0.010 255);
+  --color-type-machinegun-surface: oklch(93% 0.03 250);
+  --color-type-platform: oklch(46% 0.01 255);
   --color-type-platform-surface: oklch(93% 0.008 255);
 }
 
@@ -251,9 +253,7 @@
   --layout-gutter: clamp(1.25rem, 4vw, 3rem);
   --layout-max: 75rem;
   --layout-section-gap: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
-
 }
-
 
 @layer base {
   html {
@@ -490,7 +490,6 @@
     color: var(--color-ink);
     border-color: var(--color-line-strong);
   }
-
 
   /*
    * The server-rendered catalogue rows, hidden once the island is live.

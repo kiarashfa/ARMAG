@@ -23,7 +23,12 @@ import {
   toDisplay,
 } from './units.ts';
 import { derive, worstStatus, type ValueLike } from './provenance.ts';
-import { energyRetention, kineticEnergy, powerFactor, sectionalDensity } from './ballistics/energy.ts';
+import {
+  energyRetention,
+  kineticEnergy,
+  powerFactor,
+  sectionalDensity,
+} from './ballistics/energy.ts';
 import { velocityForBarrel } from './ballistics/velocity.ts';
 import { freeRecoilEnergy, recoilVelocity } from './recoil.ts';
 import { ammunitionFraction, loadedMass } from './mass.ts';
@@ -94,7 +99,10 @@ test('a derived value inherits the worst status among its inputs', () => {
 
   const dirty = kineticEnergy(estimated(11.34, 'g'), verified(792.48, 'm/s'));
   assert.equal(dirty.status, 'estimated', 'estimated in, estimated out');
-  assert.ok(Math.abs(dirty.value! - clean.value!) < 1e-9, 'the number is the same, the badge is not');
+  assert.ok(
+    Math.abs(dirty.value! - clean.value!) < 1e-9,
+    'the number is the same, the badge is not',
+  );
 });
 
 test('a placeholder input blocks the computation and says which one', () => {
@@ -106,7 +114,10 @@ test('a placeholder input blocks the computation and says which one', () => {
 
 test('the input chain travels with the value, in the order the formula uses', () => {
   const result = kineticEnergy(verified(11.34, 'g'), estimated(792.48, 'm/s'));
-  assert.deepEqual(result.inputs.map((i) => i.label), ['m', 'v']);
+  assert.deepEqual(
+    result.inputs.map((i) => i.label),
+    ['m', 'v'],
+  );
   assert.equal(result.inputs[0]!.sourceUrl, 'https://example.org/x');
   assert.equal(result.inputs[1]!.status, 'estimated');
   assert.ok(result.formula.includes('½'), 'the ƒ panel needs the formula itself');
@@ -129,7 +140,11 @@ test('a model weaker than its inputs downgrades the result, never upgrades it', 
     inputs: [{ label: 'a', of: estimated(1) }],
     compute: ([a]) => a!,
   });
-  assert.equal(strongModelWeakInput.status, 'estimated', 'a confident model cannot launder a guess');
+  assert.equal(
+    strongModelWeakInput.status,
+    'estimated',
+    'a confident model cannot launder a guess',
+  );
 });
 
 // ---------------------------------------------------------------------------
@@ -199,7 +214,11 @@ test('outside the sourced range nothing is projected', () => {
   const short = velocityForBarrel(POINTS, 76);
   assert.equal(short.basis, 'nearest-sourced');
   assert.equal(short.velocity.value, 340, 'the nearest sourced figure, not a projection');
-  assert.equal(short.atBarrelLengthMm, 102, 'and it belongs to a 102 mm barrel, which must be said');
+  assert.equal(
+    short.atBarrelLengthMm,
+    102,
+    'and it belongs to a 102 mm barrel, which must be said',
+  );
   assert.ok(short.caveat!.includes('102'));
   assert.ok(short.caveat!.includes('76'));
 
@@ -276,7 +295,10 @@ test('loaded mass is empty plus magazine plus the ammunition in it', () => {
   };
   const total = loadedMass(inputs);
   assert.ok(Math.abs(total.value! - (0.625 + 0.07 + (17 * 12) / 1000)) < 1e-12);
-  assert.ok(total.value! > 0.625 * 1.1, 'a loaded pistol is meaningfully heavier than its datasheet');
+  assert.ok(
+    total.value! > 0.625 * 1.1,
+    'a loaded pistol is meaningfully heavier than its datasheet',
+  );
 
   const fraction = ammunitionFraction(inputs);
   assert.ok(fraction.value! > 0.2 && fraction.value! < 0.3);
@@ -309,7 +331,10 @@ test('a longer sight radius costs less angle for the same error', () => {
   const short = sightingErrorAngle(verified(100, 'mm'), 1);
   const long = sightingErrorAngle(verified(500, 'mm'), 1);
   assert.ok(long.value! < short.value!);
-  assert.ok(Math.abs(short.value! / long.value! - 5) < 0.01, 'five times the radius, a fifth the angle');
+  assert.ok(
+    Math.abs(short.value! / long.value! - 5) < 0.01,
+    'five times the radius, a fifth the angle',
+  );
 });
 
 test('a partial magazine is still a magazine', () => {
@@ -344,11 +369,18 @@ test('ties share the middle rather than all landing at one end', () => {
 
 test('a ladder ranks ascending and skips entries with no figure', () => {
   const rows = ladder(
-    [{ id: 'a', v: 10 }, { id: 'b', v: null }, { id: 'c', v: 2 }],
+    [
+      { id: 'a', v: 10 },
+      { id: 'b', v: null },
+      { id: 'c', v: 2 },
+    ],
     (row) => row.v,
     'test set',
   );
-  assert.deepEqual(rows.map((r) => r.entry.id), ['c', 'a']);
+  assert.deepEqual(
+    rows.map((r) => r.entry.id),
+    ['c', 'a'],
+  );
   assert.equal(rows[0]!.result.populationSize, 2);
 });
 
@@ -439,10 +471,7 @@ test('tier is computed from the score, and a full page of estimates is Tier 3', 
     WEIGHTS,
     FLOOR,
   );
-  assert.ok(
-    estimatedThroughout.score < sourced.score,
-    'inventing figures must never raise a tier',
-  );
+  assert.ok(estimatedThroughout.score < sourced.score, 'inventing figures must never raise a tier');
   assert.notEqual(estimatedThroughout.tier, 1);
 });
 
@@ -514,7 +543,10 @@ const CANDIDATES = [
 
 test('a dealbreaker excludes and says which one, in the reader’s own terms', () => {
   const outcome = match(CANDIDATES, { maxLoadedMassKg: 1.0 });
-  assert.deepEqual(outcome.excluded.map((e) => e.candidate.id), ['heavy']);
+  assert.deepEqual(
+    outcome.excluded.map((e) => e.candidate.id),
+    ['heavy'],
+  );
   assert.ok(outcome.excluded[0]!.because.includes('1 kg ceiling'));
   assert.ok(outcome.applied.some((a) => a.includes('loaded mass at most 1 kg')));
 });
@@ -526,9 +558,9 @@ test('a missing figure never excludes a candidate', () => {
     'an unrecorded mass is a gap in our data, not a fact about the arm',
   );
   assert.ok(
-    outcome.matches.find((m) => m.candidate.id === 'unknown')!.reasons.some((r) =>
-      r.detail.includes('not recorded'),
-    ),
+    outcome.matches
+      .find((m) => m.candidate.id === 'unknown')!
+      .reasons.some((r) => r.detail.includes('not recorded')),
   );
 });
 
@@ -536,7 +568,10 @@ test('with no criteria everything matches equally and nothing is ranked', () => 
   const outcome = match(CANDIDATES, {});
   assert.equal(outcome.matches.length, 3);
   assert.ok(outcome.matches.every((m) => m.fit === 1));
-  assert.deepEqual(outcome.matches.map((m) => m.candidate.id), ['light', 'heavy', 'unknown']);
+  assert.deepEqual(
+    outcome.matches.map((m) => m.candidate.id),
+    ['light', 'heavy', 'unknown'],
+  );
   assert.deepEqual(outcome.applied, []);
 });
 
@@ -555,7 +590,10 @@ test('the matchmaker has no budget, price or legality input at all', () => {
   };
   const keys = Object.keys(criteria).map((k) => k.toLowerCase());
   for (const forbidden of ['budget', 'price', 'cost', 'legal', 'jurisdiction', 'effective']) {
-    assert.ok(!keys.some((k) => k.includes(forbidden)), `MatchCriteria must not carry '${forbidden}'`);
+    assert.ok(
+      !keys.some((k) => k.includes(forbidden)),
+      `MatchCriteria must not carry '${forbidden}'`,
+    );
   }
   assert.equal(keys.length, 7, 'the design specifies seven inputs');
 });

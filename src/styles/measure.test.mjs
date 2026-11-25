@@ -45,6 +45,7 @@ test('no paragraph is capped narrower than the column it sits in', () => {
   assert.deepEqual(
     offenders,
     [],
-    'Text fills its column; a width cap on prose left paragraphs at half the page:\n  ' + offenders.join('\n  '),
+    'Text fills its column; a width cap on prose left paragraphs at half the page:\n  ' +
+      offenders.join('\n  '),
   );
 });

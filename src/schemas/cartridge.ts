@@ -200,7 +200,11 @@ export const cartridgeDataSchema = z
   })
   .strict()
   .superRefine((cartridge, ctx) => {
-    if (cartridge.maxPressure && cartridge.maxPressure.value !== null && !cartridge.pressureStandard) {
+    if (
+      cartridge.maxPressure &&
+      cartridge.maxPressure.value !== null &&
+      !cartridge.pressureStandard
+    ) {
       ctx.addIssue({
         code: 'custom',
         path: ['pressureStandard'],
@@ -214,8 +218,7 @@ export const cartridgeDataSchema = z
         ctx.addIssue({
           code: 'custom',
           path: ['bulletDiameter'],
-          message:
-            'a shotshell has no single projectile diameter — record `boreDiameter` instead',
+          message: 'a shotshell has no single projectile diameter — record `boreDiameter` instead',
         });
       }
       if (!cartridge.boreDiameter) {

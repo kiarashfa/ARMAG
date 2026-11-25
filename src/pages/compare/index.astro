@@ -30,11 +30,11 @@ const grouped = groupRows(GUN_COMPARE_ROWS, GUN_GROUP_ORDER);
   <div class="mx-auto max-w-(--layout-max) px-(--layout-gutter) py-8">
     <h1 class="type-display text-display text-ink">Compare</h1>
     <p class="type-body mt-4 text-lg text-ink-secondary">
-      Up to {COMPARE_LIMIT} entries, side by side, across {GUN_COMPARE_ROWS.length} rows. The rows are
-      generated from the same registry the specification tables use, so nothing recorded on an entry
-      can be missing here.{' '}
-      <strong class="text-ink">No column is marked as the winner.</strong> Lighter is better for carry
-      and worse for recoil; the site does not know what you are choosing for.
+      Up to {COMPARE_LIMIT} entries, side by side, across {GUN_COMPARE_ROWS.length} rows. The rows
+      are generated from the same registry the specification tables use, so nothing recorded on an
+      entry can be missing here.{' '}
+      <strong class="text-ink">No column is marked as the winner.</strong> Lighter is better for
+      carry and worse for recoil; the site does not know what you are choosing for.
     </p>
 
     <CompareTool
@@ -52,37 +52,40 @@ const grouped = groupRows(GUN_COMPARE_ROWS, GUN_GROUP_ORDER);
       <p class="type-data mt-6 rounded-lg border border-line bg-surface-1 p-4 text-sm text-ink-secondary">
         A comparison is chosen in the address bar, and a static site builds one page for this URL
         whatever follows the question mark, so this is the one tool here that needs JavaScript. The{' '}
-        <a href={href()} class="text-ui-accent">catalogue</a> and every entry page work without it, and
-        each entry page carries the same rows listed below.
+        <a href={href()} class="text-ui-accent">
+          catalogue
+        </a>{' '}
+        and every entry page work without it, and each entry page carries the same rows listed
+        below.
       </p>
     </noscript>
 
     <section id="rows" class="mt-(--layout-section-gap) scroll-mt-16">
       <h2 class="type-title text-xl">
-        <a href="#rows" class="text-ink no-underline hover:text-ui-accent">What is compared</a>
+        <a href="#rows" class="text-ink no-underline hover:text-ui-accent">
+          What is compared
+        </a>
       </h2>
       <p class="type-body mt-1 text-sm text-ink-secondary">
         Every row, in the order they appear. Derived figures come first: the specification sheet is
         table stakes, the computed layer is what this site is for.
       </p>
       <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {
-          grouped.map((bucket) => (
-            <div class="rounded-lg border border-line bg-surface-1 p-4">
-              <h3 class="type-heading text-xs uppercase tracking-wider text-ink-muted">
-                {bucket.group}
-              </h3>
-              <ul class="type-data mt-2 flex flex-col gap-1 text-sm text-ink-secondary">
-                {bucket.rows.map((row) => (
-                  <li>
-                    {row.label}
-                    {row.unit ? <span class="text-ink-muted"> · {row.unit}</span> : null}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))
-        }
+        {grouped.map((bucket) => (
+          <div class="rounded-lg border border-line bg-surface-1 p-4">
+            <h3 class="type-heading text-xs uppercase tracking-wider text-ink-muted">
+              {bucket.group}
+            </h3>
+            <ul class="type-data mt-2 flex flex-col gap-1 text-sm text-ink-secondary">
+              {bucket.rows.map((row) => (
+                <li>
+                  {row.label}
+                  {row.unit ? <span class="text-ink-muted"> · {row.unit}</span> : null}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   </div>

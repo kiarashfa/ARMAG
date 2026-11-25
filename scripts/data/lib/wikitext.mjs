@@ -192,7 +192,10 @@ export function parseConvert(template) {
   const values = [];
   let index = 0;
   const asNumber = (raw) => {
-    const cleaned = (raw ?? '').replace(/,/g, '').replace(/&nbsp;/g, '').trim();
+    const cleaned = (raw ?? '')
+      .replace(/,/g, '')
+      .replace(/&nbsp;/g, '')
+      .trim();
     return /^-?\d+(\.\d+)?$/.test(cleaned) ? Number(cleaned) : null;
   };
 
@@ -415,7 +418,19 @@ export function toSi(value, unit) {
 
 /** Languages that write 1.234,5 rather than 1,234.5. */
 export const COMMA_DECIMAL_LANGS = new Set([
-  'de', 'ru', 'fr', 'it', 'nl', 'es', 'pt', 'pl', 'cs', 'sv', 'da', 'fi', 'tr',
+  'de',
+  'ru',
+  'fr',
+  'it',
+  'nl',
+  'es',
+  'pt',
+  'pl',
+  'cs',
+  'sv',
+  'da',
+  'fi',
+  'tr',
 ]);
 
 /**
@@ -433,7 +448,10 @@ export const COMMA_DECIMAL_LANGS = new Set([
  */
 export function parseLocalisedNumber(text, lang = 'en') {
   if (text === null || text === undefined) return null;
-  const raw = String(text).trim().replace(/ |&nbsp;/g, ' ').replace(/\s+/g, '');
+  const raw = String(text)
+    .trim()
+    .replace(/ |&nbsp;/g, ' ')
+    .replace(/\s+/g, '');
   if (!/^[+-]?[\d.,]+$/.test(raw) || !/\d/.test(raw)) return null;
 
   const commas = (raw.match(/,/g) ?? []).length;
@@ -484,25 +502,25 @@ export function parseLocalisedNumber(text, lang = 'en') {
  */
 export const GLOSSARY = {
   ru: {
-    'Масса': 'mass — check whether with or without magazine (с магазином / без магазина)',
+    Масса: 'mass — check whether with or without magazine (с магазином / без магазина)',
     'без магазина': 'WITHOUT magazine — this is massEmpty',
     'с магазином': 'WITH magazine — NOT massEmpty',
-    'Длина': 'overall length',
+    Длина: 'overall length',
     'Длина ствола': 'barrel length',
     'Начальная скорость': 'muzzle velocity, m/s',
     'Прицельная дальность': 'sight-graduated range — NOT effective range, and NOT velocity',
     'Темп стрельбы': 'cyclic rate, rounds/min',
     'Боевая скорострельность': 'PRACTICAL rate of fire — not the cyclic rate',
-    'Патрон': 'cartridge',
+    Патрон: 'cartridge',
     'Ёмкость магазина': 'magazine capacity',
-    'Калибр': 'calibre',
+    Калибр: 'calibre',
   },
   de: {
     Gewicht: 'mass — check whether loaded (geladen) or empty (ungeladen)',
     Gesamtlänge: 'overall length',
     Lauflänge: 'barrel length',
     Kaliber: 'calibre',
-    'Mündungsgeschwindigkeit': 'muzzle velocity, m/s',
+    Mündungsgeschwindigkeit: 'muzzle velocity, m/s',
     Kadenz: 'cyclic rate, rounds/min',
     Feuerarten: 'fire modes',
     Magazin: 'magazine',

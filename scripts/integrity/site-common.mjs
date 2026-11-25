@@ -30,12 +30,19 @@ import { join, relative } from 'node:path';
 const DIST = 'dist';
 const PUBLIC_ENV_KEYS = new Set(['GA_MEASUREMENT_ID']);
 const home = readFileSync(join(DIST, 'index.html'), 'utf8');
-const BASE = (home.match(/href="(\/[^/"]+\/)_astro\//) ?? home.match(/href="(\/[^/"]+\/)/))?.[1] ?? '/';
+const BASE =
+  (home.match(/href="(\/[^/"]+\/)_astro\//) ?? home.match(/href="(\/[^/"]+\/)/))?.[1] ?? '/';
 const SITE_URL = home.match(/<link[^>]+rel="canonical"[^>]+href="(https?:\/\/[^/"]+)/)?.[1] ?? '';
 
-const walk = (d) => readdirSync(d).flatMap((n) => { const p = join(d, n); return statSync(p).isDirectory() ? walk(p) : [p]; });
+const walk = (d) =>
+  readdirSync(d).flatMap((n) => {
+    const p = join(d, n);
+    return statSync(p).isDirectory() ? walk(p) : [p];
+  });
 const files = walk(DIST);
-const htmlFiles = files.filter((f) => f.endsWith('.html') && !relative(DIST, f).startsWith('pagefind'));
+const htmlFiles = files.filter(
+  (f) => f.endsWith('.html') && !relative(DIST, f).startsWith('pagefind'),
+);
 const rel = (f) => relative(DIST, f).replaceAll('\\', '/');
 const failures = [];
 const fail = (rule, where, what) => failures.push({ rule, where, what });
@@ -61,7 +68,11 @@ const idsOf = (file) => {
   return idsCache.get(file);
 };
 
-const strip = (html) => html.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<!--[\s\S]*?-->/g, '');
+const strip = (html) =>
+  html
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<!--[\s\S]*?-->/g, '');
 const inbound = new Map();
 const pageInfo = new Map();
 
@@ -77,20 +88,27 @@ for (const file of htmlFiles) {
   // 1. links, images, srcsets, anchors
   const refs = [];
   for (const m of html.matchAll(/\s(href|src)="([^"]+)"/g)) refs.push(m[2]);
-  for (const m of html.matchAll(/\ssrcset="([^"]+)"/g)) for (const part of m[1].split(',')) refs.push(part.trim().split(/\s+/)[0]);
+  for (const m of html.matchAll(/\ssrcset="([^"]+)"/g))
+    for (const part of m[1].split(',')) refs.push(part.trim().split(/\s+/)[0]);
   for (const ref of refs) {
     if (/^(https?:|mailto:|tel:|data:|javascript:)/.test(ref) || ref.startsWith('//')) continue;
     if (ref.startsWith('#')) {
-      if (ref.length > 1 && !idsOf(file).has(decodeURIComponent(ref.slice(1)))) fail('anchor', page, `#${ref.slice(1)} has no target on the page`);
+      if (ref.length > 1 && !idsOf(file).has(decodeURIComponent(ref.slice(1))))
+        fail('anchor', page, `#${ref.slice(1)} has no target on the page`);
       continue;
     }
     if (!ref.startsWith('/')) continue;
     const target = fileFor(ref);
     if (!target) continue;
-    if (!existsSync(target)) { fail('link', page, `${ref} was not built`); continue; }
-    if (target.endsWith('.html') && target !== file) inbound.set(target, (inbound.get(target) ?? 0) + 1);
+    if (!existsSync(target)) {
+      fail('link', page, `${ref} was not built`);
+      continue;
+    }
+    if (target.endsWith('.html') && target !== file)
+      inbound.set(target, (inbound.get(target) ?? 0) + 1);
     const hash = ref.split('#')[1];
-    if (hash && target.endsWith('.html') && !idsOf(target).has(decodeURIComponent(hash))) fail('anchor', page, `${ref} has no target`);
+    if (hash && target.endsWith('.html') && !idsOf(target).has(decodeURIComponent(hash)))
+      fail('anchor', page, `${ref} has no target`);
   }
 
   // 2. the document
@@ -100,24 +118,39 @@ for (const file of htmlFiles) {
   const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]);
   const dupes = [...new Set(ids.filter((id, i) => ids.indexOf(id) !== i))];
   if (dupes.length) fail('id', page, `duplicate id ${dupes.slice(0, 3).join(', ')}`);
-  for (const m of html.matchAll(/<img\b([^>]*)>/g)) if (!/\salt=/.test(m[1])) fail('alt', page, `<img${m[1].slice(0, 60)}> has no alt attribute`);
+  for (const m of html.matchAll(/<img\b([^>]*)>/g))
+    if (!/\salt=/.test(m[1])) fail('alt', page, `<img${m[1].slice(0, 60)}> has no alt attribute`);
   for (const m of html.matchAll(/<(a|button)\b([^>]*)>([\s\S]*?)<\/\1>/g)) {
     const [, tag, attrs, inner] = m;
     if (/\saria-hidden="true"/.test(attrs) || (tag === 'a' && !/\shref=/.test(attrs))) continue;
-    const text = inner.replace(/<[^>]+>/g, '').replace(/&[a-z#0-9]+;/gi, 'x').trim();
-    const named = text || /\saria-label(?:ledby)?="[^"]+"/.test(attrs) || /\stitle="[^"]+"/.test(attrs) || /<img[^>]+alt="[^"]+"/.test(inner) || /<svg[^>]*aria-label="[^"]+"/.test(inner) || /<title>[^<]+<\/title>/.test(inner);
+    const text = inner
+      .replace(/<[^>]+>/g, '')
+      .replace(/&[a-z#0-9]+;/gi, 'x')
+      .trim();
+    const named =
+      text ||
+      /\saria-label(?:ledby)?="[^"]+"/.test(attrs) ||
+      /\stitle="[^"]+"/.test(attrs) ||
+      /<img[^>]+alt="[^"]+"/.test(inner) ||
+      /<svg[^>]*aria-label="[^"]+"/.test(inner) ||
+      /<title>[^<]+<\/title>/.test(inner);
     if (!named) fail('name', page, `<${tag}${attrs.slice(0, 70)}> has no accessible name`);
   }
 
   // 3. structured data
   for (const m of raw.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/g)) {
-    try { JSON.parse(m[1]); } catch (error) { fail('json-ld', page, `does not parse: ${error.message}`); }
+    try {
+      JSON.parse(m[1]);
+    } catch (error) {
+      fail('json-ld', page, `does not parse: ${error.message}`);
+    }
   }
 }
 
 // 4. secrets
 if (existsSync('.env')) {
-  const secrets = readFileSync('.env', 'utf8').split(/\r?\n/)
+  const secrets = readFileSync('.env', 'utf8')
+    .split(/\r?\n/)
     .map((line) => line.match(/^\s*([A-Z0-9_]+)\s*=\s*"?([^"#\r\n]+?)"?\s*$/))
     .filter(Boolean)
     .filter(([, key, value]) => !PUBLIC_ENV_KEYS.has(key) && value.length >= 8);
@@ -125,19 +158,26 @@ if (existsSync('.env')) {
     for (const file of files) {
       if (!/\.(html|js|json|txt|xml|css|mjs)$/.test(file)) continue;
       const text = readFileSync(file, 'utf8');
-      for (const [, key, value] of secrets) if (text.includes(value)) fail('secret', rel(file), `contains the value of ${key}`);
+      for (const [, key, value] of secrets)
+        if (text.includes(value)) fail('secret', rel(file), `contains the value of ${key}`);
     }
   }
 }
 
 // 5. orphans and the sitemap
 const sitemapFiles = files.filter((f) => /sitemap-\d+\.xml$/.test(f));
-const listed = new Set(sitemapFiles.flatMap((f) => [...readFileSync(f, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])));
+const listed = new Set(
+  sitemapFiles.flatMap((f) =>
+    [...readFileSync(f, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]),
+  ),
+);
 for (const [file, info] of pageInfo) {
-  if (info.redirect || info.noindex || info.page === '404.html' || info.page === 'index.html') continue;
+  if (info.redirect || info.noindex || info.page === '404.html' || info.page === 'index.html')
+    continue;
   if (!inbound.get(file)) fail('orphan', info.page, 'no other page links to it');
   const url = `${SITE_URL}${BASE}${info.page.replace(/index\.html$/, '')}`;
-  if (sitemapFiles.length && !listed.has(url)) fail('sitemap', info.page, 'indexable but not in the sitemap');
+  if (sitemapFiles.length && !listed.has(url))
+    fail('sitemap', info.page, 'indexable but not in the sitemap');
 }
 for (const url of listed) {
   const target = fileFor(url.replace(SITE_URL, ''));
@@ -152,7 +192,11 @@ if (failures.length) {
     for (const f of list.slice(0, 8)) console.error(`    ${f.where}: ${f.what}`);
     if (list.length > 8) console.error(`    … and ${list.length - 8} more`);
   }
-  console.error(`\n[site-common] FAILED: ${failures.length} problem(s) over ${htmlFiles.length} pages.`);
+  console.error(
+    `\n[site-common] FAILED: ${failures.length} problem(s) over ${htmlFiles.length} pages.`,
+  );
   process.exit(1);
 }
-console.log(`[site-common] passed: ${htmlFiles.length} pages; links, anchors, documents, structured data, secrets, orphans and the sitemap.`);
+console.log(
+  `[site-common] passed: ${htmlFiles.length} pages; links, anchors, documents, structured data, secrets, orphans and the sitemap.`,
+);

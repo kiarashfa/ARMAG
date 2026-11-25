@@ -37,23 +37,21 @@ const jsonLd = itemList(
       states the definition it uses and why, instead of picking a side quietly.
     </p>
 
-    {
-      terms.length === 0 ? (
-        <p class="type-data mt-8 text-sm text-ink-muted">No terms authored yet.</p>
-      ) : (
-        <dl class="mt-8">
-          {terms.map((entry) => (
-            <div class="border-b border-line py-3">
-              <dt class="type-heading text-base">
-                <a href={glossaryHref(entry.id)} class="text-ui-accent">
-                  {entry.data.term}
-                </a>
-              </dt>
-              <dd class="type-data mt-1 text-sm text-ink-secondary">{entry.data.short}</dd>
-            </div>
-          ))}
-        </dl>
-      )
-    }
+    {terms.length === 0 ? (
+      <p class="type-data mt-8 text-sm text-ink-muted">No terms authored yet.</p>
+    ) : (
+      <dl class="mt-8">
+        {terms.map((entry) => (
+          <div class="border-b border-line py-3">
+            <dt class="type-heading text-base">
+              <a href={glossaryHref(entry.id)} class="text-ui-accent">
+                {entry.data.term}
+              </a>
+            </dt>
+            <dd class="type-data mt-1 text-sm text-ink-secondary">{entry.data.short}</dd>
+          </div>
+        ))}
+      </dl>
+    )}
   </div>
 </BaseLayout>

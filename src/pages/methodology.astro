@@ -27,9 +27,10 @@ import thresholds from '../data/thresholds.json';
     <Section id="status" title="Status propagation">
       <div class="prose type-body text-ink-secondary">
         <p>
-          A derived value inherits the <strong class="text-ink">worst status among its inputs</strong>.
-          Verified times verified is verified; any estimated input makes the output estimated; if the
-          published record disagrees about an input, the output says so too.
+          A derived value inherits the{' '}
+          <strong class="text-ink">worst status among its inputs</strong>. Verified times verified
+          is verified; any estimated input makes the output estimated; if the published record
+          disagrees about an input, the output says so too.
         </p>
         <p class="mt-4">
           An input with no number blocks the calculation entirely. We do not substitute a typical
@@ -110,21 +111,23 @@ import thresholds from '../data/thresholds.json';
       <table class="type-data mt-4 w-full text-sm">
         <thead>
           <tr class="border-b border-line-strong text-left text-ink-muted">
-            <th scope="col" class="p-2">Contribution</th>
-            <th scope="col" class="p-2 text-right">Points each</th>
+            <th scope="col" class="p-2">
+              Contribution
+            </th>
+            <th scope="col" class="p-2 text-right">
+              Points each
+            </th>
           </tr>
         </thead>
         <tbody>
-          {
-            Object.entries(thresholds.completeness.weights).map(([key, weight]) => (
-              <tr class="border-b border-line">
-                <th scope="row" class="p-2 text-left font-normal text-ink-secondary">
-                  {key.replace(/([A-Z])/g, ' $1').replace(/^./, (c) => c.toUpperCase())}
-                </th>
-                <td class="p-2 text-right text-ink">{weight}</td>
-              </tr>
-            ))
-          }
+          {Object.entries(thresholds.completeness.weights).map(([key, weight]) => (
+            <tr class="border-b border-line">
+              <th scope="row" class="p-2 text-left font-normal text-ink-secondary">
+                {key.replace(/([A-Z])/g, ' $1').replace(/^./, (c) => c.toUpperCase())}
+              </th>
+              <td class="p-2 text-right text-ink">{weight}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
       <p class="type-data mt-3 text-sm text-ink-muted">

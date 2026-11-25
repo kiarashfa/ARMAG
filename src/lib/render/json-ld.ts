@@ -36,7 +36,12 @@ export type JsonLdNode = Record<string, unknown>;
  * would plausibly reach for them, because the cost of listing them is one line
  * and the cost of missing one is the claim itself.
  */
-export const FORBIDDEN_TYPES = ['Product', 'Offer', 'AggregateOffer', 'PriceSpecification'] as const;
+export const FORBIDDEN_TYPES = [
+  'Product',
+  'Offer',
+  'AggregateOffer',
+  'PriceSpecification',
+] as const;
 
 /** Property names that describe a price or a purchase. */
 export const FORBIDDEN_KEYS = [
@@ -139,7 +144,10 @@ export interface CrumbLike {
  * The last crumb has no `item`: it is the current page, which is not a link to
  * itself, and schema.org treats a trailing `name`-only element as exactly that.
  */
-export function breadcrumbList(crumbs: CrumbLike[], absolute: (path: string) => string): JsonLdNode {
+export function breadcrumbList(
+  crumbs: CrumbLike[],
+  absolute: (path: string) => string,
+): JsonLdNode {
   return {
     '@context': CONTEXT,
     '@type': 'BreadcrumbList',

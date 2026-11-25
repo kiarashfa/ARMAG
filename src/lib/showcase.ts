@@ -82,7 +82,10 @@ export function featuredStart(days: number, count: number, size: number): number
 
 /** `count` entries of the pool from `start`, wrapping at the end. */
 export function featuredSlice<T>(pool: readonly T[], count: number, start: number): T[] {
-  return Array.from({ length: Math.min(count, pool.length) }, (_, i) => pool[(start + i) % pool.length]!);
+  return Array.from(
+    { length: Math.min(count, pool.length) },
+    (_, i) => pool[(start + i) % pool.length]!,
+  );
 }
 
 export interface Featured<T> {
@@ -144,7 +147,9 @@ for(var i=0;i<count&&i<c.length;i++)c[i].replaceWith(p[(start+i)%size].cloneNode
 })();`;
 
 /** The data attributes the script reads, for the element marked `data-featured`. */
-export function featuredAttributes(f: Featured<unknown>): Record<string, string | number | boolean> {
+export function featuredAttributes(
+  f: Featured<unknown>,
+): Record<string, string | number | boolean> {
   return {
     'data-featured': true,
     'data-featured-day': f.day,

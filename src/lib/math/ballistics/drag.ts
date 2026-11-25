@@ -49,8 +49,7 @@ const ISA_PRESSURE_EXPONENT = 5.255877;
  */
 export function standardAtmosphere(altitudeM = 0): Atmosphere {
   const temperature = ISA_TEMPERATURE_K - ISA_LAPSE_RATE * altitudeM;
-  const pressure =
-    ISA_PRESSURE_PA * (temperature / ISA_TEMPERATURE_K) ** ISA_PRESSURE_EXPONENT;
+  const pressure = ISA_PRESSURE_PA * (temperature / ISA_TEMPERATURE_K) ** ISA_PRESSURE_EXPONENT;
   return {
     density: pressure / (R_SPECIFIC_AIR * temperature),
     speedOfSound: Math.sqrt(GAMMA_AIR * R_SPECIFIC_AIR * temperature),

@@ -57,9 +57,7 @@ export function ejectaMomentum(inputs: RecoilInputs): Derived {
   const hasGas = inputs.propellantMass !== undefined && inputs.gasVelocityFactor !== undefined;
 
   return derive({
-    formula: hasGas
-      ? 'p = m_bullet · v + m_propellant · (k · v)'
-      : 'p = m_bullet · v',
+    formula: hasGas ? 'p = m_bullet · v + m_propellant · (k · v)' : 'p = m_bullet · v',
     unit: 'kg·m/s',
     modelStatus: hasGas ? undefined : 'estimated',
     inputs: [
@@ -73,7 +71,9 @@ export function ejectaMomentum(inputs: RecoilInputs): Derived {
         : []),
     ],
     assumptions: hasGas
-      ? ['Propellant gas is treated as leaving at k times the muzzle velocity, with k supplied by the caller.']
+      ? [
+          'Propellant gas is treated as leaving at k times the muzzle velocity, with k supplied by the caller.',
+        ]
       : [LOWER_BOUND_NOTE],
     compute: (values) => {
       const [bulletG, velocity] = values as [number, number];

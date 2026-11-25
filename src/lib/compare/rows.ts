@@ -37,7 +37,8 @@ import { GUN_FIGURES } from '../content/derived.ts';
  * still worth comparing: a bare year, a production range, a price, and free
  * text such as a cartridge's designer.
  */
-export type RowKind = 'scalar' | 'enum' | 'list' | 'number' | 'text' | 'years' | 'money' | 'derived';
+export type RowKind =
+  'scalar' | 'enum' | 'list' | 'number' | 'text' | 'years' | 'money' | 'derived';
 
 export interface CompareRow {
   /** The schema field name, or the derived figure's key. */
@@ -76,7 +77,15 @@ type AnySchema = { _zod?: { def?: unknown } };
 const defOf = (schema: AnySchema | undefined): ZodDef | undefined =>
   schema?._zod?.def as ZodDef | undefined;
 
-const WRAPPERS = ['optional', 'default', 'nullable', 'nonoptional', 'prefault', 'readonly', 'catch'];
+const WRAPPERS = [
+  'optional',
+  'default',
+  'nullable',
+  'nonoptional',
+  'prefault',
+  'readonly',
+  'catch',
+];
 
 /** Peels the wrappers a field may be declared behind to reach its real type. */
 function unwrap(schema: AnySchema): AnySchema {

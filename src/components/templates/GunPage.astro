@@ -143,7 +143,6 @@ const jsonLd = entryArticle({
     [reference.title, reference.publisher, reference.year].filter(Boolean).join(', '),
   ),
 });
-
 ---
 
 <BaseLayout title={gun.name} description={description} jsonLd={jsonLd}>
@@ -151,7 +150,12 @@ const jsonLd = entryArticle({
     <Breadcrumbs
       crumbs={[
         ...(gun.type
-          ? [{ label: labelFor('type', gun.type) ?? gun.type, path: taxonomyHref('type', gun.type) }]
+          ? [
+              {
+                label: labelFor('type', gun.type) ?? gun.type,
+                path: taxonomyHref('type', gun.type),
+              },
+            ]
           : []),
         { label: gun.name },
       ]}
@@ -162,77 +166,72 @@ const jsonLd = entryArticle({
       <div>
         <TypeBadge type={gun.type ?? null} />
         <h1 class="type-display mt-3 text-display text-ink">{gun.name}</h1>
-        {
-          gun.nativeName && (
-            <p class="type-title mt-1 text-xl text-ink-secondary" lang="und">
-              {gun.nativeName}
-            </p>
-          )
-        }
+        {gun.nativeName && (
+          <p class="type-title mt-1 text-xl text-ink-secondary" lang="und">
+            {gun.nativeName}
+          </p>
+        )}
         <p class="type-data mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-secondary">
-          {
-            makerName && gun.makerRef && (
-              <a href={makerHref(gun.makerRef)} class="text-ui-accent">
-                {makerName}
-              </a>
-            )
-          }
+          {makerName && gun.makerRef && (
+            <a href={makerHref(gun.makerRef)} class="text-ui-accent">
+              {makerName}
+            </a>
+          )}
           {years && <span>{years}</span>}
-          {
-            era && (
-              <a href={taxonomyHref('era', era)} class="text-ink-muted hover:text-ui-accent">
-                {labelFor('era', era) ?? humanise(era)}
-              </a>
-            )
-          }
+          {era && (
+            <a href={taxonomyHref('era', era)} class="text-ink-muted hover:text-ui-accent">
+              {labelFor('era', era) ?? humanise(era)}
+            </a>
+          )}
         </p>
 
-        {
-          gun.aliases.length > 0 && (
-            <p class="type-data mt-2 text-sm text-ink-muted">
-              Also known as {gun.aliases.map((a) => a.name).join(', ')}
-            </p>
-          )
-        }
+        {gun.aliases.length > 0 && (
+          <p class="type-data mt-2 text-sm text-ink-muted">
+            Also known as {gun.aliases.map((a) => a.name).join(', ')}
+          </p>
+        )}
 
-        {
-          gun.roles.length > 0 && (
-            <ul class="mt-3 flex flex-wrap gap-2">
-              {gun.roles.map((role) => (
-                <li>
-                  <a
-                    href={taxonomyHref('role', role)}
-                    class="type-data rounded-full border border-line-strong px-2 py-0.5 text-xs text-ink-secondary no-underline hover:text-ui-accent"
-                  >
-                    {labelFor('role', role) ?? humanise(role)}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          )
-        }
+        {gun.roles.length > 0 && (
+          <ul class="mt-3 flex flex-wrap gap-2">
+            {gun.roles.map((role) => (
+              <li>
+                <a
+                  href={taxonomyHref('role', role)}
+                  class="type-data rounded-full border border-line-strong px-2 py-0.5 text-xs text-ink-secondary no-underline hover:text-ui-accent"
+                >
+                  {labelFor('role', role) ?? humanise(role)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
 
         <EntryActions id={gun.id} name={gun.name} />
       </div>
 
-      {hero && <ImageFigure image={hero} id={`img-hero-${gun.id}`} priority sizes="(min-width: 1024px) 28rem, 100vw" />}
+      {hero && (
+        <ImageFigure
+          image={hero}
+          id={`img-hero-${gun.id}`}
+          priority
+          sizes="(min-width: 1024px) 28rem, 100vw"
+        />
+      )}
     </header>
 
     {/* ── Five-number stat strip ───────────────────────────────────────── */}
-    {
-      statStrip.length > 0 && (
-        <div class="mt-8 grid gap-4 rounded-lg border border-line bg-surface-1 p-4 sm:grid-cols-2 lg:grid-cols-5">
-          {statStrip.map((stat, i) => (
-            <FigureValue
-              id={`stat-${gun.id}-${i}`}
-              label={stat.label}
-              derived={stat.derived}
-              emphasis
-            />
-          ))}
-        </div>
-      )
-    }
+    {statStrip.length > 0 && (
+      <div class="mt-8 grid gap-4 rounded-lg border border-line bg-surface-1 p-4 sm:grid-cols-2 lg:grid-cols-5">
+        {statStrip.map((stat, i) => (
+          <FigureValue
+            id={`stat-${gun.id}-${i}`}
+            label={stat.label}
+            derived={stat.derived}
+            emphasis
+          />
+        ))}
+      </div>
+    )}
 
     {/* ── Lede ─────────────────────────────────────────────────────────── */}
     <div class="prose type-body mt-8 text-lg text-ink-secondary">
@@ -240,117 +239,121 @@ const jsonLd = entryArticle({
     </div>
 
     {/* ── Derived metrics: the product ─────────────────────────────────── */}
-    {
-      derivedMetrics.length > 0 && (
-        <Section
-          id="derived"
-          title="Derived figures"
-          standfirst="Computed from the sourced values above. Open ƒ on any figure for the formula, its inputs, and the assumptions it makes."
-        >
-          <div class="grid gap-5 rounded-lg border border-line bg-surface-1 p-5 sm:grid-cols-2 lg:grid-cols-3">
-            {derivedMetrics.map((metric, i) => (
-              <FigureValue id={`derived-${gun.id}-${i}`} label={metric.label} derived={metric.derived} />
-            ))}
-          </div>
-        </Section>
-      )
-    }
+    {derivedMetrics.length > 0 && (
+      <Section
+        id="derived"
+        title="Derived figures"
+        standfirst="Computed from the sourced values above. Open ƒ on any figure for the formula, its inputs, and the assumptions it makes."
+      >
+        <div class="grid gap-5 rounded-lg border border-line bg-surface-1 p-5 sm:grid-cols-2 lg:grid-cols-3">
+          {derivedMetrics.map((metric, i) => (
+            <FigureValue
+              id={`derived-${gun.id}-${i}`}
+              label={metric.label}
+              derived={metric.derived}
+            />
+          ))}
+        </div>
+      </Section>
+    )}
 
     {/* ── Variants ─────────────────────────────────────────────────────── */}
-    {
-      gun.variants.length > 0 && (
-        <Section id="variants" title="Variants">
-          <div class="variants">
-            <label class="delta-toggle type-data mb-4 inline-flex cursor-pointer items-center gap-2 text-sm text-ink-secondary">
-              <input type="checkbox" class="accent-[var(--color-ui-accent)]" />
-              Compare all variants in one table
-            </label>
+    {gun.variants.length > 0 && (
+      <Section id="variants" title="Variants">
+        <div class="variants">
+          <label class="delta-toggle type-data mb-4 inline-flex cursor-pointer items-center gap-2 text-sm text-ink-secondary">
+            <input type="checkbox" class="accent-[var(--color-ui-accent)]" />
+            Compare all variants in one table
+          </label>
 
-            <div class={`tabs ${stacked ? 'tabs--stacked' : ''}`}>
-              <div class="tabstrip flex flex-wrap gap-2" role="tablist">
-                {gun.variants.map((variant, i) => (
-                  <label class="tab type-data cursor-pointer rounded border border-line px-3 py-1.5 text-sm text-ink-secondary">
-                    <input type="radio" name={tabGroup} checked={i === 0} />
-                    <span>{variant.name}</span>
-                  </label>
-                ))}
-              </div>
+          <div class={`tabs ${stacked ? 'tabs--stacked' : ''}`}>
+            <div class="tabstrip flex flex-wrap gap-2" role="tablist">
+              {gun.variants.map((variant, i) => (
+                <label class="tab type-data cursor-pointer rounded border border-line px-3 py-1.5 text-sm text-ink-secondary">
+                  <input type="radio" name={tabGroup} checked={i === 0} />
+                  <span>{variant.name}</span>
+                </label>
+              ))}
+            </div>
 
-              <div class="tabpanels mt-4">
-                {gun.variants.map((variant) => (
-                  <div class="tabpanel rounded-lg border border-line bg-surface-1 p-4">
-                    {/*
+            <div class="tabpanels mt-4">
+              {gun.variants.map((variant) => (
+                <div class="tabpanel rounded-lg border border-line bg-surface-1 p-4">
+                  {/*
                       Its own heading, in the static HTML — the condition on
                       which variants-as-tabs was accepted at all.
                     */}
-                    <h3 class="type-heading text-base text-ink">{variant.name}</h3>
-                    {variant.nativeName && (
-                      <p class="type-data text-sm text-ink-muted">{variant.nativeName}</p>
-                    )}
-                    {formatYears(variant.productionYears) && (
-                      <p class="type-data text-sm text-ink-secondary">
-                        {formatYears(variant.productionYears)}
-                      </p>
-                    )}
-                    {variant.summary && (
-                      <p class="type-body mt-2 text-sm text-ink-secondary">
-                        {variant.summary}
-                      </p>
-                    )}
-                    {variant.promotedTo && (
-                      <p class="type-data mt-2 text-sm">
-                        <a href={gunHref(variant.promotedTo)} class="text-ui-accent">
-                          This variant now has its own page →
-                        </a>
-                      </p>
-                    )}
+                  <h3 class="type-heading text-base text-ink">{variant.name}</h3>
+                  {variant.nativeName && (
+                    <p class="type-data text-sm text-ink-muted">{variant.nativeName}</p>
+                  )}
+                  {formatYears(variant.productionYears) && (
+                    <p class="type-data text-sm text-ink-secondary">
+                      {formatYears(variant.productionYears)}
+                    </p>
+                  )}
+                  {variant.summary && (
+                    <p class="type-body mt-2 text-sm text-ink-secondary">{variant.summary}</p>
+                  )}
+                  {variant.promotedTo && (
+                    <p class="type-data mt-2 text-sm">
+                      <a href={gunHref(variant.promotedTo)} class="text-ui-accent">
+                        This variant now has its own page →
+                      </a>
+                    </p>
+                  )}
 
-                    <dl class="mt-3">
-                      {Object.entries(variant.overrides).map(([field, value]) =>
-                        value && typeof value === 'object' && 'unit' in value ? (
-                          <SpecRow label={rowLabel(field)} value={value as never} />
-                        ) : null,
-                      )}
-                    </dl>
-                  </div>
-                ))}
-              </div>
+                  <dl class="mt-3">
+                    {Object.entries(variant.overrides).map(([field, value]) =>
+                      value && typeof value === 'object' && 'unit' in value ? (
+                        <SpecRow label={rowLabel(field)} value={value as never} />
+                      ) : null,
+                    )}
+                  </dl>
+                </div>
+              ))}
             </div>
+          </div>
 
-            {/*
+          {/*
               The delta table: only what each variant CHANGES, which is the
               whole delta-override pattern made visible.
             */}
-            <div class="delta-table overflow-x-auto">
-              <table class="type-data w-full min-w-[36rem] text-sm">
-                <thead>
-                  <tr class="border-b border-line-strong text-left text-ink-muted">
-                    <th scope="col" class="p-2">Variant</th>
-                    <th scope="col" class="p-2">Years</th>
-                    <th scope="col" class="p-2">Changes</th>
+          <div class="delta-table overflow-x-auto">
+            <table class="type-data w-full min-w-[36rem] text-sm">
+              <thead>
+                <tr class="border-b border-line-strong text-left text-ink-muted">
+                  <th scope="col" class="p-2">
+                    Variant
+                  </th>
+                  <th scope="col" class="p-2">
+                    Years
+                  </th>
+                  <th scope="col" class="p-2">
+                    Changes
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {gun.variants.map((variant) => (
+                  <tr class="border-b border-line align-top">
+                    <th scope="row" class="p-2 text-left font-normal text-ink">
+                      {variant.name}
+                    </th>
+                    <td class="p-2 text-ink-secondary">
+                      {formatYears(variant.productionYears) ?? '—'}
+                    </td>
+                    <td class="p-2 text-ink-secondary">
+                      {Object.keys(variant.overrides).map(rowLabel).join(', ') || 'no spec change'}
+                    </td>
                   </tr>
-                </thead>
-                <tbody>
-                  {gun.variants.map((variant) => (
-                    <tr class="border-b border-line align-top">
-                      <th scope="row" class="p-2 text-left font-normal text-ink">
-                        {variant.name}
-                      </th>
-                      <td class="p-2 text-ink-secondary">
-                        {formatYears(variant.productionYears) ?? '—'}
-                      </td>
-                      <td class="p-2 text-ink-secondary">
-                        {Object.keys(variant.overrides).map(rowLabel).join(', ') || 'no spec change'}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                ))}
+              </tbody>
+            </table>
           </div>
-        </Section>
-      )
-    }
+        </div>
+      </Section>
+    )}
 
     {/* ── Specifications ───────────────────────────────────────────────── */}
     <Section
@@ -365,147 +368,140 @@ const jsonLd = entryArticle({
         idPrefix={`spec-${gun.id}`}
       />
 
-      {
-        gun.chamberings.length > 0 && (
-          <div class="mt-6 rounded-lg border border-line bg-surface-1 p-4">
-            <h3 class="type-heading text-sm uppercase tracking-wider text-ink-muted">Chamberings</h3>
-            <ul class="mt-3 flex flex-col gap-2">
-              {gun.chamberings.map((chambering) => (
-                <li class="type-data flex flex-wrap items-baseline gap-x-3 text-sm">
-                  <a href={cartridgeHref(chambering.cartridgeRef)} class="text-ui-accent">
-                    {cartridgeNames[chambering.cartridgeRef] ?? chambering.cartridgeRef}
-                  </a>
-                  {chambering.primary && (
-                    <span class="text-xs uppercase tracking-wide text-ink-muted">primary</span>
-                  )}
-                  <span class="text-ink-secondary">
-                    <UnitValue value={chambering.capacity.value} unit="" /> rounds
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )
-      }
+      {gun.chamberings.length > 0 && (
+        <div class="mt-6 rounded-lg border border-line bg-surface-1 p-4">
+          <h3 class="type-heading text-sm uppercase tracking-wider text-ink-muted">Chamberings</h3>
+          <ul class="mt-3 flex flex-col gap-2">
+            {gun.chamberings.map((chambering) => (
+              <li class="type-data flex flex-wrap items-baseline gap-x-3 text-sm">
+                <a href={cartridgeHref(chambering.cartridgeRef)} class="text-ui-accent">
+                  {cartridgeNames[chambering.cartridgeRef] ?? chambering.cartridgeRef}
+                </a>
+                {chambering.primary && (
+                  <span class="text-xs uppercase tracking-wide text-ink-muted">primary</span>
+                )}
+                <span class="text-ink-secondary">
+                  <UnitValue value={chambering.capacity.value} unit="" /> rounds
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </Section>
 
     {/* ── Scale silhouette ───────────────── */}
-    {
-      silhouettes.length > 0 && (
-        <Section
-          id="silhouette"
-          title="Scale"
-          standfirst="A to-scale outline against family siblings. The dimensions are sourced; the shape is a representative outline for the type, and says so."
-        >
-          <Silhouette subjects={silhouettes} highlightId={gun.id} />
-          <p class="type-data mt-3 text-sm text-ink-secondary">
-            <a href={sizeToolHref} class="text-ui-accent">
-              Compare this against any other entry &rarr;
-            </a>
-          </p>
-        </Section>
-      )
-    }
+    {silhouettes.length > 0 && (
+      <Section
+        id="silhouette"
+        title="Scale"
+        standfirst="A to-scale outline against family siblings. The dimensions are sourced; the shape is a representative outline for the type, and says so."
+      >
+        <Silhouette subjects={silhouettes} highlightId={gun.id} />
+        <p class="type-data mt-3 text-sm text-ink-secondary">
+          <a href={sizeToolHref} class="text-ui-accent">
+            Compare this against any other entry &rarr;
+          </a>
+        </p>
+      </Section>
+    )}
 
     {/* ── Lineage ──────────────────────────────────────────────────────── */}
-    {
-      (lineageOut.length > 0 ||
-        lineageIn.length > 0 ||
-        familyMembers.length > 0 ||
-        (familyName && gun.familyRef)) && (
-        <Section id="lineage" title="Lineage">
-          <div class="grid gap-6 sm:grid-cols-2">
-            {[
-              { heading: 'This design', edges: lineageOut },
-              { heading: 'What came from it', edges: lineageIn },
-            ].map((group) =>
-              group.edges.length > 0 ? (
-                <div>
-                  <h3 class="type-heading text-sm uppercase tracking-wider text-ink-muted">
-                    {group.heading}
-                  </h3>
-                  <ul class="mt-2 flex flex-col gap-1">
-                    {group.edges.map((edge) => (
-                      <li class="type-data text-sm">
-                        <span class="text-ink-muted">{edge.label}</span>{' '}
-                        <a href={gunHref(edge.entry.id)} class="text-ui-accent">
-                          {edge.entry.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null,
-            )}
-
-            {familyName && gun.familyRef && (
-              <div>
-                <h3 class="type-heading text-sm uppercase tracking-wider text-ink-muted">Family</h3>
-                <p class="type-data mt-2 text-sm">
-                  <a href={gunHref(gun.familyRef)} class="text-ui-accent">
-                    {familyName}
-                  </a>
-                </p>
-              </div>
-            )}
-
-            {familyMembers.length > 0 && (
+    {(lineageOut.length > 0 ||
+      lineageIn.length > 0 ||
+      familyMembers.length > 0 ||
+      (familyName && gun.familyRef)) && (
+      <Section id="lineage" title="Lineage">
+        <div class="grid gap-6 sm:grid-cols-2">
+          {[
+            { heading: 'This design', edges: lineageOut },
+            { heading: 'What came from it', edges: lineageIn },
+          ].map((group) =>
+            group.edges.length > 0 ? (
               <div>
                 <h3 class="type-heading text-sm uppercase tracking-wider text-ink-muted">
-                  In this family
+                  {group.heading}
                 </h3>
                 <ul class="mt-2 flex flex-col gap-1">
-                  {familyMembers.map((member) => (
+                  {group.edges.map((edge) => (
                     <li class="type-data text-sm">
-                      <a href={gunHref(member.id)} class="text-ui-accent">
-                        {member.name}
+                      <span class="text-ink-muted">{edge.label}</span>{' '}
+                      <a href={gunHref(edge.entry.id)} class="text-ui-accent">
+                        {edge.entry.name}
                       </a>
                     </li>
                   ))}
                 </ul>
               </div>
-            )}
-          </div>
-        </Section>
-      )
-    }
+            ) : null,
+          )}
+
+          {familyName && gun.familyRef && (
+            <div>
+              <h3 class="type-heading text-sm uppercase tracking-wider text-ink-muted">Family</h3>
+              <p class="type-data mt-2 text-sm">
+                <a href={gunHref(gun.familyRef)} class="text-ui-accent">
+                  {familyName}
+                </a>
+              </p>
+            </div>
+          )}
+
+          {familyMembers.length > 0 && (
+            <div>
+              <h3 class="type-heading text-sm uppercase tracking-wider text-ink-muted">
+                In this family
+              </h3>
+              <ul class="mt-2 flex flex-col gap-1">
+                {familyMembers.map((member) => (
+                  <li class="type-data text-sm">
+                    <a href={gunHref(member.id)} class="text-ui-accent">
+                      {member.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </Section>
+    )}
 
     {/* ── Gallery ──────────────────────────────────────────────────────── */}
-    {
-      gallery.length > 0 && (
-        <Section id="gallery" title="Gallery">
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {gallery.map((image, i) => (
-              <ImageFigure image={image} id={`img-${gun.id}-${i}`} sizes="(min-width: 640px) 33vw, 100vw" />
-            ))}
-          </div>
-        </Section>
-      )
-    }
+    {gallery.length > 0 && (
+      <Section id="gallery" title="Gallery">
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {gallery.map((image, i) => (
+            <ImageFigure
+              image={image}
+              id={`img-${gun.id}-${i}`}
+              sizes="(min-width: 640px) 33vw, 100vw"
+            />
+          ))}
+        </div>
+      </Section>
+    )}
 
     {/*
       The prose and what belongs with it (references, the record) stack at
       full width. Side by side, whichever was shorter left an empty column
       beside the other, and the prose wrapped at half the page.
     */}
-    <div
-      class="mt-(--layout-section-gap) flex flex-col gap-(--layout-section-gap)"
-    >
-    <Section id="detail" title="Detail" flush>
-      <div class="prose type-body text-ink-secondary">
-        <slot />
-      </div>
-    </Section>
+    <div class="mt-(--layout-section-gap) flex flex-col gap-(--layout-section-gap)">
+      <Section id="detail" title="Detail" flush>
+        <div class="prose type-body text-ink-secondary">
+          <slot />
+        </div>
+      </Section>
 
-    <Section
-      id="references"
-      flush
-      title="References"
-      standfirst="This entry's own bibliography. Every citation key on this page resolves into this list."
-    >
-      <ol class="flex list-decimal flex-col gap-3 pl-5">
-        {
-          gun.references.map((reference) => (
+      <Section
+        id="references"
+        flush
+        title="References"
+        standfirst="This entry's own bibliography. Every citation key on this page resolves into this list."
+      >
+        <ol class="flex list-decimal flex-col gap-3 pl-5">
+          {gun.references.map((reference) => (
             <li id={`ref-${reference.key}`} class="type-data text-sm text-ink-secondary">
               {reference.url ? (
                 <a href={reference.url} rel="nofollow noopener" class="text-ui-accent">
@@ -517,18 +513,18 @@ const jsonLd = entryArticle({
               {reference.publisher && <span> · {reference.publisher}</span>}
               {reference.year && <span> · {reference.year}</span>}
               {reference.revision && <span> · {reference.revision}</span>}
-              {reference.accessed && <span class="text-ink-muted"> · read {reference.accessed}</span>}
+              {reference.accessed && (
+                <span class="text-ink-muted"> · read {reference.accessed}</span>
+              )}
               {reference.license && <span class="text-ink-muted"> · {reference.license}</span>}
             </li>
-          ))
-        }
-      </ol>
+          ))}
+        </ol>
 
-      <p class="type-data mt-4 text-xs text-ink-muted">
-        Last verified {gun.lastVerified} · review status: {REVIEW_STATUS_LABEL[gun.reviewStatus]}
-      </p>
-    </Section>
+        <p class="type-data mt-4 text-xs text-ink-muted">
+          Last verified {gun.lastVerified} · review status: {REVIEW_STATUS_LABEL[gun.reviewStatus]}
+        </p>
+      </Section>
     </div>
-
   </div>
 </BaseLayout>

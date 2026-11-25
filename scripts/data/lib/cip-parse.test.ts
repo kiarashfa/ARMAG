@@ -16,25 +16,88 @@ import {
 } from './cip-parse.mjs';
 
 const SHEET = [
-  'C.I.P.', '9 mm Luger', 'TAB.', 'IV',
+  'C.I.P.',
+  '9 mm Luger',
+  'TAB.',
+  'IV',
   'Country of Origin: DE',
   'Alternative Names: 9 mm Para(bellum), 9 x 19 (mm)',
   'CARTRIDGE MAXI',
-  'Lengths', 'L1', '=', 'L2', '=', 'L3 1)', '=', '19.15', '-0.25',
-  'L4', '=', 'L5', '=', 'L6', '=', '29.69',
-  'Case Head', 'R', '=', '1.27', 'R1', '=', '9.96',
-  'Powder Chamber', 'P1', '=', '9.93',
-  'Collar', 'H1', '=', 'H2 1)', '=', '9.65',
-  'Projectile', 'G1 1)', '=', '9.03',
-  'Pressures (Energies)', 'Pmax', '=', '2350 bar', 'PK', '=', '2703 bar',
-  'Miscellaneous Dimensions', 'delta L', '=',
+  'Lengths',
+  'L1',
+  '=',
+  'L2',
+  '=',
+  'L3 1)',
+  '=',
+  '19.15',
+  '-0.25',
+  'L4',
+  '=',
+  'L5',
+  '=',
+  'L6',
+  '=',
+  '29.69',
+  'Case Head',
+  'R',
+  '=',
+  '1.27',
+  'R1',
+  '=',
+  '9.96',
+  'Powder Chamber',
+  'P1',
+  '=',
+  '9.93',
+  'Collar',
+  'H1',
+  '=',
+  'H2 1)',
+  '=',
+  '9.65',
+  'Projectile',
+  'G1 1)',
+  '=',
+  '9.03',
+  'Pressures (Energies)',
+  'Pmax',
+  '=',
+  '2350 bar',
+  'PK',
+  '=',
+  '2703 bar',
+  'Miscellaneous Dimensions',
+  'delta L',
+  '=',
   'CHAMBER MINI',
-  'Lengths', 'L3 1)', '=', '19.15',
-  'Breech', 'R1', '=', '10.00',
-  'Powder Chamber', 'P1 1)', '=', '9.96',
-  'Collar', 'H2 1)', '=', '9.68',
-  'Commencement of Rifling', 'G1 1)*', '=', '9.05',
-  'Grooves', 'N', '=', '6', 'u', '=', '250.00',
+  'Lengths',
+  'L3 1)',
+  '=',
+  '19.15',
+  'Breech',
+  'R1',
+  '=',
+  '10.00',
+  'Powder Chamber',
+  'P1 1)',
+  '=',
+  '9.96',
+  'Collar',
+  'H2 1)',
+  '=',
+  '9.68',
+  'Commencement of Rifling',
+  'G1 1)*',
+  '=',
+  '9.05',
+  'Grooves',
+  'N',
+  '=',
+  '6',
+  'u',
+  '=',
+  '250.00',
 ].join('\n');
 
 test('the two sections are kept apart — the same letter means two things', () => {
@@ -123,14 +186,23 @@ test('the English datasheet is found when the language tag is mid-filename', () 
 
 test('a metric or military name finds the commercial one C.I.P. files it under', () => {
   const rows = parseIndex(INDEX, 4);
-  assert.deepEqual(searchIndex(rows, '9×19mm Parabellum').map((r) => r.name), ['9 mm Luger']);
-  assert.deepEqual(searchIndex(rows, '9x19').map((r) => r.name), ['9 mm Luger']);
+  assert.deepEqual(
+    searchIndex(rows, '9×19mm Parabellum').map((r) => r.name),
+    ['9 mm Luger'],
+  );
+  assert.deepEqual(
+    searchIndex(rows, '9x19').map((r) => r.name),
+    ['9 mm Luger'],
+  );
 });
 
 test('a query is not matched by a row whose name it merely contains', () => {
   // `9x19` matching a row called `9 mm` — the normalised `9` is a substring of
   // nearly everything, and a wrong datasheet is worse than none.
-  const rows = parseIndex('<tr id="cartridge-1"><td>9 mm</td><td></td><td></td><td>US</td><td></td></tr>', 3);
+  const rows = parseIndex(
+    '<tr id="cartridge-1"><td>9 mm</td><td></td><td></td><td>US</td><td></td></tr>',
+    3,
+  );
   assert.deepEqual(searchIndex(rows, '9x19'), []);
 });
 

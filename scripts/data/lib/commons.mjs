@@ -47,11 +47,13 @@ export async function articleImages(title) {
     }),
   );
   const page = data.query?.pages?.[0];
-  return (page?.images ?? [])
-    .map((i) => i.title)
-    .filter((t) => /\.(jpe?g|png|webp)$/i.test(t))
-    // Wikipedia decorates every article with the same handful of icons.
-    .filter((t) => !/(commons-logo|wiktionary|edit-ltr|question_book|ambox|flag of)/i.test(t));
+  return (
+    (page?.images ?? [])
+      .map((i) => i.title)
+      .filter((t) => /\.(jpe?g|png|webp)$/i.test(t))
+      // Wikipedia decorates every article with the same handful of icons.
+      .filter((t) => !/(commons-logo|wiktionary|edit-ltr|question_book|ambox|flag of)/i.test(t))
+  );
 }
 
 export async function wikidataIdFor(title) {

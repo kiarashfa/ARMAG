@@ -13,7 +13,12 @@
 import type { CartridgeData, CartridgeLoad } from '../../schemas/cartridge.ts';
 import type { GunData } from '../../schemas/gun.ts';
 import type { PropertyValue } from '../../schemas/primitives.ts';
-import { kineticEnergy, momentum, powerFactor, sectionalDensity } from '../math/ballistics/energy.ts';
+import {
+  kineticEnergy,
+  momentum,
+  powerFactor,
+  sectionalDensity,
+} from '../math/ballistics/energy.ts';
 import { velocityForBarrel } from '../math/ballistics/velocity.ts';
 import { magazineDumpTime, sightingErrorAngle } from '../math/handling.ts';
 import { loadedMass } from '../math/mass.ts';

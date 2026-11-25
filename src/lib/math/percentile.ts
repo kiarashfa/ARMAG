@@ -120,7 +120,9 @@ export function ladder<T>(
 ): { entry: T; value: number; result: PercentileResult }[] {
   const withValues = entries
     .map((entry) => ({ entry, value: valueOf(entry) }))
-    .filter((row): row is { entry: T; value: number } => row.value !== null && Number.isFinite(row.value));
+    .filter(
+      (row): row is { entry: T; value: number } => row.value !== null && Number.isFinite(row.value),
+    );
 
   const set: ComparisonSet = { label: setLabel, values: withValues.map((row) => row.value) };
 
