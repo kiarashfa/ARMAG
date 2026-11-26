@@ -1,0 +1,430 @@
+---
+// Cookie bar for Google Analytics. Nothing from Google loads until the visitor accepts.
+---
+
+<div
+  class="consent consent--edge consent--bd-topAccent consent--emph consent--lead-caps"
+  data-consent
+  role="region"
+  aria-label="Cookie consent"
+  hidden
+>
+  <div class="consent-in">
+    <span class="consent-ic">
+      <svg
+        viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        aria-hidden="true"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" />
+        <path d="M9 12l2 2 4-4" />
+      </svg>
+    </span>
+    <p class="consent-text">
+      <strong class="consent-lead">This website uses Google Analytics to measure traffic.</strong>{' '}
+      The cookie is set only with your consent, and you can change your choice at any time.{' '}
+      <a
+        class="consent-link"
+        href={`${(import.meta.env.BASE_URL + '/').replace('//', '/')}about/#privacy`}
+      >
+        Privacy
+      </a>
+    </p>
+    <div class="consent-btns">
+      <button type="button" class="consent-b" data-consent-choice="denied">
+        Reject
+      </button>
+      <button type="button" class="consent-b" data-consent-choice="granted">
+        Accept
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { GA_MEASUREMENT_ID } from '../config/measurement-id';
+  import { initConsent } from '../lib/consent';
+
+  initConsent(GA_MEASUREMENT_ID, document.querySelector<HTMLElement>('[data-consent]'));
+</script>
+
+<style is:global>
+  .consent {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    box-sizing: border-box;
+    padding: var(--c-pad) max(16px, calc((100% - var(--c-maxw)) / 2));
+    padding-bottom: calc(var(--c-pad) + env(safe-area-inset-bottom, 0px));
+    background: var(--c-bg);
+    -webkit-backdrop-filter: var(--c-bf);
+    backdrop-filter: var(--c-bf);
+    color: var(--c-fg);
+    font: 400 var(--c-fs) / 1.4 var(--c-font);
+    text-shadow: var(--c-tsh);
+    box-shadow: var(--c-shadow);
+    border-radius: var(--c-rad);
+    text-align: left;
+  }
+  .consent[hidden] {
+    display: none;
+  }
+  .consent:not([hidden]) {
+    animation: consent-in 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .consent.is-out {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.25s,
+      transform 0.25s;
+  }
+  @keyframes consent-in {
+    from {
+      transform: translateY(110%);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .consent:not([hidden]) {
+      animation: none;
+    }
+    .consent.is-out {
+      transition: none;
+    }
+  }
+  @media print {
+    .consent {
+      display: none;
+    }
+  }
+  .consent--inset {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    --c-maxw: 100000px;
+    padding-inline: 16px;
+  }
+  .consent--pill {
+    left: 0;
+    right: 0;
+    margin: 0 auto 14px;
+    width: min(calc(100% - 24px), 880px);
+    --c-maxw: 100000px;
+    padding-inline: 20px;
+  }
+  .consent--label {
+    left: 0;
+    right: 0;
+    margin: 0 auto 14px;
+    width: min(calc(100% - 24px), 660px);
+    --c-maxw: 100000px;
+    padding-inline: 18px;
+  }
+  .consent-in {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .consent-text {
+    flex: 1;
+    margin: 0;
+  }
+  .consent-ic {
+    flex: none;
+    display: grid;
+    place-items: center;
+    color: var(--c-acc);
+  }
+  .consent-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--c-acc);
+  }
+  .consent-lead {
+    display: block;
+    margin-bottom: 1px;
+    font-weight: 700;
+  }
+  .consent--lead-accent .consent-lead {
+    color: var(--c-acc);
+  }
+  .consent--lead-caps .consent-lead {
+    color: var(--c-acc);
+    font-size: 0.78em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .consent-pfx {
+    color: var(--c-acc);
+    font-weight: 700;
+    white-space: pre;
+  }
+  .consent-cur {
+    display: inline-block;
+    width: 0.6em;
+    height: 1.05em;
+    margin-left: 5px;
+    vertical-align: -3px;
+    background: var(--c-acc);
+    animation: consent-blink 1s steps(2, start) infinite;
+  }
+  @keyframes consent-blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .consent-cur {
+      animation: none;
+    }
+  }
+  .consent-link {
+    color: var(--c-acc);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    white-space: nowrap;
+  }
+  .consent-btns {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: 8px;
+  }
+  .consent-b {
+    min-height: var(--c-btnh);
+    min-width: var(--c-btnw);
+    padding: 0 14px;
+    border: var(--c-bw) solid var(--c-bline);
+    border-radius: var(--c-brad);
+    background: var(--c-bbg);
+    color: var(--c-bfg);
+    font: 600 var(--c-fs) var(--c-font);
+    cursor: pointer;
+  }
+  .consent-b:hover {
+    filter: brightness(1.12);
+  }
+  .consent-b:focus-visible,
+  .consent-link:focus-visible {
+    outline: 2px solid var(--c-acc);
+    outline-offset: 2px;
+  }
+  .consent--up .consent-b {
+    font-size: calc(var(--c-fs) - 1px);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .consent--ghost .consent-b {
+    min-width: 0;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .consent--seg .consent-btns {
+    gap: 0;
+  }
+  .consent--seg .consent-b {
+    border-radius: 0;
+  }
+  .consent--seg .consent-b:first-child {
+    border-radius: var(--c-brad) 0 0 var(--c-brad);
+  }
+  .consent--seg .consent-b:last-child {
+    border-radius: 0 var(--c-brad) var(--c-brad) 0;
+    margin-left: -1px;
+  }
+  .consent--links .consent-btns {
+    gap: 6px;
+  }
+  .consent--links .consent-b {
+    min-width: 0;
+    min-height: 0;
+    padding: 2px 4px;
+    border: 0;
+    background: none;
+    color: var(--c-fg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .consent--links .consent-b + .consent-b::before {
+    content: '/';
+    display: inline-block;
+    margin-right: 10px;
+    color: var(--c-muted);
+    text-decoration: none;
+  }
+  .consent--emph .consent-b[data-consent-choice='granted'] {
+    border-color: var(--c-accbg);
+    background: var(--c-accbg);
+    color: var(--c-accfg);
+  }
+  .consent--key .consent-b {
+    border-bottom-width: 3px;
+    background: linear-gradient(180deg, var(--c-kt), var(--c-kb));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+  .consent--key .consent-b:active {
+    border-bottom-width: 2px;
+    transform: translateY(1px);
+  }
+  .consent--br-square .consent-b::before {
+    content: '[ ';
+  }
+  .consent--br-square .consent-b::after {
+    content: ' ]';
+  }
+  .consent--br-angle .consent-b::before {
+    content: '< ';
+  }
+  .consent--br-angle .consent-b::after {
+    content: ' >';
+  }
+  .consent--br-paren .consent-b::before {
+    content: '( ';
+  }
+  .consent--br-paren .consent-b::after {
+    content: ' )';
+  }
+  .consent--links.consent--br-square .consent-b + .consent-b::before {
+    content: '[ ';
+    margin: 0;
+  }
+  .consent--links.consent--br-angle .consent-b + .consent-b::before {
+    content: '< ';
+    margin: 0;
+  }
+  .consent--bd-top {
+    border-top: 1px solid var(--c-line);
+  }
+  .consent--bd-topAccent {
+    border-top: 1px solid var(--c-acc);
+  }
+  .consent--bd-thick {
+    border-top: 3px solid var(--c-acc);
+  }
+  .consent--bd-outline {
+    border: 1px solid var(--c-line);
+  }
+  .consent--bd-outlineAccent {
+    border: 1px solid var(--c-acc);
+  }
+  .consent--bd-left {
+    border-left: 4px solid var(--c-acc);
+  }
+  .consent--bd-double {
+    border-top: 4px double var(--c-line-s);
+  }
+  .consent--bd-grad::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--c-acc), var(--c-acc2), transparent 88%);
+  }
+  @media (max-width: 640px) {
+    .consent--pill {
+      --c-rad: 20px;
+    }
+    .consent-in {
+      flex-flow: row wrap;
+      gap: 8px;
+    }
+    .consent-text {
+      flex: 1 1 100%;
+    }
+    .consent-ic {
+      display: none;
+    }
+    .consent-lead {
+      display: inline;
+      margin: 0;
+      font-size: inherit;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+    .consent--lead-caps .consent-lead {
+      color: var(--c-acc);
+      font-size: inherit;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+    .consent-btns {
+      width: 100%;
+    }
+    .consent-b {
+      flex: 1;
+      min-width: 0;
+      min-height: 34px;
+    }
+    .consent--links .consent-btns {
+      justify-content: flex-start;
+    }
+    .consent--links .consent-b {
+      flex: none;
+      min-height: 0;
+    }
+  }
+
+  /* Theme: the dark values are the defaults. Bind the light block to this site's own light-theme
+     selector (or delete it when the site has only a dark theme). */
+  .consent {
+    --c-pad: 8px;
+    --c-rad: 0px;
+    --c-maxw: 1180px;
+    --c-fs: 13px;
+    --c-font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --c-btnh: 30px;
+    --c-btnw: 80px;
+    --c-brad: 5px;
+    --c-bw: 1px;
+    --c-bg: #191b1e;
+    --c-bf: none;
+    --c-fg: #ecebe8;
+    --c-muted: #a8a8a7;
+    --c-acc: #1ec5e4;
+    --c-acc2: #9ad4ea;
+    --c-line: rgba(236, 235, 232, 0.16);
+    --c-line-s: rgba(236, 235, 232, 0.38);
+    --c-shadow: 0 -4px 16px rgba(0, 0, 0, 0.14);
+    --c-tsh: none;
+    --c-bbg: transparent;
+    --c-bfg: #ecebe8;
+    --c-bline: rgba(236, 235, 232, 0.4);
+    --c-accbg: #1ec5e4;
+    --c-accfg: #111111;
+    --c-kt: transparent;
+    --c-kb: transparent;
+  }
+  :root[data-theme='light'] .consent {
+    --c-bg: #ffffff;
+    --c-bf: none;
+    --c-fg: #07080a;
+    --c-muted: #565758;
+    --c-acc: #168fa7;
+    --c-acc2: #7dacbe;
+    --c-line: rgba(7, 8, 10, 0.16);
+    --c-line-s: rgba(7, 8, 10, 0.38);
+    --c-shadow: 0 -4px 16px rgba(0, 0, 0, 0.14);
+    --c-tsh: none;
+    --c-bbg: transparent;
+    --c-bfg: #07080a;
+    --c-bline: rgba(7, 8, 10, 0.4);
+    --c-accbg: #168fa7;
+    --c-accfg: #111111;
+    --c-kt: transparent;
+    --c-kb: transparent;
+  }
+</style>

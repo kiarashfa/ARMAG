@@ -37,7 +37,7 @@ The ballistics solver is the project's own. Open-source implementations are used
 | SAAMI and C.I.P. | cartridge and chamber dimensions and maximum pressures; the figures are transcribed and the drawings are not republished | cited per figure (117 references) |
 | [US Bureau of Labor Statistics](https://www.bls.gov/cpi/) | Consumer Price Index series (CPI-U, annual average) used to adjust historical prices; baked into the site at authoring time, with no runtime call | US Government data |
 | Manufacturer specifications, US military manuals, periodicals and other web sources | figures and facts, cited per entry (64 manufacturer specification, 6 military manual, 8 periodical, 1 book and 41 web references) | cited, not reproduced; public-domain manuals are recorded as such on their reference |
-| Google Analytics (loaded from `www.googletagmanager.com`) | page-view statistics in the published site only; the page address is sent without query string or fragment | Google's terms apply |
+| Google Analytics (loaded from `www.googletagmanager.com`) | page-view statistics in the published site only, and only after the visitor accepts analytics in the cookie bar; the page address is sent without query string or fragment | Google's terms apply |
 | [py-ballisticcalc](https://github.com/o-murphy/py-ballisticcalc) 2.2.0 | reference trajectories computed once and committed as a test fixture (`test-fixtures/ballistics/reference-trajectories.json`); the library is not a dependency and is not distributed | LGPL-3.0 (the library) |
 
 The site makes no other runtime call to a third party. Everything else it fetches comes from its own origin.

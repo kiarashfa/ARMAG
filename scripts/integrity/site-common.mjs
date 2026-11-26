@@ -18,8 +18,7 @@
  *     name a screen reader can announce.
  *  3. **Structured data parses.** Every `application/ld+json` block is JSON.
  *  4. **No secret is published.** No value from `.env` appears in any built
- *     file, except keys that are public by design (listed below). A leak is
- *     reported by variable name, never by value.
+ *     file. A leak is reported by variable name, never by value.
  *  5. **No page is an orphan, and the sitemap is honest.** Every indexable page
  *     is linked from at least one other page and listed in the sitemap, and
  *     the sitemap lists nothing that was not built.
@@ -28,7 +27,6 @@ import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
 const DIST = 'dist';
-const PUBLIC_ENV_KEYS = new Set(['GA_MEASUREMENT_ID']);
 const home = readFileSync(join(DIST, 'index.html'), 'utf8');
 const BASE =
   (home.match(/href="(\/[^/"]+\/)_astro\//) ?? home.match(/href="(\/[^/"]+\/)/))?.[1] ?? '/';
@@ -153,7 +151,7 @@ if (existsSync('.env')) {
     .split(/\r?\n/)
     .map((line) => line.match(/^\s*([A-Z0-9_]+)\s*=\s*"?([^"#\r\n]+?)"?\s*$/))
     .filter(Boolean)
-    .filter(([, key, value]) => !PUBLIC_ENV_KEYS.has(key) && value.length >= 8);
+    .filter(([, , value]) => value.length >= 8);
   if (secrets.length) {
     for (const file of files) {
       if (!/\.(html|js|json|txt|xml|css|mjs)$/.test(file)) continue;

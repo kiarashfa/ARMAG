@@ -255,7 +255,7 @@ const cardTitle = 'type-heading text-xs uppercase tracking-widest text-ink-muted
         </p>
 
         <h2 id="privacy" class="type-title mt-10 scroll-mt-16 text-xl text-ink">
-          What it keeps, and where
+          Privacy
         </h2>
         <p>
           There is no backend, no account and nothing to sign in to. Whatever the site remembers
@@ -265,12 +265,62 @@ const cardTitle = 'type-heading text-xs uppercase tracking-widest text-ink-muted
           </a>
           , your comparison, your units, your theme) stays in your own browser and never leaves it.
           That also means it lives in one browser on one device, and the site cannot move it for
-          you; the armory can hand you a backup file or a share link, and those are the only ways it
-          travels.
+          you; the armory can hand you a backup file or a share link, and those, or cloud save
+          below, are the only ways it travels.
         </p>
         <p>
           No serial number field exists anywhere in the schema, in local storage, or in a share
           link. A test asserts it, on every build.
+        </p>
+
+        <h3 id="analytics" class="type-title mt-6 scroll-mt-16 text-lg text-ink">
+          Analytics
+        </h3>
+        <p>
+          If you accept analytics in the cookie bar, Google Analytics counts visits to this site:
+          the page, which part of the world you visit from and your browser type. It never receives
+          your armory, comparison, units and theme, and if you decline it is not loaded at all. One
+          answer covers every project on kiarashfa.github.io. You can change it at any time:{' '}
+          <a href={`${href('about')}#privacy`} class="text-ui-accent" data-consent-open>
+            Cookie settings
+          </a>
+          .
+        </p>
+
+        <h3 id="cloud-save" class="type-title mt-6 scroll-mt-16 text-lg text-ink">
+          Cloud save
+        </h3>
+        <p>
+          Cloud save is optional. If you connect Google Drive or Dropbox, ARMAG keeps one file in a
+          private app folder of your own account, straight from your browser and never through a
+          server of ours. It sees nothing else there, and you can disconnect at any time. Use of
+          information received from Google APIs follows the{' '}
+          <a
+            href="https://developers.google.com/terms/api-services-user-data-policy"
+            class="text-ui-accent"
+            target="_blank"
+            rel="noopener"
+          >
+            Google API Services User Data Policy
+          </a>
+          , including the Limited Use requirements.
+        </p>
+
+        <p>
+          Questions about privacy? Open an issue on{' '}
+          <a
+            href="https://github.com/kiarashfa/ARMAG/issues"
+            class="text-ui-accent"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>{' '}
+          or write to{' '}
+          <a href="mailto:kiarashfa@gmail.com" class="text-ui-accent">
+            kiarashfa@gmail.com
+          </a>
+          .
         </p>
       </div>
     </div>
